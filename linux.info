@@ -1,0 +1,5 @@
+name = Linux.com
+description = Installation profile for Linux.com.
+version = 7.x-dev
+core = 7.x
+base = imagex
