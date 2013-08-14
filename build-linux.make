@@ -6,7 +6,7 @@ core = 7.x
 ; is an older version of 7.x core and contains some multi-site components.
 projects[drupal][type] = "core"
 projects[drupal][download][type] = "git"
-projects[drupal][download][url] = "http://github.com/imagex/linux.com.core.git"
+projects[drupal][download][url] = "git@github.com:imagex/linux.com.core.git"
 projects[drupal][download][branch] = "dev"
 
 ; Applies a simple patch that allows for inheritable profiles to exist.
@@ -16,11 +16,11 @@ projects[drupal][patch][] = "https://gist.github.com/amcgowanca/6191652/raw/53bb
 ; Download the ImageX base installation profile.
 projects[imagex][type] = "profile"
 projects[imagex][download][type] = "git"
-projects[imagex][download][url] = "http://github.com/imagex/ixm-base.git"
+projects[imagex][download][url] = "git@github.com:imagex/imagex.base.git"
 projects[imagex][download][branch] = "7.x-dev"
 
 ; Download the Linux.com's installation profile, inherits ImageX base.
 projects[linux][type] = "profile"
 projects[linux][download][type] = "git"
-projects[linux][download][url] = "http://github.com/imagex/linux.com.git"
+projects[linux][download][url] = "git@github.com:imagex/linux.com.git"
 projects[linux][download][branch] = "7.x-dev"
