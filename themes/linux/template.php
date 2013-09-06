@@ -6,7 +6,7 @@ function linux_preprocess_html(&$vars) {
 function linux_preprocess_page(&$vars,$hook) {
 
   // If this is a panel page, add template suggestions.
-  if($panel_page = page_manager_get_current_page()) {
+  if(module_exists('page_manager') && $panel_page = page_manager_get_current_page()) {
     // Add a generic suggestion for all panel pages.
     $vars['theme_hook_suggestions'][] = 'page__panel';
     // Add the panel page machine name to the template suggestions.
