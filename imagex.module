@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ */
+
+define('IMAGEX_MODE_DEVELOPMENT', 1);
+define('IMAGEX_MODE_STAGING', 2);
+define('IMAGEX_MODE_PRODUCTION', 3);
+
+/**
+ * Returns the current operating mode of ImageX install profile.
+ *
+ * @return int
+ *   Returns the current operating mode.
+ */
+function imagex_mode() {
+  return variable_get('ixm_mode', ixm_default_mode());
+}
+
+/**
+ * Returns the default operating mode.
+ *
+ * @return int
+ *   Returns the IMAGEX_MODE_PRODUCTION value.
+ */
+function imagex_default_mode() {
+  return IMAGEX_MODE_PRODUCTION;
+}
+
+/**
+ * Returns the an array of default variables for the ImageX profile.
+ *
+ * @return array
+ *   Returns variable and default value map array.
+ */
+function imagex_default_variables() {
+  return array(
+    'ixm_mode' => imagex_default_mode(),
+  );
+}
