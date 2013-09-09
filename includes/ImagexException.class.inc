@@ -4,7 +4,7 @@
  */
 
 /**
- * ImageX base Exception class should be used where possible.
+ * Base exception class to act as a wrapper to \Exception.
  *
  * @author Aaron McGowan <aaron@imagexmedia.com>
  * @package ImageX
