@@ -3,9 +3,25 @@
  * @file
  */
 
+/**
+ * Denotes that the environment is in development mode.
+ */
 define('IMAGEX_MODE_DEVELOPMENT', 1);
+
+/**
+ * Denotes that the environment is in staging mode.
+ */
 define('IMAGEX_MODE_STAGING', 2);
+
+/**
+ * Denotes that the environment is in production mode.
+ */
 define('IMAGEX_MODE_PRODUCTION', 3);
+
+/**
+ * Defines the watchdog type of ImageX.
+ */
+define('IMAGEX_WATCHDOG_TYPE', 'imagex');
 
 /**
  * Returns the current operating mode of ImageX install profile.
@@ -14,7 +30,89 @@ define('IMAGEX_MODE_PRODUCTION', 3);
  *   Returns the current operating mode.
  */
 function imagex_mode() {
-  return variable_get('ixm_mode', ixm_default_mode());
+  return variable_get('imagex_mode', ixm_default_mode());
+}
+
+/**
+ * Returns a boolean to determine if the current mode is development.
+ * 
+ * @return boolean
+ *   Returns TRUE if the current mode is development, otherwise FALSE.
+ */
+function imagex_mode_is_development() {
+  return IMAGEX_MODE_PRODUCTION == imagex_mode();
+}
+
+/**
+ * Returns a boolean to determine if the current mode is staging.
+ * 
+ * @return boolean
+ *   Returns TRUE if the current mode is staging, otherwise FALSE.
+ */
+function imagex_mode_is_staging() {
+  return IMAGEX_MODE_STAGING == imagex_mode();
+}
+
+/**
+ * Returns a boolean to determine if the current mode is production.
+ * 
+ * @return boolean
+ *   Returns TRUE if the current mode is production, otherwise FALSE.
+ */
+function imagex_mode_is_production() {
+  return IMAGEX_MODE_PRODUCTION == imagex_mode();
+}
+
+/**
+ * Changes the current operating mode.
+ * 
+ * @param int $mode
+ *   The current operating mode. Use one of the IMAGEX_MODE_ constants.
+ */
+function imagex_mode_set($mode) {
+  if (!imagex_mode_is_valid($mode)) {
+    watchdog(IMAGEX_WATCHDOG_TYPE, 'Attempted to set an invalid mode, %mode.', array('%mode' => $mode), WATCHDOG_DEBUG);
+    return;
+  }
+
+  variable_set('imagex_mode', $mode);
+  foreach (module_implements('imagex_mode_changed') as $module) {
+    module_invoke($module, 'imagex_mode_changed', $mode);
+  }
+}
+
+/**
+ * Returns a boolean to determine whether or not the mode is a valid mode.
+ * 
+ * @param int $mode
+ *   An operating mode to change to.
+ *
+ * @return boolean
+ *   Returns TRUE if $mode is valid, otherwise FALSE.
+ */
+function imagex_mode_is_valid($mode) {
+  switch ($mode) {
+    case IMAGEX_MODE_PRODUCTION:
+    case IMAGEX_MODE_STAGING:
+    case IMAGEX_MODE_DEVELOPMENT:
+      return TRUE;
+  }
+
+  return FALSE;
+}
+
+function imagex_mode_language($mode = NULL) {
+  static $languages = array(
+    IMAGEX_MODE_DEVELOPMENT => t('development'),
+    IMAGEX_MODE_STAGING => t('staging'),
+    IMAGEX_MODE_PRODUCTION => t('production'),
+  );
+
+  if (NULL !== $mode && isset($languages[$mode])) {
+    return $languages[$mode];
+  }
+
+  return $languages;
 }
 
 /**
@@ -35,6 +133,6 @@ function imagex_default_mode() {
  */
 function imagex_default_variables() {
   return array(
-    'ixm_mode' => imagex_default_mode(),
+    'imagex_mode' => imagex_default_mode(),
   );
 }

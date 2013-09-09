@@ -1,0 +1,9 @@
+name = ImageX
+description = Common capabilities for all ImageX modules.
+package = ImageX
+version = 7.x-dev
+core = 7.x
+
+files[] = includes/fields.utilities.inc
+files[] = includes/taxonomy.utilities.inc
+files[] = includes/ImagexException.inc
