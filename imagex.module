@@ -102,11 +102,15 @@ function imagex_mode_is_valid($mode) {
 }
 
 function imagex_mode_language($mode = NULL) {
-  static $languages = array(
-    IMAGEX_MODE_DEVELOPMENT => t('development'),
-    IMAGEX_MODE_STAGING => t('staging'),
-    IMAGEX_MODE_PRODUCTION => t('production'),
-  );
+  static $languages = NULL;
+
+  if (NULL === $languages) {
+    $languages =  array(
+      IMAGEX_MODE_DEVELOPMENT => t('development'),
+      IMAGEX_MODE_STAGING => t('staging'),
+      IMAGEX_MODE_PRODUCTION => t('production'),
+    );
+  }
 
   if (NULL !== $mode && isset($languages[$mode])) {
     return $languages[$mode];
