@@ -4,6 +4,7 @@ package = ImageX
 version = 7.x-dev
 core = 7.x
 
+files[] = includes/ImagexException.class.inc
+
 files[] = includes/fields.utilities.inc
 files[] = includes/taxonomy.utilities.inc
-files[] = includes/ImagexException.inc

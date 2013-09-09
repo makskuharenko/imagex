@@ -136,3 +136,69 @@ function imagex_default_variables() {
     'imagex_mode' => imagex_default_mode(),
   );
 }
+
+/**
+ * Retrieves and returns the a configuration file path for modules.
+ *
+ * Helper function will initially look in the current site's directory where
+ * the settings.php file lives. If the file is not found within the sites/* 
+ * directory, the sites/default/ will be used as a failsafe. Finally, if neither
+ * the current site's directory or sites/default/ has the file living within it,
+ * the specified `$module` base directory will be used.
+ *
+ * Current implementation is derived from Drupal's `conf_path` function.
+ * 
+ * @see http://api.drupal.org/api/drupal/includes!bootstrap.inc/function/conf_path/7
+ * 
+ * @param string $module
+ *   The name of the module that the file is associated with.
+ * @param string $filename
+ *   The filename including extension.
+ * @param bool $reset
+ *   A boolean value used to indicate if the current value should be reset.
+ *
+ * @return mixed
+ *   Returns the absolute file path as a string if found, otherwise FALSE.
+ */
+function imagex_conf_path($module, $filename, $reset = FALSE) {
+  $conf = &drupal_static(__FUNCTION__, array());
+  if (isset($conf[$filename]) && !$reset) {
+    return $conf[$filename];
+  }
+
+  $confdir = 'sites';
+  $sites = array();
+  if (file_exists(DRUPAL_ROOT . '/' . $confdir . '/sites.php')) {
+    include DRUPAL_ROOT . '/' . $confdir . '/sites.php';
+  }
+
+  $uri = explode('/', $_SERVER['SCRIPT_NAME'] ? $_SERVER['SCRIPT_NAME'] : $_SERVER['SCRIPT_FILENAME']);
+  $server = explode('.', implode('.', array_reverse(explode(':', rtrim($_SERVER['HTTP_HOST'], '.')))));
+  for ($i = count($uri) - 1; $i != 0; $i--) {
+    for($j = count($server); $j != 0; $j--) {
+      $dir = implode('.', array_slice($server, -$j)) . implode('.', array_slice($uri, 0, $i));
+      if (isset($sites[$dir]) && file_exists(DRUPAL_ROOT . '/' . $confdir . '/' . $sites[$dir])) {
+        $dir = $sites[$dir];
+      }
+
+      if (file_exists(DRUPAL_ROOT . '/' . $confdir . '/' . $dir . '/' . $filename)) {
+        $conf[$filename] = $confdir . '/' . $dir . '/' . $filename;
+        return $conf[$filename];
+      }
+    }
+  }
+
+  if (file_exists(DRUPAL_ROOT . '/' . $confdir . '/default/' . $filename)) {
+    $conf[$filename] = $confdir . '/default/' . $filename;
+    return $conf[$filename];
+  }
+
+  if ($module_path = drupal_get_path('module', $module)) {
+    if (file_exists(DRUPAL_ROOT . '/' . $module_path . '/' . $filename)) {
+      $conf[$filename] = DRUPAL_ROOT . '/' . $module_path . '/' . $filename;
+      return $conf[$filename];
+    }
+  }
+
+  return FALSE;
+}
