@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function imagex_install() {
+  // Create and initial default variables.
+  foreach (imagex_default_variables() as $variable => $default_value) {
+    variable_set($variable, $default_value);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function imagex_uninstall() {
+  // Perform variable cleanup and delete them.
+  foreach (imagex_default_variables() as $variable => $default_value) {
+    variable_del($variable, $default_value);
+  }
+}
