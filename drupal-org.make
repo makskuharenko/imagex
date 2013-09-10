@@ -14,5 +14,16 @@ projects[imagex_dbal][download][branch] = "7.x-dev"
 
 projects[imagex_migration][type] = "module"
 projects[imagex_migration][download][type] = "git"
-projects[imagex_migration][download][url] = "git@github.com:imagex/imagex_bean.git"
+projects[imagex_migration][download][url] = "git@github.com:imagex/imagex_migration.git"
 projects[imagex_migration][download][branch] = "7.x-dev"
+
+; ImageX Features
+projects[imagex_user_roles_permissions][type] = "module"
+projects[imagex_user_roles_permissions][download][type] = "git"
+projects[imagex_user_roles_permissions][download][url] = "git@github.com:imagex/imagex_user_roles_permissions.git"
+projects[imagex_user_roles_permissions][download][branch] = "7.x-dev"
+
+projects[imagex_vocabulary_tags][type] = "module"
+projects[imagex_vocabulary_tags][download][type] = "git"
+projects[imagex_vocabulary_tags][download][url] = "git@github.com:imagex/imagex_vocabulary_tags.git"
+projects[imagex_vocabulary_tags][download][branch] = "7.x-dev"
