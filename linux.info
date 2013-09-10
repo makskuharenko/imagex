@@ -6,6 +6,4 @@ base profile = imagex_installkit
 
 ; Dependencies
 dependencies[] = addthis
-dependencies[] = metatag
 dependencies[] = og
-dependencies[] = redirect
