@@ -6,3 +6,6 @@ core = 7.x
 projects[addthis][type] = "module"
 projects[addthis][subdir] = "contrib"
 projects[addthis][version] = "4.0-alpha2"
+projects[creativecommons][type] = "module"
+projects[creativecommons][subdir] = "contrib"
+projects[creativecommons][version] = "1.0-alpha2"
