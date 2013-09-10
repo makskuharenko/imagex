@@ -1,5 +1,5 @@
-name = Parrot
-description = Parrot sits on the shoulders of some great projects. Parrot is a Drupal 7 Mothership subtheme that uses "some" Bootstrap CSS structure, with SASS & Compass.
+name = Linux
+description = Linux.com Theme.
 screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
@@ -137,5 +137,5 @@ settings[mothership_classes_region_freeform] = ''
 ; Information added by drupal.org packaging script on 2013-07-16
 version = "7.x-1.x-dev"
 core = "7.x"
-project = "parrot"
+project = "linux"
 datestamp = "1373983271"
