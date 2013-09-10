@@ -4,6 +4,7 @@ core = 7.x
 package = Linux.com
 version = 7.x-1.0
 project = linux_creative_commons_configuration
+dependencies[] = creativecommons
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
