@@ -9,3 +9,4 @@ dependencies[] = addthis
 dependencies[] = creativecommons
 dependencies[] = linux_creative_commons_configuration
 dependencies[] = linux_wiki
+dependencies[] = og
