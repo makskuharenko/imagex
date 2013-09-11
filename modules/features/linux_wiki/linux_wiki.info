@@ -1,0 +1,12 @@
+name = Wiki
+description = Specialized components of the ImageX Wiki for Linux.com
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_wiki
+dependencies[] = features
+dependencies[] = imagex_wiki
+dependencies[] = linux_common_fields
+dependencies[] = radioactivity
+features[features_api][] = api:1
+features[field_instance][] = node-wiki-field_linux_radioactivity
