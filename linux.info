@@ -3,3 +3,8 @@ description = Installation profile for Linux.com.
 version = 7.x-dev
 core = 7.x
 base profile = imagex_installkit
+
+; Dependencies
+dependencies[] = addthis
+dependencies[] = creativecommons
+dependencies[] = linux_creative_commons_configuration
