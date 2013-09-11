@@ -8,3 +8,4 @@ base profile = imagex_installkit
 dependencies[] = addthis
 dependencies[] = creativecommons
 dependencies[] = linux_creative_commons_configuration
+dependencies[] = linux_wiki
