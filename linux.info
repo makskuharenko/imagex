@@ -9,4 +9,6 @@ dependencies[] = addthis
 dependencies[] = creativecommons
 dependencies[] = linux_creative_commons_configuration
 dependencies[] = linux_wiki
+dependencies[] = linux_events
 dependencies[] = og
+dependencies[] = og_role_field
