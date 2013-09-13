@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux.com Tutorial feature.
+ */
+
+include_once 'linux_tutorial.features.inc';
