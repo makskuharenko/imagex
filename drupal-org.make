@@ -51,6 +51,12 @@ projects[imagex_faq][download][type] = "git"
 projects[imagex_faq][download][url] = "git@github.com:imagex/imagex_faq.git"
 projects[imagex_faq][download][branch] = "7.x-dev"
 
+projects[imagex_faq][type] = "module"
+projects[imagex_faq][subdir] = "imagex/modules"
+projects[imagex_faq][download][type] = "git"
+projects[imagex_faq][download][url] = "git@github.com:imagex/imagex_news.git"
+projects[imagex_faq][download][branch] = "7.x-dev"
+
 projects[imagex_page][type] = "module"
 projects[imagex_page][subdir] = "imagex/modules"
 projects[imagex_page][download][type] = "git"
