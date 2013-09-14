@@ -1,5 +1,5 @@
 name = Events
-description = Specialized components of the ImageX Evennt for Linux.com
+description = Specialized components of the ImageX Event for Linux.com
 core = 7.x
 package = Linux.Com
 php = 5.2.4
