@@ -1,4 +1,4 @@
-name = Linux.com: Creative Commons Configuration
+name = Creative Commons Configuration
 description = General configuration of the Creative Commons module.
 core = 7.x
 package = Linux.com
