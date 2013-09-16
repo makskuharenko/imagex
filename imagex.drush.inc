@@ -21,9 +21,11 @@ function imagex_drush_command() {
  * Handles the flushing and rebuilding of the registry and caches.
  */
 function drush_imagex_flush() {
-  // Rebuild the system information.
+  // Reset the runtime cache of the system info.
   drupal_static_reset('system_rebuild_module_data');
   drupal_static_reset('system_rebuild_theme_data');
+
+  // Rebuild the system information.
   system_rebuild_module_data();
   system_rebuild_theme_data();
 
