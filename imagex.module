@@ -30,7 +30,7 @@ define('IMAGEX_WATCHDOG_TYPE', 'imagex');
  *   Returns the current operating mode.
  */
 function imagex_mode() {
-  return variable_get('imagex_mode', ixm_default_mode());
+  return variable_get('imagex_mode', imagex_default_mode());
 }
 
 /**
