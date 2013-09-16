@@ -1,4 +1,4 @@
-name = Linux.com: Directory
+name = Directory
 description = Content Type and Structural elements for the directory of Linux.com
 core = 7.x
 package = Linux.com

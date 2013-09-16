@@ -1,4 +1,4 @@
-name = Linux.com Tutorial
+name = Tutorial
 description = Content type and structural elements for Linux.com tutorials.
 core = 7.x
 package = Linux.com
@@ -26,4 +26,3 @@ features[variable][] = node_options_tutorial
 features[variable][] = node_preview_tutorial
 features[variable][] = node_submitted_tutorial
 features_exclude[field][node-tutorial-body] = node-tutorial-body
-project path = profiles/linux/modules/features
