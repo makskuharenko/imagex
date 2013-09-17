@@ -39,6 +39,12 @@ projects[imagex_vocabulary_tags][download][type] = "git"
 projects[imagex_vocabulary_tags][download][url] = "git@github.com:imagex/imagex_vocabulary_tags.git"
 projects[imagex_vocabulary_tags][download][branch] = "7.x-dev"
 
+projects[imagex_answers][type] = "module"
+projects[imagex_answers][subdir] = "imagex/modules"
+projects[imagex_answers][download][type] = "git"
+projects[imagex_answers][download][url] = "git@github.com:imagex/imagex_answers.git"
+projects[imagex_answers][download][branch] = "7.x-dev"
+
 projects[imagex_events][type] = "module"
 projects[imagex_events][subdir] = "imagex/modules"
 projects[imagex_events][download][type] = "git"
