@@ -1,7 +1,8 @@
-name = Linux_manual
+name = Manual
 description = Manual content type and related views and structures.
 core = 7.x
 package = Linux.com
+php = 5.2.4
 version = 7.x-1.0
 project = linux_manual
 dependencies[] = ctools
