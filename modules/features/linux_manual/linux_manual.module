@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux_manual feature.
+ */
+
+include_once 'linux_manual.features.inc';
