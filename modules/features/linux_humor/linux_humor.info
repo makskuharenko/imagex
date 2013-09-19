@@ -2,6 +2,7 @@ name = Linux Humor
 description = Humor content type and additional structural elements.
 core = 7.x
 package = Linux.com
+php = 5.2.4
 version = 7.x-1.0
 project = linux_humor
 dependencies[] = ctools

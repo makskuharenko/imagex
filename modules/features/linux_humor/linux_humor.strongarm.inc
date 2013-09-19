@@ -104,7 +104,7 @@ function linux_humor_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_humor';
   $strongarm->value = array(
-    0 => 'revision',
+    0 => 'status',
   );
   $export['node_options_humor'] = $strongarm;
 
