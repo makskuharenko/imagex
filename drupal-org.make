@@ -87,6 +87,12 @@ projects[imagex_wiki][download][type] = "git"
 projects[imagex_wiki][download][url] = "git@github.com:imagex/imagex_wiki.git"
 projects[imagex_wiki][download][branch] = "7.x-dev"
 
+projects[imagex_workflow][type] = "module"
+projects[imagex_workflow][subdir] = "imagex/modules"
+projects[imagex_workflow][download][type] = "git"
+projects[imagex_workflow][download][url] = "git@github.com:imagex/imagex_workflow.git"
+projects[imagex_workflow][download][branch] = "7.x-dev"
+
 projects[imagex_wysiwyg_profiles][type] = "module"
 projects[imagex_wysiwyg_profiles][subdir] = "imagex/modules"
 projects[imagex_wysiwyg_profiles][download][type] = "git"
