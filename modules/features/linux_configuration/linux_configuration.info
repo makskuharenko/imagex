@@ -1,0 +1,13 @@
+name = General Configuration
+description = General website configuration that does not necessarily belong in its own feature.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_configuration
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = site_default_country
+features[variable][] = site_mail
+features[variable][] = site_name
