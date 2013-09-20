@@ -81,6 +81,12 @@ projects[imagex_blog][download][type] = "git"
 projects[imagex_blog][download][url] = "git@github.com:imagex/imagex_blog.git"
 projects[imagex_blog][download][branch] = "7.x-dev"
 
+projects[imagex_page][type] = "module"
+projects[imagex_page][subdir] = "imagex/modules"
+projects[imagex_page][download][type] = "git"
+projects[imagex_page][download][url] = "git@github.com:imagex/imagex_poll.git"
+projects[imagex_page][download][branch] = "7.x-dev"
+
 projects[imagex_wiki][type] = "module"
 projects[imagex_wiki][subdir] = "imagex/modules"
 projects[imagex_wiki][download][type] = "git"
