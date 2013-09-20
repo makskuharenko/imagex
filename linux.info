@@ -12,6 +12,7 @@ dependencies[] = linux_events
 dependencies[] = linux_group
 dependencies[] = linux_directory
 dependencies[] = linux_events
+dependencies[] = linux_poll
 dependencies[] = linux_tutorial
 dependencies[] = linux_wiki
 dependencies[] = og
