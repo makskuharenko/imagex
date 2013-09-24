@@ -30,7 +30,7 @@ function linux_directory_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'three_inset_right';
+  $display->layout = 'two_33_66';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -40,6 +40,10 @@ function linux_directory_panelizer_defaults() {
       'three_inset_right_middle' => NULL,
       'three_inset_right_inset' => NULL,
       'three_inset_right_bottom' => NULL,
+      'two_33_66_top' => NULL,
+      'two_33_66_first' => NULL,
+      'two_33_66_second' => NULL,
+      'two_33_66_bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -48,7 +52,7 @@ function linux_directory_panelizer_defaults() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
     $pane->shown = TRUE;
@@ -71,10 +75,10 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['three_inset_right_sidebar'][0] = 'new-1';
+    $display->panels['two_33_66_second'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_directory_isbn';
     $pane->shown = TRUE;
@@ -97,10 +101,10 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['three_inset_right_sidebar'][1] = 'new-2';
+    $display->panels['two_33_66_second'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_directory_specifications';
     $pane->shown = TRUE;
@@ -123,10 +127,10 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['three_inset_right_sidebar'][2] = 'new-3';
+    $display->panels['two_33_66_second'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_directory_section';
     $pane->shown = TRUE;
@@ -149,10 +153,10 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['three_inset_right_sidebar'][3] = 'new-4';
+    $display->panels['two_33_66_second'][3] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_directory_distribution';
     $pane->shown = TRUE;
@@ -175,10 +179,10 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['three_inset_right_sidebar'][4] = 'new-5';
+    $display->panels['two_33_66_second'][4] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'three_inset_right_sidebar';
+    $pane->panel = 'two_33_66_second';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
     $pane->shown = TRUE;
@@ -202,7 +206,7 @@ function linux_directory_panelizer_defaults() {
     $pane->position = 5;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['three_inset_right_sidebar'][5] = 'new-6';
+    $display->panels['two_33_66_second'][5] = 'new-6';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-6';
   $panelizer->display = $display;
