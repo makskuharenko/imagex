@@ -49,7 +49,7 @@ $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 $baseFontSize:          14px !default;
-$baseFontFamily:        $sansFontFamily !default;
+$baseFontFamily:        "Open Sans", $sansFontFamily !default;
 $baseLineHeight:        24px !default;
 $altFontFamily:         $serifFontFamily !default;
 
@@ -240,3 +240,6 @@ $popoverTitleBackground:  darken($popoverBackground, 3%) !default;
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1 !default;
 $popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
+
+// Linux specific colors and defaults
+$userBar: #807f83;

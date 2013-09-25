@@ -1,0 +1,107 @@
+// User bar styles and structure
+#user-wrapper {
+  background: $userBar url('../img/header-lines.png') repeat top left;
+  
+  #block-menu-menu-join-us {
+    float: right;
+
+    li {
+      display: block;
+      float: left;
+      width: 16px;
+      height: 16px;
+      margin: 7px 0 0 5px;
+      background: white;
+      line-height: 16px;
+      @include border-radius(2px);
+      color: $userBar;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:first-child {
+        color: white;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: auto;
+        background: transparent;
+        margin: 0 5px 0 0;
+        line-height: 30px;
+        height: 30px;
+        cursor: default;
+
+        span {
+          font-size: 10px;
+        }
+      }
+      
+      span {
+        font-size: 11px;
+
+        &.addthis-facebook {
+          @include icon-facebook;
+        }
+
+        &.addthis-twitter {
+          @include icon-twitter;
+        }
+
+        &.addthis-googleplus {
+          @include icon-google-plus;
+        }
+
+        &.addthis-linkedin {
+          @include icon-linkedin;
+        }
+
+        &.addthis-rss {
+          @include icon-rss;
+        }
+
+        &:before {
+          padding-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .nice-menu {
+    > .menuparent {
+      width: 235px;
+      border: none;
+      background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
+      color: transparent;
+      cursor: pointer;
+
+      ul,
+      li {
+        border: 0;
+        width: 235px;
+        background-color: $userBar;
+      }
+
+      ul {
+        top: 30px;
+
+        li {
+          padding: 3px 10px;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  @include at-breakpoint($tablet) {
+    height: 30px;
+
+    .nice-menu {
+      > .menuparent {
+        height: 30px;
+      }
+    }
+  }
+}
