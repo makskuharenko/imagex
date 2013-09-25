@@ -9,13 +9,13 @@
 // ---------------------------------------------------------------------------
 // Susy Grid.
 
-$base-font-size: 14px;
+$base-font-size: 12px;
 // This is the default number of columns.
 $total-columns: 4;
 // Width of each column.
-$column-width   : 6em;
+$column-width   : 5em;
 // Space between columns.
-$gutter-width   : 1.5em;
+$gutter-width   : 1em;
 // Space on the right and left of the grid.
 $grid-padding   : $gutter-width;
 
@@ -29,10 +29,10 @@ $container-style: magic;
 $show-grid-backgrounds  : true;
 
 //alternative layout breakpoints
-$narrow:30em 6;
-$tablet:40em 8;
-$computer:52em 12;
-$wide: 65em 12;
+$narrow:    26em 6;
+$tablet:    40em 8;
+$computer:  52em 12;
+$wide:      65em 12;
 
 
 // ---------------------------------------------------------------------------
