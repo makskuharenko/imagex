@@ -12,7 +12,7 @@
       height: 16px;
       margin: 7px 0 0 5px;
       background: white;
-      line-height: 16px;
+      line-height: 13px;
       @include border-radius(1px);
       color: $userBar;
       text-align: center;
@@ -121,44 +121,92 @@
   }
 
   #block-panels-mini-global-header {
-    border-top: 1px solid $grayLighter;
-    border-bottom: 1px solid $grayLighter;
+    border-top: 1px solid $dropdownDividerTop;
+    border-bottom: 1px solid $dropdownDividerTop;
 
     #logo {
-      @include span-columns(2, 12);
+      width: 155px;
       margin: 11px 0 0;
+      float: left;
     }
 
-    ul.nice-menu {
-      @include span-columns(10 omega,12);
-      border: none;
+    .pane-nice-menus {
+      @include span-columns(12 omega,12);
 
-      li {
+      ul.nice-menu {
         border: none;
         width: auto;
-        background: transparent;
 
-        a {
-          display: block;
-          height: 48px;
-          text-transform: uppercase;
-          padding: 0 1.2em;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          line-height: 48px;
-          text-decoration: none;
-          color: $linuxDarkGray;
+        li {
+          border: none;
+          width: auto;
+          float: left;
+          background: transparent;
 
-          &:hover {
-            border-bottom: 4px solid $grayLighter;
+          a {
+            display: block;
+            height: 48px;
+            text-transform: uppercase;
+            padding: 0 1.2em;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 48px;
+            text-decoration: none;
+            color: $linuxDarkGray;
+            
+            &.menu-icon {
+              display: block;
+              width: 26px;
+              height: 48px;
+              padding: 0;
+              font-size: 18px;
+              overflow: hidden;
+              text-align: center;
+            }
+
+            &.menu-localization {
+              @include icon-globe;
+            }
+
+            @include at-breakpoint($wide) {
+              &.menu-localization {
+                margin: 0 0 0 45px;
+              }
+            }
+
+            &.menu-profile {
+              @include icon-user;
+            }
+
+            &.menu-search {
+              @include icon-search;
+            }
+
+            &:before {
+              padding-right: 0 !important;
+            }
+
+            &:hover {
+              border-bottom: 4px solid $dropdownDividerTop;
+            }
+
+            &.active,
+            &:active {
+              border-bottom: 4px solid $dropdownDividerTop;
+              color: $linuxStdOrange;
+            }
           }
+        }
+      }
+    }
 
-          &.active,
-          &:active {
-            border-bottom: 4px solid $grayLighter;
-            color: $linusStdOrange;
-          }
+    @include at-breakpoint($wide) {
+      .pane-nice-menus {
+        @include span-columns(10 omega,12);
+
+        ul.nice-menu {
+          float: right;
         }
       }
     }
