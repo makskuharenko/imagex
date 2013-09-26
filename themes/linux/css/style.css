@@ -3325,11 +3325,11 @@ a.label:hover, a.badge:hover {
       margin: 7px 0 0 5px;
       background: white;
       line-height: 16px;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      -ms-border-radius: 2px;
-      -o-border-radius: 2px;
-      border-radius: 2px;
+      -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      -ms-border-radius: 1px;
+      -o-border-radius: 1px;
+      border-radius: 1px;
       color: #807f83;
       text-align: center;
       overflow: hidden;
@@ -3493,3 +3493,51 @@ a.label:hover, a.badge:hover {
       height: 30px; }
       #user-wrapper .nice-menu > .menuparent {
         height: 30px; } }
+
+#header-wrapper .ad-space {
+  width: 730px;
+  height: 90px;
+  background-color: #eeeeee;
+  color: #999999;
+  text-transform: uppercase;
+  line-height: 90px;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  margin: 2em auto; }
+#header-wrapper #block-panels-mini-global-header {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee; }
+  #header-wrapper #block-panels-mini-global-header #logo {
+    width: 15.49296%;
+    float: left;
+    margin-right: 1.40845%;
+    display: inline;
+    margin: 11px 0 0; }
+  #header-wrapper #block-panels-mini-global-header ul.nice-menu {
+    width: 83.09859%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    border: none; }
+    #header-wrapper #block-panels-mini-global-header ul.nice-menu li {
+      border: none;
+      width: auto;
+      background: transparent; }
+      #header-wrapper #block-panels-mini-global-header ul.nice-menu li a {
+        display: block;
+        height: 48px;
+        text-transform: uppercase;
+        padding: 0 1.2em;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        line-height: 48px;
+        text-decoration: none;
+        color: #666666; }
+        #header-wrapper #block-panels-mini-global-header ul.nice-menu li a:hover {
+          border-bottom: 4px solid #eeeeee; }
+        #header-wrapper #block-panels-mini-global-header ul.nice-menu li a.active, #header-wrapper #block-panels-mini-global-header ul.nice-menu li a:active {
+          border-bottom: 4px solid #eeeeee;
+          color: #f17700; }
