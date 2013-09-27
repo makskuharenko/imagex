@@ -1,3 +1,9 @@
+// Standard elements
+a,
+a:hover {
+  text-decoration: none;
+}
+
 // User bar styles and structure
 #user-wrapper {
   background: $userBar url('../img/header-lines.png') repeat top left;
@@ -152,7 +158,6 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             line-height: 48px;
-            text-decoration: none;
             color: $linuxDarkGray;
             
             &.menu-icon {
@@ -171,7 +176,7 @@
 
             @include at-breakpoint($wide) {
               &.menu-localization {
-                margin: 0 0 0 45px;
+                margin: 0 0 0 115px;
               }
             }
 
@@ -191,8 +196,7 @@
               border-bottom: 4px solid $dropdownDividerTop;
             }
 
-            &.active,
-            &:active {
+            &.active {
               border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
             }
@@ -209,6 +213,79 @@
           float: right;
         }
       }
+    }
+  }
+}
+
+// Footer styles and structures
+#footer-wrapper {
+  margin: 20px 0 0;
+  padding: 20px 0 60px;
+  background: $userBar url('../img/header-lines.png') repeat top left;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  #block-system-main-menu ul {
+    margin: 0;
+    font-size: 10px;
+
+    .expanded {
+      list-style-type: none;
+      list-style-image: none;
+      padding: 0;
+      @include span-columns(2, 14);
+
+      > a {
+        color: $btnBorder;
+      }
+
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+
+  #block-bean-about-linux-foundation {
+    font-size: 10px;
+    color: $btnBorder;
+    margin: 0 0 30px;
+
+    p {
+      font-family: $monoFontFamily;
+      font-weight: 300;
+      font-size: 15px;
+      letter-spacing: 0.1em;
+      line-height: 22px;
+      text-transform: none;
+      padding: 0 0 0 15%;
+      margin: 15px 0 0;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  #block-bean-copyright {
+    font-size: 10px;
+    color: $btnBorder;
+  }
+
+  @include at-breakpoint($wide) {
+    #block-bean-copyright,
+    #block-bean-about-linux-foundation {
+      @include span-columns(4 omega, 14);
+      text-align: right;
+    }
+
+    #block-bean-copyright {
+      clear: right;
     }
   }
 }
