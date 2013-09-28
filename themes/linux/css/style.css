@@ -3313,9 +3313,69 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+.featured-slideshow {
+  width: 71.08434%;
+  float: left;
+  margin-right: 1.20482%;
+  display: inline;
+  margin-right: -2em;
+  padding-right: 2em;
+  padding-right: 0; }
+  .featured-slideshow .flexslider {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    border-radius: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .featured-slideshow .flex-control-paging {
+    display: none; }
+  .featured-slideshow .flex-direction-nav .flex-prev {
+    left: 0px; }
+  .featured-slideshow .flex-direction-nav .flex-next {
+    right: 0px; }
+
 a,
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
+
+#panel-wrapper h2 {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  color: #666666; }
+#panel-wrapper a.orange-button {
+  display: block;
+  width: auto;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 25px;
+  padding: 0 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: #f17700;
+  color: white;
+  border: 2px solid white; }
+  #panel-wrapper a.orange-button:hover {
+    background: white;
+    border-color: #f17700;
+    color: #f17700; }
 
 #user-wrapper {
   background: #807f83 url("../img/header-lines.png") repeat top left; }
@@ -3498,145 +3558,147 @@ a:hover {
       #user-wrapper .nice-menu > .menuparent {
         height: 30px; } }
 
-#header-wrapper .ad-space {
-  width: 730px;
-  height: 90px;
-  background-color: #eeeeee;
-  color: #999999;
-  text-transform: uppercase;
-  line-height: 90px;
-  font-size: 10px;
-  font-weight: 600;
-  text-align: center;
-  margin: 2em auto; }
-#header-wrapper #block-panels-mini-global-header {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5; }
-  #header-wrapper #block-panels-mini-global-header #logo {
-    width: 155px;
-    margin: 11px 0 0;
-    float: left; }
-  #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
-    width: 100%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -1em;
-    display: inline; }
-    #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
-      border: none;
-      width: auto; }
-      #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li {
-        border: none;
-        width: auto;
-        float: left;
-        background: transparent; }
-        #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a {
-          display: block;
-          height: 48px;
-          text-transform: uppercase;
-          padding: 0 1.2em;
-          font-size: 10px;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          line-height: 48px;
-          color: #666666; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-icon {
-            display: block;
-            width: 26px;
-            height: 48px;
-            padding: 0;
-            font-size: 18px;
-            overflow: hidden;
-            text-align: center; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-localization:before {
-            content: "\f0ac";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
-            padding-right: 5px;
-            text-decoration: none;
-            /* sprites.less reset */
-            display: -moz-inline-stack;
-            display: inline-block;
-            vertical-align: middle;
-            *vertical-align: auto;
-            zoom: 1;
-            *display: inline;
-            width: auto;
-            height: auto;
-            margin-top: 0;
-            line-height: normal;
-            vertical-align: baseline;
-            background-image: none;
-            background-position: 0% 0%;
-            background-repeat: repeat; }
-          @media (min-width: 62.125em) {
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-localization {
-              margin: 0 0 0 115px; } }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-profile:before {
-            content: "\f007";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
-            padding-right: 5px;
-            text-decoration: none;
-            /* sprites.less reset */
-            display: -moz-inline-stack;
-            display: inline-block;
-            vertical-align: middle;
-            *vertical-align: auto;
-            zoom: 1;
-            *display: inline;
-            width: auto;
-            height: auto;
-            margin-top: 0;
-            line-height: normal;
-            vertical-align: baseline;
-            background-image: none;
-            background-position: 0% 0%;
-            background-repeat: repeat; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-search:before {
-            content: "\f002";
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
-            padding-right: 5px;
-            text-decoration: none;
-            /* sprites.less reset */
-            display: -moz-inline-stack;
-            display: inline-block;
-            vertical-align: middle;
-            *vertical-align: auto;
-            zoom: 1;
-            *display: inline;
-            width: auto;
-            height: auto;
-            margin-top: 0;
-            line-height: normal;
-            vertical-align: baseline;
-            background-image: none;
-            background-position: 0% 0%;
-            background-repeat: repeat; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a:before {
-            padding-right: 0 !important; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a:hover {
-            border-bottom: 4px solid #e5e5e5; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.active {
-            border-bottom: 4px solid #e5e5e5;
-            color: #f17700; }
-  @media (min-width: 62.125em) {
+#header-wrapper {
+  margin: 0 0 20px; }
+  #header-wrapper .ad-space {
+    width: 730px;
+    height: 90px;
+    background-color: #eeeeee;
+    color: #999999;
+    text-transform: uppercase;
+    line-height: 90px;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    margin: 2em auto; }
+  #header-wrapper #block-panels-mini-global-header {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5; }
+    #header-wrapper #block-panels-mini-global-header #logo {
+      width: 155px;
+      margin: 11px 0 0;
+      float: left; }
     #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
-      width: 83.09859%;
+      width: 100%;
       float: right;
-      margin-right: 0; }
+      margin-right: 0;
+      *margin-left: -1em;
+      display: inline; }
       #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
-        float: right; } }
+        border: none;
+        width: auto; }
+        #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li {
+          border: none;
+          width: auto;
+          float: left;
+          background: transparent; }
+          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a {
+            display: block;
+            height: 48px;
+            text-transform: uppercase;
+            padding: 0 1.2em;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 48px;
+            color: #666666; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-icon {
+              display: block;
+              width: 26px;
+              height: 48px;
+              padding: 0;
+              font-size: 18px;
+              overflow: hidden;
+              text-align: center; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-localization:before {
+              content: "\f0ac";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              padding-right: 5px;
+              text-decoration: none;
+              /* sprites.less reset */
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              *vertical-align: auto;
+              zoom: 1;
+              *display: inline;
+              width: auto;
+              height: auto;
+              margin-top: 0;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat; }
+            @media (min-width: 62.125em) {
+              #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-localization {
+                margin: 0 0 0 115px; } }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-profile:before {
+              content: "\f007";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              padding-right: 5px;
+              text-decoration: none;
+              /* sprites.less reset */
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              *vertical-align: auto;
+              zoom: 1;
+              *display: inline;
+              width: auto;
+              height: auto;
+              margin-top: 0;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.menu-search:before {
+              content: "\f002";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              padding-right: 5px;
+              text-decoration: none;
+              /* sprites.less reset */
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              *vertical-align: auto;
+              zoom: 1;
+              *display: inline;
+              width: auto;
+              height: auto;
+              margin-top: 0;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a:before {
+              padding-right: 0 !important; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a:hover {
+              border-bottom: 4px solid #e5e5e5; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu li a.active {
+              border-bottom: 4px solid #e5e5e5;
+              color: #f17700; }
+    @media (min-width: 62.125em) {
+      #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
+        width: 83.09859%;
+        float: right;
+        margin-right: 0; }
+        #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
+          float: right; } }
 
 #footer-wrapper {
   margin: 20px 0 0;

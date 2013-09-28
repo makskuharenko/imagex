@@ -2,6 +2,43 @@
 a,
 a:hover {
   text-decoration: none;
+  cursor: pointer;
+}
+
+// Standard styling for headers and text in the main content area
+#panel-wrapper {
+  h2 {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-top: 1px solid $dropdownDividerTop;
+    border-bottom: 1px solid $dropdownDividerTop;
+    color: $linuxDarkGray;
+  }
+
+  a.orange-button {
+    display: block;
+    width: auto;
+    float: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 25px;
+    padding: 0 10px;
+    @include border-radius(4px);
+    background: $linuxStdOrange;
+    color: white;
+    border: 2px solid white;
+
+    &:hover {
+      background: white;
+      border-color: $linuxStdOrange;
+      color: $linuxStdOrange;
+    }
+  }
 }
 
 // User bar styles and structure
@@ -113,6 +150,8 @@ a:hover {
 }
 
 #header-wrapper {
+  margin: 0 0 20px;
+
   .ad-space {
     width: 730px;
     height: 90px;
