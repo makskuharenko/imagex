@@ -79,6 +79,9 @@ function linux_humor_strongarm() {
         'redirect' => array(
           'weight' => '3',
         ),
+        'workbench_access' => array(
+          'weight' => '0',
+        ),
       ),
       'display' => array(),
     ),
@@ -104,7 +107,8 @@ function linux_humor_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_humor';
   $strongarm->value = array(
-    0 => 'status',
+    0 => 'moderation',
+    1 => 'revision',
   );
   $export['node_options_humor'] = $strongarm;
 
@@ -121,6 +125,76 @@ function linux_humor_strongarm() {
   $strongarm->name = 'node_submitted_humor';
   $strongarm->value = 0;
   $export['node_submitted_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_enable_humor';
+  $strongarm->value = 1;
+  $export['scheduler_publish_enable_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_moderation_state_humor';
+  $strongarm->value = 'published';
+  $export['scheduler_publish_moderation_state_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_required_humor';
+  $strongarm->value = 0;
+  $export['scheduler_publish_required_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_revision_humor';
+  $strongarm->value = 1;
+  $export['scheduler_publish_revision_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_touch_humor';
+  $strongarm->value = 1;
+  $export['scheduler_publish_touch_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_default_time_humor';
+  $strongarm->value = '';
+  $export['scheduler_unpublish_default_time_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_enable_humor';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_enable_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_moderation_state_humor';
+  $strongarm->value = 'draft';
+  $export['scheduler_unpublish_moderation_state_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_required_humor';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_required_humor'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_revision_humor';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_revision_humor'] = $strongarm;
 
   return $export;
 }
