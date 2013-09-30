@@ -1,17 +1,13 @@
 <?php
 /**
  * @file
- * linux_tutorial.features.inc
+ * linux_humor.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function linux_tutorial_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "panelizer" && $api == "panelizer") {
-    return array("version" => "1");
-  }
+function linux_humor_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
@@ -21,10 +17,10 @@ function linux_tutorial_ctools_plugin_api() {
 /**
  * Implements hook_node_info().
  */
-function linux_tutorial_node_info() {
+function linux_humor_node_info() {
   $items = array(
-    'tutorial' => array(
-      'name' => t('Tutorial'),
+    'humor' => array(
+      'name' => t('Humor'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
