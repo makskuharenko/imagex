@@ -9,8 +9,24 @@
  */
 function linux_manual_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_field_default_field_bases_alter().
+ */
+function linux_manual_field_default_field_bases_alter(&$data) {
+  if (isset($data['field_date'])) {
+    $data['field_date']['settings']['granularity']['hour'] = 0; /* WAS: 'hour' */
+    $data['field_date']['settings']['granularity']['minute'] = 0; /* WAS: 'minute' */
+    $data['field_date']['settings']['timezone_db'] = ''; /* WAS: 'UTC' */
+    $data['field_date']['settings']['tz_handling'] = 'none'; /* WAS: 'site' */
   }
 }
 
