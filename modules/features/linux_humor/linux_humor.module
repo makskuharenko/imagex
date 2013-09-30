@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Humor feature.
+ */
+
+include_once 'linux_humor.features.inc';
