@@ -8,6 +8,18 @@ projects[imagex_bean][download][type] = "git"
 projects[imagex_bean][download][url] = "git@github.com:imagex/imagex_bean.git"
 projects[imagex_bean][download][branch] = "7.x-dev"
 
+projects[imagex_content_featured][type] = "module"
+projects[imagex_content_featured][subdir] = "imagex/modules"
+projects[imagex_content_featured][download][type] = "git"
+projects[imagex_content_featured][download][url] = "git@github.com:imagex/imagex_content_featured.git"
+projects[imagex_content_featured][download][branch] = "7.x-dev"
+
+projects[imagex_content_pinned][type] = "module"
+projects[imagex_content_pinned][subdir] = "imagex/modules"
+projects[imagex_content_pinned][download][type] = "git"
+projects[imagex_content_pinned][download][url] = "git@github.com:imagex/imagex_content_pinned.git"
+projects[imagex_content_pinned][download][branch] = "7.x-dev"
+
 projects[imagex_dbal][type] = "module"
 projects[imagex_dbal][subdir] = "imagex/modules"
 projects[imagex_dbal][download][type] = "git"
