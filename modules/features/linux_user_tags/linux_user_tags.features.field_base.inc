@@ -10,13 +10,13 @@
 function linux_user_tags_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_user_tags'
-  $field_bases['field_user_tags'] = array(
+  // Exported field_base: 'field_linux_user_tags'
+  $field_bases['field_linux_user_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_user_tags',
+    'field_name' => 'field_linux_user_tags',
     'field_permissions' => array(
       'type' => 2,
     ),
@@ -38,7 +38,7 @@ function linux_user_tags_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'user_tags',
+          'vocabulary' => 'linux_user_tags',
           'parent' => 0,
         ),
       ),

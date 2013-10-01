@@ -10,8 +10,8 @@
 function linux_user_tags_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_user_tags'
-  $field_instances['user-user-field_user_tags'] = array(
+  // Exported field_instance: 'user-user-field_linux_user_tags'
+  $field_instances['user-user-field_linux_user_tags'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
     'deleted' => 0,
@@ -26,7 +26,7 @@ function linux_user_tags_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'user',
-    'field_name' => 'field_user_tags',
+    'field_name' => 'field_linux_user_tags',
     'label' => 'User Tags',
     'required' => 0,
     'settings' => array(

@@ -9,9 +9,9 @@
  */
 function linux_user_tags_taxonomy_default_vocabularies() {
   return array(
-    'user_tags' => array(
+    'linux_user_tags' => array(
       'name' => 'User Tags',
-      'machine_name' => 'user_tags',
+      'machine_name' => 'linux_user_tags',
       'description' => 'User entity tags or identifiers',
       'hierarchy' => 0,
       'module' => 'taxonomy',

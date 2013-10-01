@@ -11,7 +11,7 @@ function linux_user_tags_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'users_by_tag_administration';
+  $view->name = 'linux_users_by_tag_administration';
   $view->description = 'Hijack of /admin/people page to add user tag filter & VBO';
   $view->tag = 'linux';
   $view->base_table = 'users';
@@ -219,14 +219,13 @@ function linux_user_tags_views_default_views() {
   $handler->display->display_options['fields']['rid']['field'] = 'rid';
   $handler->display->display_options['fields']['rid']['type'] = 'ul';
   /* Field: User: User Tags */
-  $handler->display->display_options['fields']['field_user_tags']['id'] = 'field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['table'] = 'field_data_field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['field'] = 'field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['label'] = 'Tags';
-  $handler->display->display_options['fields']['field_user_tags']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_user_tags']['empty'] = 'None';
-  $handler->display->display_options['fields']['field_user_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_user_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_linux_user_tags']['id'] = 'field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['table'] = 'field_data_field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['field'] = 'field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['label'] = 'Tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['empty'] = 'None';
+  $handler->display->display_options['fields']['field_linux_user_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_linux_user_tags']['delta_offset'] = '0';
   /* Field: User: Created date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'users';
@@ -311,18 +310,18 @@ function linux_user_tags_views_default_views() {
   $handler->display->display_options['filters']['rid']['expose']['operator'] = 'rid_op';
   $handler->display->display_options['filters']['rid']['expose']['identifier'] = 'rid';
   $handler->display->display_options['filters']['rid']['expose']['remember'] = TRUE;
-  /* Filter criterion: User: User Tags (field_user_tags) */
-  $handler->display->display_options['filters']['field_user_tags_tid']['id'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['table'] = 'field_data_field_user_tags';
-  $handler->display->display_options['filters']['field_user_tags_tid']['field'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_user_tags_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['operator_id'] = 'field_user_tags_tid_op';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['label'] = 'Tags';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['operator'] = 'field_user_tags_tid_op';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['identifier'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: User: User Tags (field_linux_user_tags) */
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['id'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['table'] = 'field_data_field_linux_user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['field'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['operator_id'] = 'field_linux_user_tags_tid_op';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['label'] = 'Tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['operator'] = 'field_linux_user_tags_tid_op';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['identifier'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
@@ -332,8 +331,9 @@ function linux_user_tags_views_default_views() {
     7 => 0,
     5 => 0,
   );
-  $handler->display->display_options['filters']['field_user_tags_tid']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['vocabulary'] = 'user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['vocabulary'] = 'linux_user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['error_message'] = FALSE;
 
   /* Display: Users By Tag Admin Page */
   $handler = $view->new_display('page', 'Users By Tag Admin Page', 'page_1');
@@ -344,10 +344,10 @@ function linux_user_tags_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '-3';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
-  $export['users_by_tag_administration'] = $view;
+  $export['linux_users_by_tag_administration'] = $view;
 
   $view = new view();
-  $view->name = 'users_by_tag_public';
+  $view->name = 'linux_users_by_tag_public';
   $view->description = 'Public facing page listing users filterable by tag';
   $view->tag = 'linux';
   $view->base_table = 'users';
@@ -386,13 +386,13 @@ function linux_user_tags_views_default_views() {
   $handler->display->display_options['fields']['access']['field'] = 'access';
   $handler->display->display_options['fields']['access']['date_format'] = 'time ago';
   /* Field: User: User Tags */
-  $handler->display->display_options['fields']['field_user_tags']['id'] = 'field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['table'] = 'field_data_field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['field'] = 'field_user_tags';
-  $handler->display->display_options['fields']['field_user_tags']['label'] = 'Tags';
-  $handler->display->display_options['fields']['field_user_tags']['empty'] = 'None';
-  $handler->display->display_options['fields']['field_user_tags']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_user_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_linux_user_tags']['id'] = 'field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['table'] = 'field_data_field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['field'] = 'field_linux_user_tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['label'] = 'Tags';
+  $handler->display->display_options['fields']['field_linux_user_tags']['empty'] = 'None';
+  $handler->display->display_options['fields']['field_linux_user_tags']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_linux_user_tags']['delta_offset'] = '0';
   /* Sort criterion: User: Created date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'users';
@@ -405,18 +405,18 @@ function linux_user_tags_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: User: User Tags (field_user_tags) */
-  $handler->display->display_options['filters']['field_user_tags_tid']['id'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['table'] = 'field_data_field_user_tags';
-  $handler->display->display_options['filters']['field_user_tags_tid']['field'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_user_tags_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['operator_id'] = 'field_user_tags_tid_op';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['label'] = 'Filter By Tag(s)';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['operator'] = 'field_user_tags_tid_op';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['identifier'] = 'field_user_tags_tid';
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['multiple'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: User: User Tags (field_linux_user_tags) */
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['id'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['table'] = 'field_data_field_linux_user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['field'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['operator_id'] = 'field_linux_user_tags_tid_op';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['label'] = 'Filter By Tag(s)';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['operator'] = 'field_linux_user_tags_tid_op';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['identifier'] = 'field_linux_user_tags_tid';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
@@ -426,14 +426,15 @@ function linux_user_tags_views_default_views() {
     7 => 0,
     5 => 0,
   );
-  $handler->display->display_options['filters']['field_user_tags_tid']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['field_user_tags_tid']['vocabulary'] = 'user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['vocabulary'] = 'linux_user_tags';
+  $handler->display->display_options['filters']['field_linux_user_tags_tid']['error_message'] = FALSE;
 
   /* Display: Public */
   $handler = $view->new_display('page', 'Public', 'page');
   $handler->display->display_options['display_description'] = 'Public facing users by tag page';
   $handler->display->display_options['path'] = 'users';
-  $export['users_by_tag_public'] = $view;
+  $export['linux_users_by_tag_public'] = $view;
 
   return $export;
 }
