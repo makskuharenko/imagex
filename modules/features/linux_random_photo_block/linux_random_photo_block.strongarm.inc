@@ -14,14 +14,14 @@ function linux_random_photo_block_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flickr_api_key';
-  $strongarm->value = '5bd15cf42777b9e12ae488fab1f15510';
+  $strongarm->value = '7b1a81c47ade21877c6515fe5188a38b';
   $export['flickr_api_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flickr_api_secret';
-  $strongarm->value = '796de12fdd43d363';
+  $strongarm->value = '4c50d60aaac2c4b7';
   $export['flickr_api_secret'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -29,7 +29,7 @@ function linux_random_photo_block_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'flickr_block_5';
   $strongarm->value = array(
-    'user_id' => 'aaron_imagex',
+    'user_id' => 'linux',
     'show_n' => 30,
     'size' => 'q',
     'media' => 'all',
