@@ -7,9 +7,6 @@ base profile = imagex_installkit
 ; Dependencies
 dependencies[] = advanced_forum
 dependencies[] = creativecommons
-dependencies[] = flickr
-dependencies[] = flickr_block
-dependencies [] = fe_block
 dependencies[] = linux_creative_commons_configuration
 ;dependencies[] = linux_events
 dependencies[] = linux_group
