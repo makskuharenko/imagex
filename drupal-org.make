@@ -2,6 +2,12 @@ api = 2
 core = 7.x
 
 ; ImageX submodules
+projects[imagex_addthis][type] = "module"
+projects[imagex_addthis][subdir] = "imagex/modules"
+projects[imagex_addthis][download][type] = "git"
+projects[imagex_addthis][download][url] = "git@github.com:imagex/imagex_addthis.git"
+projects[imagex_addthis][download][branch] = "7.x-dev"
+
 projects[imagex_bean][type] = "module"
 projects[imagex_bean][subdir] = "imagex/modules"
 projects[imagex_bean][download][type] = "git"
