@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the linux_poll feature.
+ */
+
+include_once 'linux_poll.features.inc';
