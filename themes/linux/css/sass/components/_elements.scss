@@ -6,7 +6,8 @@ a:hover {
 }
 
 // Standard styling for headers and text in the main content area
-#panel-wrapper {
+// --------------------------------------------------------------
+.standard-bean {
   h2 {
     margin: 0;
     padding: 0 0 0 1.5em;
@@ -22,7 +23,6 @@ a:hover {
   a.orange-button {
     display: block;
     width: auto;
-    float: left;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 10px;
@@ -32,6 +32,8 @@ a:hover {
     background: $linuxStdOrange;
     color: white;
     border: 2px solid white;
+    float: right;
+    margin: -68px 20px 0;
 
     &:hover {
       background: white;
@@ -39,6 +41,37 @@ a:hover {
       color: $linuxStdOrange;
     }
   }
+
+  .pane-content {
+    padding: 2em 0;
+  }
+
+  &.diagonal-lines {
+    .pane-content {
+      padding: 2em;
+      background: transparent url('../img/content-lines.png') repeat top left;
+    }
+  }
+}
+
+.no-border {
+  h2 {
+    border-color: white;
+    padding: 0;
+  }
+}
+
+// Region spacing
+.region-first {
+  @include span-columns(4, 14);
+}
+
+.region-second {
+  @include span-columns(6, 14);
+}
+
+.region-third {
+  @include span-columns(4 omega, 14);
 }
 
 // User bar styles and structure
@@ -47,6 +80,7 @@ a:hover {
   
   #block-menu-menu-join-us {
     float: right;
+    height: 30px;
 
     li {
       display: block;
@@ -112,6 +146,7 @@ a:hover {
   .nice-menu {
     > .menuparent {
       width: 235px;
+      height: 30px;
       border: none;
       background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
       color: transparent;
@@ -134,16 +169,6 @@ a:hover {
             color: white;
           }
         }
-      }
-    }
-  }
-
-  @include at-breakpoint($tablet) {
-    height: 30px;
-
-    .nice-menu {
-      > .menuparent {
-        height: 30px;
       }
     }
   }
@@ -269,10 +294,11 @@ a:hover {
     font-size: 10px;
 
     .expanded {
+      @include span-columns(7, 14);
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      @include span-columns(2, 14);
+      
 
       > a {
         color: $btnBorder;
@@ -285,6 +311,24 @@ a:hover {
       }
     }
 
+    @include at-breakpoint($tablet) {
+      .expanded {
+        
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      .expanded {
+        @include span-columns(2, 14);
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .expanded {
+        @include span-columns(2, 14);
+      }
+    }
+
     .menu-icon {
       display: none;
     }
@@ -294,6 +338,7 @@ a:hover {
     font-size: 10px;
     color: $btnBorder;
     margin: 0 0 30px;
+    text-align: center;
 
     p {
       font-family: $monoFontFamily;
@@ -302,8 +347,6 @@ a:hover {
       letter-spacing: 0.1em;
       line-height: 22px;
       text-transform: none;
-      padding: 0 0 0 15%;
-      margin: 15px 0 0;
     }
 
     a {
@@ -314,6 +357,7 @@ a:hover {
   #block-bean-copyright {
     font-size: 10px;
     color: $btnBorder;
+    text-align: center;
   }
 
   @include at-breakpoint($wide) {
@@ -325,6 +369,423 @@ a:hover {
 
     #block-bean-copyright {
       clear: right;
+    }
+
+    #block-bean-about-linux-foundation {
+      p {
+        padding: 0 0 0 15%;
+        margin: 15px 0 0;
+      }
+    }
+  }
+}
+
+// Getting rid of some of the style defaults from flex slider
+// ----------------------------------------------------------
+
+.flexslider {
+  margin: 0;
+  padding: 0;
+  border: none;
+  @include border-radius(none);
+  @include box-shadow(none);
+}
+
+// Specifics for the featured slideshow flex slide
+// -----------------------------------------------
+
+.featured-slideshow {
+  @include span-columns(14 omega, 14);
+  
+  .flex-nav-container {
+    margin: 0;
+  }  
+
+  .flexslider {
+    &:hover {
+      a.flex-prev,
+      a.flex-next {
+        @include opacity(0);
+
+        &:hover {
+          @include opacity(0.8);
+        }
+      }
+    }
+
+    .slides {
+      li {
+        position: relative;
+      }
+    }
+  }
+
+  .views-field-title {
+    position: absolute;
+    margin: 0 20px;
+    bottom: 40px;
+
+    h2 {
+      border: 0;
+      font-family: $monoFontFamily;
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: 300;
+      @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .views-field-comment-count {
+    position: absolute;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 30px;
+    bottom: 20px;
+    background: transparent url('../img/comment-icon.png') no-repeat left center;
+
+    span {
+      color: white;
+      font-family: $condensedFontFamily;
+      letter-spacing: 0.1em;
+      font-size: 16px;
+      @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+    }
+  }
+
+  .flex-control-paging {
+    display: none;
+  }
+
+  .flex-direction-nav {
+    a {
+      width: 50px;
+      height: 100%;
+      @include opacity(0);
+      top: 0;
+      margin: 0;
+      background-position: center center;
+    }
+
+    .flex-prev {
+      left: 0px;
+      background: transparent url('../img/slideshow-prev.png') no-repeat center center;
+    }
+    
+    .flex-next {
+      right: 0px;
+      background: transparent url('../img/slideshow-next.png') no-repeat center center;
+    }
+  }
+}
+
+@include at-breakpoint($tablet) {
+  .featured-slideshow {
+    .views-field-title {
+      bottom: 60px; 
+
+      h2 {
+        font-size: 38px;
+        line-height: 38px;
+      }
+    }
+  }
+}
+
+@include at-breakpoint($computer) {
+  .featured-slideshow {
+    .views-field-title {
+
+      h2 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+@include at-breakpoint($wide) {
+  .featured-slideshow {
+    @include span-columns(10, 14);
+    width: 72.28916%;
+    margin-right: 0;
+    padding-right: 1px;
+  }
+}
+
+// Feature tiles styles and structure
+// ----------------------------------
+
+.featured-tiles {
+  display: none;
+
+  .views-row {
+    position: relative;
+  }
+
+  .views-field-title {
+    position: absolute;
+    padding: 5px 20px;
+
+    h2 {
+      font-family: $monoFontFamily;
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 28px;
+      @include text-shadow(0 0 15px rgba(0,0,0,0.1));
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .views-field-comment-count {
+    position: absolute;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 30px;
+    bottom: 20px;
+    background: transparent url('../img/comment-icon.png') no-repeat left center;
+
+    span {
+      color: white;
+      font-family: $condensedFontFamily;
+      letter-spacing: 0.1em;
+      font-size: 16px;
+    }
+  }
+}
+
+@include at-breakpoint($wide) {
+  .featured-tiles {
+    display: block;
+    @include span-columns(4 omega,14);
+  }
+}
+
+// Numbered view listing
+// ---------------------
+
+.numbered {
+  ol {
+    list-style-type: none;
+    margin: 0;
+
+    .views-row {
+      min-height: 60px;
+      padding: 10px;
+      clear: left;
+
+      &.views-row-odd {
+        background: $tableBackgroundHover;
+      }
+
+      .views-field-counter {
+        width: 35px;
+        height: 40px;
+        margin: 0 10px 0 0;
+        padding: 0 0 0 5px;
+        border-right: 1px solid $dropdownDividerTop;
+        float: left;
+
+        span {
+          font-size: 28px;
+          font-weight: 800;
+          height: 40px;
+          line-height: 40px;
+          color: $linuxDarkGray;
+        }
+      }
+
+      .views-field-title {
+        h3 {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 20px;
+          margin: 0;
+
+          a {
+            color: $grayDark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Events View Listing
+// -------------------
+
+.events {
+  ul {
+    list-style-type: none;
+    margin: 0;
+
+    .views-row {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+
+      &.views-row-odd {
+        background: $tableBackgroundHover;
+      }
+
+      .views-field-title {
+        h3 {
+          margin: 0;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 20px;
+
+          a {
+            color: $grayDark;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .views-field-created {
+        margin: 0 0 5px;
+
+        span {
+          font-size: 12px;
+          font-weight: 300;
+          color: lighten($grayDark, 50%);
+        }
+      }
+
+      .views-field span {
+        a {
+          display: inline;
+          font-size: 11px;
+          line-height: 17px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $linuxStdOrange;
+        }
+      }
+      
+      .views-field-view-node,
+      .views-field-view-node-1 {
+        display: inline;
+        line-height: 13px;
+        font-size: 0px;
+      }
+
+
+      .views-field-view-node {
+        a {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .views-field-view-node-1 {
+        a {
+          border-right: 1px solid $dropdownDividerTop;
+          padding: 0 10px 0 0;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+// Editorial View Listing
+// ----------------------
+
+.editorial {
+  .editorial-updated {
+    display: block;
+    width: auto;
+    font-family: $condensedFontFamily;
+    font-size: 13px;
+    line-height: 25px;
+    float: right;
+    margin: -65px 0 0;
+  }
+
+  .views-row {
+    .views-field-title {
+      h3 {
+        font-family: $monoFontFamily;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 36px;
+        margin: 0 0 5px;
+
+        a {
+          color: $grayDark;
+        }
+      }
+    }
+
+    .views-field-name {
+      span.field-content {
+        display: block;
+        float: left;
+        font-family: $condensedFontFamily;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        margin: 0 8px 0 0;
+        padding: 0 8px 0 0;
+        border-right: 1px solid $dropdownDividerTop;
+      }
+    }
+
+    .views-field-created {
+      span {
+        display: block;
+        float: left;
+        font-family: $condensedFontFamily;
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+
+    .views-field-comment-count {
+      span {
+        float: right;
+        padding: 0 0 0 20px;
+        font-size: 14px;
+        font-family: $condensedFontFamily;
+        font-weight: 700;
+        color: $linuxDarkGray;
+        background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+      }
+    }
+
+    .field-type-image {
+      img {
+        margin: 0 0 30px;
+        border-bottom: 3px solid $linuxStdOrange;
+      }
+    }
+  }
+}
+
+// Latest Comments styles and structure
+// ------------------------------------
+
+.latest-comments {
+  .views-row {
+    padding: 10px;
+
+    &.views-row-odd {
+      background: $tableBackgroundHover;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 17px;
+      color: $grayDark;
+      margin: 0;
     }
   }
 }
