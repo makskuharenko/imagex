@@ -26,13 +26,13 @@ $container-style: magic;
 // $legacy-support-for-ie6 : $legacy-support-for-ie;
 // $legacy-support-for-ie7 : $legacy-support-for-ie;
 
-$show-grid-backgrounds  : true;
+$show-grid-backgrounds  : false;
 
 //alternative layout breakpoints
 $narrow:    26em 6;
 $tablet:    40em 8;
 $computer:  52em 12;
-$wide:      65em 12;
+$wide:      71em 12;
 
 
 // ---------------------------------------------------------------------------
