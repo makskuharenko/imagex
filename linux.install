@@ -7,16 +7,12 @@
  * Implements hook_install().
  */
 function linux_install() {
-  // Set the default theme and disable bartik.
-  theme_disable(array('bartik'));
-  theme_enable(array('linux'));
-  
-  variable_set('theme_default', 'linux');
+  // Empty.
 }
 
 /**
  * Implements hook_uninstall().
  */
 function linux_uninstall() {
-  // Placeholder.
+  // Empty.
 }
