@@ -67,8 +67,10 @@ function linux_coveritlive_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Custom function for getting post stream from
- * CoverItLive API
+ * Custom function for getting post stream from CoverItLive API
+ *
+ * CoverItLive API is pinged with event/blog info from block settings
+ * Results are cached only as a fallback if the CoverItLive API is down
  */
 function linux_coveritlive_get_stream($block_settings = array()) {  
   //API settings
@@ -85,15 +87,6 @@ function linux_coveritlive_get_stream($block_settings = array()) {
   $stream_count = $block_settings['linux_coveritlive_item_count'];
   $cache_key = LINUX_COVERITLIVE_CACHE_KEY .'_'. $stream_key;
   
-  // @todo - Check for cached data, return if still fresh within the set interval.
-  $refresh_interval = variable_get('events_live_blocks_refresh', 60000) / 1000;
-  if ($cache = cache_get($cache_key)) {
-    if ($cache->created + $refresh_interval > time()) {
-      //return $cache->data;
-    }
-  }
-
-  
   // Construct query parameter.
   // @see: http://www.coveritlive.com/index.php?option=com_content&task=view&id=281
   $data = array(
@@ -104,6 +97,7 @@ function linux_coveritlive_get_stream($block_settings = array()) {
 
   // Fire off request.
   $response = drupal_http_request(url($api_url, array('query' => $data)));
+  
   // If no response, possibly service outage, fallback to cache.
   if (empty($response->data)) {
     if ($cache = cache_get($cache_key)) {
@@ -130,7 +124,7 @@ function linux_coveritlive_get_stream($block_settings = array()) {
   $posts = $result['data']['event_items'];
 
   // Cache result for 24 hours in case of service outage.
-  //cache_set($cache_key, $posts, 'cache', time() + 86400);
+  cache_set($cache_key, $posts, 'cache', time() + 86400);
 
   return $posts;  
 }

@@ -26,20 +26,20 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
       '#markup' => '<div class="messages error">'. t('Please provide CoverItLive API information on <a href="@admin-url">the CoveriveIt settings page</a> to unlock this block.', array('@admin-url' => url('admin/config/services/coveritlive'))) .'</div>',
     );
     
-    //return $form;
+    return $form;
   }
 
   $form['linux_coveritlive_stream_key'] = array(
     '#type' => 'textfield',
     '#title' => t('ConverItLive Blog Key'),
     '#description' => t('The blog owner can find this value after creating a new event, by selecting the "altcast_code" which is found in their Viewer Window embed code (e.g. the event code is "46e6cd22b5" in "altcast_code=46e6cd22b5").'),
-    '#default_value' => $conf['linux_coveritlive_blog_key'],
+    '#default_value' => $conf['linux_coveritlive_stream_key'],
     '#required' => TRUE,
   );
   
   $form['linux_coveritlive_item_count'] = array(
     '#type' => 'select',
-    '#options' => drupal_map_assoc(range(0, 30)),
+    '#options' => drupal_map_assoc(range(1, 30)),
     '#title' => t('Post count'),
     '#description' => t('How many CoverItLive items should be shown.'),
     '#default_value' => 5,
