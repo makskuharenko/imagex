@@ -15,6 +15,7 @@ dependencies[] = linux_directory
 dependencies[] = linux_humor
 dependencies[] = linux_configuration
 dependencies[] = linux_manual
+dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_tutorial
 dependencies[] = linux_wiki

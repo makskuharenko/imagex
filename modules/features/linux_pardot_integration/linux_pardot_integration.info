@@ -1,0 +1,12 @@
+name = Linux Pardot Integration
+description = Integrates Pardot with Webform
+core = 7.x
+package = Linux.com
+version = 7.x-1.0-dev
+project = linux_pardot_integration
+dependencies[] = features
+dependencies[] = pardot
+dependencies[] = webform
+features[features_api][] = api:1
+features[user_permission][] = administer pardot
+project path = profiles/linux/modules/features
