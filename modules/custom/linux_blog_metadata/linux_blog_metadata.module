@@ -1,0 +1,151 @@
+<?php
+/**
+ * @file
+ * Simple module which prefills the "Tags" field on blog content
+ * if acting user is "tagged" with "Linux Foundation" in the "field_linux_user_tags" field
+ */
+
+define('LINUX_USER_TAGS_FIELD', 'field_linux_user_tags');
+define('LINUX_BLOG_TAGS_FIELD', 'field_tags');
+define('LINUX_BLOG_TAGS_VOCAB', 'tags');
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function linux_blog_metadata_form_blog_node_form_alter(&$form, $form_state, $form_id) {
+  //check target field exists
+  if (!empty($form[LINUX_BLOG_TAGS_FIELD])) {
+    $entity = $form['#entity'];
+    $account = user_load($entity->uid); //use the entity "author" since admin could edit the entity after $user creates
+    $lang = $form[LINUX_BLOG_TAGS_FIELD]['#language'];
+    
+    //is user tagged with "Linux Foundation" or similar in field_user_tags?
+    if ($matches = linux_blog_metadata_tag_match($account)) {
+      // tell user the matches will be enforced
+      $form[LINUX_BLOG_TAGS_FIELD][$lang]['#description'] = t('Default Tags added automatically: @defaults', array('@defaults' => implode(', ', array_values($matches))));
+      
+      //remove the matches from field display
+      if (!empty($form[LINUX_BLOG_TAGS_FIELD][$lang]['#default_value'])) {
+        $tags = drupal_explode_tags($form[LINUX_BLOG_TAGS_FIELD][$lang]['#default_value']);
+        $tags = array_diff($tags, array_values($matches));
+        $form[LINUX_BLOG_TAGS_FIELD][$lang]['#default_value'] = drupal_implode_tags($tags);
+      }
+      
+      // store the tid(s) of the matches for later
+      $form[LINUX_BLOG_TAGS_FIELD .'_forced_default'] = array(
+        '#type' => 'value',
+        '#value' => array_keys($matches)
+      );
+      
+      array_unshift($form['#validate'], 'linux_blog_metadata_form_blog_node_form_validate');
+    }
+  }
+}
+
+/**
+ * Custom #validate callback for blog_node_form
+ * 
+ */
+function linux_blog_metadata_form_blog_node_form_validate($form, &$form_state) {  
+  $lang = $form_state['values']['language'];
+  
+  //if forced default tag merged into "tags" field
+  if ($form_state['values'][LINUX_BLOG_TAGS_FIELD .'_forced_default']) {
+    $blog_tags_vocab = taxonomy_vocabulary_machine_name_load(LINUX_BLOG_TAGS_VOCAB);
+    
+    foreach ($form_state['values'][LINUX_BLOG_TAGS_FIELD .'_forced_default'] as $tid) {
+      $original_term = taxonomy_term_load($tid); //original term as in users_tags vocab
+      
+      //default will be to create new term in "tags" 
+      $term = array(
+        'tid' => 'autocreate',
+        'vid' => $blog_tags_vocab->vid,
+        'name' => $original_term->name,
+        'vocabulary_machine_name' => LINUX_BLOG_TAGS_VOCAB,
+      );
+      
+      //see if the enforced tag exists in "tags" vocab
+      if ($terms_exist = taxonomy_term_load_multiple(array(), array('name' => $original_term->name, 'vid' => $blog_tags_vocab->vid))) {
+        $term = (array)array_pop($terms_exist); //take last one
+      }
+      
+      // if tags field is empty or is new term add forced tag(s) directly
+      if (empty($form_state['values'][LINUX_BLOG_TAGS_FIELD][$lang])) {
+        $form_state['values'][LINUX_BLOG_TAGS_FIELD][$lang][] = $term;
+      }
+      else {
+        // check forced tag(s) aren't already in tags field
+        // @todo - code this better?
+        $exists = FALSE;
+        foreach ($form_state['values'][LINUX_BLOG_TAGS_FIELD][$lang] as $k => $tag) {
+          //existing term already selected
+          if ($term['tid'] != 'autocreate' && $tag['tid'] == $term['tid']) {
+            $exists = TRUE;
+          }
+          
+          //new to be created term with same text name
+          if ($term['tid'] == 'autocreate' && $tag['name'] == $term['name']) {
+            $exists = TRUE; //ie. taxonomy module will make it exist
+          }
+        }
+        
+        if (empty($exists)) {
+          $form_state['values'][LINUX_BLOG_TAGS_FIELD][$lang][] = $term;
+        }
+      }
+      
+      // note the forced tags
+      $forced_terms[] = $term;      
+    }
+  }
+  
+  //@todo - admin message about force tags?
+  //drupal_set_message(print_r($form_state['values'][LINUX_BLOG_TAGS_FIELD], TRUE));  
+}
+
+/**
+ * Custom function
+ * returns an array of values which if matched
+ * should be pre-filled into the LINUX_BLOG_TAGS_FIELD field
+ *
+ * @Future proofing - could be expanded to other "tags"
+ */
+function linux_blog_metadata_user_tags_matches() {
+  //get the $tids of any terms in LIKE "Linux Foundation"
+  $query = db_select('taxonomy_term_data', 't')
+  ->fields('t', array('tid'))
+  ->fields('t', array('name'))
+  ->condition('t.name', db_like('Linux Foundation'), 'LIKE');
+  $results = $query->execute()->fetchAllKeyed();
+  return $results;  //Array ( [TID] => NAME)
+}
+
+/**
+ * Custom function
+ * Looks if a give $account user tags match the matches
+ * in linux_blog_metadata_user_tags_matches()
+ */
+function linux_blog_metadata_tag_match($account = NULL) {
+  global $user;
+  if (empty($account)) {
+    $account = user_load($user->uid);
+  }
+  
+  //get user_tags, use Entity API since blog feature is dependent
+  $account_wrapper = entity_metadata_wrapper('user', $account);
+  $user_tags = $account_wrapper->{LINUX_USER_TAGS_FIELD}->value();
+  if (empty($user_tags)) {
+    return FALSE;
+  }
+  
+  //get tids like "Linux Foundation" and match their tid
+  $match = linux_blog_metadata_user_tags_matches();
+  $matches = array();
+  foreach ($user_tags as $tag) {
+    if (!empty($match[$tag->tid])) {
+      $matches[$tag->tid] = $match[$tag->tid]; //return matches for use in form
+    }
+  }
+  
+  return $matches;
+}

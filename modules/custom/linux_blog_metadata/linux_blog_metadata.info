@@ -1,0 +1,9 @@
+name = Linux Blog Metadata
+description = Prefills the Blog Tags field based on user tags
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_blog_metadata
+dependencies[] = linux_user_tags
+dependencies[] = imagex_blog
+
