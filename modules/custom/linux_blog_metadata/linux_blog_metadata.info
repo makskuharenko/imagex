@@ -6,4 +6,4 @@ version = 7.x-1.0
 project = linux_blog_metadata
 dependencies[] = linux_user_tags
 dependencies[] = imagex_blog
-
+dependencies[] = imagex_vocabulary_tags
