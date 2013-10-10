@@ -23,15 +23,11 @@ body {
 // Links
 // -------------------------
 
-a {
-  color: $linkColor;
-  text-decoration: none;
-}
+a,
 a:hover {
-  color: $linkColorHover;
-  text-decoration: underline;
+  text-decoration: none;
+  cursor: pointer;
 }
-
 
 // Images
 // -------------------------
@@ -74,4 +70,19 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   padding: 5px;
   text-align: center;
   text-shadow: none;
+}
+
+// Front Page Region spacing
+// -------------------------
+
+.region-first {
+  @include span-columns(4, 14);
+}
+
+.region-second {
+  @include span-columns(6, 14);
+}
+
+.region-third {
+  @include span-columns(4 omega, 14);
 }

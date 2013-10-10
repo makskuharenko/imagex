@@ -1,14 +1,14 @@
 // Standard elements
-a,
-a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
+
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
 .standard-bean {
   clear: left;
+
+  .pane-content {
+    padding: 2em 0;
+  }
 
   h2 {
     margin: 0;
@@ -44,8 +44,26 @@ a:hover {
     }
   }
 
-  .pane-content {
-    padding: 2em 0;
+  .views-row {
+    padding: 12px 20px;
+
+    &.views-row-odd {
+      background: $tableBackgroundHover;
+    }
+
+    .views-field-title {
+      h3 {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+
+        a {
+          color: $grayDark;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
@@ -63,9 +81,13 @@ a:hover {
   }
 }
 
-.drop-down {
+.filtered-view {
   h2 {
     @include icon-caret-down;
+    background: transparent url('../img/most-recent-gray.png') no-repeat 85% center;
+    background-position: -webkit-calc(100% - 45px) center; /* Sf 6 */
+    background-position: right 45px center; /* Cr 25+, FF 13+, IE 9+, Op 10.5+ */
+    cursor: pointer;
 
     &:before {
       color: $linuxStdOrange;
@@ -74,20 +96,19 @@ a:hover {
       font-size: 16px;
       padding-right: 1.5em;
     }
+
+    &.popular {
+      background-image: url('../img/most-popular-gray.png');
+    }
+
+    &.commented {
+      background-image: url('../img/most-comments-gray.png');
+    }
+
+    &.shared {
+      background-image: url('../img/most-shared-gray.png');
+    }
   }
-}
-
-// Region spacing
-.region-first {
-  @include span-columns(4, 14);
-}
-
-.region-second {
-  @include span-columns(6, 14);
-}
-
-.region-third {
-  @include span-columns(4 omega, 14);
 }
 
 // User bar styles and structure
@@ -106,18 +127,33 @@ a:hover {
       ul,
       li {
         border: 0;
-        width: 235px;
-        background-color: $userBar;
+        width: 195px;
       }
 
       ul {
-        top: 30px;
+        top: 31px;
+        padding: 0px 1.5em; 
+        width: auto;
+        background: $userBar url('../img/header-lines.png') repeat top left;
 
         li {
-          padding: 3px 10px;
+          padding: 0;
+          border-top: 1px solid #888;
+          background: transparent;
+
+          &:first-child {
+            border: none;
+          }
 
           a {
+            display: block;
             color: white;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0;
           }
         }
       }
@@ -158,13 +194,22 @@ a:hover {
         border: none;
         width: auto;
 
-        li {
+        > li {
           border: none;
           width: auto;
           float: left;
           background: transparent;
+          position: relative;
 
-          a {
+          &:hover {
+            border-bottom: 4px solid $dropdownDividerTop;
+
+            a {
+              height: 44px;
+            }
+          }
+
+          > a {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -207,13 +252,36 @@ a:hover {
               padding-right: 0 !important;
             }
 
-            &:hover {
-              border-bottom: 4px solid $dropdownDividerTop;
-            }
-
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
+            }
+          }
+
+          ul {
+            top: 48px;
+            left: 0;
+            border: none;
+            z-index: 998;
+
+            li {
+              border: none;
+              background: $userBar url('../img/header-lines.png') repeat top left;
+
+              a {
+                margin: 0 1em;
+                padding: 0;
+                line-height: 40px;
+                border-top: 1px solid #888;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 10px;
+                color: white;
+
+                &:hover {
+                  @include opacity(0.7);
+                }
+              }
             }
           }
         }
@@ -418,6 +486,7 @@ a:hover {
       top: 0;
       margin: 0;
       background-position: center center;
+      z-index: 0;
     }
 
     .flex-prev {
@@ -528,12 +597,7 @@ a:hover {
 
     .views-row {
       min-height: 60px;
-      padding: 12px;
       clear: left;
-
-      &.views-row-odd {
-        background: $tableBackgroundHover;
-      }
 
       .views-field-counter {
         width: 35px;
@@ -551,20 +615,6 @@ a:hover {
           color: $linuxDarkGray;
         }
       }
-
-      .views-field-title {
-        h3 {
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 20px;
-          margin: 0;
-
-          a {
-            color: $grayDark;
-            text-decoration: none;
-          }
-        }
-      }
     }
   }
 }
@@ -579,24 +629,11 @@ a:hover {
 
     .views-row {
       margin: 0;
-      padding: 12px 20px;
       width: 100%;
-
-      &.views-row-odd {
-        background: $tableBackgroundHover;
-      }
 
       .views-field-title {
         h3 {
-          margin: 0;
-          font-size: 13px;
           font-weight: 700;
-          line-height: 20px;
-
-          a {
-            color: $grayDark;
-            text-decoration: none;
-          }
         }
       }
 
@@ -662,13 +699,19 @@ a:hover {
   }
 
   .views-row {
+    padding: 0;
+
+    &.views-row-odd {
+      background: white;
+    }
+
     .views-field-title {
       h3 {
+        margin: 0 0 5px;
         font-family: $monoFontFamily;
         font-size: 34px;
         font-weight: 400;
         line-height: 36px;
-        margin: 0 0 5px;
 
         a {
           color: $grayDark;
@@ -728,12 +771,6 @@ a:hover {
 
 .latest-comments {
   .views-row {
-    padding: 12px 20px;
-
-    &.views-row-odd {
-      background: $tableBackgroundHover;
-    }
-
     p {
       font-size: 13px;
       line-height: 17px;
@@ -755,26 +792,6 @@ a:hover {
   }
 
   .views-row {
-    padding: 12px 20px;
-
-    .views-field-title {
-      h3 {
-        margin: 0;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 20px;
-
-        a {
-          color: $grayDark;
-          text-decoration: none;
-        }
-      }
-    }
-
-    &.views-row-odd {
-      background: $tableBackgroundHover;
-    }
-
     .field-type-image {
       img {
         margin: 5px 10px 0 0;
@@ -868,10 +885,13 @@ a:hover {
 // -----------------------
 
 .pane-menu-menu-most-recent-filter {
+  display: none;
+  position: relative;
+  z-index: 99;
+  width: 100%;
   background-color: $grayDark;
   position: relative;
-  opacity: 1;
-  margin-bottom: -204px;
+  margin-bottom: -203px;
 
   ul {
     margin: 0;
@@ -902,7 +922,7 @@ a:hover {
           background: transparent url('../img/most-popular-white.png') no-repeat right center;
         }
 
-        &.comments {
+        &.commented {
           background: transparent url('../img/most-comments-white.png') no-repeat right center;
         }
 
