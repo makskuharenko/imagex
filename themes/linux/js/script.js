@@ -1,6 +1,7 @@
 (function ($) {
  
-  $('.pane-menu-menu-most-recent-filter, .pane-test-views-panel-pane-5 .pane-title').click(function() {
+  // When the pane title is clicked. Show the drop down.
+  $('.pane-test-views-panel-pane-5 .pane-title').click(function() {
   	$('.pane-menu-menu-most-recent-filter').show();
   });/*.mouseleave(function() {
   	$('.pane-menu-menu-most-recent-filter').hide();
@@ -34,6 +35,19 @@
   	$('.pane-menu-menu-most-recent-filter').hide();
 
   	return false;
+  });
+
+  // Changing class on scroll so that the navigation rests at the top of the page
+
+  var eTop = $('#block-panels-mini-global-header').offset().top; //get the offset top of the element
+
+  $(window).scroll(function() { //when window is scrolled
+    console.log(eTop - $(window).scrollTop());
+      if (eTop - $(window).scrollTop() <= 0) {
+        $('#header-wrapper, #panel-wrapper').addClass('fixed');
+      } else {
+        $('#header-wrapper, #panel-wrapper').removeClass('fixed');
+      }
   });
 
 })(jQuery);

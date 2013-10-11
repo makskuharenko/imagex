@@ -39,8 +39,6 @@
 
     &:hover {
       background: $linuxDarkOrange;
-      //border-color: $linuxStdOrange;
-      //color: $linuxStdOrange;
     }
   }
 
@@ -164,7 +162,22 @@
 #header-wrapper {
   margin: 0 0 20px;
 
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    top: -130px;
+    width: 100%;
+    border-bottom: 1px solid $dropdownDividerTop;
+    background: rgba(255,255,255,0.95);
+
+    #block-panels-mini-global-header {
+      border-color: white;
+      border-bottom: none;
+    }
+  }
+
   .ad-space {
+    display: none;
     width: 730px;
     height: 90px;
     background-color: $grayLighter;
@@ -177,18 +190,24 @@
     margin: 2em auto;
   }
 
+  @include at-breakpoint($wide) {
+    .ad-space {
+      display: block;
+    }
+  }
+
   #block-panels-mini-global-header {
     border-top: 1px solid $dropdownDividerTop;
     border-bottom: 1px solid $dropdownDividerTop;
 
     #logo {
       width: 155px;
-      margin: 11px 0 0;
       float: left;
+      margin: 11px 15px 0 0;
     }
 
     .pane-nice-menus {
-      @include span-columns(12 omega,12);
+      display: none;
 
       ul.nice-menu {
         border: none;
@@ -214,47 +233,21 @@
             height: 48px;
             text-transform: uppercase;
             padding: 0 1.2em;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
-            
-            &.menu-icon {
-              display: block;
-              width: 26px;
-              height: 48px;
-              padding: 0;
-              font-size: 18px;
-              overflow: hidden;
-              text-align: center;
-            }
-
-            &.menu-localization {
-              @include icon-globe;
-            }
-
-            @include at-breakpoint($wide) {
-              &.menu-localization {
-                margin: 0 0 0 115px;
-              }
-            }
-
-            &.menu-profile {
-              @include icon-user;
-            }
-
-            &.menu-search {
-              @include icon-search;
-            }
-
-            &:before {
-              padding-right: 0 !important;
-            }
 
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
+            }
+          }
+
+          @include at-breakpoint(81em) {
+            > a {
+              font-size: 10px;
             }
           }
 
@@ -290,13 +283,86 @@
 
     @include at-breakpoint($wide) {
       .pane-nice-menus {
-        @include span-columns(10 omega,12);
+        display: block;
+        @include span-columns(9,14);
+      }
+    }
 
-        ul.nice-menu {
-          float: right;
+    .pane-menu-menu-utility-menu {
+      @include span-columns(2 omega, 14);
+
+      ul {
+        border: none;
+        width: auto;
+        margin: 0;
+        float: right;
+
+        > li {
+          border: none;
+          width: auto;
+          float: left;
+          background: transparent;
+          position: relative;
+
+          &:hover {
+            border-bottom: 4px solid $dropdownDividerTop;
+
+            a {
+              height: 44px;
+            }
+          }
+
+          > a {
+            display: block;
+            height: 48px;
+            text-transform: uppercase;
+            padding: 0 1.2em;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 48px;
+            color: $linuxDarkGray;
+
+            &.menu-icon {
+              display: block;
+              width: 26px;
+              height: 44px;
+              padding: 0;
+              font-size: 18px;
+              overflow: hidden;
+              text-align: center;
+            }
+
+            &.menu-profile {
+              @include icon-user;
+            }
+
+            &.menu-search {
+              @include icon-search;
+            }
+
+            &.menu-localization {
+              @include icon-globe;
+            }
+
+            &:before {
+              padding-right: 0 !important;
+            }
+
+            &.active {
+              border-bottom: 4px solid $dropdownDividerTop;
+              color: $linuxStdOrange;
+            }
+          }
         }
       }
     }
+  }
+}
+
+#panel-wrapper {
+  &.fixed {
+    margin-top: 201px;
   }
 }
 

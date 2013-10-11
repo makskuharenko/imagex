@@ -3464,7 +3464,18 @@ a.label:hover, a.badge:hover {
 
 #header-wrapper {
   margin: 0 0 20px; }
+  #header-wrapper.fixed {
+    position: fixed;
+    z-index: 999;
+    top: -130px;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    background: rgba(255, 255, 255, 0.95); }
+    #header-wrapper.fixed #block-panels-mini-global-header {
+      border-color: white;
+      border-bottom: none; }
   #header-wrapper .ad-space {
+    display: none;
     width: 730px;
     height: 90px;
     background-color: #eeeeee;
@@ -3475,19 +3486,18 @@ a.label:hover, a.badge:hover {
     font-weight: 600;
     text-align: center;
     margin: 2em auto; }
+  @media (min-width: 53.25em) {
+    #header-wrapper .ad-space {
+      display: block; } }
   #header-wrapper #block-panels-mini-global-header {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5; }
     #header-wrapper #block-panels-mini-global-header #logo {
       width: 155px;
-      margin: 11px 0 0;
-      float: left; }
+      float: left;
+      margin: 11px 15px 0 0; }
     #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
-      width: 100%;
-      float: right;
-      margin-right: 0;
-      *margin-left: -1em;
-      display: inline; }
+      display: none; }
       #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
         border: none;
         width: auto; }
@@ -3506,47 +3516,83 @@ a.label:hover, a.badge:hover {
             height: 48px;
             text-transform: uppercase;
             padding: 0 1.2em;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 48px;
+            color: #666666; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.active {
+              border-bottom: 4px solid #e5e5e5;
+              color: #f17700; }
+          @media (min-width: 60.75em) {
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a {
+              font-size: 10px; } }
+          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul {
+            top: 48px;
+            left: 0;
+            border: none;
+            z-index: 998; }
+            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li {
+              border: none;
+              background: #807f83 url("../img/header-lines.png") repeat top left; }
+              #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a {
+                margin: 0 1em;
+                padding: 0;
+                line-height: 40px;
+                border-top: 1px solid #888;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 10px;
+                color: white; }
+                #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a:hover {
+                  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+                  opacity: 0.7; }
+    @media (min-width: 53.25em) {
+      #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
+        display: block;
+        width: 63.85542%;
+        float: left;
+        margin-right: 1.20482%; } }
+    #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu {
+      width: 13.25301%;
+      float: right;
+      margin-right: 0;
+      *margin-left: -1em;
+      display: inline; }
+      #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul {
+        border: none;
+        width: auto;
+        margin: 0;
+        float: right; }
+        #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li {
+          border: none;
+          width: auto;
+          float: left;
+          background: transparent;
+          position: relative; }
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li:hover {
+            border-bottom: 4px solid #e5e5e5; }
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li:hover a {
+              height: 44px; }
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a {
+            display: block;
+            height: 48px;
+            text-transform: uppercase;
+            padding: 0 1.2em;
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 0.1em;
             line-height: 48px;
             color: #666666; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.menu-icon {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-icon {
               display: block;
               width: 26px;
-              height: 48px;
+              height: 44px;
               padding: 0;
               font-size: 18px;
               overflow: hidden;
               text-align: center; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.menu-localization:before {
-              content: "\f0ac";
-              font-family: FontAwesome;
-              font-weight: normal;
-              font-style: normal;
-              text-decoration: inherit;
-              -webkit-font-smoothing: antialiased;
-              padding-right: 5px;
-              text-decoration: none;
-              /* sprites.less reset */
-              display: -moz-inline-stack;
-              display: inline-block;
-              vertical-align: middle;
-              *vertical-align: auto;
-              zoom: 1;
-              *display: inline;
-              width: auto;
-              height: auto;
-              margin-top: 0;
-              line-height: normal;
-              vertical-align: baseline;
-              background-image: none;
-              background-position: 0% 0%;
-              background-repeat: repeat; }
-            @media (min-width: 53.25em) {
-              #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.menu-localization {
-                margin: 0 0 0 115px; } }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.menu-profile:before {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-profile:before {
               content: "\f007";
               font-family: FontAwesome;
               font-weight: normal;
@@ -3570,7 +3616,7 @@ a.label:hover, a.badge:hover {
               background-image: none;
               background-position: 0% 0%;
               background-repeat: repeat; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.menu-search:before {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-search:before {
               content: "\f002";
               font-family: FontAwesome;
               font-weight: normal;
@@ -3594,38 +3640,38 @@ a.label:hover, a.badge:hover {
               background-image: none;
               background-position: 0% 0%;
               background-repeat: repeat; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a:before {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-localization:before {
+              content: "\f0ac";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              padding-right: 5px;
+              text-decoration: none;
+              /* sprites.less reset */
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              *vertical-align: auto;
+              zoom: 1;
+              *display: inline;
+              width: auto;
+              height: auto;
+              margin-top: 0;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat; }
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a:before {
               padding-right: 0 !important; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.active {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.active {
               border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul {
-            top: 48px;
-            left: 0;
-            border: none;
-            z-index: 998; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li {
-              border: none;
-              background: #807f83 url("../img/header-lines.png") repeat top left; }
-              #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a {
-                margin: 0 1em;
-                padding: 0;
-                line-height: 40px;
-                border-top: 1px solid #888;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                font-size: 10px;
-                color: white; }
-                #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a:hover {
-                  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-                  opacity: 0.7; }
-    @media (min-width: 53.25em) {
-      #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
-        width: 83.09859%;
-        float: right;
-        margin-right: 0; }
-        #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
-          float: right; } }
+
+#panel-wrapper.fixed {
+  margin-top: 201px; }
 
 #footer-wrapper {
   margin: 20px 0 0;
