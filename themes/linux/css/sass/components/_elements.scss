@@ -199,6 +199,7 @@
   #block-panels-mini-global-header {
     border-top: 1px solid $dropdownDividerTop;
     border-bottom: 1px solid $dropdownDividerTop;
+    height: 50px;
 
     #logo {
       width: 155px;
@@ -212,6 +213,7 @@
       ul.nice-menu {
         border: none;
         width: auto;
+        float: left;
 
         > li {
           border: none;
@@ -245,7 +247,7 @@
             }
           }
 
-          @include at-breakpoint(81em) {
+          @include at-breakpoint(75em) {
             > a {
               font-size: 10px;
             }
@@ -284,13 +286,10 @@
     @include at-breakpoint($wide) {
       .pane-nice-menus {
         display: block;
-        @include span-columns(9,14);
       }
     }
 
     .pane-menu-menu-utility-menu {
-      @include span-columns(2 omega, 14);
-
       ul {
         border: none;
         width: auto;
@@ -481,12 +480,23 @@
 
 .featured-slideshow {
   @include span-columns(14 omega, 14);
+  background-color: $linuxStdOrange;
   
+  .flexslider_views_slideshow_slide {
+    &:hover {
+      img {
+        @include opacity(0.2);
+      }
+    }
+  }
+
   .flex-nav-container {
     margin: 0;
   }  
 
   .flexslider {
+    background: transparent;
+    
     &:hover {
       a.flex-prev,
       a.flex-next {
@@ -597,7 +607,7 @@
     @include span-columns(10, 14);
     width: 72.28916%;
     margin-right: 0;
-    padding-right: 1px;
+    border-right: 1px solid white;
   }
 }
 
@@ -606,9 +616,16 @@
 
 .featured-tiles {
   display: none;
+  background-color: $linuxStdOrange;
 
   .views-row {
     position: relative;
+
+    &:hover {
+      img {
+        @include opacity(0.2);
+      }
+    }
   }
 
   .views-field-title {
