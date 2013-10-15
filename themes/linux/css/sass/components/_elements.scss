@@ -485,7 +485,7 @@
   .flexslider_views_slideshow_slide {
     &:hover {
       img {
-        @include opacity(0.2);
+        @include opacity(0.3);
       }
     }
   }
@@ -496,7 +496,7 @@
 
   .flexslider {
     background: transparent;
-    
+
     &:hover {
       a.flex-prev,
       a.flex-next {
@@ -623,7 +623,7 @@
 
     &:hover {
       img {
-        @include opacity(0.2);
+        @include opacity(0.3);
       }
     }
   }
@@ -778,11 +778,12 @@
     font-size: 13px;
     line-height: 25px;
     float: right;
-    margin: -65px 0 0;
+    margin: -60px 0 0;
   }
 
   .views-row {
-    padding: 0;
+    margin: -0.5em -0.5em 10px;
+    padding: 1em 0.75em;
 
     &.views-row-odd {
       background: white;
@@ -793,7 +794,7 @@
         margin: 0 0 5px;
         font-family: $monoFontFamily;
         font-size: 34px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 36px;
 
         a {
@@ -840,10 +841,97 @@
       }
     }
 
+    .field-type-text-with-summary {
+      visibility: hidden;
+      position: relative;
+      top: -180px;
+      height: 0;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      line-height: 20px;
+      color: white;
+    }
+
+    .views-field-view-node {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: right;
+      width: 100%;
+      margin: -25px 0 0;
+      visibility: hidden;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:after {
+          content: "\f105";
+          @include Awesome;
+          font-weight: bold;
+          font-size: 14px;
+          color: white;
+          padding: 0 0 0 5px;
+        }
+      }
+    }
+
+    .field-type-taxonomy-term-reference {
+      visibility: hidden;
+
+      .field-item {
+        display: inline;
+
+        a {
+          @include border-radius(3px);
+          background: $linuxDarkestOrange;
+          margin: 0;
+          padding: 2px 5px;
+          font-family: $condensedFontFamily;
+          font-size: 12px;
+          text-transform: capitalize;
+          letter-spacing: 0.1em;
+          color: white;
+        }
+      }
+    }
+
     .field-type-image {
       img {
-        margin: 0 0 30px;
         border-bottom: 3px solid $linuxStdOrange;
+      }
+    }
+
+    &:hover {
+      background: $linuxStdOrange;
+      @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
+      
+      .views-field-title {
+        h3 {
+          a {
+            color: white; 
+          }
+        }
+      }
+
+      .views-field-name,
+      .views-field-created {
+        span {
+          color: $linuxDarkestOrange;
+          border-right-color: $linuxDarkestOrange;
+        }
+      }
+  
+      .views-field-comment-count,
+      .field-type-image {
+        visibility: hidden;
+      }
+      
+      .views-field-view-node,
+      .field-type-taxonomy-term-reference,
+      .field-type-text-with-summary {
+        visibility: visible;
       }
     }
   }
