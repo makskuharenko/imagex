@@ -20,6 +20,18 @@ projects[imagex_content_featured][download][type] = "git"
 projects[imagex_content_featured][download][url] = "git@github.com:imagex/imagex_content_featured.git"
 projects[imagex_content_featured][download][branch] = "7.x-dev"
 
+projects[imagex_content_inappropriate][type] = "module"
+projects[imagex_content_inappropriate][subdir] = "imagex/modules"
+projects[imagex_content_inappropriate][download][type] = "git"
+projects[imagex_content_inappropriate][download][url] = "git@github.com:imagex/imagex_content_inappropriate.git"
+projects[imagex_content_inappropriate][download][branch] = "7.x-dev"
+
+projects[imagex_content_likes][type] = "module"
+projects[imagex_content_likes][subdir] = "imagex/modules"
+projects[imagex_content_likes][download][type] = "git"
+projects[imagex_content_likes][download][url] = "git@github.com:imagex/imagex_content_likes.git"
+projects[imagex_content_likes][download][branch] = "7.x-dev"
+
 projects[imagex_content_pinned][type] = "module"
 projects[imagex_content_pinned][subdir] = "imagex/modules"
 projects[imagex_content_pinned][download][type] = "git"
