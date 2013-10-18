@@ -4,20 +4,46 @@ version = 7.x-dev
 core = 7.x
 base profile = imagex_installkit
 
-; Dependencies
+; Contrib dependencies.
 dependencies[] = advanced_forum
 dependencies[] = creativecommons
-dependencies[] = linux_creative_commons_configuration
-;dependencies[] = linux_events
-dependencies[] = linux_group
-dependencies[] = linux_directory
-; dependencies[] = linux_events
-dependencies[] = linux_humor
+dependencies[] = og
+dependencies[] = og_role_field
+
+; ImageX component dependencies.
+dependencies[] = imagex_addthis
+dependencies[] = imagex_answers
+dependencies[] = imagex_answers_addthis
+dependencies[] = imagex_blog
+dependencies[] = imagex_blog_addthis
+dependencies[] = imagex_blog_featured
+dependencies[] = imagex_content_pinned
+dependencies[] = imagex_content_featured
+dependencies[] = imagex_group
+dependencies[] = imagex_group_addthis
+dependencies[] = imagex_dbal
+dependencies[] = imagex_events
+dependencies[] = imagex_events_addthis
+dependencies[] = imagex_faq
+dependencies[] = imagex_faq_addthis
+dependencies[] = imagex_migration
+dependencies[] = imagex_news
+dependencies[] = imagex_news_addthis
+dependencies[] = imagex_page_addthis
+dependencies[] = imagex_poll
+dependencies[] = imagex_poll_addthis
+dependencies[] = imagex_wiki
+dependencies[] = imagex_wiki_addthis
+
+; Linux.com specific components.
 dependencies[] = linux_configuration
+dependencies[] = linux_creative_commons_configuration
+dependencies[] = linux_directory
+dependencies[] = linux_events
+dependencies[] = linux_group
+dependencies[] = linux_humor
 dependencies[] = linux_manual
 dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_tutorial
 dependencies[] = linux_wiki
-dependencies[] = og
-dependencies[] = og_role_field
