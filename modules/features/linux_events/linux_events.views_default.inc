@@ -23,11 +23,13 @@ function linux_events_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Linux Events';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -43,6 +45,13 @@ function linux_events_views_default_views() {
     'field_event_external_link' => 'two_brick_bottom',
     'view_node' => 'two_brick_bottom',
   );
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No events to show.';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -138,16 +147,60 @@ function linux_events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Date: Date (node) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'node';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['group'] = 1;
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
     'field_data_field_event_date.field_event_date_value2' => 'field_data_field_event_date.field_event_date_value2',
   );
+  /* Filter criterion: Content: Tags (field_tag) */
+  $handler->display->display_options['filters']['field_tag_tid']['id'] = 'field_tag_tid';
+  $handler->display->display_options['filters']['field_tag_tid']['table'] = 'field_data_field_tag';
+  $handler->display->display_options['filters']['field_tag_tid']['field'] = 'field_tag_tid';
+  $handler->display->display_options['filters']['field_tag_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_tag_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_tag_tid']['expose']['operator_id'] = 'field_tag_tid_op';
+  $handler->display->display_options['filters']['field_tag_tid']['expose']['label'] = 'Topic';
+  $handler->display->display_options['filters']['field_tag_tid']['expose']['operator'] = 'field_tag_tid_op';
+  $handler->display->display_options['filters']['field_tag_tid']['expose']['identifier'] = 'topic';
+  $handler->display->display_options['filters']['field_tag_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    7 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_tag_tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['field_tag_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_tag_tid']['vocabulary'] = 'tags';
+  /* Filter criterion: Content: Location (field_location) */
+  $handler->display->display_options['filters']['field_location_value']['id'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['table'] = 'field_data_field_location';
+  $handler->display->display_options['filters']['field_location_value']['field'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_location_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator_id'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['identifier'] = 'location';
+  $handler->display->display_options['filters']['field_location_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    7 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+  );
+  $handler->display->display_options['filters']['field_location_value']['reduce_duplicates'] = TRUE;
 
   /* Display: Events List Content pane */
   $handler = $view->new_display('panel_pane', 'Events List Content pane', 'panel_pane_2');
