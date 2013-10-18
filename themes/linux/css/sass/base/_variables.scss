@@ -2,6 +2,13 @@
 // Variables
 // --------------------------------------------------
 
+$userBar: #807f83;
+$linuxDarkGray: #666;
+
+$linuxLightOrange: #ffa146;
+$linuxStdOrange: #f17700;
+$linuxDarkOrange: #e65b04;
+$linuxDarkestOrange: #bb5c00;
 
 // Global values
 // --------------------------------------------------
@@ -241,9 +248,3 @@ $popoverTitleBackground:  darken($popoverBackground, 3%) !default;
 // Special enhancement for popovers
 $popoverArrowOuterWidth:  $popoverArrowWidth + 1 !default;
 $popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
-
-// Linux specific colors and defaults
-$userBar: #807f83;
-
-$linuxDarkGray: #666;
-$linuxStdOrange: #f17700;

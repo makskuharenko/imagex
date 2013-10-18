@@ -1,13 +1,15 @@
 // Standard elements
-a,
-a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
+
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
 .standard-bean {
+  clear: left;
+
+  .pane-content {
+    padding: 2em 0;
+  }
+
   h2 {
     margin: 0;
     padding: 0 0 0 1.5em;
@@ -36,21 +38,37 @@ a:hover {
     margin: -68px 20px 0;
 
     &:hover {
-      background: white;
-      border-color: $linuxStdOrange;
-      color: $linuxStdOrange;
+      background: $linuxDarkOrange;
     }
   }
 
+  .views-row {
+    padding: 12px 20px;
+
+    &.views-row-odd {
+      background: $tableBackgroundHover;
+    }
+
+    .views-field-title {
+      h3 {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+
+        a {
+          color: $grayDark;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.diagonal-lines {
   .pane-content {
-    padding: 2em 0;
-  }
-
-  &.diagonal-lines {
-    .pane-content {
-      padding: 2em;
-      background: transparent url('../img/content-lines.png') repeat top left;
-    }
+    padding: 2em;
+    background: transparent url('../img/content-lines.png') repeat top left;
   }
 }
 
@@ -61,87 +79,39 @@ a:hover {
   }
 }
 
-// Region spacing
-.region-first {
-  @include span-columns(4, 14);
-}
+.filtered-view {
+  h2 {
+    @include icon-caret-down;
+    background: transparent url('../img/most-recent-gray.png') no-repeat 85% center;
+    background-position: -webkit-calc(100% - 45px) center; /* Sf 6 */
+    background-position: right 45px center; /* Cr 25+, FF 13+, IE 9+, Op 10.5+ */
+    cursor: pointer;
 
-.region-second {
-  @include span-columns(6, 14);
-}
+    &:before {
+      color: $linuxStdOrange;
+      float: right;
+      line-height: 50px;
+      font-size: 16px;
+      padding-right: 1.5em;
+    }
 
-.region-third {
-  @include span-columns(4 omega, 14);
+    &.popular {
+      background-image: url('../img/most-popular-gray.png');
+    }
+
+    &.commented {
+      background-image: url('../img/most-comments-gray.png');
+    }
+
+    &.shared {
+      background-image: url('../img/most-shared-gray.png');
+    }
+  }
 }
 
 // User bar styles and structure
 #user-wrapper {
   background: $userBar url('../img/header-lines.png') repeat top left;
-  
-  #block-menu-menu-join-us {
-    float: right;
-    height: 30px;
-
-    li {
-      display: block;
-      float: left;
-      width: 16px;
-      height: 16px;
-      margin: 7px 0 0 5px;
-      background: white;
-      line-height: 13px;
-      @include border-radius(1px);
-      color: $userBar;
-      text-align: center;
-      overflow: hidden;
-      cursor: pointer;
-
-      &:first-child {
-        color: white;
-        letter-spacing: 0.1em;
-        font-weight: 600;
-        text-transform: uppercase;
-        width: auto;
-        background: transparent;
-        margin: 0 5px 0 0;
-        line-height: 30px;
-        height: 30px;
-        cursor: default;
-
-        span {
-          font-size: 10px;
-        }
-      }
-      
-      span {
-        font-size: 11px;
-
-        &.addthis-facebook {
-          @include icon-facebook;
-        }
-
-        &.addthis-twitter {
-          @include icon-twitter;
-        }
-
-        &.addthis-googleplus {
-          @include icon-google-plus;
-        }
-
-        &.addthis-linkedin {
-          @include icon-linkedin;
-        }
-
-        &.addthis-rss {
-          @include icon-rss;
-        }
-
-        &:before {
-          padding-right: 0 !important;
-        }
-      }
-    }
-  }
 
   .nice-menu {
     > .menuparent {
@@ -155,18 +125,33 @@ a:hover {
       ul,
       li {
         border: 0;
-        width: 235px;
-        background-color: $userBar;
+        width: 195px;
       }
 
       ul {
-        top: 30px;
+        top: 31px;
+        padding: 0px 1.5em; 
+        width: auto;
+        background: $userBar url('../img/header-lines.png') repeat top left;
 
         li {
-          padding: 3px 10px;
+          padding: 0;
+          border-top: 1px solid #888;
+          background: transparent;
+
+          &:first-child {
+            border: none;
+          }
 
           a {
+            display: block;
             color: white;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0;
           }
         }
       }
@@ -177,7 +162,22 @@ a:hover {
 #header-wrapper {
   margin: 0 0 20px;
 
+  &.fixed {
+    position: fixed;
+    z-index: 999;
+    top: -130px;
+    width: 100%;
+    border-bottom: 1px solid $dropdownDividerTop;
+    background: rgba(255,255,255,0.95);
+
+    #block-panels-mini-global-header {
+      border-color: white;
+      border-bottom: none;
+    }
+  }
+
   .ad-space {
+    display: none;
     width: 730px;
     height: 90px;
     background-color: $grayLighter;
@@ -190,30 +190,128 @@ a:hover {
     margin: 2em auto;
   }
 
+  @include at-breakpoint($wide) {
+    .ad-space {
+      display: block;
+    }
+  }
+
   #block-panels-mini-global-header {
     border-top: 1px solid $dropdownDividerTop;
     border-bottom: 1px solid $dropdownDividerTop;
+    height: 50px;
 
     #logo {
       width: 155px;
-      margin: 11px 0 0;
       float: left;
+      margin: 11px 15px 0 0;
     }
 
     .pane-nice-menus {
-      @include span-columns(12 omega,12);
+      display: none;
 
       ul.nice-menu {
         border: none;
         width: auto;
+        float: left;
 
-        li {
+        > li {
           border: none;
           width: auto;
           float: left;
           background: transparent;
+          position: relative;
 
-          a {
+          &:hover {
+            border-bottom: 4px solid $dropdownDividerTop;
+
+            a {
+              height: 44px;
+            }
+          }
+
+          > a {
+            display: block;
+            height: 48px;
+            text-transform: uppercase;
+            padding: 0 1.2em;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            line-height: 48px;
+            color: $linuxDarkGray;
+
+            &.active {
+              border-bottom: 4px solid $dropdownDividerTop;
+              color: $linuxStdOrange;
+            }
+          }
+
+          @include at-breakpoint(75em) {
+            > a {
+              font-size: 10px;
+            }
+          }
+
+          ul {
+            top: 48px;
+            left: 0;
+            border: none;
+            z-index: 998;
+
+            li {
+              border: none;
+              background: $userBar url('../img/header-lines.png') repeat top left;
+
+              a {
+                margin: 0 1em;
+                padding: 0;
+                line-height: 40px;
+                border-top: 1px solid #888;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 10px;
+                color: white;
+
+                &:hover {
+                  @include opacity(0.7);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .pane-nice-menus {
+        display: block;
+      }
+    }
+
+    .pane-menu-menu-utility-menu {
+      ul {
+        border: none;
+        width: auto;
+        margin: 0;
+        float: right;
+
+        > li {
+          border: none;
+          width: auto;
+          float: left;
+          background: transparent;
+          position: relative;
+
+          &:hover {
+            border-bottom: 4px solid $dropdownDividerTop;
+
+            a {
+              height: 44px;
+            }
+          }
+
+          > a {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -223,25 +321,15 @@ a:hover {
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
-            
+
             &.menu-icon {
               display: block;
               width: 26px;
-              height: 48px;
+              height: 44px;
               padding: 0;
               font-size: 18px;
               overflow: hidden;
               text-align: center;
-            }
-
-            &.menu-localization {
-              @include icon-globe;
-            }
-
-            @include at-breakpoint($wide) {
-              &.menu-localization {
-                margin: 0 0 0 115px;
-              }
             }
 
             &.menu-profile {
@@ -252,12 +340,12 @@ a:hover {
               @include icon-search;
             }
 
-            &:before {
-              padding-right: 0 !important;
+            &.menu-localization {
+              @include icon-globe;
             }
 
-            &:hover {
-              border-bottom: 4px solid $dropdownDividerTop;
+            &:before {
+              padding-right: 0 !important;
             }
 
             &.active {
@@ -268,16 +356,12 @@ a:hover {
         }
       }
     }
+  }
+}
 
-    @include at-breakpoint($wide) {
-      .pane-nice-menus {
-        @include span-columns(10 omega,12);
-
-        ul.nice-menu {
-          float: right;
-        }
-      }
-    }
+#panel-wrapper {
+  &.fixed {
+    margin-top: 201px;
   }
 }
 
@@ -396,12 +480,23 @@ a:hover {
 
 .featured-slideshow {
   @include span-columns(14 omega, 14);
+  background-color: $linuxStdOrange;
   
+  .flexslider_views_slideshow_slide {
+    &:hover {
+      img {
+        @include opacity(0.3);
+      }
+    }
+  }
+
   .flex-nav-container {
     margin: 0;
   }  
 
   .flexslider {
+    background: transparent;
+
     &:hover {
       a.flex-prev,
       a.flex-next {
@@ -467,6 +562,7 @@ a:hover {
       top: 0;
       margin: 0;
       background-position: center center;
+      z-index: 0;
     }
 
     .flex-prev {
@@ -511,7 +607,7 @@ a:hover {
     @include span-columns(10, 14);
     width: 72.28916%;
     margin-right: 0;
-    padding-right: 1px;
+    border-right: 1px solid white;
   }
 }
 
@@ -520,9 +616,16 @@ a:hover {
 
 .featured-tiles {
   display: none;
+  background-color: $linuxStdOrange;
 
   .views-row {
     position: relative;
+
+    &:hover {
+      img {
+        @include opacity(0.3);
+      }
+    }
   }
 
   .views-field-title {
@@ -569,18 +672,15 @@ a:hover {
 // ---------------------
 
 .numbered {
+  clear: left;
+
   ol {
     list-style-type: none;
     margin: 0;
 
     .views-row {
       min-height: 60px;
-      padding: 10px;
       clear: left;
-
-      &.views-row-odd {
-        background: $tableBackgroundHover;
-      }
 
       .views-field-counter {
         width: 35px;
@@ -598,20 +698,6 @@ a:hover {
           color: $linuxDarkGray;
         }
       }
-
-      .views-field-title {
-        h3 {
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 20px;
-          margin: 0;
-
-          a {
-            color: $grayDark;
-            text-decoration: none;
-          }
-        }
-      }
     }
   }
 }
@@ -626,24 +712,11 @@ a:hover {
 
     .views-row {
       margin: 0;
-      padding: 10px;
       width: 100%;
-
-      &.views-row-odd {
-        background: $tableBackgroundHover;
-      }
 
       .views-field-title {
         h3 {
-          margin: 0;
-          font-size: 13px;
           font-weight: 700;
-          line-height: 20px;
-
-          a {
-            color: $grayDark;
-            text-decoration: none;
-          }
         }
       }
 
@@ -705,17 +778,24 @@ a:hover {
     font-size: 13px;
     line-height: 25px;
     float: right;
-    margin: -65px 0 0;
+    margin: -60px 0 0;
   }
 
   .views-row {
+    margin: -0.5em -0.5em 10px;
+    padding: 1em 0.75em;
+
+    &.views-row-odd {
+      background: white;
+    }
+
     .views-field-title {
       h3 {
+        margin: 0 0 5px;
         font-family: $monoFontFamily;
         font-size: 34px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 36px;
-        margin: 0 0 5px;
 
         a {
           color: $grayDark;
@@ -761,10 +841,97 @@ a:hover {
       }
     }
 
+    .field-type-text-with-summary {
+      visibility: hidden;
+      position: relative;
+      top: -180px;
+      height: 0;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      line-height: 20px;
+      color: white;
+    }
+
+    .views-field-view-node {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: right;
+      width: 100%;
+      margin: -25px 0 0;
+      visibility: hidden;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:after {
+          content: "\f105";
+          @include Awesome;
+          font-weight: bold;
+          font-size: 14px;
+          color: white;
+          padding: 0 0 0 5px;
+        }
+      }
+    }
+
+    .field-type-taxonomy-term-reference {
+      visibility: hidden;
+
+      .field-item {
+        display: inline;
+
+        a {
+          @include border-radius(3px);
+          background: $linuxDarkestOrange;
+          margin: 0;
+          padding: 2px 5px;
+          font-family: $condensedFontFamily;
+          font-size: 12px;
+          text-transform: capitalize;
+          letter-spacing: 0.1em;
+          color: white;
+        }
+      }
+    }
+
     .field-type-image {
       img {
-        margin: 0 0 30px;
         border-bottom: 3px solid $linuxStdOrange;
+      }
+    }
+
+    &:hover {
+      background: $linuxStdOrange;
+      @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
+      
+      .views-field-title {
+        h3 {
+          a {
+            color: white; 
+          }
+        }
+      }
+
+      .views-field-name,
+      .views-field-created {
+        span {
+          color: $linuxDarkestOrange;
+          border-right-color: $linuxDarkestOrange;
+        }
+      }
+  
+      .views-field-comment-count,
+      .field-type-image {
+        visibility: hidden;
+      }
+      
+      .views-field-view-node,
+      .field-type-taxonomy-term-reference,
+      .field-type-text-with-summary {
+        visibility: visible;
       }
     }
   }
@@ -775,17 +942,185 @@ a:hover {
 
 .latest-comments {
   .views-row {
-    padding: 10px;
-
-    &.views-row-odd {
-      background: $tableBackgroundHover;
-    }
-
     p {
       font-size: 13px;
       line-height: 17px;
       color: $grayDark;
       margin: 0;
+    }
+  }
+}
+
+// Latest Comments styles and structure
+// ------------------------------------
+
+.recent-events {
+  ul {
+    li {
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+
+  .views-row {
+    .field-type-image {
+      img {
+        margin: 5px 10px 0 0;
+        border-bottom: 3px solid $linuxStdOrange;
+        float: left;
+      }
+    }
+
+    .views-field-created {
+      span {
+        font-family: $condensedFontFamily;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+}
+
+// Social media styles
+// -------------------
+
+.pane-menu-menu-join-us {
+  background: transparent url('../img/content-lines.png') repeat top left;
+  padding: 0 1.5em;
+  height: 50px;
+
+  h2 {
+    font-size: 13px;
+    line-height: 50px;
+    font-weight: 700;
+    color: $linuxDarkGray;
+    text-transform: uppercase;
+    margin: 0;
+    float: left;
+  }
+  
+  ul {
+    margin: 0;
+    float: right;
+
+    li {
+      display: block;
+      float: left;
+      width: 26px;
+      height: 26px;
+      margin: 12px 0 0 6px;
+      background: $linuxDarkGray;
+      line-height: 26px;
+      @include border-radius(2px);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        background: $linuxDarkOrange;
+      }
+      
+      span {
+        font-size: 17px;
+
+        &.addthis-facebook {
+          @include icon-facebook;
+        }
+
+        &.addthis-twitter {
+          @include icon-twitter;
+        }
+
+        &.addthis-googleplus {
+          @include icon-google-plus;
+        }
+
+        &.addthis-linkedin {
+          @include icon-linkedin;
+        }
+
+        &.addthis-rss {
+          @include icon-rss;
+        }
+
+        &:before {
+          padding-right: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+// Most Recent menu filter
+// -----------------------
+
+.pane-menu-menu-most-recent-filter {
+  display: none;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  background-color: $grayDark;
+  position: relative;
+  margin-bottom: -203px;
+
+  ul {
+    margin: 0;
+    padding: 0 1.5em;
+    list-style-type: none;
+
+    li {
+      border-top: 1px solid $btnInverseBackground;
+      
+      a {
+        display: block;
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 50px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+
+        &:hover {
+          color: darken(white, 60%);
+        }
+
+        &.recent {
+          background: transparent url('../img/most-recent-white.png') no-repeat right center;
+        }
+
+        &.popular {
+          background: transparent url('../img/most-popular-white.png') no-repeat right center;
+        }
+
+        &.commented {
+          background: transparent url('../img/most-comments-white.png') no-repeat right center;
+        }
+
+        &.shared {
+          background: transparent url('../img/most-shared-white.png') no-repeat right center;
+        }
+      }
+
+      &:first-child {
+        border: none;
+        @include icon-caret-down;
+
+        &:before {
+          color: darken(white, 60%);
+          float: right;
+          line-height: 50px;
+          font-size: 16px;
+        }
+
+        a {
+          color: darken(white, 60%);
+          letter-spacing: 0em;
+          font-weight: 700;
+          font-size: 13px;
+          background: none;
+        }
+      }
     }
   }
 }
