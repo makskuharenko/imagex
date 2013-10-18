@@ -1,0 +1,130 @@
+<?php
+/**
+ * @file
+ * CoverItLive integration for the Linux.com
+ */
+define('LINUX_COVERITLIVE_CACHE_KEY', 'linux_coveritlive_stream');
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function linux_coveritlive_ctools_plugin_directory($module, $plugin_type) {
+  if ($module == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+} 
+ 
+/**
+ * Implementation of hook_menu().
+ */
+function linux_coveritlive_menu() {
+  $items = array();
+
+  $items['admin/config/services/coveritlive'] = array(
+    'title' => 'CoverItLive API Settings',
+    'description' => 'CoverItLive API Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('linux_coveritlive_admin_settings_form'),
+    'file' => 'includes/linux_coveritlive.admin.inc',
+    'access arguments' => array('administer coveritlive'),
+  );
+
+  return $items;
+}
+
+/**
+ * Implementation of hook_permission().
+ */
+function linux_coveritlive_permission() {
+  return array(
+    'administer coveritlive' => array(
+      'title' => t('Admin CoverItLive Settings'),
+      'Description' => t('Configure the CoverItLive integration settings'),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function linux_coveritlive_theme($existing, $type, $theme, $path) {  
+  return array(
+    'linux_coveritlive_block' => array(
+      'variables' => array('posts' => array()),
+      'template' => 'linux-coveritlive-block',
+      'pattern' => 'linux_coveritlive_item__',
+      'path' => $path .'/theme',
+      'file' => 'linux_coveritlive.theme.inc'
+    ),
+    'linux_coveritlive_item' => array(
+      'variables' => array('post' => array()),
+      'template' => 'linux-coveritlive-item',
+      'pattern' => 'linux_coveritlive_item__',
+      'path' => $path .'/theme',
+      'file' => 'linux_coveritlive.theme.inc'
+    ),     
+  );
+}
+
+/**
+ * Custom function for getting post stream from CoverItLive API
+ *
+ * CoverItLive API is pinged with event/blog info from block settings
+ * Results are cached only as a fallback if the CoverItLive API is down
+ */
+function linux_coveritlive_get_stream($block_settings = array()) {  
+  //API settings
+  $api_url = variable_get('linux_coveritlive_api_url', 'https://api.coveritlive.com/remote/2/event/data');
+  $api_key = variable_get('linux_coveritlive_api_key');  
+  
+  //no APi key or block settings = jump ship
+  if (empty($api_key) || empty($block_settings)) {
+    return FALSE;
+  }
+  
+  //vars
+  $stream_key = $block_settings['linux_coveritlive_stream_key']; //specific key/code of given blog/stream
+  $stream_count = $block_settings['linux_coveritlive_item_count'];
+  $cache_key = LINUX_COVERITLIVE_CACHE_KEY .'_'. $stream_key;
+  
+  // Construct query parameter.
+  // @see: http://www.coveritlive.com/index.php?option=com_content&task=view&id=281
+  $data = array(
+    'event_code' => $stream_key,
+    'token' => $api_key,
+    'item_count' => $stream_count,
+  );
+
+  // Fire off request.
+  $response = drupal_http_request(url($api_url, array('query' => $data)));
+  
+  // If no response, possibly service outage, fallback to cache.
+  if (empty($response->data)) {
+    if ($cache = cache_get($cache_key)) {
+      return $cache->data;
+    }
+  }
+
+  // Convert the received data into an array.
+  $result =  drupal_json_decode($response->data);
+
+  // Checks for $result['err'] & display error message to admins.
+  if ($result['result'] != 'success') {
+    if (user_access('administer coveritlive')) {
+      drupal_set_message(t('Problem with CoverItLive API call: @var', array('@var' => $result['message'])), 'error');
+    }
+    return FALSE;
+  }
+
+  // Return false if no data
+  if (empty($result['data'])) {
+    return FALSE;
+  }
+
+  $posts = $result['data']['event_items'];
+
+  // Cache result for 24 hours in case of service outage.
+  cache_set($cache_key, $posts, 'cache', time() + 86400);
+
+  return $posts;  
+}

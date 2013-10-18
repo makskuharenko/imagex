@@ -1,0 +1,10 @@
+name = Linux Cover It Live
+description = CoverItLive integration for the Linux.com
+core = 7.x
+package = Linux.com
+php = 5.2.4
+version = 7.x-1.0
+project = linux_coveritlive
+
+files[] = linux_coveritlive.admin.inc
+files[] = linux_coveritlive.theme.inc
