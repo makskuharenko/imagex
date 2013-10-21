@@ -210,6 +210,7 @@
       ul.nice-menu {
         border: none;
         width: auto;
+        text-align: left;
         float: left;
 
         > li {
@@ -219,15 +220,8 @@
           background: transparent;
           position: relative;
 
-          &:hover {
-            border-bottom: 4px solid $dropdownDividerTop;
-
-            a {
-              height: 44px;
-            }
-          }
-
-          > a {
+          > a,
+          > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -238,6 +232,15 @@
             line-height: 48px;
             color: $linuxDarkGray;
 
+            &:hover {
+              border-bottom: 4px solid $dropdownDividerTop;
+
+              a,
+              span {
+                height: 44px;
+              }
+            }
+
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
@@ -245,7 +248,8 @@
           }
 
           @include at-breakpoint(75em) {
-            > a {
+            > a,
+            > span {
               font-size: 10px;
             }
           }
@@ -260,7 +264,8 @@
               border: none;
               background: $userBar url('../img/header-lines.png') repeat top left;
 
-              a {
+              a,
+              span {
                 margin: 0 1em;
                 padding: 0;
                 line-height: 40px;
@@ -308,7 +313,8 @@
             }
           }
 
-          > a {
+          > a,
+          > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -362,6 +368,7 @@
   }
 }
 
+#content-wrapper,
 #panel-wrapper {
   background: white;
 
@@ -391,12 +398,14 @@
       padding: 0;
       
 
-      > a {
+      > a,
+      > span {
         color: $btnBorder;
       }
 
       li {
-        a {
+        a,
+        span, {
           color: white;
         }
       }

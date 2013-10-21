@@ -3525,6 +3525,7 @@ a.label:hover, a.badge:hover {
       #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu {
         border: none;
         width: auto;
+        text-align: left;
         float: left; }
         #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li {
           border: none;
@@ -3532,11 +3533,8 @@ a.label:hover, a.badge:hover {
           float: left;
           background: transparent;
           position: relative; }
-          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover {
-            border-bottom: 4px solid #e5e5e5; }
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a {
-              height: 44px; }
-          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a {
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -3546,11 +3544,21 @@ a.label:hover, a.badge:hover {
             letter-spacing: 0.1em;
             line-height: 48px;
             color: #666666; }
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover {
+              border-bottom: 4px solid #e5e5e5; }
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover a,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover span,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover a,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover span {
+                height: 44px; }
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
               border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
           @media (min-width: 56.25em) {
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
               font-size: 10px; } }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul {
             top: 48px;
@@ -3560,7 +3568,8 @@ a.label:hover, a.badge:hover {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li {
               border: none;
               background: #807f83 url("../img/header-lines.png") repeat top left; }
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a {
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span {
                 margin: 0 1em;
                 padding: 0;
                 line-height: 40px;
@@ -3569,7 +3578,8 @@ a.label:hover, a.badge:hover {
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white; }
-                #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover {
+                #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover,
+                #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
                   opacity: 0.7; }
     @media (min-width: 53.25em) {
@@ -3590,7 +3600,8 @@ a.label:hover, a.badge:hover {
           border-bottom: 4px solid #e5e5e5; }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li:hover a {
             height: 44px; }
-        #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a {
+        #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a,
+        #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span {
           display: block;
           height: 48px;
           text-transform: uppercase;
@@ -3600,7 +3611,8 @@ a.label:hover, a.badge:hover {
           letter-spacing: 0.1em;
           line-height: 48px;
           color: #666666; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-icon {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-icon,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-icon {
             display: block;
             width: 26px;
             height: 44px;
@@ -3608,7 +3620,8 @@ a.label:hover, a.badge:hover {
             font-size: 18px;
             overflow: hidden;
             text-align: center; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-profile:before {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-profile:before,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-profile:before {
             content: "\f007";
             font-family: FontAwesome;
             font-weight: normal;
@@ -3632,7 +3645,8 @@ a.label:hover, a.badge:hover {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-utility:before {
             content: "\f0c9";
             font-family: FontAwesome;
             font-weight: normal;
@@ -3657,7 +3671,8 @@ a.label:hover, a.badge:hover {
             background-position: 0% 0%;
             background-repeat: repeat; }
           @media (min-width: 53.25em) {
-            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before,
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-utility:before {
               content: "\f002";
               font-family: FontAwesome;
               font-weight: normal;
@@ -3681,7 +3696,8 @@ a.label:hover, a.badge:hover {
               background-image: none;
               background-position: 0% 0%;
               background-repeat: repeat; } }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-localization:before {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-localization:before,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-localization:before {
             content: "\f0ac";
             font-family: FontAwesome;
             font-weight: normal;
@@ -3705,15 +3721,19 @@ a.label:hover, a.badge:hover {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a:before {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a:before,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span:before {
             padding-right: 0 !important; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.active {
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.active,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.active {
             border-bottom: 4px solid #e5e5e5;
             color: #f17700; }
 
+#content-wrapper,
 #panel-wrapper {
   background: white; }
   @media (min-width: 53.25em) {
+    #content-wrapper.fixed,
     #panel-wrapper.fixed {
       margin-top: 201px; } }
 
@@ -3734,9 +3754,11 @@ a.label:hover, a.badge:hover {
       list-style-type: none;
       list-style-image: none;
       padding: 0; }
-      #footer-wrapper #block-system-main-menu ul .expanded > a {
+      #footer-wrapper #block-system-main-menu ul .expanded > a,
+      #footer-wrapper #block-system-main-menu ul .expanded > span {
         color: #bbbbbb; }
-      #footer-wrapper #block-system-main-menu ul .expanded li a {
+      #footer-wrapper #block-system-main-menu ul .expanded li a,
+      #footer-wrapper #block-system-main-menu ul .expanded li span {
         color: white; }
     @media (min-width: 39em) {
       #footer-wrapper #block-system-main-menu ul .expanded {
