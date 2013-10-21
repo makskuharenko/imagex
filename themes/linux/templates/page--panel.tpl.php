@@ -26,6 +26,7 @@
   <div id="header-wrapper" class="fullwidth">
     <div class="container">
       <header role="banner" class="row">
+        <!--
         <div class="siteinfo">
 
           <?php if($site_name OR $site_slogan ): ?>
@@ -39,7 +40,8 @@
             </hgroup>
           <?php endif; ?>
         </div>
-
+        -->
+        
         <?php if ($page['header']): ?>
           <div class="header-region">
             <?php print render($page['header']); ?>
