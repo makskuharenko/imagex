@@ -3355,7 +3355,7 @@ a.label:hover, a.badge:hover {
 
 .standard-bean {
   clear: left; }
-  .standard-bean .pane-content {
+  .standard-bean > div {
     padding: 2em 0; }
   .standard-bean h2 {
     margin: 0;
@@ -3400,7 +3400,7 @@ a.label:hover, a.badge:hover {
         color: #333333;
         text-decoration: none; }
 
-.diagonal-lines .pane-content {
+.diagonal-lines > div {
   padding: 2em;
   background: transparent url("../img/content-lines.png") repeat top left; }
 
