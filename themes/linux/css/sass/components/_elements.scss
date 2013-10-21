@@ -220,6 +220,15 @@
           background: transparent;
           position: relative;
 
+          &:hover {
+            border-bottom: 4px solid $dropdownDividerTop;
+
+            a,
+            span {
+              height: 44px;
+            }
+          }
+
           > a,
           > span {
             display: block;
@@ -231,15 +240,6 @@
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
-
-            &:hover {
-              border-bottom: 4px solid $dropdownDividerTop;
-
-              a,
-              span {
-                height: 44px;
-              }
-            }
 
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;

@@ -3533,6 +3533,11 @@ a.label:hover, a.badge:hover {
           float: left;
           background: transparent;
           position: relative; }
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover {
+            border-bottom: 4px solid #e5e5e5; }
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span {
+              height: 44px; }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
@@ -3544,14 +3549,6 @@ a.label:hover, a.badge:hover {
             letter-spacing: 0.1em;
             line-height: 48px;
             color: #666666; }
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover,
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover {
-              border-bottom: 4px solid #e5e5e5; }
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover a,
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a:hover span,
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover a,
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span:hover span {
-                height: 44px; }
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
               border-bottom: 4px solid #e5e5e5;
