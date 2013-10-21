@@ -1088,23 +1088,47 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   text-shadow: none; }
 
 .region-first {
-  width: 27.71084%;
-  float: left;
-  margin-right: 1.20482%;
-  display: inline; }
+  display: none; }
+  @media (min-width: 39em) {
+    .region-first {
+      width: 34.93976%;
+      float: left;
+      margin-right: 1.20482%;
+      display: block; } }
+  @media (min-width: 53.25em) {
+    .region-first {
+      width: 27.71084%;
+      float: left;
+      margin-right: 1.20482%; } }
 
 .region-second {
-  width: 42.16867%;
-  float: left;
-  margin-right: 1.20482%;
-  display: inline; }
-
-.region-third {
-  width: 27.71084%;
+  width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline; }
+  @media (min-width: 39em) {
+    .region-second {
+      width: 63.85542%;
+      float: right;
+      margin-right: 0; } }
+  @media (min-width: 53.25em) {
+    .region-second {
+      width: 42.16867%;
+      float: left;
+      margin-right: 1.20482%; } }
+
+@media (min-width: 39em) {
+  .region-third {
+    width: 63.85542%;
+    float: right;
+    margin-right: 0; } }
+@media (min-width: 53.25em) {
+  .region-third {
+    width: 27.71084%;
+    float: right;
+    margin-right: 0;
+    display: block; } }
 
 p {
   margin: 0 0 12px; }
@@ -3331,7 +3355,7 @@ a.label:hover, a.badge:hover {
 
 .standard-bean {
   clear: left; }
-  .standard-bean .pane-content {
+  .standard-bean > div {
     padding: 2em 0; }
   .standard-bean h2 {
     margin: 0;
@@ -3376,13 +3400,9 @@ a.label:hover, a.badge:hover {
         color: #333333;
         text-decoration: none; }
 
-.diagonal-lines .pane-content {
+.diagonal-lines > div {
   padding: 2em;
   background: transparent url("../img/content-lines.png") repeat top left; }
-
-.no-border h2 {
-  border-color: white;
-  padding: 0; }
 
 .filtered-view h2 {
   background: transparent url("../img/most-recent-gray.png") no-repeat 85% center;
@@ -3464,16 +3484,17 @@ a.label:hover, a.badge:hover {
 
 #header-wrapper {
   margin: 0 0 20px; }
-  #header-wrapper.fixed {
-    position: fixed;
-    z-index: 999;
-    top: -130px;
-    width: 100%;
-    border-bottom: 1px solid #e5e5e5;
-    background: rgba(255, 255, 255, 0.95); }
-    #header-wrapper.fixed #block-panels-mini-global-header {
-      border-color: white;
-      border-bottom: none; }
+  @media (min-width: 53.25em) {
+    #header-wrapper.fixed {
+      position: fixed;
+      z-index: 999;
+      top: -130px;
+      width: 100%;
+      border-bottom: 1px solid #e5e5e5;
+      background: rgba(255, 255, 255, 0.95); }
+      #header-wrapper.fixed #block-panels-mini-global-header {
+        border-color: white;
+        border-bottom: none; } }
   #header-wrapper .ad-space {
     display: none;
     width: 730px;
@@ -3497,23 +3518,23 @@ a.label:hover, a.badge:hover {
       width: 155px;
       float: left;
       margin: 11px 15px 0 0; }
-    #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
+    #header-wrapper #block-panels-mini-global-header .linux-main-menu {
       display: none; }
-      #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu {
+      #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu {
         border: none;
         width: auto;
         float: left; }
-        #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li {
+        #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li {
           border: none;
           width: auto;
           float: left;
           background: transparent;
           position: relative; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li:hover {
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover {
             border-bottom: 4px solid #e5e5e5; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li:hover a {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a {
               height: 44px; }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a {
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -3523,21 +3544,21 @@ a.label:hover, a.badge:hover {
             letter-spacing: 0.1em;
             line-height: 48px;
             color: #666666; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a.active {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active {
               border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
           @media (min-width: 56.25em) {
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li > a {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a {
               font-size: 10px; } }
-          #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul {
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul {
             top: 48px;
             left: 0;
             border: none;
             z-index: 998; }
-            #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li {
               border: none;
               background: #807f83 url("../img/header-lines.png") repeat top left; }
-              #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a {
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a {
                 margin: 0 1em;
                 padding: 0;
                 line-height: 40px;
@@ -3546,7 +3567,7 @@ a.label:hover, a.badge:hover {
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white; }
-                #header-wrapper #block-panels-mini-global-header .pane-nice-menus ul.nice-menu > li ul li a:hover {
+                #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
                   opacity: 0.7; }
     @media (min-width: 53.25em) {
@@ -3609,8 +3630,8 @@ a.label:hover, a.badge:hover {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
-          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-search:before {
-            content: "\f002";
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before {
+            content: "\f0c9";
             font-family: FontAwesome;
             font-weight: normal;
             font-style: normal;
@@ -3633,6 +3654,31 @@ a.label:hover, a.badge:hover {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
+          @media (min-width: 53.25em) {
+            #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before {
+              content: "\f002";
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              padding-right: 5px;
+              text-decoration: none;
+              /* sprites.less reset */
+              display: -moz-inline-stack;
+              display: inline-block;
+              vertical-align: middle;
+              *vertical-align: auto;
+              zoom: 1;
+              *display: inline;
+              width: auto;
+              height: auto;
+              margin-top: 0;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat; } }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-localization:before {
             content: "\f0ac";
             font-family: FontAwesome;
@@ -3663,8 +3709,9 @@ a.label:hover, a.badge:hover {
             border-bottom: 4px solid #e5e5e5;
             color: #f17700; }
 
-#panel-wrapper.fixed {
-  margin-top: 201px; }
+@media (min-width: 53.25em) {
+  #panel-wrapper.fixed {
+    margin-top: 201px; } }
 
 #footer-wrapper {
   margin: 20px 0 0;
@@ -3749,7 +3796,7 @@ a.label:hover, a.badge:hover {
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
-  background-color: #f17700; }
+  background-color: white; }
   .featured-slideshow .flexslider_views_slideshow_slide:hover img {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
     opacity: 0.3; }
@@ -3767,19 +3814,22 @@ a.label:hover, a.badge:hover {
         opacity: 0.8; }
     .featured-slideshow .flexslider .slides li {
       position: relative; }
-  .featured-slideshow .views-field-title {
-    position: absolute;
-    margin: 0 20px;
-    bottom: 40px; }
-    .featured-slideshow .views-field-title h2 {
-      border: 0;
-      font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
-      font-size: 22px;
-      line-height: 24px;
-      font-weight: 300;
-      text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+  .featured-slideshow .views-field-title h2 {
+    border: 0;
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 300;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+    .featured-slideshow .views-field-title h2 a {
+      color: #333333; }
+  @media (min-width: 39em) {
+    .featured-slideshow .views-field-title {
+      position: absolute;
+      margin: 0 20px;
+      bottom: 40px; }
       .featured-slideshow .views-field-title h2 a {
-        color: white; }
+        color: white; } }
   .featured-slideshow .views-field-comment-count {
     position: absolute;
     margin: 0 0 0 20px;
@@ -3792,6 +3842,19 @@ a.label:hover, a.badge:hover {
       letter-spacing: 0.1em;
       font-size: 16px;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+  @media (min-width: 39em) {
+    .featured-slideshow .views-field-comment-count {
+      position: absolute;
+      margin: 0 0 0 20px;
+      padding: 0 0 0 30px;
+      bottom: 20px;
+      background: transparent url("../img/comment-icon.png") no-repeat left center; }
+      .featured-slideshow .views-field-comment-count span {
+        color: white;
+        font-family: "Open Sans Condensed";
+        letter-spacing: 0.1em;
+        font-size: 16px;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); } }
   .featured-slideshow .flex-control-paging {
     display: none; }
   .featured-slideshow .flex-direction-nav a {
@@ -3817,9 +3880,11 @@ a.label:hover, a.badge:hover {
       font-size: 38px;
       line-height: 38px; } }
 @media (min-width: 39em) {
-  .featured-slideshow .views-field-title h2 {
-    font-size: 48px;
-    line-height: 48px; } }
+  .featured-slideshow {
+    background-color: #f17700; }
+    .featured-slideshow .views-field-title h2 {
+      font-size: 48px;
+      line-height: 48px; } }
 @media (min-width: 53.25em) {
   .featured-slideshow {
     width: 71.08434%;
@@ -3874,10 +3939,9 @@ a.label:hover, a.badge:hover {
       min-height: 60px;
       clear: left; }
       .numbered ol .views-row .views-field-counter {
-        width: 35px;
+        width: 30px;
         height: 40px;
         margin: 0 10px 0 0;
-        padding: 0 0 0 5px;
         border-right: 1px solid #e5e5e5;
         float: left; }
         .numbered ol .views-row .views-field-counter span {
@@ -3921,27 +3985,54 @@ a.label:hover, a.badge:hover {
       padding: 0 10px 0 0;
       margin: 0 10px 0 0; }
 
+.editorial-pane h2 {
+  border-bottom: 0;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  padding: 0 20px; }
+
+@media (min-width: 39em) {
+  .editorial-pane h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 0; } }
 .editorial .editorial-updated {
   display: block;
   width: auto;
   font-family: "Open Sans Condensed";
   font-size: 13px;
   line-height: 25px;
-  float: right;
-  margin: -60px 0 0; }
+  margin: -40px 0 1em;
+  padding: 0 20px 1em;
+  border-bottom: 1px solid #e5e5e5; }
+@media (min-width: 39em) {
+  .editorial .editorial-updated {
+    float: right;
+    margin: -64px 0 0;
+    padding: 0;
+    border: 0; } }
 .editorial .views-row {
-  margin: -0.5em -0.5em 10px;
-  padding: 1em 0.75em; }
+  padding: 20px; }
   .editorial .views-row.views-row-odd {
     background: white; }
   .editorial .views-row .views-field-title h3 {
     margin: 0 0 5px;
     font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: 34px;
+    font-size: 20px;
     font-weight: 300;
-    line-height: 36px; }
+    line-height: 24px; }
     .editorial .views-row .views-field-title h3 a {
       color: #333333; }
+  @media (min-width: 30em) {
+    .editorial .views-row .views-field-title h3 {
+      font-size: 26px;
+      line-height: 30px; } }
+  @media (min-width: 39em) {
+    .editorial .views-row .views-field-title h3 {
+      font-size: 34px;
+      line-height: 36px; } }
   .editorial .views-row .views-field-name span.field-content {
     display: block;
     float: left;
@@ -4058,6 +4149,10 @@ a.label:hover, a.badge:hover {
     .editorial .views-row:hover .field-type-taxonomy-term-reference,
     .editorial .views-row:hover .field-type-text-with-summary {
       visibility: visible; }
+@media (min-width: 53.25em) {
+  .editorial .views-row {
+    margin: 0 -0.5em;
+    padding: 1em 0.75em; } }
 
 .latest-comments .views-row p {
   font-size: 13px;
@@ -4079,7 +4174,7 @@ a.label:hover, a.badge:hover {
 
 .pane-menu-menu-join-us {
   background: transparent url("../img/content-lines.png") repeat top left;
-  padding: 0 1.5em;
+  padding: 0 1em;
   height: 50px; }
   .pane-menu-menu-join-us h2 {
     font-size: 13px;
@@ -4097,7 +4192,7 @@ a.label:hover, a.badge:hover {
       float: left;
       width: 26px;
       height: 26px;
-      margin: 12px 0 0 6px;
+      margin: 12px 0 0 4px;
       background: #666666;
       line-height: 26px;
       -webkit-border-radius: 2px;
@@ -4236,6 +4331,11 @@ a.label:hover, a.badge:hover {
         .pane-menu-menu-join-us ul li span:before {
           padding-right: 0 !important; }
 
+@media (min-width: 58.5em) {
+  .pane-menu-menu-join-us {
+    padding: 0 1.5em; }
+    .pane-menu-menu-join-us ul li {
+      margin: 12px 0 0 6px; } }
 .pane-menu-menu-most-recent-filter {
   display: none;
   position: relative;
