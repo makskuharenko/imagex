@@ -279,7 +279,7 @@
     }
 
     @include at-breakpoint($wide) {
-      .pane-nice-menus {
+      .linux-main-menu {
         display: block;
       }
     }
@@ -663,6 +663,7 @@
 
   .views-field-title {
     position: absolute;
+    top: 0px;
     padding: 5px 20px;
 
     h2 {

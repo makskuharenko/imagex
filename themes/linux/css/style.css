@@ -3571,7 +3571,7 @@ a.label:hover, a.badge:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
                   opacity: 0.7; }
     @media (min-width: 53.25em) {
-      #header-wrapper #block-panels-mini-global-header .pane-nice-menus {
+      #header-wrapper #block-panels-mini-global-header .linux-main-menu {
         display: block; } }
     #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul {
       border: none;
@@ -3903,6 +3903,7 @@ a.label:hover, a.badge:hover {
       opacity: 0.3; }
   .featured-tiles .views-field-title {
     position: absolute;
+    top: 0px;
     padding: 5px 20px; }
     .featured-tiles .views-field-title h2 {
       font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
