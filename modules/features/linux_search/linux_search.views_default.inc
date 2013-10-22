@@ -91,6 +91,45 @@ function linux_search_views_default_views() {
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['link_to_entity'] = 0;
   $handler->display->display_options['fields']['type']['format_name'] = 1;
+  /* Field: Indexed Node: Event Logo */
+  $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
+  $handler->display->display_options['fields']['field_logo']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
+  $handler->display->display_options['fields']['field_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_logo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_logo']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_logo']['settings'] = array(
+    'image_style' => 'search_result_thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Node: Group Logo */
+  $handler->display->display_options['fields']['field_group_logo']['id'] = 'field_group_logo';
+  $handler->display->display_options['fields']['field_group_logo']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_group_logo']['field'] = 'field_group_logo';
+  $handler->display->display_options['fields']['field_group_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_group_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_group_logo']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_group_logo']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_group_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_group_logo']['settings'] = array(
+    'image_style' => 'search_result_thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Indexed Node: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'search_result_thumbnail',
+    'image_link' => 'content',
+  );
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
