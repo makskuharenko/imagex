@@ -13,6 +13,7 @@ dependencies[] = linux_group
 dependencies[] = linux_directory
 ; dependencies[] = linux_events
 dependencies[] = linux_humor
+dependencies[] = linux_humor_page
 dependencies[] = linux_configuration
 dependencies[] = linux_manual
 dependencies[] = linux_pardot_integration
