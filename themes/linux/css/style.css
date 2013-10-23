@@ -575,10 +575,10 @@ $wide: 80em;
 */
 .container {
   *zoom: 1;
-  max-width: 23em;
-  _width: 23em;
-  padding-left: 1em;
-  padding-right: 1em;
+  max-width: 28.5em;
+  _width: 28.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   margin-left: auto;
   margin-right: auto;
   -webkit-background-origin: content;
@@ -593,11 +593,11 @@ $wide: 80em;
     content: "";
     display: table;
     clear: both; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .container {
-      max-width: 35em;
-      padding-left: 1em;
-      padding-right: 1em;
+      max-width: 43.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
       -webkit-background-origin: content;
@@ -612,11 +612,11 @@ $wide: 80em;
         content: "";
         display: table;
         clear: both; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .container {
-      max-width: 47em;
-      padding-left: 1em;
-      padding-right: 1em;
+      max-width: 58.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
       -webkit-background-origin: content;
@@ -631,11 +631,11 @@ $wide: 80em;
         content: "";
         display: table;
         clear: both; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .container {
-      max-width: 71em;
-      padding-left: 1em;
-      padding-right: 1em;
+      max-width: 88.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
       -webkit-background-origin: content;
@@ -650,11 +650,11 @@ $wide: 80em;
         content: "";
         display: table;
         clear: both; } }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     .container {
-      max-width: 71em;
-      padding-left: 1em;
-      padding-right: 1em;
+      max-width: 88.5em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
       -webkit-background-origin: content;
@@ -674,288 +674,288 @@ $wide: 80em;
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
 .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-first {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-first {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-first {
       float: left;
-      margin-right: 2.12766%;
-      width: 49.29577%;
+      margin-right: 2.5641%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 39em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 45.5em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-first {
       float: left;
-      margin-right: 1.40845%;
-      width: 49.29577%;
+      margin-right: 1.69492%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 53.25em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 62.125em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-first {
       float: left;
-      margin-right: 1.40845%;
-      width: 49.29577%;
+      margin-right: 1.69492%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
+      margin-right: 1.69492%; } }
 .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-second {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-second {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-second {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-second {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     .parrot-panels #minipanel-two-50-middle-wrapper .minipanel-two-50-second {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
 .parrot-panels #minipanel-two-50-bottom-wrapper .minipanel-two-50-bottom {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
 .parrot-panels #minipanel-three-33-top-wrapper .minipanel-three-33-top {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
 .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-first {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-first {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-first {
       float: left;
-      margin-right: 2.12766%;
-      width: 32.39437%;
+      margin-right: 2.5641%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 39em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 45.5em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-first {
       float: left;
-      margin-right: 1.40845%;
-      width: 32.39437%;
+      margin-right: 1.69492%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 53.25em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 62.125em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-first {
       float: left;
-      margin-right: 1.40845%;
-      width: 32.39437%;
+      margin-right: 1.69492%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
+      margin-right: 1.69492%; } }
 .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-second {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-second {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-second {
       float: left;
-      margin-right: 2.12766%;
-      width: 32.39437%;
+      margin-right: 2.5641%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 39em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 45.5em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-second {
       float: left;
-      margin-right: 1.40845%;
-      width: 32.39437%;
+      margin-right: 1.69492%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 53.25em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 62.125em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-second {
       float: left;
-      margin-right: 1.40845%;
-      width: 32.39437%;
+      margin-right: 1.69492%;
+      width: 32.20339%;
       float: left;
-      margin-right: 1.40845%; } }
+      margin-right: 1.69492%; } }
 .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-third {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-third {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-third {
-      width: 32.39437%;
+      width: 32.20339%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-third {
-      width: 32.39437%;
+      width: 32.20339%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     .parrot-panels #minipanel-three-33-middle-wrapper .minipanel-three-33-third {
-      width: 32.39437%;
+      width: 32.20339%;
       float: right;
       margin-right: 0; } }
 .parrot-panels #minipanel-three-33-bottom-wrapper .minipanel-three-33-bottom {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
 .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper {
       float: left;
-      margin-right: 2.12766%;
-      width: 74.64789%;
+      margin-right: 2.5641%;
+      width: 74.57627%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 39em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 45.5em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper {
       float: left;
-      margin-right: 1.40845%;
-      width: 74.64789%;
+      margin-right: 1.69492%;
+      width: 74.57627%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 53.25em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 62.125em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper {
       float: left;
-      margin-right: 1.40845%;
-      width: 74.64789%;
+      margin-right: 1.69492%;
+      width: 74.57627%;
       float: left;
-      margin-right: 1.40845%; } }
+      margin-right: 1.69492%; } }
   .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-middle {
     width: 100%;
     float: right;
     margin-right: 0;
-    *margin-left: -1em;
+    *margin-left: -1.5em;
     display: inline; }
-    @media (min-width: 19.5em) {
+    @media (min-width: 22.75em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-middle {
         width: 100%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 30em) {
+    @media (min-width: 35em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-middle {
         float: left;
-        margin-right: 2.12766%;
-        width: 49.29577%;
+        margin-right: 2.5641%;
+        width: 49.15254%;
         float: left;
-        margin-right: 1.40845%; } }
-    @media (min-width: 39em) {
+        margin-right: 1.69492%; } }
+    @media (min-width: 45.5em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-middle {
         float: left;
-        margin-right: 1.40845%;
-        width: 49.29577%;
+        margin-right: 1.69492%;
+        width: 49.15254%;
         float: left;
-        margin-right: 1.40845%; } }
-    @media (min-width: 53.25em) {
+        margin-right: 1.69492%; } }
+    @media (min-width: 62.125em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-middle {
         float: left;
-        margin-right: 1.40845%;
-        width: 49.29577%;
+        margin-right: 1.69492%;
+        width: 49.15254%;
         float: left;
-        margin-right: 1.40845%; } }
+        margin-right: 1.69492%; } }
   .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-inset {
     width: 100%;
     float: right;
     margin-right: 0;
-    *margin-left: -1em;
+    *margin-left: -1.5em;
     display: inline; }
-    @media (min-width: 19.5em) {
+    @media (min-width: 22.75em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-inset {
         width: 100%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 30em) {
+    @media (min-width: 35em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-inset {
-        width: 49.29577%;
+        width: 49.15254%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 39em) {
+    @media (min-width: 45.5em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-inset {
-        width: 49.29577%;
+        width: 49.15254%;
         float: right;
         margin-right: 0; } }
-    @media (min-width: 53.25em) {
+    @media (min-width: 62.125em) {
       .parrot-panels #three-inset-left-wrapper #three-inset-left-left-wrapper .three-inset-left-inset {
-        width: 49.29577%;
+        width: 49.15254%;
         float: right;
         margin-right: 0; } }
 .parrot-panels #three-inset-left-wrapper #three-inset-left-right-wrapper {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-right-wrapper {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-right-wrapper {
-      width: 23.94366%;
+      width: 23.72881%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-right-wrapper {
-      width: 23.94366%;
+      width: 23.72881%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     .parrot-panels #three-inset-left-wrapper #three-inset-left-right-wrapper {
-      width: 23.94366%;
+      width: 23.72881%;
       float: right;
       margin-right: 0; } }
 
@@ -963,60 +963,60 @@ $wide: 80em;
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline;
   clear: both; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .view-mode-50_width {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .view-mode-50_width {
       float: left;
-      margin-right: 2.12766%;
-      width: 49.29577%;
+      margin-right: 2.5641%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 39em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 45.5em) {
     .view-mode-50_width {
       float: left;
-      margin-right: 1.40845%;
-      width: 49.29577%;
+      margin-right: 1.69492%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
-  @media (min-width: 53.25em) {
+      margin-right: 1.69492%; } }
+  @media (min-width: 62.125em) {
     .view-mode-50_width {
       float: left;
-      margin-right: 1.40845%;
-      width: 49.29577%;
+      margin-right: 1.69492%;
+      width: 49.15254%;
       float: left;
-      margin-right: 1.40845%; } }
+      margin-right: 1.69492%; } }
 
 .view-mode-50_width_right {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 19.5em) {
+  @media (min-width: 22.75em) {
     .view-mode-50_width_right {
       width: 100%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .view-mode-50_width_right {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .view-mode-50_width_right {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     .view-mode-50_width_right {
-      width: 49.29577%;
+      width: 49.15254%;
       float: right;
       margin-right: 0; } }
 
@@ -1024,7 +1024,7 @@ $wide: 80em;
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
 
 body {
@@ -1087,48 +1087,94 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   text-align: center;
   text-shadow: none; }
 
-.region-first {
+.three-25-50-25 .region-first {
   display: none; }
-  @media (min-width: 39em) {
-    .region-first {
-      width: 34.93976%;
+  @media (min-width: 45.5em) {
+    .three-25-50-25 .region-first {
+      width: 34.78261%;
       float: left;
-      margin-right: 1.20482%;
+      margin-right: 1.44928%;
       display: block; } }
-  @media (min-width: 53.25em) {
-    .region-first {
-      width: 27.71084%;
+  @media (min-width: 62.125em) {
+    .three-25-50-25 .region-first {
+      width: 27.53623%;
       float: left;
-      margin-right: 1.20482%; } }
-
-.region-second {
+      margin-right: 1.44928%; } }
+.three-25-50-25 .region-second {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline; }
-  @media (min-width: 39em) {
-    .region-second {
-      width: 63.85542%;
+  @media (min-width: 45.5em) {
+    .three-25-50-25 .region-second {
+      width: 63.76812%;
       float: right;
       margin-right: 0; } }
-  @media (min-width: 53.25em) {
-    .region-second {
-      width: 42.16867%;
+  @media (min-width: 62.125em) {
+    .three-25-50-25 .region-second {
+      width: 42.02899%;
       float: left;
-      margin-right: 1.20482%; } }
-
-@media (min-width: 39em) {
-  .region-third {
-    width: 63.85542%;
+      margin-right: 1.44928%; } }
+@media (min-width: 45.5em) {
+  .three-25-50-25 .region-third {
+    width: 63.76812%;
     float: right;
     margin-right: 0; } }
-@media (min-width: 53.25em) {
-  .region-third {
-    width: 27.71084%;
+@media (min-width: 62.125em) {
+  .three-25-50-25 .region-third {
+    width: 27.53623%;
     float: right;
     margin-right: 0;
     display: block; } }
+
+.two-33-66 .region-first {
+  display: none; }
+  @media (min-width: 45.5em) {
+    .two-33-66 .region-first {
+      width: 30.37975%;
+      float: left;
+      margin-right: 1.26582%;
+      display: block; } }
+  @media (min-width: 62.125em) {
+    .two-33-66 .region-first {
+      width: 24.05063%;
+      float: left;
+      margin-right: 1.26582%; } }
+.two-33-66 .region-second {
+  position: relative;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5em;
+  display: inline; }
+  @media (min-width: 45.5em) {
+    .two-33-66 .region-second {
+      width: 68.35443%;
+      float: right;
+      margin-right: 0; } }
+  @media (min-width: 62.125em) {
+    .two-33-66 .region-second {
+      width: 74.68354%;
+      float: right;
+      margin-right: 0; } }
+  .two-33-66 .region-second .region-inner .standard-bean {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5em;
+    display: inline;
+    clear: right; }
+    @media (min-width: 45.5em) {
+      .two-33-66 .region-second .region-inner .standard-bean {
+        width: 49.15254%;
+        float: left;
+        margin-right: 1.69492%; } }
+    @media (min-width: 62.125em) {
+      .two-33-66 .region-second .region-inner .standard-bean {
+        width: 32.20339%;
+        float: right;
+        margin-right: 0; } }
 
 p {
   margin: 0 0 12px; }
@@ -3353,6 +3399,64 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+.not-front .pane-node-title {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  .not-front .pane-node-title h1 {
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 48px; }
+.not-front .field-type-text-with-summary {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  .not-front .field-type-text-with-summary p {
+    font-size: 14px;
+    line-height: 20px; }
+.not-front .field-type-taxonomy-term-reference {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding: 20px 0; }
+  .not-front .field-type-taxonomy-term-reference .field-item {
+    display: inline; }
+    .not-front .field-type-taxonomy-term-reference .field-item a {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      background: #f17700;
+      margin: 0;
+      padding: 2px 5px;
+      font-family: "Open Sans Condensed";
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.1em;
+      color: white; }
+      .not-front .field-type-taxonomy-term-reference .field-item a:hover {
+        background: #bb5c00; }
+.not-front .link-wrapper {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  .not-front .link-wrapper ul {
+    margin: 0;
+    padding: 0; }
+    .not-front .link-wrapper ul li {
+      margin: 0;
+      padding: 0; }
+@media (min-width: 62.125em) {
+  .not-front #mini-panel-content_sidebar {
+    position: absolute;
+    right: 0; } }
+
 .standard-bean {
   clear: left; }
   .standard-bean > div {
@@ -3388,7 +3492,9 @@ a.label:hover, a.badge:hover {
     .standard-bean a.orange-button:hover {
       background: #e65b04; }
   .standard-bean .views-row {
-    padding: 12px 20px; }
+    padding: 12px 20px;
+    display: inline-block;
+    width: 100%; }
     .standard-bean .views-row.views-row-odd {
       background: whitesmoke; }
     .standard-bean .views-row .views-field-title h3 {
@@ -3472,7 +3578,8 @@ a.label:hover, a.badge:hover {
         background: transparent; }
         #user-wrapper .nice-menu > .menuparent ul li:first-child {
           border: none; }
-        #user-wrapper .nice-menu > .menuparent ul li a {
+        #user-wrapper .nice-menu > .menuparent ul li a,
+        #user-wrapper .nice-menu > .menuparent ul li span {
           display: block;
           color: white;
           font-size: 11px;
@@ -3480,23 +3587,25 @@ a.label:hover, a.badge:hover {
           line-height: 50px;
           text-transform: uppercase;
           letter-spacing: 0.1em;
-          padding: 0; }
+          padding: 0;
+          cursor: pointer; }
 
 #header-wrapper {
   padding: 0 0 20px;
   background: white;
   text-align: center; }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     #header-wrapper.fixed {
       position: fixed;
       z-index: 999;
-      top: -130px;
+      top: -140px;
       width: 100%;
       border-bottom: 1px solid #e5e5e5;
-      background: rgba(255, 255, 255, 0.95); }
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0; }
       #header-wrapper.fixed #block-panels-mini-global-header {
-        border-color: white;
-        border-bottom: none; } }
+        border: 0;
+        height: 48px; } }
   #header-wrapper .ad-space {
     display: none;
     width: 730px;
@@ -3509,7 +3618,7 @@ a.label:hover, a.badge:hover {
     font-weight: 600;
     text-align: center;
     margin: 25px auto; }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     #header-wrapper .ad-space {
       display: inline-block; } }
   #header-wrapper #block-panels-mini-global-header {
@@ -3548,23 +3657,25 @@ a.label:hover, a.badge:hover {
             font-weight: 700;
             letter-spacing: 0.1em;
             line-height: 48px;
-            color: #666666; }
+            color: #666666;
+            cursor: pointer; }
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
               border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
-          @media (min-width: 56.25em) {
+          @media (min-width: 65.625em) {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
               font-size: 10px; } }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul {
+            background: #807f83 url("../img/header-lines.png") repeat top left;
             top: 48px;
             left: 0;
             border: none;
             z-index: 998; }
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li {
               border: none;
-              background: #807f83 url("../img/header-lines.png") repeat top left; }
+              background: transparent; }
               #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a,
               #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span {
                 margin: 0 1em;
@@ -3574,12 +3685,13 @@ a.label:hover, a.badge:hover {
                 text-transform: uppercase;
                 letter-spacing: 0.1em;
                 font-size: 10px;
-                color: white; }
+                color: white;
+                cursor: pointer; }
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover,
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
                   opacity: 0.7; }
-    @media (min-width: 53.25em) {
+    @media (min-width: 62.125em) {
       #header-wrapper #block-panels-mini-global-header .linux-main-menu {
         display: block; } }
     #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul {
@@ -3607,7 +3719,8 @@ a.label:hover, a.badge:hover {
           font-weight: 700;
           letter-spacing: 0.1em;
           line-height: 48px;
-          color: #666666; }
+          color: #666666;
+          cursor: pointer; }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-icon,
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-icon {
             display: block;
@@ -3667,7 +3780,7 @@ a.label:hover, a.badge:hover {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
-          @media (min-width: 53.25em) {
+          @media (min-width: 62.125em) {
             #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before,
             #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-utility:before {
               content: "\f002";
@@ -3729,13 +3842,13 @@ a.label:hover, a.badge:hover {
 #content-wrapper,
 #panel-wrapper {
   background: white; }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     #content-wrapper.fixed,
     #panel-wrapper.fixed {
-      margin-top: 201px; } }
+      padding-top: 205px; } }
 
 #footer-wrapper {
-  margin: 20px 0 0;
+  margin: 0;
   padding: 20px 0 60px;
   background: #807f83 url("../img/header-lines.png") repeat top left;
   font-weight: 600;
@@ -3744,29 +3857,31 @@ a.label:hover, a.badge:hover {
     margin: 0;
     font-size: 10px; }
     #footer-wrapper #block-system-main-menu ul .expanded {
-      width: 49.39759%;
+      width: 49.27536%;
       float: left;
-      margin-right: 1.20482%;
+      margin-right: 1.44928%;
       display: inline;
       list-style-type: none;
       list-style-image: none;
       padding: 0; }
       #footer-wrapper #block-system-main-menu ul .expanded > a,
       #footer-wrapper #block-system-main-menu ul .expanded > span {
-        color: #bbbbbb; }
+        color: #bbbbbb;
+        cursor: pointer; }
       #footer-wrapper #block-system-main-menu ul .expanded li a,
       #footer-wrapper #block-system-main-menu ul .expanded li span {
-        color: white; }
-    @media (min-width: 39em) {
+        color: white;
+        cursor: pointer; }
+    @media (min-width: 45.5em) {
       #footer-wrapper #block-system-main-menu ul .expanded {
-        width: 13.25301%;
+        width: 13.04348%;
         float: left;
-        margin-right: 1.20482%; } }
-    @media (min-width: 53.25em) {
+        margin-right: 1.44928%; } }
+    @media (min-width: 62.125em) {
       #footer-wrapper #block-system-main-menu ul .expanded {
-        width: 13.25301%;
+        width: 13.04348%;
         float: left;
-        margin-right: 1.20482%; } }
+        margin-right: 1.44928%; } }
     #footer-wrapper #block-system-main-menu ul .menu-icon {
       display: none; }
   #footer-wrapper #block-bean-about-linux-foundation {
@@ -3787,10 +3902,10 @@ a.label:hover, a.badge:hover {
     font-size: 10px;
     color: #bbbbbb;
     text-align: center; }
-  @media (min-width: 53.25em) {
+  @media (min-width: 62.125em) {
     #footer-wrapper #block-bean-copyright,
     #footer-wrapper #block-bean-about-linux-foundation {
-      width: 27.71084%;
+      width: 27.53623%;
       float: right;
       margin-right: 0;
       text-align: right; }
@@ -3817,7 +3932,7 @@ a.label:hover, a.badge:hover {
   width: 100%;
   float: right;
   margin-right: 0;
-  *margin-left: -1em;
+  *margin-left: -1.5em;
   display: inline;
   background-color: white; }
   .featured-slideshow .flexslider_views_slideshow_slide:hover img {
@@ -3846,7 +3961,7 @@ a.label:hover, a.badge:hover {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
     .featured-slideshow .views-field-title h2 a {
       color: #333333; }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .featured-slideshow .views-field-title {
       position: absolute;
       margin: 0 20px;
@@ -3865,7 +3980,7 @@ a.label:hover, a.badge:hover {
       letter-spacing: 0.1em;
       font-size: 16px;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .featured-slideshow .views-field-comment-count {
       position: absolute;
       margin: 0 0 0 20px;
@@ -3896,26 +4011,25 @@ a.label:hover, a.badge:hover {
     right: 0px;
     background: transparent url("../img/slideshow-next.png") no-repeat center center; }
 
-@media (min-width: 30em) {
+@media (min-width: 35em) {
   .featured-slideshow .views-field-title {
     bottom: 60px; }
     .featured-slideshow .views-field-title h2 {
       font-size: 38px;
       line-height: 38px; } }
-@media (min-width: 39em) {
+@media (min-width: 45.5em) {
   .featured-slideshow {
     background-color: #f17700; }
     .featured-slideshow .views-field-title h2 {
       font-size: 48px;
       line-height: 48px; } }
-@media (min-width: 53.25em) {
+@media (min-width: 62.125em) {
   .featured-slideshow {
-    width: 71.08434%;
+    width: 71.01449%;
     float: left;
-    margin-right: 1.20482%;
-    width: 72.28916%;
-    margin-right: 0;
-    border-right: 1px solid white; } }
+    margin-right: 1.44928%;
+    width: 72.46377%;
+    margin-right: 0; } }
 .featured-tiles {
   display: none;
   background-color: #f17700; }
@@ -3948,10 +4062,10 @@ a.label:hover, a.badge:hover {
       letter-spacing: 0.1em;
       font-size: 16px; }
 
-@media (min-width: 53.25em) {
+@media (min-width: 62.125em) {
   .featured-tiles {
     display: block;
-    width: 27.71084%;
+    width: 27.53623%;
     float: right;
     margin-right: 0; } }
 .numbered {
@@ -4016,7 +4130,7 @@ a.label:hover, a.badge:hover {
   letter-spacing: 0.1em;
   padding: 0 20px; }
 
-@media (min-width: 39em) {
+@media (min-width: 45.5em) {
   .editorial-pane h2 {
     font-size: 13px;
     font-weight: 700;
@@ -4031,7 +4145,7 @@ a.label:hover, a.badge:hover {
   margin: -40px 0 1em;
   padding: 0 20px 1em;
   border-bottom: 1px solid #e5e5e5; }
-@media (min-width: 39em) {
+@media (min-width: 45.5em) {
   .editorial .editorial-updated {
     float: right;
     margin: -64px 0 0;
@@ -4049,11 +4163,11 @@ a.label:hover, a.badge:hover {
     line-height: 24px; }
     .editorial .views-row .views-field-title h3 a {
       color: #333333; }
-  @media (min-width: 30em) {
+  @media (min-width: 35em) {
     .editorial .views-row .views-field-title h3 {
       font-size: 26px;
       line-height: 30px; } }
-  @media (min-width: 39em) {
+  @media (min-width: 45.5em) {
     .editorial .views-row .views-field-title h3 {
       font-size: 34px;
       line-height: 36px; } }
@@ -4173,7 +4287,7 @@ a.label:hover, a.badge:hover {
     .editorial .views-row:hover .field-type-taxonomy-term-reference,
     .editorial .views-row:hover .field-type-text-with-summary {
       visibility: visible; }
-@media (min-width: 53.25em) {
+@media (min-width: 62.125em) {
   .editorial .views-row {
     margin: 0 -0.5em;
     padding: 1em 0.75em; } }
@@ -4355,7 +4469,7 @@ a.label:hover, a.badge:hover {
         .pane-menu-menu-join-us ul li span:before {
           padding-right: 0 !important; }
 
-@media (min-width: 58.5em) {
+@media (min-width: 68.25em) {
   .pane-menu-menu-join-us {
     padding: 0 1.5em; }
     .pane-menu-menu-join-us ul li {
@@ -4429,3 +4543,6 @@ a.label:hover, a.badge:hover {
           font-weight: 700;
           font-size: 13px;
           background: none; }
+
+#jPanelMenu-menu {
+  background: white; }

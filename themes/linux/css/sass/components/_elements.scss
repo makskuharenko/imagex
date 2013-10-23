@@ -1,4 +1,73 @@
-// Standard elements
+// Standard elements and node styles
+// ---------------------------------
+
+.not-front {
+  .pane-node-title {
+    @include span-columns(8, 12);
+
+    h1 {
+      font-family: $monoFontFamily;
+      font-weight: 300;
+      font-size: 44px;
+      line-height: 48px;
+    }
+  }
+
+  .field-type-text-with-summary {
+    @include span-columns(8, 12);
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .field-type-taxonomy-term-reference {
+    @include span-columns(8, 12);
+    padding: 20px 0;
+
+    .field-item {
+      display: inline;
+
+      a {
+        @include border-radius(3px);
+        background: $linuxStdOrange;
+        margin: 0;
+        padding: 2px 5px;
+        font-family: $condensedFontFamily;
+        font-size: 12px;
+        text-transform: capitalize;
+        letter-spacing: 0.1em;
+        color: white;
+
+        &:hover {
+          background: $linuxDarkestOrange;
+        }
+      }
+    }
+  }
+
+  .link-wrapper {
+    @include span-columns(8, 12);
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  @include at-breakpoint($wide) {
+    #mini-panel-content_sidebar {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
 
 
 // Standard styling for headers and text in the main content area
@@ -44,6 +113,8 @@
 
   .views-row {
     padding: 12px 20px;
+    display: inline-block;
+    width: 100%;
 
     &.views-row-odd {
       background: $tableBackgroundHover;
@@ -136,7 +207,8 @@
             border: none;
           }
 
-          a {
+          a,
+          span {
             display: block;
             color: white;
             font-size: 11px;
@@ -145,6 +217,7 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             padding: 0;
+            cursor: pointer;
           }
         }
       }
@@ -161,14 +234,15 @@
     &.fixed {
       position: fixed;
       z-index: 999;
-      top: -130px;
+      top: -140px;
       width: 100%;
       border-bottom: 1px solid $dropdownDividerTop;
       background: rgba(255,255,255,0.95);
+      padding: 0;
 
       #block-panels-mini-global-header {
-        border-color: white;
-        border-bottom: none;
+        border: 0;
+        height: 48px;
       }
     }
   }
@@ -240,6 +314,7 @@
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
+            cursor: pointer;
 
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;
@@ -255,6 +330,7 @@
           }
 
           ul {
+            background: $userBar url('../img/header-lines.png') repeat top left;
             top: 48px;
             left: 0;
             border: none;
@@ -262,7 +338,7 @@
 
             li {
               border: none;
-              background: $userBar url('../img/header-lines.png') repeat top left;
+              background: transparent;
 
               a,
               span {
@@ -274,6 +350,7 @@
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white;
+                cursor: pointer;
 
                 &:hover {
                   @include opacity(0.7);
@@ -324,6 +401,7 @@
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
+            cursor: pointer;
 
             &.menu-icon {
               display: block;
@@ -374,14 +452,14 @@
 
   @include at-breakpoint($wide) {
     &.fixed {
-      margin-top: 201px;
+      padding-top: 205px;
     }
   }
 }
 
 // Footer styles and structures
 #footer-wrapper {
-  margin: 20px 0 0;
+  margin: 0;
   padding: 20px 0 60px;
   background: $userBar url('../img/header-lines.png') repeat top left;
   font-weight: 600;
@@ -401,12 +479,14 @@
       > a,
       > span {
         color: $btnBorder;
+        cursor: pointer;
       }
 
       li {
         a,
         span, {
           color: white;
+          cursor: pointer;
         }
       }
     }
@@ -651,9 +731,8 @@
 @include at-breakpoint($wide) {
   .featured-slideshow {
     @include span-columns(10, 14);
-    width: 72.28916%;
+    width: 72.46377%;
     margin-right: 0;
-    border-right: 1px solid white;
   }
 }
 
@@ -1236,4 +1315,11 @@
       }
     }
   }
+}
+
+// jPanel Menu styling
+// -------------------
+
+#jPanelMenu-menu {
+  background: white;
 }
