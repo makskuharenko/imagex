@@ -4174,7 +4174,8 @@ a.label:hover, a.badge:hover {
     letter-spacing: 0;
     padding: 0; } }
 .editorial {
-  padding: 0.5em 0 !important; }
+  padding: 0.5em 0 !important;
+  position: relative; }
   .editorial .editorial-updated {
     display: block;
     width: auto;
@@ -4186,10 +4187,11 @@ a.label:hover, a.badge:hover {
     border-bottom: 1px solid #e5e5e5; }
   @media (min-width: 45.5em) {
     .editorial .editorial-updated {
-      float: right;
-      margin: -30px 0 0;
       padding: 0;
-      border: 0; } }
+      border: 0;
+      position: absolute;
+      right: 0;
+      top: -12px; } }
   .editorial .views-row {
     margin: 0 -5px;
     padding: 20px;

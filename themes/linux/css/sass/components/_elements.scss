@@ -939,6 +939,7 @@
 
 .editorial {
   padding: 0.5em 0 !important;
+  position: relative;
 
   .editorial-updated {
     display: block;
@@ -953,10 +954,11 @@
 
   @include at-breakpoint($computer) {
     .editorial-updated {
-      float: right;
-      margin: -30px 0 0;
       padding: 0;
       border: 0;
+      position: absolute;
+      right: 0;
+      top: -12px;
     }
   }
 
