@@ -142,18 +142,26 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
       @include span-columns(12 omega, 16);
     }
 
-    .region-inner {
-      .standard-bean {
-        @include span-columns(12 omega, 12);
-        clear: right;
+    .standard-bean {
+      @include span-columns(12 omega, 12);
+      clear: right;
 
+      @include at-breakpoint($computer) {
+        @include span-columns(6, 12);
+      }
+
+      &:last-child {
         @include at-breakpoint($computer) {
-          @include span-columns(6, 12);
+          @include span-columns(6 omega, 12);
         }
 
         @include at-breakpoint($wide) {
           @include span-columns(4 omega, 12);
         }
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(4 omega, 12);
       }
     }
   }

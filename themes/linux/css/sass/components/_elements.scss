@@ -2,8 +2,16 @@
 // ---------------------------------
 
 .not-front {
-  .pane-node-title {
+  @mixin node-position() {
     @include span-columns(8, 12);
+    position: relative;
+    z-index: 200;
+  }
+
+  .pane-node-title {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
 
     h1 {
       font-family: $monoFontFamily;
@@ -14,7 +22,9 @@
   }
 
   .field-type-text-with-summary {
-    @include span-columns(8, 12);
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
 
     p {
       font-size: 14px;
@@ -23,7 +33,9 @@
   }
 
   .field-type-taxonomy-term-reference {
-    @include span-columns(8, 12);
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
     padding: 20px 0;
 
     .field-item {
@@ -48,7 +60,9 @@
   }
 
   .link-wrapper {
-    @include span-columns(8, 12);
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
 
     ul {
       margin: 0;
@@ -176,6 +190,8 @@
 // User bar styles and structure
 #user-wrapper {
   margin: 0;
+  position: relative;
+  z-index: 501;
 
   .nice-menu {
     > .menuparent {
@@ -271,6 +287,8 @@
     border-top: 1px solid $dropdownDividerTop;
     border-bottom: 1px solid $dropdownDividerTop;
     height: 50px;
+    position: relative;
+    z-index: 500;
 
     #logo {
       width: 155px;
@@ -283,16 +301,17 @@
 
       ul.nice-menu {
         border: none;
-        width: auto;
+        width: 73%;
         text-align: left;
         float: left;
 
         > li {
           border: none;
-          width: auto;
+          width: 20%;
           float: left;
           background: transparent;
           position: relative;
+          text-align: center;
 
           &:hover {
             border-bottom: 4px solid $dropdownDividerTop;
@@ -335,10 +354,12 @@
             left: 0;
             border: none;
             z-index: 998;
+            @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
 
             li {
               border: none;
               background: transparent;
+              text-align: left;
 
               a,
               span {
@@ -470,7 +491,7 @@
     font-size: 10px;
 
     .expanded {
-      @include span-columns(7, 14);
+      @include span-columns(7, 16);
       list-style-type: none;
       list-style-image: none;
       padding: 0;
@@ -499,13 +520,13 @@
 
     @include at-breakpoint($computer) {
       .expanded {
-        @include span-columns(2, 14);
+        @include span-columns(2, 16);
       }
     }
 
     @include at-breakpoint($wide) {
       .expanded {
-        @include span-columns(2, 14);
+        @include span-columns(2, 16);
       }
     }
 
@@ -543,7 +564,7 @@
   @include at-breakpoint($wide) {
     #block-bean-copyright,
     #block-bean-about-linux-foundation {
-      @include span-columns(4 omega, 14);
+      @include span-columns(4 omega, 16);
       text-align: right;
     }
 
@@ -917,28 +938,32 @@
 }
 
 .editorial {
+  padding: 0.5em 0 !important;
+
   .editorial-updated {
     display: block;
     width: auto;
     font-family: $condensedFontFamily;
     font-size: 13px;
     line-height: 25px;
-    margin: -40px 0 1em;
-    padding: 0 20px 1em;
+    margin: -25px 0 20px;
+    padding: 0 20px 10px;
     border-bottom: 1px solid $dropdownDividerTop;
   }
 
   @include at-breakpoint($computer) {
     .editorial-updated {
       float: right;
-      margin: -64px 0 0;
+      margin: -30px 0 0;
       padding: 0;
       border: 0;
     }
   }
 
   .views-row {
+    margin: 0 -5px;
     padding: 20px;
+    width: auto;
 
     &.views-row-odd {
       background: white;
@@ -1017,13 +1042,19 @@
     .field-type-text-with-summary {
       visibility: hidden;
       position: relative;
-      top: -180px;
+      top: -170px;
       height: 0;
       font-size: 12px;
       font-weight: 300;
       letter-spacing: 0.1em;
       line-height: 20px;
       color: white;
+    }
+
+    @include at-breakpoint($computer) {
+      .field-type-text-with-summary {
+        top: -180px;
+      }
     }
 
     .views-field-view-node {
@@ -1111,8 +1142,7 @@
 
   @include at-breakpoint($wide) {
     .views-row {
-      margin: 0 -0.5em;
-      padding: 1em 0.75em;
+      
     }
   }
 }
