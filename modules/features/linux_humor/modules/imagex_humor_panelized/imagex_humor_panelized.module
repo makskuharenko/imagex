@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Humor Panelized feature.
+ */
+
+include_once 'imagex_humor_panelized.features.inc';
