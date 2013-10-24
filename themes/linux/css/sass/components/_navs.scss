@@ -2,7 +2,12 @@
 // Navs
 // --------------------------------------------------
 
-
+ul.tabs.primary {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 20px;
+}
 
 //
 // Dropdown menus
@@ -627,4 +632,11 @@
   ul {
     margin-top: -33px;
   }
+}
+
+// CONTEXTUAL LINKS CLEARFIX FIX
+// -----------------------------
+
+.contextual-links-region.clearfix:after {
+  display: inline;
 }
