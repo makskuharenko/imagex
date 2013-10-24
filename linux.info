@@ -2,6 +2,7 @@ name = Linux.com
 description = Installation profile for Linux.com.
 version = 7.x-dev
 core = 7.x
+distribution_name = Linux.com
 base profile = imagex_installkit
 
 ; Contrib dependencies.
@@ -46,10 +47,13 @@ dependencies[] = linux_coveritlive
 dependencies[] = linux_creative_commons_configuration
 dependencies[] = linux_directory
 dependencies[] = linux_events
+dependencies[] = linux_footer
+; dependencies[] = linux_foundation_network_header
 dependencies[] = linux_group
+dependencies[] = linux_header
 dependencies[] = linux_humor
 dependencies[] = linux_manual
-dependencies[] = linux_menu
+; dependencies[] = linux_menu
 ; dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_tutorial

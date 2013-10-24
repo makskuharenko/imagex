@@ -1,0 +1,10 @@
+name = Linux Footer
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_footer
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:1
+features[panels_mini][] = global_footer
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][panels_mini] = panels_mini

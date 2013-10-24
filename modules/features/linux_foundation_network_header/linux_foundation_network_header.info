@@ -1,0 +1,10 @@
+name = Linux Foundation Network Header
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_foundation_network_header
+dependencies[] = ctools
+dependencies[] = panels_mini
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:1
+features[panels_mini][] = linux_foundation_header
