@@ -10,17 +10,21 @@
 
 //TODO: this should work, but hook doesn't seem to be getting called.
 function linux_news_humor_views_default_views_alter(&$views){
+     
     $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
-}
+} 
 
-function linux_news_humor_views_pre_view(&$views) {
+function linux_news_humor_views_pre_view(&$view, &$display_id, &$args) {
  
-  if($views->name  == 'news'){
-    dsm('pre view alter');
+  if($view->name  == 'news'){
 
-    $filters = $views->display_handler->get_option('filters');
+    $filters = $view->display_handler->get_option('filters');
+   //before
+    dsm($filters['type']['value']);
+    //update to use humor
     $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
-    //dsm($filters['type']['value']);
+    //after
+    dsm($filters['type']['value']);
 
     }
 }
