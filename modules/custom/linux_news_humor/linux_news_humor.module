@@ -7,12 +7,20 @@
 /**
 * Implementation of hook_views_default_views_alter().  
 */
+
+//TODO: this should work, but hook doesn't seem to be getting called.
+function linux_news_humor_views_default_views_alter(&$views){
+    $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
+}
+
 function linux_news_humor_views_pre_view(&$views) {
  
   if($views->name  == 'news'){
+    dsm('pre view alter');
+
     $filters = $views->display_handler->get_option('filters');
-  
-   
-  }
-  
+    $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
+    //dsm($filters['type']['value']);
+
+    }
 }

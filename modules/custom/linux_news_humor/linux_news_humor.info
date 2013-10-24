@@ -1,4 +1,5 @@
 name = News & Humor
+description = This module over rides the imagex_news panel view, filtering by humor AND news.
 core = 7.x
 package = Linux.com
 php = 5.2.4
