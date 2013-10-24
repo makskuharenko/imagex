@@ -31,6 +31,15 @@
       line-height: 20px;
     }
   }
+  
+  .region-second {
+    .field-type-image {
+      img {
+        border-bottom: 3px solid $linuxStdOrange;
+      }
+    }
+  }
+  
 
   .field-type-taxonomy-term-reference {
     @include at-breakpoint($wide) {
@@ -492,6 +501,7 @@
 
     .expanded {
       @include span-columns(7, 16);
+      display: none;
       list-style-type: none;
       list-style-image: none;
       padding: 0;
@@ -512,14 +522,9 @@
       }
     }
 
-    @include at-breakpoint($tablet) {
-      .expanded {
-        
-      }
-    }
-
     @include at-breakpoint($computer) {
       .expanded {
+        display: block;
         @include span-columns(2, 16);
       }
     }
@@ -539,7 +544,7 @@
     font-size: 10px;
     color: $btnBorder;
     margin: 0 0 30px;
-    text-align: center;
+    text-align: right;
 
     p {
       font-family: $monoFontFamily;
@@ -558,13 +563,13 @@
   #block-bean-copyright {
     font-size: 10px;
     color: $btnBorder;
-    text-align: center;
+    text-align: right;
   }
 
-  @include at-breakpoint($wide) {
+  @include at-breakpoint($computer) {
     #block-bean-copyright,
     #block-bean-about-linux-foundation {
-      @include span-columns(4 omega, 16);
+      @include span-columns(5 omega, 16);
       text-align: right;
     }
 

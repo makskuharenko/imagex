@@ -3440,6 +3440,8 @@ a.label:hover, a.badge:hover {
 .not-front .field-type-text-with-summary p {
   font-size: 14px;
   line-height: 20px; }
+.not-front .region-second .field-type-image img {
+  border-bottom: 3px solid #f17700; }
 .not-front .field-type-taxonomy-term-reference {
   padding: 20px 0; }
   @media (min-width: 62.125em) {
@@ -3898,6 +3900,7 @@ a.label:hover, a.badge:hover {
       float: left;
       margin-right: 1.26582%;
       display: inline;
+      display: none;
       list-style-type: none;
       list-style-image: none;
       padding: 0; }
@@ -3911,6 +3914,7 @@ a.label:hover, a.badge:hover {
         cursor: pointer; }
     @media (min-width: 45.5em) {
       #footer-wrapper #block-system-main-menu ul .expanded {
+        display: block;
         width: 11.39241%;
         float: left;
         margin-right: 1.26582%; } }
@@ -3925,7 +3929,7 @@ a.label:hover, a.badge:hover {
     font-size: 10px;
     color: #bbbbbb;
     margin: 0 0 30px;
-    text-align: center; }
+    text-align: right; }
     #footer-wrapper #block-bean-about-linux-foundation p {
       font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
       font-weight: 300;
@@ -3938,11 +3942,11 @@ a.label:hover, a.badge:hover {
   #footer-wrapper #block-bean-copyright {
     font-size: 10px;
     color: #bbbbbb;
-    text-align: center; }
-  @media (min-width: 62.125em) {
+    text-align: right; }
+  @media (min-width: 45.5em) {
     #footer-wrapper #block-bean-copyright,
     #footer-wrapper #block-bean-about-linux-foundation {
-      width: 24.05063%;
+      width: 30.37975%;
       float: right;
       margin-right: 0;
       text-align: right; }
