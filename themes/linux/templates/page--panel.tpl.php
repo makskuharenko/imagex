@@ -26,6 +26,7 @@
   <div id="header-wrapper" class="fullwidth">
     <div class="container">
       <header role="banner" class="row">
+        <!--
         <div class="siteinfo">
 
           <?php if($site_name OR $site_slogan ): ?>
@@ -39,7 +40,8 @@
             </hgroup>
           <?php endif; ?>
         </div>
-
+        -->
+        
         <?php if ($page['header']): ?>
           <div class="header-region">
             <?php print render($page['header']); ?>
@@ -59,7 +61,9 @@
     <?php endif; ?>
 
     <?php if (isset($tabs['#primary'][0]) || isset($tabs['#secondary'][0])): ?>
-      <nav class="tabs"><?php print render($tabs); ?></nav>
+      <div class="container">
+        <nav class="tabs"><?php print render($tabs); ?></nav>
+      </div>
     <?php endif; ?>
 
     <?php if($page['highlighted'] OR $messages){ ?>
