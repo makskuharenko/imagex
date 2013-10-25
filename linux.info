@@ -36,6 +36,7 @@ dependencies[] = imagex_news_addthis
 dependencies[] = imagex_page_addthis
 dependencies[] = imagex_poll
 dependencies[] = imagex_poll_addthis
+dependencies[] = imagex_widgets_basic
 dependencies[] = imagex_wiki
 dependencies[] = imagex_wiki_addthis
 
