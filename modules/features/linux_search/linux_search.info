@@ -15,6 +15,7 @@ features[features_api][] = api:2
 features[features_override_items][] = search_api_index.default_node_index
 features[features_overrides][] = search_api_index.default_node_index.options|data_alter_callbacks|search_api_alter_add_aggregation|settings|fields
 features[features_overrides][] = search_api_index.default_node_index.options|data_alter_callbacks|search_api_alter_add_aggregation|status
+features[features_overrides][] = search_api_index.default_node_index.options|fields|author:name
 features[features_overrides][] = search_api_index.default_node_index.options|fields|field_radioactivity
 features[features_overrides][] = search_api_index.default_node_index.options|fields|search_api_aggregation_1
 features[features_overrides][] = search_api_index.default_node_index.options|fields|search_api_aggregation_2

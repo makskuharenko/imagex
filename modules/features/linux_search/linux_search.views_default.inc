@@ -32,8 +32,6 @@ function linux_search_views_default_views() {
   $handler->display->display_options['query']['options']['entity_access'] = 0;
   $handler->display->display_options['query']['options']['parse_mode'] = 'single';
   $handler->display->display_options['exposed_form']['type'] = 'input_required';
-  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Search';
-  $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Please input a keyword to search.';
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'full_html';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
@@ -135,13 +133,32 @@ function linux_search_views_default_views() {
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'keyword_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['label'] = 'Keyword';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['identifier'] = 'keyword';
-  $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['required'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    7 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+  );
+  /* Filter criterion: Author: Name (indexed) */
+  $handler->display->display_options['filters']['author_name']['id'] = 'author_name';
+  $handler->display->display_options['filters']['author_name']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['filters']['author_name']['field'] = 'author_name';
+  $handler->display->display_options['filters']['author_name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['author_name']['expose']['operator_id'] = 'author_name_op';
+  $handler->display->display_options['filters']['author_name']['expose']['label'] = 'Author';
+  $handler->display->display_options['filters']['author_name']['expose']['description'] = 'Input a given authors username.';
+  $handler->display->display_options['filters']['author_name']['expose']['operator'] = 'author_name_op';
+  $handler->display->display_options['filters']['author_name']['expose']['identifier'] = 'author';
+  $handler->display->display_options['filters']['author_name']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,

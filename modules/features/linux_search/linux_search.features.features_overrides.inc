@@ -41,6 +41,9 @@ function linux_search_features_override_default_overrides() {
     ),
   );
   $overrides["search_api_index.default_node_index.options|data_alter_callbacks|search_api_alter_add_aggregation|status"] = 1;
+  $overrides["search_api_index.default_node_index.options|fields|author:name"] = array(
+    'type' => 'text',
+  );
   $overrides["search_api_index.default_node_index.options|fields|field_radioactivity"] = array(
     'type' => 'decimal',
   );

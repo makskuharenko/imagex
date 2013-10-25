@@ -45,6 +45,9 @@ function linux_search_default_search_api_index_alter(&$data) {
       ),
     ); /* WAS: '' */
     $data['default_node_index']->options['data_alter_callbacks']['search_api_alter_add_aggregation']['status'] = 1; /* WAS: 0 */
+    $data['default_node_index']->options['fields']['author:name'] = array(
+      'type' => 'text',
+    ); /* WAS: '' */
     $data['default_node_index']->options['fields']['field_radioactivity'] = array(
       'type' => 'decimal',
     ); /* WAS: '' */
