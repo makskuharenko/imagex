@@ -62,7 +62,7 @@ textarea {
   }
   // Add blue glow.
   &:focus {
-    @include box-shadow(#0066ff 0 0 5px 0);
+    @include box-shadow(none);
     // for Opera
     z-index: 1;
   }
