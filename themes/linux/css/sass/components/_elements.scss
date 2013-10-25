@@ -111,26 +111,7 @@
     input[type="submit"], 
     input[type="button"] {
       float: right;
-      background: $linuxStdOrange;
-      @include text-shadow(none);
-      border: none;
-      color: white;
-      font-family: $baseFontFamily;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 400;
       margin: 5px 0 5px 10px;
-    }
-
-    textarea,
-    input[type="text"] {
-      width: 100%;
-      background: $grayLighter url('../img/form-line.png') repeat top left; 
-      border: none;
-      @include border-radius(2px);
-      margin: 0;
-      padding: 10px;
     }
 
     textarea {
@@ -243,6 +224,12 @@
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
+
+h1 {
+  display: inline-block;
+  width: 100%;
+}
+
 .standard-bean {
   clear: left;
 
