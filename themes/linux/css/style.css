@@ -1460,9 +1460,9 @@ button:focus,
 a.button:focus,
 select:focus,
 textarea:focus {
-  -webkit-box-shadow: #0066ff 0 0 5px 0;
-  -moz-box-shadow: #0066ff 0 0 5px 0;
-  box-shadow: #0066ff 0 0 5px 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   z-index: 1; }
 
 input[type="file"]:focus, input[type="file"]:active,
@@ -3482,6 +3482,136 @@ a.label:hover, a.badge:hover {
   .not-front .link-wrapper ul li {
     margin: 0;
     padding: 0; }
+.not-front .comment-form {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+  margin: 0 0 20px; }
+  @media (min-width: 62.125em) {
+    .not-front .comment-form {
+      width: 66.10169%;
+      float: left;
+      margin-right: 1.69492%;
+      position: relative;
+      z-index: 200; } }
+  .not-front .comment-form label,
+  .not-front .comment-form .username {
+    display: none; }
+  .not-front .comment-form .filter-wrapper {
+    padding: 0; }
+  .not-front .comment-form button,
+  .not-front .comment-form a.button,
+  .not-front .comment-form input[type="reset"],
+  .not-front .comment-form input[type="submit"],
+  .not-front .comment-form input[type="button"] {
+    float: right;
+    background: #f17700;
+    text-shadow: none;
+    border: none;
+    color: white;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    margin: 5px 0 5px 10px; }
+  .not-front .comment-form textarea,
+  .not-front .comment-form input[type="text"] {
+    width: 100%;
+    background: #eeeeee url("../img/form-line.png") repeat top left;
+    border: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin: 0;
+    padding: 10px; }
+  .not-front .comment-form textarea {
+    height: 200px;
+    resize: none; }
+.not-front .comment {
+  clear: both; }
+  @media (min-width: 62.125em) {
+    .not-front .comment {
+      width: 66.10169%;
+      float: left;
+      margin-right: 1.69492%;
+      position: relative;
+      z-index: 200; } }
+  .not-front .comment h3 {
+    display: none; }
+  .not-front .comment .username {
+    display: inline;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Open Sans Condensed"; }
+  .not-front .comment .picture {
+    width: 75px;
+    height: 75px;
+    float: left;
+    display: none;
+    background: #e5e5e5;
+    margin: 0 15px 15px 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+    @media (min-width: 45.5em) {
+      .not-front .comment .picture {
+        display: block; } }
+  .not-front .comment .date {
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
+    border-left: 1px solid #e5e5e5;
+    font-family: "Open Sans Condensed";
+    font-weight: 300; }
+  .not-front .comment p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600; }
+.not-front .indented {
+  margin: 0; }
+  .not-front .indented article {
+    border-left: 6px solid #f17700;
+    display: inline-block;
+    margin: 0;
+    padding: 0 0 0 25px; }
+.not-front ul.links {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 30px;
+  list-style-type: none; }
+  @media (min-width: 62.125em) {
+    .not-front ul.links {
+      width: 66.10169%;
+      float: left;
+      margin-right: 1.69492%;
+      position: relative;
+      z-index: 200; } }
+  .not-front ul.links li.comment-delete,
+  .not-front ul.links li.comment-edit,
+  .not-front ul.links li.comment-reply {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: "Open Sans Condensed";
+    float: right; }
+    .not-front ul.links li.comment-delete a,
+    .not-front ul.links li.comment-edit a,
+    .not-front ul.links li.comment-reply a {
+      color: #555555;
+      padding: 0 0 0 20px;
+      margin: 0 0 0 10px; }
+      .not-front ul.links li.comment-delete a:hover,
+      .not-front ul.links li.comment-edit a:hover,
+      .not-front ul.links li.comment-reply a:hover {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+        opacity: 0.5; }
+  .not-front ul.links li.comment-reply a {
+    background: transparent url("../img/comment-reply.png") no-repeat center left; }
 @media (min-width: 62.125em) {
   .not-front #mini-panel-content_sidebar {
     position: absolute;

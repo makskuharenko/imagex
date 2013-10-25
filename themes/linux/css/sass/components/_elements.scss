@@ -1,5 +1,5 @@
-// Standard elements and node styles
-// ---------------------------------
+// Standard elements and node/comment styles
+// -----------------------------------------
 
 .not-front {
   @mixin node-position() {
@@ -80,6 +80,154 @@
       li {
         margin: 0;
         padding: 0;
+      }
+    }
+  }
+
+  .comment-form {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid $dropdownDividerTop;
+    border-bottom: 1px solid $dropdownDividerTop;
+    padding: 20px 0;
+    margin: 0 0 20px;
+
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+    
+    label,
+    .username {
+      display: none;
+    }
+    
+    .filter-wrapper {
+      padding: 0;
+    }
+
+    button, 
+    a.button, 
+    input[type="reset"], 
+    input[type="submit"], 
+    input[type="button"] {
+      float: right;
+      background: $linuxStdOrange;
+      @include text-shadow(none);
+      border: none;
+      color: white;
+      font-family: $baseFontFamily;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      margin: 5px 0 5px 10px;
+    }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      background: $grayLighter url('../img/form-line.png') repeat top left; 
+      border: none;
+      @include border-radius(2px);
+      margin: 0;
+      padding: 10px;
+    }
+
+    textarea {
+      height: 200px;
+      resize: none;
+    }
+  }
+
+  .comment {
+    clear: both;
+
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .username {
+      display: inline;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-family: $condensedFontFamily
+    }
+    
+    .picture {
+      width: 75px;
+      height: 75px;
+      float: left;
+      display: none;
+      background: $dropdownDividerTop;
+      margin: 0 15px 15px 0;
+      @include border-radius(5px);
+      
+      @include at-breakpoint($computer) {
+        display: block;
+      }
+    }
+
+    .date {
+      margin: 0 0 0 10px;
+      padding: 0 0 0 10px;
+      border-left: 1px solid $dropdownDividerTop;
+      font-family: $condensedFontFamily;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .indented {
+    margin: 0;
+
+    article {
+      border-left: 6px solid $linuxStdOrange;
+      display: inline-block;
+      margin: 0;
+      padding: 0 0 0 25px;
+    }
+  }
+
+  ul.links {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 30px;
+    list-style-type: none;
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    li.comment-delete,
+    li.comment-edit,
+    li.comment-reply {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-family: $condensedFontFamily;
+      float: right;
+
+      a {
+        color: $gray;
+        padding: 0 0 0 20px;
+        margin: 0 0 0 10px;
+
+        &:hover {
+          @include opacity(0.5);
+        }
+      }
+    }
+
+    li.comment-reply {
+      a {
+        background: transparent url('../img/comment-reply.png') no-repeat center left;
       }
     }
   }
