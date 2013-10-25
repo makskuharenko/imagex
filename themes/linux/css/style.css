@@ -2558,7 +2558,8 @@ ul.tabs.primary {
   margin: 0;
   padding: 15px;
   border-bottom: none;
-  text-align: center; }
+  text-align: center;
+  background: #f17700; }
   ul.tabs.primary li a {
     padding: 0.5em 1em;
     border-radius: 3px;
@@ -2588,21 +2589,24 @@ ul.tabs.secondary {
   border-radius: 0;
   text-align: center;
   background: #e65b04;
-  -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1); }
   ul.tabs.secondary li {
     border: none;
     font-size: 13px; }
     ul.tabs.secondary li a {
       border: none;
-      color: white; }
+      color: white;
+      padding: 0 0 1px; }
       ul.tabs.secondary li a.active {
         font-weight: 600; }
+      ul.tabs.secondary li a:hover {
+        border-bottom: 1px solid #f17700; }
 
-.tabs {
-  background: #f17700;
-  border-radius: 2px;
+nav.tabs {
+  display: inline-block;
+  width: 100%;
   margin: 0 0 20px; }
 
 .dropup,
@@ -3663,6 +3667,10 @@ a.label:hover, a.badge:hover {
   .not-front #mini-panel-content_sidebar {
     position: absolute;
     right: 0; } }
+
+h1 {
+  display: inline-block;
+  width: 100%; }
 
 .standard-bean {
   clear: left; }
