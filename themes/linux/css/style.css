@@ -1743,9 +1743,12 @@ input[type="search"] {
 
 form small, form .description {
   font-size: 12px;
-  color: #444;
+  color: #BBB;
   display: block;
-  text-align: left; }
+  font-style: italic;
+  text-align: left;
+  margin: 5px 0 20px;
+  line-height: 18px; }
 
 /* .date-no-float div{display:inline-block;} */
 .form-field-required:after {
@@ -1765,6 +1768,29 @@ a:link.fieldset-title, .fieldset-legend{
   display:block; height:25px; font-weight:bold; padding-bottom:0;
 }
 */
+.comment-form {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 0;
+  margin: 0 0 20px; }
+  .comment-form label,
+  .comment-form .username {
+    display: none; }
+  .comment-form .filter-wrapper {
+    padding: 0; }
+  .comment-form button,
+  .comment-form a.button,
+  .comment-form input[type="reset"],
+  .comment-form input[type="submit"],
+  .comment-form input[type="button"] {
+    float: right;
+    margin: 5px 0 5px 10px; }
+  .comment-form textarea {
+    height: 200px;
+    resize: none; }
+
 table {
   max-width: 100%;
   background-color: transparent;
@@ -3537,35 +3563,13 @@ a.label:hover, a.badge:hover {
   .not-front .link-wrapper ul li {
     margin: 0;
     padding: 0; }
-.not-front .comment-form {
-  display: inline-block;
-  width: 100%;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 20px 0;
-  margin: 0 0 20px; }
-  @media (min-width: 62.125em) {
-    .not-front .comment-form {
-      width: 66.10169%;
-      float: left;
-      margin-right: 1.69492%;
-      position: relative;
-      z-index: 200; } }
-  .not-front .comment-form label,
-  .not-front .comment-form .username {
-    display: none; }
-  .not-front .comment-form .filter-wrapper {
-    padding: 0; }
-  .not-front .comment-form button,
-  .not-front .comment-form a.button,
-  .not-front .comment-form input[type="reset"],
-  .not-front .comment-form input[type="submit"],
-  .not-front .comment-form input[type="button"] {
-    float: right;
-    margin: 5px 0 5px 10px; }
-  .not-front .comment-form textarea {
-    height: 200px;
-    resize: none; }
+@media (min-width: 62.125em) {
+  .not-front .comment-form {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    position: relative;
+    z-index: 200; } }
 .not-front .comment {
   clear: both; }
   @media (min-width: 62.125em) {
@@ -3653,7 +3657,16 @@ a.label:hover, a.badge:hover {
 
 h1 {
   display: inline-block;
-  width: 100%; }
+  width: 100%;
+  font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: capitalize; }
+
+@media (min-width: 45.5em) {
+  small {
+    width: 60%; } }
 
 .standard-bean {
   clear: left; }

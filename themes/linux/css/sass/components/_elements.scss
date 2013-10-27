@@ -85,38 +85,8 @@
   }
 
   .comment-form {
-    display: inline-block;
-    width: 100%;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    padding: 20px 0;
-    margin: 0 0 20px;
-
     @include at-breakpoint($wide) {
       @include node-position();
-    }
-    
-    label,
-    .username {
-      display: none;
-    }
-    
-    .filter-wrapper {
-      padding: 0;
-    }
-
-    button, 
-    a.button, 
-    input[type="reset"], 
-    input[type="submit"], 
-    input[type="button"] {
-      float: right;
-      margin: 5px 0 5px 10px;
-    }
-
-    textarea {
-      height: 200px;
-      resize: none;
     }
   }
 
@@ -228,6 +198,17 @@
 h1 {
   display: inline-block;
   width: 100%;
+  font-family: $monoFontFamily;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: capitalize;
+}
+
+small {
+  @include at-breakpoint($computer) {
+    width: 60%;
+  }
 }
 
 .standard-bean {
