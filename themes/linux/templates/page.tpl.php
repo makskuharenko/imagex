@@ -31,10 +31,10 @@
           <?php if($site_name OR $site_slogan ): ?>
             <hgroup>
               <?php if($site_name): ?>
-                <h1><?php print $site_name; ?></h1>
+                <h1><?php //print $site_name; ?></h1>
               <?php endif; ?>
               <?php if ($site_slogan): ?>
-                <h2><?php print $site_slogan; ?></h2>
+                <h2><?php //print $site_slogan; ?></h2>
               <?php endif; ?>
             </hgroup>
           <?php endif; ?>
@@ -62,7 +62,7 @@
         <?php endif; ?>
         <?php print render($title_suffix); ?>
 
-        <?php print $breadcrumb; ?>
+        <?php //print $breadcrumb; ?>
 
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
