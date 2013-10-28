@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function linux_footer_install() {
+  $footer_logo_path = drupal_get_path('module', 'linux_footer') . '/files/linux-foundation-network-footer.png';
+  if (FALSE === file_unmanaged_move($footer_logo_path, 'public://', FILE_EXISTS_REPLACE)) {
+    watchdog('linux', 'Unable to move the Linux Foundation Logo (linux-foundation-network-footer.png) into public:// during installation.', WATCHDOG_ERROR);
+  }
+}

@@ -70,6 +70,17 @@ function linux_imagex_installkit_install_block_info() {
       'title' => '<none>',
       'weight' => 0,
     ),
+    'bean-ad-space---header' => array(
+      'module' => 'bean',
+      'delta' => 'ad-space---header',
+      'theme' => 'linux',
+      'visibility' => 0,
+      'region' => 'header',
+      'status' => 1,
+      'pages' => '',
+      'title' => '<none>',
+      'weight' => -1,
+    ),
     'panels_mini-global_header' => array(
       'module' => 'panels_mini',
       'delta' => 'global_header',
@@ -91,6 +102,24 @@ function linux_imagex_installkit_install_block_info() {
       'pages' => '',
       'title' => '<none>',
       'weight' => 0,
+    ),
+    'bean-about-linux-foundation-footer' => array(
+      'module' => 'bean',
+      'delta' => 'about-linux-foundation-footer',
+      'theme' => 'linux',
+      'region' => '',
+    ),
+    'bean-copyright-information' => array(
+      'module' => 'bean',
+      'delta' => 'copyright-information',
+      'theme' => 'linux',
+      'region' => '',
+    ),
+    'panels_mini-global_footer' => array(
+      'module' => 'panels_mini',
+      'delta' => 'global_footer',
+      'theme' => 'linux',
+      'region' => 'footer',
     ),
   );
 }
