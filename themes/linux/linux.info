@@ -9,8 +9,8 @@ base theme = mothership
 ;-------------- F E A T U R E S -------------
 features[] = logo
 features[] = favicon
-features[] = name
-features[] = slogan
+; features[] = name
+; features[] = slogan
 features[] = node_user_picture
 features[] = comment_user_picture
 features[] = comment_user_verification
