@@ -30,7 +30,7 @@ function linux_footer_default_panels_mini() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Footer';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
