@@ -40,7 +40,7 @@ function linux_footer_uuid_features_default_beans() {
         ),
       ),
     ),
-    'field_widget_basic__image' => array(
+    /* 'field_widget_basic__image' => array(
       'und' => array(
         0 => array(
           'fid' => '825f71ec-b2d2-44ce-bdb7-4c2012ab27b2',
@@ -74,7 +74,8 @@ function linux_footer_uuid_features_default_beans() {
           ),
         ),
       ),
-    ),
+    ), */
+    'field_widget_basic__image' => array(),
   );
   $beans[] = array(
     'label' => 'Copyright Information',

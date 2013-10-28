@@ -120,6 +120,7 @@ function linux_imagex_installkit_install_block_info() {
       'delta' => 'global_footer',
       'theme' => 'linux',
       'region' => 'footer',
+      'title' => '<none>',
     ),
   );
 }
