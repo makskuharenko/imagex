@@ -56,11 +56,6 @@
     <div class="page row">
 
       <div role="main" id="#main-content">
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
 
         <?php //print $breadcrumb; ?>
 
@@ -79,6 +74,11 @@
           </div>
         <?php } ?>
 
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?>
+          <h1 class="page-title"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
 
         <?php print render($page['content_pre']); ?>
 

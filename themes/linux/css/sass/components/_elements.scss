@@ -85,57 +85,8 @@
   }
 
   .comment-form {
-    display: inline-block;
-    width: 100%;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    padding: 20px 0;
-    margin: 0 0 20px;
-
     @include at-breakpoint($wide) {
       @include node-position();
-    }
-    
-    label,
-    .username {
-      display: none;
-    }
-    
-    .filter-wrapper {
-      padding: 0;
-    }
-
-    button, 
-    a.button, 
-    input[type="reset"], 
-    input[type="submit"], 
-    input[type="button"] {
-      float: right;
-      background: $linuxStdOrange;
-      @include text-shadow(none);
-      border: none;
-      color: white;
-      font-family: $baseFontFamily;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-      margin: 5px 0 5px 10px;
-    }
-
-    textarea,
-    input[type="text"] {
-      width: 100%;
-      background: $grayLighter url('../img/form-line.png') repeat top left; 
-      border: none;
-      @include border-radius(2px);
-      margin: 0;
-      padding: 10px;
-    }
-
-    textarea {
-      height: 200px;
-      resize: none;
     }
   }
 
@@ -243,6 +194,23 @@
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: $monoFontFamily;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: capitalize;
+}
+
+small {
+  @include at-breakpoint($computer) {
+    width: 60%;
+  }
+}
+
 .standard-bean {
   clear: left;
 
