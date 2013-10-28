@@ -206,3 +206,30 @@ function imagex_conf_path($module, $filename, $reset = FALSE) {
 
   return FALSE;
 }
+
+/**
+ * Returns the current major version of a module based on its .info version.
+ * 
+ * @param string $module_name
+ *   The module name to retrieve the major version for.
+ *
+ * @return mixed
+ *   Returns a string representing the major version, else returns FALSE
+ *   if the major version does not exist and or if the module does not exist.
+ */
+function imagex_get_module_major_version($module_name) {
+  if (!module_exists($module_name)) {
+    return FALSE;
+  }
+
+  $module_path = drupal_get_path('module', $module);
+  $module_info = drupal_parse_info_file($module_path . '/' . $module_name . '.info');
+
+  if (isset($module_info['version'])) {
+    $module_version = $module_info['version'];
+    // @TODO: Complete the implementation to get major version here.
+    return $module_version;
+  }
+
+  return FALSE;
+}
