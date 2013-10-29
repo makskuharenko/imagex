@@ -3,6 +3,7 @@ description = Common capabilities for all ImageX modules.
 package = ImageX
 version = 7.x-dev
 core = 7.x
+php = 5.3.3
 
 files[] = includes/ImagexException.class.inc
 
