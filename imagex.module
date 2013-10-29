@@ -24,6 +24,11 @@ define('IMAGEX_MODE_PRODUCTION', 3);
 define('IMAGEX_WATCHDOG_TYPE', 'imagex');
 
 /**
+ * Defines the major version of Drupal core.
+ */
+define('IMAGEX_CORE_MAJOR_VERSION', '7.x');
+
+/**
  * Returns the current operating mode of ImageX install profile.
  *
  * @return int
@@ -218,18 +223,28 @@ function imagex_conf_path($module, $filename, $reset = FALSE) {
  *   if the major version does not exist and or if the module does not exist.
  */
 function imagex_get_module_major_version($module_name) {
+  // Test and ensure that the module actually exists.
   if (!module_exists($module_name)) {
     return FALSE;
   }
 
-  $module_path = drupal_get_path('module', $module);
+  // Attempt to resolve and load the module's .info file information.
+  $module_path = drupal_get_path('module', $module_name);
   $module_info = drupal_parse_info_file($module_path . '/' . $module_name . '.info');
 
-  if (isset($module_info['version'])) {
+  // If the info file was loaded, let's hope the `version` is specified.
+  if (!empty($module_info) && isset($module_info['version'])) {
     $module_version = $module_info['version'];
-    // @TODO: Complete the implementation to get major version here.
-    return $module_version;
+    // Retrieve and determine the core version.
+    $module_core_version = (isset($module_info['core']) ? ($module_info['core']) : IMAGEX_CORE_MAJOR_VERSION) . '-';
+    // Remove the core version and explode based on separator (.).
+    $module_version = str_replace($module_core_version, '', $module_version);
+    $module_version = explode('.', $module_version);
+    // The major version is at offset zero, therefore just shift it off.
+    $module_version = array_shift($module_version);
+    // array_shift will return NULL if the $module_version is empty, therefore
+    // simply check and return FALSE, otherwise the major version.
+    return NULL !== $module_version ? $module_version : FALSE;
   }
-
   return FALSE;
 }
