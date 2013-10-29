@@ -78,6 +78,35 @@ nav.tabs {
 }
 
 //
+// Mobile menus
+// --------------------------------------------------
+
+#mini-panel-mobile_main_menu {
+  max-width: 640px;
+  position: absolute;
+  right: 0px;
+  z-index: 600;
+  background: white url('../img/content-lines.png') repeat top left;
+  margin-top: 49px;
+
+  ul {
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      list-style-image: none;
+      text-align: left;
+    }
+  }
+
+  .expanded {
+    ul {
+      display: none;
+    }
+  }
+}
+
+//
 // Dropdown menus
 // --------------------------------------------------
 

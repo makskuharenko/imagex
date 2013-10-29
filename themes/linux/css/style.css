@@ -2639,6 +2639,22 @@ nav.tabs {
   width: 100%;
   margin: 0 0 20px; }
 
+#mini-panel-mobile_main_menu {
+  max-width: 640px;
+  position: absolute;
+  right: 0px;
+  z-index: 600;
+  background: white url("../img/content-lines.png") repeat top left;
+  margin-top: 49px; }
+  #mini-panel-mobile_main_menu ul {
+    margin: 0; }
+    #mini-panel-mobile_main_menu ul li {
+      list-style-type: none;
+      list-style-image: none;
+      text-align: left; }
+  #mini-panel-mobile_main_menu .expanded ul {
+    display: none; }
+
 .dropup,
 .dropdown {
   position: relative; }
@@ -3949,7 +3965,8 @@ h1 {
             padding: 0;
             font-size: 18px;
             overflow: hidden;
-            text-align: center; }
+            text-align: center;
+            letter-spacing: 0; }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-profile:before,
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-profile:before {
             content: "\f007";
@@ -4000,6 +4017,11 @@ h1 {
             background-image: none;
             background-position: 0% 0%;
             background-repeat: repeat; }
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility.active,
+          #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-utility.active {
+            background: transparent url("../img/content-lines.png") repeat 0px 3px;
+            border: none;
+            height: 49px; }
           @media (min-width: 62.125em) {
             #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.menu-utility:before,
             #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.menu-utility:before {
