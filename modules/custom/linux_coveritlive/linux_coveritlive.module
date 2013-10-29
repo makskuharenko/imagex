@@ -12,7 +12,23 @@ function linux_coveritlive_ctools_plugin_directory($module, $plugin_type) {
   if ($module == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/' . $plugin_type;
   }
-} 
+}
+
+/**
+ * Implements hook_init().
+ */
+function linux_coveritlive_init() {
+  // Any blocks with ajax on?
+  if ($ajax_blocks = variable_get('linux_coveritlive_ajax_settings', array())) {
+    drupal_add_js(drupal_get_path('module', 'linux_coveritlive') . '/js/linux_coveritlive-block-ajax.js', array('scope' => 'footer'));
+    drupal_add_js(array(
+      'linuxCoveritliveBlockAjax' => array(
+        'blocks' => $ajax_blocks,
+        'url' => url('linux-cil-refresh'),
+      ),
+    ), 'setting');      
+  }
+}
  
 /**
  * Implementation of hook_menu().
@@ -29,6 +45,14 @@ function linux_coveritlive_menu() {
     'access arguments' => array('administer coveritlive'),
   );
 
+  $items['linux-cil-refresh'] = array(
+    'title' => 'CoverItLive refresh content',
+    'page callback' => 'linux_coveritlive_render_block_ajax',
+    'page arguments' => array(1, 2),
+    'access arguments' => array('see coveritlive ajax refresh'),
+    'type' => MENU_CALLBACK,
+  );
+ 
   return $items;
 }
 
@@ -41,6 +65,10 @@ function linux_coveritlive_permission() {
       'title' => t('Admin CoverItLive Settings'),
       'Description' => t('Configure the CoverItLive integration settings'),
     ),
+    'see coveritlive ajax refresh' => array(
+      'title' => t('See CoverItLive Ajax Refresh'),
+      'Description' => t('Should user be able to see CoverItLive ajax refresh'),
+    ),    
   );
 }
 
@@ -50,7 +78,7 @@ function linux_coveritlive_permission() {
 function linux_coveritlive_theme($existing, $type, $theme, $path) {  
   return array(
     'linux_coveritlive_block' => array(
-      'variables' => array('posts' => array()),
+      'variables' => array('posts' => array(), 'conf' => array(), 'ajax_render' => FALSE),
       'template' => 'linux-coveritlive-block',
       'pattern' => 'linux_coveritlive_item__',
       'path' => $path .'/theme',
@@ -67,24 +95,24 @@ function linux_coveritlive_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Custom function for getting post stream from CoverItLive API
+ * Custom function for getting post stream from CoverItLive API.
  *
  * CoverItLive API is pinged with event/blog info from block settings
  * Results are cached only as a fallback if the CoverItLive API is down
  */
 function linux_coveritlive_get_stream($block_settings = array()) {  
-  //API settings
+  // Global API settings
   $api_url = variable_get('linux_coveritlive_api_url', 'https://api.coveritlive.com/remote/2/event/data');
   $api_key = variable_get('linux_coveritlive_api_key');  
   
-  //no APi key or block settings = jump ship
+  // No APi key or block settings = jump ship
   if (empty($api_key) || empty($block_settings)) {
     return FALSE;
   }
   
   //vars
-  $stream_key = $block_settings['linux_coveritlive_stream_key']; //specific key/code of given blog/stream
-  $stream_count = $block_settings['linux_coveritlive_item_count'];
+  $stream_key = $block_settings['linux_coveritlive_stream_key'];
+  $stream_count = $block_settings['linux_coveritlive_item_count'] ? $block_settings['linux_coveritlive_item_count'] : 5;
   $cache_key = LINUX_COVERITLIVE_CACHE_KEY .'_'. $stream_key;
   
   // Construct query parameter.
@@ -127,4 +155,51 @@ function linux_coveritlive_get_stream($block_settings = array()) {
   cache_set($cache_key, $posts, 'cache', time() + 86400);
 
   return $posts;  
+}
+
+/**
+ * Custom function for render CoverItLive blocks.
+ */
+function linux_coveritlive_render_block($conf) {
+  $block = new stdClass();
+  $block->title = t('CoverItLive Stream');
+  $block->module = 'linux_coveritlive';
+  $block->delta = linux_coveritlive_render_delta($conf);  
+  
+  if ($posts = linux_coveritlive_get_stream($conf)) {
+    $block->content = theme('linux_coveritlive_block', array('posts' => $posts, 'conf' => $conf));
+  }
+  else {
+    $block->content = t('No posts available.');
+  }
+
+  return $block;
+}
+
+/**
+ * Custom function for render CoverItLive blocks via ajax.
+ */
+function linux_coveritlive_render_block_ajax($stream_key, $count) {
+  $conf = array(
+    'linux_coveritlive_stream_key' => $stream_key,
+    'linux_coveritlive_item_count' => $count,
+  );
+  $content  = t('No posts available.');
+  
+  // Get Posts & render direct if results
+  if ($posts = linux_coveritlive_get_stream($conf)) {
+    $content = theme('linux_coveritlive_block', array('posts' => $posts, 'conf' => $conf, 'ajax_render' => TRUE));
+  }
+
+  echo $content;
+  die();
+}
+
+/**
+ * Returns an ID for the block
+ *
+ * Hash ensures its unique, used for block delta too if style choosen
+ */
+function linux_coveritlive_render_delta($conf, $key = '') {
+  return drupal_html_class('linux-coveritlive-stream-'. (!empty($key) ? $key : $conf['linux_coveritlive_stream_key']) .'-'. $conf['linux_coveritlive_ajax_hash']);
 }

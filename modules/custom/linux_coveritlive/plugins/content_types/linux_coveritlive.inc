@@ -37,13 +37,51 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
     '#required' => TRUE,
   );
   
+  if (!empty($conf['linux_coveritlive_stream_key'])) {
+    $form['linux_coveritlive_stream_key_original'] = array(
+      '#type' => 'hidden',
+      '#default_value' => $conf['linux_coveritlive_stream_key'],
+    );
+  }
+  
   $form['linux_coveritlive_item_count'] = array(
     '#type' => 'select',
     '#options' => drupal_map_assoc(range(1, 30)),
     '#title' => t('Post count'),
     '#description' => t('How many CoverItLive items should be shown.'),
-    '#default_value' => 5,
+    '#default_value' => !empty($conf['linux_coveritlive_item_count']) ? $conf['linux_coveritlive_item_count'] : 5,
   );
+  
+  $form['linux_coveritlive_ajax'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Ajax Refresh Block?'),
+    '#description' => t('Should this block refresh itself via ajax.'),
+    '#default_value' => !empty($conf['linux_coveritlive_ajax']) ? $conf['linux_coveritlive_ajax'] : 1,
+  );
+  
+  $form['linux_coveritlive_ajax_interval'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Ajax Refresh Interval'),
+    '#description' => t('How often this block should refresh in seconds. 60 = 1 min, 120 = 2min etc'),
+    '#default_value' => !empty($conf['linux_coveritlive_ajax_interval']) ? $conf['linux_coveritlive_ajax_interval']: 120, //2mins
+    '#field_prefix' => t('Refresh every'),
+    '#field_suffix' => t('seconds'),
+    '#size' => 4,
+    '#maxlength' => 4,
+    '#states' => array(
+      'invisible' => array(
+        'input[name="linux_coveritlive_ajax"]' => array('checked' => FALSE),
+      ),
+    ),
+    '#required' => TRUE,
+  );
+  
+  //makes block unique for ajax call if same block for same key are on same page
+  $form['linux_coveritlive_ajax_hash'] = array(
+    '#type' => 'hidden',
+    '#default_value' => !empty($conf['linux_coveritlive_ajax_hash']) ? $conf['linux_coveritlive_ajax_hash'] : substr(hash('sha256', time()), 0, 8),
+  );
+
   return $form;
 }
 
@@ -58,6 +96,24 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form_submit(&$for
   if (isset($form_state['values']['linux_coveritlive_item_count'])) {
     $form_state['conf']['linux_coveritlive_item_count'] = $form_state['values']['linux_coveritlive_item_count'];
   }
+  if (isset($form_state['values']['linux_coveritlive_ajax'])) {
+    $form_state['conf']['linux_coveritlive_ajax'] = $form_state['values']['linux_coveritlive_ajax'];
+    $form_state['conf']['linux_coveritlive_ajax_interval'] = $form_state['values']['linux_coveritlive_ajax_interval'];
+    $form_state['conf']['linux_coveritlive_ajax_hash'] = $form_state['values']['linux_coveritlive_ajax_hash']; 
+    
+    //merge into ajax settings
+    $delta = linux_coveritlive_render_delta($form_state['conf']);
+    $ajax_blocks = variable_get('linux_coveritlive_ajax_settings', array());
+    
+    //if stream key changes, delete old one
+    if (!empty($form_state['values']['linux_coveritlive_stream_key_original']) && $form_state['values']['linux_coveritlive_stream_key'] != $form_state['values']['linux_coveritlive_stream_key_original']) {
+      $original_delta = linux_coveritlive_render_delta($form_state['conf'], $form_state['values']['linux_coveritlive_stream_key_original']);
+      unset($ajax_blocks[$original_delta]);
+    }
+    
+    $ajax_blocks[$delta] = $form_state['conf'];
+    variable_set('linux_coveritlive_ajax_settings', $ajax_blocks);
+  } 
 }
 
 /**
@@ -66,19 +122,7 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form_submit(&$for
  * @see ctools_content_render()
  */
 function linux_coveritlive_linux_coveritlive_content_type_render($entity_type, $conf, $panel_args, $contexts) {
-  $block = new stdClass();
-  $block->title = t('CoverItLive Stream');
-  $block->module = 'linux_coveritlive';
-  $block->delta = 'linux-coveritlive-stream-'. $conf['linux_coveritlive_stream_key'];  
-  
-  if ($posts = linux_coveritlive_get_stream($conf)) {
-    $block->content = theme('linux_coveritlive_block', array('posts' => $posts));
-  }
-  else {
-    $block->content = t('No posts available.');
-  }
-
-  return $block;
+  return linux_coveritlive_render_block($conf);
 }
 
 /**

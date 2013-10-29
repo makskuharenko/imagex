@@ -6,11 +6,20 @@
 
 /**
  * Implements hook_preprocess_linux_coveritlive_block().
+ *
  */
 function template_preprocess_linux_coveritlive_block(&$vars) {
+  $conf = $vars['conf'];
   $posts = $vars['posts'];
   $vars['posts_raw'] = $posts;
   $vars['posts_rendered'] = array();
+  
+  if (!empty($vars['ajax_render'])) {
+    $vars['update_time'] = t('Updated at: @date', array('@date' => format_date(time(), 'short')));
+  }
+  else {
+    $vars['block_id'] = linux_coveritlive_render_delta($conf);
+  }
   
   //loop through posts and render theme
   if (!empty($posts)) {
