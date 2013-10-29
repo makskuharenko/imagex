@@ -59,7 +59,7 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
     '#type' => 'checkbox',
     '#title' => t('Ajax Refresh Block?'),
     '#description' => t('Should this block refresh itself via ajax.'),
-    '#default_value' => !empty($conf['linux_coveritlive_ajax']) ? $conf['linux_coveritlive_ajax'] : 1,
+    '#default_value' => !empty($conf['linux_coveritlive_ajax']) ? $conf['linux_coveritlive_ajax'] : 0,
   );
 
   $form['linux_coveritlive_ajax_interval'] = array(
@@ -99,15 +99,17 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form_submit(&$for
   if (isset($form_state['values']['linux_coveritlive_item_count'])) {
     $form_state['conf']['linux_coveritlive_item_count'] = $form_state['values']['linux_coveritlive_item_count'];
   }
-  if (isset($form_state['values']['linux_coveritlive_ajax'])) {
-    $form_state['conf']['linux_coveritlive_ajax'] = $form_state['values']['linux_coveritlive_ajax'];
-    $form_state['conf']['linux_coveritlive_ajax_interval'] = $form_state['values']['linux_coveritlive_ajax_interval'];
-    $form_state['conf']['linux_coveritlive_ajax_hash'] = $form_state['values']['linux_coveritlive_ajax_hash'];
+    
+  // Ajax settings, save to cTools $conf
+  $form_state['conf']['linux_coveritlive_ajax'] = $form_state['values']['linux_coveritlive_ajax'];
+  $form_state['conf']['linux_coveritlive_ajax_interval'] = $form_state['values']['linux_coveritlive_ajax_interval'];
+  $form_state['conf']['linux_coveritlive_ajax_hash'] = $form_state['values']['linux_coveritlive_ajax_hash'];
 
-    //merge into ajax settings
-    $delta = linux_coveritlive_render_delta($form_state['conf']);
-    $ajax_blocks = variable_get('linux_coveritlive_ajax_settings', array());
-
+  $delta = linux_coveritlive_render_delta($form_state['conf']);
+  $ajax_blocks = variable_get('linux_coveritlive_ajax_settings', array());
+  
+  // Ajax enabled, merge into ajax settings
+  if (!empty($form_state['conf']['linux_coveritlive_ajax'])) {
     //if stream key changes, delete old one
     if (!empty($form_state['values']['linux_coveritlive_stream_key_original']) && $form_state['values']['linux_coveritlive_stream_key'] != $form_state['values']['linux_coveritlive_stream_key_original']) {
       $original_delta = linux_coveritlive_render_delta($form_state['conf'], $form_state['values']['linux_coveritlive_stream_key_original']);
@@ -116,6 +118,13 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form_submit(&$for
 
     $ajax_blocks[$delta] = $form_state['conf'];
     variable_set('linux_coveritlive_ajax_settings', $ajax_blocks);
+  }
+  else {
+    // Ajax disable but old settings exist
+    if (!empty($ajax_blocks[$delta])) {
+      unset($ajax_blocks[$delta]);
+      variable_set('linux_coveritlive_ajax_settings', $ajax_blocks);
+    }
   }
 }
 
