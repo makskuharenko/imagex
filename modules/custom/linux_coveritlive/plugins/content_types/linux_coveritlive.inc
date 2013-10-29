@@ -1,11 +1,14 @@
 <?php
-
+/**
+ * @file
+ * CoverItLive cTools content type definition.
+ */
 
 $plugin = array(
-  'title' => t('CoverItLive Stream Pane'),  
-  'description' => t('Pull a live blog feed from CoverItLive.'), 
-  'category' => t('Linux'), 
-  'defaults' => array(), //@todo
+  'title' => t('CoverItLive Stream Pane'),
+  'description' => t('Pull a live blog feed from CoverItLive.'),
+  'category' => t('Linux'),
+  'defaults' => array(),
 );
 
 
@@ -16,34 +19,34 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
   $api_url = variable_get('linux_coveritlive_api_url', 'https://api.coveritlive.com/remote/2/event/data');
   $api_key = variable_get('linux_coveritlive_api_key');
   $conf = $form_state['conf'];
-  
+
   //admin error if no api info
   if (empty($api_url) || empty($api_key)) {
     $form['no_api_info'] = array(
       '#type' => 'item',
       '#weight' => -1000,
       '#title' => t('CoverItLive API Information Required!'),
-      '#markup' => '<div class="messages error">'. t('Please provide CoverItLive API information on <a href="@admin-url">the CoveriveIt settings page</a> to unlock this block.', array('@admin-url' => url('admin/config/services/coveritlive'))) .'</div>',
+      '#markup' => '<div class="messages error">' . t('Please provide CoverItLive API information on <a href="@admin-url">the CoveriveIt settings page</a> to unlock this block.', array('@admin-url' => url('admin/config/services/coveritlive'))) . '</div>',
     );
-    
+
     return $form;
   }
 
   $form['linux_coveritlive_stream_key'] = array(
     '#type' => 'textfield',
     '#title' => t('ConverItLive Blog Key'),
-    '#description' => t('The blog owner can find this value after creating a new event, by selecting the "altcast_code" which is found in their Viewer Window embed code (e.g. the event code is "46e6cd22b5" in "altcast_code=46e6cd22b5").'),
+    '#description' => t('The blog owner can find this value after creating a new event, by selecting the "altcast_code" which is found in their Viewer Window embed code (e.g., the event code is "46e6cd22b5" in "altcast_code=46e6cd22b5").'),
     '#default_value' => $conf['linux_coveritlive_stream_key'],
     '#required' => TRUE,
   );
-  
+
   if (!empty($conf['linux_coveritlive_stream_key'])) {
     $form['linux_coveritlive_stream_key_original'] = array(
       '#type' => 'hidden',
       '#default_value' => $conf['linux_coveritlive_stream_key'],
     );
   }
-  
+
   $form['linux_coveritlive_item_count'] = array(
     '#type' => 'select',
     '#options' => drupal_map_assoc(range(1, 30)),
@@ -51,14 +54,14 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
     '#description' => t('How many CoverItLive items should be shown.'),
     '#default_value' => !empty($conf['linux_coveritlive_item_count']) ? $conf['linux_coveritlive_item_count'] : 5,
   );
-  
+
   $form['linux_coveritlive_ajax'] = array(
     '#type' => 'checkbox',
     '#title' => t('Ajax Refresh Block?'),
     '#description' => t('Should this block refresh itself via ajax.'),
     '#default_value' => !empty($conf['linux_coveritlive_ajax']) ? $conf['linux_coveritlive_ajax'] : 1,
   );
-  
+
   $form['linux_coveritlive_ajax_interval'] = array(
     '#type' => 'textfield',
     '#title' => t('Ajax Refresh Interval'),
@@ -75,7 +78,7 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form($form, &$for
     ),
     '#required' => TRUE,
   );
-  
+
   //makes block unique for ajax call if same block for same key are on same page
   $form['linux_coveritlive_ajax_hash'] = array(
     '#type' => 'hidden',
@@ -99,21 +102,21 @@ function linux_coveritlive_linux_coveritlive_content_type_edit_form_submit(&$for
   if (isset($form_state['values']['linux_coveritlive_ajax'])) {
     $form_state['conf']['linux_coveritlive_ajax'] = $form_state['values']['linux_coveritlive_ajax'];
     $form_state['conf']['linux_coveritlive_ajax_interval'] = $form_state['values']['linux_coveritlive_ajax_interval'];
-    $form_state['conf']['linux_coveritlive_ajax_hash'] = $form_state['values']['linux_coveritlive_ajax_hash']; 
-    
+    $form_state['conf']['linux_coveritlive_ajax_hash'] = $form_state['values']['linux_coveritlive_ajax_hash'];
+
     //merge into ajax settings
     $delta = linux_coveritlive_render_delta($form_state['conf']);
     $ajax_blocks = variable_get('linux_coveritlive_ajax_settings', array());
-    
+
     //if stream key changes, delete old one
     if (!empty($form_state['values']['linux_coveritlive_stream_key_original']) && $form_state['values']['linux_coveritlive_stream_key'] != $form_state['values']['linux_coveritlive_stream_key_original']) {
       $original_delta = linux_coveritlive_render_delta($form_state['conf'], $form_state['values']['linux_coveritlive_stream_key_original']);
       unset($ajax_blocks[$original_delta]);
     }
-    
+
     $ajax_blocks[$delta] = $form_state['conf'];
     variable_set('linux_coveritlive_ajax_settings', $ajax_blocks);
-  } 
+  }
 }
 
 /**

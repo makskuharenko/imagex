@@ -1,7 +1,11 @@
 <?php
+/**
+ * @file
+ * CoverItLive admin settings
+ */
 
 /**
- * CoverItLive Admin Settings form
+ * CoverItLive Admin Settings form.
  */
 function linux_coveritlive_admin_settings_form($form, &$form_state) {
   // CoverItLive api URL.
@@ -12,8 +16,8 @@ function linux_coveritlive_admin_settings_form($form, &$form_state) {
     '#size' => 40,
     '#required' => TRUE,
     '#default_value' => variable_get('linux_coveritlive_api_url', 'https://api.coveritlive.com/remote/2/event/data'),
-  );  
-  
+  );
+
   // CoverItLive api key.
   $form['linux_coveritlive_api_key'] = array(
     '#type' => 'textfield',

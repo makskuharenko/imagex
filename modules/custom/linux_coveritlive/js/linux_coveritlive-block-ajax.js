@@ -1,8 +1,10 @@
+/**
+ * @file
+ * Update CoverItLive blocks via Ajax.
+ */
+
 (function ($) {
 
-  /**
-   * Update CoverItLive blocks via Ajax.
-   */
   Drupal.behaviors.linuxCoveritliveBlockAjax = {
     attach: function (context, settings) {
       var blocks = settings.linuxCoveritliveBlockAjax.blocks;      
