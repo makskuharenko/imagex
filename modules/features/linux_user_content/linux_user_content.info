@@ -1,0 +1,13 @@
+name = Linux User Content
+description = Provides a "My Content" tab on user profiles listing content the given user has published (content pane is also included)
+core = 7.x
+package = Linux.com
+version = 7.x-1.0-dev
+project = linux_user_content
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = linux_user_content
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/linux/modules/features
