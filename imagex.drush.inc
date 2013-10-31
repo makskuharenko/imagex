@@ -22,6 +22,9 @@ function imagex_drush_command() {
   );
   $commands['imagex-variables-rebuild'] = array(
     'description' => 'Rebuilds and sets all of the default values for all variables defined by hook_imagex_variables().',
+    'options' => array(
+      'modules' => 'A comma separated list of modules to rebuild their defined variables for.',
+    ),
     'aliases' => array('vrebuild'),
   );
   $commands['imagex-variables-delete'] = array(
@@ -87,23 +90,24 @@ function drush_imagex_variables_rebuild() {
   $modules = drush_get_option_list('modules', NULL);
   if (!empty($modules)) {
     foreach ($modules as $module) {
-      if (module_exists($module)) {
-        if (_imagex_variables_set_for($module)) {
-
-        }
-      }
-      else {
+      if (!module_exists($module)) {
         // Log the error that one of the specified modules does not exist.
-        drush_log(dt('The module, @module, does not exist.', array(
-          '@module' => $module,
-        )), 'error');
+        drush_log(dt('The module, @module, does not exist.', array('@module' => $module)), 'error');
+        continue;
       }
+
+      if (!_imagex_variables_set_for($module)) {
+        drush_log(dt('An error occurred while rebuilding variables defined by @module.', array('@module' => $module)), 'error');
+        continue;
+      }
+
+      drush_log(dt('Rebuilt variables defined by @module with default values.', array('@module' => $module)), 'success');
     }
+    return;
   }
-  else {
-    imagex_variables_rebuild();
-    drush_print(dt('You have successfully rebuilt all variables defined by hook_imagex_variables().'));
-  }
+
+  imagex_variables_rebuild();
+  drush_print(dt('You have successfully rebuilt all variables defined by hook_imagex_variables().'));
 }
 
 /**
