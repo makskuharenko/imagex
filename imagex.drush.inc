@@ -20,6 +20,14 @@ function imagex_drush_command() {
     'required-arguments' => 1,
     'aliases' => array('major-version', 'major-ver'),
   );
+  $commands['imagex-variables-rebuild'] = array(
+    'description' => 'Rebuilds and sets all of the default values for all variables defined by hook_imagex_variables().',
+    'aliases' => array('vrebuild'),
+  );
+  $commands['imagex-variables-delete'] = array(
+    'description' => 'Removes all variables defined by hook_imagex_variables().',
+    'aliases' => array('vdelall'),
+  );
   return $commands;
 }
 
@@ -70,4 +78,20 @@ function drush_imagex_major_version($module = '') {
     '!module' => $module,
     '!version' => $version,
   )));
+}
+
+/**
+ * Drush callback; for `drush imagex-variable-rebuild`.
+ */
+function drush_imagex_variables_rebuild() {
+  imagex_variables_rebuild();
+  drush_print(dt('You have successfully rebuilt all variables defined by hook_imagex_variables().'));
+}
+
+/**
+ * Drush callback; for `drush imagex-variable-delete`.
+ */
+function drush_imagex_variables_delete() {
+  imagex_variables_delete();
+  drush_print(dt('You have successfully deleted all variables defined by hook_imagex_variables().'));
 }
