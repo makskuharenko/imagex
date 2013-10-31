@@ -363,3 +363,14 @@ function _imagex_variables_delete(array $variables = array()) {
   }
   return FALSE;
 }
+
+/**
+ * Returns a boolean to determine if we are currently in the install.
+ *
+ * @return bool
+ *   Returns TRUE if currently in the middle of a Drupal core installation,
+ *   otherwise returns FALSE.
+ */
+function imagex_drupal_is_installing() {
+  return 'done' == variable_get('install_task', NULL) ? TRUE : FALSE;
+}
