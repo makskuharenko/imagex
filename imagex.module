@@ -305,9 +305,10 @@ function _imagex_variables_set_for($module) {
   if (module_hook($module, 'imagex_variables')) {
     $variables = module_invoke($module, 'imagex_variables');
     if (is_array($variables)) {
-      _imagex_variables_set($variables);
+      return _imagex_variables_set($variables);
     }
   }
+  return FALSE;
 }
 
 /**
@@ -340,9 +341,10 @@ function _imagex_variables_delete_for($module) {
     $variables = module_invoke($module, 'imagex_variables');
     if (is_array($variables)) {
       $variables = array_keys($variables);
-      _imagex_variables_delete($variables);
+      return _imagex_variables_delete($variables);
     }
   }
+  return FALSE;
 }
 
 /**
@@ -373,4 +375,19 @@ function _imagex_variables_delete(array $variables = array()) {
  */
 function imagex_drupal_is_installing() {
   return 'done' == variable_get('install_task', NULL) ? TRUE : FALSE;
+}
+
+/**
+ * @param $message
+ * @param string
+ */
+function imagex_log($message, $type = '') {
+
+}
+
+/**
+ * @param Exception $exception
+ */
+function imagex_log_exception(Exception $exception) {
+
 }
