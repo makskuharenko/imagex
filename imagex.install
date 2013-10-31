@@ -7,18 +7,14 @@
  * Implements hook_install().
  */
 function imagex_install() {
-  // Create and initial default variables.
-  foreach (imagex_default_variables() as $variable => $default_value) {
-    variable_set($variable, $default_value);
-  }
+  // Rebuild all variables and ensure they are set.
+  imagex_variables_rebuild();
 }
 
 /**
  * Implements hook_uninstall().
  */
 function imagex_uninstall() {
-  // Perform variable cleanup and delete them.
-  foreach (imagex_default_variables() as $variable => $default_value) {
-    variable_del($variable, $default_value);
-  }
+  // Delete all variables on uninstall.
+  imagex_variables_delete();
 }

@@ -259,24 +259,107 @@ function imagex_get_module_major_version($module_name) {
   return FALSE;
 }
 
+/**
+ * Implements hook_modules_installed().
+ */
+function imagex_modules_installed($modules) {
+  foreach ($modules as $module) {
+    _imagex_variables_set_for($module);
+  }
+}
+
+/**
+ * Implements hook_modules_uninstalled().
+ */
+function imagex_modules_uninstalled($modules) {
+  foreach ($modules as $module) {
+    _imagex_variables_delete_for($module);
+  }
+}
+
+/**
+ * Rebuilds the variables for modules implementing hook_imagex_variables().
+ */
 function imagex_variables_rebuild() {
-  foreach (module_implements('imagex_variables') as $module_name) {
-    $variables = module_invoke($module_name,'imagex_variables');
-    if (!empty($variables)) {
-      foreach ($variables as $variable_name => $default_value) {
-        variable_set($variable_name, $default_value);
-      }
+  foreach (module_implements('imagex_variables') as $module) {
+    _imagex_variables_set_for($module);
+  }
+}
+
+/**
+ * Removes the variables for modules implementing hook_imagex_variables().
+ */
+function imagex_variables_delete() {
+  foreach (module_implements('imagex_variables') as $module) {
+    _imagex_variables_delete_for($module);
+  }
+}
+
+/**
+ * Handles the setting of variables for a single module.
+ *
+ * @param string $module
+ *   The name of the module to set variables for.
+ */
+function _imagex_variables_set_for($module) {
+  if (module_hook($module, 'imagex_variables')) {
+    $variables = module_invoke($module, 'imagex_variables');
+    if (is_array($variables)) {
+      _imagex_variables_set($variables);
     }
   }
 }
 
-function imagex_variables_delete() {
-  foreach (module_implements('imagex_variables') as $module_name) {
-    $variables = module_invoke($module_name,'imagex_variables');
-    if (!empty($variables)) {
-      foreach ($variables as $variable_name => $default_value) {
-        variable_del($variable_name);
-      }
+/**
+ * Sets an array of variables and default values.
+ *
+ * @param array $variables
+ *   A keyed array of $variable => $value for variables to set.
+ *
+ * @return bool
+ *   Returns TRUE if success, otherwise FALSE.
+ */
+function _imagex_variables_set(array $variables = array()) {
+  if (!empty($variables)) {
+    foreach ($variables as $variable => $default) {
+      variable_set($variable, $default);
+    }
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Handles the deletion of variables for a single module.
+ *
+ * @param $module
+ *   The name of the module to delete variables for.
+ */
+function _imagex_variables_delete_for($module) {
+  if (module_hook($module, 'imagex_variables')) {
+    $variables = module_invoke($module, 'imagex_variables');
+    if (is_array($variables)) {
+      $variables = array_keys($variables);
+      _imagex_variables_delete($variables);
     }
   }
+}
+
+/**
+ * Removes an array of variables.
+ *
+ * @param array $variables
+ *   An array of variable names to delete.
+ *
+ * @return bool
+ *   Returns TRUE if success, otherwise FALSE.
+ */
+function _imagex_variables_delete(array $variables = array()) {
+  if (!empty($variables)) {
+    foreach ($variables as $variable) {
+      variable_del($variable);
+    }
+    return TRUE;
+  }
+  return FALSE;
 }
