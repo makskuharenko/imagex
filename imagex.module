@@ -106,6 +106,16 @@ function imagex_mode_is_valid($mode) {
   return FALSE;
 }
 
+/**
+ * Returns either an array or string representation for mode languages.
+ *
+ * @param mixed $mode
+ *   The mode to return its string representation for. If NULL, an array
+ *   of all mode language representations are returned.
+ *
+ * @return mixed
+ *   Returns either a string or an array.
+ */
 function imagex_mode_language($mode = NULL) {
   static $languages = NULL;
 
@@ -130,7 +140,7 @@ function imagex_mode_language($mode = NULL) {
  * @return int
  *   Returns the IMAGEX_MODE_PRODUCTION value.
  */
-function imagex_default_mode() {
+function imagex_mode_default() {
   return IMAGEX_MODE_PRODUCTION;
 }
 
@@ -140,9 +150,9 @@ function imagex_default_mode() {
  * @return array
  *   Returns variable and default value map array.
  */
-function imagex_default_variables() {
+function imagex_imagex_variables() {
   return array(
-    'imagex_mode' => imagex_default_mode(),
+    'imagex_mode' => imagex_mode_default(),
   );
 }
 
@@ -247,4 +257,26 @@ function imagex_get_module_major_version($module_name) {
     return NULL !== $module_version ? $module_version : FALSE;
   }
   return FALSE;
+}
+
+function imagex_variables_rebuild() {
+  foreach (module_implements('imagex_variables') as $module_name) {
+    $variables = module_invoke($module_name,'imagex_variables');
+    if (!empty($variables)) {
+      foreach ($variables as $variable_name => $default_value) {
+        variable_set($variable_name, $default_value);
+      }
+    }
+  }
+}
+
+function imagex_variables_delete() {
+  foreach (module_implements('imagex_variables') as $module_name) {
+    $variables = module_invoke($module_name,'imagex_variables');
+    if (!empty($variables)) {
+      foreach ($variables as $variable_name => $default_value) {
+        variable_del($variable_name);
+      }
+    }
+  }
 }
