@@ -84,8 +84,26 @@ function drush_imagex_major_version($module = '') {
  * Drush callback; for `drush imagex-variable-rebuild`.
  */
 function drush_imagex_variables_rebuild() {
-  imagex_variables_rebuild();
-  drush_print(dt('You have successfully rebuilt all variables defined by hook_imagex_variables().'));
+  $modules = drush_get_option_list('modules', NULL);
+  if (!empty($modules)) {
+    foreach ($modules as $module) {
+      if (module_exists($module)) {
+        if (_imagex_variables_set_for($module)) {
+
+        }
+      }
+      else {
+        // Log the error that one of the specified modules does not exist.
+        drush_log(dt('The module, @module, does not exist.', array(
+          '@module' => $module,
+        )), 'error');
+      }
+    }
+  }
+  else {
+    imagex_variables_rebuild();
+    drush_print(dt('You have successfully rebuilt all variables defined by hook_imagex_variables().'));
+  }
 }
 
 /**
