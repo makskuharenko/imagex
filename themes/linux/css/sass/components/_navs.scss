@@ -83,17 +83,28 @@ nav.tabs {
 
 #mini-panel-mobile_main_menu {
   position: relative;
+  display: none;
 
   .minipanel-one-fw-wrapper {
     position: absolute;
     top: -1px;
     right: 0px;
-    z-index: 600;
+    z-index: 501;
     background: white url('../img/content-lines.png') repeat top left;
+    min-width: 280px;
     @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
 
     #search-block-form {
+      position: relative;
       margin: 15px 0;
+      @include icon-search;
+
+      &:before {
+        position: absolute;
+        right: 9px;
+        top: 12px;
+        font-size: 18px;
+      }
 
       input[type="text"] {
         border: 1px solid $dropdownDividerTop;
@@ -108,12 +119,16 @@ nav.tabs {
         margin: auto;
         position: absolute;
         z-index: 10;
-        top: 25px;
+        top: 15px;
         right: 10px;
         @include border-radius(0px);
         background: transparent;
-        @include icon-search;
+        content: "\f100";
+        font-family: FontAwesome;
         color: $gray;
+        height: 45px;
+        width: 25px;
+        padding: 0 0 0 30px;
 
         &:before {
           color: $gray;
@@ -123,6 +138,7 @@ nav.tabs {
 
     .pane-system-main-menu {
       margin: 0 0 15px;
+      display: block;
 
       ul {
         margin: 0;
@@ -148,6 +164,12 @@ nav.tabs {
         }
       }
     }
+
+    @include at-breakpoint($wide) {
+      .pane-system-main-menu {
+        display: none;
+      }
+    }
     
     .expanded {
       ul {
@@ -159,6 +181,7 @@ nav.tabs {
       background: $userBar url('../img/header-lines.png') repeat top left;
       padding: 0;
       @include bleed(1.5em);
+      display: block;
 
       h2 {
         font-weight: 300;
@@ -172,7 +195,7 @@ nav.tabs {
           background-color: white;
 
           span {
-            color: $gray;
+            color: $userBar;
           }
 
           &:hover {
@@ -181,6 +204,12 @@ nav.tabs {
             }
           }
         }
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .pane-menu-menu-join-us {
+        display: none;
       }
     }
   }

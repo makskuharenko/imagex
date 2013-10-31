@@ -2640,18 +2640,50 @@ nav.tabs {
   margin: 0 0 20px; }
 
 #mini-panel-mobile_main_menu {
-  position: relative; }
+  position: relative;
+  display: none; }
   #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper {
     position: absolute;
     top: -1px;
     right: 0px;
-    z-index: 600;
+    z-index: 501;
     background: white url("../img/content-lines.png") repeat top left;
+    min-width: 280px;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form {
+      position: relative;
       margin: 15px 0; }
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: inherit;
+        -webkit-font-smoothing: antialiased;
+        padding-right: 5px;
+        text-decoration: none;
+        /* sprites.less reset */
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        line-height: normal;
+        vertical-align: baseline;
+        background-image: none;
+        background-position: 0% 0%;
+        background-repeat: repeat; }
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form:before {
+        position: absolute;
+        right: 9px;
+        top: 12px;
+        font-size: 18px; }
       #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form input[type="text"] {
         border: 1px solid #e5e5e5;
         background: white;
@@ -2667,7 +2699,7 @@ nav.tabs {
         margin: auto;
         position: absolute;
         z-index: 10;
-        top: 25px;
+        top: 15px;
         right: 10px;
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
@@ -2675,35 +2707,17 @@ nav.tabs {
         -o-border-radius: 0px;
         border-radius: 0px;
         background: transparent;
-        color: #555555; }
-        #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form input[type="submit"]:before {
-          content: "\f002";
-          font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
-          text-decoration: inherit;
-          -webkit-font-smoothing: antialiased;
-          padding-right: 5px;
-          text-decoration: none;
-          /* sprites.less reset */
-          display: -moz-inline-stack;
-          display: inline-block;
-          vertical-align: middle;
-          *vertical-align: auto;
-          zoom: 1;
-          *display: inline;
-          width: auto;
-          height: auto;
-          margin-top: 0;
-          line-height: normal;
-          vertical-align: baseline;
-          background-image: none;
-          background-position: 0% 0%;
-          background-repeat: repeat; }
+        content: "\f100";
+        font-family: FontAwesome;
+        color: #555555;
+        height: 45px;
+        width: 25px;
+        padding: 0 0 0 30px; }
         #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form input[type="submit"]:before {
           color: #555555; }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu {
-      margin: 0 0 15px; }
+      margin: 0 0 15px;
+      display: block; }
       #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul {
         margin: 0; }
         #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li {
@@ -2721,6 +2735,9 @@ nav.tabs {
             #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li a:hover,
             #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li span:hover {
               color: #e65b04; }
+    @media (min-width: 62.125em) {
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu {
+        display: none; } }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .expanded ul {
       display: none; }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us {
@@ -2729,7 +2746,8 @@ nav.tabs {
       margin-left: -1.5em;
       padding-left: 1.5em;
       margin-right: -1.5em;
-      padding-right: 1.5em; }
+      padding-right: 1.5em;
+      display: block; }
       #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us h2 {
         font-weight: 300;
         letter-spacing: 0.1em;
@@ -2738,9 +2756,12 @@ nav.tabs {
       #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us ul li {
         background-color: white; }
         #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us ul li span {
-          color: #555555; }
+          color: #807f83; }
         #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us ul li:hover span {
           color: #f17700; }
+    @media (min-width: 62.125em) {
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-join-us {
+        display: none; } }
 
 .dropup,
 .dropdown {
