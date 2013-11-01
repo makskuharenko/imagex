@@ -27,6 +27,7 @@ function linux_footer_default_panels_mini() {
     'style_settings' => array(
       'default' => NULL,
       'minipanel_one_main_fw' => NULL,
+      'minipanel_one_main' => NULL,
     ),
   );
   $display->cache = array();
@@ -35,6 +36,39 @@ function linux_footer_default_panels_mini() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
+    $pane->panel = 'minipanel_one_main';
+    $pane->type = 'menu_tree';
+    $pane->subtype = 'menu-primary-menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'menu_name' => 'menu-primary-menu',
+      'parent_mlid' => 'menu-primary-menu:0',
+      'title_link' => 0,
+      'admin_title' => '',
+      'level' => '1',
+      'follow' => 0,
+      'depth' => '2',
+      'expanded' => 1,
+      'sort' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'footer-menu',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['minipanel_one_main'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
     $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'bean-about-linux-foundation-footer';
@@ -53,12 +87,12 @@ function linux_footer_default_panels_mini() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['minipanel_one_main'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['minipanel_one_main'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'bean-copyright-information';
@@ -77,10 +111,10 @@ function linux_footer_default_panels_mini() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['minipanel_one_main'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['minipanel_one_main'][2] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
