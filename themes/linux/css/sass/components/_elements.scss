@@ -8,10 +8,20 @@
     z-index: 200;
   }
 
+  @mixin content-padding() {
+    padding: 0 1em;
+
+    @include at-breakpoint($computer) {
+      padding: 0;
+    }
+  }
+
   .pane-node-title {
     @include at-breakpoint($wide) {
       @include node-position();
     }
+
+    @include content-padding;
 
     h1 {
       font-family: $monoFontFamily;
@@ -26,6 +36,8 @@
       @include node-position();
     }
 
+    @include content-padding;
+
     p {
       font-size: 14px;
       line-height: 20px;
@@ -34,6 +46,8 @@
   
   .region-second {
     .field-type-image {
+      @include content-padding;
+      
       img {
         border-bottom: 3px solid $linuxStdOrange;
       }
