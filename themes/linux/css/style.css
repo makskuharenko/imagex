@@ -2644,7 +2644,7 @@ nav.tabs {
   display: none; }
   #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper {
     position: absolute;
-    top: -1px;
+    top: 49px;
     right: 0px;
     z-index: 501;
     background: white url("../img/content-lines.png") repeat top left;
