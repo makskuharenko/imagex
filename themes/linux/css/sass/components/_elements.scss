@@ -440,10 +440,14 @@ small {
 
           &:hover {
             border-bottom: 4px solid $dropdownDividerTop;
-
+            
             a,
             span {
               height: 44px;
+
+              &.active {
+                border-bottom: none;
+              }
             }
           }
 
@@ -479,6 +483,8 @@ small {
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
             @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
 
             li {
@@ -497,6 +503,7 @@ small {
                 font-size: 10px;
                 color: white;
                 cursor: pointer;
+                width: 200px;
 
                 &:hover {
                   @include opacity(0.7);
@@ -611,9 +618,10 @@ small {
   font-weight: 600;
   text-transform: uppercase;
 
-  #block-system-main-menu ul {
+  .footer-menu ul {
     margin: 0;
     font-size: 10px;
+    list-style: none;
 
     .expanded {
       @include span-columns(7, 16);

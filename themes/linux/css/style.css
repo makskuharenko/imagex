@@ -3863,6 +3863,9 @@ h1 {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span {
               height: 44px; }
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a.active,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span.active {
+                border-bottom: none; }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
@@ -3889,6 +3892,8 @@ h1 {
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
             -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
             -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); }
@@ -3906,7 +3911,8 @@ h1 {
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white;
-                cursor: pointer; }
+                cursor: pointer;
+                width: 200px; }
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover,
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -4073,10 +4079,11 @@ h1 {
   background: #807f83 url("../img/header-lines.png") repeat top left;
   font-weight: 600;
   text-transform: uppercase; }
-  #footer-wrapper #block-system-main-menu ul {
+  #footer-wrapper .footer-menu ul {
     margin: 0;
-    font-size: 10px; }
-    #footer-wrapper #block-system-main-menu ul .expanded {
+    font-size: 10px;
+    list-style: none; }
+    #footer-wrapper .footer-menu ul .expanded {
       width: 43.03797%;
       float: left;
       margin-right: 1.26582%;
@@ -4085,26 +4092,26 @@ h1 {
       list-style-type: none;
       list-style-image: none;
       padding: 0; }
-      #footer-wrapper #block-system-main-menu ul .expanded > a,
-      #footer-wrapper #block-system-main-menu ul .expanded > span {
+      #footer-wrapper .footer-menu ul .expanded > a,
+      #footer-wrapper .footer-menu ul .expanded > span {
         color: #bbbbbb;
         cursor: pointer; }
-      #footer-wrapper #block-system-main-menu ul .expanded li a,
-      #footer-wrapper #block-system-main-menu ul .expanded li span {
+      #footer-wrapper .footer-menu ul .expanded li a,
+      #footer-wrapper .footer-menu ul .expanded li span {
         color: white;
         cursor: pointer; }
     @media (min-width: 45.5em) {
-      #footer-wrapper #block-system-main-menu ul .expanded {
+      #footer-wrapper .footer-menu ul .expanded {
         display: block;
         width: 11.39241%;
         float: left;
         margin-right: 1.26582%; } }
     @media (min-width: 62.125em) {
-      #footer-wrapper #block-system-main-menu ul .expanded {
+      #footer-wrapper .footer-menu ul .expanded {
         width: 11.39241%;
         float: left;
         margin-right: 1.26582%; } }
-    #footer-wrapper #block-system-main-menu ul .menu-icon {
+    #footer-wrapper .footer-menu ul .menu-icon {
       display: none; }
   #footer-wrapper #block-bean-about-linux-foundation {
     font-size: 10px;
