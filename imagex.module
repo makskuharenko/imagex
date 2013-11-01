@@ -29,6 +29,11 @@ define('IMAGEX_WATCHDOG_TYPE', 'imagex');
 define('IMAGEX_CORE_MAJOR_VERSION', '7.x');
 
 /**
+ * Defines prefix name to be placed in front of your database tables.
+ */
+define('IMAGEX_SCHEMA_PREFIX', 'imagex_');
+
+/**
  * Returns the current operating mode of ImageX install profile.
  *
  * @return int
