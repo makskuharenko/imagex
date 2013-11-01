@@ -557,6 +557,7 @@ small {
               font-size: 18px;
               overflow: hidden;
               text-align: center;
+              letter-spacing: 0;
             }
 
             &.menu-profile {
@@ -565,6 +566,12 @@ small {
 
             &.menu-utility {
               @include icon-reorder;
+
+              &.active {
+                background: transparent url('../img/content-lines.png') repeat 0px 4px;
+                border: none;
+                height: 49px;
+              }
             }
             
             @include at-breakpoint($wide) {

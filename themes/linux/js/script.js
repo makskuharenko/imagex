@@ -3,7 +3,7 @@
   // jPanel Menu settings
   var jPM = $.jPanelMenu({
     menu: '.region-first',
-    trigger: '.menu-utility'
+    trigger: '.menu-user'
   });
 
   var jRes = jRespond([
@@ -81,6 +81,13 @@
       } else {
         $('#header-wrapper, #panel-wrapper').removeClass('fixed');
       }
+  });
+
+  // Show and hide the mobile menu
+
+  $('.menu-utility').on('click', function() {
+    $('#mini-panel-mobile_main_menu').toggle();
+    $(this).toggleClass('active');
   });
 
 })(jQuery);
