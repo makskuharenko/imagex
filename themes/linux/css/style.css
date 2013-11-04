@@ -3673,8 +3673,12 @@ h1 {
     text-transform: uppercase;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
-    background: #bbbbbb;
+    background: #bbbbbb url("../img/block-arrow-white.png") no-repeat center right 1.5em;
     color: white; }
+    .standard-bean h2.expanded {
+      color: #666666;
+      background: transparent url("../img/block-arrow-gray.png") no-repeat center right 1.5em;
+      border-color: #e5e5e5; }
   @media (min-width: 45.5em) {
     .standard-bean h2 {
       color: #666666;
@@ -3709,7 +3713,15 @@ h1 {
     display: inline-block;
     width: 100%; }
     .standard-bean .views-row.views-row-odd {
+      background: transparent; }
+    @media (min-width: 45.5em) {
+      .standard-bean .views-row.views-row-odd {
+        background: whitesmoke; } }
+    .standard-bean .views-row.views-row-even {
       background: whitesmoke; }
+    @media (min-width: 45.5em) {
+      .standard-bean .views-row.views-row-even {
+        background: transparent; } }
     .standard-bean .views-row .views-field-title h3 {
       font-size: 13px;
       font-weight: 400;
@@ -4358,7 +4370,10 @@ h1 {
   font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.1em;
-  padding: 0 20px; }
+  padding: 0 20px;
+  background: transparent none no-repeat 0 0;
+  color: #666666;
+  border-color: #e5e5e5; }
 
 @media (min-width: 45.5em) {
   .editorial-pane h2 {
