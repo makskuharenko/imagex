@@ -8,16 +8,40 @@
     z-index: 200;
   }
 
+  @mixin content-padding() {
+    padding: 0 1.5em;
+
+    @include at-breakpoint($computer) {
+      padding: 0;
+    }
+  }
+
   .pane-node-title {
     @include at-breakpoint($wide) {
       @include node-position();
     }
 
+    @include content-padding;
+
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
-      font-size: 44px;
-      line-height: 48px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include at-breakpoint($tablet) {
+      h1 {
+        font-size: 32px;
+        line-height: 36px
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      h1 {
+        font-size: 44px;
+        line-height: 48px
+      }
     }
   }
 
@@ -25,6 +49,8 @@
     @include at-breakpoint($wide) {
       @include node-position();
     }
+
+    @include content-padding;
 
     p {
       font-size: 14px;
@@ -34,6 +60,8 @@
   
   .region-second {
     .field-type-image {
+      @include content-padding;
+      
       img {
         border-bottom: 3px solid $linuxStdOrange;
       }
@@ -85,57 +113,8 @@
   }
 
   .comment-form {
-    display: inline-block;
-    width: 100%;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    padding: 20px 0;
-    margin: 0 0 20px;
-
     @include at-breakpoint($wide) {
       @include node-position();
-    }
-    
-    label,
-    .username {
-      display: none;
-    }
-    
-    .filter-wrapper {
-      padding: 0;
-    }
-
-    button, 
-    a.button, 
-    input[type="reset"], 
-    input[type="submit"], 
-    input[type="button"] {
-      float: right;
-      background: $linuxStdOrange;
-      @include text-shadow(none);
-      border: none;
-      color: white;
-      font-family: $baseFontFamily;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-      margin: 5px 0 5px 10px;
-    }
-
-    textarea,
-    input[type="text"] {
-      width: 100%;
-      background: $grayLighter url('../img/form-line.png') repeat top left; 
-      border: none;
-      @include border-radius(2px);
-      margin: 0;
-      padding: 10px;
-    }
-
-    textarea {
-      height: 200px;
-      resize: none;
     }
   }
 
@@ -243,11 +222,34 @@
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: $monoFontFamily;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: capitalize;
+}
+
+small {
+  @include at-breakpoint($computer) {
+    width: 60%;
+  }
+}
+
 .standard-bean {
   clear: left;
 
   > div {
-    padding: 2em 0;
+    padding: 0 0 1px;
+  }
+
+  @include at-breakpoint($computer) {
+    > div {
+      padding: 2em 0;
+    }
   }
 
   h2 {
@@ -257,13 +259,23 @@
     font-weight: 700;
     line-height: 50px;
     text-transform: uppercase;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    color: $linuxDarkGray;
+    border-top: 1px solid $btnBorder;
+    border-bottom: 1px solid $btnBorder;
+    background: $btnBorder;
+    color: white;
+  }
+
+  @include at-breakpoint($computer) {
+    h2 {
+      color: $linuxDarkGray;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
+      background: transparent;
+    }
   }
 
   a.orange-button {
-    display: block;
+    display: none;
     width: auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -279,6 +291,12 @@
 
     &:hover {
       background: $linuxDarkOrange;
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    a.orange-button {
+      display: block;
     }
   }
 
@@ -589,6 +607,7 @@
               font-size: 18px;
               overflow: hidden;
               text-align: center;
+              letter-spacing: 0;
             }
 
             &.menu-profile {
@@ -597,6 +616,12 @@
 
             &.menu-utility {
               @include icon-reorder;
+
+              &.active {
+                background: transparent url('../img/content-lines.png') repeat 0px 4px;
+                border: none;
+                height: 49px;
+              }
             }
             
             @include at-breakpoint($wide) {
