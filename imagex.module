@@ -35,7 +35,7 @@ define('IMAGEX_CORE_MAJOR_VERSION', '7.x');
  *   Returns the current operating mode.
  */
 function imagex_mode() {
-  return variable_get('imagex_mode', imagex_default_mode());
+  return variable_get('imagex_mode', imagex_mode_default());
 }
 
 /**
