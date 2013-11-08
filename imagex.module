@@ -223,6 +223,25 @@ function imagex_conf_path($module, $filename, $reset = FALSE) {
 }
 
 /**
+ * Returns an array of variables defined in scope of the `settings.php` file.
+ *
+ * IMPORTANT: Use this function with caution, it will pre-load all database
+ * information and therefore expose such things like the password within the
+ * returned value.
+ *
+ * @return array|bool
+ *   Returns an array of variables defined; otherwise FALSE.
+ */
+function imagex_load_current_site_settings_variables() {
+  if (file_exists(conf_path() . '/settings.php')) {
+    include conf_path() . '/settings.php';
+    $settings_variables = get_defined_vars();
+    return $settings_variables;
+  }
+  return FALSE;
+}
+
+/**
  * Returns the current major version of a module based on its .info version.
  * 
  * @param string $module_name
@@ -381,13 +400,17 @@ function imagex_drupal_is_installing() {
  * @param $message
  * @param string
  */
-function imagex_log($message, $type = '') {
-
+function imagex_log($type, $message, array $variables = array()) {
+  // @TODO: Complete implementation with proper handling.
+  watchdog(IMAGEX_WATCHDOG_TYPE, $message, $variables, $type);
 }
 
 /**
  * @param Exception $exception
  */
 function imagex_log_exception(Exception $exception) {
-
+  // @TODO: Complete implementation with proper type.
+  imagex_log(WATCHDOG_ERROR, $exception->getMessage(), array(
+    'exception' => $exception,
+  ));
 }
