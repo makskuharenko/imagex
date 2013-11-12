@@ -1,0 +1,10 @@
+name = Linux Migrate
+description = Migrate Linux.com from Joomla to Drupal
+core = 7.x
+package = Linux.com
+php = 5.2.4
+version = 7.x-1.0
+project = linux_migrate
+dependencies[] = migrate
+
+files[] = includes/user.inc

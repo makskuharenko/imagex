@@ -25,6 +25,9 @@ projects[og_role_field][version] = "1.0"
 projects[og][type] = "module"
 projects[og][subdir] = "contrib"
 projects[og][version] = "2.3"
+projects[migrate][type] = "module"
+projects[migrate][subdir] = "contrib"
+projects[migrate][version] = "2.5"
 
 ; Download ImageX components for this project.
 projects[imagex_addthis][type] = "module"

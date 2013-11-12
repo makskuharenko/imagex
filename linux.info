@@ -13,6 +13,7 @@ dependencies[] = og
 dependencies[] = og_role_field
 ; dependencies[] = pardot
 dependencies[] = radioactivity
+dependencies[] = migrate
 
 ; ImageX component dependencies.
 dependencies[] = imagex_addthis
