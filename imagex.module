@@ -414,3 +414,14 @@ function imagex_log_exception(Exception $exception) {
     'exception' => $exception,
   ));
 }
+
+/**
+ * Returns the full current path.
+ *
+ * @return string
+ *   Returns the full HTTP path of the current request.
+ */
+function imagex_get_current_full_path() {
+  global $base_url;
+  return $base_url . '/' . current_path();
+}
