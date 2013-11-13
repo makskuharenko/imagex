@@ -8,6 +8,7 @@ dependencies[] = bean_admin_ui
 dependencies[] = bean_uuid
 dependencies[] = entity
 dependencies[] = imagex_common_fields
+dependencies[] = imagex_landing_pages
 dependencies[] = panelizer
 dependencies[] = strongarm
 dependencies[] = text
