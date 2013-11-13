@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.features.uuid_node.inc
+ * linux_landing_pages.features.uuid_node.inc
  */
 
 /**
  * Implements hook_uuid_features_default_content().
  */
-function linux_homepage_uuid_features_default_content() {
+function linux_landing_pages_uuid_features_default_content() {
   $nodes = array();
 
   $nodes[] = array(

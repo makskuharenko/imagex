@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.features.uuid_bean.inc
+ * linux_landing_pages.features.uuid_bean.inc
  */
 
 /**
  * Implements hook_uuid_features_default_beans().
  */
-function linux_homepage_uuid_features_default_beans() {
+function linux_landing_pages_uuid_features_default_beans() {
   $beans = array();
 
   $beans[] = array(

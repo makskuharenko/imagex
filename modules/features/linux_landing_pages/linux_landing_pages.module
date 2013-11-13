@@ -1,0 +1,31 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Homepage feature.
+ */
+
+include_once 'linux_landing_pages.features.inc';
+/**
+ * Implements hook_modules_enabled().
+ */
+function linux_landing_pages_modules_enabled($modules) { 
+  if (in_array('linux_landing_pages', $modules)) {
+    // We are going to set the homepage to the homepage node we imported
+    // We first get the node ID by using the UUID
+    // @TODO if this module gets repackaged and the UUID changes then this needs to be updated too!!!!
+    $id = array_shift(entity_get_id_by_uuid('node', array('1a77a768-bb9c-412a-b9c5-0e1eb0a326ba')));
+    $path = 'node/' . $id;
+    variable_set('site_frontpage', $path);
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function linux_landing_pages_module_implements_alter(&$implementations, $hook) {
+  // We move our implementation to the end of the array so it is gaurunteed to fire after features
+  if ($hook == 'modules_enabled' && $key = array_search('linux_landing_pages', $implementations)) {
+    unset($implementations[$key]);
+    $implementations[] = 'linux_landing_pages';
+  }
+}

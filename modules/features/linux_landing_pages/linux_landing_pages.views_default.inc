@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.views_default.inc
+ * linux_landing_pages.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function linux_homepage_views_default_views() {
+function linux_landing_pages_views_default_views() {
   $export = array();
 
   $view = new view();

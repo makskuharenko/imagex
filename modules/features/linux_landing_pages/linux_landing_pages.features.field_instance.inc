@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.features.field_instance.inc
+ * linux_landing_pages.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function linux_homepage_field_default_field_instances() {
+function linux_landing_pages_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-landing_page-body'

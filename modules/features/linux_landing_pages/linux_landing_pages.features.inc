@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.features.inc
+ * linux_landing_pages.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function linux_homepage_ctools_plugin_api($module = NULL, $api = NULL) {
+function linux_landing_pages_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
@@ -19,6 +19,6 @@ function linux_homepage_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function linux_homepage_views_api($module = NULL, $api = NULL) {
+function linux_landing_pages_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }

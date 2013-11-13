@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.panelizer.inc
+ * linux_landing_pages.panelizer.inc
  */
 
 /**
  * Implements hook_panelizer_defaults().
  */
-function linux_homepage_panelizer_defaults() {
+function linux_landing_pages_panelizer_defaults() {
   $export = array();
 
   $panelizer = new stdClass();
