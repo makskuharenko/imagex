@@ -7,7 +7,7 @@ base profile = imagex_installkit
 
 ; Contrib dependencies.
 dependencies[] = advanced_forum
-dependencies[] = creativecommons
+; dependencies[] = creativecommons
 dependencies[] = flickr
 dependencies[] = og
 dependencies[] = og_role_field
@@ -46,13 +46,14 @@ dependencies[] = linux_blog_metadata
 dependencies[] = linux_common_fields
 dependencies[] = linux_configuration
 dependencies[] = linux_coveritlive
-dependencies[] = linux_creative_commons_configuration
+; dependencies[] = linux_creative_commons_configuration
 dependencies[] = linux_directory
 dependencies[] = linux_events
 dependencies[] = linux_footer
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_group
 dependencies[] = linux_header
+dependencies[] = linux_homepage
 dependencies[] = linux_humor
 dependencies[] = linux_manual
 dependencies[] = linux_menu

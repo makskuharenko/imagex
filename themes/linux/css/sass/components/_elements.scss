@@ -8,16 +8,40 @@
     z-index: 200;
   }
 
+  @mixin content-padding() {
+    padding: 0 1.5em;
+
+    @include at-breakpoint($computer) {
+      padding: 0;
+    }
+  }
+
   .pane-node-title {
     @include at-breakpoint($wide) {
       @include node-position();
     }
 
+    @include content-padding;
+
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
-      font-size: 44px;
-      line-height: 48px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include at-breakpoint($tablet) {
+      h1 {
+        font-size: 32px;
+        line-height: 36px
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      h1 {
+        font-size: 44px;
+        line-height: 48px
+      }
     }
   }
 
@@ -25,6 +49,8 @@
     @include at-breakpoint($wide) {
       @include node-position();
     }
+
+    @include content-padding;
 
     p {
       font-size: 14px;
@@ -34,6 +60,8 @@
   
   .region-second {
     .field-type-image {
+      @include content-padding;
+      
       img {
         border-bottom: 3px solid $linuxStdOrange;
       }
@@ -215,7 +243,13 @@ small {
   clear: left;
 
   > div {
-    padding: 2em 0;
+    padding: 0 0 1px;
+  }
+
+  @include at-breakpoint($computer) {
+    > div {
+      padding: 2em 0;
+    }
   }
 
   h2 {
@@ -225,13 +259,29 @@ small {
     font-weight: 700;
     line-height: 50px;
     text-transform: uppercase;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    color: $linuxDarkGray;
+    border-top: 1px solid $btnBorder;
+    border-bottom: 1px solid $btnBorder;
+    background: $btnBorder url('../img/block-arrow-white.png') no-repeat center right 1.5em;
+    color: white;
+
+    &.expanded {
+      color: $linuxDarkGray;
+      background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
+      border-color: $dropdownDividerTop;
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    h2 {
+      color: $linuxDarkGray;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
+      background: transparent;
+    }
   }
 
   a.orange-button {
-    display: block;
+    display: none;
     width: auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -250,13 +300,35 @@ small {
     }
   }
 
+  @include at-breakpoint($computer) {
+    a.orange-button {
+      display: block;
+    }
+  }
+
   .views-row {
     padding: 12px 20px;
     display: inline-block;
     width: 100%;
 
     &.views-row-odd {
+      background: transparent;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-odd {
+        background: $tableBackgroundHover;
+      }
+    }
+
+    &.views-row-even {
       background: $tableBackgroundHover;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-even {
+        background: transparent;
+      }
     }
 
     .views-field-title {
@@ -564,6 +636,7 @@ small {
               font-size: 18px;
               overflow: hidden;
               text-align: center;
+              letter-spacing: 0;
             }
 
             &.menu-profile {
@@ -572,6 +645,12 @@ small {
 
             &.menu-utility {
               @include icon-reorder;
+
+              &.active {
+                background: transparent url('../img/content-lines.png') repeat 0px 4px;
+                border: none;
+                height: 49px;
+              }
             }
             
             @include at-breakpoint($wide) {
@@ -1052,6 +1131,9 @@ small {
     font-size: 14px;
     letter-spacing: 0.1em;
     padding: 0 20px;
+    background: transparent none no-repeat 0 0;
+    color: $linuxDarkGray;
+    border-color: $dropdownDividerTop;
   }
 }
 
