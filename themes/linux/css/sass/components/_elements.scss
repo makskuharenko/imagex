@@ -57,17 +57,17 @@
       line-height: 20px;
     }
   }
-  
+
   .region-second {
     .field-type-image {
       @include content-padding;
-      
+
       img {
         border-bottom: 3px solid $linuxStdOrange;
       }
     }
   }
-  
+
 
   .field-type-taxonomy-term-reference {
     @include at-breakpoint($wide) {
@@ -135,7 +135,7 @@
       font-weight: 600;
       font-family: $condensedFontFamily
     }
-    
+
     .picture {
       width: 75px;
       height: 75px;
@@ -144,7 +144,7 @@
       background: $dropdownDividerTop;
       margin: 0 15px 15px 0;
       @include border-radius(5px);
-      
+
       @include at-breakpoint($computer) {
         display: block;
       }
@@ -407,7 +407,7 @@ small {
 
       ul {
         top: 31px;
-        padding: 0px 1.5em; 
+        padding: 0px 1.5em;
         width: auto;
         background: $userBar url('../img/header-lines.png') repeat top left;
 
@@ -516,6 +516,10 @@ small {
             a,
             span {
               height: 44px;
+
+              &.active {
+                border-bottom: none;
+              }
             }
           }
 
@@ -524,10 +528,9 @@ small {
             display: block;
             height: 48px;
             text-transform: uppercase;
-            padding: 0 1.2em;
+            padding: 0;
             font-size: 9px;
             font-weight: 700;
-            letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
             cursor: pointer;
@@ -538,10 +541,18 @@ small {
             }
           }
 
+          @include at-breakpoint(60em) {
+            > a,
+            > span {
+              letter-spacing: 0;
+            }
+          }
+
           @include at-breakpoint(75em) {
             > a,
             > span {
               font-size: 10px;
+              letter-spacing: 0.1em;
             }
           }
 
@@ -551,6 +562,8 @@ small {
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
             @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
 
             li {
@@ -569,6 +582,7 @@ small {
                 font-size: 10px;
                 color: white;
                 cursor: pointer;
+                width: 200px;
 
                 &:hover {
                   @include opacity(0.7);
@@ -645,7 +659,7 @@ small {
                 height: 49px;
               }
             }
-            
+
             @include at-breakpoint($wide) {
               &.menu-utility {
                 @include icon-search;
@@ -690,9 +704,10 @@ small {
   font-weight: 600;
   text-transform: uppercase;
 
-  #block-system-main-menu ul {
+  .footer-menu ul {
     margin: 0;
     font-size: 10px;
+    list-style: none;
 
     .expanded {
       @include span-columns(7, 16);
@@ -700,7 +715,7 @@ small {
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      
+
 
       > a,
       > span {
@@ -798,7 +813,7 @@ small {
 .featured-slideshow {
   @include span-columns(14 omega, 14);
   background-color: white;
-  
+
   .flexslider_views_slideshow_slide {
     &:hover {
       img {
@@ -809,7 +824,7 @@ small {
 
   .flex-nav-container {
     margin: 0;
-  }  
+  }
 
   .flexslider {
     background: transparent;
@@ -914,7 +929,7 @@ small {
       left: 0px;
       background: transparent url('../img/slideshow-prev.png') no-repeat center center;
     }
-    
+
     .flex-next {
       right: 0px;
       background: transparent url('../img/slideshow-next.png') no-repeat center center;
@@ -925,7 +940,7 @@ small {
 @include at-breakpoint($tablet) {
   .featured-slideshow {
     .views-field-title {
-      bottom: 60px; 
+      bottom: 60px;
 
       h2 {
         font-size: 38px;
@@ -1086,7 +1101,7 @@ small {
           color: $linuxStdOrange;
         }
       }
-      
+
       .views-field-view-node,
       .views-field-view-node-1 {
         display: inline;
@@ -1315,11 +1330,11 @@ small {
     &:hover {
       background: $linuxStdOrange;
       @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
-      
+
       .views-field-title {
         h3 {
           a {
-            color: white; 
+            color: white;
           }
         }
       }
@@ -1331,12 +1346,12 @@ small {
           border-right-color: $linuxDarkestOrange;
         }
       }
-  
+
       .views-field-comment-count,
       .field-type-image {
         visibility: hidden;
       }
-      
+
       .views-field-view-node,
       .field-type-taxonomy-term-reference,
       .field-type-text-with-summary {
@@ -1347,7 +1362,7 @@ small {
 
   @include at-breakpoint($wide) {
     .views-row {
-      
+
     }
   }
 }
@@ -1413,7 +1428,7 @@ small {
     margin: 0;
     float: left;
   }
-  
+
   ul {
     margin: 0;
     float: right;
@@ -1435,7 +1450,7 @@ small {
       &:hover {
         background: $linuxDarkOrange;
       }
-      
+
       span {
         font-size: 17px;
 
@@ -1470,7 +1485,7 @@ small {
 @include at-breakpoint(78em) {
   .pane-menu-menu-join-us {
     padding: 0 1.5em;
-    
+
     ul {
       li {
         margin: 12px 0 0 6px;
@@ -1498,7 +1513,7 @@ small {
 
     li {
       border-top: 1px solid $btnInverseBackground;
-      
+
       a {
         display: block;
         color: white;
