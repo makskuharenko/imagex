@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_homepage.pages_default.inc
+ * linux_landing_pages.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_pages().
  */
-function linux_homepage_default_page_manager_pages() {
+function linux_landing_pages_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;

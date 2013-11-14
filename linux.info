@@ -46,15 +46,18 @@ dependencies[] = linux_blog_metadata
 dependencies[] = linux_common_fields
 dependencies[] = linux_configuration
 dependencies[] = linux_coveritlive
+<<<<<<< HEAD
 ; dependencies[] = linux_creative_commons_configuration
+=======
+>>>>>>> Turning off Creative Commons module (per HVZ insturctions)
 dependencies[] = linux_directory
 dependencies[] = linux_events
 dependencies[] = linux_footer
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_group
 dependencies[] = linux_header
-dependencies[] = linux_homepage
 dependencies[] = linux_humor
+dependencies[] = linux_landing_pages
 dependencies[] = linux_manual
 dependencies[] = linux_menu
 ; dependencies[] = linux_pardot_integration
