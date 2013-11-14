@@ -63,5 +63,6 @@ dependencies[] = linux_menu
 ; dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_tutorial
+dependencies[] = linux_user_permissions
 dependencies[] = linux_user_tags
 dependencies[] = linux_wiki
