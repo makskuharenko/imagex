@@ -44,11 +44,17 @@ function linux_configuration_context_default_contexts() {
           'region' => 'user_bar',
           'weight' => '-10',
         ),
+        'bean-ad-space---header' => array(
+          'module' => 'bean',
+          'delta' => 'ad-space---header',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'panels_mini-global_header' => array(
           'module' => 'panels_mini',
           'delta' => 'global_header',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'panels_mini-global_footer' => array(
           'module' => 'panels_mini',
