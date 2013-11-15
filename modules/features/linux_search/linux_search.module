@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Search feature.
+ */
+
+include_once 'linux_search.features.inc';

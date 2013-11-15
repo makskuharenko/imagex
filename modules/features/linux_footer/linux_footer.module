@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Footer feature.
+ */
+
+include_once 'linux_footer.features.inc';

@@ -1,0 +1,17 @@
+name = Linux Footer
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_footer
+dependencies[] = bean
+dependencies[] = bean_admin_ui
+dependencies[] = bean_uuid
+dependencies[] = panels_mini
+dependencies[] = uuid_features
+__drupal_alter_by_ref[][bean][imagex_widget_basic] = imagex_widget_basic
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:2
+features[panels_mini][] = global_footer
+features[uuid_bean][] = 617d5388-7797-45e3-9c08-6063fffbd8d2
+features[uuid_bean][] = d0fe74e1-d8c5-420f-a070-983252040140
+features_exclude[dependencies][ctools] = ctools
