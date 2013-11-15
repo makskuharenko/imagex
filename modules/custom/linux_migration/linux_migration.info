@@ -6,3 +6,8 @@ php = 5.2.4
 version = 7.x-1.0
 project = linux_migrate
 dependencies[] = imagex_migration
+dependencies[] = linux_transition
+
+files[] = includes/LinuxMigration.class.inc
+files[] = includes/LinuxUserMigration.class.inc
+files[] = includes/LinuxUserMigrationSourceSql.class.inc

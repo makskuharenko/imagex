@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Migrate module for Linux.com.
@@ -14,14 +13,20 @@ function linux_migrate_migrate_api() {
     'groups' => array(
       'linux' => array(
         'title' => t('Linux.com'),
-      )
+      ),
     ),
     'migrations' => array(
-      'User' => array('class_name' => 'UserMigration', 'group_name' => 'linux'),
-      //'Content' => array('class_name', 'ContentMigration'),
-      'Blog' => array('class_name' => 'BlogMigration', 'group_name' => 'linux'),
-      'Question' => array('class_name' => 'QuestionMigration', 'group_name' => 'linux'),
-      'Taxonomy Categories' => array('class_name' => 'TaxonomyCategoriesMigration', 'group_name' => 'linux'),
+      'LinuxUser' => array(
+        'class_name' => 'LinuxUserMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com users',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
