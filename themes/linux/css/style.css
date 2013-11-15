@@ -3624,7 +3624,7 @@ a.label:hover, a.badge:hover {
   margin-bottom: 0; }
 
 .not-front .pane-node-title {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 62.125em) {
     .not-front .pane-node-title {
       width: 66.10169%;
@@ -3649,7 +3649,7 @@ a.label:hover, a.badge:hover {
       font-size: 44px;
       line-height: 48px; } }
 .not-front .field-type-text-with-summary {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 62.125em) {
     .not-front .field-type-text-with-summary {
       width: 66.10169%;
@@ -3664,7 +3664,7 @@ a.label:hover, a.badge:hover {
     font-size: 14px;
     line-height: 20px; }
 .not-front .region-second .field-type-image {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 45.5em) {
     .not-front .region-second .field-type-image {
       padding: 0; } }
@@ -4380,17 +4380,23 @@ h1 {
       .featured-slideshow .views-field-title h2 a {
         color: white; } }
   .featured-slideshow .views-field-comment-count {
-    position: absolute;
-    margin: 0 0 0 20px;
     padding: 0 0 0 30px;
     bottom: 20px;
-    background: transparent url("../img/comment-icon.png") no-repeat left center; }
+    background: transparent url("../img/comment-icon-orange.png") no-repeat left center; }
+    @media (min-width: 45.5em) {
+      .featured-slideshow .views-field-comment-count {
+        position: absolute;
+        margin: 0 0 0 20px;
+        background: transparent url("../img/comment-icon.png") no-repeat left center; } }
     .featured-slideshow .views-field-comment-count span {
-      color: white;
+      color: #333333;
       font-family: "Open Sans Condensed";
       letter-spacing: 0.1em;
       font-size: 16px;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+      @media (min-width: 45.5em) {
+        .featured-slideshow .views-field-comment-count span {
+          color: white; } }
   @media (min-width: 45.5em) {
     .featured-slideshow .views-field-comment-count {
       position: absolute;
@@ -4407,6 +4413,7 @@ h1 {
   .featured-slideshow .flex-control-paging {
     display: none; }
   .featured-slideshow .flex-direction-nav a {
+    display: none;
     width: 50px;
     height: 100%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -4415,6 +4422,9 @@ h1 {
     margin: 0;
     background-position: center center;
     z-index: 0; }
+  @media (min-width: 45.5em) {
+    .featured-slideshow .flex-direction-nav {
+      display: block; } }
   .featured-slideshow .flex-direction-nav .flex-prev {
     left: 0px;
     background: transparent url("../img/slideshow-prev.png") no-repeat center center; }
@@ -4573,7 +4583,7 @@ h1 {
     margin: 0 -5px;
     padding: 20px;
     width: auto; }
-    .editorial .views-row.views-row-odd {
+    .editorial .views-row.views-row-even, .editorial .views-row.views-row-odd {
       background: white; }
     .editorial .views-row .views-field-title h3 {
       margin: 0 0 5px;
