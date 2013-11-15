@@ -56,6 +56,12 @@ function linux_configuration_context_default_contexts() {
           'region' => 'header',
           'weight' => '-9',
         ),
+        'panels_mini-mobile_main_menu' => array(
+          'module' => 'panels_mini',
+          'delta' => 'mobile_main_menu',
+          'region' => 'header',
+          'weight' => '-8',
+        ),
         'panels_mini-global_footer' => array(
           'module' => 'panels_mini',
           'delta' => 'global_footer',
