@@ -2644,7 +2644,7 @@ nav.tabs {
   display: none; }
   #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper {
     position: absolute;
-    top: 49px;
+    top: -1px;
     right: 0px;
     z-index: 501;
     background: white url("../img/content-lines.png") repeat top left;
@@ -2715,28 +2715,28 @@ nav.tabs {
         padding: 0 0 0 30px; }
         #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form input[type="submit"]:before {
           color: #555555; }
-    #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu {
+    #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu {
       margin: 0 0 15px;
       display: block; }
-      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul {
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul {
         margin: 0; }
-        #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li {
+        #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul li {
           list-style-type: none;
           list-style-image: none;
           text-align: left; }
-          #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li a,
-          #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li span {
+          #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul li a,
+          #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul li span {
             color: #f17700;
             letter-spacing: 0.1em;
             line-height: 32px;
             text-transform: uppercase;
             text-decoration: none;
             font-weight: 700; }
-            #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li a:hover,
-            #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu ul li span:hover {
+            #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul li a:hover,
+            #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu ul li span:hover {
               color: #e65b04; }
     @media (min-width: 62.125em) {
-      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-system-main-menu {
+      #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .pane-menu-menu-primary-menu {
         display: none; } }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper .expanded ul {
       display: none; }
