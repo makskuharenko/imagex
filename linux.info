@@ -14,6 +14,7 @@ dependencies[] = og_role_field
 ; dependencies[] = pardot
 dependencies[] = radioactivity
 dependencies[] = migrate
+dependencies[] = migrate_extras
 
 ; ImageX component dependencies.
 dependencies[] = imagex_addthis
@@ -26,12 +27,12 @@ dependencies[] = imagex_content_pinned
 dependencies[] = imagex_content_featured
 dependencies[] = imagex_group
 dependencies[] = imagex_group_addthis
-; dependencies[] = imagex_dbal
+dependencies[] = imagex_dbal
 dependencies[] = imagex_events
 dependencies[] = imagex_events_addthis
 dependencies[] = imagex_faq
 dependencies[] = imagex_faq_addthis
-; dependencies[] = imagex_migration
+dependencies[] = imagex_migration
 dependencies[] = imagex_news
 dependencies[] = imagex_news_addthis
 dependencies[] = imagex_page_addthis
