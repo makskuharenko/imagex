@@ -3466,7 +3466,7 @@ a.label:hover, a.badge:hover {
   margin-bottom: 0; }
 
 .not-front .pane-node-title {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 62.125em) {
     .not-front .pane-node-title {
       width: 66.10169%;
@@ -3491,7 +3491,7 @@ a.label:hover, a.badge:hover {
       font-size: 44px;
       line-height: 48px; } }
 .not-front .field-type-text-with-summary {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 62.125em) {
     .not-front .field-type-text-with-summary {
       width: 66.10169%;
@@ -3506,7 +3506,7 @@ a.label:hover, a.badge:hover {
     font-size: 14px;
     line-height: 20px; }
 .not-front .region-second .field-type-image {
-  padding: 0 1.5em; }
+  padding: 0 1em; }
   @media (min-width: 45.5em) {
     .not-front .region-second .field-type-image {
       padding: 0; } }
@@ -3877,15 +3877,17 @@ h1 {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span {
               height: 44px; }
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a.active,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span.active {
+                border-bottom: none; }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
-            padding: 0 1.2em;
+            padding: 0;
             font-size: 9px;
             font-weight: 700;
-            letter-spacing: 0.1em;
             line-height: 48px;
             color: #666666;
             cursor: pointer; }
@@ -3893,16 +3895,23 @@ h1 {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
               border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
+          @media (min-width: 52.5em) {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
+              letter-spacing: 0; } }
           @media (min-width: 65.625em) {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
-              font-size: 10px; } }
+              font-size: 10px;
+              letter-spacing: 0.1em; } }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul {
             background: #807f83 url("../img/header-lines.png") repeat top left;
             top: 48px;
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
             -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
             -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); }
@@ -3920,7 +3929,8 @@ h1 {
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white;
-                cursor: pointer; }
+                cursor: pointer;
+                width: 200px; }
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li a:hover,
                 #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li span:hover {
                   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -4093,10 +4103,11 @@ h1 {
   background: #807f83 url("../img/header-lines.png") repeat top left;
   font-weight: 600;
   text-transform: uppercase; }
-  #footer-wrapper #block-system-main-menu ul {
+  #footer-wrapper .footer-menu ul {
     margin: 0;
-    font-size: 10px; }
-    #footer-wrapper #block-system-main-menu ul .expanded {
+    font-size: 10px;
+    list-style: none; }
+    #footer-wrapper .footer-menu ul .expanded {
       width: 43.03797%;
       float: left;
       margin-right: 1.26582%;
@@ -4105,26 +4116,26 @@ h1 {
       list-style-type: none;
       list-style-image: none;
       padding: 0; }
-      #footer-wrapper #block-system-main-menu ul .expanded > a,
-      #footer-wrapper #block-system-main-menu ul .expanded > span {
+      #footer-wrapper .footer-menu ul .expanded > a,
+      #footer-wrapper .footer-menu ul .expanded > span {
         color: #bbbbbb;
         cursor: pointer; }
-      #footer-wrapper #block-system-main-menu ul .expanded li a,
-      #footer-wrapper #block-system-main-menu ul .expanded li span {
+      #footer-wrapper .footer-menu ul .expanded li a,
+      #footer-wrapper .footer-menu ul .expanded li span {
         color: white;
         cursor: pointer; }
     @media (min-width: 45.5em) {
-      #footer-wrapper #block-system-main-menu ul .expanded {
+      #footer-wrapper .footer-menu ul .expanded {
         display: block;
         width: 11.39241%;
         float: left;
         margin-right: 1.26582%; } }
     @media (min-width: 62.125em) {
-      #footer-wrapper #block-system-main-menu ul .expanded {
+      #footer-wrapper .footer-menu ul .expanded {
         width: 11.39241%;
         float: left;
         margin-right: 1.26582%; } }
-    #footer-wrapper #block-system-main-menu ul .menu-icon {
+    #footer-wrapper .footer-menu ul .menu-icon {
       display: none; }
   #footer-wrapper #block-bean-about-linux-foundation {
     font-size: 10px;
@@ -4211,17 +4222,23 @@ h1 {
       .featured-slideshow .views-field-title h2 a {
         color: white; } }
   .featured-slideshow .views-field-comment-count {
-    position: absolute;
-    margin: 0 0 0 20px;
     padding: 0 0 0 30px;
     bottom: 20px;
-    background: transparent url("../img/comment-icon.png") no-repeat left center; }
+    background: transparent url("../img/comment-icon-orange.png") no-repeat left center; }
+    @media (min-width: 45.5em) {
+      .featured-slideshow .views-field-comment-count {
+        position: absolute;
+        margin: 0 0 0 20px;
+        background: transparent url("../img/comment-icon.png") no-repeat left center; } }
     .featured-slideshow .views-field-comment-count span {
-      color: white;
+      color: #333333;
       font-family: "Open Sans Condensed";
       letter-spacing: 0.1em;
       font-size: 16px;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+      @media (min-width: 45.5em) {
+        .featured-slideshow .views-field-comment-count span {
+          color: white; } }
   @media (min-width: 45.5em) {
     .featured-slideshow .views-field-comment-count {
       position: absolute;
@@ -4238,6 +4255,7 @@ h1 {
   .featured-slideshow .flex-control-paging {
     display: none; }
   .featured-slideshow .flex-direction-nav a {
+    display: none;
     width: 50px;
     height: 100%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -4246,6 +4264,9 @@ h1 {
     margin: 0;
     background-position: center center;
     z-index: 0; }
+  @media (min-width: 45.5em) {
+    .featured-slideshow .flex-direction-nav {
+      display: block; } }
   .featured-slideshow .flex-direction-nav .flex-prev {
     left: 0px;
     background: transparent url("../img/slideshow-prev.png") no-repeat center center; }
@@ -4404,7 +4425,7 @@ h1 {
     margin: 0 -5px;
     padding: 20px;
     width: auto; }
-    .editorial .views-row.views-row-odd {
+    .editorial .views-row.views-row-even, .editorial .views-row.views-row-odd {
       background: white; }
     .editorial .views-row .views-field-title h3 {
       margin: 0 0 5px;
