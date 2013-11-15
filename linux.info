@@ -59,6 +59,7 @@ dependencies[] = linux_homepage
 dependencies[] = linux_humor
 dependencies[] = linux_manual
 dependencies[] = linux_menu
+dependencies[] = linux_migration
 ; dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_tutorial
