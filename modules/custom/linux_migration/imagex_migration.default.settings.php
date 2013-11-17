@@ -6,7 +6,7 @@
 
 $settings['source']['sql']['connections'] = array(
   'linux-joomla' => array(
-    'default' => array (
+    'default' => array(
       'database' => '',
       'username' => '',
       'password' => '',
@@ -15,5 +15,5 @@ $settings['source']['sql']['connections'] = array(
       'driver' => '',
       'prefix' => '',
     ),
-  )
+  ),
 );

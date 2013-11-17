@@ -36,6 +36,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxBlog' => array(
+        'class_name' => 'LinuxBlogMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com blogs',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
