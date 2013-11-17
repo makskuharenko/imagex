@@ -4,7 +4,7 @@ core = 7.x
 package = Linux.com
 php = 5.2.4
 version = 7.x-1.0
-project = linux_migrate
+project = linux_migration
 dependencies[] = imagex_migration
 dependencies[] = linux_transition
 

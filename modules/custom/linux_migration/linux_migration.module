@@ -7,12 +7,21 @@
 /**
  * Implements hook_migrate_api().
  */
-function linux_migrate_migrate_api() {
+function linux_migration_migrate_api() {
+  $disable_hooks = array(
+    'node_insert' => array(
+      'creativecommons',
+    ),
+    'node_update' => array(
+      'creativecommons',
+    ),
+  );
   return array(
     'api' => 2,
     'groups' => array(
       'linux' => array(
         'title' => t('Linux.com'),
+        'disable_hooks' => $disable_hooks,
       ),
     ),
     'migrations' => array(
