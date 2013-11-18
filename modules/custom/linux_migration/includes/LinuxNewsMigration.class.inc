@@ -1,13 +1,6 @@
 <?php
-/**
- * @file
- * Class LinuxBlogMigration
- */
 
-/**
- * Migrate Blog content to Drupal.
- */
-class LinuxBlogMigration extends LinuxContentMigration {
+class LinuxNewsMigration extends LinuxContentMigration {
   protected $sourceObject;
   protected $sections;
   protected $categories;
@@ -16,15 +9,15 @@ class LinuxBlogMigration extends LinuxContentMigration {
    */
   protected function init() {
     parent::init();
-    $this->sourceObject = new LinuxBlogMigrationSourceSql($this);
+    $this->sourceObject = new LinuxNewsMigrationSourceSql($this);
     $connection = $this->sourceObject->getSourceConnection();
 
     $this->sections = $connection->select('jos_sections', 'js')
       ->fields('js',
-      array(
-        'id',
-        'alias',
-      )
+        array(
+          'id',
+          'alias',
+        )
       )->execute()->fetchAllKeyed();
     $this->categories = $connection->select('jos_categories', 'jc')
       ->fields('jc',
@@ -57,13 +50,8 @@ class LinuxBlogMigration extends LinuxContentMigration {
       return FALSE;
     }
 
-    if ($row->sectionid == 26) {
-      $row->path = 'news/' . $this->sections[$row->sectionid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
-      $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
-    }
-    else {
-      $row->path = 'community/blogs/' . $this->sections[$row->catid] . '/' . $row->id;
-    }
+    $row->path = 'news/' . $this->sections[$row->sectionid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
+    $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
 
     return TRUE;
   }
@@ -75,7 +63,7 @@ class LinuxBlogMigration extends LinuxContentMigration {
    *   Return the blog bundle for node destination.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationNode('blog');
+    return new MigrateDestinationNode('news');
   }
 
   /**
