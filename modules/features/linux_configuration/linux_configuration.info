@@ -4,6 +4,7 @@ core = 7.x
 package = Linux.com
 version = 7.x-1.0
 project = linux_configuration
+dependencies[] = bean
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = panels_mini

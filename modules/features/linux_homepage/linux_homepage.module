@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Linux Homepage feature.
- */
-
-include_once 'linux_homepage.features.inc';

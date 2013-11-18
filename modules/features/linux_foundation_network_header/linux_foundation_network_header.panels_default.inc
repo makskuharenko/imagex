@@ -21,7 +21,7 @@ function linux_foundation_network_header_default_panels_mini() {
   $mini->contexts = array();
   $mini->relationships = array();
   $display = new panels_display();
-  $display->layout = 'one_mp_fw';
+  $display->layout = 'one_mp';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -35,7 +35,7 @@ function linux_foundation_network_header_default_panels_mini() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'nice_menus-2';
     $pane->shown = TRUE;
@@ -53,7 +53,7 @@ function linux_foundation_network_header_default_panels_mini() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['minipanel_one_main_fw'][0] = 'new-1';
+    $display->panels['minipanel_one_main'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $mini->display = $display;

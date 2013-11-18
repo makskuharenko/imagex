@@ -8,16 +8,40 @@
     z-index: 200;
   }
 
+  @mixin content-padding() {
+    padding: 0 1em;
+
+    @include at-breakpoint($computer) {
+      padding: 0;
+    }
+  }
+
   .pane-node-title {
     @include at-breakpoint($wide) {
       @include node-position();
     }
 
+    @include content-padding;
+
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
-      font-size: 44px;
-      line-height: 48px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include at-breakpoint($tablet) {
+      h1 {
+        font-size: 32px;
+        line-height: 36px
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      h1 {
+        font-size: 44px;
+        line-height: 48px
+      }
     }
   }
 
@@ -26,20 +50,24 @@
       @include node-position();
     }
 
+    @include content-padding;
+
     p {
       font-size: 14px;
       line-height: 20px;
     }
   }
-  
+
   .region-second {
     .field-type-image {
+      @include content-padding;
+
       img {
         border-bottom: 3px solid $linuxStdOrange;
       }
     }
   }
-  
+
 
   .field-type-taxonomy-term-reference {
     @include at-breakpoint($wide) {
@@ -107,7 +135,7 @@
       font-weight: 600;
       font-family: $condensedFontFamily
     }
-    
+
     .picture {
       width: 75px;
       height: 75px;
@@ -116,7 +144,7 @@
       background: $dropdownDividerTop;
       margin: 0 15px 15px 0;
       @include border-radius(5px);
-      
+
       @include at-breakpoint($computer) {
         display: block;
       }
@@ -215,7 +243,13 @@ small {
   clear: left;
 
   > div {
-    padding: 2em 0;
+    padding: 0 0 1px;
+  }
+
+  @include at-breakpoint($computer) {
+    > div {
+      padding: 2em 0;
+    }
   }
 
   h2 {
@@ -225,13 +259,29 @@ small {
     font-weight: 700;
     line-height: 50px;
     text-transform: uppercase;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    color: $linuxDarkGray;
+    border-top: 1px solid $btnBorder;
+    border-bottom: 1px solid $btnBorder;
+    background: $btnBorder url('../img/block-arrow-white.png') no-repeat center right 1.5em;
+    color: white;
+
+    &.expanded {
+      color: $linuxDarkGray;
+      background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
+      border-color: $dropdownDividerTop;
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    h2 {
+      color: $linuxDarkGray;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
+      background: transparent;
+    }
   }
 
   a.orange-button {
-    display: block;
+    display: none;
     width: auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -250,13 +300,35 @@ small {
     }
   }
 
+  @include at-breakpoint($computer) {
+    a.orange-button {
+      display: block;
+    }
+  }
+
   .views-row {
     padding: 12px 20px;
     display: inline-block;
     width: 100%;
 
     &.views-row-odd {
+      background: transparent;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-odd {
+        background: $tableBackgroundHover;
+      }
+    }
+
+    &.views-row-even {
       background: $tableBackgroundHover;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-even {
+        background: transparent;
+      }
     }
 
     .views-field-title {
@@ -335,7 +407,7 @@ small {
 
       ul {
         top: 31px;
-        padding: 0px 1.5em; 
+        padding: 0px 1.5em;
         width: auto;
         background: $userBar url('../img/header-lines.png') repeat top left;
 
@@ -444,6 +516,10 @@ small {
             a,
             span {
               height: 44px;
+
+              &.active {
+                border-bottom: none;
+              }
             }
           }
 
@@ -452,10 +528,9 @@ small {
             display: block;
             height: 48px;
             text-transform: uppercase;
-            padding: 0 1.2em;
+            padding: 0;
             font-size: 9px;
             font-weight: 700;
-            letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
             cursor: pointer;
@@ -466,10 +541,18 @@ small {
             }
           }
 
+          @include at-breakpoint(60em) {
+            > a,
+            > span {
+              letter-spacing: 0;
+            }
+          }
+
           @include at-breakpoint(75em) {
             > a,
             > span {
               font-size: 10px;
+              letter-spacing: 0.1em;
             }
           }
 
@@ -479,6 +562,8 @@ small {
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
             @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
 
             li {
@@ -497,6 +582,7 @@ small {
                 font-size: 10px;
                 color: white;
                 cursor: pointer;
+                width: 200px;
 
                 &:hover {
                   @include opacity(0.7);
@@ -557,6 +643,7 @@ small {
               font-size: 18px;
               overflow: hidden;
               text-align: center;
+              letter-spacing: 0;
             }
 
             &.menu-profile {
@@ -565,8 +652,14 @@ small {
 
             &.menu-utility {
               @include icon-reorder;
+
+              &.active {
+                background: transparent url('../img/content-lines.png') repeat 0px 4px;
+                border: none;
+                height: 49px;
+              }
             }
-            
+
             @include at-breakpoint($wide) {
               &.menu-utility {
                 @include icon-search;
@@ -611,9 +704,10 @@ small {
   font-weight: 600;
   text-transform: uppercase;
 
-  #block-system-main-menu ul {
+  .footer-menu ul {
     margin: 0;
     font-size: 10px;
+    list-style: none;
 
     .expanded {
       @include span-columns(7, 16);
@@ -621,7 +715,7 @@ small {
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      
+
 
       > a,
       > span {
@@ -719,7 +813,7 @@ small {
 .featured-slideshow {
   @include span-columns(14 omega, 14);
   background-color: white;
-  
+
   .flexslider_views_slideshow_slide {
     &:hover {
       img {
@@ -730,7 +824,7 @@ small {
 
   .flex-nav-container {
     margin: 0;
-  }  
+  }
 
   .flexslider {
     background: transparent;
@@ -783,18 +877,26 @@ small {
   }
 
   .views-field-comment-count {
-    position: absolute;
-    margin: 0 0 0 20px;
     padding: 0 0 0 30px;
     bottom: 20px;
-    background: transparent url('../img/comment-icon.png') no-repeat left center;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    @include at-breakpoint($computer) {
+      position: absolute;
+      margin: 0 0 0 20px;
+      background: transparent url('../img/comment-icon.png') no-repeat left center;
+    }
 
     span {
-      color: white;
+      color: $grayDark;
       font-family: $condensedFontFamily;
       letter-spacing: 0.1em;
       font-size: 16px;
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+
+      @include at-breakpoint($computer) {
+        color: white;
+      }
     }
   }
 
@@ -822,6 +924,7 @@ small {
 
   .flex-direction-nav {
     a {
+      display: none;
       width: 50px;
       height: 100%;
       @include opacity(0);
@@ -831,11 +934,15 @@ small {
       z-index: 0;
     }
 
+    @include at-breakpoint($computer) {
+      display: block;
+    }
+
     .flex-prev {
       left: 0px;
       background: transparent url('../img/slideshow-prev.png') no-repeat center center;
     }
-    
+
     .flex-next {
       right: 0px;
       background: transparent url('../img/slideshow-next.png') no-repeat center center;
@@ -846,7 +953,7 @@ small {
 @include at-breakpoint($tablet) {
   .featured-slideshow {
     .views-field-title {
-      bottom: 60px; 
+      bottom: 60px;
 
       h2 {
         font-size: 38px;
@@ -1007,7 +1114,7 @@ small {
           color: $linuxStdOrange;
         }
       }
-      
+
       .views-field-view-node,
       .views-field-view-node-1 {
         display: inline;
@@ -1044,6 +1151,9 @@ small {
     font-size: 14px;
     letter-spacing: 0.1em;
     padding: 0 20px;
+    background: transparent none no-repeat 0 0;
+    color: $linuxDarkGray;
+    border-color: $dropdownDividerTop;
   }
 }
 
@@ -1088,6 +1198,7 @@ small {
     padding: 20px;
     width: auto;
 
+    &.views-row-even,
     &.views-row-odd {
       background: white;
     }
@@ -1233,11 +1344,11 @@ small {
     &:hover {
       background: $linuxStdOrange;
       @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
-      
+
       .views-field-title {
         h3 {
           a {
-            color: white; 
+            color: white;
           }
         }
       }
@@ -1249,12 +1360,12 @@ small {
           border-right-color: $linuxDarkestOrange;
         }
       }
-  
+
       .views-field-comment-count,
       .field-type-image {
         visibility: hidden;
       }
-      
+
       .views-field-view-node,
       .field-type-taxonomy-term-reference,
       .field-type-text-with-summary {
@@ -1265,7 +1376,7 @@ small {
 
   @include at-breakpoint($wide) {
     .views-row {
-      
+
     }
   }
 }
@@ -1331,7 +1442,7 @@ small {
     margin: 0;
     float: left;
   }
-  
+
   ul {
     margin: 0;
     float: right;
@@ -1353,7 +1464,7 @@ small {
       &:hover {
         background: $linuxDarkOrange;
       }
-      
+
       span {
         font-size: 17px;
 
@@ -1388,7 +1499,7 @@ small {
 @include at-breakpoint(78em) {
   .pane-menu-menu-join-us {
     padding: 0 1.5em;
-    
+
     ul {
       li {
         margin: 12px 0 0 6px;
@@ -1416,7 +1527,7 @@ small {
 
     li {
       border-top: 1px solid $btnInverseBackground;
-      
+
       a {
         display: block;
         color: white;
