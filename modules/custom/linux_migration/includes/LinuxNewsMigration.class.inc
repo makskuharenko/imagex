@@ -70,7 +70,7 @@ class LinuxNewsMigration extends LinuxContentMigration {
    *   Return the blog bundle for node destination.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationNode('news');
+    return new MigrateDestinationNode('imagex_news');
   }
 
   /**
