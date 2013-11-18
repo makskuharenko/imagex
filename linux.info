@@ -16,6 +16,9 @@ dependencies[] = radioactivity
 dependencies[] = migrate
 dependencies[] = migrate_extras
 
+Custom Dependencies
+dependencies[] = uuid_panelizer
+
 ; ImageX component dependencies.
 dependencies[] = imagex_addthis
 dependencies[] = imagex_answers
