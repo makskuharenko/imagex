@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * Class LinuxSectionMigrationSourceSql
+ * Class LinuxCategoryMigrationSourceSql
  */
 
 /**
- * Class LinuxSectionMigrationSourceSql
+ * Class LinuxCategoryMigrationSourceSql
  */
-class LinuxSectionMigrationSourceSql extends ImagexMigrateSourceSql {
+class LinuxCategoryMigrationSourceSql extends ImagexMigrateSourceSql {
   /**
    * Setup the source query/connection.
    *
@@ -16,8 +16,8 @@ class LinuxSectionMigrationSourceSql extends ImagexMigrateSourceSql {
    */
   protected function getSourceQuery() {
     $query = $this->getSourceConnection()
-      ->select('jos_sections', 'js')
-      ->fields('js', array(
+      ->select('jos_categories', 'jc')
+      ->fields('jc', array(
           'id',
           'title',
           'alias',

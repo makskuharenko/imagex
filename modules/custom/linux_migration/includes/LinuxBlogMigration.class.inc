@@ -62,7 +62,7 @@ class LinuxBlogMigration extends LinuxContentMigration {
       $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
     }
     else {
-      $row->path = 'community/blogs/' . $this->sections[$row->catid] . '/' . $row->id;
+      $row->path = 'community/blogs/' . $this->categories[$row->catid] . '/' . $row->id;
     }
 
     return TRUE;

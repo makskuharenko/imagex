@@ -1,5 +1,12 @@
 <?php
+/**
+ * @file
+ * Class LinuxNewsMigration
+ */
 
+/**
+ * Class LinuxNewsMigration
+ */
 class LinuxNewsMigration extends LinuxContentMigration {
   protected $sourceObject;
   protected $sections;

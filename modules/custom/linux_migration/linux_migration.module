@@ -38,6 +38,28 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxSection' => array(
+        'class_name' => 'LinuxSectionMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com sections',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxCategory' => array(
+        'class_name' => 'LinuxCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
       'LinuxBlog' => array(
         'class_name' => 'LinuxBlogMigration',
         'group_name' => 'linux',

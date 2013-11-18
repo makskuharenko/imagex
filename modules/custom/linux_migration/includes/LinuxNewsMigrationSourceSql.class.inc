@@ -1,5 +1,12 @@
 <?php
+/**
+ * @file
+ * Class LinuxNewsMigrationSourceSql
+ */
 
+/**
+ * Class LinuxNewsMigrationSourceSql
+ */
 class LinuxNewsMigrationSourceSql extends ImagexMigrateSourceSql {
   /**
    * Setup the source query/connection.

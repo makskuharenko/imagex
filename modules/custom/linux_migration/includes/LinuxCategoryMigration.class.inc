@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * Class LinuxSectionMigration
+ * Class LinuxCategoryMigration
  */
 
 /**
- * Class LinuxSectionMigration
+ * Migrate Joomla Categories class.
  */
-class LinuxSectionMigration extends LinuxMigration {
+class LinuxCategoryMigration extends LinuxMigration {
   /**
    * Initialize the object.
    */
@@ -30,7 +30,7 @@ class LinuxSectionMigration extends LinuxMigration {
    *   The destination type handler.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationTerm('sections');
+    return new MigrateDestinationTerm('tags');
   }
   /**
    * Get the Map object.
@@ -58,7 +58,6 @@ class LinuxSectionMigration extends LinuxMigration {
    *   The source query/connection for the migration.
    */
   protected function getSourceObject() {
-    return new LinuxSectionMigrationSourceSql($this);
+    return new LinuxCategoryMigrationSourceSql($this);
   }
-
 }
