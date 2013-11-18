@@ -57,7 +57,7 @@ function linux_header_default_panels_mini() {
     $pane->pid = 'new-2';
     $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
-    $pane->subtype = 'nice_menus-2';
+    $pane->subtype = 'nice_menus-1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
