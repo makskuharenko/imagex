@@ -1,13 +1,255 @@
-// Standard elements
+// Standard elements and node/comment styles
+// -----------------------------------------
+
+.not-front {
+  @mixin node-position() {
+    @include span-columns(8, 12);
+    position: relative;
+    z-index: 200;
+  }
+
+  @mixin content-padding() {
+    padding: 0 1em;
+
+    @include at-breakpoint($computer) {
+      padding: 0;
+    }
+  }
+
+  .pane-node-title {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    @include content-padding;
+
+    h1 {
+      font-family: $monoFontFamily;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include at-breakpoint($tablet) {
+      h1 {
+        font-size: 32px;
+        line-height: 36px
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      h1 {
+        font-size: 44px;
+        line-height: 48px
+      }
+    }
+  }
+
+  .field-type-text-with-summary {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    @include content-padding;
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .region-second {
+    .field-type-image {
+      @include content-padding;
+
+      img {
+        border-bottom: 3px solid $linuxStdOrange;
+      }
+    }
+  }
+
+
+  .field-type-taxonomy-term-reference {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+    padding: 20px 0;
+
+    .field-item {
+      display: inline;
+
+      a {
+        @include border-radius(3px);
+        background: $linuxStdOrange;
+        margin: 0;
+        padding: 2px 5px;
+        font-family: $condensedFontFamily;
+        font-size: 12px;
+        text-transform: capitalize;
+        letter-spacing: 0.1em;
+        color: white;
+
+        &:hover {
+          background: $linuxDarkestOrange;
+        }
+      }
+    }
+  }
+
+  .link-wrapper {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .comment-form {
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+  }
+
+  .comment {
+    clear: both;
+
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    h3 {
+      display: none;
+    }
+
+    .username {
+      display: inline;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-family: $condensedFontFamily
+    }
+
+    .picture {
+      width: 75px;
+      height: 75px;
+      float: left;
+      display: none;
+      background: $dropdownDividerTop;
+      margin: 0 15px 15px 0;
+      @include border-radius(5px);
+
+      @include at-breakpoint($computer) {
+        display: block;
+      }
+    }
+
+    .date {
+      margin: 0 0 0 10px;
+      padding: 0 0 0 10px;
+      border-left: 1px solid $dropdownDividerTop;
+      font-family: $condensedFontFamily;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .indented {
+    margin: 0;
+
+    article {
+      border-left: 6px solid $linuxStdOrange;
+      display: inline-block;
+      margin: 0;
+      padding: 0 0 0 25px;
+    }
+  }
+
+  ul.links {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 30px;
+    list-style-type: none;
+    @include at-breakpoint($wide) {
+      @include node-position();
+    }
+
+    li.comment-delete,
+    li.comment-edit,
+    li.comment-reply {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-family: $condensedFontFamily;
+      float: right;
+
+      a {
+        color: $gray;
+        padding: 0 0 0 20px;
+        margin: 0 0 0 10px;
+
+        &:hover {
+          @include opacity(0.5);
+        }
+      }
+    }
+
+    li.comment-reply {
+      a {
+        background: transparent url('../img/comment-reply.png') no-repeat center left;
+      }
+    }
+  }
+
+  @include at-breakpoint($wide) {
+    #mini-panel-content_sidebar {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
 
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
+
+h1 {
+  display: inline-block;
+  width: 100%;
+  font-family: $monoFontFamily;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: capitalize;
+}
+
+small {
+  @include at-breakpoint($computer) {
+    width: 60%;
+  }
+}
+
 .standard-bean {
   clear: left;
 
-  .pane-content {
-    padding: 2em 0;
+  > div {
+    padding: 0 0 1px;
+  }
+
+  @include at-breakpoint($computer) {
+    > div {
+      padding: 2em 0;
+    }
   }
 
   h2 {
@@ -17,13 +259,29 @@
     font-weight: 700;
     line-height: 50px;
     text-transform: uppercase;
-    border-top: 1px solid $dropdownDividerTop;
-    border-bottom: 1px solid $dropdownDividerTop;
-    color: $linuxDarkGray;
+    border-top: 1px solid $btnBorder;
+    border-bottom: 1px solid $btnBorder;
+    background: $btnBorder url('../img/block-arrow-white.png') no-repeat center right 1.5em;
+    color: white;
+
+    &.expanded {
+      color: $linuxDarkGray;
+      background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
+      border-color: $dropdownDividerTop;
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    h2 {
+      color: $linuxDarkGray;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
+      background: transparent;
+    }
   }
 
   a.orange-button {
-    display: block;
+    display: none;
     width: auto;
     text-transform: uppercase;
     font-weight: 600;
@@ -42,11 +300,35 @@
     }
   }
 
+  @include at-breakpoint($computer) {
+    a.orange-button {
+      display: block;
+    }
+  }
+
   .views-row {
     padding: 12px 20px;
+    display: inline-block;
+    width: 100%;
 
     &.views-row-odd {
+      background: transparent;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-odd {
+        background: $tableBackgroundHover;
+      }
+    }
+
+    &.views-row-even {
       background: $tableBackgroundHover;
+    }
+
+    @include at-breakpoint($computer) {
+      &.views-row-even {
+        background: transparent;
+      }
     }
 
     .views-field-title {
@@ -66,16 +348,9 @@
 }
 
 .diagonal-lines {
-  .pane-content {
+  > div {
     padding: 2em;
     background: transparent url('../img/content-lines.png') repeat top left;
-  }
-}
-
-.no-border {
-  h2 {
-    border-color: white;
-    padding: 0;
   }
 }
 
@@ -111,7 +386,9 @@
 
 // User bar styles and structure
 #user-wrapper {
-  background: $userBar url('../img/header-lines.png') repeat top left;
+  margin: 0;
+  position: relative;
+  z-index: 501;
 
   .nice-menu {
     > .menuparent {
@@ -130,7 +407,7 @@
 
       ul {
         top: 31px;
-        padding: 0px 1.5em; 
+        padding: 0px 1.5em;
         width: auto;
         background: $userBar url('../img/header-lines.png') repeat top left;
 
@@ -143,7 +420,8 @@
             border: none;
           }
 
-          a {
+          a,
+          span {
             display: block;
             color: white;
             font-size: 11px;
@@ -152,6 +430,7 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             padding: 0;
+            cursor: pointer;
           }
         }
       }
@@ -160,19 +439,24 @@
 }
 
 #header-wrapper {
-  margin: 0 0 20px;
+  padding: 0 0 20px;
+  background: white;
+  text-align: center;
 
-  &.fixed {
-    position: fixed;
-    z-index: 999;
-    top: -130px;
-    width: 100%;
-    border-bottom: 1px solid $dropdownDividerTop;
-    background: rgba(255,255,255,0.95);
+  @include at-breakpoint($wide) {
+    &.fixed {
+      position: fixed;
+      z-index: 999;
+      top: -140px;
+      width: 100%;
+      border-bottom: 1px solid $dropdownDividerTop;
+      background: rgba(255,255,255,0.95);
+      padding: 0;
 
-    #block-panels-mini-global-header {
-      border-color: white;
-      border-bottom: none;
+      #block-panels-mini-global-header {
+        border: 0;
+        height: 48px;
+      }
     }
   }
 
@@ -187,12 +471,12 @@
     font-size: 10px;
     font-weight: 600;
     text-align: center;
-    margin: 2em auto;
+    margin: 25px auto;
   }
 
   @include at-breakpoint($wide) {
     .ad-space {
-      display: block;
+      display: inline-block;
     }
   }
 
@@ -200,6 +484,8 @@
     border-top: 1px solid $dropdownDividerTop;
     border-bottom: 1px solid $dropdownDividerTop;
     height: 50px;
+    position: relative;
+    z-index: 500;
 
     #logo {
       width: 155px;
@@ -207,39 +493,47 @@
       margin: 11px 15px 0 0;
     }
 
-    .pane-nice-menus {
+    .linux-main-menu {
       display: none;
 
       ul.nice-menu {
         border: none;
-        width: auto;
+        width: 73%;
+        text-align: left;
         float: left;
 
         > li {
           border: none;
-          width: auto;
+          width: 20%;
           float: left;
           background: transparent;
           position: relative;
+          text-align: center;
 
           &:hover {
             border-bottom: 4px solid $dropdownDividerTop;
 
-            a {
+            a,
+            span {
               height: 44px;
+
+              &.active {
+                border-bottom: none;
+              }
             }
           }
 
-          > a {
+          > a,
+          > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
-            padding: 0 1.2em;
+            padding: 0;
             font-size: 9px;
             font-weight: 700;
-            letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
+            cursor: pointer;
 
             &.active {
               border-bottom: 4px solid $dropdownDividerTop;
@@ -247,23 +541,38 @@
             }
           }
 
+          @include at-breakpoint(60em) {
+            > a,
+            > span {
+              letter-spacing: 0;
+            }
+          }
+
           @include at-breakpoint(75em) {
-            > a {
+            > a,
+            > span {
               font-size: 10px;
+              letter-spacing: 0.1em;
             }
           }
 
           ul {
+            background: $userBar url('../img/header-lines.png') repeat top left;
             top: 48px;
             left: 0;
             border: none;
             z-index: 998;
+            list-style: none;
+            width: 220px;
+            @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
 
             li {
               border: none;
-              background: $userBar url('../img/header-lines.png') repeat top left;
+              background: transparent;
+              text-align: left;
 
-              a {
+              a,
+              span {
                 margin: 0 1em;
                 padding: 0;
                 line-height: 40px;
@@ -272,6 +581,8 @@
                 letter-spacing: 0.1em;
                 font-size: 10px;
                 color: white;
+                cursor: pointer;
+                width: 200px;
 
                 &:hover {
                   @include opacity(0.7);
@@ -284,7 +595,7 @@
     }
 
     @include at-breakpoint($wide) {
-      .pane-nice-menus {
+      .linux-main-menu {
         display: block;
       }
     }
@@ -311,7 +622,8 @@
             }
           }
 
-          > a {
+          > a,
+          > span {
             display: block;
             height: 48px;
             text-transform: uppercase;
@@ -321,6 +633,7 @@
             letter-spacing: 0.1em;
             line-height: 48px;
             color: $linuxDarkGray;
+            cursor: pointer;
 
             &.menu-icon {
               display: block;
@@ -330,14 +643,27 @@
               font-size: 18px;
               overflow: hidden;
               text-align: center;
+              letter-spacing: 0;
             }
 
             &.menu-profile {
               @include icon-user;
             }
 
-            &.menu-search {
-              @include icon-search;
+            &.menu-utility {
+              @include icon-reorder;
+
+              &.active {
+                background: transparent url('../img/content-lines.png') repeat 0px 4px;
+                border: none;
+                height: 49px;
+              }
+            }
+
+            @include at-breakpoint($wide) {
+              &.menu-utility {
+                @include icon-search;
+              }
             }
 
             &.menu-localization {
@@ -359,57 +685,63 @@
   }
 }
 
+#content-wrapper,
 #panel-wrapper {
-  &.fixed {
-    margin-top: 201px;
+  background: white;
+
+  @include at-breakpoint($wide) {
+    &.fixed {
+      padding-top: 205px;
+    }
   }
 }
 
 // Footer styles and structures
 #footer-wrapper {
-  margin: 20px 0 0;
+  margin: 0;
   padding: 20px 0 60px;
   background: $userBar url('../img/header-lines.png') repeat top left;
   font-weight: 600;
   text-transform: uppercase;
 
-  #block-system-main-menu ul {
+  .footer-menu ul {
     margin: 0;
     font-size: 10px;
+    list-style: none;
 
     .expanded {
-      @include span-columns(7, 14);
+      @include span-columns(7, 16);
+      display: none;
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      
 
-      > a {
+
+      > a,
+      > span {
         color: $btnBorder;
+        cursor: pointer;
       }
 
       li {
-        a {
+        a,
+        span, {
           color: white;
+          cursor: pointer;
         }
-      }
-    }
-
-    @include at-breakpoint($tablet) {
-      .expanded {
-        
       }
     }
 
     @include at-breakpoint($computer) {
       .expanded {
-        @include span-columns(2, 14);
+        display: block;
+        @include span-columns(2, 16);
       }
     }
 
     @include at-breakpoint($wide) {
       .expanded {
-        @include span-columns(2, 14);
+        @include span-columns(2, 16);
       }
     }
 
@@ -422,7 +754,7 @@
     font-size: 10px;
     color: $btnBorder;
     margin: 0 0 30px;
-    text-align: center;
+    text-align: right;
 
     p {
       font-family: $monoFontFamily;
@@ -441,13 +773,13 @@
   #block-bean-copyright {
     font-size: 10px;
     color: $btnBorder;
-    text-align: center;
+    text-align: right;
   }
 
-  @include at-breakpoint($wide) {
+  @include at-breakpoint($computer) {
     #block-bean-copyright,
     #block-bean-about-linux-foundation {
-      @include span-columns(4 omega, 14);
+      @include span-columns(5 omega, 16);
       text-align: right;
     }
 
@@ -480,8 +812,8 @@
 
 .featured-slideshow {
   @include span-columns(14 omega, 14);
-  background-color: $linuxStdOrange;
-  
+  background-color: white;
+
   .flexslider_views_slideshow_slide {
     &:hover {
       img {
@@ -492,7 +824,7 @@
 
   .flex-nav-container {
     margin: 0;
-  }  
+  }
 
   .flexslider {
     background: transparent;
@@ -516,10 +848,6 @@
   }
 
   .views-field-title {
-    position: absolute;
-    margin: 0 20px;
-    bottom: 40px;
-
     h2 {
       border: 0;
       font-family: $monoFontFamily;
@@ -529,24 +857,64 @@
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
 
       a {
-        color: white;
+        color: $grayDark;
+      }
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    .views-field-title {
+      position: absolute;
+      margin: 0 20px;
+      bottom: 40px;
+
+      h2 {
+        a {
+          color: white;
+        }
       }
     }
   }
 
   .views-field-comment-count {
-    position: absolute;
-    margin: 0 0 0 20px;
     padding: 0 0 0 30px;
     bottom: 20px;
-    background: transparent url('../img/comment-icon.png') no-repeat left center;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    @include at-breakpoint($computer) {
+      position: absolute;
+      margin: 0 0 0 20px;
+      background: transparent url('../img/comment-icon.png') no-repeat left center;
+    }
 
     span {
-      color: white;
+      color: $grayDark;
       font-family: $condensedFontFamily;
       letter-spacing: 0.1em;
       font-size: 16px;
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+
+      @include at-breakpoint($computer) {
+        color: white;
+      }
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    .views-field-comment-count {
+      position: absolute;
+      margin: 0 0 0 20px;
+      padding: 0 0 0 30px;
+      bottom: 20px;
+      background: transparent url('../img/comment-icon.png') no-repeat left center;
+
+      span {
+        color: white;
+        font-family: $condensedFontFamily;
+        letter-spacing: 0.1em;
+        font-size: 16px;
+        @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+      }
     }
   }
 
@@ -556,6 +924,7 @@
 
   .flex-direction-nav {
     a {
+      display: none;
       width: 50px;
       height: 100%;
       @include opacity(0);
@@ -565,11 +934,15 @@
       z-index: 0;
     }
 
+    @include at-breakpoint($computer) {
+      display: block;
+    }
+
     .flex-prev {
       left: 0px;
       background: transparent url('../img/slideshow-prev.png') no-repeat center center;
     }
-    
+
     .flex-next {
       right: 0px;
       background: transparent url('../img/slideshow-next.png') no-repeat center center;
@@ -580,7 +953,7 @@
 @include at-breakpoint($tablet) {
   .featured-slideshow {
     .views-field-title {
-      bottom: 60px; 
+      bottom: 60px;
 
       h2 {
         font-size: 38px;
@@ -592,6 +965,8 @@
 
 @include at-breakpoint($computer) {
   .featured-slideshow {
+    background-color: $linuxStdOrange;
+
     .views-field-title {
 
       h2 {
@@ -605,9 +980,8 @@
 @include at-breakpoint($wide) {
   .featured-slideshow {
     @include span-columns(10, 14);
-    width: 72.28916%;
+    width: 72.46377%;
     margin-right: 0;
-    border-right: 1px solid white;
   }
 }
 
@@ -630,6 +1004,7 @@
 
   .views-field-title {
     position: absolute;
+    top: 0px;
     padding: 5px 20px;
 
     h2 {
@@ -683,10 +1058,9 @@
       clear: left;
 
       .views-field-counter {
-        width: 35px;
+        width: 30px;
         height: 40px;
         margin: 0 10px 0 0;
-        padding: 0 0 0 5px;
         border-right: 1px solid $dropdownDividerTop;
         float: left;
 
@@ -740,7 +1114,7 @@
           color: $linuxStdOrange;
         }
       }
-      
+
       .views-field-view-node,
       .views-field-view-node-1 {
         display: inline;
@@ -767,24 +1141,64 @@
   }
 }
 
-// Editorial View Listing
-// ----------------------
+// Editorial View Listing and customized pane styles
+// -------------------------------------------------
+
+.editorial-pane {
+  h2 {
+    border-bottom: 0;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 0 20px;
+    background: transparent none no-repeat 0 0;
+    color: $linuxDarkGray;
+    border-color: $dropdownDividerTop;
+  }
+}
+
+@include at-breakpoint($computer) {
+  .editorial-pane {
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      padding: 0;
+    }
+  }
+}
 
 .editorial {
+  padding: 0.5em 0 !important;
+  position: relative;
+
   .editorial-updated {
     display: block;
     width: auto;
     font-family: $condensedFontFamily;
     font-size: 13px;
     line-height: 25px;
-    float: right;
-    margin: -60px 0 0;
+    margin: -25px 0 20px;
+    padding: 0 20px 10px;
+    border-bottom: 1px solid $dropdownDividerTop;
+  }
+
+  @include at-breakpoint($computer) {
+    .editorial-updated {
+      padding: 0;
+      border: 0;
+      position: absolute;
+      right: 0;
+      top: -12px;
+    }
   }
 
   .views-row {
-    margin: -0.5em -0.5em 10px;
-    padding: 1em 0.75em;
+    margin: 0 -5px;
+    padding: 20px;
+    width: auto;
 
+    &.views-row-even,
     &.views-row-odd {
       background: white;
     }
@@ -793,12 +1207,30 @@
       h3 {
         margin: 0 0 5px;
         font-family: $monoFontFamily;
-        font-size: 34px;
+        font-size: 20px;
         font-weight: 300;
-        line-height: 36px;
+        line-height: 24px;
 
         a {
           color: $grayDark;
+        }
+      }
+    }
+
+    @include at-breakpoint($tablet) {
+      .views-field-title {
+        h3 {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      .views-field-title {
+        h3 {
+          font-size: 34px;
+          line-height: 36px;
         }
       }
     }
@@ -844,13 +1276,19 @@
     .field-type-text-with-summary {
       visibility: hidden;
       position: relative;
-      top: -180px;
+      top: -170px;
       height: 0;
       font-size: 12px;
       font-weight: 300;
       letter-spacing: 0.1em;
       line-height: 20px;
       color: white;
+    }
+
+    @include at-breakpoint($computer) {
+      .field-type-text-with-summary {
+        top: -180px;
+      }
     }
 
     .views-field-view-node {
@@ -906,11 +1344,11 @@
     &:hover {
       background: $linuxStdOrange;
       @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
-      
+
       .views-field-title {
         h3 {
           a {
-            color: white; 
+            color: white;
           }
         }
       }
@@ -922,17 +1360,23 @@
           border-right-color: $linuxDarkestOrange;
         }
       }
-  
+
       .views-field-comment-count,
       .field-type-image {
         visibility: hidden;
       }
-      
+
       .views-field-view-node,
       .field-type-taxonomy-term-reference,
       .field-type-text-with-summary {
         visibility: visible;
       }
+    }
+  }
+
+  @include at-breakpoint($wide) {
+    .views-row {
+
     }
   }
 }
@@ -986,7 +1430,7 @@
 
 .pane-menu-menu-join-us {
   background: transparent url('../img/content-lines.png') repeat top left;
-  padding: 0 1.5em;
+  padding: 0 1em;
   height: 50px;
 
   h2 {
@@ -998,7 +1442,7 @@
     margin: 0;
     float: left;
   }
-  
+
   ul {
     margin: 0;
     float: right;
@@ -1008,7 +1452,7 @@
       float: left;
       width: 26px;
       height: 26px;
-      margin: 12px 0 0 6px;
+      margin: 12px 0 0 4px;
       background: $linuxDarkGray;
       line-height: 26px;
       @include border-radius(2px);
@@ -1020,7 +1464,7 @@
       &:hover {
         background: $linuxDarkOrange;
       }
-      
+
       span {
         font-size: 17px;
 
@@ -1052,6 +1496,18 @@
   }
 }
 
+@include at-breakpoint(78em) {
+  .pane-menu-menu-join-us {
+    padding: 0 1.5em;
+
+    ul {
+      li {
+        margin: 12px 0 0 6px;
+      }
+    }
+  }
+}
+
 // Most Recent menu filter
 // -----------------------
 
@@ -1071,7 +1527,7 @@
 
     li {
       border-top: 1px solid $btnInverseBackground;
-      
+
       a {
         display: block;
         color: white;
@@ -1123,4 +1579,11 @@
       }
     }
   }
+}
+
+// jPanel Menu styling
+// -------------------
+
+#jPanelMenu-menu {
+  background: white;
 }

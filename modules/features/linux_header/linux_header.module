@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Header feature.
+ */
+
+include_once 'linux_header.features.inc';

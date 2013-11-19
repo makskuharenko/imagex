@@ -3,6 +3,217 @@
 // --------------------------------------------------
 
 
+//
+// Custom tab styling
+// --------------------------------------------------
+
+ul.tabs.primary {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  border-bottom: none;
+  text-align: center;
+  background: $linuxStdOrange;
+
+  li {
+    a {
+      padding: 0.5em 1em;
+      border-radius: 3px;
+      border-style: solid;
+      border-color: rgba(255,255,255,0.4);
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+      background: transparent;
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgb(255, 255, 255);
+        font-weight: 700;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
+
+ul.tabs.secondary {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 6px;
+  border: none;
+  @include border-radius(0);
+  text-align: center;
+  background: $linuxDarkOrange;
+  @include box-shadow(inset 0 2px 2px rgba(0,0,0,0.1));
+
+  li {
+    border: none;
+    font-size: 13px;
+
+    a {
+      border: none;
+      color: white;
+      padding: 0 0 1px;
+
+      &.active {
+        font-weight: 600;
+      }
+
+      &:hover {
+        border-bottom: 1px solid $linuxStdOrange;
+      }
+    }
+  }
+}
+
+nav.tabs {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+}
+
+//
+// Mobile menus
+// --------------------------------------------------
+
+#mini-panel-mobile_main_menu {
+  position: relative;
+  display: none;
+
+  .minipanel-one-fw-wrapper {
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    z-index: 501;
+    background: white url('../img/content-lines.png') repeat top left;
+    min-width: 280px;
+    @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
+
+    #search-block-form {
+      position: relative;
+      margin: 15px 0;
+      @include icon-search;
+
+      &:before {
+        position: absolute;
+        right: 9px;
+        top: 12px;
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        border: 1px solid $dropdownDividerTop;
+        background: white;
+        @include border-radius(4px);
+        width: 100%;
+        height: 35px;
+      }
+
+      input[type="submit"] {
+        float: right;
+        margin: auto;
+        position: absolute;
+        z-index: 10;
+        top: 15px;
+        right: 10px;
+        @include border-radius(0px);
+        background: transparent;
+        content: "\f100";
+        font-family: FontAwesome;
+        color: $gray;
+        height: 45px;
+        width: 25px;
+        padding: 0 0 0 30px;
+
+        &:before {
+          color: $gray;
+        }
+      }
+    }
+
+    .pane-menu-menu-primary-menu {
+      margin: 0 0 15px;
+      display: block;
+
+      ul {
+        margin: 0;
+
+        li {
+          list-style-type: none;
+          list-style-image: none;
+          text-align: left;
+
+          a,
+          span {
+            color: $linuxStdOrange;
+            letter-spacing: 0.1em;
+            line-height: 32px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover {
+              color: $linuxDarkOrange;
+            }
+          }
+        }
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .pane-menu-menu-primary-menu {
+        display: none;
+      }
+    }
+
+    .expanded {
+      ul {
+        display: none;
+      }
+    }
+
+    .pane-menu-menu-join-us {
+      background: $userBar url('../img/header-lines.png') repeat top left;
+      padding: 0;
+      @include bleed(1.5em);
+      display: block;
+
+      h2 {
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        float: left;
+        color: white;
+      }
+
+      ul {
+        li {
+          background-color: white;
+
+          span {
+            color: $userBar;
+          }
+
+          &:hover {
+            span {
+              color: $linuxStdOrange;
+            }
+          }
+        }
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .pane-menu-menu-join-us {
+        display: none;
+      }
+    }
+  }
+}
 
 //
 // Dropdown menus
@@ -627,4 +838,11 @@
   ul {
     margin-top: -33px;
   }
+}
+
+// CONTEXTUAL LINKS CLEARFIX FIX
+// -----------------------------
+
+.contextual-links-region.clearfix:after {
+  display: inline;
 }

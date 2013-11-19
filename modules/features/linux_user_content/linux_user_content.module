@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux User Content feature.
+ */
+
+include_once 'linux_user_content.features.inc';
