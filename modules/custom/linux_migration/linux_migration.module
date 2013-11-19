@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * Migrate module for Linux.com.
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function linux_migration_migrate_api() {
+  $disable_hooks = array(
+    'node_insert' => array(
+      'creativecommons',
+      'pathauto',
+    ),
+    'node_update' => array(
+      'creativecommons',
+      'pathauto',
+    ),
+  );
+  return array(
+    'api' => 2,
+    'groups' => array(
+      'linux' => array(
+        'title' => t('Linux.com'),
+        'disable_hooks' => $disable_hooks,
+      ),
+    ),
+    'migrations' => array(
+      'LinuxUser' => array(
+        'class_name' => 'LinuxUserMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com users',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxSection' => array(
+        'class_name' => 'LinuxSectionMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com sections',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxCategory' => array(
+        'class_name' => 'LinuxCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxBlog' => array(
+        'class_name' => 'LinuxBlogMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com blogs',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxNews' => array(
+        'class_name' => 'LinuxNewsMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com news',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+    ),
+  );
+}

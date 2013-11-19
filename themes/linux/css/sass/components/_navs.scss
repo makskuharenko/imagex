@@ -87,7 +87,7 @@ nav.tabs {
 
   .minipanel-one-fw-wrapper {
     position: absolute;
-    top: 49px;
+    top: -1px;
     right: 0px;
     z-index: 501;
     background: white url('../img/content-lines.png') repeat top left;
@@ -109,7 +109,7 @@ nav.tabs {
       input[type="text"] {
         border: 1px solid $dropdownDividerTop;
         background: white;
-        @include border-radius(4px); 
+        @include border-radius(4px);
         width: 100%;
         height: 35px;
       }
@@ -136,7 +136,7 @@ nav.tabs {
       }
     }
 
-    .pane-system-main-menu {
+    .pane-menu-menu-primary-menu {
       margin: 0 0 15px;
       display: block;
 
@@ -166,11 +166,11 @@ nav.tabs {
     }
 
     @include at-breakpoint($wide) {
-      .pane-system-main-menu {
+      .pane-menu-menu-primary-menu {
         display: none;
       }
     }
-    
+
     .expanded {
       ul {
         display: none;

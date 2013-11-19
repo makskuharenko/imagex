@@ -59,7 +59,7 @@
 
   // Show and hide the mobile menu
 
-  $('.menu-utility').on('click', function() {
+  $('.menu-utility').click(function() {
     $('#mini-panel-mobile_main_menu').toggle();
     $(this).toggleClass('active');
   });
