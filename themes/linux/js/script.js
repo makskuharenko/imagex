@@ -1,8 +1,8 @@
 (function ($) {
- 
+
   // jPanel Menu settings
   // ----------------------------------------------------------------------------
-  
+
   var jPM = $.jPanelMenu({
     menu: '.region-first',
     trigger: '.menu-profile'
@@ -58,7 +58,7 @@
 
   // Show and hide the mobile menu
 
-  $('.menu-utility').on('click', function() {
+  $('.menu-utility').click(function() {
     $('#mini-panel-mobile_main_menu').toggle();
     $(this).toggleClass('active');
   });
@@ -66,8 +66,8 @@
   // Show and Hide the filter for the most of something block
   // ----------------------------------------------------------------------------
 
-  Drupal.behaviors.filteredViewDropDown = { 
-    attach: function (context, settings) { 
+  Drupal.behaviors.filteredViewDropDown = {
+    attach: function (context, settings) {
 
       // When the pane title is clicked. Show the drop down.
       $('.filtered-view', context).on('click', '.pane-title', function() {
@@ -98,7 +98,7 @@
 
         return false;
       });
-    } 
+    }
   };
 
 })(jQuery);
