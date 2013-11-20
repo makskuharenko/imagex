@@ -111,11 +111,17 @@ projects[imagex_news][download][type] = "git"
 projects[imagex_news][download][url] = "git@github.com:imagex/imagex_news.git"
 projects[imagex_news][download][branch] = "7.x-dev"
 
+projects[imagex_radioactivity][type] = "module"
+projects[imagex_radioactivity][subdir] = "imagex/modules"
+projects[imagex_radioactivity][download][type] = "git"
+projects[imagex_radioactivity][download][url] = "git@github.com:imagex/imagex_radioactivity.git"
+projects[imagex_radioactivity][download][branch] = "7.x-dev"
+
 projects[imagex_poll][type] = "module"
 projects[imagex_poll][subdir] = "imagex/modules"
 projects[imagex_poll][download][type] = "git"
 projects[imagex_poll][download][url] = "git@github.com:amcgowanca/imagex_poll.git"
-projects[imagex_poll][download][branch] = "core/refactor"
+projects[imagex_poll][download][branch] = "7.x-dev"
 
 projects[imagex_user][type] = "module"
 projects[imagex_user][subdir] = "imagex/modules"
