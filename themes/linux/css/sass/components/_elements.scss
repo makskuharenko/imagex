@@ -9,7 +9,7 @@
   }
 
   @mixin content-padding() {
-    padding: 0 1.5em;
+    padding: 0 1em;
 
     @include at-breakpoint($computer) {
       padding: 0;
@@ -906,18 +906,26 @@ small {
   }
 
   .views-field-comment-count {
-    position: absolute;
-    margin: 0 0 0 20px;
     padding: 0 0 0 30px;
     bottom: 20px;
-    background: transparent url('../img/comment-icon.png') no-repeat left center;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    @include at-breakpoint($computer) {
+      position: absolute;
+      margin: 0 0 0 20px;
+      background: transparent url('../img/comment-icon.png') no-repeat left center;
+    }
 
     span {
-      color: white;
+      color: $grayDark;
       font-family: $condensedFontFamily;
       letter-spacing: 0.1em;
       font-size: 16px;
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
+
+      @include at-breakpoint($computer) {
+        color: white;
+      }
     }
   }
 
@@ -945,6 +953,7 @@ small {
 
   .flex-direction-nav {
     a {
+      display: none;
       width: 50px;
       height: 100%;
       @include opacity(0);
@@ -952,6 +961,10 @@ small {
       margin: 0;
       background-position: center center;
       z-index: 0;
+    }
+
+    @include at-breakpoint($computer) {
+      display: block;
     }
 
     .flex-prev {
@@ -1214,6 +1227,7 @@ small {
     padding: 20px;
     width: auto;
 
+    &.views-row-even,
     &.views-row-odd {
       background: white;
     }

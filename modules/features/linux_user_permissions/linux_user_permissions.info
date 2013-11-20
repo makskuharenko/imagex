@@ -1,0 +1,9 @@
+name = Linux User Permissions
+description = Contains user permissions settings unique to the Linux Site
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_user_permissions
+features[features_api][] = api:2
+features[features_overrides][] = user_permission.access content.roles|anonymous user
+features[features_overrides][] = user_permission.access content.roles|authenticated user

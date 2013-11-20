@@ -1,0 +1,30 @@
+<?php
+/*
+* @file
+* * Override of news view, to include content type 'Humor' in news feed
+*/
+
+/**
+* Implementation of hook_views_default_views_alter().  
+*/
+
+//TODO: this should work, but hook doesn't seem to be getting called.
+function linux_news_humor_views_default_views_alter(&$views){
+     
+    $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
+} 
+
+function linux_news_humor_views_pre_view(&$view, &$display_id, &$args) {
+ 
+  if($view->name  == 'news'){
+
+    $filters = $view->display_handler->get_option('filters');
+   //before
+    dsm($filters['type']['value']);
+    //update to use humor
+    $filters['type']['value'] = array('blog' =>'blog', 'humor' => 'humor');
+    //after
+    dsm($filters['type']['value']);
+
+    }
+}

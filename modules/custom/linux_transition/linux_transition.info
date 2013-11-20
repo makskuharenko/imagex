@@ -1,0 +1,7 @@
+name = Linux Transition
+description = Transition users from Joomla to Drupal
+core = 7.x
+package = Linux.com
+php = 5.2.4
+version = 7.x-1.0
+project = linux_transition

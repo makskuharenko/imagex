@@ -5,3 +5,33 @@
  */
 
 include_once 'linux_footer.features.inc';
+
+/**
+ * Implements hook_entity_presave().
+ */
+function linux_footer_entity_presave($entity, $type) {
+  module_load_include('inc', 'linux_footer', 'linux_footer.features.uuid_bean');
+  $beans = linux_footer_uuid_features_default_beans();
+  foreach ($beans as $bean) {
+    $uuids[] = $bean['uuid'];
+  }
+  if ($type == 'bean' && in_array($entity->uuid, $uuids)) {
+    if (!isset($entity->field_widget_basic__image['und'])) {
+      return;
+    }
+    $files = $entity->field_widget_basic__image['und'];
+    unset($entity->field_widget_basic__image['und']);
+    foreach ($files as $file) {
+      $filename = $file['filename'];
+      $footer_logo_path = drupal_get_path('module', 'linux_footer') . '/files/' . $filename;
+      if (!file_unmanaged_copy($footer_logo_path, $file['uri'], FILE_EXISTS_REPLACE)) {
+        watchdog('linux', 'Unable to move the @filename into public:// during installation.', array('@filename' => $filename), WATCHDOG_ERROR);
+      }
+      else {
+        unset($file['fid']);
+        $file = file_save((object) $file);
+        $entity->field_widget_basic__image['und'][] = (array) $file;
+      }
+    }
+  }
+}
