@@ -151,7 +151,7 @@ function linux_header_default_panels_mini() {
     $pane->pid = 'new-5';
     $pane->panel = 'minipanel_one_main_fw';
     $pane->type = 'block';
-    $pane->subtype = 'system-main-menu';
+    $pane->subtype = 'menu-menu-primary-menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -190,7 +190,7 @@ function linux_header_default_panels_mini() {
     $display->content['new-6'] = $pane;
     $display->panels['minipanel_one_main_fw'][2] = 'new-6';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-4';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['mobile_main_menu'] = $mini;
 

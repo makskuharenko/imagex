@@ -16,6 +16,12 @@ function linux_menu_menu_default_menu_custom() {
     'title' => 'Footer',
     'description' => 'Linux.com Footer Menu',
   );
+  // Exported menu: menu-join-us.
+  $menus['menu-join-us'] = array(
+    'menu_name' => 'menu-join-us',
+    'title' => 'Join Us',
+    'description' => 'Menu of icons that let the user follow Linux social networks.',
+  );
   // Exported menu: menu-linux-foundation-network.
   $menus['menu-linux-foundation-network'] = array(
     'menu_name' => 'menu-linux-foundation-network',
@@ -37,9 +43,11 @@ function linux_menu_menu_default_menu_custom() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Footer');
+  t('Join Us');
   t('Linux Foundation Network');
   t('Linux.com Footer Menu');
   t('Linux.com Primary Menu');
+  t('Menu of icons that let the user follow Linux social networks.');
   t('Primary Menu');
   t('Utility menu');
 
