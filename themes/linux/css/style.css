@@ -4298,7 +4298,7 @@ h1 {
   #footer-wrapper #block-bean-about-linux-foundation {
     font-size: 10px;
     color: #bbbbbb;
-    margin: 0 0 30px;
+    margin: 0;
     text-align: right; }
     #footer-wrapper #block-bean-about-linux-foundation p {
       font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -4313,6 +4313,19 @@ h1 {
     font-size: 10px;
     color: #bbbbbb;
     text-align: right; }
+  #footer-wrapper .pane-menu-menu-join-us {
+    width: 100%;
+    float: right;
+    background: none;
+    padding: 0; }
+    #footer-wrapper .pane-menu-menu-join-us ul li {
+      background: white; }
+      #footer-wrapper .pane-menu-menu-join-us ul li:hover {
+        background: #f17700; }
+        #footer-wrapper .pane-menu-menu-join-us ul li:hover span {
+          color: white; }
+      #footer-wrapper .pane-menu-menu-join-us ul li span {
+        color: #555555; }
   @media (min-width: 45.5em) {
     #footer-wrapper #block-bean-copyright,
     #footer-wrapper #block-bean-about-linux-foundation {
@@ -4320,6 +4333,8 @@ h1 {
       float: right;
       margin-right: 0;
       text-align: right; }
+    #footer-wrapper .pane-menu-menu-join-us {
+      width: auto; }
     #footer-wrapper #block-bean-copyright {
       clear: right; }
     #footer-wrapper #block-bean-about-linux-foundation p {
