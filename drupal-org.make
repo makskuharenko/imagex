@@ -120,7 +120,7 @@ projects[imagex_radioactivity][download][branch] = "7.x-dev"
 projects[imagex_poll][type] = "module"
 projects[imagex_poll][subdir] = "imagex/modules"
 projects[imagex_poll][download][type] = "git"
-projects[imagex_poll][download][url] = "git@github.com:amcgowanca/imagex_poll.git"
+projects[imagex_poll][download][url] = "git@github.com:imagex/imagex_poll.git"
 projects[imagex_poll][download][branch] = "7.x-dev"
 
 projects[imagex_user][type] = "module"
