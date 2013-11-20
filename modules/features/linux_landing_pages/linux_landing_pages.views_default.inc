@@ -528,7 +528,6 @@ function linux_landing_pages_views_default_views() {
   /* Display: Featured */
   $handler = $view->new_display('panel_pane', 'Featured', 'panel_pane_7');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Featured';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -603,12 +602,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Field: Content: Tags */
-  $handler->display->display_options['fields']['field_tag']['id'] = 'field_tag';
-  $handler->display->display_options['fields']['field_tag']['table'] = 'field_data_field_tag';
-  $handler->display->display_options['fields']['field_tag']['field'] = 'field_tag';
-  $handler->display->display_options['fields']['field_tag']['label'] = '';
-  $handler->display->display_options['fields']['field_tag']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -716,27 +710,24 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Field: Content: Tags */
+  /* Field: : field_tag */
   $handler->display->display_options['fields']['field_tag']['id'] = 'field_tag';
   $handler->display->display_options['fields']['field_tag']['table'] = 'field_data_field_tag';
   $handler->display->display_options['fields']['field_tag']['field'] = 'field_tag';
   $handler->display->display_options['fields']['field_tag']['label'] = '';
   $handler->display->display_options['fields']['field_tag']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Tags (field_tag) */
-  $handler->display->display_options['arguments']['field_tag_tid']['id'] = 'field_tag_tid';
-  $handler->display->display_options['arguments']['field_tag_tid']['table'] = 'field_data_field_tag';
-  $handler->display->display_options['arguments']['field_tag_tid']['field'] = 'field_tag_tid';
-  $handler->display->display_options['arguments']['field_tag_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_tag_tid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['field_tag_tid']['title'] = 'Editorial Feature: %1';
-  $handler->display->display_options['arguments']['field_tag_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_tag_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_tag_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_tag_tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['field_tag_tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['field_tag_tid']['validate_options']['type'] = 'name';
-  $handler->display->display_options['arguments']['field_tag_tid']['validate']['fail'] = 'empty';
+  /* Contextual filter: Content: Tags (field_tags) */
+  $handler->display->display_options['arguments']['field_tags_tid']['id'] = 'field_tags_tid';
+  $handler->display->display_options['arguments']['field_tags_tid']['table'] = 'field_data_field_tags';
+  $handler->display->display_options['arguments']['field_tags_tid']['field'] = 'field_tags_tid';
+  $handler->display->display_options['arguments']['field_tags_tid']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['field_tags_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_tags_tid']['title'] = 'Editorial Feature: %1';
+  $handler->display->display_options['arguments']['field_tags_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_tags_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_tags_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_tags_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
