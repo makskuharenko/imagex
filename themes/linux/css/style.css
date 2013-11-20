@@ -4038,6 +4038,8 @@ h1 {
               #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a.active,
               #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span.active {
                 border-bottom: none; }
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail {
+            border-bottom: 4px solid #e5e5e5; }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
@@ -4051,7 +4053,6 @@ h1 {
             cursor: pointer; }
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
-              border-bottom: 4px solid #e5e5e5;
               color: #f17700; }
           @media (min-width: 52.5em) {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
@@ -4111,6 +4112,8 @@ h1 {
           border-bottom: 4px solid #e5e5e5; }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li:hover a {
             height: 44px; }
+        #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li.active, #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li.active-trail {
+          border-bottom: 4px solid #e5e5e5; }
         #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a,
         #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span {
           display: block;
@@ -4244,7 +4247,6 @@ h1 {
             padding-right: 0 !important; }
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > a.active,
           #header-wrapper #block-panels-mini-global-header .pane-menu-menu-utility-menu ul > li > span.active {
-            border-bottom: 4px solid #e5e5e5;
             color: #f17700; }
 
 #content-wrapper,
@@ -4773,9 +4775,11 @@ h1 {
       cursor: pointer; }
       .pane-menu-menu-join-us ul li:hover {
         background: #e65b04; }
-      .pane-menu-menu-join-us ul li span {
+      .pane-menu-menu-join-us ul li span,
+      .pane-menu-menu-join-us ul li a {
         font-size: 17px; }
-        .pane-menu-menu-join-us ul li span.addthis-facebook:before {
+        .pane-menu-menu-join-us ul li span.addthis-facebook:before,
+        .pane-menu-menu-join-us ul li a.addthis-facebook:before {
           content: "\f09a";
           font-family: FontAwesome;
           font-weight: normal;
@@ -4799,7 +4803,8 @@ h1 {
           background-image: none;
           background-position: 0% 0%;
           background-repeat: repeat; }
-        .pane-menu-menu-join-us ul li span.addthis-twitter:before {
+        .pane-menu-menu-join-us ul li span.addthis-twitter:before,
+        .pane-menu-menu-join-us ul li a.addthis-twitter:before {
           content: "\f099";
           font-family: FontAwesome;
           font-weight: normal;
@@ -4823,7 +4828,8 @@ h1 {
           background-image: none;
           background-position: 0% 0%;
           background-repeat: repeat; }
-        .pane-menu-menu-join-us ul li span.addthis-googleplus:before {
+        .pane-menu-menu-join-us ul li span.addthis-googleplus:before,
+        .pane-menu-menu-join-us ul li a.addthis-googleplus:before {
           content: "\f0d5";
           font-family: FontAwesome;
           font-weight: normal;
@@ -4847,7 +4853,8 @@ h1 {
           background-image: none;
           background-position: 0% 0%;
           background-repeat: repeat; }
-        .pane-menu-menu-join-us ul li span.addthis-linkedin:before {
+        .pane-menu-menu-join-us ul li span.addthis-linkedin:before,
+        .pane-menu-menu-join-us ul li a.addthis-linkedin:before {
           content: "\f0e1";
           font-family: FontAwesome;
           font-weight: normal;
@@ -4871,7 +4878,8 @@ h1 {
           background-image: none;
           background-position: 0% 0%;
           background-repeat: repeat; }
-        .pane-menu-menu-join-us ul li span.addthis-rss:before {
+        .pane-menu-menu-join-us ul li span.addthis-rss:before,
+        .pane-menu-menu-join-us ul li a.addthis-rss:before {
           content: "\f09e";
           font-family: FontAwesome;
           font-weight: normal;
@@ -4895,7 +4903,8 @@ h1 {
           background-image: none;
           background-position: 0% 0%;
           background-repeat: repeat; }
-        .pane-menu-menu-join-us ul li span:before {
+        .pane-menu-menu-join-us ul li span:before,
+        .pane-menu-menu-join-us ul li a:before {
           padding-right: 0 !important; }
 
 @media (min-width: 68.25em) {

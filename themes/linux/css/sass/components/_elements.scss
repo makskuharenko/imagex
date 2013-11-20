@@ -523,6 +523,11 @@ small {
             }
           }
 
+          &.active,
+          &.active-trail {
+            border-bottom: 4px solid $dropdownDividerTop;
+          }
+
           > a,
           > span {
             display: block;
@@ -536,7 +541,6 @@ small {
             cursor: pointer;
 
             &.active {
-              border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
             }
           }
@@ -622,6 +626,11 @@ small {
             }
           }
 
+          &.active,
+          &.active-trail {
+            border-bottom: 4px solid $dropdownDividerTop;
+          }
+
           > a,
           > span {
             display: block;
@@ -675,7 +684,6 @@ small {
             }
 
             &.active {
-              border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
             }
           }
@@ -1465,7 +1473,8 @@ small {
         background: $linuxDarkOrange;
       }
 
-      span {
+      span,
+      a {
         font-size: 17px;
 
         &.addthis-facebook {

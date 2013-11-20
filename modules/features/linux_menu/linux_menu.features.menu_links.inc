@@ -10,6 +10,121 @@
 function linux_menu_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-join-us_facebook:<nolink>
+  $menu_links['menu-join-us_facebook:<nolink>'] = array(
+    'menu_name' => 'menu-join-us',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
+    'link_title' => 'Facebook',
+    'options' => array(
+      'alter' => TRUE,
+      'external' => TRUE,
+      'attributes' => array(
+        'class' => array(
+          0 => 'addthis-facebook',
+        ),
+      ),
+      'identifier' => 'menu-join-us_facebook:<nolink>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+  );
+  // Exported menu link: menu-join-us_google-plus:<nolink>
+  $menu_links['menu-join-us_google-plus:<nolink>'] = array(
+    'menu_name' => 'menu-join-us',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
+    'link_title' => 'Google Plus',
+    'options' => array(
+      'alter' => TRUE,
+      'external' => TRUE,
+      'attributes' => array(
+        'class' => array(
+          0 => 'addthis-googleplus',
+        ),
+      ),
+      'identifier' => 'menu-join-us_google-plus:<nolink>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+  );
+  // Exported menu link: menu-join-us_linked-in:<nolink>
+  $menu_links['menu-join-us_linked-in:<nolink>'] = array(
+    'menu_name' => 'menu-join-us',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
+    'link_title' => 'Linked In',
+    'options' => array(
+      'alter' => TRUE,
+      'external' => TRUE,
+      'attributes' => array(
+        'class' => array(
+          0 => 'addthis-linkedin',
+        ),
+      ),
+      'identifier' => 'menu-join-us_linked-in:<nolink>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+  );
+  // Exported menu link: menu-join-us_rss:<nolink>
+  $menu_links['menu-join-us_rss:<nolink>'] = array(
+    'menu_name' => 'menu-join-us',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
+    'link_title' => 'RSS',
+    'options' => array(
+      'alter' => TRUE,
+      'external' => TRUE,
+      'attributes' => array(
+        'class' => array(
+          0 => 'addthis-rss',
+        ),
+      ),
+      'identifier' => 'menu-join-us_rss:<nolink>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 0,
+  );
+  // Exported menu link: menu-join-us_twitter:<nolink>
+  $menu_links['menu-join-us_twitter:<nolink>'] = array(
+    'menu_name' => 'menu-join-us',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
+    'link_title' => 'Twitter',
+    'options' => array(
+      'alter' => TRUE,
+      'external' => TRUE,
+      'attributes' => array(
+        'class' => array(
+          0 => 'addthis-twitter',
+        ),
+      ),
+      'identifier' => 'menu-join-us_twitter:<nolink>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+  );
   // Exported menu link: menu-linux-foundation-network_linux-foundation-events:http://events.linuxfoundation.org
   $menu_links['menu-linux-foundation-network_linux-foundation-events:http://events.linuxfoundation.org'] = array(
     'menu_name' => 'menu-linux-foundation-network',
@@ -478,7 +593,7 @@ function linux_menu_menu_default_menu_links() {
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 0,
+    'external' => 1,
     'has_children' => 1,
     'expanded' => 0,
     'weight' => 1,
@@ -627,9 +742,12 @@ function linux_menu_menu_default_menu_links() {
   t('Contests & Polls');
   t('Documentation');
   t('Download Linux');
+  t('Facebook');
   t('Forums');
+  t('Google Plus');
   t('How to Participate');
   t('Learn Linux');
+  t('Linked In');
   t('Linux Answers');
   t('Linux Directory');
   t('Linux Events');
@@ -651,8 +769,10 @@ function linux_menu_menu_default_menu_links() {
   t('Peripherals');
   t('Photos & Videos');
   t('Profile');
+  t('RSS');
   t('Search');
   t('Special Feature');
+  t('Twitter');
   t('What is Linux?');
 
 
