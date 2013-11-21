@@ -296,18 +296,19 @@ function linux_menu_menu_default_menu_links() {
     'weight' => 0,
     'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
   );
-  // Exported menu link: menu-primary-menu_forums:<front>
-  $menu_links['menu-primary-menu_forums:<front>'] = array(
+  // Exported menu link: menu-primary-menu_forums:forum
+  $menu_links['menu-primary-menu_forums:forum'] = array(
     'menu_name' => 'menu-primary-menu',
-    'link_path' => '<front>',
-    'router_path' => '<front>',
+    'link_path' => 'forum',
+    'router_path' => 'forum',
     'link_title' => 'Forums',
     'options' => array(
-      'identifier' => 'menu-primary-menu_forums:<front>',
+      'identifier' => 'menu-primary-menu_forums:forum',
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
