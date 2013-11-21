@@ -86,8 +86,8 @@ function linux_landing_pages_uuid_features_default_content() {
   'panelizer' => array(
     'page_manager' => array(
       'entity_type' => 'node',
-      'entity_id' => 1008,
-      'revision_id' => 1008,
+      'entity_id' => 1003,
+      'revision_id' => 1003,
       'name' => NULL,
       'no_blocks' => 0,
       'css_id' => '',
@@ -95,7 +95,7 @@ function linux_landing_pages_uuid_features_default_content() {
       'pipeline' => 'standard',
       'contexts' => array(),
       'relationships' => array(),
-      'did' => 3,
+      'did' => 1,
       'view_mode' => 'page_manager',
       'css_class' => '',
       'title_element' => 'H2',
@@ -104,9 +104,9 @@ function linux_landing_pages_uuid_features_default_content() {
       'display' => array(
         'args' => array(),
         'content' => array(
-          16 => array(
-            'pid' => 16,
-            'did' => 3,
+          1 => array(
+            'pid' => 1,
+            'did' => 1,
             'panel' => 'three_25_50_25_first',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_1',
@@ -122,9 +122,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          17 => array(
-            'pid' => 17,
-            'did' => 3,
+          2 => array(
+            'pid' => 2,
+            'did' => 1,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_7',
@@ -143,9 +143,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          18 => array(
-            'pid' => 18,
-            'did' => 3,
+          3 => array(
+            'pid' => 3,
+            'did' => 1,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_8',
@@ -168,9 +168,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 1,
             'locks' => array(),
           ),
-          19 => array(
-            'pid' => 19,
-            'did' => 3,
+          4 => array(
+            'pid' => 4,
+            'did' => 1,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_8',
@@ -193,9 +193,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 2,
             'locks' => array(),
           ),
-          20 => array(
-            'pid' => 20,
-            'did' => 3,
+          5 => array(
+            'pid' => 5,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'block',
             'subtype' => 'bean-have-a-tip',
@@ -214,9 +214,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          21 => array(
-            'pid' => 21,
-            'did' => 3,
+          6 => array(
+            'pid' => 6,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'block',
             'subtype' => 'bean-ad-space-homepage-right-top',
@@ -235,9 +235,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 1,
             'locks' => array(),
           ),
-          22 => array(
-            'pid' => 22,
-            'did' => 3,
+          7 => array(
+            'pid' => 7,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_2',
@@ -256,9 +256,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 2,
             'locks' => array(),
           ),
-          23 => array(
-            'pid' => 23,
-            'did' => 3,
+          8 => array(
+            'pid' => 8,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_3',
@@ -277,9 +277,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 3,
             'locks' => array(),
           ),
-          24 => array(
-            'pid' => 24,
-            'did' => 3,
+          9 => array(
+            'pid' => 9,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_4',
@@ -298,9 +298,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 4,
             'locks' => array(),
           ),
-          25 => array(
-            'pid' => 25,
-            'did' => 3,
+          10 => array(
+            'pid' => 10,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_5',
@@ -319,9 +319,9 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 5,
             'locks' => array(),
           ),
-          26 => array(
-            'pid' => 26,
-            'did' => 3,
+          11 => array(
+            'pid' => 11,
+            'did' => 1,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
             'subtype' => 'home_page-panel_pane_6',
@@ -343,27 +343,27 @@ function linux_landing_pages_uuid_features_default_content() {
         ),
         'panels' => array(
           'three_25_50_25_first' => array(
-            0 => 16,
+            0 => 1,
           ),
           'three_25_50_25_second' => array(
-            0 => 17,
-            1 => 18,
-            2 => 19,
+            0 => 2,
+            1 => 3,
+            2 => 4,
           ),
           'three_25_50_25_third' => array(
-            0 => 20,
-            1 => 21,
-            2 => 22,
-            3 => 23,
-            4 => 24,
-            5 => 25,
-            6 => 26,
+            0 => 5,
+            1 => 6,
+            2 => 7,
+            3 => 8,
+            4 => 9,
+            5 => 10,
+            6 => 11,
           ),
         ),
         'incoming_content' => NULL,
         'css_id' => NULL,
         'context' => array(),
-        'did' => 3,
+        'did' => 1,
         'renderer' => 'standard',
         'layout' => 'three_25_50_25',
         'layout_settings' => array(),
@@ -380,13 +380,13 @@ function linux_landing_pages_uuid_features_default_content() {
         'cache' => array(),
         'title' => 'Home',
         'hide_title' => 0,
-        'title_pane' => 15,
+        'title_pane' => 0,
       ),
     ),
     'default' => array(
       'entity_type' => 'node',
-      'entity_id' => 1008,
-      'revision_id' => 1008,
+      'entity_id' => 1003,
+      'revision_id' => 1003,
       'name' => NULL,
       'no_blocks' => 0,
       'css_id' => '',
@@ -403,8 +403,8 @@ function linux_landing_pages_uuid_features_default_content() {
       'display' => array(
         'args' => array(),
         'content' => array(
-          3 => array(
-            'pid' => 3,
+          12 => array(
+            'pid' => 12,
             'did' => 2,
             'panel' => 'three_25_50_25_first',
             'type' => 'views_panes',
@@ -421,8 +421,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          4 => array(
-            'pid' => 4,
+          13 => array(
+            'pid' => 13,
             'did' => 2,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
@@ -442,8 +442,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          5 => array(
-            'pid' => 5,
+          14 => array(
+            'pid' => 14,
             'did' => 2,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
@@ -467,8 +467,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 1,
             'locks' => array(),
           ),
-          6 => array(
-            'pid' => 6,
+          15 => array(
+            'pid' => 15,
             'did' => 2,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
@@ -492,8 +492,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 2,
             'locks' => array(),
           ),
-          7 => array(
-            'pid' => 7,
+          16 => array(
+            'pid' => 16,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'block',
@@ -513,8 +513,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 0,
             'locks' => array(),
           ),
-          8 => array(
-            'pid' => 8,
+          17 => array(
+            'pid' => 17,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'block',
@@ -534,8 +534,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 1,
             'locks' => array(),
           ),
-          9 => array(
-            'pid' => 9,
+          18 => array(
+            'pid' => 18,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
@@ -555,8 +555,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 2,
             'locks' => array(),
           ),
-          10 => array(
-            'pid' => 10,
+          19 => array(
+            'pid' => 19,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
@@ -576,8 +576,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 3,
             'locks' => array(),
           ),
-          11 => array(
-            'pid' => 11,
+          20 => array(
+            'pid' => 20,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
@@ -597,8 +597,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 4,
             'locks' => array(),
           ),
-          12 => array(
-            'pid' => 12,
+          21 => array(
+            'pid' => 21,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
@@ -618,8 +618,8 @@ function linux_landing_pages_uuid_features_default_content() {
             'position' => 5,
             'locks' => array(),
           ),
-          13 => array(
-            'pid' => 13,
+          22 => array(
+            'pid' => 22,
             'did' => 2,
             'panel' => 'three_25_50_25_third',
             'type' => 'views_panes',
@@ -642,21 +642,21 @@ function linux_landing_pages_uuid_features_default_content() {
         ),
         'panels' => array(
           'three_25_50_25_first' => array(
-            0 => 3,
+            0 => 12,
           ),
           'three_25_50_25_second' => array(
-            0 => 4,
-            1 => 5,
-            2 => 6,
+            0 => 13,
+            1 => 14,
+            2 => 15,
           ),
           'three_25_50_25_third' => array(
-            0 => 7,
-            1 => 8,
-            2 => 9,
-            3 => 10,
-            4 => 11,
-            5 => 12,
-            6 => 13,
+            0 => 16,
+            1 => 17,
+            2 => 18,
+            3 => 19,
+            4 => 20,
+            5 => 21,
+            6 => 22,
           ),
         ),
         'incoming_content' => NULL,
@@ -692,6 +692,267 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'a:1:{s:12:"admin_select";s:10:"admin_menu";}',
   'workbench_access' => array(),
   'date' => '2013-11-13 00:13:27 +0000',
+);
+  $nodes[] = array(
+  'uid' => 1,
+  'title' => 'Community Blogs',
+  'log' => '',
+  'status' => 1,
+  'comment' => 1,
+  'promote' => 0,
+  'sticky' => 0,
+  'vuuid' => '88aef778-336d-4fb7-83d0-38971463725a',
+  'type' => 'landing_page',
+  'language' => 'und',
+  'created' => 1385018166,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => '971c81fc-2fd8-4b6e-8b67-4214f23ef1b8',
+  'revision_uid' => 1,
+  'body' => array(),
+  'metatags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'panelizer' => array(
+    'page_manager' => array(
+      'entity_type' => 'node',
+      'entity_id' => 1004,
+      'revision_id' => 1004,
+      'name' => NULL,
+      'no_blocks' => 0,
+      'css_id' => '',
+      'css' => '',
+      'pipeline' => 'standard',
+      'contexts' => array(),
+      'relationships' => array(),
+      'did' => 3,
+      'view_mode' => 'page_manager',
+      'css_class' => '',
+      'title_element' => 'H2',
+      'link_to_entity' => 1,
+      'extra' => array(),
+      'display' => array(
+        'args' => array(),
+        'content' => array(
+          25 => array(
+            'pid' => 25,
+            'did' => 3,
+            'panel' => 'three_25_50_25_first',
+            'type' => 'views_panes',
+            'subtype' => 'home_page-panel_pane_1',
+            'shown' => 1,
+            'access' => array(),
+            'configuration' => array(),
+            'cache' => array(),
+            'style' => array(
+              'settings' => NULL,
+            ),
+            'css' => array(),
+            'extras' => array(),
+            'position' => 0,
+            'locks' => array(),
+          ),
+          26 => array(
+            'pid' => 26,
+            'did' => 3,
+            'panel' => 'three_25_50_25_second',
+            'type' => 'views_panes',
+            'subtype' => 'blog-panel_pane_1',
+            'shown' => 1,
+            'access' => array(),
+            'configuration' => array(),
+            'cache' => array(),
+            'style' => array(
+              'settings' => NULL,
+            ),
+            'css' => array(),
+            'extras' => array(),
+            'position' => 0,
+            'locks' => array(),
+          ),
+        ),
+        'panels' => array(
+          'three_25_50_25_first' => array(
+            0 => 25,
+          ),
+          'three_25_50_25_second' => array(
+            0 => 26,
+          ),
+        ),
+        'incoming_content' => NULL,
+        'css_id' => NULL,
+        'context' => array(),
+        'did' => 3,
+        'renderer' => 'standard',
+        'layout' => 'three_25_50_25',
+        'layout_settings' => array(),
+        'panel_settings' => array(
+          'style_settings' => array(
+            'default' => NULL,
+            'three_25_50_25_top' => NULL,
+            'three_25_50_25_first' => NULL,
+            'three_25_50_25_second' => NULL,
+            'three_25_50_25_third' => NULL,
+            'three_25_50_25_bottom' => NULL,
+          ),
+        ),
+        'cache' => array(),
+        'title' => '%node:title',
+        'hide_title' => 0,
+        'title_pane' => 24,
+      ),
+    ),
+    'default' => array(
+      'entity_type' => 'node',
+      'entity_id' => 1004,
+      'revision_id' => 1004,
+      'name' => 'node:landing_page:default:default',
+      'no_blocks' => 0,
+      'css_id' => '',
+      'css' => '',
+      'pipeline' => 'standard',
+      'contexts' => array(),
+      'relationships' => array(),
+      'did' => 0,
+      'view_mode' => 'default',
+      'css_class' => '',
+      'title_element' => 'H2',
+      'link_to_entity' => 1,
+      'extra' => array(),
+      'display' => array(
+        'args' => array(),
+        'content' => array(
+          'new-3' => array(
+            'pid' => 'new-3',
+            'panel' => 'center',
+            'type' => 'entity_field',
+            'subtype' => 'node:body',
+            'shown' => TRUE,
+            'access' => array(),
+            'configuration' => array(
+              'label' => 'hidden',
+              'formatter' => 'text_default',
+              'delta_limit' => 0,
+              'delta_offset' => 0,
+              'delta_reversed' => FALSE,
+              'formatter_settings' => array(),
+              'context' => 'panelizer',
+            ),
+            'cache' => array(),
+            'style' => array(),
+            'css' => array(),
+            'extras' => array(),
+            'position' => 0,
+            'locks' => array(),
+          ),
+          'new-4' => array(
+            'pid' => 'new-4',
+            'panel' => 'center',
+            'type' => 'node_links',
+            'subtype' => 'node_links',
+            'shown' => TRUE,
+            'access' => array(),
+            'configuration' => array(
+              'override_title' => FALSE,
+              'override_title_text' => '',
+              'build_mode' => 'default',
+              'identifier' => '',
+              'link' => TRUE,
+              'context' => 'panelizer',
+            ),
+            'cache' => array(),
+            'style' => array(),
+            'css' => array(
+              'css_class' => 'link-wrapper',
+            ),
+            'extras' => array(),
+            'position' => 0,
+            'locks' => array(),
+          ),
+        ),
+        'panels' => array(
+          'center' => array(
+            0 => 'new-3',
+            1 => 'new-4',
+          ),
+        ),
+        'incoming_content' => NULL,
+        'css_id' => NULL,
+        'context' => array(),
+        'did' => 'new',
+        'renderer' => 'standard',
+        'layout' => 'flexible',
+        'layout_settings' => array(),
+        'panel_settings' => array(),
+        'cache' => array(),
+        'title' => '%node:title',
+        'hide_title' => 0,
+        'title_pane' => 'new-4',
+      ),
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 1,
+  'comment_count' => 0,
+  'name' => 'admin',
+  'picture' => 0,
+  'data' => 'a:1:{s:12:"admin_select";s:10:"admin_menu";}',
+  'workbench_access' => array(),
+  'date' => '2013-11-21 07:16:06 +0000',
 );
   return $nodes;
 }
