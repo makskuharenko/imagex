@@ -15,6 +15,7 @@ dependencies[] = og_role_field
 dependencies[] = radioactivity
 dependencies[] = migrate
 dependencies[] = migrate_extras
+dependencies[] = date_migrate
 
 ; ImageX component dependencies.
 dependencies[] = imagex_addthis

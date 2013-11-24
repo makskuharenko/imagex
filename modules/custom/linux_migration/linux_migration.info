@@ -7,6 +7,7 @@ version = 7.x-1.0
 project = linux_migration
 dependencies[] = imagex_migration
 dependencies[] = linux_transition
+dependencies[] = date_migrate
 
 files[] = includes/LinuxMigration.class.inc
 files[] = includes/LinuxUserMigration.class.inc
@@ -28,3 +29,7 @@ files[] = includes/LinuxQuestionMigration.class.inc
 files[] = includes/LinuxQuestionMigrationSourceSql.class.inc
 files[] = includes/LinuxAnswerMigration.class.inc
 files[] = includes/LinuxAnswerMigrationSourceSql.class.inc
+files[] = includes/LinuxEventCategoryMigration.class.inc
+files[] = includes/LinuxEventCategoryMigrationSourceSql.class.inc
+files[] = includes/LinuxEventMigration.class.inc
+files[] = includes/LinuxEventMigrationSourceSql.class.inc

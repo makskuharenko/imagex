@@ -28,6 +28,9 @@ function linux_migration_migrate_api() {
         'disable_hooks' => $disable_hooks,
       ),
     ),
+    'field handlers' => array(
+      'DateMigrateFieldHandler',
+    ),
     'migrations' => array(
       'LinuxUser' => array(
         'class_name' => 'LinuxUserMigration',
@@ -121,6 +124,28 @@ function linux_migration_migrate_api() {
         'class_name' => 'LinuxAnswerMigration',
         'group_name' => 'linux',
         'description' => 'Migrate Linux.com answers',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxEventCategory' => array(
+        'class_name' => 'LinuxEventCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com event categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxEvent' => array(
+        'class_name' => 'LinuxEventMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com events',
         'source' => array(
           'connection' => array(
             'name' => 'linux-joomla',
