@@ -153,6 +153,28 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxDirectoryCategory' => array(
+        'class_name' => 'LinuxDirectoryCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com directory categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxDirectory' => array(
+        'class_name' => 'LinuxDirectoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com directories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }

@@ -33,3 +33,7 @@ files[] = includes/LinuxEventCategoryMigration.class.inc
 files[] = includes/LinuxEventCategoryMigrationSourceSql.class.inc
 files[] = includes/LinuxEventMigration.class.inc
 files[] = includes/LinuxEventMigrationSourceSql.class.inc
+files[] = includes/LinuxDirectoryCategoryMigration.class.inc
+files[] = includes/LinuxDirectoryCategoryMigrationSourceSql.class.inc
+files[] = includes/LinuxDirectoryMigration.class.inc
+files[] = includes/LinuxDirectoryMigrationSourceSql.class.inc
