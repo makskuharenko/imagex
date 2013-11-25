@@ -1,0 +1,14 @@
+.linux-voting-recommend-widget div {
+  display: inline;
+  cursor: pointer;
+}
+
+.linux-voting-recommend-widget .up-active span.recommend,
+.linux-voting-recommend-widget .up-inactive span.unrecommend {
+  display: none;
+}
+
+.linux-voting-recommend-widget .up-inactive span.recommend,
+.linux-voting-recommend-widget .up-active span.unrecommend {
+  display: inline;
+}

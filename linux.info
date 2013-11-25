@@ -66,4 +66,5 @@ dependencies[] = linux_poll
 dependencies[] = linux_tutorial
 dependencies[] = linux_user_permissions
 dependencies[] = linux_user_tags
+dependencies[] = linux_voting
 dependencies[] = linux_wiki

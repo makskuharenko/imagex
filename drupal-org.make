@@ -31,6 +31,12 @@ projects[migrate][version] = "2.x-dev"
 projects[migrate_extras][type] = "module"
 projects[migrate_extras][subdir] = "contrib"
 projects[migrate_extras][version] = "2.5"
+projects[votingapi][type] = "module"
+projects[votingapi][subdir] = "contrib"
+projects[votingapi][version] = "2.11"
+projects[vote_up_down][type] = "module"
+projects[vote_up_down][subdir] = "contrib"
+projects[vote_up_down][version] = "1.0-alpha1"
 
 ; Download ImageX components for this project.
 projects[imagex_addthis][type] = "module"

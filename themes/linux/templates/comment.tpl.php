@@ -34,8 +34,8 @@ if ($classes) {
     <?php endif; ?>
   </div>
 </article>
+<?php print render($comment->vud_comment_widget); ?>
 <?php print render($content['links']) ?>
-
 <?php if( theme_get_setting('mothership_poorthemers_helper') ){ ?>
 <!-- comment.tpl.php -->
 <?php } ?>
