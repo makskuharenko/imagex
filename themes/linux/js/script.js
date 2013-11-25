@@ -76,12 +76,12 @@
     });
 
 
-    $('.filtered-menu').on('click', 'a', function(e) {
+    $('.filtered-menu').on('click', 'a, span', function(e) {
       e.preventDefault();
 
       var selectedText = $(this).text();
 
-      filtersView = $(this).parents('div.pane-menu').next();
+      filtersView = $(this).parents('div.filtered-menu').next();
       currentClass = $(this).attr('class');
 
       filtersView.find('h2').removeClass().addClass('pane-title ' + currentClass);
