@@ -37,3 +37,5 @@ files[] = includes/LinuxDirectoryCategoryMigration.class.inc
 files[] = includes/LinuxDirectoryCategoryMigrationSourceSql.class.inc
 files[] = includes/LinuxDirectoryMigration.class.inc
 files[] = includes/LinuxDirectoryMigrationSourceSql.class.inc
+files[] = includes/LinuxNewsCommentMigration.class.inc
+files[] = includes/LinuxNewsCommentMigrationSourceSql.class.inc

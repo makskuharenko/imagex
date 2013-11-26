@@ -175,6 +175,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxNewsComment' => array(
+        'class_name' => 'LinuxNewsCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com news comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
