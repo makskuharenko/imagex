@@ -186,6 +186,39 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxForum' => array(
+        'class_name' => 'LinuxForumMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forums',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxForumTopic' => array(
+        'class_name' => 'LinuxForumTopicMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forum topics',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxForumPost' => array(
+        'class_name' => 'LinuxForumPostMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forum posts',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
