@@ -1638,6 +1638,152 @@ small {
   }
 }
 
+// User views and views rows with content type icons
+// -------------------------------------------------
+
+.user-activity {
+  margin: 0 0 10px;
+
+  .views-row {
+    margin: 0 0 20px 25px;
+
+    .views-field {
+      span {
+        display: inline;
+      }
+    }
+
+    .views-field-type {
+      font-weight: 700;
+      font-family: $condensedFontFamily;
+      text-transform: capitalize;
+      border-right: 1px solid $dropdownDividerTop;
+      padding: 0 7px 0 0;
+      margin: 0 10px 0 0;
+    }
+
+    .views-field-title {
+      a {
+        display: inline;
+        color: $grayDark;
+      }
+    }
+
+    .views-field-created {
+      em {
+        font-style: normal;
+      }
+
+      font-weight: 300;
+      font-family: $condensedFontFamily;
+      border-left: 1px solid $dropdownDividerTop;
+      margin: 0 0 0 7px;
+      padding: 0 0 0 10px;
+    }
+
+    &.Forum,
+    &.Blog,
+    &.Answer,
+    &.Question,
+    &.Article,
+    &.Tutorial,
+    &.Shared,
+    &.Review {
+      padding: 0 0 0 26px;
+    }
+
+
+    &.Forum {
+      background: transparent url('../img/forums-icon.png') no-repeat left center;
+    }
+
+    &.Blog {
+      background: transparent url('../img/blogs-icon.png') no-repeat left center;
+    }
+
+    &.Answer,
+    &.Question {
+      background: transparent url('../img/answers-icon.png') no-repeat left center;
+    }
+
+    &.Article {
+      background: transparent url('../img/articles-icon.png') no-repeat left center;
+    }
+
+    &.Tutorial {
+      background: transparent url('../img/tutorials-icon.png') no-repeat left center;
+    }
+
+    &.Shared {
+      background: transparent url('../img/shared-icon.png') no-repeat left center;
+    }
+
+    &.Review {
+      background: transparent url('../img/reviews-icon.png') no-repeat left center;
+    }
+  }
+}
+
+.user-activity-stats {
+  .views-row {
+    height: 32px;
+    margin: 0 0 20px 25px;
+    line-height: 32px;
+
+    .views-field-type {
+      font-family: $condensedFontFamily;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .views-field-type-1 {
+      font-family: $condensedFontFamily;
+      font-weight: 300;
+    }
+
+    &.Forum,
+    &.Blogs,
+    &.Answers,
+    &.Questions,
+    &.Articles,
+    &.Tutorials,
+    &.Shareds,
+    &.Reviews {
+      padding: 0 0 0 42px;
+    }
+
+
+    &.Forum {
+      background: transparent url('../img/forums-stat-icon.png') no-repeat left center;
+    }
+
+    &.Blogs {
+      background: transparent url('../img/blog-stat-icon.png') no-repeat left center;
+    }
+
+    &.Answers,
+    &.Questions {
+      background: transparent url('../img/answers-stat-icon.png') no-repeat left center;
+    }
+
+    &.Articles {
+      background: transparent url('../img/articles-stat-icon.png') no-repeat left center;
+    }
+
+    &.Tutorials {
+      background: transparent url('../img/tutorials-stat-icon.png') no-repeat left center;
+    }
+
+    &.Shareds {
+      background: transparent url('../img/shared-stat-icon.png') no-repeat left center;
+    }
+
+    &.Reviews {
+      background: transparent url('../img/reviews-stat-icon.png') no-repeat left center;
+    }
+  }
+}
+
 // jPanel Menu styling
 // -------------------
 

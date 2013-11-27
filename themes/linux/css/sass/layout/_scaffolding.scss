@@ -78,7 +78,7 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 .three-25-50-25 {
   .region-first {
     display: none;
-    
+
     @include at-breakpoint($computer) {
       @include span-columns(5, 14);
       display: block;
@@ -119,7 +119,7 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 .two-33-66 {
   .region-first {
     display: none;
-    
+
     @include at-breakpoint($computer) {
       @include span-columns(5, 16);
       display: block;
@@ -140,29 +140,6 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 
     @include at-breakpoint($wide) {
       @include span-columns(12 omega, 16);
-    }
-
-    .standard-bean {
-      @include span-columns(12 omega, 12);
-      clear: right;
-
-      @include at-breakpoint($computer) {
-        @include span-columns(6, 12);
-      }
-
-      &:last-child {
-        @include at-breakpoint($computer) {
-          @include span-columns(6 omega, 12);
-        }
-
-        @include at-breakpoint($wide) {
-          @include span-columns(4 omega, 12);
-        }
-      }
-
-      @include at-breakpoint($wide) {
-        @include span-columns(4 omega, 12);
-      }
     }
   }
 }

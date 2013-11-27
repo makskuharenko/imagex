@@ -1158,33 +1158,6 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
       width: 74.68354%;
       float: right;
       margin-right: 0; } }
-  .two-33-66 .region-second .standard-bean {
-    width: 100%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -1.5em;
-    display: inline;
-    clear: right; }
-    @media (min-width: 45.5em) {
-      .two-33-66 .region-second .standard-bean {
-        width: 49.15254%;
-        float: left;
-        margin-right: 1.69492%; } }
-    @media (min-width: 45.5em) {
-      .two-33-66 .region-second .standard-bean:last-child {
-        width: 49.15254%;
-        float: right;
-        margin-right: 0; } }
-    @media (min-width: 62.125em) {
-      .two-33-66 .region-second .standard-bean:last-child {
-        width: 32.20339%;
-        float: right;
-        margin-right: 0; } }
-    @media (min-width: 62.125em) {
-      .two-33-66 .region-second .standard-bean {
-        width: 32.20339%;
-        float: right;
-        margin-right: 0; } }
 
 p {
   margin: 0 0 12px; }
@@ -5028,6 +5001,75 @@ h1 {
           font-weight: 700;
           font-size: 13px;
           background: none; }
+
+.user-activity {
+  margin: 0 0 10px; }
+  .user-activity .views-row {
+    margin: 0 0 20px 25px; }
+    .user-activity .views-row .views-field span {
+      display: inline; }
+    .user-activity .views-row .views-field-type {
+      font-weight: 700;
+      font-family: "Open Sans Condensed";
+      text-transform: capitalize;
+      border-right: 1px solid #e5e5e5;
+      padding: 0 7px 0 0;
+      margin: 0 10px 0 0; }
+    .user-activity .views-row .views-field-title a {
+      display: inline;
+      color: #333333; }
+    .user-activity .views-row .views-field-created {
+      font-weight: 300;
+      font-family: "Open Sans Condensed";
+      border-left: 1px solid #e5e5e5;
+      margin: 0 0 0 7px;
+      padding: 0 0 0 10px; }
+      .user-activity .views-row .views-field-created em {
+        font-style: normal; }
+    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review {
+      padding: 0 0 0 26px; }
+    .user-activity .views-row.Forum {
+      background: transparent url("../img/forums-icon.png") no-repeat left center; }
+    .user-activity .views-row.Blog {
+      background: transparent url("../img/blogs-icon.png") no-repeat left center; }
+    .user-activity .views-row.Answer, .user-activity .views-row.Question {
+      background: transparent url("../img/answers-icon.png") no-repeat left center; }
+    .user-activity .views-row.Article {
+      background: transparent url("../img/articles-icon.png") no-repeat left center; }
+    .user-activity .views-row.Tutorial {
+      background: transparent url("../img/tutorials-icon.png") no-repeat left center; }
+    .user-activity .views-row.Shared {
+      background: transparent url("../img/shared-icon.png") no-repeat left center; }
+    .user-activity .views-row.Review {
+      background: transparent url("../img/reviews-icon.png") no-repeat left center; }
+
+.user-activity-stats .views-row {
+  height: 32px;
+  margin: 0 0 20px 25px;
+  line-height: 32px; }
+  .user-activity-stats .views-row .views-field-type {
+    font-family: "Open Sans Condensed";
+    font-weight: 700;
+    font-size: 18px; }
+  .user-activity-stats .views-row .views-field-type-1 {
+    font-family: "Open Sans Condensed";
+    font-weight: 300; }
+  .user-activity-stats .views-row.Forum, .user-activity-stats .views-row.Blogs, .user-activity-stats .views-row.Answers, .user-activity-stats .views-row.Questions, .user-activity-stats .views-row.Articles, .user-activity-stats .views-row.Tutorials, .user-activity-stats .views-row.Shareds, .user-activity-stats .views-row.Reviews {
+    padding: 0 0 0 42px; }
+  .user-activity-stats .views-row.Forum {
+    background: transparent url("../img/forums-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Blogs {
+    background: transparent url("../img/blog-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Answers, .user-activity-stats .views-row.Questions {
+    background: transparent url("../img/answers-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Articles {
+    background: transparent url("../img/articles-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Tutorials {
+    background: transparent url("../img/tutorials-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Shareds {
+    background: transparent url("../img/shared-stat-icon.png") no-repeat left center; }
+  .user-activity-stats .views-row.Reviews {
+    background: transparent url("../img/reviews-stat-icon.png") no-repeat left center; }
 
 #jPanelMenu-menu {
   background: white; }
