@@ -1645,7 +1645,11 @@ small {
   margin: 0 0 10px;
 
   .views-row {
-    margin: 0 0 20px 25px;
+    margin: 10px 0;
+
+    @include at-breakpoint($tablet) {
+      margin: 0 0 20px 25px;
+    }
 
     .views-field {
       span {
@@ -1654,12 +1658,17 @@ small {
     }
 
     .views-field-type {
+      display: none;
       font-weight: 700;
       font-family: $condensedFontFamily;
       text-transform: capitalize;
       border-right: 1px solid $dropdownDividerTop;
       padding: 0 7px 0 0;
       margin: 0 10px 0 0;
+
+      @include at-breakpoint($tablet) {
+        display: inline;
+      }
     }
 
     .views-field-title {
@@ -1727,8 +1736,12 @@ small {
 .user-activity-stats {
   .views-row {
     height: 32px;
-    margin: 0 0 20px 25px;
     line-height: 32px;
+    margin: 10px 0;
+
+    @include at-breakpoint($tablet) {
+      margin: 0 0 20px 25px;
+    }
 
     .views-field-type {
       font-family: $condensedFontFamily;
@@ -1780,6 +1793,136 @@ small {
 
     &.Reviews {
       background: transparent url('../img/reviews-stat-icon.png') no-repeat left center;
+    }
+  }
+}
+
+// Profile detail view styles
+// --------------------------
+
+.profile-details {
+  .views-row {
+    background: $tableBackgroundHover;
+    margin: 0 0 2em;
+    padding: 20px;
+    float: left;
+    width: 100%;
+
+    .views-field-field-profile-image {
+      padding-right: 20px;
+
+      @include at-breakpoint($tablet) {
+        float: left;
+      }
+
+      img {
+        @include border-radius(4px);
+      }
+    }
+
+    .views-field-field-linux-name {
+      margin: 1em 0;
+
+      @include at-breakpoint($tablet) {
+        margin-top: 0;
+      }
+
+      h1 {
+        display: inline;
+        font-size: 32px;
+        line-height: 36px;
+
+        @include at-breakpoint($tablet) {
+          font-size: 48px;
+          line-height: 52px;
+        }
+      }
+    }
+
+    .views-field-nothing,
+    .views-field-nothing-1 {
+      font-size: 13px;
+
+      @include at-breakpoint($wide) {
+        display: block;
+        width: 45%;
+        float: left;
+      }
+
+      .field-label {
+        font-weight: 700;
+        font-size: 13px;
+        font-family: $condensedFontFamily;
+        border-right: 1px solid #AAA;
+        margin: 0 8px 0 0;
+        padding: 0 8px 0 0;
+        color: #AAA;
+      }
+
+      .field-content {
+        font-size: 14px;
+        font-family: $condensedFontFamily;
+        font-weight: 700;
+      }
+
+      .twitter,
+      .facebook,
+      .google,
+      .linkedin,
+      .rss {
+        width: 18px;
+        height: 18px;
+        overflow: hidden;
+        background: $linuxDarkGray;
+        color: white;
+        text-align: center;
+        float: left;
+        margin: 10px 4px 0 0;
+        position: relative;
+        @include border-radius(1px);
+
+        &:before {
+          display: block !important;
+          padding: 0 !important;
+          line-height: 18px !important;
+          font-size: 12px;
+        }
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 18px;
+        }
+      }
+
+      .facebook {
+        @include icon-facebook;
+      }
+
+      .twitter {
+        @include icon-twitter;
+      }
+
+      .google {
+        @include icon-google-plus;
+      }
+
+      .linkedin {
+        @include icon-linkedin;
+      }
+
+      .rss {
+        @include icon-rss;
+      }
+    }
+
+    .views-field-nothing-1 {
+      display: inline-block;
+
+      @include at-breakpoint($wide) {
+        width: 25%;
+      }
     }
   }
 }
