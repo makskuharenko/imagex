@@ -1647,10 +1647,6 @@ small {
   .views-row {
     margin: 10px 0;
 
-    @include at-breakpoint($tablet) {
-      margin: 0 0 20px 25px;
-    }
-
     .views-field {
       span {
         display: inline;
@@ -1698,37 +1694,37 @@ small {
     &.Tutorial,
     &.Shared,
     &.Review {
-      padding: 0 0 0 26px;
+      padding: 0 26px 0 46px;
     }
 
 
     &.Forum {
-      background: transparent url('../img/forums-icon.png') no-repeat left center;
+      background: transparent url('../img/forums-icon.png') no-repeat 20px center;
     }
 
     &.Blog {
-      background: transparent url('../img/blogs-icon.png') no-repeat left center;
+      background: transparent url('../img/blogs-icon.png') no-repeat 20px center;
     }
 
     &.Answer,
     &.Question {
-      background: transparent url('../img/answers-icon.png') no-repeat left center;
+      background: transparent url('../img/answers-icon.png') no-repeat 20px center;
     }
 
     &.Article {
-      background: transparent url('../img/articles-icon.png') no-repeat left center;
+      background: transparent url('../img/articles-icon.png') no-repeat 20px center;
     }
 
     &.Tutorial {
-      background: transparent url('../img/tutorials-icon.png') no-repeat left center;
+      background: transparent url('../img/tutorials-icon.png') no-repeat 20px center;
     }
 
     &.Shared {
-      background: transparent url('../img/shared-icon.png') no-repeat left center;
+      background: transparent url('../img/shared-icon.png') no-repeat 20px center;
     }
 
     &.Review {
-      background: transparent url('../img/reviews-icon.png') no-repeat left center;
+      background: transparent url('../img/reviews-icon.png') no-repeat 20px center;
     }
   }
 }
@@ -1738,10 +1734,6 @@ small {
     height: 32px;
     line-height: 32px;
     margin: 10px 0;
-
-    @include at-breakpoint($tablet) {
-      margin: 0 0 20px 25px;
-    }
 
     .views-field-type {
       font-family: $condensedFontFamily;
@@ -1762,37 +1754,37 @@ small {
     &.Tutorials,
     &.Shareds,
     &.Reviews {
-      padding: 0 0 0 42px;
+      padding: 0 0 0 62px;
     }
 
 
     &.Forum {
-      background: transparent url('../img/forums-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/forums-stat-icon.png') no-repeat 20px center;
     }
 
     &.Blogs {
-      background: transparent url('../img/blog-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/blog-stat-icon.png') no-repeat 20px center;
     }
 
     &.Answers,
     &.Questions {
-      background: transparent url('../img/answers-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/answers-stat-icon.png') no-repeat 20px center;
     }
 
     &.Articles {
-      background: transparent url('../img/articles-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/articles-stat-icon.png') no-repeat 20px center;
     }
 
     &.Tutorials {
-      background: transparent url('../img/tutorials-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/tutorials-stat-icon.png') no-repeat 20px center;
     }
 
     &.Shareds {
-      background: transparent url('../img/shared-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/shared-stat-icon.png') no-repeat 20px center;
     }
 
     &.Reviews {
-      background: transparent url('../img/reviews-stat-icon.png') no-repeat left center;
+      background: transparent url('../img/reviews-stat-icon.png') no-repeat 20px center;
     }
   }
 }

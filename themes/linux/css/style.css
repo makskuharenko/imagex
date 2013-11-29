@@ -5006,9 +5006,6 @@ h1 {
   margin: 0 0 10px; }
   .user-activity .views-row {
     margin: 10px 0; }
-    @media (min-width: 35em) {
-      .user-activity .views-row {
-        margin: 0 0 20px 25px; } }
     .user-activity .views-row .views-field span {
       display: inline; }
     .user-activity .views-row .views-field-type {
@@ -5034,29 +5031,26 @@ h1 {
       .user-activity .views-row .views-field-created em {
         font-style: normal; }
     .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review {
-      padding: 0 0 0 26px; }
+      padding: 0 26px 0 46px; }
     .user-activity .views-row.Forum {
-      background: transparent url("../img/forums-icon.png") no-repeat left center; }
+      background: transparent url("../img/forums-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Blog {
-      background: transparent url("../img/blogs-icon.png") no-repeat left center; }
+      background: transparent url("../img/blogs-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Answer, .user-activity .views-row.Question {
-      background: transparent url("../img/answers-icon.png") no-repeat left center; }
+      background: transparent url("../img/answers-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Article {
-      background: transparent url("../img/articles-icon.png") no-repeat left center; }
+      background: transparent url("../img/articles-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Tutorial {
-      background: transparent url("../img/tutorials-icon.png") no-repeat left center; }
+      background: transparent url("../img/tutorials-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Shared {
-      background: transparent url("../img/shared-icon.png") no-repeat left center; }
+      background: transparent url("../img/shared-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Review {
-      background: transparent url("../img/reviews-icon.png") no-repeat left center; }
+      background: transparent url("../img/reviews-icon.png") no-repeat 20px center; }
 
 .user-activity-stats .views-row {
   height: 32px;
   line-height: 32px;
   margin: 10px 0; }
-  @media (min-width: 35em) {
-    .user-activity-stats .views-row {
-      margin: 0 0 20px 25px; } }
   .user-activity-stats .views-row .views-field-type {
     font-family: "Open Sans Condensed";
     font-weight: 700;
@@ -5065,21 +5059,21 @@ h1 {
     font-family: "Open Sans Condensed";
     font-weight: 300; }
   .user-activity-stats .views-row.Forum, .user-activity-stats .views-row.Blogs, .user-activity-stats .views-row.Answers, .user-activity-stats .views-row.Questions, .user-activity-stats .views-row.Articles, .user-activity-stats .views-row.Tutorials, .user-activity-stats .views-row.Shareds, .user-activity-stats .views-row.Reviews {
-    padding: 0 0 0 42px; }
+    padding: 0 0 0 62px; }
   .user-activity-stats .views-row.Forum {
-    background: transparent url("../img/forums-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/forums-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Blogs {
-    background: transparent url("../img/blog-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/blog-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Answers, .user-activity-stats .views-row.Questions {
-    background: transparent url("../img/answers-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/answers-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Articles {
-    background: transparent url("../img/articles-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/articles-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Tutorials {
-    background: transparent url("../img/tutorials-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/tutorials-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Shareds {
-    background: transparent url("../img/shared-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/shared-stat-icon.png") no-repeat 20px center; }
   .user-activity-stats .views-row.Reviews {
-    background: transparent url("../img/reviews-stat-icon.png") no-repeat left center; }
+    background: transparent url("../img/reviews-stat-icon.png") no-repeat 20px center; }
 
 .profile-details .views-row {
   background: whitesmoke;
