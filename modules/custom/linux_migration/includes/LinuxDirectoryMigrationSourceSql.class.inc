@@ -25,9 +25,16 @@ class LinuxDirectoryMigrationSourceSql extends ImagexMigrateSourceSql {
       );
 
     $query->leftJoin('jos_mt_cl', 'jmc', 'jml.link_id = jmc.link_id');
-    $query->groupBy('jml.link_id');
-    $query->addExpression('GROUP_CONCAT(jmc.cat_id)', 'cats');
+    $query->leftJoin('jos_mt_cfvalues', 'jmcv', 'jml.link_id = jmcv.link_id');
+    $query->leftJoin('jos_mt_cfvalues_att', 'jmcva', 'jml.link_id = jmcva.link_id');
 
+    $query->fields('jmcva', array(
+      'raw_filename',
+    ));
+
+    $query->addExpression("GROUP_CONCAT(CONCAT(jmcv.cf_id, ':', jmcv.value))", 'cfval');
+    $query->groupBy('jml.link_id');
+    $query->addExpression('GROUP_CONCAT(DISTINCT(jmc.cat_id))', 'cats');
     return $query;
   }
 }
