@@ -6,7 +6,6 @@ php = 5.2.4
 version = 7.x-1.0
 project = linux_migration
 dependencies[] = imagex_migration
-dependencies[] = linux_transition
 dependencies[] = date_migrate
 
 files[] = includes/LinuxMigration.class.inc
