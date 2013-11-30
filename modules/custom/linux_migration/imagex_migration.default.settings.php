@@ -4,6 +4,7 @@
  * Database settings for migration.
  */
 
+// Joomla database credentials.
 $settings['source']['sql']['connections'] = array(
   'linux-joomla' => array(
     'default' => array(
@@ -17,3 +18,6 @@ $settings['source']['sql']['connections'] = array(
     ),
   ),
 );
+
+// Joomla files.
+$settings['source']['files']['directory'] = '';
