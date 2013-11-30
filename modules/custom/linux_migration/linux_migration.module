@@ -219,6 +219,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxWhitepaper' => array(
+        'class_name' => 'LinuxWhitepaperMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com whitepapers',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }

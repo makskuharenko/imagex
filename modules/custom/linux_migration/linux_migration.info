@@ -45,3 +45,5 @@ files[] = includes/LinuxForumTopicMigration.class.inc
 files[] = includes/LinuxForumTopicMigrationSourceSql.class.inc
 files[] = includes/LinuxForumPostMigration.class.inc
 files[] = includes/LinuxForumPostMigrationSourceSql.class.inc
+files[] = includes/LinuxWhitepaperMigration.class.inc
+files[] = includes/LinuxWhitepaperMigrationSourceSql.class.inc
