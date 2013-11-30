@@ -10,7 +10,7 @@ projects[drupal][patch][] = https://raw.github.com/imagex/imagex_patches/7.x/cor
 projects[imagex_installkit][type] = "profile"
 projects[imagex_installkit][download][type] = "git"
 projects[imagex_installkit][download][url] = "git@github.com:imagex/imagex_installkit.git"
-projects[imagex_installkit][download][branch] = "7.x-1.x-dev"
+projects[imagex_installkit][download][branch] = "7.x-1.x-linux"
 
 ; Download the Linux.com's installation profile, inherits ImageX base.
 projects[linux][type] = "profile"

@@ -95,6 +95,27 @@ function linux_footer_default_panels_mini() {
     $pane->pid = 'new-3';
     $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
+    $pane->subtype = 'menu-menu-join-us';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['minipanel_one_main'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'minipanel_one_main';
+    $pane->type = 'block';
     $pane->subtype = 'bean-copyright-information';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -111,10 +132,10 @@ function linux_footer_default_panels_mini() {
       'css_class' => '',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['minipanel_one_main'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['minipanel_one_main'][3] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;

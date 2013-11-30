@@ -241,15 +241,11 @@ small {
 
 .standard-bean {
   clear: left;
+  padding: 0 0 2em;
+  position: relative;
 
   > div {
     padding: 0 0 1px;
-  }
-
-  @include at-breakpoint($computer) {
-    > div {
-      padding: 2em 0;
-    }
   }
 
   h2 {
@@ -277,31 +273,37 @@ small {
       border-top: 1px solid $dropdownDividerTop;
       border-bottom: 1px solid $dropdownDividerTop;
       background: transparent;
+      margin-bottom: 2em;
     }
   }
 
-  a.orange-button {
-    display: none;
-    width: auto;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 25px;
-    padding: 0 10px;
-    @include border-radius(4px);
-    background: $linuxStdOrange;
-    color: white;
-    border: 2px solid white;
-    float: right;
-    margin: -68px 20px 0;
+  .more-link {
+    a {
+      display: none;
+      width: auto;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 25px;
+      padding: 0 10px;
+      @include border-radius(4px);
+      background: $linuxStdOrange;
+      color: white;
+      border: 2px solid white;
+      float: right;
+      position: absolute;
+      z-index: 50;
+      top: 11px;
+      right: 1.5em;
 
-    &:hover {
-      background: $linuxDarkOrange;
+      &:hover {
+        background: $linuxDarkOrange;
+      }
     }
   }
 
   @include at-breakpoint($computer) {
-    a.orange-button {
+    .more-link a {
       display: block;
     }
   }
@@ -331,8 +333,13 @@ small {
       }
     }
 
-    .views-field-title {
-      h3 {
+    .views-field-body,
+    .views-field-title,
+    .views-field-comment-body {
+      h3,
+      span,
+      a {
+        display: block;
         font-size: 13px;
         font-weight: 400;
         line-height: 20px;
@@ -348,6 +355,10 @@ small {
 }
 
 .diagonal-lines {
+  h2 {
+    margin: 0;
+  }
+
   > div {
     padding: 2em;
     background: transparent url('../img/content-lines.png') repeat top left;
@@ -523,6 +534,11 @@ small {
             }
           }
 
+          &.active,
+          &.active-trail {
+            border-bottom: 4px solid $dropdownDividerTop;
+          }
+
           > a,
           > span {
             display: block;
@@ -536,7 +552,6 @@ small {
             cursor: pointer;
 
             &.active {
-              border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
             }
           }
@@ -622,6 +637,11 @@ small {
             }
           }
 
+          &.active,
+          &.active-trail {
+            border-bottom: 4px solid $dropdownDividerTop;
+          }
+
           > a,
           > span {
             display: block;
@@ -675,7 +695,6 @@ small {
             }
 
             &.active {
-              border-bottom: 4px solid $dropdownDividerTop;
               color: $linuxStdOrange;
             }
           }
@@ -753,7 +772,7 @@ small {
   #block-bean-about-linux-foundation {
     font-size: 10px;
     color: $btnBorder;
-    margin: 0 0 30px;
+    margin: 0;
     text-align: right;
 
     p {
@@ -776,11 +795,40 @@ small {
     text-align: right;
   }
 
+  .pane-menu-menu-join-us {
+    width: 100%;
+    float: right;
+    background: none;
+    padding: 0;
+
+    ul {
+      li {
+        background: white;
+
+        &:hover {
+          background: $linuxStdOrange;
+
+          span {
+            color: white;
+          }
+        }
+
+        span {
+          color: $gray;
+        }
+      }
+    }
+  }
+
   @include at-breakpoint($computer) {
     #block-bean-copyright,
     #block-bean-about-linux-foundation {
       @include span-columns(5 omega, 16);
       text-align: right;
+    }
+
+    .pane-menu-menu-join-us {
+      width: auto;
     }
 
     #block-bean-copyright {
@@ -1144,7 +1192,9 @@ small {
 // Editorial View Listing and customized pane styles
 // -------------------------------------------------
 
-.editorial-pane {
+.editorial {
+  position: relative;
+
   h2 {
     border-bottom: 0;
     font-weight: 300;
@@ -1153,24 +1203,18 @@ small {
     padding: 0 20px;
     background: transparent none no-repeat 0 0;
     color: $linuxDarkGray;
-    border-color: $dropdownDividerTop;
+    border-top: 1px solid $dropdownDividerTop;
   }
-}
 
-@include at-breakpoint($computer) {
-  .editorial-pane {
+  @include at-breakpoint($computer) {
     h2 {
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0;
       padding: 0;
+      border-color: white;
     }
   }
-}
-
-.editorial {
-  padding: 0.5em 0 !important;
-  position: relative;
 
   .editorial-updated {
     display: block;
@@ -1178,7 +1222,7 @@ small {
     font-family: $condensedFontFamily;
     font-size: 13px;
     line-height: 25px;
-    margin: -25px 0 20px;
+    margin: -20px 0 20px;
     padding: 0 20px 10px;
     border-bottom: 1px solid $dropdownDividerTop;
   }
@@ -1189,14 +1233,14 @@ small {
       border: 0;
       position: absolute;
       right: 0;
-      top: -12px;
+      top: 38px;
     }
   }
 
   .views-row {
-    margin: 0 -5px;
+    margin: 0;
     padding: 20px;
-    width: auto;
+    width: 100%;
 
     &.views-row-even,
     &.views-row-odd {
@@ -1206,13 +1250,13 @@ small {
     .views-field-title {
       h3 {
         margin: 0 0 5px;
-        font-family: $monoFontFamily;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 24px;
 
         a {
           color: $grayDark;
+          font-family: $monoFontFamily;
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 24px;
         }
       }
     }
@@ -1220,8 +1264,10 @@ small {
     @include at-breakpoint($tablet) {
       .views-field-title {
         h3 {
+          a {
           font-size: 26px;
           line-height: 30px;
+          }
         }
       }
     }
@@ -1229,8 +1275,10 @@ small {
     @include at-breakpoint($computer) {
       .views-field-title {
         h3 {
-          font-size: 34px;
-          line-height: 36px;
+          a {
+            font-size: 34px;
+            line-height: 36px;
+          }
         }
       }
     }
@@ -1273,10 +1321,11 @@ small {
       }
     }
 
+    .views-field-body,
     .field-type-text-with-summary {
       visibility: hidden;
-      position: relative;
-      top: -170px;
+      position: absolute;
+      margin: 25px 0 0;
       height: 0;
       font-size: 12px;
       font-weight: 300;
@@ -1286,8 +1335,9 @@ small {
     }
 
     @include at-breakpoint($computer) {
+      .views-field-body,
       .field-type-text-with-summary {
-        top: -180px;
+
       }
     }
 
@@ -1315,61 +1365,65 @@ small {
       }
     }
 
+    .views-field-field-tags,
     .field-type-taxonomy-term-reference {
       visibility: hidden;
+      width: 80%;
 
-      .field-item {
-        display: inline;
-
-        a {
-          @include border-radius(3px);
-          background: $linuxDarkestOrange;
-          margin: 0;
-          padding: 2px 5px;
-          font-family: $condensedFontFamily;
-          font-size: 12px;
-          text-transform: capitalize;
-          letter-spacing: 0.1em;
-          color: white;
-        }
+      a {
+        display: inline-block;
+        @include border-radius(3px);
+        background: $linuxDarkestOrange;
+        margin: 0 4px 0 0;
+        padding: 0 5px;
+        font-family: $condensedFontFamily;
+        font-size: 12px;
+        text-transform: capitalize;
+        letter-spacing: 0.1em;
+        color: white;
       }
     }
 
-    .field-type-image {
+    .views-field-field-image {
       img {
+        width: 100%;
         border-bottom: 3px solid $linuxStdOrange;
       }
     }
 
-    &:hover {
-      background: $linuxStdOrange;
-      @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
+    @include at-breakpoint($tablet) {
+      &:hover {
+        background: $linuxStdOrange;
+        @include gradient-directional($linuxStdOrange, $linuxLightOrange, 345deg);
 
-      .views-field-title {
-        h3 {
-          a {
-            color: white;
+        .views-field-title {
+          h3 {
+            a {
+              color: white;
+            }
           }
         }
-      }
 
-      .views-field-name,
-      .views-field-created {
-        span {
-          color: $linuxDarkestOrange;
-          border-right-color: $linuxDarkestOrange;
+        .views-field-name,
+        .views-field-created {
+          span {
+            color: $linuxDarkestOrange;
+            border-right-color: $linuxDarkestOrange;
+          }
         }
-      }
 
-      .views-field-comment-count,
-      .field-type-image {
-        visibility: hidden;
-      }
+        .views-field-comment-count,
+        .views-field-field-image {
+          visibility: hidden;
+        }
 
-      .views-field-view-node,
-      .field-type-taxonomy-term-reference,
-      .field-type-text-with-summary {
-        visibility: visible;
+        .views-field-view-node,
+        .views-field-body,
+        .views-field-field-tags,
+        .field-type-taxonomy-term-reference,
+        .field-type-text-with-summary {
+          visibility: visible;
+        }
       }
     }
   }
@@ -1407,7 +1461,7 @@ small {
   }
 
   .views-row {
-    .field-type-image {
+    .views-field-field-image {
       img {
         margin: 5px 10px 0 0;
         border-bottom: 3px solid $linuxStdOrange;
@@ -1465,7 +1519,8 @@ small {
         background: $linuxDarkOrange;
       }
 
-      span {
+      span,
+      a {
         font-size: 17px;
 
         &.addthis-facebook {
@@ -1511,7 +1566,7 @@ small {
 // Most Recent menu filter
 // -----------------------
 
-.pane-menu-menu-most-recent-filter {
+.filtered-menu {
   display: none;
   position: relative;
   z-index: 99;
@@ -1528,6 +1583,7 @@ small {
     li {
       border-top: 1px solid $btnInverseBackground;
 
+      span,
       a {
         display: block;
         color: white;
@@ -1569,6 +1625,7 @@ small {
           font-size: 16px;
         }
 
+        span,
         a {
           color: darken(white, 60%);
           letter-spacing: 0em;

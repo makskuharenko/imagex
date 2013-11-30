@@ -14,7 +14,6 @@
         var interval = conf.linux_coveritlive_ajax_interval * 1000;
         var url = settings.linuxCoveritliveBlockAjax.url +'/'+  conf.linux_coveritlive_stream_key +'/'+ conf.linux_coveritlive_item_count;
         
-        console.log(interval);
         setInterval(function() {
           // Loader
           element.addClass('ajax-updating');
