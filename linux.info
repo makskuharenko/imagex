@@ -53,6 +53,7 @@ dependencies[] = linux_coveritlive
 dependencies[] = linux_directory
 dependencies[] = linux_events
 dependencies[] = linux_footer
+dependencies[] = linux_forum
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_group
 dependencies[] = linux_header
