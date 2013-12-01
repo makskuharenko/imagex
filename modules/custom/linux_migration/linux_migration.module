@@ -230,6 +230,11 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxManpage' => array(
+        'class_name' => 'LinuxManpageMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com manpages',
+      ),
     ),
   );
 }

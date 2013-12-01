@@ -21,3 +21,6 @@ $settings['source']['sql']['connections'] = array(
 
 // Joomla files.
 $settings['source']['files']['directory'] = '';
+
+// Manpages.
+$settings['source']['files']['manpages'] = '';
