@@ -17,3 +17,30 @@ function linux_landing_pages_node_insert($node) {
     variable_set('site_frontpage', $path);
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function linux_landing_pages_form_views_exposed_form_alter(&$form, &$form_state) {
+  $view = $form_state['view'];
+  if ($view->name == 'home_page' && $view->current_display == 'panel_pane_1') {
+    $form['#attached']['js'][] = drupal_get_path('module', 'linux_landing_pages') . '/js/landing_page.leftbar.js';
+    $form['#attached']['js'][] = drupal_get_path('module', 'linux_landing_pages') . '/js/leftbar.jquery.js';
+    $form['#attributes']['class'][] = 'js-leftbar-sort';
+  }
+}
+
+/**
+ * Implements hook_views_ajax_data_alter()
+ */
+function linux_landing_pages_views_ajax_data_alter(&$commands, $view) {
+  // Adds a trigger event to views ajax calls so we can react to them
+  if ($view->name == 'home_page' && $view->current_display == 'panel_pane_1') {
+    foreach ($commands as $command) {
+      if ($command['command'] == 'viewsScrollTop') {
+        $selector = $command['selector'];
+      }
+    }
+    $commands[] = array('command' => 'triggerDOMChange');
+  }
+}
