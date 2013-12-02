@@ -235,6 +235,17 @@ function linux_migration_migrate_api() {
         'group_name' => 'linux',
         'description' => 'Migrate Linux.com manpages',
       ),
+      'LinuxTutorial' => array(
+        'class_name' => 'LinuxTutorialMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com tutorials',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }

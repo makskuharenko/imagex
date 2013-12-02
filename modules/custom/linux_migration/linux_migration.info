@@ -47,3 +47,5 @@ files[] = includes/LinuxForumPostMigrationSourceSql.class.inc
 files[] = includes/LinuxWhitepaperMigration.class.inc
 files[] = includes/LinuxWhitepaperMigrationSourceSql.class.inc
 files[] = includes/LinuxManpageMigration.class.inc
+files[] = includes/LinuxTutorialMigration.class.inc
+files[] = includes/LinuxTutorialMigrationSourceSql.class.inc

@@ -10,7 +10,7 @@
 function linux_tutorial_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create tutorial content.
+  // Exported permission: 'create tutorial content'.
   $permissions['create tutorial content'] = array(
     'name' => 'create tutorial content',
     'roles' => array(
@@ -22,7 +22,7 @@ function linux_tutorial_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any tutorial content.
+  // Exported permission: 'delete any tutorial content'.
   $permissions['delete any tutorial content'] = array(
     'name' => 'delete any tutorial content',
     'roles' => array(
@@ -32,7 +32,7 @@ function linux_tutorial_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own tutorial content.
+  // Exported permission: 'delete own tutorial content'.
   $permissions['delete own tutorial content'] = array(
     'name' => 'delete own tutorial content',
     'roles' => array(
@@ -42,7 +42,7 @@ function linux_tutorial_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any tutorial content.
+  // Exported permission: 'edit any tutorial content'.
   $permissions['edit any tutorial content'] = array(
     'name' => 'edit any tutorial content',
     'roles' => array(
@@ -54,7 +54,7 @@ function linux_tutorial_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own tutorial content.
+  // Exported permission: 'edit own tutorial content'.
   $permissions['edit own tutorial content'] = array(
     'name' => 'edit own tutorial content',
     'roles' => array(
