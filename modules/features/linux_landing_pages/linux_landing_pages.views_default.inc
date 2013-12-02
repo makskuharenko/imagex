@@ -207,7 +207,6 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Most Recent';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  $handler->display->display_options['defaults']['css_class'] = 'landing-pages-left-bar';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
@@ -235,6 +234,21 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['created']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['created']['expose']['label'] = 'Most Recent';
+  /* Sort criterion: Content: Comment count */
+  $handler->display->display_options['sorts']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['sorts']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['sorts']['comment_count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['comment_count']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['comment_count']['expose']['label'] = 'Most Comments';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -250,24 +264,6 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'blog' => 'blog',
-  );
-  /* Filter criterion: Search: Search Terms */
-  $handler->display->display_options['filters']['keys']['id'] = 'keys';
-  $handler->display->display_options['filters']['keys']['table'] = 'search_index';
-  $handler->display->display_options['filters']['keys']['field'] = 'keys';
-  $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
-  $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    7 => 0,
-    5 => 0,
-    6 => 0,
-    4 => 0,
-    8 => 0,
   );
   $handler->display->display_options['pane_title'] = 'Home Page Left';
   $handler->display->display_options['pane_category']['name'] = 'Home Page';
@@ -956,6 +952,104 @@ function linux_landing_pages_views_default_views() {
     ),
   );
   $export['home_page'] = $view;
+
+  $view = new view();
+  $view->name = 'linux_answers';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'linux_answers';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'answer' => 'answer',
+  );
+  /* Filter criterion: Content: Question Locked (field_question_locked_p) */
+  $handler->display->display_options['filters']['field_question_locked_p_value']['id'] = 'field_question_locked_p_value';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['table'] = 'field_data_field_question_locked_p';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['field'] = 'field_question_locked_p_value';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['operator'] = 'empty';
+
+  /* Display: Unanswered Questions */
+  $handler = $view->new_display('panel_pane', 'Unanswered Questions', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Unanswered Questions';
+  $handler->display->display_options['pane_category']['name'] = 'Questions';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Recently Resolved */
+  $handler = $view->new_display('panel_pane', 'Recently Resolved', 'panel_pane_2');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'sidebar';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'answer' => 'answer',
+  );
+  /* Filter criterion: Content: Question Locked (field_question_locked_p) */
+  $handler->display->display_options['filters']['field_question_locked_p_value']['id'] = 'field_question_locked_p_value';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['table'] = 'field_data_field_question_locked_p';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['field'] = 'field_question_locked_p_value';
+  $handler->display->display_options['filters']['field_question_locked_p_value']['operator'] = 'not empty';
+  $handler->display->display_options['pane_category']['name'] = 'Questions';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $export['linux_answers'] = $view;
 
   return $export;
 }

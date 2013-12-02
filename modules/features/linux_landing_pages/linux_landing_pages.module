@@ -5,6 +5,16 @@
  */
 
 include_once 'linux_landing_pages.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function linux_landing_pages_entity_info_alter(&$entity_info) { 
+  $entity_info['node']['view modes']['sidebar'] = array(
+    'label' => t('Sidebar'),
+    'custom settings' => FALSE,
+  );
+}
 /**
  * Implements hook_node_insert().
  */
