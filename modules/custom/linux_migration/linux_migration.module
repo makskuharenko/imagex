@@ -257,6 +257,39 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxBlogComment' => array(
+        'class_name' => 'LinuxBlogCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com blog comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxTutorialComment' => array(
+        'class_name' => 'LinuxTutorialCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com tutorial comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxPageComment' => array(
+        'class_name' => 'LinuxPageCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com page comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }

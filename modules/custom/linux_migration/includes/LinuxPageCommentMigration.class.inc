@@ -1,13 +1,13 @@
 <?php
 
-class LinuxNewsCommentMigration extends LinuxMigration {
+class LinuxPageCommentMigration extends LinuxMigration {
   protected function init() {
     parent::init();
-    $this->dependencies = array('LinuxUser', 'LinuxNews');
+    $this->dependencies = array('LinuxUser', 'LinuxPage');
   }
 
   protected function setFieldMappings() {
-    $this->addFieldMapping('nid', 'row')->sourceMigration('LinuxNews');
+    $this->addFieldMapping('nid', 'row')->sourceMigration('LinuxPage');
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('comment_body', 'comment')->arguments(array('format' => 'full_html'));
     //@TODO: bbcode again
@@ -16,7 +16,7 @@ class LinuxNewsCommentMigration extends LinuxMigration {
     $this->addFieldMapping('name', 'username')->defaultValue(NULL);
     $this->addFieldMapping('mail', 'email')->defaultValue(NULL);
     $this->addFieldMapping('status', 'enabled');
-    $this->addFieldMapping('pid', 'parent')->sourceMigration('LinuxNewsComment');
+    $this->addFieldMapping('pid', 'parent')->sourceMigration('LinuxPageComment');
 
   }
 
@@ -58,7 +58,7 @@ class LinuxNewsCommentMigration extends LinuxMigration {
    *   Returns a newly created source object instance.
    */
   protected function getSourceObject() {
-    return new LinuxNewsCommentMigrationSourceSql($this);
+    return new LinuxPageCommentMigrationSourceSql($this);
   }
 
   /**
@@ -69,6 +69,46 @@ class LinuxNewsCommentMigration extends LinuxMigration {
    *   Returns a newly created destination object instance.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationComment('comment_node_imagex_news');
+    return new MigrateDestinationComment('comment_node_page');
+  }
+}
+
+class LinuxPageCommentMigrationSourceSql extends ImagexMigrateSourceSql {
+  /**
+   * Setup the source query/connection.
+   *
+   * @return SelectQueryInterface
+   *   Return the query/connection.
+   */
+  protected function getSourceQuery() {
+    $query = $this->getSourceConnection()
+      ->select('jos_lfcomments_comments', 'jlc');
+    $query->leftJoin('jos_lfcomments_relations', 'jlr', 'jlc.lfcomments_comment_id = jlr.lfcomments_comment_id');
+    $query->leftJoin('jos_content', 'jc', 'jlr.row = jc.id');
+
+    $query->fields('jlc', array(
+        'lfcomments_comment_id',
+        'comment',
+        'enabled',
+        'created_on',
+        'created_by',
+        'level',
+        'path',
+        'ordering',
+        'path_sort',
+        'path_sort_ordering',
+        'ip',
+        'username',
+        'email',
+      )
+    );
+
+    $query->fields('jlr', array(
+      'row',
+    ));
+
+    $query->condition('jc.sectionid', 28);
+
+    return $query;
   }
 }

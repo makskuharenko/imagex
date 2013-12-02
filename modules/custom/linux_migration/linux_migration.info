@@ -51,3 +51,6 @@ files[] = includes/LinuxTutorialMigration.class.inc
 files[] = includes/LinuxTutorialMigrationSourceSql.class.inc
 files[] = includes/LinuxPageMigration.class.inc
 files[] = includes/LinuxPageMigrationSourceSql.class.inc
+files[] = includes/LinuxBlogCommentMigration.class.inc
+files[] = includes/LinuxTutorialCommentMigration.class.inc
+files[] = includes/LinuxPageCommentMigration.class.inc
