@@ -71,13 +71,16 @@ function linux_directory_strongarm() {
           'weight' => '10',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
           'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '9',
+          'weight' => '16',
+        ),
+        'workbench_access' => array(
+          'weight' => '0',
         ),
       ),
       'display' => array(),

@@ -49,6 +49,7 @@ class LinuxNewsMigrationSourceSql extends ImagexMigrateSourceSql {
     $or = db_or();
     $or->condition('jc.sectionid', 1);
     $or->condition('jc.sectionid', 5);
+    $or->condition('jc.sectionid', 19);
     $or->condition('jc.sectionid', 22);
     $or->condition('jc.sectionid', 23);
     $or->condition('jc.sectionid', 24);

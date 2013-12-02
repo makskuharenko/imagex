@@ -12,10 +12,12 @@ function linux_migration_migrate_api() {
     'node_insert' => array(
       'creativecommons',
       'pathauto',
+      'nodereference_count',
     ),
     'node_update' => array(
       'creativecommons',
       'pathauto',
+      'nodereference_count',
     ),
   );
   return array(
@@ -25,6 +27,9 @@ function linux_migration_migrate_api() {
         'title' => t('Linux.com'),
         'disable_hooks' => $disable_hooks,
       ),
+    ),
+    'field handlers' => array(
+      'DateMigrateFieldHandler',
     ),
     'migrations' => array(
       'LinuxUser' => array(
@@ -75,6 +80,209 @@ function linux_migration_migrate_api() {
         'class_name' => 'LinuxNewsMigration',
         'group_name' => 'linux',
         'description' => 'Migrate Linux.com news',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxQuestionCategory' => array(
+        'class_name' => 'LinuxQuestionCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com question categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxQuestionTag' => array(
+        'class_name' => 'LinuxQuestionTagMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com question tags',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxQuestion' => array(
+        'class_name' => 'LinuxQuestionMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com questions',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxAnswer' => array(
+        'class_name' => 'LinuxAnswerMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com answers',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxEventCategory' => array(
+        'class_name' => 'LinuxEventCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com event categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxEvent' => array(
+        'class_name' => 'LinuxEventMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com events',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxDirectoryCategory' => array(
+        'class_name' => 'LinuxDirectoryCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com directory categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxDirectory' => array(
+        'class_name' => 'LinuxDirectoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com directories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxNewsComment' => array(
+        'class_name' => 'LinuxNewsCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com news comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxForum' => array(
+        'class_name' => 'LinuxForumMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forums',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxForumTopic' => array(
+        'class_name' => 'LinuxForumTopicMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forum topics',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxForumPost' => array(
+        'class_name' => 'LinuxForumPostMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com forum posts',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxWhitepaper' => array(
+        'class_name' => 'LinuxWhitepaperMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com whitepapers',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxManpage' => array(
+        'class_name' => 'LinuxManpageMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com manpages',
+      ),
+      'LinuxTutorial' => array(
+        'class_name' => 'LinuxTutorialMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com tutorials',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxPage' => array(
+        'class_name' => 'LinuxPageMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com pages',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxBlogComment' => array(
+        'class_name' => 'LinuxBlogCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com blog comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxTutorialComment' => array(
+        'class_name' => 'LinuxTutorialCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com tutorial comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxPageComment' => array(
+        'class_name' => 'LinuxPageCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com page comments',
         'source' => array(
           'connection' => array(
             'name' => 'linux-joomla',

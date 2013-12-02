@@ -157,6 +157,6 @@ class LinuxUserMigration extends LinuxMigration {
    *   Value returned for migrate import.
    */
   protected function randomizePassword() {
-    return user_password(12);
+    return user_password(16);
   }
 }
