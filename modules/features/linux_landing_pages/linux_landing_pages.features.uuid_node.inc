@@ -143,7 +143,7 @@ function linux_landing_pages_uuid_features_default_content() {
             ),
             'css' => array(
               'css_id' => '',
-              'css_class' => 'standard-bean recent-events filtered-view',
+              'css_class' => 'standard-bean recent-events filtered-view landing-pages-left-bar',
             ),
             'extras' => array(),
             'position' => 1,
