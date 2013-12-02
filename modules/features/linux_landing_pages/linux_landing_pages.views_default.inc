@@ -207,6 +207,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Most Recent';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = 'landing-pages-left-bar';
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
