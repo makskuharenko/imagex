@@ -1,9 +1,9 @@
 name = Humor Panelized
 description = Panelized Page for Humor Content Type. 
 core = 7.x
-package = ImageX
+package = Linux.com
 version = 7.x-1.0
-project = imagex_humor_panelized
+project = linux_humor_panelized
 dependencies[] = ctools
 dependencies[] = panelizer
 dependencies[] = strongarm

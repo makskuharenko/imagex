@@ -1638,6 +1638,7 @@ small {
   }
 }
 
+<<<<<<< HEAD
 // User views and views rows with content type icons
 // -------------------------------------------------
 
@@ -1914,6 +1915,162 @@ small {
 
       @include at-breakpoint($wide) {
         width: 25%;
+      }
+    }
+  }
+}
+
+// Search Results
+// --------------
+
+.page-search {
+  h2 {
+    margin: 0 0 2em;
+    padding: 0 0 0 1.5em;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: $linuxDarkGray;
+    border-top: 1px solid $dropdownDividerTop;
+    border-bottom: 1px solid $dropdownDividerTop;
+    background: transparent;
+    clear: left;
+
+    &.expanded {
+      color: $linuxDarkGray;
+      background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
+      border-color: $dropdownDividerTop;
+    }
+  }
+
+  .search-results {
+    padding: 0 1.5em;
+
+    article {
+      margin: 0 0 2em;
+      padding: 0 0 2em;
+      border-bottom: 1px dotted $dropdownDividerTop;
+
+      @include at-breakpoint($computer) {
+        padding-right: 20%;
+      }
+
+      h3 {
+        margin: 0;
+
+        a {
+          color: $linuxStdOrange;
+          font-weight: 600;
+          font-size: 20px;
+
+          &:visited {
+            color: $linuxDarkestOrange;
+          }
+        }
+      }
+    }
+
+    footer {
+      font-size: 13px;
+      font-weight: 300;
+      font-style: italic;
+      color: $gray;
+
+      .username {
+        color: $gray;
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .search-form {
+    width: 100%;
+    float: left;
+    padding: 1em 1.5em;
+    background: transparent url('../img/content-lines.png') repeat top left;
+
+    #edit-basic {
+      float: left;
+
+      input#edit-keys {
+        border: 1px solid $dropdownDividerTop;
+        background: white;
+        @include border-radius(4px);
+        height: 35px;
+        width: 100%;
+        margin-bottom: 1em;
+
+        @include at-breakpoint($tablet) {
+          width: auto;
+          margin-bottom: 0;
+        }
+      }
+
+      input#edit-submit {
+        height: 41px;
+        padding: 3px 20px;
+        width: 100%;
+
+        @include at-breakpoint($tablet) {
+          width: auto;
+        }
+      }
+
+      label[for="edit-keys"] {
+        line-height: 41px;
+        margin: 0 1em 0 0;
+        font-weight: 300;
+        text-transform: capitalize;
+      }
+    }
+
+    .search-advanced {
+      border: 0;
+      padding: 0;
+      display: inline-block;
+
+      @include at-breakpoint($computer) {
+        margin: 0 0 0 1.5em;
+      }
+
+      &.collapsed {
+        .fieldset-legend {
+          background-position: 5px 50%;
+        }
+      }
+
+      .fieldset-legend {
+        background-position: 5px 57%;
+
+        a {
+          color: $linuxDarkGray;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 41px;
+        }
+      }
+
+      .criterion {
+        input[type="text"] {
+          border: 1px solid $dropdownDividerTop;
+          background: white;
+          @include border-radius(4px);
+          height: 35px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .form-checkboxes {
+        input[type="checkbox"] {
+          margin: 6px 6px 0 0;
+          float: left;
+        }
+
+        label {
+          font-weight: 300;
+        }
       }
     }
   }
