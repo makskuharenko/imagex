@@ -126,6 +126,12 @@ projects[imagex_radioactivity][download][type] = "git"
 projects[imagex_radioactivity][download][url] = "git@github.com:imagex/imagex_radioactivity.git"
 projects[imagex_radioactivity][download][branch] = "7.x-dev"
 
+projects[imagex_rss][type] = "module"
+projects[imagex_rss][subdir] = "imagex/modules"
+projects[imagex_rss][download][type] = "git"
+projects[imagex_rss][download][url] = "git@github.com:imagex/imagex_rss.git"
+projects[imagex_rss][download][branch] = "7.x-dev"
+
 projects[imagex_poll][type] = "module"
 projects[imagex_poll][subdir] = "imagex/modules"
 projects[imagex_poll][download][type] = "git"
