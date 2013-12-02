@@ -10,7 +10,7 @@
 function linux_humor_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: create humor content.
+  // Exported permission: 'create humor content'.
   $permissions['create humor content'] = array(
     'name' => 'create humor content',
     'roles' => array(
@@ -22,7 +22,7 @@ function linux_humor_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any humor content.
+  // Exported permission: 'delete any humor content'.
   $permissions['delete any humor content'] = array(
     'name' => 'delete any humor content',
     'roles' => array(
@@ -32,7 +32,7 @@ function linux_humor_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own humor content.
+  // Exported permission: 'delete own humor content'.
   $permissions['delete own humor content'] = array(
     'name' => 'delete own humor content',
     'roles' => array(
@@ -42,7 +42,7 @@ function linux_humor_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any humor content.
+  // Exported permission: 'edit any humor content'.
   $permissions['edit any humor content'] = array(
     'name' => 'edit any humor content',
     'roles' => array(
@@ -54,7 +54,7 @@ function linux_humor_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own humor content.
+  // Exported permission: 'edit own humor content'.
   $permissions['edit own humor content'] = array(
     'name' => 'edit own humor content',
     'roles' => array(
