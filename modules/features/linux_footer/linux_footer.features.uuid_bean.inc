@@ -27,7 +27,7 @@ function linux_footer_uuid_features_default_beans() {
     'revisions' => array(),
     'uuid' => '617d5388-7797-45e3-9c08-6063fffbd8d2',
     'field_widget_basic__image' => array(
-      'und' => array(
+      /* 'und' => array(
         0 => array(
           'fid' => '9e6b0e3b-5a4d-47db-b39a-75421d11bb06',
           'uid' => 1,
@@ -59,7 +59,7 @@ function linux_footer_uuid_features_default_beans() {
           'width' => 222,
           'height' => 12,
         ),
-      ),
+      ), */
     ),
     'field_widget_basic__markup' => array(
       'und' => array(

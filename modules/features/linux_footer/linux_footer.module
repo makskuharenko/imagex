@@ -10,7 +10,7 @@ include_once 'linux_footer.features.inc';
  * Implements hook_entity_presave().
  */
 function linux_footer_entity_presave($entity, $type) {
-  module_load_include('inc', 'linux_footer', 'linux_footer.features.uuid_bean');
+  /* module_load_include('inc', 'linux_footer', 'linux_footer.features.uuid_bean');
   $beans = linux_footer_uuid_features_default_beans();
   foreach ($beans as $bean) {
     $uuids[] = $bean['uuid'];
@@ -33,5 +33,5 @@ function linux_footer_entity_presave($entity, $type) {
         $entity->field_widget_basic__image['und'][] = (array) $file;
       }
     }
-  }
+  } */
 }
