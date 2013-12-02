@@ -67,6 +67,5 @@ function linux_common_fields_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-
   return $field_bases;
 }

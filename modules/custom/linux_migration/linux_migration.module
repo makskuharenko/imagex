@@ -246,6 +246,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxPage' => array(
+        'class_name' => 'LinuxPageMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com pages',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
