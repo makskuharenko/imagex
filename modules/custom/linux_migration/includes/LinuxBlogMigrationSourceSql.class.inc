@@ -49,6 +49,7 @@ class LinuxBlogMigrationSourceSql extends ImagexMigrateSourceSql {
     $or = db_or();
     $or->condition('jc.sectionid', 17);
     $or->condition('jc.sectionid', 26);
+    $or->condition('jc.sectionid', 29);
     $query->condition($or);
     return $query;
   }

@@ -15,6 +15,7 @@ dependencies[] = og_role_field
 dependencies[] = radioactivity
 dependencies[] = migrate
 dependencies[] = migrate_extras
+dependencies[] = date_migrate
 
 ; ImageX component dependencies.
 dependencies[] = imagex_addthis
@@ -50,6 +51,7 @@ dependencies[] = linux_coveritlive
 dependencies[] = linux_directory
 dependencies[] = linux_events
 dependencies[] = linux_footer
+dependencies[] = linux_forum
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_group
 dependencies[] = linux_header
@@ -61,8 +63,10 @@ dependencies[] = linux_menu
 dependencies[] = linux_migration
 ; dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
+dependencies[] = linux_question_answer
 dependencies[] = linux_tutorial
 dependencies[] = linux_user_permissions
 dependencies[] = linux_user_tags
 dependencies[] = linux_voting
+dependencies[] = linux_whitepapers
 dependencies[] = linux_wiki

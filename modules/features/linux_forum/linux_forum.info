@@ -1,0 +1,16 @@
+name = Linux Forum
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_forum
+dependencies[] = features
+dependencies[] = imagex_common_fields
+dependencies[] = options
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = taxonomy_forums
+features[field_instance][] = comment-comment_node_forum-comment_body
+features[field_instance][] = node-forum-body
+features[field_instance][] = node-forum-taxonomy_forums
+features[taxonomy][] = forums
