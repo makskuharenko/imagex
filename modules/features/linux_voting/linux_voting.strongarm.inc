@@ -106,8 +106,67 @@ function linux_voting_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_reset';
+  $strongarm->value = '0';
+  $export['vud_node_reset'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_types';
+  $strongarm->value = array(
+    'answer' => 'answer',
+    'question' => 'question',
+    'blog' => 0,
+    'directory' => 0,
+    'event' => 0,
+    'faq_topic' => 0,
+    'forum' => 0,
+    'group' => 0,
+    'humor' => 0,
+    'landing_page' => 0,
+    'manual' => 0,
+    'imagex_news' => 0,
+    'page' => 0,
+    'advpoll' => 0,
+    'tutorial' => 0,
+    'wiki' => 0,
+  );
+  $export['vud_node_types'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_votes';
+  $strongarm->value = '2';
+  $export['vud_node_votes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_widget';
+  $strongarm->value = 'updown';
+  $export['vud_node_widget'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_widget_show';
+  $strongarm->value = '2';
+  $export['vud_node_widget_show'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'vud_node_widget_vote_on_teaser';
+  $strongarm->value = 0;
+  $export['vud_node_widget_vote_on_teaser'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'vud_tag';
-  $strongarm->value = 'comment_reccoment';
+  $strongarm->value = 'vote_up_down';
   $export['vud_tag'] = $strongarm;
 
   return $export;
