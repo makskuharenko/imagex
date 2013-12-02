@@ -26,7 +26,7 @@ class LinuxHumorMigration extends LinuxMigration {
     }
 
     // Migrate's strtotime doesn't like Joomla's default.
-    $row->modified_on = ($row->modified_on == '0000-00-00 00:00:00') ? $row->created : $row->modified_on;
+    $row->modified_on = ($row->modified_on == '0000-00-00 00:00:00') ? $row->created_on : $row->modified_on;
 
     return TRUE;
   }
