@@ -290,6 +290,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxHumor' => array(
+        'class_name' => 'LinuxHumorMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com humor content',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
