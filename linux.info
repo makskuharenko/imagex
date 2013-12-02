@@ -17,8 +17,7 @@ dependencies[] = migrate
 dependencies[] = migrate_extras
 dependencies[] = date_migrate
 
-; ImageX component dependencies.
-dependencies[] = imagex_addthis
+; ImageX component dependencies
 dependencies[] = imagex_answers
 dependencies[] = imagex_answers_pane
 dependencies[] = imagex_answers_permissions
@@ -38,7 +37,6 @@ dependencies[] = imagex_content_likes
 dependencies[] = imagex_content_pinned
 dependencies[] = imagex_content_pinned_label
 dependencies[] = imagex_group
-dependencies[] = imagex_group_addthis
 dependencies[] = imagex_dbal
 dependencies[] = imagex_events
 dependencies[] = imagex_events_workflow
@@ -55,7 +53,6 @@ dependencies[] = imagex_news_permissions
 dependencies[] = imagex_news_rss
 dependencies[] = imagex_news_workflow
 dependencies[] = imagex_related_content_news
-dependencies[] = imagex_page_addthis
 dependencies[] = imagex_poll
 dependencies[] = imagex_radioactivity
 dependencies[] = imagex_search
