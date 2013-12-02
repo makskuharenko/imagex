@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * imagex_humor_panelized.strongarm.inc
+ * linux_humor_panelized.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function imagex_humor_panelized_strongarm() {
+function linux_humor_panelized_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

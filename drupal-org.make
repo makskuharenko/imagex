@@ -37,6 +37,9 @@ projects[votingapi][version] = "2.11"
 projects[vote_up_down][type] = "module"
 projects[vote_up_down][subdir] = "contrib"
 projects[vote_up_down][version] = "1.0-alpha1"
+projects[search_api_solr][type] = "module"
+projects[search_api_solr][subdir] = "contrib"
+projects[search_api_solr][version] = "1.3"
 
 ; Download ImageX components for this project.
 projects[imagex_addthis][type] = "module"
