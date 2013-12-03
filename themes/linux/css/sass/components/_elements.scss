@@ -429,6 +429,10 @@ small {
       border-color: $grayDark;
       background: $grayDark !important;
       color: white;
+
+      &:before {
+        color: white;
+      }
     }
 
     &:before {

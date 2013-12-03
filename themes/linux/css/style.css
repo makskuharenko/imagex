@@ -3981,6 +3981,8 @@ h1 {
     border-color: #333333;
     background: #333333 !important;
     color: white; }
+    .filtered-view h2.js-dropdown-toggled:before {
+      color: white; }
   .filtered-view h2:before {
     color: #f17700;
     float: right;
