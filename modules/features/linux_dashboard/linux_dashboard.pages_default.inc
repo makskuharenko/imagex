@@ -125,7 +125,18 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_workflow_workbench_moderation-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'imagex_workflow exists',
+            'php' => 'return module_exists(\'imagex_workflow\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'link_to_view' => 1,
       'more_link' => 1,
@@ -167,7 +178,18 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_editorial_desk-panel_pane_2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'imagex_editorial_desk exists',
+            'php' => 'return module_exists(\'imagex_editorial_desk\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'link_to_view' => 1,
       'more_link' => 1,
@@ -207,7 +229,16 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->subtype = 'imagex_flagged_as_inappropriate_nodes-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array(
-      'plugins' => array(),
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'imagex_content_inappropriate module exists',
+            'php' => 'return module_exists(\'imagex_content_inappropriate\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
     );
     $pane->configuration = array(
       'link_to_view' => 1,
@@ -243,7 +274,16 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->subtype = 'imagex_flagged_as_inappropriate_comments-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array(
-      'plugins' => array(),
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'imagex_content_inappropriate module exists',
+            'php' => 'return module_exists(\'imagex_content_inappropriate\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
     );
     $pane->configuration = array(
       'link_to_view' => 1,
