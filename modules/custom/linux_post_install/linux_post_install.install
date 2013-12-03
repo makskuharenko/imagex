@@ -15,7 +15,7 @@ function linux_post_install_install() {
   // The following is taken from the uuid.node file.
   // We just add a delete in to remove the nodes first.
   // This is needed because the panelizer entity_insert hooks do not know what bundles are panelized during install
-  drush_log(__FUNCTION__);
+  //drush_log(__FUNCTION__);
   if (!empty($nodes)) {
     module_load_include('inc', 'node', 'node.pages');
     foreach ($nodes as $data) {
@@ -26,13 +26,13 @@ function linux_post_install_install() {
     drupal_flush_all_caches();
     
     foreach ($nodes as $data) {
+      $node = (object) $data;
       if ($node->uuid == 'cc69210b-36ab-45ee-928b-ffceb64c22a5') {
         // Don't resave the default news page. We recreated our own in Landing Pages
         continue;
       }
-      $node = (object) $data;
       node_object_prepare($node);
-      drush_log($node->uuid);
+      //drush_log($node->uuid);
       // Find the matching UUID, with a fresh cache.
       $nids = entity_get_id_by_uuid('node', array($node->uuid));
       if (isset($nids[$node->uuid])) {
