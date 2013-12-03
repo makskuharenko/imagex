@@ -26,6 +26,10 @@ function linux_post_install_install() {
     drupal_flush_all_caches();
     
     foreach ($nodes as $data) {
+      if ($node->uuid == 'cc69210b-36ab-45ee-928b-ffceb64c22a5') {
+        // Don't resave the default news page. We recreated our own in Landing Pages
+        continue;
+      }
       $node = (object) $data;
       node_object_prepare($node);
       drush_log($node->uuid);

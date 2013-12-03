@@ -26,6 +26,12 @@ function linux_landing_pages_node_insert($node) {
     $path = 'node/' . $node->nid;
     variable_set('site_frontpage', $path);
   }
+  if (isset($node->url_alias) && is_array($node->url_alias)) {
+    foreach ($node->url_alias as $alias) {
+      $alias['source'] = 'node/' . $node->nid;
+      path_save($alias);
+    }
+  }
 }
 
 /**
@@ -53,4 +59,31 @@ function linux_landing_pages_views_ajax_data_alter(&$commands, $view) {
     }
     $commands[] = array('command' => 'triggerDOMChange');
   }
+}
+
+/**
+ * Implements hook_uuid_node_features_export_render_alter().
+ */
+function linux_landing_pages_uuid_node_features_export_render_alter(&$export, $node, $module) {
+  $nid = db_select('node', 'n')->fields('n', array('nid'))->condition('uuid',$node->uuid)->execute()->fetchField();
+  $paths = array();
+  if (!empty($nid)) {
+    $conditions = array('source' => 'node/' . $nid);
+    $langcode = entity_language('node', $node);
+    if ($langcode != LANGUAGE_NONE) {
+      $conditions['language'] = $langcode;
+    }
+    $select = db_select('url_alias');
+    foreach ($conditions as $field => $value) {
+      $select->condition($field, $value);
+    }
+    $paths = $select
+      ->fields('url_alias')
+      ->execute()
+      ->fetchAllAssoc('pid');
+    if ($paths === FALSE) {
+      $paths = array();
+    }
+  }
+  $export->url_alias = $paths;
 }
