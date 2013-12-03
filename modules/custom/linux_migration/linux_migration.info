@@ -55,3 +55,6 @@ files[] = includes/LinuxBlogCommentMigration.class.inc
 files[] = includes/LinuxTutorialCommentMigration.class.inc
 files[] = includes/LinuxPageCommentMigration.class.inc
 files[] = includes/LinuxHumorMigration.class.inc
+files[] = includes/LinuxGalleryCategoryMigration.class.inc
+files[] = includes/LinuxGalleryFileMigration.class.inc
+files[] = includes/LinuxGalleryMigration.class.inc
