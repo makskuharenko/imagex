@@ -86,7 +86,7 @@ input[type="button"] {
   @include border-radius(2px);
   cursor: pointer;
   @include inline-block;
-  outline: 0; 
+  outline: 0;
   overflow: visible;
   padding: 3px 10px;
   text-decoration: none;
@@ -175,14 +175,35 @@ input[type="week"] {
   &[disabled] {
     background-color: #eeeeee;
   }
+}
 
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
   //new
-  background: $grayLighter url('../img/form-line.png') repeat top left; 
+  background: $grayLighter url('../img/form-line.png') repeat top left;
   border: none;
   @include border-radius(2px);
   margin: 0;
   padding: 20px 15px;
   //new
+}
+
+select {
+  margin: 0;
+  padding: 6px;
+  height: auto;
 }
 
 button[disabled],
@@ -275,7 +296,7 @@ select[size="1"] {
 
 textarea {
   width: 100%;
-  background: $grayLighter url('../img/form-line.png') repeat top left; 
+  background: $grayLighter url('../img/form-line.png') repeat top left;
   border: none;
   @include border-radius(2px);
   margin: 0;
@@ -345,20 +366,25 @@ a:link.fieldset-title, .fieldset-legend{
   border-bottom: 1px solid $dropdownDividerTop;
   padding: 20px 0;
   margin: 0 0 20px;
-  
+
   label,
   .username {
     display: none;
   }
-  
+
   .filter-wrapper {
     padding: 0;
   }
 
-  button, 
-  a.button, 
-  input[type="reset"], 
-  input[type="submit"], 
+  input[type="text"] {
+    width: 100%;
+    margin: 0 0 1em;
+  }
+
+  button,
+  a.button,
+  input[type="reset"],
+  input[type="submit"],
   input[type="button"] {
     float: right;
     margin: 5px 0 5px 10px;

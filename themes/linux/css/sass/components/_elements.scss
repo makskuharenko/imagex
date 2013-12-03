@@ -2,27 +2,20 @@
 // -----------------------------------------
 
 .not-front {
-  @mixin node-position() {
-    @include span-columns(8, 12);
-    position: relative;
-    z-index: 200;
+  #header-wrapper {
+    padding: 0;
+    margin-bottom: -1px;
   }
 
-  @mixin content-padding() {
-    padding: 0 1em;
+  .pane-menu-menu-join-us {
+    display: none;
 
     @include at-breakpoint($computer) {
-      padding: 0;
+      display: block;
     }
   }
 
-  .pane-node-title {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
-    @include content-padding;
-
+  .node-title {
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
@@ -45,62 +38,103 @@
     }
   }
 
-  .field-type-text-with-summary {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .node-author {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $grayDark;
+  }
+
+  .node-date {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-family: $condensedFontFamily;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $linuxDarkGray;
+  }
+
+  .node-comment-counter {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 22px;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+
+      a {
+        color: $linuxDarkGray;
+      }
+    }
+  }
+
+  .region-second {
+    .field-type-image {
+      img {
+        margin: 1em 0 2em;
+        border-bottom: 3px solid $linuxStdOrange;
+      }
     }
 
-    @include content-padding;
+    .region-third {
+      @include at-breakpoint($computer) {
+        @include span-columns(6 omega, 6);
+      }
+    }
 
+    .standard-bean {
+      @include at-breakpoint($computer) {
+        @include span-columns(3, 6);
+      }
+    }
+
+    .standard-bean:last-child {
+      @include at-breakpoint($computer) {
+        @include span-columns(3 omega, 6);
+        clear: none;
+      }
+    }
+  }
+
+  .field-type-text-with-summary {
     p {
       font-size: 14px;
       line-height: 20px;
     }
   }
 
-  .region-second {
-    .field-type-image {
-      @include content-padding;
-
-      img {
-        border-bottom: 3px solid $linuxStdOrange;
-      }
-    }
-  }
-
-
   .field-type-taxonomy-term-reference {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
     padding: 20px 0;
 
-    .field-item {
-      display: inline;
+    a {
+      @include border-radius(3px);
+      background: $linuxStdOrange;
+      margin: 0;
+      padding: 2px 5px;
+      font-family: $condensedFontFamily;
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.1em;
+      color: white;
 
-      a {
-        @include border-radius(3px);
-        background: $linuxStdOrange;
-        margin: 0;
-        padding: 2px 5px;
-        font-family: $condensedFontFamily;
-        font-size: 12px;
-        text-transform: capitalize;
-        letter-spacing: 0.1em;
-        color: white;
-
-        &:hover {
-          background: $linuxDarkestOrange;
-        }
+      &:hover {
+        background: $linuxDarkestOrange;
       }
     }
   }
 
   .link-wrapper {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
     ul {
       margin: 0;
       padding: 0;
@@ -112,18 +146,39 @@
     }
   }
 
-  .comment-form {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .filter-wrapper {
+    margin: 1em 0;
+
+    .filter-help {
+      padding: 0;
+
+      a {
+        font-size: 10px;
+        color: rgb(102, 102, 102);
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .filter-guidelines {
+    margin: 1em 0;
+    padding: 0;
+
+    ul {
+      li {
+        font-size: 12px;
+        color: #BBB;
+        font-style: italic;
+        text-align: left;
+        line-height: 18px;
+      }
     }
   }
 
   .comment {
     clear: both;
-
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     h3 {
       display: none;
@@ -181,9 +236,6 @@
     width: 100%;
     margin: 0 0 30px;
     list-style-type: none;
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     li.comment-delete,
     li.comment-edit,
