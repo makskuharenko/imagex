@@ -4,6 +4,8 @@ class LinuxEventMigration extends LinuxMigration {
   protected function init() {
     parent::init();
     $this->dependencies = array('LinuxEventCategory');
+    $migration_settings = imagex_migration_settings();
+    $this->sourcePath =  $migration_settings['source']['files']['directory'] . '/images/eventlist/events';
   }
 
   protected function setFieldMappings() {
@@ -18,6 +20,10 @@ class LinuxEventMigration extends LinuxMigration {
     $this->addFieldMapping('field_event_category', 'catid')->sourceMigration('LinuxEventCategory');
     $this->addFieldMapping('field_event_category:source_type')
       ->defaultValue('tid');
+
+    $this->addFieldMapping('field_logo', 'datimage');
+    $this->addFieldMapping('field_logo:source_dir')->defaultValue($this->sourcePath);
+    $this->addFieldMapping('field_logo:destination_dir')->defaultValue('public://events');
 
     $address_arguments = array(
       'administrative_area' => array('source_field' => 'venstate'),
