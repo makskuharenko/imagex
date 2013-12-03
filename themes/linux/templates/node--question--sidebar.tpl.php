@@ -2,7 +2,6 @@
 /**
  * Contains the template for the sidebar implementation
  */
- dpm(get_defined_vars());
 ?>
  <div class="views-field views-field-field-image">
   <div class="field-content">
