@@ -28,6 +28,9 @@ class LinuxUserMigration extends LinuxMigration {
     );
 
     $this->roleIDs = db_query("SELECT name, rid FROM {role}")->fetchAllKeyed();
+    ///media/com_ninjaboard/images/avatars/9952/13476661975053c115651ac.jpg
+    $migration_settings = imagex_migration_settings();
+    $this->sourcePath =  $migration_settings['source']['files']['directory'];
   }
 
   /**
@@ -42,6 +45,9 @@ class LinuxUserMigration extends LinuxMigration {
     $this->addFieldMapping('status', 'block');
     $this->addFieldMapping('timezone', 'timezone');
     $this->addFieldMapping('roles', 'userType')->defaultValue(DRUPAL_AUTHENTICATED_RID);
+    $this->addFieldMapping('field_profile_image', 'avatar');
+    $this->addFieldMapping('field_profile_image:source_dir')->defaultValue($this->sourcePath);
+    $this->addFieldMapping('field_profile_image:destination_dir')->defaultValue('public://avatars');
   }
 
   /**
