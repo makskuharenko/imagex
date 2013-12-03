@@ -711,6 +711,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-11-13 00:13:27 +0000',
+  'url_alias' => array(
+    2093 => array(
+      'pid' => 2093,
+      'source' => 'node/1006',
+      'alias' => 'home',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1032,6 +1040,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 21:54:14 +0000',
+  'url_alias' => array(
+    2088 => array(
+      'pid' => 2088,
+      'source' => 'node/1013',
+      'alias' => 'tutorials',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1353,6 +1369,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 22:05:24 +0000',
+  'url_alias' => array(
+    2091 => array(
+      'pid' => 2091,
+      'source' => 'node/1016',
+      'alias' => 'special-feature',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1674,6 +1698,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-11-21 07:16:06 +0000',
+  'url_alias' => array(
+    2082 => array(
+      'pid' => 2082,
+      'source' => 'node/1007',
+      'alias' => 'community/blogs',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -1995,6 +2027,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 21:51:26 +0000',
+  'url_alias' => array(
+    2087 => array(
+      'pid' => 2087,
+      'source' => 'node/1012',
+      'alias' => 'news',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -2316,6 +2356,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 22:04:08 +0000',
+  'url_alias' => array(
+    2090 => array(
+      'pid' => 2090,
+      'source' => 'node/1015',
+      'alias' => 'humor',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -2682,6 +2730,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 08:33:19 +0000',
+  'url_alias' => array(
+    2083 => array(
+      'pid' => 2083,
+      'source' => 'node/1008',
+      'alias' => 'community/answers',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -3003,6 +3059,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 22:06:28 +0000',
+  'url_alias' => array(
+    2092 => array(
+      'pid' => 2092,
+      'source' => 'node/1017',
+      'alias' => 'community/contests-polls',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 1,
@@ -3324,6 +3388,14 @@ function linux_landing_pages_uuid_features_default_content() {
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-02 21:58:48 +0000',
+  'url_alias' => array(
+    2089 => array(
+      'pid' => 2089,
+      'source' => 'node/1014',
+      'alias' => 'blog',
+      'language' => 'und',
+    ),
+  ),
 );
   return $nodes;
 }
