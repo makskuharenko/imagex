@@ -1,0 +1,17 @@
+name = Linux Dashboard
+description = Provides a content admin dashboard. Panes are added based on what modules are available.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_dashboard
+dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_content
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[page_manager_pages][] = linux_dashboard
+features[views_view][] = linux_dashboard_latest_comments
+features[views_view][] = linux_dashboard_latest_content
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/linux/modules/features
