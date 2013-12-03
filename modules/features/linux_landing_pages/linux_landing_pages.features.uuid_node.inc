@@ -136,7 +136,11 @@ function linux_landing_pages_uuid_features_default_content() {
             'subtype' => 'home_page-panel_pane_1',
             'shown' => 1,
             'access' => array(),
-            'configuration' => array(),
+            'configuration' => array(
+              'arguments' => array(
+                'type' => 'blog+imagex_news',
+              ),
+            ),
             'cache' => array(),
             'style' => array(
               'settings' => NULL,
