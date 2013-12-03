@@ -44,7 +44,6 @@ class LinuxEventMigration extends LinuxMigration {
     $row->event_dates[] = drupal_json_encode(array('from' => $row->start_date, 'to' => $row->end_date));
 
     $row->state = ($row->state == 1) ? 1 : 0;
-    watchdog('mitch', print_r($row, TRUE));
   }
 
   /**
