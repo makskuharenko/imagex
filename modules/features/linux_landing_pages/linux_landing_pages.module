@@ -32,6 +32,20 @@ function linux_landing_pages_node_insert($node) {
       path_save($alias);
     }
   }
+  
+  // We now need to iterate through the nodes and assign them to the menu item they should be under
+  module_load_include('inc', 'linux_landing_pages', 'linux_landing_pages.features.uuid_node');
+  $uuid_nodes = &drupal_static(__FUNCTION__, linux_landing_pages_uuid_features_default_content());
+  foreach ($uuid_nodes as $uuid_node) {
+    $uuids[] = $uuid_node['uuid'];
+  }
+  if (in_array($node->uuid, $uuids)) {
+    switch ($node->uuid) {
+      case '':
+        // News Node
+        break;
+    }
+  }
 }
 
 /**
