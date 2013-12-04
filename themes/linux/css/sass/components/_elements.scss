@@ -2,27 +2,20 @@
 // -----------------------------------------
 
 .not-front {
-  @mixin node-position() {
-    @include span-columns(8, 12);
-    position: relative;
-    z-index: 200;
+  #header-wrapper {
+    padding: 0;
+    margin-bottom: -1px;
   }
 
-  @mixin content-padding() {
-    padding: 0 1em;
+  .pane-menu-menu-join-us {
+    display: none;
 
     @include at-breakpoint($computer) {
-      padding: 0;
+      display: block;
     }
   }
 
-  .pane-node-title {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
-    @include content-padding;
-
+  .node-title {
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
@@ -45,62 +38,103 @@
     }
   }
 
-  .field-type-text-with-summary {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .node-author {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $grayDark;
+  }
+
+  .node-date {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-family: $condensedFontFamily;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $linuxDarkGray;
+  }
+
+  .node-comment-counter {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 22px;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+
+      a {
+        color: $linuxDarkGray;
+      }
+    }
+  }
+
+  .region-second {
+    .field-type-image {
+      img {
+        margin: 1em 0 2em;
+        border-bottom: 3px solid $linuxStdOrange;
+      }
     }
 
-    @include content-padding;
+    .region-third {
+      @include at-breakpoint($computer) {
+        @include span-columns(6 omega, 6);
+      }
+    }
 
+    .standard-bean {
+      @include at-breakpoint($computer) {
+        @include span-columns(3, 6);
+      }
+    }
+
+    .standard-bean:last-child {
+      @include at-breakpoint($computer) {
+        @include span-columns(3 omega, 6);
+        clear: none;
+      }
+    }
+  }
+
+  .field-type-text-with-summary {
     p {
       font-size: 14px;
       line-height: 20px;
     }
   }
 
-  .region-second {
-    .field-type-image {
-      @include content-padding;
-
-      img {
-        border-bottom: 3px solid $linuxStdOrange;
-      }
-    }
-  }
-
-
   .field-type-taxonomy-term-reference {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
     padding: 20px 0;
 
-    .field-item {
-      display: inline;
+    a {
+      @include border-radius(3px);
+      background: $linuxStdOrange;
+      margin: 0;
+      padding: 2px 5px;
+      font-family: $condensedFontFamily;
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.1em;
+      color: white;
 
-      a {
-        @include border-radius(3px);
-        background: $linuxStdOrange;
-        margin: 0;
-        padding: 2px 5px;
-        font-family: $condensedFontFamily;
-        font-size: 12px;
-        text-transform: capitalize;
-        letter-spacing: 0.1em;
-        color: white;
-
-        &:hover {
-          background: $linuxDarkestOrange;
-        }
+      &:hover {
+        background: $linuxDarkestOrange;
       }
     }
   }
 
   .link-wrapper {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
     ul {
       margin: 0;
       padding: 0;
@@ -112,18 +146,39 @@
     }
   }
 
-  .comment-form {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .filter-wrapper {
+    margin: 1em 0;
+
+    .filter-help {
+      padding: 0;
+
+      a {
+        font-size: 10px;
+        color: rgb(102, 102, 102);
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .filter-guidelines {
+    margin: 1em 0;
+    padding: 0;
+
+    ul {
+      li {
+        font-size: 12px;
+        color: #BBB;
+        font-style: italic;
+        text-align: left;
+        line-height: 18px;
+      }
     }
   }
 
   .comment {
     clear: both;
-
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     h3 {
       display: none;
@@ -181,9 +236,6 @@
     width: 100%;
     margin: 0 0 30px;
     list-style-type: none;
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     li.comment-delete,
     li.comment-edit,
@@ -373,6 +425,16 @@ small {
     background-position: right 45px center; /* Cr 25+, FF 13+, IE 9+, Op 10.5+ */
     cursor: pointer;
 
+    &.js-dropdown-toggled {
+      border-color: $grayDark;
+      background: $grayDark !important;
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+
     &:before {
       color: $linuxStdOrange;
       float: right;
@@ -381,15 +443,15 @@ small {
       padding-right: 1.5em;
     }
 
-    &.popular {
+    &.js-leftbar-option-popular {
       background-image: url('../img/most-popular-gray.png');
     }
 
-    &.commented {
+    &.js-leftbar-option-comment_count {
       background-image: url('../img/most-comments-gray.png');
     }
 
-    &.shared {
+    &.js-leftbar-option-shared {
       background-image: url('../img/most-shared-gray.png');
     }
   }
@@ -862,11 +924,9 @@ small {
   @include span-columns(14 omega, 14);
   background-color: white;
 
-  .flexslider_views_slideshow_slide {
-    &:hover {
-      img {
-        @include opacity(0.3);
-      }
+  &:hover {
+    img {
+      @include opacity(0.3);
     }
   }
 
@@ -885,6 +945,10 @@ small {
         &:hover {
           @include opacity(0.8);
         }
+
+        &:before {
+          content: none;
+        }
       }
     }
 
@@ -898,6 +962,7 @@ small {
   .views-field-title {
     h2 {
       border: 0;
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 22px;
       line-height: 24px;
@@ -905,6 +970,8 @@ small {
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
 
       a {
+        display: block;
+        padding: 12px 0;
         color: $grayDark;
       }
     }
@@ -973,7 +1040,7 @@ small {
   .flex-direction-nav {
     a {
       display: none;
-      width: 50px;
+      padding: 0 0 0 50px;
       height: 100%;
       @include opacity(0);
       top: 0;
@@ -1053,9 +1120,9 @@ small {
   .views-field-title {
     position: absolute;
     top: 0px;
-    padding: 5px 20px;
 
     h2 {
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 26px;
       font-weight: 300;
@@ -1063,7 +1130,9 @@ small {
       @include text-shadow(0 0 15px rgba(0,0,0,0.1));
 
       a {
+        display: block;
         color: white;
+        padding: 15px 20px;
       }
     }
   }
@@ -1566,79 +1635,44 @@ small {
 // Most Recent menu filter
 // -----------------------
 
-.filtered-menu {
-  display: none;
-  position: relative;
-  z-index: 99;
+.js-leftbar-dropdown {
   width: 100%;
   background-color: $grayDark;
-  position: relative;
-  margin-bottom: -203px;
+  top: 50px;
+  padding: 0 1.5em !important;
 
-  ul {
-    margin: 0;
-    padding: 0 1.5em;
-    list-style-type: none;
+  .js-leftbar-option {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-top: 1px solid $linuxDarkGray;
 
-    li {
-      border-top: 1px solid $btnInverseBackground;
+    &:hover {
+      color: darken(white, 60%);
+    }
 
-      span,
-      a {
-        display: block;
-        color: white;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 50px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+    &.js-leftbar-option-created {
+      background: transparent url('../img/most-recent-white.png') no-repeat right center;
+    }
 
-        &:hover {
-          color: darken(white, 60%);
-        }
+    &.js-leftbar-option-popular {
+      background: transparent url('../img/most-popular-white.png') no-repeat right center;
+    }
 
-        &.recent {
-          background: transparent url('../img/most-recent-white.png') no-repeat right center;
-        }
+    &.js-leftbar-option-comment_count {
+      background: transparent url('../img/most-comments-white.png') no-repeat right center;
+    }
 
-        &.popular {
-          background: transparent url('../img/most-popular-white.png') no-repeat right center;
-        }
-
-        &.commented {
-          background: transparent url('../img/most-comments-white.png') no-repeat right center;
-        }
-
-        &.shared {
-          background: transparent url('../img/most-shared-white.png') no-repeat right center;
-        }
-      }
-
-      &:first-child {
-        border: none;
-        @include icon-caret-down;
-
-        &:before {
-          color: darken(white, 60%);
-          float: right;
-          line-height: 50px;
-          font-size: 16px;
-        }
-
-        span,
-        a {
-          color: darken(white, 60%);
-          letter-spacing: 0em;
-          font-weight: 700;
-          font-size: 13px;
-          background: none;
-        }
-      }
+    &.js-leftbar-option-shared {
+      background: transparent url('../img/most-shared-white.png') no-repeat right center;
     }
   }
 }
 
-<<<<<<< HEAD
 // User views and views rows with content type icons
 // -------------------------------------------------
 

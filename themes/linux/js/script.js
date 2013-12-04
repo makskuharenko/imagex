@@ -10,12 +10,20 @@
 
   var jRes = jRespond([
     {
-        label: 'small',
+        label: 'mobile',
         enter: 0,
-        exit: 850
+        exit: 560
     },{
-        label: 'large',
-        enter: 850,
+        label: 'tablet',
+        enter: 560,
+        exit: 728
+    },{
+        label: 'computer',
+        enter: 728,
+        exit: 994
+    },{
+        label: 'wide',
+        enter: 994,
         exit: 10000
     }
   ]);
@@ -25,18 +33,40 @@
 
   jRes.addFunc([
     {
-      breakpoint: 'small',
+      breakpoint: 'mobile',
       enter: function() {
         jPM.on();
         filteredView();
+        moveBlocks($('.region-third'), $('#comments'), true);
       },
       exit: function() {
         jPM.off();
       }
     },{
-      breakpoint: 'large',
+      breakpoint: 'tablet',
       enter: function() {
         filteredView();
+        moveBlocks($('.region-third'), $('#comments'), true);
+      },
+      exit: function() {
+        // Do Nothing
+      }
+    },{
+      breakpoint: 'computer',
+      enter: function() {
+        filteredView();
+        moveBlocks($('.region-third .pane-menu-menu-join-us'), $('.region-first .standard-bean:first-child'), true);
+        moveBlocks($('.region-third'), $('#comments'), true);
+      },
+      exit: function() {
+        // Do Nothing
+      }
+    },{
+      breakpoint: 'wide',
+      enter: function() {
+        filteredView();
+        moveBlocks($('.region-first .pane-menu-menu-join-us'), $('.region-third .standard-bean:first-child'), true);
+        moveBlocks($('.region-third'), $('.region-second'), false);
       },
       exit: function() {
         // Do Nothing
@@ -50,11 +80,11 @@
   var eTop = $('#block-panels-mini-global-header').offset().top;
 
   $(window).scroll(function() { //when window is scrolled
-      if (eTop - $(window).scrollTop() <= 0) {
-        $('#header-wrapper, #panel-wrapper').addClass('fixed');
-      } else {
-        $('#header-wrapper, #panel-wrapper').removeClass('fixed');
-      }
+    if (eTop - $(window).scrollTop() <= 0) {
+      $('#header-wrapper, #panel-wrapper').addClass('fixed');
+    } else {
+      $('#header-wrapper, #panel-wrapper').removeClass('fixed');
+    }
   });
 
   // Show and hide the mobile menu
@@ -90,6 +120,18 @@
 
       filtersMenu.hide();
     });
+  }
+
+  // Moving blocks to appropriate locations based on responsive layout
+  // ----------------------------------------------------------------------------
+
+  function moveBlocks(block, location, before) {
+    if (block.length && location.length) {
+      if (before)
+        location.before(block);
+      else
+        location.after(block);
+    }
   }
 
 })(jQuery);

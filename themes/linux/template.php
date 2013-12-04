@@ -79,7 +79,13 @@ function linux_preprocess_block(&$vars, $hook) {
 }
 
 function linux_preprocess_node(&$vars,$hook) {
-  //  kpr($vars['content']);
+  include_once drupal_get_path('theme', 'linux') . '/includes/node.inc';
+  if (function_exists('linux_preprocess_node_' . $vars['type'])) {
+    call_user_func('linux_preprocess_node_' . $vars['type'], $vars, $hook);
+  }
+  if ($vars['view_mode'] == 'sidebar' && in_array($vars['type'], array('blog', 'imagex_news'))) {
+     _linux_shared_sidebar_preprocess($vars);
+  }
 }
 
 function linux_preprocess_comment(&$vars,$hook) {

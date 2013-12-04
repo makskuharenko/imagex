@@ -131,7 +131,6 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   }
 
   .region-second {
-    position: relative;
     @include span-columns(16 omega, 16);
 
     @include at-breakpoint($computer) {
