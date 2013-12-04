@@ -10,7 +10,7 @@ class LinuxWhitepaperMigration extends LinuxMigration {
 
   protected function setFieldMappings(){
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
     $this->addFieldMapping('status', 'published');

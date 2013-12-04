@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_humor.features.inc
+ * linux_gallery.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function linux_humor_ctools_plugin_api($module = NULL, $api = NULL) {
+function linux_gallery_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,10 +16,10 @@ function linux_humor_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_node_info().
  */
-function linux_humor_node_info() {
+function linux_gallery_node_info() {
   $items = array(
-    'humor' => array(
-      'name' => t('Humor'),
+    'gallery' => array(
+      'name' => t('Gallery'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

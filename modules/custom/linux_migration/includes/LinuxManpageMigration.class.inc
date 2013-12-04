@@ -11,7 +11,7 @@ class LinuxManpageMigration extends LinuxMigration {
 
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'body')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'body')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('field_manual_section', 'section')->arguments(array('create_term' => TRUE));
     $this->addFieldMapping('status')->defaultValue(1);
     $this->addFieldMapping('uid')->defaultValue(1);

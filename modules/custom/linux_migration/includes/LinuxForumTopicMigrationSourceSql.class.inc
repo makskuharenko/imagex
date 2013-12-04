@@ -12,6 +12,7 @@ class LinuxForumTopicMigrationSourceSql extends ImagexMigrateSourceSql {
       ->select('jos_ninjaboard_topics', 'jnt');
     $query->leftJoin('jos_ninjaboard_posts', 'jnp', 'jnt.first_post_id = jnp.ninjaboard_post_id');
     $query->leftJoin('jos_ninjaboard_topic_slugs', 'jnts', 'jnt.ninjaboard_topic_id = jnts.ninjaboard_topic_id');
+    $query->leftJoin('jos_ninjaboard_attachments', 'jna', 'jna.post_id = jnp.ninjaboard_post_id');
     $query->fields('jnt', array(
           'ninjaboard_topic_id',
           'status',
@@ -29,6 +30,13 @@ class LinuxForumTopicMigrationSourceSql extends ImagexMigrateSourceSql {
     $query->fields('jnts', array(
       'ninjaboard_topic_slug',
     ));
+    $query->fields('jna', array(
+      'params',
+      'file',
+    ));
+    $query->addExpression('GROUP_CONCAT(jna.params)', 'gparams');
+    $query->addExpression('GROUP_CONCAT(jna.file)', 'gfile');
+    $query->groupBy('jnt.first_post_id');
     return $query;
   }
 }

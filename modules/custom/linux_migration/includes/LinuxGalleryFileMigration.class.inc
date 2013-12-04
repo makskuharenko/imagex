@@ -1,13 +1,18 @@
 <?php
 
-class LinuxGalleryCategoryMigration extends LinuxMigration {
+class LinuxGalleryFileMigration extends LinuxMigration {
   protected function init() {
     parent::init();
+    $migration_settings = imagex_migration_settings();
+    $this->sourcePath =  $migration_settings['source']['files']['directory'] . '/media/nas';
   }
-
   protected function setFieldMappings() {
-    $this->addFieldMapping('name', 'title');
-    $this->addFieldMapping('description', 'description');
+    $this->addFieldMapping('value', 'filename');
+    $this->addFieldMapping('source_dir', 'source');
+    $this->addFieldMapping('destination_dir', 'public://galleries');
+  }
+  public function prepareRow($row) {
+    $row->source = $this->sourcePath . '/' . $row->path;
   }
   /**
    * Returns the source object instance for this migration.
@@ -17,7 +22,7 @@ class LinuxGalleryCategoryMigration extends LinuxMigration {
    *   Returns a newly created source object instance.
    */
   protected function getSourceObject() {
-    return new LinuxGalleryCategoryMigrationSourceSql($this);
+    return new LinuxGalleryFileMigrationSourceSql($this);
   }
 
   /**
@@ -28,7 +33,7 @@ class LinuxGalleryCategoryMigration extends LinuxMigration {
    *   Returns a newly created destination object instance.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationTerm('gallery_category');
+    return new MigrateDestinationFile('file');
   }
 
   /**
@@ -41,19 +46,19 @@ class LinuxGalleryCategoryMigration extends LinuxMigration {
   protected function getMapObject() {
     return new MigrateSQLMap($this->machineName,
       array(
-        'lfnews_category_id' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
+        'filename' => array(
+          'type' => 'varchar',
+          'length' => 255,
           'not null' => TRUE,
         ),
       ),
-      MigrateDestinationTerm::getKeySchema()
+      MigrateDestinationFile::getKeySchema()
     );
   }
 
 }
 
-class LinuxGalleryCategoryMigrationSourceSql extends ImagexMigrateSourceSql {
+class LinuxGalleryFileMigrationSourceSql extends ImagexMigrateSourceSql {
   /**
    * Setup the source query/connection.
    *
@@ -62,15 +67,19 @@ class LinuxGalleryCategoryMigrationSourceSql extends ImagexMigrateSourceSql {
    */
   protected function getSourceQuery() {
     $query = $this->getSourceConnection()
-      ->select('jos_lfnews_categories', 'jlc')
-      ->fields('jlc', array(
-        'lfnews_category_id',
-        'title',
-        'slug',
-        'description',
-        'enabled',
-       )
-    );
+      ->select('jos_lfnews_images', 'jli')
+      ->fields('jli', array(
+          'title',
+          'filename',
+          'caption',
+          'gallery_id',
+        )
+      );
+  $query->innerJoin('jos_lfnews_galleries', 'jlf', 'jli.gallery_id = jlf.lfnews_gallery_id');
+    $query->fields('jlf', array(
+      'path',
+    ));
+   $query->orderBy('jli.ordering');
     return $query;
   }
 }

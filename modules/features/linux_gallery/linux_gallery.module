@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Gallery feature.
+ */
+
+include_once 'linux_gallery.features.inc';

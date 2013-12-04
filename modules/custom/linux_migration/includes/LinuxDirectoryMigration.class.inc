@@ -10,7 +10,7 @@ class LinuxDirectoryMigration extends LinuxMigration {
 
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'link_name');
-    $this->addFieldMapping('body', 'link_desc')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'link_desc')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'user_id')->sourceMigration('LinuxUser');
     $this->addFieldMapping('status', 'link_published');
     $this->addFieldMapping('created', 'link_created');

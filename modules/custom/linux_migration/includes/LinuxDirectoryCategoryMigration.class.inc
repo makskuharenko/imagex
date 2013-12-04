@@ -6,7 +6,7 @@ class LinuxDirectoryCategoryMigration extends LinuxMigration {
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('name', 'cat_name');
-    $this->addFieldMapping('description', 'cat_desc')->arguments(array('format' => 'full_html'));;
+    $this->addFieldMapping('description', 'cat_desc')->arguments(array('format' => 'filtered_html'));;
     $this->addFieldMapping('weight', 'ordering');
     $this->addFieldMapping('parent', 'cat_parent')->sourceMigration($this->machineName);
   }

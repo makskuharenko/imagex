@@ -290,6 +290,50 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxHumor' => array(
+        'class_name' => 'LinuxHumorMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com humor content',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxGalleryCategory' => array(
+        'class_name' => 'LinuxGalleryCategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com gallery categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxGallery' => array(
+        'class_name' => 'LinuxGalleryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com gallery',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxGalleryFile' => array(
+        'class_name' => 'LinuxGalleryFileMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com gallery files',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }

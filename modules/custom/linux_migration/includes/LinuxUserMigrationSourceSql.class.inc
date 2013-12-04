@@ -31,7 +31,10 @@ class LinuxUserMigrationSourceSql extends ImagexMigrateSourceSql {
           'params',
         )
       );
-
+    $query->leftJoin('jos_ninjaboard_people', 'jnp', 'ju.id = jnp.ninjaboard_person_id');
+    $query->fields('jnp', array(
+      'avatar',
+    ));
     return $query;
   }
 }

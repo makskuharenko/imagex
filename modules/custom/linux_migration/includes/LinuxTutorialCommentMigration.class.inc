@@ -9,7 +9,7 @@ class LinuxTutorialCommentMigration extends LinuxMigration {
   protected function setFieldMappings() {
     $this->addFieldMapping('nid', 'row')->sourceMigration('LinuxTutorial');
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
-    $this->addFieldMapping('comment_body', 'comment')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('comment_body', 'comment')->arguments(array('format' => 'xbbcode'));
     //@TODO: bbcode again
     $this->addFieldMapping('created', 'created_on');
     $this->addFieldMapping('hostname', 'ip');

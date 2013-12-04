@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * linux_humor.features.field_instance.inc
+ * linux_gallery.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function linux_humor_field_default_field_instances() {
+function linux_gallery_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-humor-body'
-  $field_instances['node-humor-body'] = array(
-    'bundle' => 'humor',
+  // Exported field_instance: 'node-gallery-body'
+  $field_instances['node-gallery-body'] = array(
+    'bundle' => 'gallery',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -22,7 +22,7 @@ function linux_humor_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -36,48 +36,7 @@ function linux_humor_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-humor-field_author'
-  $field_instances['node-humor-field_author'] = array(
-    'bundle' => 'humor',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_author',
-    'label' => 'Author',
+    'label' => 'Description',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -102,24 +61,66 @@ function linux_humor_field_default_field_instances() {
           ),
         ),
       ),
-      'text_processing' => 0,
+      'display_summary' => 1,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 20,
+        'summary_rows' => 5,
       ),
-      'type' => 'text_textfield',
+      'type' => 'text_textarea_with_summary',
       'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-humor-field_image'
-  $field_instances['node-humor-field_image'] = array(
-    'bundle' => 'humor',
+  // Exported field_instance: 'node-gallery-field_gallery_category'
+  $field_instances['node-gallery-field_gallery_category'] = array(
+    'bundle' => 'gallery',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_gallery_category',
+    'label' => 'Gallery category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-gallery-field_image'
+  $field_instances['node-gallery-field_image'] = array(
+    'bundle' => 'gallery',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -131,7 +132,7 @@ function linux_humor_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -142,17 +143,17 @@ function linux_humor_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image',
-    'label' => 'Image',
+    'label' => 'Images',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -165,13 +166,14 @@ function linux_humor_field_default_field_instances() {
       'type' => 'image_image',
       'weight' => 2,
     ),
+    'workbench_access_field' => 0,
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Author');
-  t('Body');
-  t('Image');
+  t('Description');
+  t('Gallery category');
+  t('Images');
 
   return $field_instances;
 }

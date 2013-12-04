@@ -16,6 +16,8 @@ dependencies[] = radioactivity
 dependencies[] = migrate
 dependencies[] = migrate_extras
 dependencies[] = date_migrate
+dependencies[] = xbbcode
+dependencies[] = xbbcode_basic
 
 ; ImageX component dependencies
 dependencies[] = imagex_answers
@@ -84,6 +86,7 @@ dependencies[] = linux_events
 dependencies[] = linux_footer
 dependencies[] = linux_forum
 dependencies[] = linux_foundation_network_header
+dependencies[] = linux_gallery
 dependencies[] = linux_group
 dependencies[] = linux_header
 dependencies[] = linux_humor

@@ -9,7 +9,7 @@ class LinuxQuestionMigration extends LinuxMigration {
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser')->defaultValue(1);
-    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
     $this->addFieldMapping('path', 'path');
