@@ -2,9 +2,7 @@ api = 2
 core = 7.x
 
 ; Download Drupal core.
-projects[drupal][type] = "core"
-projects[drupal][version] = "7.23"
-projects[drupal][patch][] = https://raw.github.com/imagex/imagex_patches/7.x/core/inheritable-profiles/1356276-D7-inheritable-profiles-multi.patch
+includes[] = "https://raw.github.com/imagex/imagex_installkit/7.x-1.x-dev/drupal-org-core.make"
 
 ; Download the ImageX base installation profile.
 projects[imagex_installkit][type] = "profile"
@@ -17,3 +15,7 @@ projects[linux][type] = "profile"
 projects[linux][download][type] = "git"
 projects[linux][download][url] = "git@github.com:imagex/linux.com.git"
 projects[linux][download][branch] = "7.x-dev"
+
+; Apply Libraries inheritable profiles patch as it is overwritten with
+; additional modules not defining it. This will be applied at the end.
+projects[libraries][patch][] = "https://raw.github.com/imagex/imagex_patches/7.x/contrib/libraries/libraries-inheritable-profiles-fix.patch"
