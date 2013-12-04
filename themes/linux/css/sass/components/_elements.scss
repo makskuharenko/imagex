@@ -914,11 +914,9 @@ small {
   @include span-columns(14 omega, 14);
   background-color: white;
 
-  .flexslider_views_slideshow_slide {
-    &:hover {
-      img {
-        @include opacity(0.3);
-      }
+  &:hover {
+    img {
+      @include opacity(0.3);
     }
   }
 
@@ -937,6 +935,10 @@ small {
         &:hover {
           @include opacity(0.8);
         }
+
+        &:before {
+          content: none;
+        }
       }
     }
 
@@ -950,6 +952,7 @@ small {
   .views-field-title {
     h2 {
       border: 0;
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 22px;
       line-height: 24px;
@@ -957,6 +960,8 @@ small {
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
 
       a {
+        display: block;
+        padding: 12px 0;
         color: $grayDark;
       }
     }
@@ -1025,7 +1030,7 @@ small {
   .flex-direction-nav {
     a {
       display: none;
-      width: 50px;
+      padding: 0 0 0 50px;
       height: 100%;
       @include opacity(0);
       top: 0;
@@ -1105,9 +1110,9 @@ small {
   .views-field-title {
     position: absolute;
     top: 0px;
-    padding: 5px 20px;
 
     h2 {
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 26px;
       font-weight: 300;
@@ -1115,7 +1120,9 @@ small {
       @include text-shadow(0 0 15px rgba(0,0,0,0.1));
 
       a {
+        display: block;
         color: white;
+        padding: 15px 20px;
       }
     }
   }
