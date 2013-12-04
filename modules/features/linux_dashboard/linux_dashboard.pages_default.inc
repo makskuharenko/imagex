@@ -88,9 +88,70 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
+    $pane->subtype = 'imagex_aggregator_content-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'imagex_aggregator exists',
+            'php' => 'return module_exists(\'imagex_aggregator\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'link_to_view' => 1,
+      'more_link' => 1,
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '5',
+      'fields_override' => array(
+        'title' => 1,
+        'type' => 1,
+        'name' => 1,
+        'status' => 1,
+        'created' => 1,
+        'delete_node' => 1,
+        'edit_node' => 1,
+      ),
+      'exposed' => array(
+        'status' => 'All',
+        'type' => 'All',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Latest Imported Content',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['two_66_33_first'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
+    $pane->panel = 'two_66_33_first';
+    $pane->type = 'views_panes';
     $pane->subtype = 'linux_dashboard_latest_content-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'No imagex_workflow module',
+            'php' => 'return module_exists(\'imagex_workflow\');',
+          ),
+          'not' => TRUE,
+        ),
+      ),
+    );
     $pane->configuration = array(
       'link_to_view' => 1,
       'more_link' => 1,
@@ -115,12 +176,12 @@ function linux_dashboard_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-1';
+    $display->content['new-2'] = $pane;
+    $display->panels['two_66_33_first'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_workflow_workbench_moderation-panel_pane_1';
@@ -168,12 +229,12 @@ function linux_dashboard_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['two_66_33_first'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_editorial_desk-panel_pane_2';
@@ -218,12 +279,12 @@ function linux_dashboard_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['two_66_33_first'][2] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['two_66_33_first'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_flagged_as_inappropriate_nodes-panel_pane_1';
@@ -265,10 +326,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_flagged_as_inappropriate_comments-panel_pane_1';
@@ -309,10 +370,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_dashboard_latest_comments-panel_pane_1';
@@ -343,8 +404,8 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['two_66_33_second'][2] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['two_66_33_second'][2] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
