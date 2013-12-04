@@ -937,6 +937,10 @@ small {
         &:hover {
           @include opacity(0.8);
         }
+
+        &:before {
+          content: none;
+        }
       }
     }
 
@@ -1025,7 +1029,7 @@ small {
   .flex-direction-nav {
     a {
       display: none;
-      width: 50px;
+      padding: 0 0 0 50px;
       height: 100%;
       @include opacity(0);
       top: 0;

@@ -4431,6 +4431,9 @@ h1 {
       .featured-slideshow .flexslider:hover a.flex-next:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
         opacity: 0.8; }
+      .featured-slideshow .flexslider:hover a.flex-prev:before,
+      .featured-slideshow .flexslider:hover a.flex-next:before {
+        content: none; }
     .featured-slideshow .flexslider .slides li {
       position: relative; }
   .featured-slideshow .views-field-title h2 {
@@ -4484,7 +4487,7 @@ h1 {
     display: none; }
   .featured-slideshow .flex-direction-nav a {
     display: none;
-    width: 50px;
+    padding: 0 0 0 50px;
     height: 100%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
