@@ -7,7 +7,7 @@ class LinuxGalleryMigration extends LinuxMigration {
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser')->defaultValue(1);
     $this->addFieldMapping('field_gallery_category', 'category_id')->sourceMigration('LinuxGalleryCategory');
     $this->addFieldMapping('field_gallery_category:source_type')

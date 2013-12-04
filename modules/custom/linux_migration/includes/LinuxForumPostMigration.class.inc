@@ -9,7 +9,7 @@ class LinuxForumPostMigration extends LinuxMigration {
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'subject');
-    $this->addFieldMapping('comment_body', 'text')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('comment_body', 'text')->arguments(array('format' => 'xbbcode'));
     $this->addFieldMapping('uid', 'created_user_id')->sourceMigration('LinuxUser');
     $this->addFieldMapping('created', 'created_time');
     $this->addFieldMapping('changed', 'modified');

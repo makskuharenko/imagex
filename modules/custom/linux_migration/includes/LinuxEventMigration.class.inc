@@ -10,7 +10,7 @@ class LinuxEventMigration extends LinuxMigration {
 
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'datdescription')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'datdescription')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('field_number_of_attendee', 'maxplaces');
     $this->addFieldMapping('created', 'created');

@@ -9,7 +9,7 @@ class LinuxHumorMigration extends LinuxMigration {
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('status', 'enabled');
     $this->addFieldMapping('created', 'created_on');

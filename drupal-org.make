@@ -44,6 +44,9 @@ projects[vote_up_down][download][url] = "https://drupal.org/files/vote_up_down_D
 projects[search_api_solr][type] = "module"
 projects[search_api_solr][subdir] = "contrib"
 projects[search_api_solr][version] = "1.3"
+projects[xbbcode][type] = "module"
+projects[xbbcode][subdir] = "contrib"
+projects[xbbcode][version] = "1.5"
 
 ; Download ImageX components for this project.
 projects[imagex_addthis][type] = "module"

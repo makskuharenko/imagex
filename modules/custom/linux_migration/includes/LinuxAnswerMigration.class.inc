@@ -8,7 +8,7 @@ class LinuxAnswerMigration extends LinuxMigration {
 
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'description')->arguments(array('format' => 'xbbcode'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('status', 'published');

@@ -22,8 +22,8 @@ abstract class LinuxContentMigration extends LinuxMigration {
    */
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'full')->arguments(array('format' => 'full_html'));
-    $this->addFieldMapping('body:summary', 'introtext')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'full')->arguments(array('format' => 'filtered_html'));
+    $this->addFieldMapping('body:summary', 'introtext')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser')->defaultValue(1);
     $this->addFieldMapping('field_section', 'sectionid')->sourceMigration('LinuxSection');
     $this->addFieldMapping('field_section:source_type')

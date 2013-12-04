@@ -16,6 +16,8 @@ dependencies[] = radioactivity
 dependencies[] = migrate
 dependencies[] = migrate_extras
 dependencies[] = date_migrate
+dependencies[] = xbbcode
+dependencies[] = xbbcode_basic
 
 ; ImageX component dependencies
 dependencies[] = imagex_answers

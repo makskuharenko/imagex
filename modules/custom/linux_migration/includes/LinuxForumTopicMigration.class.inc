@@ -13,7 +13,7 @@ class LinuxForumTopicMigration extends LinuxMigration {
     //'ninjaboard_topic_slug',
 
     $this->addFieldMapping('title', 'subject');
-    $this->addFieldMapping('body', 'text')->arguments(array('format' => 'full_html'));
+    $this->addFieldMapping('body', 'text')->arguments(array('format' => 'xbbcode'));
     $this->addFieldMapping('created', 'created_time');
     $this->addFieldMapping('uid', 'created_user_id')->sourceMigration('LinuxUser');
     $this->addFieldMapping('changed', 'modified');
