@@ -174,3 +174,5 @@ projects[imagex_search][subdir] = "imagex/modules"
 projects[imagex_search][download][type] = "git"
 projects[imagex_search][download][url] = "git@github.com:imagex/imagex_search.git"
 projects[imagex_search][download][branch] = "7.x-dev"
+
+includes[] = "https://raw.github.com/imagex/imagex_wysiwyg_profiles/7.x-dev/modules/imagex_wysiwyg_profiles_codehighlighter/drupal-org.make"
