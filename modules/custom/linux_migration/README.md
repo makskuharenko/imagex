@@ -8,7 +8,8 @@ The source Joomla database credentials should be entered into the file.
 * Enable the Linux Migration module if it is not already enabled.
 * Import the Linux.com Joomla Database dump to a MySQL server that can be accessed by the Drupal installation.
 * Unpack the Linux.com file dump to a local directory on the server.
-* Ensure the database and file path location are configured in imagex_migration.settings.php
+* Unpack the Manual page html tar to a local directory. The most recent version is at: http://www.tldp.org/manpages/man-html/man-html-20131124.tar.bz2
+* Ensure the database and file paths location are configured in imagex_migration.settings.php
 
 To migrate all content with Drush:
 
