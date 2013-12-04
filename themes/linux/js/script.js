@@ -55,8 +55,8 @@
       breakpoint: 'computer',
       enter: function() {
         filteredView();
+        moveBlocks($('.region-third .pane-menu-menu-join-us'), $('.region-first .standard-bean:first-child'), true);
         moveBlocks($('.region-third'), $('#comments'), true);
-        moveBlocks($('.region-third .pane-menu-menu-join-us'), $('.standard-bean:first-child'), true);
       },
       exit: function() {
         // Do Nothing
@@ -65,8 +65,8 @@
       breakpoint: 'wide',
       enter: function() {
         filteredView();
+        moveBlocks($('.region-first .pane-menu-menu-join-us'), $('.region-third .standard-bean:first-child'), true);
         moveBlocks($('.region-third'), $('.region-second'), false);
-        moveBlocks($('.region-first .pane-menu-menu-join-us'), $('.standard-bean:first-child'), true);
       },
       exit: function() {
         // Do Nothing
@@ -80,11 +80,11 @@
   var eTop = $('#block-panels-mini-global-header').offset().top;
 
   $(window).scroll(function() { //when window is scrolled
-      if (eTop - $(window).scrollTop() <= 0) {
-        $('#header-wrapper, #panel-wrapper').addClass('fixed');
-      } else {
-        $('#header-wrapper, #panel-wrapper').removeClass('fixed');
-      }
+    if (eTop - $(window).scrollTop() <= 0) {
+      $('#header-wrapper, #panel-wrapper').addClass('fixed');
+    } else {
+      $('#header-wrapper, #panel-wrapper').removeClass('fixed');
+    }
   });
 
   // Show and hide the mobile menu
