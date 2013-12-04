@@ -3977,17 +3977,23 @@ h1 {
     background-image: none;
     background-position: 0% 0%;
     background-repeat: repeat; }
+  .filtered-view h2.js-dropdown-toggled {
+    border-color: #333333;
+    background: #333333 !important;
+    color: white; }
+    .filtered-view h2.js-dropdown-toggled:before {
+      color: white; }
   .filtered-view h2:before {
     color: #f17700;
     float: right;
     line-height: 50px;
     font-size: 16px;
     padding-right: 1.5em; }
-  .filtered-view h2.popular {
+  .filtered-view h2.js-leftbar-option-popular {
     background-image: url("../img/most-popular-gray.png"); }
-  .filtered-view h2.commented {
+  .filtered-view h2.js-leftbar-option-comment_count {
     background-image: url("../img/most-comments-gray.png"); }
-  .filtered-view h2.shared {
+  .filtered-view h2.js-leftbar-option-shared {
     background-image: url("../img/most-shared-gray.png"); }
 
 #user-wrapper {
@@ -4991,82 +4997,30 @@ h1 {
     padding: 0 1.5em; }
     .pane-menu-menu-join-us ul li {
       margin: 12px 0 0 6px; } }
-.filtered-menu {
-  display: none;
-  position: relative;
-  z-index: 99;
+.js-leftbar-dropdown {
   width: 100%;
   background-color: #333333;
-  position: relative;
-  margin-bottom: -203px; }
-  .filtered-menu ul {
-    margin: 0;
-    padding: 0 1.5em;
-    list-style-type: none; }
-    .filtered-menu ul li {
-      border-top: 1px solid #444444; }
-      .filtered-menu ul li span,
-      .filtered-menu ul li a {
-        display: block;
-        color: white;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 50px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em; }
-        .filtered-menu ul li span:hover,
-        .filtered-menu ul li a:hover {
-          color: #666666; }
-        .filtered-menu ul li span.recent,
-        .filtered-menu ul li a.recent {
-          background: transparent url("../img/most-recent-white.png") no-repeat right center; }
-        .filtered-menu ul li span.popular,
-        .filtered-menu ul li a.popular {
-          background: transparent url("../img/most-popular-white.png") no-repeat right center; }
-        .filtered-menu ul li span.commented,
-        .filtered-menu ul li a.commented {
-          background: transparent url("../img/most-comments-white.png") no-repeat right center; }
-        .filtered-menu ul li span.shared,
-        .filtered-menu ul li a.shared {
-          background: transparent url("../img/most-shared-white.png") no-repeat right center; }
-      .filtered-menu ul li:first-child {
-        border: none; }
-        .filtered-menu ul li:first-child:before {
-          content: "\f0d7";
-          font-family: FontAwesome;
-          font-weight: normal;
-          font-style: normal;
-          text-decoration: inherit;
-          -webkit-font-smoothing: antialiased;
-          padding-right: 5px;
-          text-decoration: none;
-          /* sprites.less reset */
-          display: -moz-inline-stack;
-          display: inline-block;
-          vertical-align: middle;
-          *vertical-align: auto;
-          zoom: 1;
-          *display: inline;
-          width: auto;
-          height: auto;
-          margin-top: 0;
-          line-height: normal;
-          vertical-align: baseline;
-          background-image: none;
-          background-position: 0% 0%;
-          background-repeat: repeat; }
-        .filtered-menu ul li:first-child:before {
-          color: #666666;
-          float: right;
-          line-height: 50px;
-          font-size: 16px; }
-        .filtered-menu ul li:first-child span,
-        .filtered-menu ul li:first-child a {
-          color: #666666;
-          letter-spacing: 0em;
-          font-weight: 700;
-          font-size: 13px;
-          background: none; }
+  top: 50px;
+  padding: 0 1.5em !important; }
+  .js-leftbar-dropdown .js-leftbar-option {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-top: 1px solid #666666; }
+    .js-leftbar-dropdown .js-leftbar-option:hover {
+      color: #666666; }
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-created {
+      background: transparent url("../img/most-recent-white.png") no-repeat right center; }
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-popular {
+      background: transparent url("../img/most-popular-white.png") no-repeat right center; }
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-comment_count {
+      background: transparent url("../img/most-comments-white.png") no-repeat right center; }
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-shared {
+      background: transparent url("../img/most-shared-white.png") no-repeat right center; }
 
 .page-search h2 {
   margin: 0 0 2em;

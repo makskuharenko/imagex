@@ -425,6 +425,16 @@ small {
     background-position: right 45px center; /* Cr 25+, FF 13+, IE 9+, Op 10.5+ */
     cursor: pointer;
 
+    &.js-dropdown-toggled {
+      border-color: $grayDark;
+      background: $grayDark !important;
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+
     &:before {
       color: $linuxStdOrange;
       float: right;
@@ -433,15 +443,15 @@ small {
       padding-right: 1.5em;
     }
 
-    &.popular {
+    &.js-leftbar-option-popular {
       background-image: url('../img/most-popular-gray.png');
     }
 
-    &.commented {
+    &.js-leftbar-option-comment_count {
       background-image: url('../img/most-comments-gray.png');
     }
 
-    &.shared {
+    &.js-leftbar-option-shared {
       background-image: url('../img/most-shared-gray.png');
     }
   }
@@ -1625,74 +1635,40 @@ small {
 // Most Recent menu filter
 // -----------------------
 
-.filtered-menu {
-  display: none;
-  position: relative;
-  z-index: 99;
+.js-leftbar-dropdown {
   width: 100%;
   background-color: $grayDark;
-  position: relative;
-  margin-bottom: -203px;
+  top: 50px;
+  padding: 0 1.5em !important;
 
-  ul {
-    margin: 0;
-    padding: 0 1.5em;
-    list-style-type: none;
+  .js-leftbar-option {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-top: 1px solid $linuxDarkGray;
 
-    li {
-      border-top: 1px solid $btnInverseBackground;
+    &:hover {
+      color: darken(white, 60%);
+    }
 
-      span,
-      a {
-        display: block;
-        color: white;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 50px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+    &.js-leftbar-option-created {
+      background: transparent url('../img/most-recent-white.png') no-repeat right center;
+    }
 
-        &:hover {
-          color: darken(white, 60%);
-        }
+    &.js-leftbar-option-popular {
+      background: transparent url('../img/most-popular-white.png') no-repeat right center;
+    }
 
-        &.recent {
-          background: transparent url('../img/most-recent-white.png') no-repeat right center;
-        }
+    &.js-leftbar-option-comment_count {
+      background: transparent url('../img/most-comments-white.png') no-repeat right center;
+    }
 
-        &.popular {
-          background: transparent url('../img/most-popular-white.png') no-repeat right center;
-        }
-
-        &.commented {
-          background: transparent url('../img/most-comments-white.png') no-repeat right center;
-        }
-
-        &.shared {
-          background: transparent url('../img/most-shared-white.png') no-repeat right center;
-        }
-      }
-
-      &:first-child {
-        border: none;
-        @include icon-caret-down;
-
-        &:before {
-          color: darken(white, 60%);
-          float: right;
-          line-height: 50px;
-          font-size: 16px;
-        }
-
-        span,
-        a {
-          color: darken(white, 60%);
-          letter-spacing: 0em;
-          font-weight: 700;
-          font-size: 13px;
-          background: none;
-        }
-      }
+    &.js-leftbar-option-shared {
+      background: transparent url('../img/most-shared-white.png') no-repeat right center;
     }
   }
 }
