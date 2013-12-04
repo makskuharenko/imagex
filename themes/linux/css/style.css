@@ -4416,7 +4416,7 @@ h1 {
   *margin-left: -1.5em;
   display: inline;
   background-color: white; }
-  .featured-slideshow .flexslider_views_slideshow_slide:hover img {
+  .featured-slideshow:hover img {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
     opacity: 0.3; }
   .featured-slideshow .flex-nav-container {
@@ -4438,12 +4438,15 @@ h1 {
       position: relative; }
   .featured-slideshow .views-field-title h2 {
     border: 0;
+    margin: 0;
     font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
     font-size: 22px;
     line-height: 24px;
     font-weight: 300;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
     .featured-slideshow .views-field-title h2 a {
+      display: block;
+      padding: 12px 0;
       color: #333333; }
   @media (min-width: 45.5em) {
     .featured-slideshow .views-field-title {
@@ -4534,16 +4537,18 @@ h1 {
       opacity: 0.3; }
   .featured-tiles .views-field-title {
     position: absolute;
-    top: 0px;
-    padding: 5px 20px; }
+    top: 0px; }
     .featured-tiles .views-field-title h2 {
+      margin: 0;
       font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
       font-size: 26px;
       font-weight: 300;
       line-height: 28px;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
       .featured-tiles .views-field-title h2 a {
-        color: white; }
+        display: block;
+        color: white;
+        padding: 15px 20px; }
   .featured-tiles .views-field-comment-count {
     position: absolute;
     margin: 0 0 0 20px;
