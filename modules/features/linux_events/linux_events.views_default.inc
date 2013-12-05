@@ -148,12 +148,6 @@ function linux_events_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
-  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
-  $handler->display->display_options['filters']['date_filter']['group'] = 1;
   /* Filter criterion: Content: Category (field_tag) */
   $handler->display->display_options['filters']['field_tag_tid']['id'] = 'field_tag_tid';
   $handler->display->display_options['filters']['field_tag_tid']['table'] = 'field_data_field_tag';
@@ -196,6 +190,13 @@ function linux_events_views_default_views() {
     4 => 0,
   );
   $handler->display->display_options['filters']['field_location_value']['reduce_duplicates'] = TRUE;
+  /* Filter criterion: Content: Event Date -  start date (field_event_date) */
+  $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value']['granularity'] = 'second';
+  $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';  
 
   /* Display: Events List Content pane */
   $handler = $view->new_display('panel_pane', 'Events List Content pane', 'panel_pane_2');
