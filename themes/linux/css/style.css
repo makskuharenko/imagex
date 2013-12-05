@@ -3618,6 +3618,9 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+.messages.error {
+  display: none; }
+
 .not-front #header-wrapper {
   padding: 0;
   margin-bottom: -1px; }
@@ -4062,16 +4065,19 @@ h1 {
           background: transparent;
           position: relative;
           text-align: center; }
-          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover {
+          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail {
             border-bottom: 4px solid #e5e5e5; }
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a,
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span {
-              height: 44px; }
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover a.active,
-              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover span.active {
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover > a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover > span, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active > a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active > span, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail > a,
+            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail > span {
+              height: 44px;
+              color: #f17700; }
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover > a.active,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li:hover > span.active, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active > a.active,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active > span.active, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail > a.active,
+              #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail > span.active {
                 border-bottom: none; }
-          #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active, #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li.active-trail {
-            border-bottom: 4px solid #e5e5e5; }
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
           #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
             display: block;
@@ -4083,9 +4089,6 @@ h1 {
             line-height: 48px;
             color: #666666;
             cursor: pointer; }
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a.active,
-            #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span.active {
-              color: #f17700; }
           @media (min-width: 52.5em) {
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > a,
             #header-wrapper #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li > span {
