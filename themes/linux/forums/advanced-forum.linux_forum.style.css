@@ -1,0 +1,131 @@
+.forum-table-wrap {
+  margin: 0 0 3em; }
+  .forum-table-wrap .forum-table-superheader {
+    padding: 0; }
+    .forum-table-wrap .forum-table-superheader .forum-table-name {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 0 0 1.5em;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 50px;
+      text-transform: uppercase;
+      border-top: 1px solid #bbbbbb;
+      border-bottom: 1px solid #bbbbbb; }
+      .forum-table-wrap .forum-table-superheader .forum-table-name a {
+        display: block;
+        color: #666666; }
+    .forum-table-wrap .forum-table-superheader .forum-table-description {
+      width: 100%;
+      margin: 0; }
+
+.forum-table thead.forum-header {
+  background: transparent url("../img/content-lines.png") repeat top left; }
+  .forum-table thead.forum-header th {
+    padding: 1em 0;
+    border-bottom: 0;
+    font-weight: 300;
+    color: #222222; }
+.forum-table tbody {
+  border: none; }
+  .forum-table tbody .forum-row {
+    border-bottom: 1px solid white;
+    padding: 0;
+    background: #F6F6F6; }
+    .forum-table tbody .forum-row td {
+      height: 100px; }
+      .forum-table tbody .forum-row td .forum-name a {
+        color: #666666;
+        font-family: "Open Sans Condensed";
+        font-weight: 600;
+        font-size: 16px; }
+      .forum-table tbody .forum-row td.forum-number-topics, .forum-table tbody .forum-row td.forum-number-posts {
+        font-size: 13px;
+        font-weight: 700;
+        color: #666666; }
+      .forum-table tbody .forum-row td.forum-number-topics .forum-number-new-topics {
+        font-style: italic;
+        font-weight: 400; }
+        .forum-table tbody .forum-row td.forum-number-topics .forum-number-new-topics a {
+          color: #f17700; }
+      .forum-table tbody .forum-row td.forum-last-reply {
+        line-height: 20px;
+        font-size: 12px;
+        color: #999999; }
+        .forum-table tbody .forum-row td.forum-last-reply .topic-title a {
+          color: #f17700;
+          font-size: 13px; }
+        .forum-table tbody .forum-row td.forum-last-reply .topic-author {
+          font-style: italic;
+          text-transform: capitalize; }
+          .forum-table tbody .forum-row td.forum-last-reply .topic-author a {
+            color: #999999; }
+
+/* FORUM LIST ICONS *********************************************************/
+tr .forum-list-icon-default span,
+tr .forum-list-icon-new-posts span {
+  display: block;
+  margin: 0 auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px; }
+
+tr .forum-list-icon-default span {
+  background: #dddddd !important; }
+tr .forum-list-icon-new-posts span {
+  background: #f17700 !important; }
+
+.forum-list-icon-legend {
+  margin: 0 0 3em; }
+
+.forum-list-icon-wrapper span {
+  display: block;
+  float: left;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 8px; }
+
+.forum-list-text-legend-default,
+.forum-list-text-legend-new-posts {
+  line-height: 16px;
+  margin: 0 0 0 5px;
+  float: left;
+  color: #666666;
+  font-family: "Open Sans Condensed";
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize; }
+
+span.forum-list-icon-default {
+  background: #dddddd !important; }
+
+span.forum-list-icon-new-posts {
+  background: #f17700 !important; }
+
+/* FORUM STATISTICS *********************************************************/
+#forum-statistics {
+  margin: 0 0 3em;
+  padding: 1.5em;
+  background: transparent url("../img/content-lines.png") repeat top left; }
+  #forum-statistics #forum-statistics-statistics-header,
+  #forum-statistics #forum-statistics-active-header {
+    padding: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px; }
+  #forum-statistics #forum-statistics-active-body {
+    margin: 0 0 1.5em;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 300; }
+    #forum-statistics #forum-statistics-active-body a {
+      text-transform: capitalize;
+      color: #f17700; }
+  #forum-statistics #forum-statistics-statistics-body {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 300; }
+    #forum-statistics #forum-statistics-statistics-body #forum-statistics-latest-users a {
+      text-transform: capitalize;
+      color: #f17700; }

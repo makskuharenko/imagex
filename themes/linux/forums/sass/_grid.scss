@@ -1,0 +1,35 @@
+// ---------------------------------------------------------------------------
+// Imports.
+
+@import "susy"; // Susy Grids
+// @import "singularitygs"; // Singularity Grid System
+// @import "zen"; // Zen Grids
+// @import "breakpoint"; //@Media Query Mixins
+
+// ---------------------------------------------------------------------------
+// Susy Grid.
+
+$base-font-size: 14px;
+// This is the default number of columns.
+$total-columns: 4;
+// Width of each column.
+$column-width   : 6em;
+// Space between columns.
+$gutter-width   : 1.5em;
+// Space on the right and left of the grid.
+$grid-padding   : $gutter-width;
+
+// $container-style: <style>; <style>: magic | static | fluid.
+$container-style: magic;
+
+// $legacy-support-for-ie  : true;
+// $legacy-support-for-ie6 : $legacy-support-for-ie;
+// $legacy-support-for-ie7 : $legacy-support-for-ie;
+
+$show-grid-backgrounds  : false;
+
+//alternative layout breakpoints
+$narrow:    26em 6;
+$tablet:    40em 8;
+$computer:  52em 12;
+$wide:      71em 12;
