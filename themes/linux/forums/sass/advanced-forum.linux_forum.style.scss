@@ -1,0 +1,220 @@
+@import "grid";
+@import "variables";
+
+.forum-table-wrap {
+  margin: 0 0 3em;
+
+  .forum-table-superheader {
+    padding: 0;
+
+    .forum-table-name {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 0 0 1.5em;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 50px;
+      text-transform: uppercase;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
+
+      a {
+        display: block;
+        color: $linuxDarkGray;
+      }
+    }
+
+    .forum-table-description {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.forum-table {
+  thead.forum-header {
+    background: transparent url('../img/content-lines.png') repeat top left;
+
+    th {
+      padding: 1em 0;
+      border-bottom: 0;
+      font-weight: 300;
+      color: $grayDarker;
+    }
+  }
+
+  tbody {
+    border: none;
+
+    .forum-row {
+      border-bottom: 1px solid white;
+      padding: 0;
+      background: #F8F8F8;
+
+      td {
+        height: 100px;
+
+        .forum-name {
+          a {
+            color: $linuxDarkGray;
+            font-family: $condensedFontFamily;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+
+        &.forum-number-topics,
+        &.forum-number-posts {
+          font-size: 13px;
+          font-weight: 700;
+          color: $linuxDarkGray;
+        }
+
+        &.forum-number-topics {
+          .forum-number-new-topics {
+            font-style: italic;
+            font-weight: 400;
+
+            a {
+              color: $linuxStdOrange;
+            }
+          }
+        }
+
+        &.forum-last-reply {
+          line-height: 20px;
+          font-size: 12px;
+          color: $grayLight;
+
+          .topic-title {
+            a {
+              color: $linuxStdOrange;
+              font-size: 13px;
+            }
+          }
+
+          .topic-author {
+            font-style: italic;
+            text-transform: capitalize;
+
+            a {
+              color: $grayLight;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* FORUM LIST ICONS *********************************************************/
+tr {
+  .forum-list-icon-default,
+  .forum-list-icon-new-posts {
+    span {
+      display: block;
+      margin: 0 auto;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+    }
+  }
+}
+
+tr {
+  .forum-list-icon-default {
+    span {
+      background: $paginationBorder !important;
+    }
+  }
+
+  .forum-list-icon-new-posts {
+    span {
+      background: $linuxStdOrange !important;
+    }
+  }
+}
+
+.forum-list-icon-legend {
+  margin: 0 0 3em;
+}
+
+.forum-list-icon-wrapper span {
+  display: block;
+  float: left;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 8px;
+}
+
+.forum-list-text-legend-default,
+.forum-list-text-legend-new-posts {
+  line-height: 16px;
+  margin: 0 0 0 5px;
+  float: left;
+  color: $linuxDarkGray;
+  font-family: $condensedFontFamily;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+span.forum-list-icon-default {
+  background: $paginationBorder !important;
+}
+
+span.forum-list-icon-new-posts {
+  background: $linuxStdOrange !important;
+}
+
+/* FORUM STATISTICS *********************************************************/
+
+#forum-statistics {
+  margin: 0 0 3em;
+  padding: 1.5em;
+  background: transparent url('../img/content-lines.png') repeat top left;
+
+  #forum-statistics-statistics-header,
+  #forum-statistics-active-header {
+    padding: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  #forum-statistics-active-body {
+    margin: 0 0 1.5em;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 300;
+
+    a {
+      text-transform: capitalize;
+      color: $linuxStdOrange;
+    }
+  }
+
+  #forum-statistics-statistics-body {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 300;
+
+    #forum-statistics-latest-users {
+      a {
+        text-transform: capitalize;
+        color: $linuxStdOrange;
+      }
+    }
+  }
+}
+
+/* FORUM TOPICS **************************************************************/
+
+.forum-table-topics {
+  width: 100%;
+
+  .views-field-comment-count {
+    text-align: center;
+  }
+}

@@ -1,3 +1,10 @@
+// Temporary
+// -----------------------------------------
+
+.messages.error {
+  display: none;
+}
+
 // Standard elements and node/comment styles
 // -----------------------------------------
 
@@ -583,22 +590,20 @@ small {
           position: relative;
           text-align: center;
 
-          &:hover {
+          &:hover,
+          &.active,
+          &.active-trail {
             border-bottom: 4px solid $dropdownDividerTop;
 
-            a,
-            span {
+            > a,
+            > span {
               height: 44px;
+              color: $linuxStdOrange;
 
               &.active {
                 border-bottom: none;
               }
             }
-          }
-
-          &.active,
-          &.active-trail {
-            border-bottom: 4px solid $dropdownDividerTop;
           }
 
           > a,
@@ -612,10 +617,6 @@ small {
             line-height: 48px;
             color: $linuxDarkGray;
             cursor: pointer;
-
-            &.active {
-              color: $linuxStdOrange;
-            }
           }
 
           @include at-breakpoint(60em) {
