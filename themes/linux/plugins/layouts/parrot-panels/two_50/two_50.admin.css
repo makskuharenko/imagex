@@ -2,3 +2,17 @@
 #panels-dnd-main .region-first {float: left; width: 49.75%}
 #panels-dnd-main .region-second {float: right; width: 49.75%}
 #panels-dnd-main .region-bottom {clear: both}
+
+/* Quick fix - overwrite when parrot gets updated */
+@media (min-width: 52em) {
+  .parrot-panels #two-50-middle-wrapper {
+    clear: both;
+  }
+  .parrot-panels #two-50-middle-wrapper .region-first {
+    float: left; width: 48%
+  }
+
+  .parrot-panels #two-50-middle-wrapper .region-second {
+    float: right; width: 48%
+  }
+}
