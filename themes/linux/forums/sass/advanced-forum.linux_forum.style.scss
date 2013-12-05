@@ -16,8 +16,8 @@
       font-weight: 700;
       line-height: 50px;
       text-transform: uppercase;
-      border-top: 1px solid $btnBorder;
-      border-bottom: 1px solid $btnBorder;
+      border-top: 1px solid $dropdownDividerTop;
+      border-bottom: 1px solid $dropdownDividerTop;
 
       a {
         display: block;
@@ -50,7 +50,7 @@
     .forum-row {
       border-bottom: 1px solid white;
       padding: 0;
-      background: #F6F6F6;
+      background: #F8F8F8;
 
       td {
         height: 100px;
@@ -206,5 +206,15 @@ span.forum-list-icon-new-posts {
         color: $linuxStdOrange;
       }
     }
+  }
+}
+
+/* FORUM TOPICS **************************************************************/
+
+.forum-table-topics {
+  width: 100%;
+
+  .views-field-comment-count {
+    text-align: center;
   }
 }

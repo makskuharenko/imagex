@@ -11,8 +11,8 @@
       font-weight: 700;
       line-height: 50px;
       text-transform: uppercase;
-      border-top: 1px solid #bbbbbb;
-      border-bottom: 1px solid #bbbbbb; }
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5; }
       .forum-table-wrap .forum-table-superheader .forum-table-name a {
         display: block;
         color: #666666; }
@@ -32,7 +32,7 @@
   .forum-table tbody .forum-row {
     border-bottom: 1px solid white;
     padding: 0;
-    background: #F6F6F6; }
+    background: #F8F8F8; }
     .forum-table tbody .forum-row td {
       height: 100px; }
       .forum-table tbody .forum-row td .forum-name a {
@@ -129,3 +129,9 @@ span.forum-list-icon-new-posts {
     #forum-statistics #forum-statistics-statistics-body #forum-statistics-latest-users a {
       text-transform: capitalize;
       color: #f17700; }
+
+/* FORUM TOPICS **************************************************************/
+.forum-table-topics {
+  width: 100%; }
+  .forum-table-topics .views-field-comment-count {
+    text-align: center; }
