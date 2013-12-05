@@ -20,10 +20,14 @@ function linux_post_install_install() {
     module_load_include('inc', 'node', 'node.pages');
     foreach ($nodes as $data) {
       $node = (object) $data;
-      entity_uuid_delete('node', $node->uuid);
+      $nids = entity_get_id_by_uuid('node', array($node->uuid));
+      if (isset($nids[$node->uuid])) {
+        $deleted = entity_uuid_delete('node', $node->uuid);
+      }
     }
     
     drupal_flush_all_caches();
+    features_revert_module('linux_menu');
     
     foreach ($nodes as $data) {
       $node = (object) $data;
