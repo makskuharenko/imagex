@@ -69,7 +69,7 @@ function linux_dashboard_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'two_66_33';
+  $display->layout = 'two_50';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -86,7 +86,7 @@ function linux_dashboard_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'two_66_33_first';
+    $pane->panel = 'two_50_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_aggregator_content-panel_pane_1';
     $pane->shown = TRUE;
@@ -133,10 +133,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['two_66_33_first'][0] = 'new-1';
+    $display->panels['two_50_first'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'two_66_33_first';
+    $pane->panel = 'two_50_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_dashboard_latest_content-panel_pane_1';
     $pane->shown = TRUE;
@@ -179,10 +179,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['two_66_33_first'][1] = 'new-2';
+    $display->panels['two_50_first'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'two_66_33_first';
+    $pane->panel = 'two_50_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_workflow_workbench_moderation-panel_pane_1';
     $pane->shown = TRUE;
@@ -232,10 +232,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['two_66_33_first'][2] = 'new-3';
+    $display->panels['two_50_first'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'two_66_33_first';
+    $pane->panel = 'two_50_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_editorial_desk-panel_pane_2';
     $pane->shown = TRUE;
@@ -282,10 +282,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['two_66_33_first'][3] = 'new-4';
+    $display->panels['two_50_first'][3] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'two_66_33_second';
+    $pane->panel = 'two_50_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_flagged_as_inappropriate_nodes-panel_pane_1';
     $pane->shown = TRUE;
@@ -327,10 +327,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-5';
+    $display->panels['two_50_second'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'two_66_33_second';
+    $pane->panel = 'two_50_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'imagex_flagged_as_inappropriate_comments-panel_pane_1';
     $pane->shown = TRUE;
@@ -371,10 +371,10 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-6';
+    $display->panels['two_50_second'][1] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'two_66_33_second';
+    $pane->panel = 'two_50_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_dashboard_latest_comments-panel_pane_1';
     $pane->shown = TRUE;
@@ -405,7 +405,7 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['two_66_33_second'][2] = 'new-7';
+    $display->panels['two_50_second'][2] = 'new-7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
