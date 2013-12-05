@@ -15,7 +15,6 @@ class LinuxManpageMigration extends LinuxMigration {
     $this->addFieldMapping('field_manual_section', 'section')->arguments(array('create_term' => TRUE));
     $this->addFieldMapping('status')->defaultValue(1);
     $this->addFieldMapping('uid')->defaultValue(1);
-    $this->addFieldMapping('path', 'path');
   }
 
   public function prepareRow($row) {
@@ -30,7 +29,7 @@ class LinuxManpageMigration extends LinuxMigration {
     // Fix links to related items, no time for a regex
     $row->body = $this->fixRelatedLinks($doc->saveHTML($row->body));
 
-    $row->path = 'learn/docs/man/' . str_replace(array('(', ')'), '', $row->title);
+    $row->old_path = 'learn/docs/man/' . str_replace(array('(', ')'), '', $row->title);
 
     // section
     preg_match_all("/[0-9]/", $row->title, $matches);
@@ -108,5 +107,9 @@ class LinuxManpageMigration extends LinuxMigration {
     }
 
     return $html;
+  }
+
+  public function complete($entity, stdClass $row) {
+    $this->setRedirect($entity, $row);
   }
 }

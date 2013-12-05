@@ -57,8 +57,17 @@ class LinuxNewsMigration extends LinuxContentMigration {
       return FALSE;
     }
 
-    $row->path = 'news/' . $this->sections[$row->sectionid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
-    $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
+    // High performance category is different than others!
+    if ($row->catid == 147) {
+      $row->old_path = 'news/' . $this->sections[$row->sectionid] . '/' . $this->categories[$row->catid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
+    }
+    else {
+      $row->old_path = 'news/' . $this->sections[$row->sectionid] . '/' . $this->categories[$row->catid] . '/' . $row->id;
+    }
+    $row->old_path = ($row->alias) ? $row->old_path . '-' . $row->alias : $row->old_path;
+
+
+    $row->created = ($row->created == '0000-00-00 00:00:00') ? time() : $row->created;
 
     return TRUE;
   }

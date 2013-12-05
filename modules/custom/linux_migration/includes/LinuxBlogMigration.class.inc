@@ -58,11 +58,11 @@ class LinuxBlogMigration extends LinuxContentMigration {
     }
 
     if ($row->sectionid == 26) {
-      $row->path = 'news/' . $this->sections[$row->sectionid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
-      $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
+      $row->old_path = 'news/' . $this->sections[$row->sectionid] . '/' . $row->catid . '-' . $this->categories[$row->catid] . '/' . $row->id;
+      $row->old_path = ($row->alias) ? $row->old_path . '-' . $row->alias : $row->old_path;
     }
     else {
-      $row->path = 'community/blogs/' . $this->categories[$row->catid] . '/' . $row->id;
+      $row->old_path = 'community/blogs/' . $this->categories[$row->catid] . '/' . $row->id;
     }
 
     return TRUE;

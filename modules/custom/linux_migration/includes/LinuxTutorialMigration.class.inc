@@ -36,14 +36,22 @@ class LinuxTutorialMigration extends LinuxContentMigration {
       return FALSE;
     }
 
+    // Videos.
     if ($row->sectionid == '4') {
-      $row->path = 'learn/videos/' . $row->id;
+      $row->old_path = 'learn/videos/' . $row->id;
     }
     else {
-      $row->path = 'learn/tutorials/'  . $row->id;
+      // How-tos.
+      if ($row->catid == '92') {
+        $row->old_path = 'learn/docs/ldp/' . $row->id;
+      }
+      // Everything else.
+      else {
+        $row->old_path = 'learn/'. $this->categories[$row->catid]  . '/'. $row->id;
+      }
     }
 
-    $row->path = ($row->alias) ? $row->path . '-' . $row->alias : $row->path;
+    $row->old_path = ($row->alias) ? $row->old_path . '-' . $row->alias : $row->old_path;
 
     return TRUE;
   }
