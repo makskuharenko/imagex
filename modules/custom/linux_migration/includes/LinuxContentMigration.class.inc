@@ -34,7 +34,6 @@ abstract class LinuxContentMigration extends LinuxMigration {
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
     $this->addFieldMapping('status', 'state');
-    $this->addFieldMapping('path', 'path');
   }
 
   /**
@@ -80,5 +79,7 @@ abstract class LinuxContentMigration extends LinuxMigration {
         'description' => '',
       ))
       ->execute();
+
+    $this->setRedirect($entity, $row);
   }
 }

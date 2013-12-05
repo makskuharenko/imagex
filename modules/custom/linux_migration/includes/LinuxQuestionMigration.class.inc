@@ -12,7 +12,6 @@ class LinuxQuestionMigration extends LinuxMigration {
     $this->addFieldMapping('body', 'description')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
-    $this->addFieldMapping('path', 'path');
     $this->addFieldMapping('field_question_category', 'catid')->sourceMigration('LinuxQuestionCategory');
     $this->addFieldMapping('field_question_category:source_type')
       ->defaultValue('tid');
@@ -31,8 +30,8 @@ class LinuxQuestionMigration extends LinuxMigration {
     // Migrate's strtotime doesn't like Joomla's default.
     $row->modified = ($row->modified == '0000-00-00 00:00:00') ? $row->created : $row->modified;
 
-    $row->state = ($row->state > 0) ? 1 : 0;
-    $row->path = 'learn/answers/view/' . $row->id; //. '-' . $row->alias;
+    $row->published = ($row->published > 0) ? 1 : 0;
+    $row->old_path = array('learn/answers/view/' . $row->id . '-' . $row->alias);
     $row->accepted_answer = ($row->accepted_answer == 0) ? NULL : $row->accepted_answer;
   }
 
@@ -61,5 +60,10 @@ class LinuxQuestionMigration extends LinuxMigration {
    */
   protected function getSourceObject() {
     return new LinuxQuestionMigrationSourceSql($this);
+  }
+
+  public function complete($entity, stdClass $row) {
+    watchdog('mitch', 'calling setredirect');
+    $this->setRedirect($entity, $row);
   }
 }

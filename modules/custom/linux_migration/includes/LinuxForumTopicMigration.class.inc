@@ -6,11 +6,21 @@ class LinuxForumTopicMigration extends LinuxMigration {
     $this->dependencies = array('LinuxUser', 'LinuxForum');
     $migration_settings = imagex_migration_settings();
     $this->sourcePath =  $migration_settings['source']['files']['directory'];
+
+    $this->sourceObject = new LinuxForumTopicMigrationSourceSql($this);
+    $connection = $this->sourceObject->getSourceConnection();
+
+    $this->categories = $connection->select('jos_ninjaboard_forums', 'jnf')
+      ->fields('jnf',
+        array(
+          'ninjaboard_forum_id',
+          'alias',
+        )
+      )->execute()->fetchAllKeyed();
   }
 
   protected function setFieldMappings() {
     //'status', values 0->7 ??
-    //'ninjaboard_topic_slug',
 
     $this->addFieldMapping('title', 'subject');
     $this->addFieldMapping('body', 'text')->arguments(array('format' => 'xbbcode'));
@@ -29,6 +39,8 @@ class LinuxForumTopicMigration extends LinuxMigration {
 
   public function prepareRow($row) {
     $row->modified = ($row->modified == '0000-00-00 00:00:00') ? $row->created_time : $row->modified;
+
+    $row->old_path = 'community/forums/' . $this->categories[$row->forum_id] . '/' . $row->ninjaboard_topic_slug;
 
     // Attachments...
     $file_params = explode(',', $row->gparams);
@@ -65,7 +77,7 @@ class LinuxForumTopicMigration extends LinuxMigration {
    *   Returns a newly created source object instance.
    */
   protected function getSourceObject() {
-    return new LinuxForumTopicMigrationSourceSql($this);
+    return $this->sourceObject;
   }
 
   /**
@@ -97,6 +109,10 @@ class LinuxForumTopicMigration extends LinuxMigration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+  }
+
+  public function complete($entity, stdClass $row) {
+    $this->setRedirect($entity, $row);
   }
 
 }

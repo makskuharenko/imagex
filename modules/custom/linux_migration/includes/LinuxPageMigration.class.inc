@@ -36,7 +36,7 @@ class LinuxPageMigration extends LinuxContentMigration {
       return FALSE;
     }
 
-    $row->path = $row->alias;
+    $row->old_path = $row->alias;
 
     return TRUE;
   }
