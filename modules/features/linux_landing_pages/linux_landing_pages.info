@@ -9,6 +9,7 @@ dependencies[] = bean_uuid
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = features
+dependencies[] = flexslider_views
 dependencies[] = image
 dependencies[] = imagex_answers_pane
 dependencies[] = imagex_common_fields
