@@ -26,7 +26,7 @@ function linux_landing_pages_uuid_features_default_beans() {
     'default_revision' => 1,
     'revisions' => array(),
     'uuid' => '3a192767-1354-48fc-b00e-2a1f9127c982',
-    // 'field_widget_basic__image' => array(),
+    'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
       'und' => array(
         0 => array(
@@ -56,7 +56,7 @@ function linux_landing_pages_uuid_features_default_beans() {
     'default_revision' => 1,
     'revisions' => array(),
     'uuid' => '7f7d59d3-0458-4535-badc-704c54eb9f0f',
-    // 'field_widget_basic__image' => array(),
+    'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
       'und' => array(
         0 => array(
