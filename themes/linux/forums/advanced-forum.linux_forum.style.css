@@ -131,7 +131,197 @@ span.forum-list-icon-new-posts {
       color: #f17700; }
 
 /* FORUM TOPICS **************************************************************/
+.view-advanced-forum-topic-list {
+  margin: 3em 0; }
+
 .forum-table-topics {
-  width: 100%; }
-  .forum-table-topics .views-field-comment-count {
-    text-align: center; }
+  width: 100%;
+  margin: 1em 0;
+  float: left; }
+  .forum-table-topics thead {
+    background: transparent url("../img/content-lines.png") repeat top left; }
+    .forum-table-topics thead th {
+      padding: 1em 0;
+      border-bottom: 0;
+      font-weight: 300;
+      color: #222222;
+      text-transform: capitalize; }
+      .forum-table-topics thead th.active {
+        font-weight: 600; }
+      .forum-table-topics thead th.views-field-comment-count {
+        text-align: center; }
+      .forum-table-topics thead th a {
+        color: #222222; }
+  .forum-table-topics tbody tr {
+    background: #F8F8F8;
+    border-color: white;
+    padding: 0;
+    height: 65px; }
+    .forum-table-topics tbody tr td.active {
+      background: transparent; }
+    .forum-table-topics tbody tr td.views-field-title {
+      line-height: 18px;
+      font-style: italic;
+      font-size: 12px;
+      color: #999999;
+      padding: 0 0 0 5px; }
+      .forum-table-topics tbody tr td.views-field-title .marker {
+        color: #f17700; }
+      .forum-table-topics tbody tr td.views-field-title .forum-topic-title {
+        font-family: "Open Sans Condensed";
+        font-weight: 700;
+        font-size: 16px;
+        font-style: normal;
+        color: #666666; }
+      .forum-table-topics tbody tr td.views-field-title a {
+        color: #666666; }
+    .forum-table-topics tbody tr td.views-field-comment-count {
+      font-size: 13px;
+      font-weight: 700;
+      color: #666666; }
+      .forum-table-topics tbody tr td.views-field-comment-count a {
+        color: #f17700;
+        font-weight: 400;
+        font-style: italic; }
+    .forum-table-topics tbody tr td.views-field-last-updated {
+      line-height: 20px;
+      font-size: 12px;
+      color: #999999; }
+      .forum-table-topics tbody tr td.views-field-last-updated a {
+        color: #999999; }
+
+.forum-node-create-links {
+  width: auto; }
+  .forum-node-create-links a {
+    color: #f17700;
+    font-weight: 700; }
+  .forum-node-create-links.forum-node-create-links-top {
+    padding: 0; }
+  .forum-node-create-links .forum-add-node {
+    margin: 0; }
+    .forum-node-create-links .forum-add-node a {
+      color: white;
+      font-weight: 400; }
+
+.table-order-asc,
+.table-order-desc {
+  width: 35px !important;
+  height: 20px !important;
+  background-position: center center !important; }
+
+table.sticky-header {
+  border-bottom: 0;
+  font-weight: 300;
+  color: #222222;
+  background: white url("../img/content-lines.png") repeat top left; }
+  table.sticky-header thead th {
+    border-bottom: 1px solid #CCC;
+    font-weight: 300;
+    text-transform: capitalize; }
+    table.sticky-header thead th.active {
+      font-weight: 600; }
+    table.sticky-header thead th.views-field-comment-count {
+      text-align: center; }
+    table.sticky-header thead th a {
+      color: #222222; }
+
+#forum-pager-top .pager {
+  padding: 0; }
+
+.forum-pager .pager {
+  margin: 0;
+  padding: 0;
+  width: auto; }
+  .forum-pager .pager li a, .forum-pager .pager li.current {
+    display: block;
+    float: left;
+    margin: 0 2px;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #eeeeee;
+    padding: 0;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    color: #666666; }
+    .forum-pager .pager li a:hover, .forum-pager .pager li.current:hover {
+      background: rgba(238, 238, 238, 0.5); }
+  .forum-pager .pager li.current {
+    font-weight: 700;
+    color: #f17700;
+    background: rgba(238, 238, 238, 0.3); }
+    .forum-pager .pager li.current:hover {
+      background: rgba(238, 238, 238, 0.3); }
+  .forum-pager .pager li.next a, .forum-pager .pager li.previous a, .forum-pager .pager li.first a, .forum-pager .pager li.last a {
+    width: auto;
+    padding: 0 8px; }
+
+span.topic-icon {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 5px !important;
+  margin: 0 auto !important; }
+  span.topic-icon.topic-icon-default {
+    background: #DDD; }
+  span.topic-icon.topic-icon-new {
+    background: #f17700; }
+  span.topic-icon.topic-icon-hot-new {
+    background: #cedf00; }
+  span.topic-icon.topic-icon-hot {
+    background: #bcc493; }
+  span.topic-icon.topic-icon-sticky {
+    background: #0094ca; }
+  span.topic-icon.topic-icon-closed {
+    background: #222222; }
+
+.forum-topic-legend {
+  margin: 2em 0; }
+  .forum-topic-legend div {
+    margin: 0;
+    padding: 0; }
+    .forum-topic-legend div .dot {
+      width: 10px !important;
+      height: 10px !important;
+      margin: 7px 7px 0 0;
+      border-radius: 5px !important;
+      float: left; }
+  .forum-topic-legend .topic-icon-default .dot {
+    background: #DDD; }
+  .forum-topic-legend .topic-icon-new .dot {
+    background: #f17700; }
+  .forum-topic-legend .topic-icon-hot-new .dot {
+    background: #cedf00; }
+  .forum-topic-legend .topic-icon-hot .dot {
+    background: #bcc493; }
+  .forum-topic-legend .topic-icon-sticky .dot {
+    background: #0094ca; }
+  .forum-topic-legend .topic-icon-closed .dot {
+    background: #222222; }
+
+.af-button-large {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 3px 10px;
+  text-decoration: none;
+  width: auto;
+  margin: 0;
+  background: #f17700;
+  border: none;
+  color: white;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400; }
+  .af-button-large:hover {
+    background: #e65b04; }
+
+#sort-topic-submit {
+  height: 28px; }

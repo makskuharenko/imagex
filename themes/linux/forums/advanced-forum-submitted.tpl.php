@@ -23,7 +23,7 @@
   <?php if (!empty($topic_link)): ?>
     <?php if (isset($date_posted)): ?>
       <?php print t(
-        '!title<br />by !author<br />@date_posted', array(
+        '<div class="topic-author">!title</div><div class="topic-author">by !author</div><div class="topic-created">@date_posted</div>', array(
         '!title' => $topic_link,
         '@date_posted' => $date_posted,
         '!author' => $author,
@@ -39,7 +39,7 @@
   <?php else: ?>
     <?php if (isset($date_posted)): ?>
       <?php print t(
-        'by !author<br />@date_posted', array(
+        '<div class="post-author">by !author</div><div class="post-created">@date_posted</div>', array(
         '@date_posted' => $date_posted,
         '!author' => $author,
       )); ?>
