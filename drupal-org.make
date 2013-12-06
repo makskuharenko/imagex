@@ -175,6 +175,12 @@ projects[imagex_dbal][download][type] = "git"
 projects[imagex_dbal][download][url] = "git@github.com:imagex/imagex_dbal.git"
 projects[imagex_dbal][download][branch] = "7.x-dev"
 
+projects[imagex_socialmedia][type] = "module"
+projects[imagex_socialmedia][subdir] = "imagex/modules"
+projects[imagex_socialmedia][download][type] = "git"
+projects[imagex_socialmedia][download][url] = "git@github.com:imagex/imagex_socialmedia.git"
+projects[imagex_socialmedia][download][branch] = "7.x-dev"
+
 projects[imagex_search][type] = "module"
 projects[imagex_search][subdir] = "imagex/modules"
 projects[imagex_search][download][type] = "git"
