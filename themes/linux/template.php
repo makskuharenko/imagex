@@ -83,7 +83,7 @@ function linux_preprocess_node(&$vars,$hook) {
   if (function_exists('linux_preprocess_node_' . $vars['type'])) {
     call_user_func('linux_preprocess_node_' . $vars['type'], $vars, $hook);
   }
-  if ($vars['view_mode'] == 'sidebar' && in_array($vars['type'], array('blog', 'imagex_news'))) {
+  if ($vars['view_mode'] == 'sidebar' && !in_array($vars['type'], array('question'))) {
      _linux_shared_sidebar_preprocess($vars);
   }
 }

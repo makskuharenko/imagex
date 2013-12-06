@@ -10,5 +10,5 @@
 </div>
 <span class="views-field views-field-created"><span class="field-content"><?php print l(date('M j', $created), 'node/'. $nid, array('html' => TRUE)); ?></span></span>
 <div class="views-field views-field-title">
-  <span class="field-content"><?php print l($title, 'node/'. $nid); ?></span>
+  <span class="field-content"><?php print l($title, 'node/'. $nid, array('html' => TRUE)); ?></span>
 </div>

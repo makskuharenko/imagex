@@ -10,6 +10,6 @@
   </div>
 </div>
 <div class="views-field views-field-title">
-  <span class="field-content"><?php print l($title, 'node/'. $nid); ?></span>
+  <span class="field-content"><?php print l($title, 'node/'. $nid, array('html' => TRUE)); ?></span>
 </div>
 <span class="views-field views-field-created"><span class="field-content">Posted by <?php print theme('username', array('account' => $user));?> on <?php print date('F j, Y', $created);?></span></span>
