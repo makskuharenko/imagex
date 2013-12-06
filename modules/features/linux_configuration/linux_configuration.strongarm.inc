@@ -13,6 +13,27 @@ function linux_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_compression_type';
+  $strongarm->value = 'min';
+  $export['jquery_update_compression_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_cdn';
+  $strongarm->value = 'google';
+  $export['jquery_update_jquery_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'jquery_update_jquery_version';
+  $strongarm->value = '1.7';
+  $export['jquery_update_jquery_version'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_blog_pattern';
   $strongarm->value = 'blogs/[user:name]';
   $export['pathauto_blog_pattern'] = $strongarm;
@@ -288,6 +309,7 @@ function linux_configuration_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
+    'file' => TRUE,
     'forum' => TRUE,
     'node' => TRUE,
     'taxonomy' => TRUE,
