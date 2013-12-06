@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Linux migration install file.
+ */
+
+/**
+ * Implements of hook_install().
+ */
+function linux_migration_install() {
+  variable_set('migrate_deprecation_warnings', 0);
+}

@@ -69,6 +69,10 @@ class LinuxNewsMigration extends LinuxContentMigration {
 
     $row->created = ($row->created == '0000-00-00 00:00:00') ? time() : $row->created;
 
+    if (strtotime($row->created) > (time() + 20000000)) {
+      $row->created = time();
+    }
+
     return TRUE;
   }
 

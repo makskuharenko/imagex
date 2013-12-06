@@ -27,7 +27,7 @@ class LinuxManpageMigration extends LinuxMigration {
     $row->title = $explode_title[0];
     $row->body = $xpath->query('//div[@class="refentry"]')->item(0);
     // Fix links to related items, no time for a regex
-    $row->body = $this->fixRelatedLinks($doc->saveHTML($row->body));
+    $row->body = $this->fixRelatedLinks($this->getHTML($row->body));
 
     $row->old_path = 'learn/docs/man/' . str_replace(array('(', ')'), '', $row->title);
 
@@ -104,6 +104,24 @@ class LinuxManpageMigration extends LinuxMigration {
     // Yes a regex would be better.
     for ($i = 1; $i < 8; $i++) {
       $html = str_replace('.' . $i . '.html', $i, $html);
+    }
+
+    return $html;
+  }
+
+  /**
+   * PHP < 5.3.6 cannot use saveHTML with a node reference.
+   *
+   * @param $element
+   */
+  protected function getHTML($element) {
+    $html = '';
+
+    $children = $element->childNodes;
+    foreach ($children as $child) {
+      $child_doc = new DOMDocument();
+      $child_doc->appendChild($child_doc->importNode($child, TRUE));
+      $html .= $child_doc->saveHTML();
     }
 
     return $html;
