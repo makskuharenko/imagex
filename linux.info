@@ -60,7 +60,8 @@ dependencies[] = imagex_page_permissions
 dependencies[] = imagex_poll
 dependencies[] = imagex_radioactivity
 dependencies[] = imagex_rss
-;dependencies[] = imagex_search
+dependencies[] = imagex_search_db
+dependencies[] = imagex_search_permissions
 dependencies[] = imagex_user
 ; @TODO: Resolve conflict between this and linux_user.
 ; dependencies[] = imagex_user_follow
