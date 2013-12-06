@@ -334,6 +334,17 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxDirectoryReview' => array(
+        'class_name' => 'LinuxDirectoryReviewMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate Linux.com directory review',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-joomla',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
