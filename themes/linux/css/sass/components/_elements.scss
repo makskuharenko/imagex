@@ -1,9 +1,6 @@
 // Temporary
 // -----------------------------------------
 
-.messages.error {
-  display: none;
-}
 
 // Standard elements and node/comment styles
 // -----------------------------------------
@@ -278,6 +275,18 @@
   }
 }
 
+
+// Workbench Info Block -- Adding container
+// --------------------------------------------------------------
+
+#block-workbench-block {
+  padding: 1.5em;
+
+  @include at-breakpoint($wide) {
+    max-width: 88.5em;
+    margin: 0 auto;
+  }
+}
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------

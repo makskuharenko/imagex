@@ -41,7 +41,7 @@
           <?php endif; ?>
         </div>
         -->
-        
+
         <?php if ($page['header']): ?>
           <div class="header-region">
             <?php print render($page['header']); ?>
@@ -67,9 +67,11 @@
     <?php endif; ?>
 
     <?php if($page['highlighted'] OR $messages){ ?>
-      <div class="drupal-messages">
-        <?php print render($page['highlighted']); ?>
-        <?php print $messages; ?>
+      <div class="container">
+        <div class="drupal-messages">
+          <?php print render($page['highlighted']); ?>
+          <?php print $messages; ?>
+        </div>
       </div>
     <?php } ?>
 

@@ -2555,7 +2555,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -4509,9 +4509,6 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
-.messages.error {
-  display: none; }
-
 .not-front #header-wrapper {
   padding: 0;
   margin-bottom: -1px; }
@@ -4699,6 +4696,13 @@ a.label:hover, a.badge:hover {
   .not-front #mini-panel-content_sidebar {
     position: absolute;
     right: 0; } }
+
+#block-workbench-block {
+  padding: 1.5em; }
+  @media (min-width: 62.125em) {
+    #block-workbench-block {
+      max-width: 88.5em;
+      margin: 0 auto; } }
 
 h1 {
   display: inline-block;
