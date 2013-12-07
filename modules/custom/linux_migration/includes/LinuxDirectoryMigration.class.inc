@@ -6,6 +6,19 @@ class LinuxDirectoryMigration extends LinuxMigration {
     $this->dependencies = array('LinuxUser', 'LinuxDirectoryCategory');
     $migration_settings = imagex_migration_settings();
     $this->sourcePath =  $migration_settings['source']['files']['directory'] . '/media/nas/components/com_mtree/listings/o';
+
+    $this->sourceObject = new LinuxDirectoryMigrationSourceSql($this);
+    $connection = $this->sourceObject->getSourceConnection();
+
+    $this->categories = $connection->select('jos_mt_cats', 'jmc')
+        ->fields('jmc', array(
+            'cat_id',
+            'alias',
+            'cat_parent',
+          )
+        )
+        ->condition('cat_id', 0, '>')
+        ->execute()->fetchAllAssoc('cat_id');
   }
 
   protected function setFieldMappings() {
@@ -20,7 +33,7 @@ class LinuxDirectoryMigration extends LinuxMigration {
       ->sourceMigration('LinuxDirectoryCategory');
     $this->addFieldMapping('field_directory_section:source_type')->defaultValue('tid');
     $this->addFieldMapping('field_link', 'website');
-    $this->addFieldMapping('field_directory_specifications', 'specifications');
+    $this->addFieldMapping('field_directory_specifications', 'specifications')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('field_directory_distribution', 'distributions')->separator('|');
     $this->addFieldMapping('field_directory_distribution:create_term')
       ->defaultValue(TRUE);
@@ -44,6 +57,19 @@ class LinuxDirectoryMigration extends LinuxMigration {
 
   public function prepareRow($row) {
     $row->link_modified = ($row->link_modified == '0000-00-00 00:00:00') ? $row->link_created : $row->link_modified;
+
+    $path_base = 'directory';
+    $row->old_path = array();
+    $categories = explode(',', $row->cats);
+    foreach ($categories as $cat) {
+      if ($parent = $this->categories[$cat]->cat_parent) {
+        $path = $path_base . '/' . $this->categories[$parent]->alias . '/' . $this->categories[$cat]->alias . '/' . $row->alias;
+      }
+      else {
+        $path = $path_base . '/' . $this->categories[$cat]->alias . '/' . $row->alias;
+      }
+      $row->old_path[] = $path;
+    }
 
     $fields = explode(',', $row->cfval);
     foreach ($fields as $field) {
@@ -127,7 +153,7 @@ class LinuxDirectoryMigration extends LinuxMigration {
    *   Returns a newly created source object instance.
    */
   protected function getSourceObject() {
-    return new LinuxDirectoryMigrationSourceSql($this);
+    return $this->sourceObject;
   }
 
   /**
@@ -159,6 +185,10 @@ class LinuxDirectoryMigration extends LinuxMigration {
       ),
       MigrateDestinationNode::getKeySchema()
     );
+  }
+
+  public function complete($entity, stdClass $row) {
+    $this->setRedirect($entity, $row);
   }
 
 }

@@ -104,30 +104,6 @@ function linux_landing_pages_uuid_features_default_content() {
       'display' => array(
         'args' => array(),
         'content' => array(
-          50 => array(
-            'pid' => 50,
-            'did' => 5,
-            'panel' => 'three_25_50_25_first',
-            'type' => 'block',
-            'subtype' => 'menu-menu-standard-filter-menu',
-            'shown' => 1,
-            'access' => array(),
-            'configuration' => array(
-              'override_title' => 1,
-              'override_title_text' => '',
-            ),
-            'cache' => array(),
-            'style' => array(
-              'settings' => NULL,
-            ),
-            'css' => array(
-              'css_id' => '',
-              'css_class' => 'filtered-menu',
-            ),
-            'extras' => array(),
-            'position' => 0,
-            'locks' => array(),
-          ),
           51 => array(
             'pid' => 51,
             'did' => 5,

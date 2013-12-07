@@ -27,7 +27,7 @@ class LinuxGalleryMigration extends LinuxMigration {
     if (parent::prepareRow($row) === FALSE) {
       return FALSE;
     }
-
+    $row->old_path = 'news/galleries/' . $row->slug;
     // Migrate's strtotime doesn't like Joomla's default.
     $row->modified_on = ($row->modified_on == '0000-00-00 00:00:00') ? $row->created_on : $row->modified_on;
     $row->created_on = ($row->created_on == '0000-00-00 00:00:00') ? time() : $row->created_on;
@@ -74,7 +74,9 @@ class LinuxGalleryMigration extends LinuxMigration {
       MigrateDestinationNode::getKeySchema()
     );
   }
-
+  public function complete($entity, stdClass $row) {
+    $this->setRedirect($entity, $row);
+  }
 }
 
 class LinuxGalleryMigrationSourceSql extends ImagexMigrateSourceSql {

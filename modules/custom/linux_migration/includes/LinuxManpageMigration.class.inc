@@ -15,7 +15,6 @@ class LinuxManpageMigration extends LinuxMigration {
     $this->addFieldMapping('field_manual_section', 'section')->arguments(array('create_term' => TRUE));
     $this->addFieldMapping('status')->defaultValue(1);
     $this->addFieldMapping('uid')->defaultValue(1);
-    $this->addFieldMapping('path', 'path');
   }
 
   public function prepareRow($row) {
@@ -28,9 +27,9 @@ class LinuxManpageMigration extends LinuxMigration {
     $row->title = $explode_title[0];
     $row->body = $xpath->query('//div[@class="refentry"]')->item(0);
     // Fix links to related items, no time for a regex
-    $row->body = $this->fixRelatedLinks($doc->saveHTML($row->body));
+    $row->body = $this->fixRelatedLinks($this->getHTML($row->body));
 
-    $row->path = 'learn/docs/man/' . str_replace(array('(', ')'), '', $row->title);
+    $row->old_path = 'learn/docs/man/' . str_replace(array('(', ')'), '', $row->title);
 
     // section
     preg_match_all("/[0-9]/", $row->title, $matches);
@@ -108,5 +107,27 @@ class LinuxManpageMigration extends LinuxMigration {
     }
 
     return $html;
+  }
+
+  /**
+   * PHP < 5.3.6 cannot use saveHTML with a node reference.
+   *
+   * @param $element
+   */
+  protected function getHTML($element) {
+    $html = '';
+
+    $children = $element->childNodes;
+    foreach ($children as $child) {
+      $child_doc = new DOMDocument();
+      $child_doc->appendChild($child_doc->importNode($child, TRUE));
+      $html .= $child_doc->saveHTML();
+    }
+
+    return $html;
+  }
+
+  public function complete($entity, stdClass $row) {
+    $this->setRedirect($entity, $row);
   }
 }

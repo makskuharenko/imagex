@@ -24,6 +24,7 @@ function linux_events_features_override_default_overrides() {
   $overrides["field_instance.node-event-field_location.required"] = 1;
   $overrides["field_instance.node-event-field_location.widget|weight"] = 8;
   $overrides["field_instance.node-event-field_location.workbench_access_field"] = 0;
+  $overrides["field_instance.node-event-field_date.node-event-field_date"]["DELETED"] = TRUE;
 
  return $overrides;
 }
