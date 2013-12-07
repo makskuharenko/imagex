@@ -7,6 +7,37 @@
 include_once 'linux_voting.features.inc';
 
 /**
+ * Implements hook_theme().
+ */
+function linux_voting_theme() { 
+  return array(
+    'rate_template_recommend' => array(
+      'variables' => array('links' => NULL, 'results' => NULL, 'mode' => NULL, 'just_voted' => FALSE, 'content_type' => NULL, 'content_id' => NULL, 'display_options' => NULL),
+      'template' => 'recommend',
+      'path' => drupal_get_path('module', 'linux_voting') . '/templates/recommend',
+    ),
+    'rate_template_like' => array(
+      'variables' => array('links' => NULL, 'results' => NULL, 'mode' => NULL, 'just_voted' => FALSE, 'content_type' => NULL, 'content_id' => NULL, 'display_options' => NULL),
+      'template' => 'recommend',
+      'path' => drupal_get_path('module', 'linux_voting') . '/templates/recommend',
+    ),
+  );
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function linux_voting_theme_registry_alter(&$reg) { 
+  if (isset($reg['rate_template_fivestar'])) {
+    $key = array_search('linux_voting_preprocess_rate_template_fivestar', $reg['rate_template_fivestar']['preprocess functions']);
+    // remove the current postion of our preprocess
+    unset($reg['rate_template_fivestar']['preprocess functions'][$key]);
+    // append it to the end
+    $reg['rate_template_fivestar']['preprocess functions'][] = 'linux_voting_preprocess_rate_template_fivestar';
+  }
+}
+
+/**
  * Implementation of hook_ctools_plugin_dierctory() to let the system
  * know we implement widget plugins.
  */
@@ -14,4 +45,237 @@ function linux_voting_ctools_plugin_directory($module, $plugin) {
   if ($module == 'vud') {
     return $plugin;
   }
+  if ($module == 'ctools' && $plugin == 'content_types') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_preprocess_rate_template_fivestar().
+ * 
+ * We need to override some of the default functionality in the fivestar template.
+ */
+function linux_voting_preprocess_rate_template_fivestar(&$variables) { 
+  extract($variables);
+  $stars = array();
+  $count = count($links);
+  $percent_per_star = 100 / ($count);
+  for ($i = 0; $i < $count; $i++) {
+    $star_percent[$i] = round($results['rating'] / $percent_per_star);
+    if (round($results['rating'] / $percent_per_star) >= ($i + 1) && !$results['empty']) {
+      $class = 'rate-fivestar-btn-filled';
+    }
+    else {
+      $class = 'rate-fivestar-btn-empty';
+    }
+    $class .= ' rate-fivestar-' . ($i + 1);
+    $stars[] = theme('rate_button', array('text' => $links[$i]['text'], 'href' => $links[$i]['href'], 'class' => $class));
+  }
+  $variables['stars'] = $stars;
+  $info = array();
+  if ($mode == RATE_CLOSED) {
+    $info[] = t('Voting is closed.');
+  }
+  if ($mode != RATE_COMPACT && $mode != RATE_COMPACT_DISABLED) {
+    if (isset($results['user_vote'])) {
+      $vote = round($results['user_vote'] / $percent_per_star);
+      $info[] = t('You voted !vote.', array('!vote' => $vote));
+    }
+    $info[] = t('Total votes: !count', array('!count' => $results['count']));
+  }
+  $variables['info'] = implode(' ', $info);
+}
+
+/**
+ * Implements hook_preprocess_rate_template_recommend().
+ * 
+ * We need to override some of the default functionality in the fivestar template.
+ */
+function linux_voting_preprocess_rate_template_recommend(&$variables) { 
+  extract($variables);
+  foreach ($links as $link) {
+    $class = isset($results['user_vote']) ? 'rate-recommend-active rate-active' : 'rate-recommend-inactive rate-inactive';
+    $text = !isset($results['user_vote']) ? $link['text'] : 'Recommended';
+    $variables['buttons'][] = theme('rate_button', array('text' => $text, 'href' => $link['href'], 'class' => $class));
+  }
+}
+
+/**
+ * Implements hook_preprocess_rate_template_like().
+ * 
+ * We need to override some of the default functionality in the fivestar template.
+ */
+function linux_voting_preprocess_rate_template_like(&$variables) { 
+  extract($variables);
+  foreach ($links as $link) {
+    $class = isset($results['user_vote']) ? 'rate-like-active rate-active' : 'rate-like-inactive rate-inactive';
+    $text = !isset($results['user_vote']) ? $link['text'] : 'Unlike';
+    $count = '';
+    if (isset($results['count']) && $results['count'] > 0) {
+      $count = '<span class="rate-like-count">' . format_plural($results['count'], '1 Like', '@count Likes') . '</span> ';
+    }
+    $variables['buttons'][] = $count . theme('rate_button', array('text' => $text, 'href' => $link['href'], 'class' => $class));
+  }
+}
+/**
+ * Implements hook_rate_templates().
+ */
+function linux_voting_rate_templates() { 
+  $templates['recommend'] = new stdClass();
+  $templates['recommend']->value_type = 'option';
+  $templates['recommend']->options = array(
+    array(1, t('Recommend')),
+  );
+  $templates['recommend']->theme = 'rate_template_recommend';
+  $templates['recommend']->customizable = FALSE;
+  $templates['recommend']->translate = FALSE;
+  $templates['recommend']->template_title = t('Recommend');
+  
+  $templates['like'] = new stdClass();
+  $templates['like']->value_type = 'option';
+  $templates['like']->options = array(
+    array(1, t('Like')),
+  );
+  $templates['like']->theme = 'rate_template_like';
+  $templates['like']->customizable = FALSE;
+  $templates['like']->translate = FALSE;
+  $templates['like']->template_title = t('Like');
+
+  return $templates;
+}
+
+/**
+ * Implements hook_comment_view_alter().
+ */
+function linux_voting_comment_view_alter(&$comment) { 
+  $node = $comment['#node'];
+  $widgets = rate_get_active_widgets('comment', $node->type);
+  $links = array();
+  foreach ($widgets as $widget_id => $widget) {
+    $widget_name = 'rate_' . $widget->name;
+    if (!in_array($widget->name, array('recommend', 'like'))) {
+      //These aren't the droids were looking for. Move along.
+      continue;
+    }
+    $widget_code = rate_generate_widget($widget_id, 'comment', $comment['#comment']->cid, $widget->comment_display_mode);
+    $links[$widget->name] = array(
+      'title' => $widget_code,
+      'html' => TRUE,
+    );
+  }
+  if (!empty($links)) {
+    $comment['links']['rate'] = array(
+      '#theme' => 'links',
+      '#links' => $links,
+      '#attributes' => array(
+        'class' => array(
+          'links',
+          'inline',
+        ),
+      ),
+    );
+  }
+}
+
+
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function linux_voting_query_comment_filter_alter(&$query) {
+  $sort = &drupal_static('linux_voting_comment_sort', 'rec');
+  if ($node = $query->getMetaData('node') && get_class($query) == 'PagerDefault' && $sort == 'rec') {
+    $query->leftJoin('votingapi_cache', 'v', "v.entity_id = c.cid AND v.entity_type = 'comment' AND v.tag = 'recommend'");
+    $query->addField('v','value', 'vote');
+    $order =& $query->getOrderBy();
+    $order = array('vote' => 'DESC', 'torder' => 'ASC');
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_pre_alter().
+ */
+function linux_voting_ctools_plugin_pre_alter(&$plugin, &$info) { 
+  if ($plugin['plugin type'] == 'content_types' && $plugin['name'] == 'node_comments') {
+    $plugin['render callback'] = 'linux_voting_node_comments_content_type_render';
+  }
+}
+
+/**
+ * Render the node comments with our custom render function.
+ * 
+ * Adds a custom sort field to the
+ */
+function linux_voting_node_comments_content_type_render($subtype, $conf, $panel_args, $context) {
+  $node = isset($context->data) ? clone($context->data) : NULL;
+  $block = new stdClass();
+  $block->module = 'comments';
+  $block->delta  = $node->nid;
+
+  $block->title = t('Comments');
+  if (empty($node)) {
+    $block->content = t('Node comments go here.');
+  }
+  else if ($node->comment) {
+    $form_state = array(
+    'build_info' => array(
+        'args' => array(
+          $node,
+          $conf,
+        ),
+      ),
+    );
+    $block->content = drupal_build_form('linux_voting_comment_sort_form', $form_state);
+    // Update the history table, stating that this user viewed this node.
+    node_tag_new($node);
+  }
+  
+  return $block;
+}
+
+/**
+ * Builds the comment form and comments
+ */
+function linux_voting_comment_sort_form($form, $form_state, $node, $conf) {
+  $sort = &drupal_static('linux_voting_comment_sort', 'rec');
+  $sort = isset($form_state['values']['comment_sort']) ? $form_state['values']['comment_sort'] : $sort;
+  ctools_include('node_comments', 'ctools', 'plugins/content_types/node_context');
+  $comments = ctools_comment_render($node, $conf);
+  $form['comment_sort'] = array(
+    '#type' => 'select',
+    '#options' => array('rec' => t('Recommended'), 'date' => t('Date')),
+    '#ajax' => array(
+      'wrapper' => 'js-linux-comments-wrapper',
+      'callback' => 'linux_voting_comment_sort_ajax',
+    ),
+    '#default_value' => $sort,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Sort',
+    '#attributes' => array(
+      'class' => array('js-hide'),
+    ),
+  );
+  $form['wrapper'] = array(
+    '#prefix' => '<div id="js-linux-comments-wrapper">',
+    '#suffix' => '</div>',
+    '#type' => 'wrapper',
+  );
+  $form['wrapper']['comments']['#markup'] = $comments;
+  return $form;
+}
+
+/**
+ * Comment Sort sumbit function
+ */
+function linux_voting_comment_sort_form_submit($form, &$form_state) {
+  $sort = &drupal_static('linux_voting_comment_sort', 'rec');
+  $sort = $form_state['values']['comment_sort'];
+  $form_state['#rebuild'];
+}
+/**
+ * Return the comments section of the form
+ */
+function linux_voting_comment_sort_ajax($form, $form_state) {
+  return $form['wrapper'];
 }
