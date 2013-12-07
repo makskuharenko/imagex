@@ -532,3 +532,224 @@ span.topic-icon {
 #sort-topic-submit {
   height: 28px;
 }
+
+// Forum Post Styles
+// -------------------------------------
+
+.forum-topic-header {
+  .topic-post-count {
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 13px;
+    width: 100%;
+    float: left;
+
+    @include at-breakpoint($tablet) {
+      width: auto;
+      float: right;
+      margin: 0;
+    }
+  }
+}
+
+.forum-post {
+  background: #F8F8F8;
+
+  .forum-post-info {
+    padding: 10px 15px;
+    background: white url('../img/content-lines.png') repeat top left;
+    //border-top: 2px solid #F8F8F8;
+
+    .forum-posted-on,
+    .forum-in-reply-to {
+      font-size: 12px;
+      font-weight: 300;
+      padding: 0 5px 0 0;
+      display: block;
+      float: left;
+
+      a {
+        color: $linuxStdOrange;
+      }
+    }
+
+    .forum-post-number {
+      a {
+        font-size: 12px;
+        font-weight: 700;
+        color: $linuxStdOrange;
+      }
+    }
+  }
+
+  .forum-post-wrapper {
+    margin: 20px 15px 20px 15px;
+
+    @include at-breakpoint($tablet) {
+      margin: 20px 100px 20px 15px;
+    }
+
+    .forum-post-panel-main {
+      margin-left: 0;
+
+      @include at-breakpoint($tablet) {
+        margin-left: 150px;
+      }
+
+      .forum-post-title {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $monoFontFamily;
+        margin: 0 0 15px;
+        padding: 0;
+
+        @include at-breakpoint($tablet) {
+          padding: 0 0 0 10px;
+        }
+      }
+
+      .forum-post-content {
+        padding: 0;
+
+        @include at-breakpoint($tablet) {
+          padding: 0 0 0 10px;
+        }
+
+        .field-type-file {
+          label {
+            border-top: 1px dotted $dropdownDividerTop;
+            padding: 15px 0 0;
+            font-family: $condensedFontFamily;
+          }
+
+          a {
+            font-size: 13px;
+            color: $linuxStdOrange;
+          }
+        }
+      }
+
+      .post-edited {
+        margin: 30px 0 10px;
+        padding: 0 0 0 10px;
+        color: $grayLight;
+        font-size: 13px;
+        font-style: italic;
+        font-weight: 300;
+
+        a {
+          color: $gray;
+        }
+      }
+    }
+
+    .forum-post-panel-sub {
+      line-height: 24px;
+      border-bottom: 1px dotted $dropdownDividerTop;
+      margin: 0 0 15px;
+      padding: 0 0 10px;
+      width: auto;
+      float: none;
+
+      @include at-breakpoint($tablet) {
+        width: 150px;
+        float: left;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .author-pane {
+        margin: 0;
+
+        .username {
+          font-family: $condensedFontFamily;
+          font-weight: 700;
+          text-transform: capitalize;
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .forum-post-footer {
+    margin: 0;
+    padding: 15px;
+    border-top: 1px solid white;
+
+    .forum-jump-links {
+      margin: 0;
+      line-height: 24px;
+
+      .af-button-small {
+        color: $linuxStdOrange;
+        font-size: 13px;
+      }
+    }
+
+    .forum-post-links {
+      margin: 0;
+
+      .links {
+        margin: 0;
+        float: right;
+      }
+
+      .flag-inappropriate-content-node,
+      .flag-inappropriate-content-comment {
+        a {
+          color: $linuxStdOrange;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+h2.comment-form {
+  border: none;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.comment-form {
+  .form-managed-file {
+    input[type="file"],
+    input[type="submit"] {
+      float: left;
+      margin: 5px 0 5px 0;
+
+      @include at-breakpoint($tablet) {
+        margin: 5px 0 5px 10px;
+      }
+    }
+
+    input[type="file"] {
+      line-height: 16px;
+      padding: 6px 0 0 0;
+    }
+
+    .file {
+      float: left;
+
+      a {
+        color: $linuxStdOrange;
+      }
+    }
+
+    .file-size {
+      font-size: 13px;
+      color: rgb(187, 187, 187);
+    }
+
+    #edit-field-file-und-0-remove-button {
+      margin: 1px 8px 5px 0;
+
+      @include at-breakpoint($tablet) {
+        margin: 1px 8px 5px 10px;
+      }
+    }
+  }
+}

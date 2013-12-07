@@ -246,11 +246,19 @@
 
     li.comment-delete,
     li.comment-edit,
-    li.comment-reply {
+    li.comment-reply,
+    li.post-delete,
+    li.post-edit,
+    li.comment-add,
+    li.flag-imagex_node_like {
       text-transform: capitalize;
       font-size: 14px;
       font-family: $condensedFontFamily;
-      float: right;
+      float: none;
+
+      @include at-breakpoint($tablet) {
+        float: right;
+      }
 
       a {
         color: $gray;
@@ -261,11 +269,35 @@
           @include opacity(0.5);
         }
       }
+
+      .flag-counter {
+        a {
+          margin: 0;
+          padding: 0;
+          background: none;
+        }
+      }
     }
 
-    li.comment-reply {
+    li.comment-reply,
+    li.comment-add {
       a {
         background: transparent url('../img/comment-reply.png') no-repeat center left;
+      }
+    }
+
+    li.flag-imagex_node_like {
+      a {
+        background: transparent url('../img/like-icon.png') no-repeat center left;
+
+        &.unflag-action {
+          background: transparent url('../img/liked-icon.png') no-repeat center left;
+          color: $linuxStdOrange;
+        }
+      }
+
+      .flag-message {
+        display: none !important;
       }
     }
   }
