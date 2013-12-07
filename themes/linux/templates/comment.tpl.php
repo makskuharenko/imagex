@@ -17,7 +17,7 @@ if ($classes) {
       <figcaption><?php print $author; ?><span class="date"><time><?php print $created; ?></time></span></figcaption>
     </figure>
 
-    <?php //print $permalink; ?>
+    <?php if (isset($reply_to)) { print $reply_to; } ?>
   </footer>
 
   <div class="content"<?php print $content_attributes; ?>>

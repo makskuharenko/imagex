@@ -89,7 +89,18 @@ function linux_preprocess_node(&$vars,$hook) {
 }
 
 function linux_preprocess_comment(&$vars,$hook) {
-  //  kpr($vars['content']);
+  $sort = &drupal_static('linux_voting_comment_sort', 'rec');
+  $comment = $vars['comment'];
+  $cids = &drupal_static(__FUNCTION__, array());
+  $cids[$comment->cid] = $comment->cid;
+  if ($comment->pid > 0 && !isset($cids[$comment->pid]) && $sort == 'rec') {
+    // If the comment is nested, it's parent hasn't run yet, and we are sorting by recommended
+    // We need to show a 'In Reply to BLAHBLAH' link
+    $parent = comment_load($comment->pid);
+    $uri = entity_uri('comment', $parent);
+    $uri['options'] += array('attributes' => array('class' => 'permalink', 'rel' => 'bookmark'));
+    $vars['reply_to'] = l(t('In Reply To @name', array('@name' => $parent->name)), $uri['path'], $uri['options']);
+  }
 }
 
 function linux_preprocess_field(&$vars,$hook) {
