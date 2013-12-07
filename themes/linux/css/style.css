@@ -4674,24 +4674,63 @@ a.label:hover, a.badge:hover {
   list-style-type: none; }
   .not-front ul.links li.comment-delete,
   .not-front ul.links li.comment-edit,
-  .not-front ul.links li.comment-reply {
+  .not-front ul.links li.comment-reply,
+  .not-front ul.links li.post-delete,
+  .not-front ul.links li.post-edit,
+  .not-front ul.links li.comment-add,
+  .not-front ul.links li.flag-imagex_node_like {
     text-transform: capitalize;
     font-size: 14px;
     font-family: "Open Sans Condensed";
-    float: right; }
+    float: none; }
+    @media (min-width: 35em) {
+      .not-front ul.links li.comment-delete,
+      .not-front ul.links li.comment-edit,
+      .not-front ul.links li.comment-reply,
+      .not-front ul.links li.post-delete,
+      .not-front ul.links li.post-edit,
+      .not-front ul.links li.comment-add,
+      .not-front ul.links li.flag-imagex_node_like {
+        float: right; } }
     .not-front ul.links li.comment-delete a,
     .not-front ul.links li.comment-edit a,
-    .not-front ul.links li.comment-reply a {
+    .not-front ul.links li.comment-reply a,
+    .not-front ul.links li.post-delete a,
+    .not-front ul.links li.post-edit a,
+    .not-front ul.links li.comment-add a,
+    .not-front ul.links li.flag-imagex_node_like a {
       color: #555555;
       padding: 0 0 0 20px;
       margin: 0 0 0 10px; }
       .not-front ul.links li.comment-delete a:hover,
       .not-front ul.links li.comment-edit a:hover,
-      .not-front ul.links li.comment-reply a:hover {
+      .not-front ul.links li.comment-reply a:hover,
+      .not-front ul.links li.post-delete a:hover,
+      .not-front ul.links li.post-edit a:hover,
+      .not-front ul.links li.comment-add a:hover,
+      .not-front ul.links li.flag-imagex_node_like a:hover {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
         opacity: 0.5; }
-  .not-front ul.links li.comment-reply a {
+    .not-front ul.links li.comment-delete .flag-counter a,
+    .not-front ul.links li.comment-edit .flag-counter a,
+    .not-front ul.links li.comment-reply .flag-counter a,
+    .not-front ul.links li.post-delete .flag-counter a,
+    .not-front ul.links li.post-edit .flag-counter a,
+    .not-front ul.links li.comment-add .flag-counter a,
+    .not-front ul.links li.flag-imagex_node_like .flag-counter a {
+      margin: 0;
+      padding: 0;
+      background: none; }
+  .not-front ul.links li.comment-reply a,
+  .not-front ul.links li.comment-add a {
     background: transparent url("../img/comment-reply.png") no-repeat center left; }
+  .not-front ul.links li.flag-imagex_node_like a {
+    background: transparent url("../img/like-icon.png") no-repeat center left; }
+    .not-front ul.links li.flag-imagex_node_like a.unflag-action {
+      background: transparent url("../img/liked-icon.png") no-repeat center left;
+      color: #f17700; }
+  .not-front ul.links li.flag-imagex_node_like .flag-message {
+    display: none !important; }
 @media (min-width: 62.125em) {
   .not-front #mini-panel-content_sidebar {
     position: absolute;
