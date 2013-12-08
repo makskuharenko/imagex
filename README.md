@@ -5,7 +5,8 @@ The Linux.com Drupal 7 installation profile.
 #### Installation & Setup
 
 * Using the `build-linux.make`, perform a `drush make` operation to build the codebase. Typical: `drush make build-linux.make dev --no-cache --no-gitinfofile --working-copy --force-complete`
-* Once the codebase has been built, change directories to the root of the source. `cd dev`
+* Once the codebase has been build, change directories to the Linux.com profile root of the build. `cd dev/profiles/linux`. From here, execute the codebase cleanup shell script. `sh ./script/codebase-cleanup.sh`.
+* Once the Linux.com codebase has been cleaned, change directories to the root of the Drupal source. `cd ../../`
 * Create and establish your database and database user credentials.
 * Perform initial file system setup for Drupal. This includes creating sites/default/files writable (`chmod -R 777 sites/default/files`).
 * Run a `drush site-install`. Typical: `drush site-install linux --account-name=admin --account-pass=password --site-name=Linux.com --db-url=mysql://root@127.0.0.1/linux -y`
