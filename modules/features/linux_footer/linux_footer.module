@@ -39,6 +39,8 @@ function linux_footer_entity_presave($entity, $type) {
 
       $footer_logo_path = drupal_get_path('module', 'linux_footer') . '/files/' . $file['filename'];
       if (file_unmanaged_copy($footer_logo_path, $file['uri'], FILE_EXISTS_REPLACE)) {
+        unset($file->fid);
+
         $file = (object) $file;
         $file->timestamp = REQUEST_TIME;
         $file->filesize = filesize($file->uri);
