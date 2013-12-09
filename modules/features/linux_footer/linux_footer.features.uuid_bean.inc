@@ -29,7 +29,7 @@ function linux_footer_uuid_features_default_beans() {
     'field_widget_basic__image' => array(
       'und' => array(
         0 => array(
-          'fid' => '9e6b0e3b-5a4d-47db-b39a-75421d11bb06',
+          // 'fid' => '9e6b0e3b-5a4d-47db-b39a-75421d11bb06',
           'uid' => 1,
           'filename' => 'linux-foundation-network-footer.png',
           'uri' => 'public://linux-foundation-network-footer_0.png',
