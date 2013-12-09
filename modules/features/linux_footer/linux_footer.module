@@ -6,6 +6,17 @@
 
 include_once 'linux_footer.features.inc';
 
+function linux_footer_module_implements_alter(&$implementations, $hook) {
+  switch ($hook) {
+    case 'entity_presave':
+      $altered = array('linux_footer' => $implementations['linux_footer']);
+      unset($implementations['linux_footer']);
+      $implementations = array_merge($altered, $implementations);
+      break;
+  }
+}
+
+
 /**
  * Implements hook_entity_presave().
  */
@@ -22,15 +33,23 @@ function linux_footer_entity_presave($entity, $type) {
     $files = $entity->field_widget_basic__image['und'];
     unset($entity->field_widget_basic__image['und']);
     foreach ($files as $file) {
-      $filename = $file['filename'];
-      $footer_logo_path = drupal_get_path('module', 'linux_footer') . '/files/' . $filename;
-      if (!file_unmanaged_copy($footer_logo_path, $file['uri'], FILE_EXISTS_REPLACE)) {
-        watchdog('linux', 'Unable to move the @filename into public:// during installation.', array('@filename' => $filename), WATCHDOG_ERROR);
+      if (empty($file)) {
+        continue;
+      }
+
+      $footer_logo_path = drupal_get_path('module', 'linux_footer') . '/files/' . $file['filename'];
+      if (file_unmanaged_copy($footer_logo_path, $file['uri'], FILE_EXISTS_REPLACE)) {
+        unset($file->fid);
+
+        $file = (object) $file;
+        $file->timestamp = REQUEST_TIME;
+        $file->filesize = filesize($file->uri);
+        drupal_write_record('file_managed', $file);
+
+        $entity->field_widget_basic__image['und'][] = (array) $file;
       }
       else {
-        unset($file['fid']);
-        $file = file_save((object) $file);
-        $entity->field_widget_basic__image['und'][] = (array) $file;
+        watchdog('linux', 'Unable to move the @filename into public:// during installation.', array('@filename' => $file['filename']), WATCHDOG_ERROR);
       }
     }
   }
