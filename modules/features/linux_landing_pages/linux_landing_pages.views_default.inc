@@ -112,7 +112,7 @@ function linux_landing_pages_views_default_views() {
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-  
+
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['css_class'] = 'featured-slideshow';
@@ -121,9 +121,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'slideshow';
   $handler->display->display_options['style_options']['slideshow_type'] = 'flexslider_views_slideshow';
   $handler->display->display_options['style_options']['slideshow_skin'] = 'default';
@@ -206,13 +204,14 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'imagex_news' => 'imagex_news',
   );
-  
+
   /* Display: Featured Slideshow Tile */
   $handler = $view->new_display('panel_pane', 'Featured Slideshow Tile', 'panel_pane_1');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'featured-slideshow';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'front';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -227,6 +226,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-large.png" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'large_tile__700x360_',
@@ -267,7 +267,7 @@ function linux_landing_pages_views_default_views() {
     'blog' => 'blog',
     'imagex_news' => 'imagex_news',
   );
-  
+
   /* Display: Featured Tiles */
   $handler = $view->new_display('panel_pane', 'Featured Tiles', 'panel_pane_2');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -292,6 +292,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-small.png" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'small_tile__330x223_',
@@ -336,7 +337,6 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'blog' => 'blog',
   );
-
   $export['featured_tiles'] = $view;
 
   $view = new view();
@@ -1221,7 +1221,7 @@ function linux_landing_pages_views_default_views() {
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-  
+
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
@@ -1314,7 +1314,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  
+
   /* Display: Basic Landing Page */
   $handler = $view->new_display('panel_pane', 'Basic Landing Page', 'basic_landing_page');
   $handler->display->display_options['pane_category']['name'] = 'Landing Pages';
@@ -1337,7 +1337,7 @@ function linux_landing_pages_views_default_views() {
       'label' => 'Content: Has taxonomy term ID',
     ),
   );
-  
+
   /* Display: Related Content */
   $handler = $view->new_display('panel_pane', 'Related Content', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -1443,7 +1443,7 @@ function linux_landing_pages_views_default_views() {
       'label' => 'Exclude this Node: NID',
     ),
   );
-  
+
   /* Display: Related Content - List */
   $handler = $view->new_display('panel_pane', 'Related Content - List', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -1554,7 +1554,6 @@ function linux_landing_pages_views_default_views() {
       'label' => 'Exclude Node From Results: NID',
     ),
   );
-  
   $export['landing_pages'] = $view;
 
   $view = new view();
