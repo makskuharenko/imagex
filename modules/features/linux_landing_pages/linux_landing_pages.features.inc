@@ -75,5 +75,7 @@ function linux_landing_pages_image_default_styles() {
     ),
   );
 
+  features_alter_code('image', $styles);
+
   return $styles;
 }

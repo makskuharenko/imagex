@@ -101,5 +101,7 @@ function linux_landing_pages_field_default_field_instances() {
   t('Page description');
   t('This description will be used in teasers, search indexes & results, and other places where displaying the panelized page would not be needed.');
 
+  features_alter_code('field_instance', $field_instances);
+
   return $field_instances;
 }

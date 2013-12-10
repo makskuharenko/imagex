@@ -38,7 +38,6 @@ function linux_landing_pages_uuid_features_default_beans() {
         ),
       ),
     ),
-    'url_alias' => array(),
   );
   $beans[] = array(
     'label' => 'Ad space Homepage right top',
@@ -68,7 +67,11 @@ function linux_landing_pages_uuid_features_default_beans() {
         ),
       ),
     ),
-    'url_alias' => array(),
   );
+
+  features_alter_code('uuid_bean', $beans);
+
   return $beans;
+}
+$beans;
 }

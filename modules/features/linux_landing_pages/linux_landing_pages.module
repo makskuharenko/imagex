@@ -125,5 +125,7 @@ function linux_landing_pages_uuid_to_menu_link() {
     'de271999-04f9-4d83-98bb-6e5e4489cbf6' => 'menu-primary-menu_contests--polls:',
     // Linux Foundation Blogs
     'f82c4447-883a-40fa-9777-f55b3293beff' => 'menu-primary-menu_linux-foundation-blogs:',
+    // Photos & Videos
+    'bc3bb864-590a-4070-a47d-60e6c148f7b9' => 'menu-primary-menu_photos',
   );
 }
