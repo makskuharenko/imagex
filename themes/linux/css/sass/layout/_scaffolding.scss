@@ -74,79 +74,79 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 
 // Front Page Region spacing
 // -------------------------
-
-.three-25-50-25 {
-  .region-first {
-    display: none;
-
-    @include at-breakpoint($computer) {
-      @include span-columns(5, 14);
-      display: block;
-    }
-
-    @include at-breakpoint($wide) {
-      @include span-columns(4, 14);
-    }
-  }
-
-  .region-second {
-    @include span-columns(14 omega, 14);
-
-    @include at-breakpoint($computer) {
-      @include span-columns(9 omega, 14);
-    }
-
-    @include at-breakpoint($wide) {
-      @include span-columns(6, 14);
-    }
-  }
-
-  .region-third {
-    @include at-breakpoint($computer) {
-      @include span-columns(9 omega, 14);
-    }
-
-    @include at-breakpoint($wide) {
-      @include span-columns(4 omega, 14);
-      display: block;
-    }
-  }
-}
-
-// Inner Page Region Spancing
-// --------------------------
-
-.two-33-66 {
-  .region-first {
-    display: none;
-
-    @include at-breakpoint($computer) {
-      @include span-columns(5, 16);
-      display: block;
-    }
-
-    @include at-breakpoint($wide) {
-      @include span-columns(4, 16);
-    }
-  }
-
-  .region-second {
-    @include span-columns(16 omega, 16);
-
-    @include at-breakpoint($computer) {
-      @include span-columns(11 omega, 16);
-    }
-
-    @include at-breakpoint($wide) {
-      @include span-columns(12 omega, 16);
-    }
-  }
-}
-
-//
-// three-inset-right Panel
-//
 .parrot-panels {
+
+  #three-25-50-25-middle-wrapper {
+    .three-25-50-25-first {
+      display: none;
+
+      @include at-breakpoint($computer) {
+        @include span-columns(5, 14);
+        display: block;
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(4, 14);
+      }
+    }
+
+    .three-25-50-25-second {
+      @include span-columns(14 omega, 14);
+
+      @include at-breakpoint($computer) {
+        @include span-columns(9 omega, 14);
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(6, 14);
+      }
+    }
+
+    .three-25-50-25-third {
+      @include at-breakpoint($computer) {
+        @include span-columns(9 omega, 14);
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(4 omega, 14);
+        display: block;
+      }
+    }
+  }
+
+  // Inner Page Region Spancing
+  // --------------------------
+
+  .two-33-66 {
+    .two-33-66-first {
+      display: none;
+
+      @include at-breakpoint($computer) {
+        @include span-columns(5, 16);
+        display: block;
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(4, 16);
+      }
+    }
+
+    .two-33-66-second {
+      @include span-columns(16 omega, 16);
+
+      @include at-breakpoint($computer) {
+        @include span-columns(11 omega, 16);
+      }
+
+      @include at-breakpoint($wide) {
+        @include span-columns(12 omega, 16);
+      }
+    }
+  }
+
+  //
+  // three-inset-right Panel
+  //
   #three-inset-right-wrapper{
     #three-inset-right-right-wrapper{
       @include span-columns(16 omega, 16);
