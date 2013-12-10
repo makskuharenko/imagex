@@ -8,7 +8,7 @@
  * Implements hook_taxonomy_default_vocabularies().
  */
 function linux_directory_taxonomy_default_vocabularies() {
-  return array(
+  $taxonomy = array(
     'directory_sections' => array(
       'name' => 'Directory Sections',
       'machine_name' => 'directory_sections',
@@ -56,4 +56,8 @@ function linux_directory_taxonomy_default_vocabularies() {
       ),
     ),
   );
+
+  features_alter_code('taxonomy', $taxonomy);
+
+  return $taxonomy;
 }

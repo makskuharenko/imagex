@@ -126,5 +126,7 @@ function linux_directory_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_directory'] = $strongarm;
 
+  features_alter_code('variable', $export);
+
   return $export;
 }
