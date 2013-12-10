@@ -313,5 +313,7 @@ function linux_dashboard_views_default_views() {
   $handler->display->display_options['link_to_view'] = '1';
   $export['linux_dashboard_latest_content'] = $view;
 
+  features_alter_code('views_view', $export);
+
   return $export;
 }

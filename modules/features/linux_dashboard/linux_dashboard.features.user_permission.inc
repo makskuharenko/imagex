@@ -23,5 +23,7 @@ function linux_dashboard_user_default_permissions() {
     'module' => 'linux_dashboard',
   );
 
+  features_alter_code('user_permission', $permissions);
+
   return $permissions;
 }
