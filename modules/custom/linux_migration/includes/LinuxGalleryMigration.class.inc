@@ -15,12 +15,12 @@ class LinuxGalleryMigration extends LinuxMigration {
     $this->addFieldMapping('status', 'enabled');
     $this->addFieldMapping('created', 'created_on');
     $this->addFieldMapping('modified_on', 'modified_on');
-    $this->addFieldMapping('field_image', 'files')->sourceMigration('LinuxGalleryFile')->separator(',');
-    $this->addFieldMapping('field_image:file_class')
+    $this->addFieldMapping('field_gallery_images', 'files')->sourceMigration('LinuxGalleryFile')->separator(',');
+    $this->addFieldMapping('field_gallery_images:file_class')
       ->defaultValue('MigrateFileFid');
-    $this->addFieldMapping('field_image:alt', 'captions')->separator('||');
-    $this->addFieldMapping('field_image:title', 'titles')->separator('||');
-    $this->addFieldMapping('field_image:preserve_files')
+    $this->addFieldMapping('field_gallery_images:alt', 'captions')->separator('||');
+    $this->addFieldMapping('field_gallery_images:title', 'titles')->separator('||');
+    $this->addFieldMapping('field_gallery_images:preserve_files')
       ->defaultValue(TRUE);
   }
   public function prepareRow($row) {

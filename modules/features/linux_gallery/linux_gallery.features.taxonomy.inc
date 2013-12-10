@@ -8,7 +8,7 @@
  * Implements hook_taxonomy_default_vocabularies().
  */
 function linux_gallery_taxonomy_default_vocabularies() {
-  return array(
+  $taxonomy = array(
     'gallery_category' => array(
       'name' => 'Gallery Category',
       'machine_name' => 'gallery_category',
@@ -33,4 +33,8 @@ function linux_gallery_taxonomy_default_vocabularies() {
       ),
     ),
   );
+
+  features_alter_code('taxonomy', $taxonomy);
+
+  return $taxonomy;
 }

@@ -8,3 +8,7 @@ dependencies[] = imagex_blog
 dependencies[] = linux_directory
 dependencies[] = linux_tutorial
 dependencies[] = panelizer
+features[features_api][] = api:2
+features[features_override_items][] = panelizer_defaults.node:blog:default
+features[features_override_items][] = panelizer_defaults.node:tutorial:default
+features[features_override_items][] = panelizer_defaults.node:directory:default

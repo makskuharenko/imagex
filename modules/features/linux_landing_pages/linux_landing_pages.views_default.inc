@@ -1654,5 +1654,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['pane_category']['weight'] = '0';
   $export['linux_answers'] = $view;
 
+  features_alter_code('views_view', $export);
+
   return $export;
 }
