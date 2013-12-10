@@ -88,7 +88,6 @@ dependencies[] = linux_footer
 dependencies[] = linux_forum
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_gallery
-dependencies[] = linux_group
 dependencies[] = linux_header
 dependencies[] = linux_humor
 dependencies[] = linux_humor_panelized
