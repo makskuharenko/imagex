@@ -4,7 +4,7 @@
   // ----------------------------------------------------------------------------
 
   var jPM = $.jPanelMenu({
-    menu: '.region-first',
+    menu: '.three-25-50-25-first',
     trigger: '.menu-profile'
   });
 
@@ -76,7 +76,7 @@
 
   // Changing class on scroll so that the navigation rests at the top of the page
   // ----------------------------------------------------------------------------
-/*
+
   var eTop = $('#block-panels-mini-global-header').offset().top;
 
   $(window).scroll(function() { //when window is scrolled
@@ -86,7 +86,7 @@
       $('#header-wrapper, #panel-wrapper').removeClass('fixed');
     }
   });
-*/
+
   // Show and hide the mobile menu
 
   $('.menu-utility').click(function() {
