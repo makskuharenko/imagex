@@ -391,5 +391,7 @@ function linux_directory_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  features_alter_code('field_base', $field_bases);
+
   return $field_bases;
 }

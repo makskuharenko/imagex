@@ -30,5 +30,8 @@ function linux_directory_node_info() {
       'help' => '',
     ),
   );
+
+  features_alter_code('node', $items);
+
   return $items;
 }

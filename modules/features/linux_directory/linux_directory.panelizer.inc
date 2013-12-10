@@ -212,5 +212,7 @@ function linux_directory_panelizer_defaults() {
   $panelizer->display = $display;
   $export['node:directory:default'] = $panelizer;
 
+  features_alter_code('panelizer_defaults', $export);
+
   return $export;
 }
