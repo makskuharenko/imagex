@@ -29,10 +29,9 @@ function linux_footer_uuid_features_default_beans() {
     'field_widget_basic__image' => array(
       'und' => array(
         0 => array(
-          'fid' => '9e6b0e3b-5a4d-47db-b39a-75421d11bb06',
           'uid' => 1,
           'filename' => 'linux-foundation-network-footer.png',
-          'uri' => 'public://linux-foundation-network-footer_0.png',
+          'uri' => 'public://linux-foundation-network-footer.png',
           'filemime' => 'image/png',
           'filesize' => 2661,
           'status' => 1,
@@ -58,6 +57,7 @@ function linux_footer_uuid_features_default_beans() {
           'title' => '',
           'width' => 222,
           'height' => 12,
+          'uuid_features_file_path' => drupal_get_path('module', 'linux_footer') . '/files/linux-foundation-network-footer.png',
         ),
       ),
     ),
