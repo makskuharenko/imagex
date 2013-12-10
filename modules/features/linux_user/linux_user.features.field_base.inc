@@ -375,5 +375,7 @@ Prof.',
     'type' => 'link_field',
   );
 
+  features_alter_code('field_base', $field_bases);
+
   return $field_bases;
 }

@@ -285,7 +285,7 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['login']['exclude'] = TRUE;
   $handler->display->display_options['fields']['login']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['login']['date_format'] = 'medium';
-  /* Field: User: Facebook */
+  /* Field: User: FaceBook */
   $handler->display->display_options['fields']['field_linux_facebook']['id'] = 'field_linux_facebook';
   $handler->display->display_options['fields']['field_linux_facebook']['table'] = 'field_data_field_linux_facebook';
   $handler->display->display_options['fields']['field_linux_facebook']['field'] = 'field_linux_facebook';
@@ -294,7 +294,7 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_facebook']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_linux_facebook']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_linux_facebook']['click_sort_column'] = 'url';
-  /* Field: User: Google+ */
+  /* Field: User: Google Plus */
   $handler->display->display_options['fields']['field_linux_google_']['id'] = 'field_linux_google_';
   $handler->display->display_options['fields']['field_linux_google_']['table'] = 'field_data_field_linux_google_';
   $handler->display->display_options['fields']['field_linux_google_']['field'] = 'field_linux_google_';
@@ -379,6 +379,8 @@ function linux_user_views_default_views() {
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['user_activity'] = $view;
+
+  features_alter_code('views_view', $export);
 
   return $export;
 }
