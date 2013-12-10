@@ -78,10 +78,14 @@ function linux_dashboard_default_page_manager_pages() {
       'two_66_33_first' => NULL,
       'two_66_33_second' => NULL,
       'two_66_33_bottom' => NULL,
+      'two_50_top' => NULL,
+      'two_50_first' => NULL,
+      'two_50_second' => NULL,
+      'two_50_bottom' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Content Dashboard';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -406,11 +410,125 @@ function linux_dashboard_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-7'] = $pane;
     $display->panels['two_50_second'][2] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'two_50_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'linux_google_analytics-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Check Linux Google Analytics exists',
+            'php' => 'return module_exists(\'linux_google_analytics\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'exposed' => array(
+        'hostname' => '',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['two_50_second'][3] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'two_50_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'linux_google_analytics-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Check linux_google_analytics exists',
+            'php' => 'return module_exists(\'linux_google_analytics\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '5',
+      'exposed' => array(
+        'hostname' => '',
+        'start_end' => array(
+          'min' => '-1 day',
+          'max' => '-30 days',
+        ),
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['two_50_second'][4] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
+    $pane->panel = 'two_50_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'linux_google_analytics-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Check linux_google_analytics exists',
+            'php' => 'return module_exists(\'linux_google_analytics\');',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '5',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['two_50_second'][5] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['linux_dashboard'] = $page;
+
+  features_alter_code('page_manager_pages', $pages);
 
   return $pages;
 
