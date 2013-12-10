@@ -142,3 +142,59 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
     }
   }
 }
+
+//
+// three-inset-right Panel
+//
+.parrot-panels {
+  #three-inset-right-wrapper{
+    #three-inset-right-right-wrapper{
+      @include span-columns(16 omega, 16);
+
+      @include at-breakpoint($computer){
+        @include span-columns(10 omega, 16);
+      }
+      @include at-breakpoint($wide){
+        @include span-columns(12 omega, 16);
+      }
+      .three-inset-right-top,
+      .three-inset-right-bottom{
+        @include span-columns(16 omega, 16);
+      }
+      .three-inset-right-middle{
+        @include span-columns(16 omega, 16);
+
+        @include at-breakpoint($computer){
+          @include remove-omega;
+          @include span-columns(16, 16);
+        }
+        @include at-breakpoint($wide){
+          @include remove-omega;
+          @include span-columns(10, 16);
+        }
+      }
+      .three-inset-right-inset{
+        @include span-columns(16 omega, 16);
+
+        @include at-breakpoint($computer){
+          @include span-columns(16 omega, 16);
+        }
+        @include at-breakpoint($wide){
+          @include span-columns(6 omega, 16);
+        }
+      }
+    }
+    #three-inset-right-left-wrapper{
+      @include span-columns(16 omega, 16);
+
+      @include at-breakpoint($computer){
+        @include remove-omega;
+        @include span-columns(6, 16);
+      }
+      @include at-breakpoint($wide){
+        @include remove-omega;
+        @include span-columns(4, 16);
+      }
+    }
+  }
+}

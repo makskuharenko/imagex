@@ -2049,6 +2049,86 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
       float: right;
       margin-right: 0; } }
 
+.parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5em;
+  display: inline; }
+  @media (min-width: 45.5em) {
+    .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper {
+      width: 62.02532%;
+      float: right;
+      margin-right: 0; } }
+  @media (min-width: 62.125em) {
+    .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper {
+      width: 74.68354%;
+      float: right;
+      margin-right: 0; } }
+  .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-top,
+  .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-bottom {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5em;
+    display: inline; }
+  .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-middle {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5em;
+    display: inline; }
+    @media (min-width: 45.5em) {
+      .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-middle {
+        float: left;
+        margin-right: 1.69492%;
+        width: 100%;
+        float: left;
+        margin-right: 1.26582%; } }
+    @media (min-width: 62.125em) {
+      .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-middle {
+        float: left;
+        margin-right: 1.69492%;
+        width: 62.02532%;
+        float: left;
+        margin-right: 1.26582%; } }
+  .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-inset {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1.5em;
+    display: inline; }
+    @media (min-width: 45.5em) {
+      .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-inset {
+        width: 100%;
+        float: right;
+        margin-right: 0; } }
+    @media (min-width: 62.125em) {
+      .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper .three-inset-right-inset {
+        width: 36.70886%;
+        float: right;
+        margin-right: 0; } }
+.parrot-panels #three-inset-right-wrapper #three-inset-right-left-wrapper {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5em;
+  display: inline; }
+  @media (min-width: 45.5em) {
+    .parrot-panels #three-inset-right-wrapper #three-inset-right-left-wrapper {
+      float: left;
+      margin-right: 1.69492%;
+      width: 36.70886%;
+      float: left;
+      margin-right: 1.26582%; } }
+  @media (min-width: 62.125em) {
+    .parrot-panels #three-inset-right-wrapper #three-inset-right-left-wrapper {
+      float: left;
+      margin-right: 1.69492%;
+      width: 24.05063%;
+      float: left;
+      margin-right: 1.26582%; } }
+
 p {
   margin: 0 0 12px; }
 
@@ -5960,15 +6040,15 @@ h1 {
       padding: 0 0 0 10px; }
       .user-activity .views-row .views-field-created em {
         font-style: normal; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review {
+    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News {
       padding: 0 26px 0 46px; }
-    .user-activity .views-row.Forum {
+    .user-activity .views-row.Forum, .user-activity .views-row.Group {
       background: transparent url("../img/forums-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Blog {
       background: transparent url("../img/blogs-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Answer, .user-activity .views-row.Question {
       background: transparent url("../img/answers-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Article {
+    .user-activity .views-row.Article, .user-activity .views-row.News {
       background: transparent url("../img/articles-icon.png") no-repeat 20px center; }
     .user-activity .views-row.Tutorial {
       background: transparent url("../img/tutorials-icon.png") no-repeat 20px center; }
@@ -6044,6 +6124,9 @@ h1 {
         display: block;
         width: 45%;
         float: left; } }
+    .profile-details .views-row .views-field-nothing a,
+    .profile-details .views-row .views-field-nothing-1 a {
+      color: #333333; }
     .profile-details .views-row .views-field-nothing .field-label,
     .profile-details .views-row .views-field-nothing-1 .field-label {
       font-weight: 700;
