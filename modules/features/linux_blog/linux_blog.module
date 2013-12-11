@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Blog feature.
+ */
+
+include_once 'linux_blog.features.inc';
