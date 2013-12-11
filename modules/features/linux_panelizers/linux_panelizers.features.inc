@@ -8,8 +8,7 @@
 /**
  * Implements hook_panelizer_defaults().
  */
-function linux_panelizer_panelizer_defaults() {
-  $panelizers = array();
+function linux_panelizers_panelizer_defaults_override_alter(&$data) {
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
@@ -728,7 +727,7 @@ function linux_panelizer_panelizer_defaults() {
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:tutorial:default';
+  $panelizer->name = 'node:gallery:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
   $panelizer->panelizer_key = 'tutorial';
@@ -1112,7 +1111,11 @@ function linux_panelizer_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $panelizers['node:tutorial:default'] = $panelizer;
-
-  return $panelizers;
+  $panelizers['node:gallery:default'] = $panelizer;
+  
+  foreach ($panelizers as $key => $panelizer) {
+    if (isset($data[$key])) {
+      $data[$key] = $panelizer;
+    }
+  }
 }

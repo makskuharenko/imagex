@@ -14,8 +14,8 @@ function linux_directory_user_default_permissions() {
   $permissions['delete any directory content'] = array(
     'name' => 'delete any directory content',
     'roles' => array(
-      'Administrator' => 'Administrator',
       'Content Administrator' => 'Content Administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -24,8 +24,8 @@ function linux_directory_user_default_permissions() {
   $permissions['delete own directory content'] = array(
     'name' => 'delete own directory content',
     'roles' => array(
-      'Administrator' => 'Administrator',
       'Content Administrator' => 'Content Administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -34,10 +34,10 @@ function linux_directory_user_default_permissions() {
   $permissions['edit any directory content'] = array(
     'name' => 'edit any directory content',
     'roles' => array(
-      'Administrator' => 'Administrator',
       'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -46,13 +46,15 @@ function linux_directory_user_default_permissions() {
   $permissions['edit own directory content'] = array(
     'name' => 'edit own directory content',
     'roles' => array(
-      'Administrator' => 'Administrator',
       'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
+
+  features_alter_code('user_permission', $permissions);
 
   return $permissions;
 }

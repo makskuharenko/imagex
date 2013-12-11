@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * linux_tutorial.panelizer.inc
+ * linux_gallery.panelizer.inc
  */
 
 /**
  * Implements hook_panelizer_defaults().
  */
-function linux_tutorial_panelizer_defaults() {
+function linux_gallery_panelizer_defaults() {
   $export = array();
 
-    $panelizer = new stdClass();
+  $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:tutorial:default';
+  $panelizer->name = 'node:gallery:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
   $panelizer->panelizer_key = 'tutorial';
@@ -24,10 +24,27 @@ function linux_tutorial_panelizer_defaults() {
   $panelizer->contexts = array();
   $panelizer->relationships = array(
     0 => array(
-      'identifier' => 'Taxonomy term from Node (on Node: Tags [field_tags])',
-      'keyword' => 'taxonomy_term',
-      'name' => 'entity_from_field:field_tags-node-taxonomy_term',
-      'delta' => '0',
+      'identifier' => 'Multiple terms from node',
+      'keyword' => 'terms',
+      'name' => 'terms_from_node',
+      'vocabulary' => array(
+        'forums' => 'forums',
+        'media_folders' => 'media_folders',
+        'imagex_blog_category' => 'imagex_blog_category',
+        'tags' => 'tags',
+        'workbench_section' => 'workbench_section',
+        'wiki_topics' => 'wiki_topics',
+        'linux_user_tags' => 'linux_user_tags',
+        'sections' => 'sections',
+        'directory_sections' => 'directory_sections',
+        'distributions' => 'distributions',
+        'event_category' => 'event_category',
+        'gallery_category' => 'gallery_category',
+        'manual_section' => 'manual_section',
+        'manual_sub_sections' => 'manual_sub_sections',
+        'question_category' => 'question_category',
+      ),
+      'concatenator' => ',',
       'context' => 'panelizer',
       'id' => 1,
     ),
@@ -60,7 +77,7 @@ function linux_tutorial_panelizer_defaults() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-25';
+    $pane->pid = 'new-1';
     $pane->panel = 'three_25_50_25_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'home_page-panel_pane_1';
@@ -68,7 +85,7 @@ function linux_tutorial_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'type' => 'tutorial',
+        'type' => 'gallery',
       ),
     );
     $pane->cache = array();
@@ -82,10 +99,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['three_25_50_25_first'][0] = 'new-25';
+    $display->content['new-1'] = $pane;
+    $display->panels['three_25_50_25_first'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-26';
+    $pane->pid = 'new-2';
     $pane->panel = 'three_25_50_25_first';
     $pane->type = 'block';
     $pane->subtype = 'bean-ad-space-homepage-right-top';
@@ -103,10 +120,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-26'] = $pane;
-    $display->panels['three_25_50_25_first'][1] = 'new-26';
+    $display->content['new-2'] = $pane;
+    $display->panels['three_25_50_25_first'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-27';
+    $pane->pid = 'new-3';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -129,10 +146,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-27'] = $pane;
-    $display->panels['three_25_50_25_second'][0] = 'new-27';
+    $display->content['new-3'] = $pane;
+    $display->panels['three_25_50_25_second'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-28';
+    $pane->pid = 'new-4';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'node_author';
     $pane->subtype = 'node_author';
@@ -155,10 +172,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['three_25_50_25_second'][1] = 'new-28';
+    $display->content['new-4'] = $pane;
+    $display->panels['three_25_50_25_second'][1] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-29';
+    $pane->pid = 'new-5';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'node_created';
     $pane->subtype = 'node_created';
@@ -181,10 +198,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['three_25_50_25_second'][2] = 'new-29';
+    $display->content['new-5'] = $pane;
+    $display->panels['three_25_50_25_second'][2] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-30';
+    $pane->pid = 'new-6';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'token';
     $pane->subtype = 'node:comment-count';
@@ -207,10 +224,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['three_25_50_25_second'][3] = 'new-30';
+    $display->content['new-6'] = $pane;
+    $display->panels['three_25_50_25_second'][3] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-31';
+    $pane->pid = 'new-7';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -235,10 +252,32 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-31'] = $pane;
-    $display->panels['three_25_50_25_second'][4] = 'new-31';
+    $display->content['new-7'] = $pane;
+    $display->panels['three_25_50_25_second'][4] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-32';
+    $pane->pid = 'new-8';
+    $pane->panel = 'three_25_50_25_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'gallery-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['three_25_50_25_second'][5] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_tags';
@@ -261,62 +300,12 @@ function linux_tutorial_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['three_25_50_25_second'][5] = 'new-32';
-    $pane = new stdClass();
-    $pane->pid = 'new-33';
-    $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '1',
-      'comments_per_page' => '50',
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'Comments',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'standard-bean',
-    );
-    $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['three_25_50_25_second'][6] = 'new-33';
+    $display->content['new-9'] = $pane;
+    $display->panels['three_25_50_25_second'][6] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-34';
-    $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'anon_links' => 1,
-      'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['three_25_50_25_second'][7] = 'new-34';
-    $pane = new stdClass();
-    $pane->pid = 'new-35';
+    $pane->pid = 'new-10';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-join-us';
@@ -334,10 +323,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-35';
+    $display->content['new-10'] = $pane;
+    $display->panels['three_25_50_25_third'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-11';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_1';
@@ -345,8 +334,8 @@ function linux_tutorial_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'type' => 'tutorial',
-        'tid' => '%taxonomy_term:name',
+        'type' => 'gallery',
+        'tid' => '%terms:tids',
         'nid' => '%node:nid',
       ),
       'override_title' => 1,
@@ -363,10 +352,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-36';
+    $display->content['new-11'] = $pane;
+    $display->panels['three_25_50_25_third'][1] = 'new-11';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-12';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_2';
@@ -375,7 +364,7 @@ function linux_tutorial_panelizer_defaults() {
     $pane->configuration = array(
       'arguments' => array(
         'type' => 'all',
-        'tid' => '%taxonomy_term:name',
+        'tid' => '%terms:tids',
         'nid' => '%node:nid',
       ),
       'override_title' => 1,
@@ -392,12 +381,14 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['three_25_50_25_third'][2] = 'new-37';
+    $display->content['new-12'] = $pane;
+    $display->panels['three_25_50_25_third'][2] = 'new-12';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:tutorial:default'] = $panelizer;
+  $export['node:gallery:default'] = $panelizer;
+
+  features_alter_code('panelizer_defaults', $export);
 
   return $export;
 }
