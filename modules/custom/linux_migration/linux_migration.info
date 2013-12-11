@@ -58,3 +58,4 @@ files[] = includes/LinuxHumorMigration.class.inc
 files[] = includes/LinuxGalleryCategoryMigration.class.inc
 files[] = includes/LinuxGalleryFileMigration.class.inc
 files[] = includes/LinuxGalleryMigration.class.inc
+files[] = includes/LinuxDirectoryReviewMigration.class.inc

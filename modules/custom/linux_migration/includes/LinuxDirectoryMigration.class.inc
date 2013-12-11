@@ -8,23 +8,26 @@ class LinuxDirectoryMigration extends LinuxMigration {
     $this->sourcePath =  $migration_settings['source']['files']['directory'] . '/media/nas/components/com_mtree/listings/o';
 
     $this->sourceObject = new LinuxDirectoryMigrationSourceSql($this);
-    $connection = $this->sourceObject->getSourceConnection();
+    $this->connection = $this->sourceObject->getSourceConnection();
 
-    $this->categories = $connection->select('jos_mt_cats', 'jmc')
-        ->fields('jmc', array(
-            'cat_id',
-            'alias',
-            'cat_parent',
-          )
+    $this->categories = $this->connection->select('jos_mt_cats', 'jmc')
+      ->fields('jmc', array(
+          'cat_id',
+          'alias',
+          'cat_parent',
         )
-        ->condition('cat_id', 0, '>')
-        ->execute()->fetchAllAssoc('cat_id');
+      )
+      ->condition('cat_id', 0, '>')
+      ->execute()->fetchAllAssoc('cat_id');
+
   }
 
   protected function setFieldMappings() {
     $this->addFieldMapping('title', 'link_name');
     $this->addFieldMapping('body', 'link_desc')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'user_id')->sourceMigration('LinuxUser');
+    $this->addFieldMapping('field_download_url‎', 'download_url');
+    $this->addFieldMapping('field_documentation_url‎', 'documentation_url');
     $this->addFieldMapping('status', 'link_published');
     $this->addFieldMapping('created', 'link_created');
     $this->addFieldMapping('changed', 'link_modified');
@@ -43,16 +46,21 @@ class LinuxDirectoryMigration extends LinuxMigration {
     $this->addFieldMapping('field_required_drivers_url', 'drivers_url');
     $this->addFieldMapping('field_equivalent_applications‎', 'applications');
     $this->addFieldMapping('field_book_description‎', 'book_desc');
-    $this->addFieldMapping('field_download_url‎', 'download_url');
-    $this->addFieldMapping('field_documentation_url‎', 'documentation_url');
+
     $this->addFieldMapping('field_tag', 'tags')->separator(',');
     $this->addFieldMapping('field_tag:create_term')
       ->defaultValue(TRUE);
     $this->addFieldMapping('field_the_good', 'the_good');
-    $this->addFieldMapping('field_image', 'raw_filename');
+    $this->addFieldMapping('field_image', 'filenames')->separator('|#'); //raw_filename
     $this->addFieldMapping('field_image:source_dir')->defaultValue($this->sourcePath);
     $this->addFieldMapping('field_image:destination_dir')->defaultValue('public://directory');
-    $this->addFieldMapping('field:image:destination_file', 'image_name');
+    $this->addFieldMapping('field_image:destination_file', 'image_name')->separator('|')->defaultValue('file');
+
+    $this->addFieldMapping('field_directory_gallery', 'galleryfiles')->separator('|$');
+    $this->addFieldMapping('field_directory_gallery:source_dir')->defaultValue($this->sourcePath);
+    $this->addFieldMapping('field_directory_gallery:destination_dir')->defaultValue('public://directory');
+
+    $this->addFieldMapping('field_rating', 'link_rating');
   }
 
   public function prepareRow($row) {
@@ -71,9 +79,9 @@ class LinuxDirectoryMigration extends LinuxMigration {
       $row->old_path[] = $path;
     }
 
-    $fields = explode(',', $row->cfval);
+    $fields = explode('|**', $row->cfval);
     foreach ($fields as $field) {
-      list($field_id, $value) = explode(':', $field);
+      list($field_id, $value) = explode('#!#', $field);
       if (isset($field_id) && isset($value)) {
         switch ($field_id) {
           // Image
@@ -143,6 +151,8 @@ class LinuxDirectoryMigration extends LinuxMigration {
         }
       }
     }
+
+    return TRUE;
   }
 
   /**
@@ -153,9 +163,8 @@ class LinuxDirectoryMigration extends LinuxMigration {
    *   Returns a newly created source object instance.
    */
   protected function getSourceObject() {
-    return $this->sourceObject;
+    return new LinuxDirectoryMigrationSourceSql($this);
   }
-
   /**
    * Returns the destination object instances for this migration.
    *
@@ -181,6 +190,7 @@ class LinuxDirectoryMigration extends LinuxMigration {
           'type' => 'int',
           'unsigned' => TRUE,
           'not null' => TRUE,
+          'alias' => 'jml',
         ),
       ),
       MigrateDestinationNode::getKeySchema()
@@ -188,7 +198,39 @@ class LinuxDirectoryMigration extends LinuxMigration {
   }
 
   public function complete($entity, stdClass $row) {
+    $update = FALSE;
+    if (isset($row->download_url) && !is_array($entity->field_download_url)) {
+      unset($entity->field_download_url);
+      $entity->field_download_url[LANGUAGE_NONE][0]['url'] = $row->download_url;
+      $update = TRUE;
+    }
+
+    if (isset($row->documentation_url) && !is_array($entity->field_documentation_url)) {
+      unset($entity->field_documentation_url);
+      $entity->field_documentation_url[LANGUAGE_NONE][0]['url'] = $row->documentation_url;
+      $update = TRUE;
+    }
+
+    if (isset($row->book_desc) && !is_array($entity->field_book_description)) {
+      unset($entity->field_book_description);
+      $entity->field_book_description[LANGUAGE_NONE][0]['value'] = $row->book_desc;
+      $update = TRUE;
+    }
+
+    if (isset($row->applications) && !is_array($entity->field_equivalent_applications)) {
+      unset($entity->field_equivalent_applications);
+      $entity->field_equivalent_applications[LANGUAGE_NONE][0]['value'] = $row->applications;
+      $update = TRUE;
+    }
+
+
+    if ($update) {
+      if ($row->link_published == 1) {
+        $entity->workbench_moderation_state_new = 'published';
+      }
+      node_save($entity);
+    }
+
     $this->setRedirect($entity, $row);
   }
-
 }

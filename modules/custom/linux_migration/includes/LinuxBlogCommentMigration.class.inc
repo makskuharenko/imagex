@@ -10,7 +10,6 @@ class LinuxBlogCommentMigration extends LinuxMigration {
     $this->addFieldMapping('nid', 'row')->sourceMigration('LinuxBlog');
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('comment_body', 'comment')->arguments(array('format' => 'xbbcode'));
-    //@TODO: bbcode again
     $this->addFieldMapping('created', 'created_on');
     $this->addFieldMapping('hostname', 'ip');
     $this->addFieldMapping('name', 'username')->defaultValue(NULL);

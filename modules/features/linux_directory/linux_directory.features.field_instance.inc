@@ -10,6 +10,88 @@
 function linux_directory_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_directory-field_vote_helpful'
+  $field_instances['comment-comment_node_directory-field_vote_helpful'] = array(
+    'bundle' => 'comment_node_directory',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'field_vote_helpful',
+    'label' => 'Vote helpful',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 2,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'comment-comment_node_directory-field_vote_total'
+  $field_instances['comment-comment_node_directory-field_vote_total'] = array(
+    'bundle' => 'comment_node_directory',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'field_vote_total',
+    'label' => 'Vote total',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 1,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-directory-body'
   $field_instances['node-directory-body'] = array(
     'bundle' => 'directory',
@@ -169,6 +251,57 @@ function linux_directory_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 6,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-directory-field_directory_gallery'
+  $field_instances['node-directory-field_directory_gallery'] = array(
+    'bundle' => 'directory',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_directory_gallery',
+    'label' => 'DIrectory gallery',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 20,
     ),
     'workbench_access_field' => 0,
   );
@@ -587,7 +720,7 @@ function linux_directory_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -598,7 +731,7 @@ function linux_directory_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link',
-    'label' => 'URL',
+    'label' => 'Link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -625,7 +758,54 @@ function linux_directory_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 21,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-directory-field_link_rating'
+  $field_instances['node-directory-field_link_rating'] = array(
+    'bundle' => 'directory',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_link_rating',
+    'label' => 'Rating',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -918,6 +1098,7 @@ function linux_directory_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Book description');
+  t('DIrectory gallery');
   t('Description');
   t('Distributions');
   t('Documentation URL');
@@ -926,13 +1107,16 @@ function linux_directory_field_default_field_instances() {
   t('Equivalent applications');
   t('ISBN');
   t('Image');
+  t('Link');
+  t('Rating');
   t('Required drivers (URL)');
   t('Section');
   t('Specifications');
   t('Tags');
   t('The good');
   t('Tips to use');
-  t('URL');
+  t('Vote helpful');
+  t('Vote total');
 
   features_alter_code('field_instance', $field_instances);
 
