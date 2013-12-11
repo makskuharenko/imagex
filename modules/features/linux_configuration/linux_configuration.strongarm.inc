@@ -328,15 +328,163 @@ function linux_configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'admin@linux.com';
+  $strongarm->value = 'admin@example.com';
   $export['site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'Linux.com';
+  $strongarm->value = 'Site-Install';
   $export['site_name'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_bean';
+  $strongarm->value = array(
+    'imagex_widget_basic' => 'imagex_widget_basic',
+  );
+  $export['uuid_features_entity_bean'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_node';
+  $strongarm->value = array(
+    'answer' => 'answer',
+    'blog' => 'blog',
+    'directory' => 'directory',
+    'event' => 'event',
+    'faq_topic' => 'faq_topic',
+    'forum' => 'forum',
+    'gallery' => 'gallery',
+    'group' => 'group',
+    'humor' => 'humor',
+    'landing_page' => 'landing_page',
+    'manual' => 'manual',
+    'imagex_news' => 'imagex_news',
+    'page' => 'page',
+    'advpoll' => 'advpoll',
+    'question' => 'question',
+    'tutorial' => 'tutorial',
+    'webform' => 'webform',
+    'whitepaper' => 'whitepaper',
+    'wiki' => 'wiki',
+  );
+  $export['uuid_features_entity_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_entity_taxonomy_term';
+  $strongarm->value = array(
+    'forums' => 'forums',
+    'media_folders' => 'media_folders',
+    'imagex_blog_category' => 'imagex_blog_category',
+    'tags' => 'tags',
+    'workbench_section' => 'workbench_section',
+    'wiki_topics' => 'wiki_topics',
+    'linux_user_tags' => 'linux_user_tags',
+    'linux_sections' => 'linux_sections',
+    'directory_sections' => 'directory_sections',
+    'distributions' => 'distributions',
+    'event_category' => 'event_category',
+    'gallery_category' => 'gallery_category',
+    'manual_section' => 'manual_section',
+    'manual_sub_sections' => 'manual_sub_sections',
+    'question_category' => 'question_category',
+  );
+  $export['uuid_features_entity_taxonomy_term'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_assets_path';
+  $strongarm->value = '';
+  $export['uuid_features_file_assets_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_bean';
+  $strongarm->value = array(
+    'imagex_widget_basic' => 'imagex_widget_basic',
+  );
+  $export['uuid_features_file_bean'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_mode';
+  $strongarm->value = 'inline';
+  $export['uuid_features_file_mode'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_node';
+  $strongarm->value = array(
+    'answer' => 'answer',
+    'blog' => 'blog',
+    'directory' => 'directory',
+    'event' => 'event',
+    'faq_topic' => 'faq_topic',
+    'forum' => 'forum',
+    'gallery' => 'gallery',
+    'group' => 'group',
+    'humor' => 'humor',
+    'landing_page' => 'landing_page',
+    'manual' => 'manual',
+    'imagex_news' => 'imagex_news',
+    'page' => 'page',
+    'advpoll' => 'advpoll',
+    'question' => 'question',
+    'tutorial' => 'tutorial',
+    'webform' => 'webform',
+    'whitepaper' => 'whitepaper',
+    'wiki' => 'wiki',
+  );
+  $export['uuid_features_file_node'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_supported_fields';
+  $strongarm->value = 'file, image';
+  $export['uuid_features_file_supported_fields'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_file_taxonomy_term';
+  $strongarm->value = array(
+    'forums' => 'forums',
+    'media_folders' => 'media_folders',
+    'imagex_blog_category' => 'imagex_blog_category',
+    'tags' => 'tags',
+    'workbench_section' => 'workbench_section',
+    'wiki_topics' => 'wiki_topics',
+    'linux_user_tags' => 'linux_user_tags',
+    'linux_sections' => 'linux_sections',
+    'directory_sections' => 'directory_sections',
+    'distributions' => 'distributions',
+    'event_category' => 'event_category',
+    'gallery_category' => 'gallery_category',
+    'manual_section' => 'manual_section',
+    'manual_sub_sections' => 'manual_sub_sections',
+    'question_category' => 'question_category',
+  );
+  $export['uuid_features_file_taxonomy_term'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uuid_features_vocabulary_terms';
+  $strongarm->value = 1;
+  $export['uuid_features_vocabulary_terms'] = $strongarm;
+
+  features_alter_code('variable', $export);
 
   return $export;
 }
