@@ -101,7 +101,6 @@ dependencies[] = linux_migration
 dependencies[] = linux_news
 dependencies[] = linux_news_humor
 dependencies[] = linux_pardot_integration
-dependenices[] = linux_panelizers
 dependencies[] = linux_poll
 ; Linux.com Search feature is dependent upon Apache Solr installation.
 ; dependencies[] = linux_search
