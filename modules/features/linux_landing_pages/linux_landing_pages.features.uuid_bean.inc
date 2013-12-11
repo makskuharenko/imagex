@@ -73,5 +73,3 @@ function linux_landing_pages_uuid_features_default_beans() {
 
   return $beans;
 }
-$beans;
-}

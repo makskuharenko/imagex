@@ -1393,7 +1393,7 @@ function linux_landing_pages_views_default_views() {
     'workbench_section' => 'workbench_section',
     'media_folders' => 'media_folders',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'tids';
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'empty';
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
   /* Contextual filter: Content: Nid */
@@ -1552,6 +1552,171 @@ function linux_landing_pages_views_default_views() {
       'panel' => '0',
       'fixed' => '',
       'label' => 'Exclude Node From Results: NID',
+    ),
+  );
+
+  /* Display: Events Landing Page */
+  $handler = $view->new_display('panel_pane', 'Events Landing Page', 'panel_pane_3');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_event_date' => 'field_event_date',
+    'title' => 'title',
+    'field_address' => 'field_address',
+    'field_event_category' => 'field_event_category',
+  );
+  $handler->display->display_options['style_options']['default'] = 'field_event_date';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_event_date' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_address' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_event_category' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Event Date */
+  $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
+  $handler->display->display_options['fields']['field_event_date']['label'] = 'Date';
+  $handler->display->display_options['fields']['field_event_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Address */
+  $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
+  $handler->display->display_options['fields']['field_address']['settings'] = array(
+    'use_widget_handlers' => 1,
+    'format_handlers' => array(),
+  );
+  /* Field: Content: Event category */
+  $handler->display->display_options['fields']['field_event_category']['id'] = 'field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['table'] = 'field_data_field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['field'] = 'field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Event Date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '0';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Event category (field_event_category) */
+  $handler->display->display_options['filters']['field_event_category_tid']['id'] = 'field_event_category_tid';
+  $handler->display->display_options['filters']['field_event_category_tid']['table'] = 'field_data_field_event_category';
+  $handler->display->display_options['filters']['field_event_category_tid']['field'] = 'field_event_category_tid';
+  $handler->display->display_options['filters']['field_event_category_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_event_category_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_event_category_tid']['expose']['operator_id'] = 'field_event_category_tid_op';
+  $handler->display->display_options['filters']['field_event_category_tid']['expose']['label'] = 'Event Category';
+  $handler->display->display_options['filters']['field_event_category_tid']['expose']['operator'] = 'field_event_category_tid_op';
+  $handler->display->display_options['filters']['field_event_category_tid']['expose']['identifier'] = 'field_event_category_tid';
+  $handler->display->display_options['filters']['field_event_category_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    7 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['field_event_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_event_category_tid']['vocabulary'] = 'event_category';
+  $handler->display->display_options['filters']['field_event_category_tid']['error_message'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event' => 'event',
+  );
+  /* Filter criterion: Content: Location (field_location) */
+  $handler->display->display_options['filters']['field_location_value']['id'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['table'] = 'field_data_field_location';
+  $handler->display->display_options['filters']['field_location_value']['field'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator_id'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_location_value']['expose']['operator'] = 'field_location_value_op';
+  $handler->display->display_options['filters']['field_location_value']['expose']['identifier'] = 'field_location_value';
+  $handler->display->display_options['filters']['field_location_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    7 => 0,
+    5 => 0,
+    6 => 0,
+    4 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['pane_category']['name'] = 'Landing Pages';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['argument_input'] = array(
+    'type' => array(
+      'type' => 'user',
+      'context' => 'entity:bean.delta',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Type',
+    ),
+    'tid' => array(
+      'type' => 'user',
+      'context' => 'entity:bean.delta',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Has taxonomy term ID',
     ),
   );
   $export['landing_pages'] = $view;
