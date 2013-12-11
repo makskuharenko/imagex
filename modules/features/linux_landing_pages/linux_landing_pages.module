@@ -127,5 +127,13 @@ function linux_landing_pages_uuid_to_menu_link() {
     'f82c4447-883a-40fa-9777-f55b3293beff' => 'menu-primary-menu_linux-foundation-blogs:',
     // Photos & Videos
     'bc3bb864-590a-4070-a47d-60e6c148f7b9' => 'menu-primary-menu_photos',
+    // Events
+    '66c01ed1-2ffd-47a1-8bed-62e19446734f' => 'menu-primary-menu_linux_events',
+    // Documentation
+    'e920a520-fa3a-4f93-97ff-10b075333ef9' => 'menu-primary-menu_documentation',
+    // Man Pages
+    '6382bf3d-f950-4dee-b875-fa5dc8e432a1' => 'menu-primary-menu_man-pages',
+    // Whitepages
+    'd3ba32f7-4d5b-4564-b6b5-375b0517d6c2' => 'menu-primary-menu_linux-whitepapers'
   );
 }

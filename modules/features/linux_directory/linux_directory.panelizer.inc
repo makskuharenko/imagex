@@ -22,7 +22,33 @@ function linux_directory_panelizer_defaults() {
   $panelizer->css = '';
   $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
-  $panelizer->relationships = array();
+  $panelizer->relationships = array(
+    0 => array(
+      'identifier' => 'Multiple terms from node',
+      'keyword' => 'terms',
+      'name' => 'terms_from_node',
+      'vocabulary' => array(
+        'forums' => 'forums',
+        'media_folders' => 'media_folders',
+        'imagex_blog_category' => 'imagex_blog_category',
+        'tags' => 'tags',
+        'workbench_section' => 'workbench_section',
+        'wiki_topics' => 'wiki_topics',
+        'linux_user_tags' => 'linux_user_tags',
+        'sections' => 'sections',
+        'directory_sections' => 'directory_sections',
+        'distributions' => 'distributions',
+        'event_category' => 'event_category',
+        'gallery_category' => 'gallery_category',
+        'manual_section' => 'manual_section',
+        'manual_sub_sections' => 'manual_sub_sections',
+        'question_category' => 'question_category',
+      ),
+      'concatenator' => ',',
+      'context' => 'panelizer',
+      'id' => 1,
+    ),
+  );
   $panelizer->access = array();
   $panelizer->view_mode = 'page_manager';
   $panelizer->css_class = '';
@@ -266,15 +292,21 @@ function linux_directory_panelizer_defaults() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'type' => 'Blog Posts',
-        'tid' => '',
+        'type' => 'directory',
+        'tid' => '%terms:tids',
+        'nid' => '%node:nid',
       ),
+      'override_title' => 1,
+      'override_title_text' => 'Related Listings',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'standard-bean',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -283,27 +315,32 @@ function linux_directory_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-24';
     $pane->panel = 'three_25_50_25_third';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'landing_pages-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => '%node:field_tags',
-      'format' => 'filtered_html',
-      'substitute' => 1,
+      'arguments' => array(
+        'type' => 'all',
+        'tid' => '%terms:tids',
+        'nid' => '%node:nid',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Related Content',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'standard-bean',
+    );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-24'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-24';
+    $display->panels['three_25_50_25_third'][2] = 'new-24';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
