@@ -1978,77 +1978,75 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   text-align: center;
   text-shadow: none; }
 
-.three-25-50-25 .region-first {
+.parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
   display: none; }
   @media (min-width: 45.5em) {
-    .three-25-50-25 .region-first {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
       width: 34.78261%;
       float: left;
       margin-right: 1.44928%;
       display: block; } }
   @media (min-width: 62.125em) {
-    .three-25-50-25 .region-first {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
       width: 27.53623%;
       float: left;
       margin-right: 1.44928%; } }
-.three-25-50-25 .region-second {
+.parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1.5em;
   display: inline; }
   @media (min-width: 45.5em) {
-    .three-25-50-25 .region-second {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second {
       width: 63.76812%;
       float: right;
       margin-right: 0; } }
   @media (min-width: 62.125em) {
-    .three-25-50-25 .region-second {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second {
       width: 42.02899%;
       float: left;
       margin-right: 1.44928%; } }
 @media (min-width: 45.5em) {
-  .three-25-50-25 .region-third {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-third {
     width: 63.76812%;
     float: right;
     margin-right: 0; } }
 @media (min-width: 62.125em) {
-  .three-25-50-25 .region-third {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-third {
     width: 27.53623%;
     float: right;
     margin-right: 0;
     display: block; } }
-
-.two-33-66 .region-first {
+.parrot-panels .two-33-66 .two-33-66-first {
   display: none; }
   @media (min-width: 45.5em) {
-    .two-33-66 .region-first {
+    .parrot-panels .two-33-66 .two-33-66-first {
       width: 30.37975%;
       float: left;
       margin-right: 1.26582%;
       display: block; } }
   @media (min-width: 62.125em) {
-    .two-33-66 .region-first {
+    .parrot-panels .two-33-66 .two-33-66-first {
       width: 24.05063%;
       float: left;
       margin-right: 1.26582%; } }
-.two-33-66 .region-second {
+.parrot-panels .two-33-66 .two-33-66-second {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1.5em;
   display: inline; }
   @media (min-width: 45.5em) {
-    .two-33-66 .region-second {
+    .parrot-panels .two-33-66 .two-33-66-second {
       width: 68.35443%;
       float: right;
       margin-right: 0; } }
   @media (min-width: 62.125em) {
-    .two-33-66 .region-second {
+    .parrot-panels .two-33-66 .two-33-66-second {
       width: 74.68354%;
       float: right;
       margin-right: 0; } }
-
 .parrot-panels #three-inset-right-wrapper #three-inset-right-right-wrapper {
   width: 100%;
   float: right;
@@ -4641,21 +4639,21 @@ a.label:hover, a.badge:hover {
     font-weight: 700; }
     .not-front .node-comment-counter p a {
       color: #666666; }
-.not-front .region-second .field-type-image img {
+.not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field-type-image img {
   margin: 1em 0 2em;
   border-bottom: 3px solid #f17700; }
-@media (min-width: 45.5em) {
-  .not-front .region-second .region-third {
+@media (min-width: 35em) {
+  .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .three-25-50-25-third {
     width: 100%;
     float: right;
     margin-right: 0; } }
-@media (min-width: 45.5em) {
-  .not-front .region-second .standard-bean {
+@media (min-width: 35em) {
+  .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .standard-bean {
     width: 48.27586%;
     float: left;
     margin-right: 3.44828%; } }
-@media (min-width: 45.5em) {
-  .not-front .region-second .standard-bean:last-child {
+@media (min-width: 35em) {
+  .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .standard-bean:last-child {
     width: 48.27586%;
     float: right;
     margin-right: 0;
@@ -4664,15 +4662,18 @@ a.label:hover, a.badge:hover {
   font-size: 14px;
   line-height: 20px; }
 .not-front .field-type-taxonomy-term-reference {
-  padding: 20px 0; }
+  padding: 20px 0;
+  width: 100%;
+  float: left; }
   .not-front .field-type-taxonomy-term-reference a {
+    float: left;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border-radius: 3px;
     background: #f17700;
-    margin: 0;
+    margin: 0 3px 0 0;
     padding: 2px 5px;
     font-family: "Open Sans Condensed";
     font-size: 12px;

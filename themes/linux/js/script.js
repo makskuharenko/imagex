@@ -4,7 +4,7 @@
   // ----------------------------------------------------------------------------
 
   var jPM = $.jPanelMenu({
-    menu: '.region-first',
+    menu: '.three-25-50-25-first',
     trigger: '.menu-profile'
   });
 
@@ -37,7 +37,7 @@
       enter: function() {
         jPM.on();
         filteredView();
-        moveBlocks($('.region-third'), $('#comments'), true);
+        moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
         jPM.off();
@@ -46,7 +46,7 @@
       breakpoint: 'tablet',
       enter: function() {
         filteredView();
-        moveBlocks($('.region-third'), $('#comments'), true);
+        moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
         // Do Nothing
@@ -55,8 +55,8 @@
       breakpoint: 'computer',
       enter: function() {
         filteredView();
-        moveBlocks($('.region-third .pane-menu-menu-join-us'), $('.region-first .standard-bean:first-child'), true);
-        moveBlocks($('.region-third'), $('#comments'), true);
+        moveBlocks($('.three-25-50-25-third .pane-menu-menu-join-us'), $('.three-25-50-25-first .standard-bean:first-child'), true);
+        moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
         // Do Nothing
@@ -65,8 +65,8 @@
       breakpoint: 'wide',
       enter: function() {
         filteredView();
-        moveBlocks($('.region-first .pane-menu-menu-join-us'), $('.region-third .standard-bean:first-child'), true);
-        moveBlocks($('.region-third'), $('.region-second'), false);
+        moveBlocks($('.three-25-50-25-first .pane-menu-menu-join-us'), $('.three-25-50-25-third .standard-bean:first-child'), true);
+        moveBlocks($('.three-25-50-25-third'), $('.three-25-50-25-second'), false);
       },
       exit: function() {
         // Do Nothing
