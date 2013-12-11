@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * linux_common_fields.features.taxonomy.inc
+ * linux_vocabularies.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function linux_common_fields_taxonomy_default_vocabularies() {
+function linux_vocabularies_taxonomy_default_vocabularies() {
   return array(
-    'sections' => array(
+    'linux_sections' => array(
       'name' => 'Sections',
-      'machine_name' => 'sections',
+      'machine_name' => 'linux_sections',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
