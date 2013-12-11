@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Code for the Linux Google Analytics feature.
+ */
+
+include_once 'linux_google_analytics.features.inc';
+
+/**
+ * Implements hook_chart_alter().
+ *
+ * @param $chart
+ *   The chart renderable. Passed in by reference.
+ * @param $chart_id
+ *   The chart identifier, pulled from the $chart['#chart_id'] property (if
+ *   any). Not all charts have a chart identifier.
+ */
+function linux_google_analytics_chart_alter(&$chart, $chart_id) {
+  if ($chart_id === 'linux_google_analytics__panel_pane_1') {
+    // Make chart responsive, UI only allows pixels
+    $chart['#width'] = '100%';
+    
+    // Add date range label to xaxis title
+    if (!empty($chart['xaxis']['#labels']) && count($chart['xaxis']['#labels']) > 1) {
+      $labels = $chart['xaxis']['#labels'];
+      $last = count($labels) - 1;
+      $chart['xaxis']['#title'] = t('@date1 to @date2', array('@date1' => $labels[0], '@date2' => $labels[$last]));
+    }
+  }
+}

@@ -118,8 +118,8 @@ function linux_gallery_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-gallery-field_image'
-  $field_instances['node-gallery-field_image'] = array(
+  // Exported field_instance: 'node-gallery-field_gallery_images'
+  $field_instances['node-gallery-field_gallery_images'] = array(
     'bundle' => 'gallery',
     'deleted' => 0,
     'description' => '',
@@ -142,13 +142,13 @@ function linux_gallery_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_image',
+    'field_name' => 'field_gallery_images',
     'label' => 'Images',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'gallery/images',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -174,6 +174,8 @@ function linux_gallery_field_default_field_instances() {
   t('Description');
   t('Gallery category');
   t('Images');
+
+  features_alter_code('field_instance', $field_instances);
 
   return $field_instances;
 }

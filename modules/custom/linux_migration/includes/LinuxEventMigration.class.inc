@@ -15,7 +15,7 @@ class LinuxEventMigration extends LinuxMigration {
     $this->addFieldMapping('field_number_of_attendee', 'maxplaces');
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
-    $this->addFieldMapping('field_date', 'event_dates');
+    $this->addFieldMapping('field_event_date', 'event_dates');
 
     $this->addFieldMapping('field_event_category', 'catid')->sourceMigration('LinuxEventCategory');
     $this->addFieldMapping('field_event_category:source_type')
@@ -41,7 +41,12 @@ class LinuxEventMigration extends LinuxMigration {
     $row->modified = ($row->modified == '0000-00-00 00:00:00') ? $row->created : $row->modified;
     $row->start_date = (!$row->times) ? $row->dates : $row->dates . ' ' . $row->times;
     $row->end_date = (!$row->endtimes) ? $row->enddates : $row->enddates . ' ' . $row->endtimes;
-    $row->event_dates[] = drupal_json_encode(array('from' => $row->start_date, 'to' => $row->end_date));
+    $json_array['from'] = $row->start_date;
+    if ($row->end_date != $row->start_date) {
+      // We only want to add an end date if it's differnt then the start date
+      $json_array['to'] = $row->end_date;
+    }
+    $row->event_dates[] = drupal_json_encode($json_array);
 
     $row->state = ($row->state == 1) ? 1 : 0;
     $row->old_path = 'submit-event/details/' . $row->id . '-' . $row->alias;

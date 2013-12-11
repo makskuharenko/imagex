@@ -38,7 +38,6 @@ function linux_landing_pages_uuid_features_default_beans() {
         ),
       ),
     ),
-    'url_alias' => array(),
   );
   $beans[] = array(
     'label' => 'Ad space Homepage right top',
@@ -60,15 +59,17 @@ function linux_landing_pages_uuid_features_default_beans() {
     'field_widget_basic__markup' => array(
       'und' => array(
         0 => array(
-          'value' => '<p><img alt="" src="http://placehold.it/320/8AFFE4/000000.png&amp;text=Ad+Space" style="height:320px; width:320px" /></p>
+          'value' => '<p style="text-align:center;"><img alt="" src="http://placehold.it/320/eeeeee/999999.png&amp;text=Ad+Space" style="height:320px; width:320px" /></p>
 ',
           'format' => 'full_html',
-          'safe_value' => '<p><img alt="" src="http://placehold.it/320/8AFFE4/000000.png&amp;text=Ad+Space" style="height:320px;width:320px;" /></p>
+          'safe_value' => '<p style="text-align:center;"><img alt="" src="http://placehold.it/320/eeeeee/999999.png&amp;text=Ad+Space" style="height:320px;width:320px;" /></p>
 ',
         ),
       ),
     ),
-    'url_alias' => array(),
   );
+
+  features_alter_code('uuid_bean', $beans);
+
   return $beans;
 }

@@ -1,28 +1,25 @@
+// Temporary
+// -----------------------------------------
+
+
 // Standard elements and node/comment styles
 // -----------------------------------------
 
 .not-front {
-  @mixin node-position() {
-    @include span-columns(8, 12);
-    position: relative;
-    z-index: 200;
+  #header-wrapper {
+    padding: 0;
+    margin-bottom: -1px;
   }
 
-  @mixin content-padding() {
-    padding: 0 1em;
+  .pane-menu-menu-join-us {
+    display: none;
 
     @include at-breakpoint($computer) {
-      padding: 0;
+      display: block;
     }
   }
 
-  .pane-node-title {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
-    @include content-padding;
-
+  .node-title {
     h1 {
       font-family: $monoFontFamily;
       font-weight: 300;
@@ -45,62 +42,111 @@
     }
   }
 
-  .field-type-text-with-summary {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .node-author {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $grayDark;
+  }
+
+  .node-date {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-family: $condensedFontFamily;
+    font-size: 13px;
+    border-right: 1px solid $dropdownDividerTop;
+    color: $linuxDarkGray;
+  }
+
+  .node-comment-counter {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 22px;
+    background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+
+      a {
+        color: $linuxDarkGray;
+      }
     }
+  }
 
-    @include content-padding;
+  .parrot-panels {
+    #three-25-50-25-middle-wrapper {
+      .three-25-50-25-second {
+        .field-type-image {
+          img {
+            margin: 1em 0 2em;
+            border-bottom: 3px solid $linuxStdOrange;
+          }
+        }
 
+        .three-25-50-25-third {
+          @include at-breakpoint($tablet) {
+            @include span-columns(6 omega, 6);
+          }
+        }
+
+        .standard-bean {
+          @include at-breakpoint($tablet) {
+            @include span-columns(3, 6);
+          }
+        }
+
+        .standard-bean:last-child {
+          @include at-breakpoint($tablet) {
+            @include span-columns(3 omega, 6);
+            clear: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  .field-type-text-with-summary {
     p {
       font-size: 14px;
       line-height: 20px;
     }
   }
 
-  .region-second {
-    .field-type-image {
-      @include content-padding;
-
-      img {
-        border-bottom: 3px solid $linuxStdOrange;
-      }
-    }
-  }
-
-
   .field-type-taxonomy-term-reference {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
     padding: 20px 0;
+    width: 100%;
+    float: left;
 
-    .field-item {
-      display: inline;
+    a {
+      float: left;
+      @include border-radius(3px);
+      background: $linuxStdOrange;
+      margin: 0 4px 0 0;
+      padding: 2px 5px;
+      font-family: $condensedFontFamily;
+      font-size: 12px;
+      text-transform: capitalize;
+      letter-spacing: 0.1em;
+      color: white;
 
-      a {
-        @include border-radius(3px);
-        background: $linuxStdOrange;
-        margin: 0;
-        padding: 2px 5px;
-        font-family: $condensedFontFamily;
-        font-size: 12px;
-        text-transform: capitalize;
-        letter-spacing: 0.1em;
-        color: white;
-
-        &:hover {
-          background: $linuxDarkestOrange;
-        }
+      &:hover {
+        background: $linuxDarkestOrange;
       }
     }
   }
 
   .link-wrapper {
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
-
     ul {
       margin: 0;
       padding: 0;
@@ -112,18 +158,39 @@
     }
   }
 
-  .comment-form {
-    @include at-breakpoint($wide) {
-      @include node-position();
+  .filter-wrapper {
+    margin: 1em 0;
+
+    .filter-help {
+      padding: 0;
+
+      a {
+        font-size: 10px;
+        color: rgb(102, 102, 102);
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .filter-guidelines {
+    margin: 1em 0;
+    padding: 0;
+
+    ul {
+      li {
+        font-size: 12px;
+        color: #BBB;
+        font-style: italic;
+        text-align: left;
+        line-height: 18px;
+      }
     }
   }
 
   .comment {
     clear: both;
-
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     h3 {
       display: none;
@@ -181,17 +248,22 @@
     width: 100%;
     margin: 0 0 30px;
     list-style-type: none;
-    @include at-breakpoint($wide) {
-      @include node-position();
-    }
 
     li.comment-delete,
     li.comment-edit,
-    li.comment-reply {
+    li.comment-reply,
+    li.post-delete,
+    li.post-edit,
+    li.comment-add,
+    li.flag-imagex_node_like {
       text-transform: capitalize;
       font-size: 14px;
       font-family: $condensedFontFamily;
-      float: right;
+      float: none;
+
+      @include at-breakpoint($tablet) {
+        float: right;
+      }
 
       a {
         color: $gray;
@@ -202,11 +274,35 @@
           @include opacity(0.5);
         }
       }
+
+      .flag-counter {
+        a {
+          margin: 0;
+          padding: 0;
+          background: none;
+        }
+      }
     }
 
-    li.comment-reply {
+    li.comment-reply,
+    li.comment-add {
       a {
         background: transparent url('../img/comment-reply.png') no-repeat center left;
+      }
+    }
+
+    li.flag-imagex_node_like {
+      a {
+        background: transparent url('../img/like-icon.png') no-repeat center left;
+
+        &.unflag-action {
+          background: transparent url('../img/liked-icon.png') no-repeat center left;
+          color: $linuxStdOrange;
+        }
+      }
+
+      .flag-message {
+        display: none !important;
       }
     }
   }
@@ -219,6 +315,18 @@
   }
 }
 
+
+// Workbench Info Block -- Adding container
+// --------------------------------------------------------------
+
+#block-workbench-block {
+  padding: 1.5em;
+
+  @include at-breakpoint($wide) {
+    max-width: 88.5em;
+    margin: 0 auto;
+  }
+}
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
@@ -373,6 +481,16 @@ small {
     background-position: right 45px center; /* Cr 25+, FF 13+, IE 9+, Op 10.5+ */
     cursor: pointer;
 
+    &.js-dropdown-toggled {
+      border-color: $grayDark;
+      background: $grayDark !important;
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+
     &:before {
       color: $linuxStdOrange;
       float: right;
@@ -381,15 +499,15 @@ small {
       padding-right: 1.5em;
     }
 
-    &.popular {
+    &.js-leftbar-option-popular {
       background-image: url('../img/most-popular-gray.png');
     }
 
-    &.commented {
+    &.js-leftbar-option-comment_count {
       background-image: url('../img/most-comments-gray.png');
     }
 
-    &.shared {
+    &.js-leftbar-option-shared {
       background-image: url('../img/most-shared-gray.png');
     }
   }
@@ -521,22 +639,20 @@ small {
           position: relative;
           text-align: center;
 
-          &:hover {
+          &:hover,
+          &.active,
+          &.active-trail {
             border-bottom: 4px solid $dropdownDividerTop;
 
-            a,
-            span {
+            > a,
+            > span {
               height: 44px;
+              color: $linuxStdOrange;
 
               &.active {
                 border-bottom: none;
               }
             }
-          }
-
-          &.active,
-          &.active-trail {
-            border-bottom: 4px solid $dropdownDividerTop;
           }
 
           > a,
@@ -550,10 +666,6 @@ small {
             line-height: 48px;
             color: $linuxDarkGray;
             cursor: pointer;
-
-            &.active {
-              color: $linuxStdOrange;
-            }
           }
 
           @include at-breakpoint(60em) {
@@ -838,7 +950,7 @@ small {
     #block-bean-about-linux-foundation {
       p {
         padding: 0 0 0 15%;
-        margin: 15px 0 0;
+        margin: 0;
       }
     }
   }
@@ -862,11 +974,9 @@ small {
   @include span-columns(14 omega, 14);
   background-color: white;
 
-  .flexslider_views_slideshow_slide {
-    &:hover {
-      img {
-        @include opacity(0.3);
-      }
+  &:hover {
+    img {
+      @include opacity(0.3);
     }
   }
 
@@ -885,6 +995,10 @@ small {
         &:hover {
           @include opacity(0.8);
         }
+
+        &:before {
+          content: none;
+        }
       }
     }
 
@@ -898,6 +1012,7 @@ small {
   .views-field-title {
     h2 {
       border: 0;
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 22px;
       line-height: 24px;
@@ -905,6 +1020,8 @@ small {
       @include text-shadow(0 0 20px rgba(0,0,0,0.1));
 
       a {
+        display: block;
+        padding: 12px 0;
         color: $grayDark;
       }
     }
@@ -973,7 +1090,7 @@ small {
   .flex-direction-nav {
     a {
       display: none;
-      width: 50px;
+      padding: 0 0 0 50px;
       height: 100%;
       @include opacity(0);
       top: 0;
@@ -1053,9 +1170,9 @@ small {
   .views-field-title {
     position: absolute;
     top: 0px;
-    padding: 5px 20px;
 
     h2 {
+      margin: 0;
       font-family: $monoFontFamily;
       font-size: 26px;
       font-weight: 300;
@@ -1063,7 +1180,9 @@ small {
       @include text-shadow(0 0 15px rgba(0,0,0,0.1));
 
       a {
+        display: block;
         color: white;
+        padding: 15px 20px;
       }
     }
   }
@@ -1566,73 +1685,328 @@ small {
 // Most Recent menu filter
 // -----------------------
 
-.filtered-menu {
-  display: none;
-  position: relative;
-  z-index: 99;
+.js-leftbar-dropdown {
   width: 100%;
   background-color: $grayDark;
-  position: relative;
-  margin-bottom: -203px;
+  top: 50px;
+  padding: 0 1.5em !important;
 
-  ul {
-    margin: 0;
-    padding: 0 1.5em;
-    list-style-type: none;
+  .js-leftbar-option {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-top: 1px solid $linuxDarkGray;
 
-    li {
-      border-top: 1px solid $btnInverseBackground;
+    &:hover {
+      color: darken(white, 60%);
+    }
 
-      span,
+    &.js-leftbar-option-created {
+      background: transparent url('../img/most-recent-white.png') no-repeat right center;
+    }
+
+    &.js-leftbar-option-popular {
+      background: transparent url('../img/most-popular-white.png') no-repeat right center;
+    }
+
+    &.js-leftbar-option-comment_count {
+      background: transparent url('../img/most-comments-white.png') no-repeat right center;
+    }
+
+    &.js-leftbar-option-shared {
+      background: transparent url('../img/most-shared-white.png') no-repeat right center;
+    }
+  }
+}
+
+// User views and views rows with content type icons
+// -------------------------------------------------
+
+.user-activity {
+  margin: 0 0 10px;
+
+  .views-row {
+    margin: 10px 0;
+
+    .views-field {
+      span {
+        display: inline;
+      }
+    }
+
+    .views-field-type {
+      display: none;
+      font-weight: 700;
+      font-family: $condensedFontFamily;
+      text-transform: capitalize;
+      border-right: 1px solid $dropdownDividerTop;
+      padding: 0 7px 0 0;
+      margin: 0 10px 0 0;
+
+      @include at-breakpoint($tablet) {
+        display: inline;
+      }
+    }
+
+    .views-field-title {
       a {
+        display: inline;
+        color: $grayDark;
+      }
+    }
+
+    .views-field-created {
+      em {
+        font-style: normal;
+      }
+
+      font-weight: 300;
+      font-family: $condensedFontFamily;
+      border-left: 1px solid $dropdownDividerTop;
+      margin: 0 0 0 7px;
+      padding: 0 0 0 10px;
+    }
+
+    &.Forum,
+    &.Blog,
+    &.Answer,
+    &.Question,
+    &.Article,
+    &.Tutorial,
+    &.Shared,
+    &.Review,
+    &.Group,
+    &.News {
+      padding: 0 26px 0 46px;
+    }
+
+
+    &.Forum,
+    &.Group {
+      background: transparent url('../img/forums-icon.png') no-repeat 20px center;
+    }
+
+    &.Blog {
+      background: transparent url('../img/blogs-icon.png') no-repeat 20px center;
+    }
+
+    &.Answer,
+    &.Question {
+      background: transparent url('../img/answers-icon.png') no-repeat 20px center;
+    }
+
+    &.Article,
+    &.News {
+      background: transparent url('../img/articles-icon.png') no-repeat 20px center;
+    }
+
+    &.Tutorial {
+      background: transparent url('../img/tutorials-icon.png') no-repeat 20px center;
+    }
+
+    &.Shared {
+      background: transparent url('../img/shared-icon.png') no-repeat 20px center;
+    }
+
+    &.Review {
+      background: transparent url('../img/reviews-icon.png') no-repeat 20px center;
+    }
+  }
+}
+
+.user-activity-stats {
+  .views-row {
+    height: 32px;
+    line-height: 32px;
+    margin: 10px 0;
+
+    .views-field-type {
+      font-family: $condensedFontFamily;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .views-field-type-1 {
+      font-family: $condensedFontFamily;
+      font-weight: 300;
+    }
+
+    &.Forum,
+    &.Blogs,
+    &.Answers,
+    &.Questions,
+    &.Articles,
+    &.Tutorials,
+    &.Shareds,
+    &.Reviews {
+      padding: 0 0 0 62px;
+    }
+
+
+    &.Forum {
+      background: transparent url('../img/forums-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Blogs {
+      background: transparent url('../img/blog-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Answers,
+    &.Questions {
+      background: transparent url('../img/answers-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Articles {
+      background: transparent url('../img/articles-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Tutorials {
+      background: transparent url('../img/tutorials-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Shareds {
+      background: transparent url('../img/shared-stat-icon.png') no-repeat 20px center;
+    }
+
+    &.Reviews {
+      background: transparent url('../img/reviews-stat-icon.png') no-repeat 20px center;
+    }
+  }
+}
+
+// Profile detail view styles
+// --------------------------
+
+.profile-details {
+  .views-row {
+    background: $tableBackgroundHover;
+    margin: 0 0 2em;
+    padding: 20px;
+    float: left;
+    width: 100%;
+
+    .views-field-field-profile-image {
+      padding-right: 20px;
+
+      @include at-breakpoint($tablet) {
+        float: left;
+      }
+
+      img {
+        @include border-radius(4px);
+      }
+    }
+
+    .views-field-field-linux-name {
+      margin: 1em 0;
+
+      @include at-breakpoint($tablet) {
+        margin-top: 0;
+      }
+
+      h1 {
+        display: inline;
+        font-size: 32px;
+        line-height: 36px;
+
+        @include at-breakpoint($tablet) {
+          font-size: 48px;
+          line-height: 52px;
+        }
+      }
+    }
+
+    .views-field-nothing,
+    .views-field-nothing-1 {
+      font-size: 13px;
+
+      @include at-breakpoint($wide) {
         display: block;
+        width: 45%;
+        float: left;
+      }
+
+      a {
+        color: $grayDark;
+      }
+
+      .field-label {
+        font-weight: 700;
+        font-size: 13px;
+        font-family: $condensedFontFamily;
+        border-right: 1px solid #AAA;
+        margin: 0 8px 0 0;
+        padding: 0 8px 0 0;
+        color: #AAA;
+      }
+
+      .field-content {
+        font-size: 14px;
+        font-family: $condensedFontFamily;
+        font-weight: 700;
+      }
+
+      .twitter,
+      .facebook,
+      .google,
+      .linkedin,
+      .rss {
+        width: 18px;
+        height: 18px;
+        overflow: hidden;
+        background: $linuxDarkGray;
         color: white;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 50px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
+        text-align: center;
+        float: left;
+        margin: 10px 4px 0 0;
+        position: relative;
+        @include border-radius(1px);
 
-        &:hover {
-          color: darken(white, 60%);
+        &:before {
+          display: block !important;
+          padding: 0 !important;
+          line-height: 18px !important;
+          font-size: 12px;
         }
 
-        &.recent {
-          background: transparent url('../img/most-recent-white.png') no-repeat right center;
-        }
-
-        &.popular {
-          background: transparent url('../img/most-popular-white.png') no-repeat right center;
-        }
-
-        &.commented {
-          background: transparent url('../img/most-comments-white.png') no-repeat right center;
-        }
-
-        &.shared {
-          background: transparent url('../img/most-shared-white.png') no-repeat right center;
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 18px;
         }
       }
 
-      &:first-child {
-        border: none;
-        @include icon-caret-down;
+      .facebook {
+        @include icon-facebook;
+      }
 
-        &:before {
-          color: darken(white, 60%);
-          float: right;
-          line-height: 50px;
-          font-size: 16px;
-        }
+      .twitter {
+        @include icon-twitter;
+      }
 
-        span,
-        a {
-          color: darken(white, 60%);
-          letter-spacing: 0em;
-          font-weight: 700;
-          font-size: 13px;
-          background: none;
-        }
+      .google {
+        @include icon-google-plus;
+      }
+
+      .linkedin {
+        @include icon-linkedin;
+      }
+
+      .rss {
+        @include icon-rss;
+      }
+    }
+
+    .views-field-nothing-1 {
+      display: inline-block;
+
+      @include at-breakpoint($wide) {
+        width: 25%;
       }
     }
   }

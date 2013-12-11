@@ -85,29 +85,25 @@ function linux_events_field_default_field_instances() {
       'weight' => 7,
     ),
   );
-
-  // Exported field_instance: 'node-event-field_radioactivity'
-  $field_instances['node-event-field_radioactivity'] = array(
+  
+// Exported field_instance: 'node-event-field_event_date'
+  $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
-    'default_value' => array(
-      0 => array(
-        'radioactivity_energy' => 0,
-        'radioactivity_timestamp' => 1378932870,
-      ),
-    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'radioactivity',
+        'module' => 'date',
         'settings' => array(
-          'accuracy' => 100,
-          'energy' => 10,
-          'type' => 'none',
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
         ),
-        'type' => 'radioactivity_combo_formatter',
-        'weight' => 1,
+        'type' => 'date_default',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -117,27 +113,84 @@ function linux_events_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_radioactivity',
-    'label' => 'Radioactivity',
-    'required' => FALSE,
+    'field_name' => 'field_event_date',
+    'label' => 'Event Date',
+    'required' => 1,
     'settings' => array(
-      'profile' => 'default_daily',
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'radioactivity',
-      'settings' => array(),
-      'type' => 'radioactivity_basic_widget',
-      'weight' => 5,
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'Y-m-d H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 3,
     ),
+    'workbench_access_field' => 0,
   );
+
+  // Exported field_instance: 'node-event-field_event_linux_foundation'
+  $field_instances['node-event-field_event_linux_foundation'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Is this a Linux Foundation event?',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_linux_foundation',
+    'label' => 'Linux Foundation Event',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );  
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Event category');
   t('Groups');
-  t('Radioactivity');
+  t('Event Date');
+  t('Is this a Linux Foundation event?');
+  t('Linux Foundation Event');  
 
   return $field_instances;
 }

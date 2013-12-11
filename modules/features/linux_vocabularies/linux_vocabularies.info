@@ -1,0 +1,10 @@
+name = Common Vocabularies
+description = Common vocabularies used within Linux.com
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_vocabularies
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = linux_sections

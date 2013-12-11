@@ -172,5 +172,7 @@ function linux_landing_pages_panelizer_defaults() {
   $panelizer->display = $display;
   $export['node:landing_page:default:default'] = $panelizer;
 
+  features_alter_code('panelizer_defaults', $export);
+
   return $export;
 }

@@ -194,5 +194,7 @@ function linux_header_default_panels_mini() {
   $mini->display = $display;
   $export['mobile_main_menu'] = $mini;
 
+  features_alter_code('panels_mini', $export);
+
   return $export;
 }

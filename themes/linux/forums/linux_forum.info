@@ -1,0 +1,4 @@
+name = Linux Forum
+description = Styles and structure for the Linux.com forums
+version = 2.x
+base style = naked

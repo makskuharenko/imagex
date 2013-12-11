@@ -78,5 +78,7 @@ function linux_configuration_context_default_contexts() {
   t('Linux');
   $export['linux_sitewide_context'] = $context;
 
+  features_alter_code('context', $export);
+
   return $export;
 }

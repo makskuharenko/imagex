@@ -20,22 +20,26 @@ function linux_header_uuid_features_default_beans() {
     ),
     'delta' => 'ad-space---header',
     'view_mode' => 'default',
-    'created' => 1382716852,
+    'created' => 1386777773,
     'log' => '',
     'uid' => 1,
     'default_revision' => 1,
     'revisions' => array(),
-    'uuid' => '0ca4c0e1-eb00-430a-be7d-08092a2c6cde',
+    'uuid' => 'ad50da0d-c7e7-47d2-ac74-7469ac209732',
+    'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
       'und' => array(
         0 => array(
-          'value' => '<div class="ad-space">Ad Space</div>',
+          'value' => '<p class="ad-space">Ad Space</p>',
           'format' => 'full_html',
-          'safe_value' => '<div class="ad-space">Ad Space</div>
+          'safe_value' => '<p class="ad-space">Ad Space</p>
 ',
         ),
       ),
     ),
   );
+
+  features_alter_code('uuid_bean', $beans);
+
   return $beans;
 }

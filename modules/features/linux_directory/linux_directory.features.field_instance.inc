@@ -1034,5 +1034,7 @@ function linux_directory_field_default_field_instances() {
   t('The good');
   t('Tips to use');
 
+  features_alter_code('field_instance', $field_instances);
+
   return $field_instances;
 }

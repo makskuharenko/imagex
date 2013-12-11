@@ -72,7 +72,7 @@ function linux_events_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
-  /* Field: Content: Event Date */
+  /* Field: : field_event_date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
@@ -124,12 +124,12 @@ function linux_events_views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Learn More';
-  /* Sort criterion: Content: Linux Foundation Event (field_event_linux_foundation) */
+  /* Sort criterion: : field_event_linux_foundation (field_event_linux_foundation) */
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['id'] = 'field_event_linux_foundation_value';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['table'] = 'field_data_field_event_linux_foundation';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['field'] = 'field_event_linux_foundation_value';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['order'] = 'DESC';
-  /* Sort criterion: Content: Event Date -  start date (field_event_date) */
+  /* Sort criterion: : field_event_date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -148,18 +148,7 @@ function linux_events_views_default_views() {
     'event' => 'event',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Date: Date (node) */
-  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
-  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
-  $handler->display->display_options['filters']['date_filter']['group'] = 1;
-  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
-  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
-    'field_data_field_event_date.field_event_date_value2' => 'field_data_field_event_date.field_event_date_value2',
-  );
-  /* Filter criterion: Content: Tags (field_tag) */
+  /* Filter criterion: Content: Category (field_tag) */
   $handler->display->display_options['filters']['field_tag_tid']['id'] = 'field_tag_tid';
   $handler->display->display_options['filters']['field_tag_tid']['table'] = 'field_data_field_tag';
   $handler->display->display_options['filters']['field_tag_tid']['field'] = 'field_tag_tid';
@@ -201,6 +190,13 @@ function linux_events_views_default_views() {
     4 => 0,
   );
   $handler->display->display_options['filters']['field_location_value']['reduce_duplicates'] = TRUE;
+  /* Filter criterion: Content: Event Date -  start date (field_event_date) */
+  $handler->display->display_options['filters']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
+  $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value']['granularity'] = 'second';
+  $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';  
 
   /* Display: Events List Content pane */
   $handler = $view->new_display('panel_pane', 'Events List Content pane', 'panel_pane_2');
