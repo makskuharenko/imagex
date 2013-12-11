@@ -15,6 +15,7 @@ function linux_directory_user_default_permissions() {
     'name' => 'delete any directory content',
     'roles' => array(
       'Content Administrator' => 'Content Administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function linux_directory_user_default_permissions() {
     'name' => 'delete own directory content',
     'roles' => array(
       'Content Administrator' => 'Content Administrator',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -35,6 +37,7 @@ function linux_directory_user_default_permissions() {
       'Content Administrator' => 'Content Administrator',
       'Content Creator' => 'Content Creator',
       'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
