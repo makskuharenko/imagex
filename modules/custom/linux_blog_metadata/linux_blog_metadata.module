@@ -3,7 +3,7 @@
  * @file
  * Simple module which prefills the "Tags" field on blog content
  * if acting user is "tagged" with "Linux Foundation" in the
- * "field_linux_user_tags" field
+ * "field_linux_user_tags" field or is a "community" member
  */
 
 /**
@@ -31,7 +31,7 @@ function linux_blog_metadata_form_blog_node_form_alter(&$form, $form_state, $for
       // Store the tid(s) of the matches for later.
       $form['field_tags_forced_default'] = array(
         '#type' => 'value',
-        '#value' => array_keys($matches),
+        '#value' => array_values($matches),
       );
 
       array_unshift($form['#validate'], 'linux_blog_metadata_form_blog_node_form_validate');
@@ -52,20 +52,17 @@ function linux_blog_metadata_form_blog_node_form_validate($form, &$form_state) {
   if ($form_state['values']['field_tags_forced_default']) {
     $blog_tags_vocab = taxonomy_vocabulary_machine_name_load('tags');
 
-    foreach ($form_state['values']['field_tags_forced_default'] as $tid) {
-      // Original term as in users_tags vocab.
-      $original_term = taxonomy_term_load($tid);
-
+    foreach ($form_state['values']['field_tags_forced_default'] as $tname) {
       // Default will be to create new term in "tags".
       $term = array(
         'tid' => 'autocreate',
         'vid' => $blog_tags_vocab->vid,
-        'name' => $original_term->name,
+        'name' => $tname,
         'vocabulary_machine_name' => 'tags',
       );
 
       // See if the enforced tag exists in "tags" vocab.
-      if ($terms_exist = taxonomy_term_load_multiple(array(), array('name' => $original_term->name, 'vid' => $blog_tags_vocab->vid))) {
+      if ($terms_exist = taxonomy_term_load_multiple(array(), array('name' => $tname, 'vid' => $blog_tags_vocab->vid))) {
         $term = (array) array_pop($terms_exist);
       }
 
@@ -107,27 +104,27 @@ function linux_blog_metadata_form_blog_node_form_validate($form, &$form_state) {
 
 /**
  * Get the term id & name of user tags to match.
+ *
+ * @param $match_suggestions array
+ *  Array of term names to match against ie. array('Linux Foundation', 'tag2', 'tag3');
  * 
  * @returns array
- *  values which if matched should be pre-filled into the
- *  'field_tags' field ie. array('tid' => TERMID, 'name' => TERM_NAME)
+ *  contains allowed 
  *
  * @Future proofing - could be expanded to other "tags"
  */
-function linux_blog_metadata_user_tags_matches() {
-  // Get the $tids of any terms in LIKE "Linux Foundation".
-  $query = db_select('taxonomy_term_data', 't')
-  ->fields('t', array('tid'))
-  ->fields('t', array('name'))
-  ->condition('t.name', db_like('Linux Foundation'), 'LIKE');
-  $results = $query->execute()->fetchAllKeyed();
-  return $results;
+function linux_blog_metadata_allowed_default_tags($match_suggestions) {
+  $allowed_default_tags = array('Linux Foundation', 'Community');
+  
+  return array_intersect($allowed_default_tags, $match_suggestions);
 }
 
 /**
  * See if user tags match "Linux Foundation" or other tags.
  * 
- * Looks if a give $account user tags match the matches
+ * Looks at 2 things:
+ * 1. If user is DRUPAL_AUTHENTICATED_RID with no additional roles
+ * 2. if a give $account user tags match the matches
  * in linux_blog_metadata_user_tags_matches()
  *
  * @para object $account
@@ -137,26 +134,33 @@ function linux_blog_metadata_user_tags_matches() {
  *   array of matches if matches or FALSE if no matches
  */
 function linux_blog_metadata_tag_match($account = NULL) {
+  $match_suggestions = array();
+  
   if (empty($account)) {
     global $user;
     $account = user_load($user->uid);
   }
 
+  // If user only has 1 role & its DRUPAL_AUTHENTICATED_RID, assume "Community" member
+  if (!empty($account->roles) && count($account->roles) == 1 && !empty($account->roles[DRUPAL_AUTHENTICATED_RID])) {
+    $match_suggestions[] = 'Community';
+  }
+
   // Get user_tags, use Entity API since blog feature is dependent.
   $account_wrapper = entity_metadata_wrapper('user', $account);
   $user_tags = $account_wrapper->field_linux_user_tags->value();
-  if (empty($user_tags)) {
-    return FALSE;
-  }
-
-  // Get tids like "Linux Foundation" and match their tid.
-  $match = linux_blog_metadata_user_tags_matches();
-  $matches = array();
-  foreach ($user_tags as $tag) {
-    if (!empty($match[$tag->tid])) {
-      $matches[$tag->tid] = $match[$tag->tid];
+  if (!empty($user_tags)) {
+    // Add any user tag 'names' to $match_suggestions
+    foreach ($user_tags as $k => $user_tag) {
+      $match_suggestions[] = $user_tag->name;
     }
   }
+  
+  // @todo - an alter call for the $match_suggestions
+  
+  if (!empty($match_suggestions)) {
+    $match_suggestions = linux_blog_metadata_allowed_default_tags($match_suggestions);
+  }
 
-  return $matches;
+  return $match_suggestions;
 }
