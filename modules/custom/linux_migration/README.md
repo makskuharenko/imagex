@@ -13,4 +13,4 @@ The source Joomla database credentials should be entered into the file.
 
 To migrate all content with Drush:
 
-drush migrate-import --all=LinuxUser
+drush migrate-import --group=linux
