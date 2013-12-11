@@ -16,6 +16,7 @@ dependencies[] = views_content
 __drupal_alter_by_ref[][node][landing_page] = landing_page
 __landing_page
 features_exclude[variable][menu_options_landing_page] = menu_options_landing_page
+_exclude[dependencies][flexslider_views] = flexslider_views
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
@@ -63,5 +64,3 @@ features_exclude[variable][node_submitted_landing_page] = node_submitted_landing
 features_exclude[dependencies][views_slideshow] = views_slideshow
 features_exclude[dependencies][entity] = entity
 features_exclude[dependencies][views] = views
-_exclude[dependencies][flexslider_views] = flexslider_views
-features_exclude[dependencies][views_slideshow] = views_slideshow
