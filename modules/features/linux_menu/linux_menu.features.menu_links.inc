@@ -711,11 +711,11 @@ function linux_menu_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
-  // Exported menu link: menu-utility-menu_search:search
-  $menu_links['menu-utility-menu_search:search'] = array(
+  // Exported menu link: menu-utility-menu_search:<nolink>
+  $menu_links['menu-utility-menu_search:<nolink>'] = array(
     'menu_name' => 'menu-utility-menu',
-    'link_path' => 'search',
-    'router_path' => 'search',
+    'link_path' => '<nolink>',
+    'router_path' => '<nolink>',
     'link_title' => 'Search',
     'options' => array(
       'attributes' => array(
@@ -724,7 +724,7 @@ function linux_menu_menu_default_menu_links() {
           1 => 'menu-utility',
         ),
       ),
-      'identifier' => 'menu-utility-menu_search:search',
+      'identifier' => 'menu-utility-menu_search:<nolink>',
     ),
     'module' => 'menu',
     'hidden' => 0,
