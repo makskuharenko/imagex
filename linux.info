@@ -76,6 +76,7 @@ dependencies[] = imagex_workflow_notifications
 dependencies[] = imagex_vocabulary_tags_related_content
 
 ; Linux.com specific components.
+dependencies[] = linux_blog
 dependencies[] = linux_blog_metadata
 dependencies[] = linux_common_fields
 dependencies[] = linux_configuration
@@ -88,6 +89,7 @@ dependencies[] = linux_footer
 dependencies[] = linux_forum
 dependencies[] = linux_foundation_network_header
 dependencies[] = linux_gallery
+dependencies[] = linux_google_analytics
 dependencies[] = linux_header
 dependencies[] = linux_humor
 dependencies[] = linux_humor_panelized
