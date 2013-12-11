@@ -63,7 +63,6 @@ class LinuxQuestionMigration extends LinuxMigration {
   }
 
   public function complete($entity, stdClass $row) {
-    watchdog('mitch', 'calling setredirect');
     $this->setRedirect($entity, $row);
   }
 }
