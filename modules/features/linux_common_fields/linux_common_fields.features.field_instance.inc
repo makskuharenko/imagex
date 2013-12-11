@@ -11,7 +11,7 @@ function linux_common_fields_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-blog-field_section'
-  $field_instances['node-blog-field_section'] = array(
+  $field_instances['node-blog-field_linux_section'] = array(
     'bundle' => 'blog',
     'default_value' => NULL,
     'deleted' => 0,
@@ -32,7 +32,7 @@ function linux_common_fields_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_section',
+    'field_name' => 'field_linux_section',
     'label' => 'Section',
     'required' => 0,
     'settings' => array(
@@ -51,7 +51,7 @@ function linux_common_fields_field_default_field_instances() {
   );
 
   // Exported field_instance: 'node-imagex_news-field_section'
-  $field_instances['node-imagex_news-field_section'] = array(
+  $field_instances['node-imagex_news-field_linux_section'] = array(
     'bundle' => 'imagex_news',
     'default_value' => NULL,
     'deleted' => 0,
@@ -72,7 +72,7 @@ function linux_common_fields_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_section',
+    'field_name' => 'field_linux_section',
     'label' => 'Section',
     'required' => 0,
     'settings' => array(
@@ -91,7 +91,7 @@ function linux_common_fields_field_default_field_instances() {
   );
 
   // Exported field_instance: 'node-page-field_section'
-  $field_instances['node-page-field_section'] = array(
+  $field_instances['node-page-field_linux_section'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
@@ -112,7 +112,7 @@ function linux_common_fields_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_section',
+    'field_name' => 'field_linux_section',
     'label' => 'Section',
     'required' => 0,
     'settings' => array(

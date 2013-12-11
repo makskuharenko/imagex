@@ -10,33 +10,13 @@
 function linux_common_fields_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_linux_radioactivity'
-  $field_bases['field_linux_radioactivity'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_linux_radioactivity',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'energy' => array(
-        0 => 'radioactivity_energy',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'radioactivity',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'radioactivity',
-  );
-
   // Exported field_base: 'field_section'
-  $field_bases['field_section'] = array(
+  $field_bases['field_linux_section'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_section',
+    'field_name' => 'field_linux_section',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -58,7 +38,7 @@ function linux_common_fields_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         0 => array(
-          'vocabulary' => 'sections',
+          'vocabulary' => 'linux_sections',
           'parent' => 0,
         ),
       ),
