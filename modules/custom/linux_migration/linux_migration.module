@@ -11,13 +11,13 @@ function linux_migration_migrate_api() {
   $disable_hooks = array(
     'node_insert' => array(
       'creativecommons',
-      'pathauto',
       'nodereference_count',
+      'media',
     ),
     'node_update' => array(
       'creativecommons',
-      'pathauto',
       'nodereference_count',
+      'media',
     ),
   );
   return array(
@@ -30,6 +30,7 @@ function linux_migration_migrate_api() {
     ),
     'field handlers' => array(
       'DateMigrateFieldHandler',
+      'MigrateLinkFieldHandler',
     ),
     'migrations' => array(
       'LinuxUser' => array(

@@ -6,14 +6,14 @@ class LinuxDirectoryReviewMigration extends LinuxMigration {
     $this->dependencies = array('LinuxDirectory');
   }
   protected function setFieldMappings() {
-    //  'vote_helpful',
-    // 'vote_total',
     $this->addFieldMapping('uid', 'user_id')->sourceMigration('LinuxUser');
     $this->addFieldMapping('subject', 'rev_title');
     $this->addFieldMapping('comment_body', 'rev_text')->arguments(array('format' => 'plain_text'));
     $this->addFieldMapping('nid', 'link_id')->sourceMigration('LinuxDirectory');
     $this->addFieldMapping('created', 'rev_date');
     $this->addFieldMapping('status', 'rev_approved');
+    $this->addFieldMapping('field_vote_total', 'vote_total');
+    $this->addFieldMapping('field_vote_helpful', 'vote_helpful');
   }
 
   /**
