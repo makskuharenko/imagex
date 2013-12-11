@@ -91,5 +91,7 @@ function linux_configuration_image_default_styles() {
     ),
   );
 
+  features_alter_code('image', $styles);
+
   return $styles;
 }
