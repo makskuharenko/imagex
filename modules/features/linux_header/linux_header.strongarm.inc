@@ -45,5 +45,7 @@ function linux_header_strongarm() {
   $strongarm->value = 'right';
   $export['nice_menus_type_1'] = $strongarm;
 
+  features_alter_code('variable', $export);
+
   return $export;
 }
