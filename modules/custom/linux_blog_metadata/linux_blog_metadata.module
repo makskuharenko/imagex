@@ -3,7 +3,7 @@
  * @file
  * Simple module which prefills the "Tags" field on blog content
  * if acting user is "tagged" with "Linux Foundation" in the
- * "field_linux_user_tags" field
+ * "field_linux_user_tags" field or is a "community" member
  */
 
 /**
