@@ -73,6 +73,7 @@ dependencies[] = imagex_wiki_permissions
 dependencies[] = imagex_wiki_workflow
 dependencies[] = imagex_workflow_permissions
 dependencies[] = imagex_workflow_notifications
+dependencies[] = imagex_wysiwyg_profiles_codehighlighter
 dependencies[] = imagex_vocabulary_tags_related_content
 
 ; Linux.com specific components.
