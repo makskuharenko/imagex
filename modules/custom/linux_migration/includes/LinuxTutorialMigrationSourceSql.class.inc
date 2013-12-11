@@ -43,6 +43,7 @@ class LinuxTutorialMigrationSourceSql extends ImagexMigrateSourceSql {
     $or->condition('jc.sectionid', 4);
     $or->condition('jc.sectionid', 12);
     $query->condition($or);
+    $query->condition('jc.catid', 173, '<>');
     return $query;
   }
 }
