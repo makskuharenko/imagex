@@ -25,8 +25,8 @@ abstract class LinuxContentMigration extends LinuxMigration {
     $this->addFieldMapping('body', 'full')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('body:summary', 'introtext')->arguments(array('format' => 'filtered_html'));
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser')->defaultValue(1);
-    $this->addFieldMapping('field_section', 'sectionid')->sourceMigration('LinuxSection');
-    $this->addFieldMapping('field_section:source_type')
+    $this->addFieldMapping('field_linux_section', 'sectionid')->sourceMigration('LinuxSection');
+    $this->addFieldMapping('field_linux_section:source_type')
       ->defaultValue('tid');
     $this->addFieldMapping('field_tags', 'catid')->sourceMigration('LinuxCategory');
     $this->addFieldMapping('field_tags:source_type')
@@ -71,15 +71,6 @@ abstract class LinuxContentMigration extends LinuxMigration {
    *   The source database row.
    */
   public function complete($entity, stdClass $row) {
-    // Hard-coded, creativecommons module is buggy.
-    db_insert('creativecommons')
-      ->fields(array(
-        'entity_id' => $entity->nid,
-        'license_uri' => 'http://creativecommons.org/licenses/by-nc-sa/3.0/',
-        'description' => '',
-      ))
-      ->execute();
-
     $this->setRedirect($entity, $row);
   }
 }
