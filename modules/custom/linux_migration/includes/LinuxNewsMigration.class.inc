@@ -73,6 +73,10 @@ class LinuxNewsMigration extends LinuxContentMigration {
       $row->created = time();
     }
 
+    if (strtotime($row->modified) > (time() + 20000000)) {
+      $row->modified = time();
+    }
+
     return TRUE;
   }
 

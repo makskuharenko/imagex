@@ -1279,7 +1279,7 @@ function linux_landing_pages_views_default_views() {
     'workbench_section' => 'workbench_section',
     'media_folders' => 'media_folders',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'tids';
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'empty';
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
   /* Filter criterion: Content: Published */
