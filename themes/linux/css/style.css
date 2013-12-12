@@ -4673,7 +4673,7 @@ a.label:hover, a.badge:hover {
     -o-border-radius: 3px;
     border-radius: 3px;
     background: #f17700;
-    margin: 0 3px 0 0;
+    margin: 0 4px 0 0;
     padding: 2px 5px;
     font-family: "Open Sans Condensed";
     font-size: 12px;
@@ -4832,6 +4832,11 @@ h1 {
   font-size: 48px;
   line-height: 52px;
   text-transform: capitalize; }
+
+a {
+  color: #f17700; }
+  a:hover {
+    color: #bb5c00; }
 
 @media (min-width: 45.5em) {
   small {
@@ -5374,8 +5379,10 @@ h1 {
       background: white; }
       #footer-wrapper .pane-menu-menu-join-us ul li:hover {
         background: #f17700; }
+        #footer-wrapper .pane-menu-menu-join-us ul li:hover a,
         #footer-wrapper .pane-menu-menu-join-us ul li:hover span {
           color: white; }
+      #footer-wrapper .pane-menu-menu-join-us ul li a,
       #footer-wrapper .pane-menu-menu-join-us ul li span {
         color: #555555; }
   @media (min-width: 45.5em) {
@@ -5853,6 +5860,7 @@ h1 {
         background: #e65b04; }
       .pane-menu-menu-join-us ul li span,
       .pane-menu-menu-join-us ul li a {
+        color: white;
         font-size: 17px; }
         .pane-menu-menu-join-us ul li span.addthis-facebook:before,
         .pane-menu-menu-join-us ul li a.addthis-facebook:before {
