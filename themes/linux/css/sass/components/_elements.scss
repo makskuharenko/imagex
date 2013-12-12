@@ -2240,6 +2240,7 @@ small {
   }
 
   .vertical-tabs {
-    float: left;
+    clear: left;
+    background: white;
   }
 }

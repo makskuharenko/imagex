@@ -6481,4 +6481,5 @@ h1 {
 .node-question-form .form-actions {
   margin: 0; }
 .node-question-form .vertical-tabs {
-  float: left; }
+  clear: left;
+  background: white; }
