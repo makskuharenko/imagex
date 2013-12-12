@@ -180,7 +180,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 5,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
   // Exported menu link: menu-primary-menu_books:<front>
   $menu_links['menu-primary-menu_books:<front>'] = array(
@@ -197,7 +197,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 1,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
   // Exported menu link: menu-primary-menu_community-blogs:node/21
   $menu_links['menu-primary-menu_community-blogs:node/21'] = array(
@@ -248,7 +248,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 3,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
   // Exported menu link: menu-primary-menu_contests--polls:node/27
   $menu_links['menu-primary-menu_contests--polls:node/27'] = array(
@@ -299,7 +299,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
   // Exported menu link: menu-primary-menu_forums:forum
   $menu_links['menu-primary-menu_forums:forum'] = array(
@@ -369,18 +369,19 @@ function linux_menu_menu_default_menu_links() {
     'weight' => 1,
     'parent_identifier' => 'menu-primary-menu_linuxcom-community:<front>',
   );
-  // Exported menu link: menu-primary-menu_linux-directory:<front>
-  $menu_links['menu-primary-menu_linux-directory:<front>'] = array(
+  // Exported menu link: menu-primary-menu_linux-directory:directory
+  $menu_links['menu-primary-menu_linux-directory:directory'] = array(
     'menu_name' => 'menu-primary-menu',
-    'link_path' => '<front>',
-    'router_path' => '<front>',
+    'link_path' => 'directory',
+    'router_path' => 'directory',
     'link_title' => 'Linux Directory',
     'options' => array(
-      'identifier' => 'menu-primary-menu_linux-directory:<front>',
+      'identifier' => 'menu-primary-menu_linux-directory:directory',
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
-    'external' => 1,
+    'external' => 0,
     'has_children' => 1,
     'expanded' => 0,
     'weight' => 5,
@@ -416,7 +417,7 @@ function linux_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 2,
+    'weight' => -46,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
   // Exported menu link: menu-primary-menu_linux-humor:node/23
@@ -433,17 +434,18 @@ function linux_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 4,
+    'weight' => -40,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
-  // Exported menu link: menu-primary-menu_linux-job-postings:<front>
-  $menu_links['menu-primary-menu_linux-job-postings:<front>'] = array(
+  // Exported menu link: menu-primary-menu_linux-job-postings:http://jobs.linux.com/
+  $menu_links['menu-primary-menu_linux-job-postings:http://jobs.linux.com/'] = array(
     'menu_name' => 'menu-primary-menu',
-    'link_path' => '<front>',
-    'router_path' => '<front>',
+    'link_path' => 'http://jobs.linux.com/',
+    'router_path' => '',
     'link_title' => 'Linux Job Postings',
     'options' => array(
-      'identifier' => 'menu-primary-menu_linux-job-postings:<front>',
+      'identifier' => 'menu-primary-menu_linux-job-postings:http://jobs.linux.com/',
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -467,7 +469,7 @@ function linux_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
   // Exported menu link: menu-primary-menu_linux-resources:<front>
@@ -486,14 +488,15 @@ function linux_menu_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 4,
   );
-  // Exported menu link: menu-primary-menu_linux-training:<front>
-  $menu_links['menu-primary-menu_linux-training:<front>'] = array(
+  // Exported menu link: menu-primary-menu_linux-training:http://training.linuxfoundation.org/
+  $menu_links['menu-primary-menu_linux-training:http://training.linuxfoundation.org/'] = array(
     'menu_name' => 'menu-primary-menu',
-    'link_path' => '<front>',
-    'router_path' => '<front>',
+    'link_path' => 'http://training.linuxfoundation.org/',
+    'router_path' => '',
     'link_title' => 'Linux Training',
     'options' => array(
-      'identifier' => 'menu-primary-menu_linux-training:<front>',
+      'identifier' => 'menu-primary-menu_linux-training:http://training.linuxfoundation.org/',
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -517,7 +520,7 @@ function linux_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 1,
+    'weight' => -48,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
   // Exported menu link: menu-primary-menu_linux-whitepapers:node/26
@@ -585,7 +588,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 2,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
   // Exported menu link: menu-primary-menu_news--features:<front>
   $menu_links['menu-primary-menu_news--features:<front>'] = array(
@@ -619,23 +622,24 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 4,
-    'parent_identifier' => 'menu-primary-menu_linux-directory:<front>',
+    'parent_identifier' => 'menu-primary-menu_linux-directory:directory',
   );
-  // Exported menu link: menu-primary-menu_photos--videos:node/24
-  $menu_links['menu-primary-menu_photos--videos:node/24'] = array(
+  // Exported menu link: menu-primary-menu_photos:node/24
+  $menu_links['menu-primary-menu_photos:node/24'] = array(
     'menu_name' => 'menu-primary-menu',
     'link_path' => 'node/24',
     'router_path' => 'node/%',
-    'link_title' => 'Photos & Videos',
+    'link_title' => 'Photos',
     'options' => array(
-      'identifier' => 'menu-primary-menu_photos--videos:node/24',
+      'identifier' => 'menu-primary-menu_photos:node/24',
+      'attributes' => array(),
     ),
     'module' => 'menu',
     'hidden' => 0,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 3,
+    'weight' => -44,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
   // Exported menu link: menu-primary-menu_special-feature:node/20
@@ -652,7 +656,25 @@ function linux_menu_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 5,
+    'weight' => -38,
+    'parent_identifier' => 'menu-primary-menu_news--features:<front>',
+  );
+  // Exported menu link: menu-primary-menu_videos:http://video.linux.com/
+  $menu_links['menu-primary-menu_videos:http://video.linux.com/'] = array(
+    'menu_name' => 'menu-primary-menu',
+    'link_path' => 'http://video.linux.com/',
+    'router_path' => '',
+    'link_title' => 'Videos',
+    'options' => array(
+      'attributes' => array(),
+      'identifier' => 'menu-primary-menu_videos:http://video.linux.com/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -42,
     'parent_identifier' => 'menu-primary-menu_news--features:<front>',
   );
   // Exported menu link: menu-primary-menu_what-is-linux:<front>
@@ -751,11 +773,12 @@ function linux_menu_menu_default_menu_links() {
   t('Mobile');
   t('News & Features');
   t('Peripherals');
-  t('Photos & Videos');
+  t('Photos');
   t('Profile');
   t('RSS');
   t('Special Feature');
   t('Twitter');
+  t('Videos');
   t('What is Linux?');
 
   features_alter_code('menu_links', $menu_links);
