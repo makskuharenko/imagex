@@ -2261,14 +2261,20 @@ function linux_landing_pages_uuid_features_default_content() {
             'did' => 7,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
-            'subtype' => 'landing_pages-basic_landing_page',
+            'subtype' => 'imagex_blog-panel_pane_1',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
-              'arguments' => array(
-                'type' => 'blog',
-                'tid' => '',
+              'more_link' => 0,
+              'use_pager' => 1,
+              'pager_id' => 0,
+              'items_per_page' => 15,
+              'exposed' => array(
+                'field_tags_tid_op' => 'not',
+                'field_tags_tid' => 'Linux Foundation',
               ),
+              'override_title' => 0,
+              'override_title_text' => '',
             ),
             'cache' => array(),
             'style' => array(
@@ -5036,13 +5042,24 @@ function linux_landing_pages_uuid_features_default_content() {
             'did' => 15,
             'panel' => 'three_25_50_25_second',
             'type' => 'views_panes',
-            'subtype' => 'landing_pages-basic_landing_page',
+            'subtype' => 'imagex_blog-panel_pane_1',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
-              'arguments' => array(
-                'type' => 'blog',
-                'tid' => '',
+              'more_link' => 0,
+              'use_pager' => 1,
+              'pager_id' => 0,
+              'items_per_page' => 15,
+              'fields_override' => array(
+                'path' => 1,
+                'title' => 1,
+                'field_image' => 1,
+                'created' => 1,
+                'body' => 1,
+              ),
+              'exposed' => array(
+                'field_tags_tid_op' => 'or',
+                'field_tags_tid' => 'Linux Foundation',
               ),
             ),
             'cache' => array(),
