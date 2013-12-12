@@ -30,7 +30,7 @@ class LinuxSectionMigration extends LinuxMigration {
    *   The destination type handler.
    */
   protected function getDestinationObject() {
-    return new MigrateDestinationTerm('sections');
+    return new MigrateDestinationTerm('linux_sections');
   }
   /**
    * Get the Map object.
