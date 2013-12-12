@@ -7,6 +7,7 @@ class LinuxManpageMigration extends LinuxMigration {
     parent::init();
     $migration_settings = imagex_migration_settings();
     $this->sourcePath =  $migration_settings['source']['files']['manpages'];
+    $this->dependencies = array('LinuxUser');
   }
 
   protected function setFieldMappings() {

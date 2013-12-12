@@ -4,6 +4,7 @@ class LinuxQuestionMigration extends LinuxMigration {
   protected function init() {
     parent::init();
     $this->dependencies = array('LinuxUser', 'LinuxQuestionCategory', 'LinuxQuestionTag');
+    error_reporting(E_ALL); // PHP 5.4 error workaround.
   }
 
   protected function setFieldMappings() {

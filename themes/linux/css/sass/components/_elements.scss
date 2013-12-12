@@ -341,6 +341,14 @@ h1 {
   text-transform: capitalize;
 }
 
+a {
+  color: $linuxStdOrange;
+
+  &:hover {
+    color: $linuxDarkestOrange;
+  }
+}
+
 small {
   @include at-breakpoint($computer) {
     width: 60%;
@@ -921,11 +929,13 @@ small {
         &:hover {
           background: $linuxStdOrange;
 
+          a,
           span {
             color: white;
           }
         }
 
+        a,
         span {
           color: $gray;
         }
@@ -1641,6 +1651,8 @@ small {
 
       span,
       a {
+        color: white;
+
         font-size: 17px;
 
         &.addthis-facebook {

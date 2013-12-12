@@ -102,6 +102,12 @@ projects[imagex_content_pinned][download][type] = "git"
 projects[imagex_content_pinned][download][url] = "git@github.com:imagex/imagex_content_pinned.git"
 projects[imagex_content_pinned][download][branch] = "7.x-dev"
 
+projects[imagex_contest][type] = "module"
+projects[imagex_contest][subdir] = "imagex/modules"
+projects[imagex_contest][download][type] = "git"
+projects[imagex_contest][download][url] = "git@github.com:imagex/imagex_contest.git"
+projects[imagex_contest][download][branch] = "7.x-1.x-dev"
+
 projects[imagex_date][type] = "module"
 projects[imagex_date][subdir] = "imagex/modules"
 projects[imagex_date][download][type] = "git"
