@@ -86,6 +86,10 @@ function linux_preprocess_node(&$vars,$hook) {
   if ($vars['view_mode'] == 'sidebar' && !in_array($vars['type'], array('question'))) {
      _linux_shared_sidebar_preprocess($vars);
   }
+
+  if ($vars['view_mode'] == 'teaser') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+  }
 }
 
 function linux_preprocess_comment(&$vars,$hook) {

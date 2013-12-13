@@ -8,6 +8,7 @@ base profile = imagex_installkit
 ; Contrib dependencies.
 dependencies[] = advanced_forum
 ; dependencies[] = creativecommons
+dependencies[] = compact_forms
 dependencies[] = flickr
 dependencies[] = og
 dependencies[] = og_role_field
