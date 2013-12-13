@@ -329,6 +329,9 @@ optgroup {
 
 fieldset{}
 label {display: block; font-weight: bold;}
+.form-radios {
+  label {display: inline-block; font-weight: bold; padding-left: 0.5em;}
+}
 textarea{}
 input{}
 input[type="radio"]     { vertical-align: middle; }
@@ -396,3 +399,23 @@ a:link.fieldset-title, .fieldset-legend{
   }
 }
 
+// Confirmation form style
+// -------------------------------------
+.confirmation {
+  h3 {
+    font-family: $condensedFontFamily;
+  }
+  
+  #edit-cancel {
+    padding-left: 1em; 
+  }
+}
+
+// Views Bulk Operations Form
+// -------------------------------------
+.vbo-views-form {
+  fieldset {
+    padding: 0;
+    margin: 1em 0;
+  }
+}
