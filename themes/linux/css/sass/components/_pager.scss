@@ -1,3 +1,68 @@
+.pager {
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+  li {
+    a,
+    &.current {
+      display: inline-block;
+      margin: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      border: 1px solid $grayLighter;
+      padding: 0;
+      text-align: center;
+      line-height: 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      color: $linuxDarkGray;
+
+      &:hover {
+        background: rgba($grayLighter, 0.5);
+      }
+    }
+
+    &.current {
+      font-weight: 700;
+      color: $linuxStdOrange;
+      background: rgba($grayLighter, 0.3);
+      line-height: 26px;
+
+      &:hover {
+        background: rgba($grayLighter, 0.3);
+      }
+
+      &.last,
+      &.first {
+        visibility: visible !important;
+        margin: 0px !important;
+      }
+    }
+
+    &.next,
+    &.previous,
+    &.first,
+    &.last {
+      visibility: hidden;
+      margin: -9999px;
+
+      @include at-breakpoint($tablet) {
+        visibility: visible;
+        margin: 0;
+      }
+
+      a {
+        width: auto;
+        padding: 0 8px;
+      }
+    }
+  }
+}
+
 //
 // Pagination (multiple pages).
 // --------------------------------------------------
