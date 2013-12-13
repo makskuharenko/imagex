@@ -254,20 +254,26 @@
     li.post-delete,
     li.post-edit,
     li.comment-add,
-    li.flag-imagex_node_like {
+    li.flag-imagex_node_like,
+    li.flag-inappropriate_content_node {
       text-transform: capitalize;
       font-size: 14px;
       font-family: $condensedFontFamily;
       float: none;
+      clear: left;
 
       @include at-breakpoint($tablet) {
         float: right;
+        clear: none;
       }
 
       a {
         color: $gray;
         padding: 0 0 0 20px;
-        margin: 0 0 0 10px;
+
+        @include at-breakpoint($tablet) {
+          margin: 0 0 0 10px;
+        }
 
         &:hover {
           @include opacity(0.5);
@@ -302,6 +308,12 @@
 
       .flag-message {
         display: none !important;
+      }
+    }
+
+    li.flag-inappropriate_content_node {
+      a {
+        background: transparent url('../img/flag-icon.png') no-repeat center left;
       }
     }
   }
@@ -2365,6 +2377,15 @@ small {
     padding: 0 0 20px;
     border-bottom: 1px solid $dropdownDividerTop;
 
+    footer {
+      float: left;
+      width: 100%;
+
+      @include at-breakpoint($tablet) {
+        margin-bottom: 8px;
+      }
+    }
+
     h3 {
       font-family: $monoFontFamily;
       font-weight: 300;
@@ -2410,13 +2431,11 @@ small {
       font-size: 13px;
       font-weight: 700;
       color: $linuxDarkGray;
-      border-bottom: 1px solid $dropdownDividerTop;
 
       @include at-breakpoint($tablet) {
         margin: 0 10px 0 0;
         padding: 0 10px 0 22px;
         float: left;
-        border: none;
       }
     }
 
@@ -2440,6 +2459,11 @@ small {
           background: $linuxStdOrange;
           color: white;
           float: left;
+          margin: 0 0 15px;
+
+          @include at-breakpoint($tablet) {
+            margin: 0;
+          }
 
           &:hover {
             background: $linuxDarkestOrange;
