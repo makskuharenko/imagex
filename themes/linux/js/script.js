@@ -81,9 +81,9 @@
 
   $(window).scroll(function() { //when window is scrolled
     if (eTop - $(window).scrollTop() <= 0) {
-      $('#header-wrapper, #panel-wrapper').addClass('fixed');
+      $('#header-wrapper, #panel-wrapper, #content-wrapper').addClass('fixed');
     } else {
-      $('#header-wrapper, #panel-wrapper').removeClass('fixed');
+      $('#header-wrapper, #panel-wrapper, #content-wrapper').removeClass('fixed');
     }
   });
 
