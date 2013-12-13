@@ -6608,3 +6608,74 @@ a {
       float: left; }
       .view-linux-answers .views-row .links .node-readmore a:hover {
         background: #bb5c00; }
+
+.page-taxonomy .node {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid #e5e5e5; }
+  .page-taxonomy .node h3 {
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 12px 0 0; }
+  .page-taxonomy .node .author {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #333333; }
+    @media (min-width: 35em) {
+      .page-taxonomy .node .author {
+        border-right: 1px solid #e5e5e5;
+        float: left; } }
+  .page-taxonomy .node .date {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-family: "Open Sans Condensed";
+    font-size: 13px;
+    color: #666666; }
+    @media (min-width: 35em) {
+      .page-taxonomy .node .date {
+        border-right: 1px solid #e5e5e5;
+        float: left; } }
+  .page-taxonomy .node .comments {
+    display: block;
+    margin: 0 10px 10px 0;
+    padding: 0 10px 5px 22px;
+    background: transparent url("../img/comment-icon-orange.png") no-repeat left center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #666666;
+    border-bottom: 1px solid #e5e5e5; }
+    @media (min-width: 35em) {
+      .page-taxonomy .node .comments {
+        margin: 0 10px 0 0;
+        padding: 0 10px 0 22px;
+        float: left;
+        border: none; } }
+  .page-taxonomy .node .content {
+    clear: left; }
+  .page-taxonomy .node .links {
+    margin: 0; }
+    .page-taxonomy .node .links .node-readmore a {
+      display: block;
+      width: auto;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 25px;
+      padding: 0 10px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      background: #f17700;
+      color: white;
+      float: left; }
+      .page-taxonomy .node .links .node-readmore a:hover {
+        background: #bb5c00; }
