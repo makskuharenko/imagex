@@ -396,3 +396,23 @@ a:link.fieldset-title, .fieldset-legend{
   }
 }
 
+// Confirmation form style
+// -------------------------------------
+.confirmation {
+  h3 {
+    font-family: $condensedFontFamily;
+  }
+  
+  #edit-cancel {
+    padding-left: 1em; 
+  }
+}
+
+// Views Bulk Operations Form
+// -------------------------------------
+.vbo-views-form {
+  fieldset {
+    padding: 0;
+    margin: 1em 0;
+  }
+}

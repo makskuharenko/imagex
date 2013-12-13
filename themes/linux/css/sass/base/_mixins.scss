@@ -524,3 +524,22 @@
 .input-block-level {
   @include input-block-level;
 }
+
+// Linux Orange Button
+@mixin linuxOrangeButton() {
+  @include border-radius(3px);
+  background: $linuxStdOrange;
+  margin: 0 4px 0 0;
+  padding: 2px 5px;
+  font-family: $condensedFontFamily;
+  font-size: 12px;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  color: white;
+  display: inline-block;
+
+  &:hover {
+    background: $linuxDarkestOrange;
+    color: white;
+  }
+}
