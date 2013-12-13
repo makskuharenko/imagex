@@ -13,6 +13,34 @@ function linux_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_descriptions';
+  $strongarm->value = 1;
+  $export['compact_forms_descriptions'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_field_size';
+  $strongarm->value = '';
+  $export['compact_forms_field_size'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_ids';
+  $strongarm->value = 'question-node-form';
+  $export['compact_forms_ids'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'compact_forms_stars';
+  $strongarm->value = '2';
+  $export['compact_forms_stars'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_uuid_entities';
   $strongarm->value = 1;
   $export['features_admin_show_component_uuid_entities'] = $strongarm;
