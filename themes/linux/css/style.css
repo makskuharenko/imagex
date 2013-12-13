@@ -4277,6 +4277,48 @@ nav.tabs {
   .breadcrumb .active {
     color: #999999; }
 
+.pager {
+  margin: 0;
+  padding: 0;
+  width: auto; }
+  .pager li a, .pager li.current {
+    display: inline-block;
+    margin: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #eeeeee;
+    padding: 0;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    color: #666666; }
+    .pager li a:hover, .pager li.current:hover {
+      background: rgba(238, 238, 238, 0.5); }
+  .pager li.current {
+    font-weight: 700;
+    color: #f17700;
+    background: rgba(238, 238, 238, 0.3);
+    line-height: 26px; }
+    .pager li.current:hover {
+      background: rgba(238, 238, 238, 0.3); }
+    .pager li.current.last, .pager li.current.first {
+      visibility: visible !important;
+      margin: 0px !important; }
+  .pager li.next, .pager li.previous, .pager li.first, .pager li.last {
+    visibility: hidden;
+    margin: -9999px; }
+    @media (min-width: 35em) {
+      .pager li.next, .pager li.previous, .pager li.first, .pager li.last {
+        visibility: visible;
+        margin: 0; } }
+    .pager li.next a, .pager li.previous a, .pager li.first a, .pager li.last a {
+      width: auto;
+      padding: 0 8px; }
+
 .pagination {
   height: 48px;
   margin: 24px 0; }
@@ -6465,7 +6507,12 @@ a {
   -o-border-radius: 4px;
   border-radius: 4px; }
 .node-question-form input[type="submit"] {
-  margin: 0 10px 0 0; }
+  margin: 0 10px 5px 0;
+  width: 100%; }
+  @media (min-width: 35em) {
+    .node-question-form input[type="submit"] {
+      margin: 0 10px 0 0;
+      width: auto; } }
 .node-question-form input.form-autocomplete {
   background-image: none !important; }
 .node-question-form input.throbbing {
@@ -6491,3 +6538,73 @@ a {
 .node-question-form .vertical-tabs {
   clear: left;
   background: white; }
+
+.view-linux-answers .views-row {
+  border-bottom: 1px solid #e5e5e5; }
+  .view-linux-answers .views-row.views-row-odd, .view-linux-answers .views-row.views-row-even {
+    background: white; }
+  .view-linux-answers .views-row h3 {
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px; }
+  .view-linux-answers .views-row .username {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #333333; }
+    @media (min-width: 35em) {
+      .view-linux-answers .views-row .username {
+        border-right: 1px solid #e5e5e5;
+        float: left; } }
+  .view-linux-answers .views-row .date {
+    display: block;
+    margin: 0 10px 0 0;
+    padding: 0 10px 0 0;
+    font-family: "Open Sans Condensed";
+    font-size: 13px;
+    color: #666666; }
+    @media (min-width: 35em) {
+      .view-linux-answers .views-row .date {
+        border-right: 1px solid #e5e5e5;
+        float: left; } }
+  .view-linux-answers .views-row .comments {
+    display: block;
+    margin: 0 10px 10px 0;
+    padding: 0 10px 5px 22px;
+    background: transparent url("../img/comment-icon-orange.png") no-repeat left center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #666666;
+    border-bottom: 1px solid #e5e5e5; }
+    @media (min-width: 35em) {
+      .view-linux-answers .views-row .comments {
+        margin: 0 10px 0 0;
+        padding: 0 10px 0 22px;
+        float: left;
+        border: none; } }
+  .view-linux-answers .views-row .content {
+    clear: left; }
+  .view-linux-answers .views-row .links {
+    margin: 0; }
+    .view-linux-answers .views-row .links .node-readmore a {
+      display: block;
+      width: auto;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 25px;
+      padding: 0 10px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      background: #f17700;
+      color: white;
+      float: left; }
+      .view-linux-answers .views-row .links .node-readmore a:hover {
+        background: #bb5c00; }
