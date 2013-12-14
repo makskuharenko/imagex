@@ -114,6 +114,12 @@ projects[imagex_date][download][type] = "git"
 projects[imagex_date][download][url] = "git@github.com:imagex/imagex_date.git"
 projects[imagex_date][download][branch] = "7.x-dev"
 
+projects[imagex_editorial_desk][type] = "module"
+projects[imagex_editorial_desk][subdir] = "imagex/modules"
+projects[imagex_editorial_desk][download][type] = "git"
+projects[imagex_editorial_desk][download][url] = "git@github.com:imagex/imagex_editorial_desk.git"
+projects[imagex_editorial_desk][download][branch] = "7.x-1.x-dev"
+
 projects[imagex_events][type] = "module"
 projects[imagex_events][subdir] = "imagex/modules"
 projects[imagex_events][download][type] = "git"
