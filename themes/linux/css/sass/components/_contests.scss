@@ -1,0 +1,120 @@
+// -----------------------------------------
+// Any contest specific style not covered by
+// general styles
+//
+// Use !important to prevent need to nesting
+// @see: _elements.scss
+// -----------------------------------------
+
+// Common to Contest & Contest Entry nodes
+// -----------------------------------------
+a.imagex-contest-add-entry,
+a.imagex-contest-voting-add-vote,
+a.imagex-contest-contest-entry-admin {
+  @include linuxOrangeButton();
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  padding: 4px 12px;
+  display: block;
+  text-align: center;
+}
+
+.imagex_contest_add_entry_noaccess,
+.imagex_contest_voting_add_vote{
+  display: block !important;
+}
+.imagex_contest_add_entry_noaccess {
+  font-weight: 700;
+  margin: 1em 0 0 10px !important;
+}
+
+.node-type-contest,
+.node-type-contest-entry {
+  .field-type-text-with-summary {
+    @include clearfix;
+    clear: left;
+    padding-top: 1em;
+  }
+  .field-type-taxonomy-term-reference {
+    display: none;
+  }
+}
+
+// List of entries
+// -------------------
+.view-imagex-contest-entries {
+  .views-row {
+    @include clearfix;
+    
+    .views-field-title {
+      font-size: 1.1em !important;
+      
+      a,
+      span {
+        font-size: inherit !important;
+      }
+    }
+    .views-field-name,
+    .views-field-value {
+      display: inline-block;
+      font-family: $condensedFontFamily;
+    }    
+  }
+}
+.contest-finalists,
+.contest-winners {
+  margin-top: 2em;
+  
+  .pane-title {
+    margin-bottom: 0;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding-left: 1em;
+  }
+}
+
+// Contest entry nodes
+// -----------------------------------------
+.contest-entry-status {
+  font-weight: 400 !important;
+  color: $linuxLightOrange;
+  
+  &.contest-winner {
+    color: $linuxStdOrange;
+    font-weight: 700 !important;
+  }
+}
+
+// Vote Now form
+// -----------------------------------------
+.view-imagex-contest-entry-voting {
+  // Step 1
+  fieldset {
+    padding: 0;
+    margin: 0 0 1em 0;
+  }
+  .views-field-views-bulk-operations {
+    float: left;
+    padding: 0.5em 2em 0.5em 0;
+    
+    radio {
+      padding: 10px;
+    }
+  }
+  
+  // Step 2
+}
+
+// @responsive
+// -----------------------------------------
+@include at-breakpoint($tablet) {
+  a.imagex-contest-add-entry,
+  a.imagex-contest-voting-add-vote,
+  a.imagex-contest-contest-entry-admin {
+    float: left;
+  }
+  
+  .imagex_contest_add_entry_noaccess {
+    margin: 0 !important;
+  }  
+}

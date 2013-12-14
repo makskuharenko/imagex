@@ -17,9 +17,11 @@
       display: block;
     }
   }
-
+  
+  .pane-title-page-title,
   .node-title {
-    h1 {
+    h1,
+    h2.pane-title {
       font-family: $monoFontFamily;
       font-weight: 300;
       font-size: 22px;
@@ -27,14 +29,16 @@
     }
 
     @include at-breakpoint($tablet) {
-      h1 {
+      h1,
+      h2.pane-title {
         font-size: 32px;
         line-height: 36px
       }
     }
 
     @include at-breakpoint($computer) {
-      h1 {
+      h1,
+      h2.pane-title {
         font-size: 44px;
         line-height: 48px
       }
@@ -49,10 +53,16 @@
     font-weight: 700;
     text-transform: capitalize;
     font-size: 13px;
+    font-family: $condensedFontFamily;
     border-right: 1px solid $dropdownDividerTop;
     color: $grayDark;
+    
+    a {
+      color: inherit;
+    }
   }
-
+  
+  .node-meta,
   .node-date {
     display: block;
     float: left;
@@ -81,14 +91,30 @@
       }
     }
   }
-
-  .parrot-panels {
+  
+  .node-meta-last {
+    border-right: none;
+      
+    &:after {
+      clear: left;
+    }
+  }  
+  
+  .parrot-panels {    
     #three-25-50-25-middle-wrapper {
       .three-25-50-25-second {
+        .field-type-file,
         .field-type-image {
           img {
             margin: 1em 0 2em;
             border-bottom: 3px solid $linuxStdOrange;
+          }
+        }
+        
+        .field {
+          label {
+            font-family: $condensedFontFamily;
+            font-size: 1.1em;
           }
         }
 
@@ -146,6 +172,8 @@
   }
 
   .link-wrapper {
+    margin-top: 1em;
+    
     ul {
       margin: 0;
       padding: 0;
@@ -478,6 +506,15 @@ small {
         }
       }
     }
+  }
+  
+  // Variations of standard-bean
+  &.standard-bean-full {
+    // use !important to ensure it overrides media queries too
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 

@@ -16,24 +16,41 @@ table {
 // BASELINE STYLES.
 // ---------------
 
-.table {
+table {
   width: 100%;
-  margin-bottom: $baseLineHeight;
+  margin: $baseLineHeight 0;
+  
+  tr.even, tr.odd {
+    background: transparent;
+  }
+  
   // Cells
   th,
   td {
-    padding: 8px;
+    padding: 1.5em;
     line-height: $baseLineHeight;
     text-align: left;
     vertical-align: top;
+    border: none;
     border-top: 1px solid $tableBorder;
+    background: transparent;
   }
   th {
     font-weight: bold;
   }
   // Bottom align for column headings.
-  thead th {
-    vertical-align: bottom;
+  thead {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    border-top: 1px solid $tableBorder;
+    border-bottom: 1px solid $tableBorder;
+    font-family: $condensedFontFamily;
+    
+    th {
+      vertical-align: bottom;
+    }
   }
   // Remove top border from thead by default.
   caption + thead tr:first-child th,
@@ -145,8 +162,10 @@ table {
 // --------------
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds).
-.table-striped {
+table {
   tbody {
+    tr.odd td,
+    tr.odd th,
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {
       background-color: $tableBackgroundAccent;
