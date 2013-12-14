@@ -88,6 +88,7 @@ function linux_preprocess_node(&$vars,$hook) {
   }
 
   if ($vars['view_mode'] == 'teaser') {
+    $vars['theme_hook_suggestions'][] = 'node__teaser';
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
   }
 }

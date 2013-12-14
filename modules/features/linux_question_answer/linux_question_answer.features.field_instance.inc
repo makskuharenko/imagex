@@ -93,7 +93,7 @@ function linux_question_answer_field_default_field_instances() {
         'fallback' => 'page_not_found',
         'node_link' => array(
           'destination' => 'node',
-          'full' => 1,
+          'full' => 0,
           'hover_title' => 'Post a new answer to this question',
           'teaser' => 0,
           'title' => 'Post an Answer',
@@ -112,6 +112,13 @@ function linux_question_answer_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'question_answer_list' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -163,6 +170,12 @@ function linux_question_answer_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'question_answer_list' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -204,6 +217,19 @@ function linux_question_answer_field_default_field_instances() {
         'type' => 'node_reference_default',
         'weight' => 6,
       ),
+      'question_answer_list' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_chosen_answer',
@@ -238,6 +264,12 @@ function linux_question_answer_field_default_field_instances() {
     'description' => 'Would you like to receive notifications by email when users post answers to your question?',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'question_answer_list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -282,6 +314,20 @@ function linux_question_answer_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 4,
       ),
+      'question_answer_list' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 4,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_question_category',
@@ -314,6 +360,12 @@ function linux_question_answer_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'question_answer_list' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -358,6 +410,19 @@ function linux_question_answer_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 5,
       ),
+      'question_answer_list' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_tags',
@@ -390,6 +455,8 @@ function linux_question_answer_field_default_field_instances() {
   t('Question Locked');
   t('Tags');
   t('Would you like to receive notifications by email when users post answers to your question?');
+
+  features_alter_code('field_instance', $field_instances);
 
   return $field_instances;
 }
