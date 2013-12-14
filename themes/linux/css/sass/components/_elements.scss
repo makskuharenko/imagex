@@ -17,7 +17,7 @@
       display: block;
     }
   }
-  
+
   .pane-title-page-title,
   .node-title {
     h1,
@@ -56,12 +56,12 @@
     font-family: $condensedFontFamily;
     border-right: 1px solid $dropdownDividerTop;
     color: $grayDark;
-    
+
     a {
       color: inherit;
     }
   }
-  
+
   .node-meta,
   .node-date {
     display: block;
@@ -91,16 +91,16 @@
       }
     }
   }
-  
+
   .node-meta-last {
     border-right: none;
-      
+
     &:after {
       clear: left;
     }
-  }  
-  
-  .parrot-panels {    
+  }
+
+  .parrot-panels {
     #three-25-50-25-middle-wrapper {
       .three-25-50-25-second {
         .field-type-file,
@@ -110,7 +110,7 @@
             border-bottom: 3px solid $linuxStdOrange;
           }
         }
-        
+
         .field {
           label {
             font-family: $condensedFontFamily;
@@ -173,7 +173,7 @@
 
   .link-wrapper {
     margin-top: 1em;
-    
+
     ul {
       margin: 0;
       padding: 0;
@@ -507,7 +507,7 @@ small {
       }
     }
   }
-  
+
   // Variations of standard-bean
   &.standard-bean-full {
     // use !important to ensure it overrides media queries too
@@ -633,11 +633,15 @@ small {
     &.fixed {
       position: fixed;
       z-index: 999;
-      top: -140px;
+      top: 0px;
       width: 100%;
       border-bottom: 1px solid $dropdownDividerTop;
       background: rgba(255,255,255,0.95);
       padding: 0;
+
+      .ad-space {
+        display: none;
+      }
 
       #block-panels-mini-global-header {
         border: 0;
@@ -879,7 +883,7 @@ small {
 
   @include at-breakpoint($wide) {
     &.fixed {
-      padding-top: 205px;
+      padding-top: 190px;
     }
   }
 }

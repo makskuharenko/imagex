@@ -5155,11 +5155,13 @@ a {
     #header-wrapper.fixed {
       position: fixed;
       z-index: 999;
-      top: -140px;
+      top: 0px;
       width: 100%;
       border-bottom: 1px solid #e5e5e5;
       background: rgba(255, 255, 255, 0.95);
       padding: 0; }
+      #header-wrapper.fixed .ad-space {
+        display: none; }
       #header-wrapper.fixed #block-panels-mini-global-header {
         border: 0;
         height: 48px; } }
@@ -5427,7 +5429,7 @@ a {
   @media (min-width: 62.125em) {
     #content-wrapper.fixed,
     #panel-wrapper.fixed {
-      padding-top: 205px; } }
+      padding-top: 190px; } }
 
 #footer-wrapper {
   margin: 0;
