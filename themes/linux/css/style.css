@@ -2440,7 +2440,7 @@ input[type="button"] {
   vertical-align: top;
   width: auto;
   margin: 0;
-  background: #f17700;
+  background-color: #f17700;
   border: none;
   color: white;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2455,7 +2455,7 @@ input[type="button"] {
   input[type="reset"]:hover,
   input[type="submit"]:hover,
   input[type="button"]:hover {
-    background: #e65b04;
+    background-color: #e65b04;
     text-decoration: none; }
   button:active,
   a.button:active,
@@ -2633,7 +2633,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -2687,7 +2687,8 @@ label {
   display: block;
   font-weight: bold; }
 
-.form-radios label {
+.form-radios label,
+.field-widget-options-onoff label {
   display: inline-block;
   font-weight: bold;
   padding-left: 0.5em; }
@@ -2768,6 +2769,9 @@ a:link.fieldset-title, .fieldset-legend{
 .vbo-views-form fieldset {
   padding: 0;
   margin: 1em 0; }
+
+.views-exposed-form .views-exposed-widget input[type="submit"] {
+  margin-top: 2em; }
 
 table {
   max-width: 100%;
@@ -2929,6 +2933,33 @@ Drupal Tables
 
 .table-order-desc {
   background: transparent url(/misc/arrow-desc.png) no-repeat center top; }
+
+.calendar-calendar .month-view table {
+  margin: 24px 0; }
+.calendar-calendar .month-view td.past .inner {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3; }
+.calendar-calendar .month-view .today {
+  border-color: #f17700 !important; }
+.calendar-calendar .month-view .full td {
+  padding: 0; }
+.calendar-calendar .month-view .full .day,
+.calendar-calendar .month-view .full .days,
+.calendar-calendar .month-view .full .week {
+  font-family: "Open Sans Condensed";
+  padding: 0.5em; }
+.calendar-calendar .month-view .full .day {
+  padding: 0.2em 0.5em; }
+.calendar-calendar .month-view .full td.single-day div.monthview {
+  padding: 8px;
+  margin: 1px;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  line-height: 1.4;
+  font-size: 11px; }
+  .calendar-calendar .month-view .full td.single-day div.monthview .views-field-title {
+    font-size: 12px;
+    margin-bottom: 4px; }
 
 img {
   max-width: 100%;
@@ -4466,6 +4497,31 @@ nav.tabs {
   color: #999999;
   background-color: #fff;
   cursor: default; }
+
+.date-nav-wrapper {
+  margin: 1em 0; }
+  .date-nav-wrapper .date-nav {
+    padding-bottom: 0; }
+  .date-nav-wrapper .date-heading,
+  .date-nav-wrapper .pager {
+    text-align: left; }
+    .date-nav-wrapper .date-heading h3,
+    .date-nav-wrapper .pager h3 {
+      font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace; }
+  .date-nav-wrapper .pager {
+    margin: 0.5em 0 0 0; }
+    .date-nav-wrapper .pager li,
+    .date-nav-wrapper .pager li.current {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      display: inline-block; }
+      .date-nav-wrapper .pager li a,
+      .date-nav-wrapper .pager li.current a {
+        width: auto;
+        height: auto;
+        padding: 0.2em 1.4em;
+        margin: 0; }
 
 .label,
 .badge {
@@ -6857,3 +6913,71 @@ a.imagex-contest-contest-entry-admin {
 
   .imagex_contest_add_entry_noaccess {
     margin: 0 !important; } }
+.date-nav-wrapper .date-heading h3,
+.date-nav-wrapper .pager h3 {
+  font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px; }
+
+.path-admin-structure-entity-type-assignment-assignment-add form {
+  margin: 1em 0; }
+.path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node label {
+  display: inline-block; }
+.path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node input[type="text"] {
+  display: block; }
+.path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-add, .path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-edit {
+  float: none;
+  display: inline-block;
+  margin-left: 5px; }
+  .path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-add input[type="submit"]:hover, .path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-add input[type="submit"]:active, .path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-edit input[type="submit"]:hover, .path-admin-structure-entity-type-assignment-assignment-add .field-name-field-assignment-content-node .entityconnect-edit input[type="submit"]:active {
+    background-color: transparent; }
+
+.page-admin-entityconnect .page {
+  margin: 1em 0; }
+
+.entity-assignment label {
+  font-size: 1.2em;
+  font-family: "Open Sans Condensed"; }
+.entity-assignment .field {
+  margin-bottom: 1.4em; }
+.entity-assignment h1 {
+  display: none; }
+
+.page-user-assignments .standard-bean h2.pane-title {
+  margin-bottom: 5px; }
+.page-user-assignments .view-imagex-editorial-desk .views-field-title {
+  font-weight: bold;
+  font-size: 15px !important;
+  font-family: "Open Sans Condensed"; }
+  .page-user-assignments .view-imagex-editorial-desk .views-field-title .field-content,
+  .page-user-assignments .view-imagex-editorial-desk .views-field-title a {
+    font-weight: inherit;
+    font-size: inherit; }
+.page-user-assignments .view-imagex-editorial-desk .views-field-field-assignment-status,
+.page-user-assignments .view-imagex-editorial-desk .views-field-field-assignment-deadline {
+  font-size: 13px; }
+
+@media (min-width: 35em) {
+  .date-nav-wrapper .date-heading h3 {
+    font-size: 32px;
+    line-height: 36px; }
+
+  .entity-assignment {
+    overflow: hidden; }
+    .entity-assignment .field-type-text-long {
+      float: left;
+      margin-right: 2.5641%;
+      width: 66.10169%;
+      float: left;
+      margin-right: 1.69492%; }
+    .entity-assignment .field-type-datetime,
+    .entity-assignment .field-type-list-text,
+    .entity-assignment .field-type-entityreference {
+      width: 32.20339%;
+      float: right;
+      margin-right: 0; } }
+@media (min-width: 45.5em) {
+  .date-nav-wrapper .date-heading h3 {
+    font-size: 44px;
+    line-height: 48px; } }
