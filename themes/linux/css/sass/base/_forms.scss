@@ -95,7 +95,7 @@ input[type="button"] {
   margin: 0;
 
   // new
-  background: $linuxStdOrange;
+  background-color: $linuxStdOrange;
   border: none;
   color: white;
   font-family: $baseFontFamily;
@@ -106,7 +106,7 @@ input[type="button"] {
   // new
 
   &:hover {
-    background: $linuxDarkOrange;
+    background-color: $linuxDarkOrange;
     text-decoration: none;
   }
   &:active {
@@ -329,7 +329,8 @@ optgroup {
 
 fieldset{}
 label {display: block; font-weight: bold;}
-.form-radios {
+.form-radios,
+.field-widget-options-onoff {
   label {display: inline-block; font-weight: bold; padding-left: 0.5em;}
 }
 textarea{}
@@ -418,4 +419,10 @@ a:link.fieldset-title, .fieldset-legend{
     padding: 0;
     margin: 1em 0;
   }
+}
+
+// Views Exposed Filters
+// -------------------------------------
+.views-exposed-form .views-exposed-widget input[type="submit"] {
+  margin-top: 2em;
 }

@@ -1,0 +1,137 @@
+// -----------------------------------------
+// Any contest specific style not covered by
+// general styles
+//
+// Use !important to prevent need to nesting
+// @see: _elements.scss
+// -----------------------------------------
+
+// Editorial Calendar view
+// admin/content/editorial-desk
+// Administrators get admin theme
+// -----------------------------------------
+.date-nav-wrapper {
+  .date-heading,
+  .pager {
+    h3 {
+      // Make date look like page title
+      font-family: $monoFontFamily;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}
+
+
+// Add/edit assignment form
+// -----------------------------------------
+.path-admin-structure-entity-type-assignment-assignment-add {
+  form {
+    margin: 1em 0;
+  }
+  
+  .field-name-field-assignment-content-node {
+    label {
+      display: inline-block;
+    }
+    
+    input[type="text"] {
+      display: block;
+    }
+    
+    .entityconnect-add, .entityconnect-edit {
+      float: none;
+      display: inline-block;
+      margin-left: 5px;
+      
+      input[type="submit"] {      
+        &:hover,
+        &:active {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.page-admin-entityconnect {
+  .page {
+    margin: 1em 0;
+  }
+}
+
+// Single Assignment View
+// entity suggestions don't work correctly
+// so basic CSS instead
+// -----------------------------------------
+.entity-assignment {
+  label {
+    font-size: 1.2em;
+    font-family: $condensedFontFamily;
+  }
+  .field {
+    margin-bottom: 1.4em;
+  }
+  
+  h1 {
+    display: none;
+  }
+}
+
+// My Assignments list
+// -----------------------------------------
+.page-user-assignments {
+  .standard-bean h2.pane-title {
+    margin-bottom: 5px;
+  }
+  .view-imagex-editorial-desk {
+    .views-field-title {
+      font-weight: bold;
+      font-size: 15px !important;
+      font-family: $condensedFontFamily;
+      
+      .field-content,
+      a {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+    }
+    .views-field-field-assignment-status,
+    .views-field-field-assignment-deadline {
+      font-size: 13px;
+    }
+  }
+}
+
+// @responsive
+// -----------------------------------------
+@include at-breakpoint($tablet) {
+  .date-nav-wrapper .date-heading h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  
+  // ECK doesn't work with panels yet
+  // so do some layout CSS
+  .entity-assignment {
+    @include clearfix;
+    
+    .field-type-text-long {
+      @include remove-omega;
+      @include span-columns(8, 12);
+    }
+    .field-type-datetime,
+    .field-type-list-text,
+    .field-type-entityreference {
+      @include span-columns(4 omega, 12);
+    }
+  }
+}
+
+@include at-breakpoint($computer) {
+  .date-nav-wrapper .date-heading h3 {
+    font-size: 44px;
+    line-height: 48px;
+  } 
+}

@@ -169,3 +169,41 @@
   background-color: #fff;
   cursor: default;
 }
+
+// Date pager (calendar.module)
+// -----------------------------------------
+.date-nav-wrapper {
+  margin: 1em 0;
+  
+  .date-nav {
+    padding-bottom: 0;
+  }
+  
+  .date-heading,
+  .pager {
+    text-align: left;
+    
+    h3 {
+      font-family: $monoFontFamily;
+    }
+  }
+  
+  .pager {
+    margin: 0.5em 0 0 0;
+
+    li,
+    li.current {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      
+      a {
+        width: auto;
+        height: auto;
+        padding: 0.2em 1.4em;
+        margin: 0;
+      }
+    }
+  }
+}
