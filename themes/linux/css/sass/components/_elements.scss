@@ -4,6 +4,12 @@
 // Standard elements and node/comment styles
 // -----------------------------------------
 
+div.messages {
+  width: 100%;
+  float: left;
+  margin: 20px 0;
+}
+
 .not-front {
   #header-wrapper {
     padding: 0;
@@ -119,18 +125,18 @@
         }
 
         .three-25-50-25-third {
-          @include at-breakpoint($tablet) {
+          @include at-breakpoint($computer) {
             @include span-columns(6 omega, 6);
           }
 
           .standard-bean {
-            @include at-breakpoint($tablet) {
+            @include at-breakpoint($computer) {
               @include span-columns(3, 6);
             }
           }
 
           .standard-bean:last-child {
-            @include at-breakpoint($tablet) {
+            @include at-breakpoint($computer) {
               @include span-columns(3 omega, 6);
               clear: none;
             }
@@ -359,7 +365,7 @@
 // --------------------------------------------------------------
 
 #block-workbench-block {
-  padding: 1.5em;
+  padding: 0 1.5em 1.5em;
 
   @include at-breakpoint($wide) {
     max-width: 88.5em;
@@ -396,15 +402,24 @@ small {
 
 .standard-bean {
   clear: left;
-  padding: 0 0 2em;
   position: relative;
+
+  &.custom-expand {
+    padding: 0 0 2em;
+  }
 
   > div {
     padding: 0 0 1px;
+    display: none;
+
+    @include at-breakpoint($computer) {
+      display: block;
+      padding: 0 0 2em;
+    }
   }
 
   h2 {
-    margin: 0;
+    margin: 0 0 1px;
     padding: 0 0 0 1.5em;
     font-size: 13px;
     font-weight: 700;
@@ -414,11 +429,19 @@ small {
     border-bottom: 1px solid $btnBorder;
     background: $btnBorder url('../img/block-arrow-white.png') no-repeat center right 1.5em;
     color: white;
+    cursor: pointer;
 
     &.expanded {
       color: $linuxDarkGray;
       background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
       border-color: $dropdownDividerTop;
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    h2 {
+      margin: 0;
+      cursor: auto;
     }
   }
 
@@ -1377,6 +1400,10 @@ small {
 .editorial {
   position: relative;
 
+  > div {
+    display: block;
+  }
+
   h2 {
     border-bottom: 0;
     font-weight: 300;
@@ -1386,6 +1413,8 @@ small {
     background: transparent none no-repeat 0 0;
     color: $linuxDarkGray;
     border-top: 1px solid $dropdownDividerTop;
+    cursor: auto;
+    margin: 2em 0 0;
   }
 
   @include at-breakpoint($computer) {
@@ -1394,6 +1423,7 @@ small {
       font-weight: 700;
       letter-spacing: 0;
       padding: 0;
+      margin: 0;
       border-color: white;
     }
   }
@@ -1447,8 +1477,8 @@ small {
       .views-field-title {
         h3 {
           a {
-          font-size: 26px;
-          line-height: 30px;
+            font-size: 26px;
+            line-height: 30px;
           }
         }
       }
@@ -1635,6 +1665,14 @@ small {
 // ------------------------------------
 
 .recent-events {
+  .view-home-page {
+    display: block !important;
+  }
+
+  h2 {
+    color: $grayDark;
+  }
+
   ul {
     li {
       margin: 0;
@@ -2315,6 +2353,7 @@ small {
   }
 }
 
+.view-landing-pages,
 .view-linux-answers {
   .views-row {
     border-bottom: 1px solid $dropdownDividerTop;

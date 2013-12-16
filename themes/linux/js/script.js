@@ -36,20 +36,23 @@
       breakpoint: 'mobile',
       enter: function() {
         jPM.on();
+        expandBlocks();
         filteredView();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
         jPM.off();
+        expandBlocks();
       }
     },{
       breakpoint: 'tablet',
       enter: function() {
         filteredView();
+        expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
-        // Do Nothing
+        expandBlocks();
       }
     },{
       breakpoint: 'computer',
@@ -132,6 +135,20 @@
       else
         location.after(block);
     }
+  }
+
+  // Expand and Collapsing blocks for standard sidebar block
+  // ----------------------------------------------------------------------------
+
+  function expandBlocks() {
+    $('.standard-bean').on('click', 'h2', function() {
+      var insideDiv = $(this).closest('.standard-bean');
+
+      if (!insideDiv.hasClass('recent-events')) {
+        insideDiv.find('> div').slideToggle();
+        insideDiv.find('> div').toggleClass('custom-expanded');
+      }
+    });
   }
 
 })(jQuery);
