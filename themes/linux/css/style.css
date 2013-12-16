@@ -5147,8 +5147,9 @@ a {
     margin-left: 0 !important;
     margin-right: 0 !important; }
 
-.diagonal-lines h2 {
-  margin: 0; }
+@media (min-width: 45.5em) {
+  .diagonal-lines h2 {
+    margin-bottom: 0; } }
 .diagonal-lines > div,
 .diagonal-lines > form {
   padding: 2em;

@@ -37,7 +37,6 @@
       enter: function() {
         jPM.on();
         expandBlocks();
-        filteredView();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
@@ -47,7 +46,6 @@
     },{
       breakpoint: 'tablet',
       enter: function() {
-        filteredView();
         expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
@@ -57,7 +55,6 @@
     },{
       breakpoint: 'computer',
       enter: function() {
-        filteredView();
         moveBlocks($('.three-25-50-25-third .pane-menu-menu-join-us'), $('.three-25-50-25-first .standard-bean:first-child'), true);
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
@@ -67,7 +64,6 @@
     },{
       breakpoint: 'wide',
       enter: function() {
-        filteredView();
         moveBlocks($('.three-25-50-25-first .pane-menu-menu-join-us'), $('.three-25-50-25-third .standard-bean:first-child'), true);
         moveBlocks($('.three-25-50-25-third'), $('.three-25-50-25-second'), false);
       },
@@ -99,7 +95,7 @@
 
   // Show and Hide the filter for the most of something block
   // ----------------------------------------------------------------------------
-
+/*
   function filteredView() {
     var filtersMenu, filtersView, currentClass;
 
@@ -124,7 +120,7 @@
       filtersMenu.hide();
     });
   }
-
+*/
   // Moving blocks to appropriate locations based on responsive layout
   // ----------------------------------------------------------------------------
 

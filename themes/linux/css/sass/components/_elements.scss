@@ -543,7 +543,9 @@ small {
 
 .diagonal-lines {
   h2 {
-    margin: 0;
+    @include at-breakpoint($computer) {
+      margin-bottom: 0;
+    }
   }
 
   > div,
