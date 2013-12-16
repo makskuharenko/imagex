@@ -21,6 +21,9 @@ dependencies[] = xbbcode
 dependencies[] = xbbcode_basic
 
 ; ImageX component dependencies
+; dependencies[] = imagex_aggregator
+; dependencies[] = imagex_aggregator_extras
+; dependencies[] = imagex_aggregator_social
 dependencies[] = imagex_answers
 dependencies[] = imagex_answers_pane
 dependencies[] = imagex_answers_permissions
@@ -119,5 +122,6 @@ dependencies[] = linux_user_permissions
 dependencies[] = linux_user_tags
 dependencies[] = linux_vocabularies
 dependencies[] = linux_voting
+dependencies[] = linux_widgets_training
 dependencies[] = linux_whitepapers
 dependencies[] = linux_wiki
