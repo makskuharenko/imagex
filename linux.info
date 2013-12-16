@@ -78,6 +78,7 @@ dependencies[] = imagex_widgets_basic_permissions
 dependencies[] = imagex_wiki
 dependencies[] = imagex_wiki_permissions
 dependencies[] = imagex_wiki_workflow
+dependencies[] = imagex_workflow_access_sections_defaults
 dependencies[] = imagex_workflow_permissions
 dependencies[] = imagex_workflow_notifications
 dependencies[] = imagex_wysiwyg_profiles_codehighlighter
