@@ -66,7 +66,7 @@ function linux_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -127,7 +127,7 @@ function linux_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -176,7 +176,56 @@ function linux_user_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 8,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'user-user-field_linux_github_profile'
+  $field_instances['user-user-field_linux_github_profile'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_linux_github_profile',
+    'label' => 'GitHub Profile',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => 0,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -225,7 +274,7 @@ function linux_user_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -274,7 +323,7 @@ function linux_user_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -417,7 +466,7 @@ function linux_user_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -466,7 +515,7 @@ function linux_user_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -515,7 +564,7 @@ function linux_user_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -525,6 +574,7 @@ function linux_user_field_default_field_instances() {
   t('City');
   t('Country');
   t('FaceBook');
+  t('GitHub Profile');
   t('Google Plus');
   t('LinkedIn');
   t('Name');

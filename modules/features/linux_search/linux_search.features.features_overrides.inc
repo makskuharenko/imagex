@@ -44,9 +44,6 @@ function linux_search_features_override_default_overrides() {
   $overrides["search_api_index.default_node_index.options|fields|author:name"] = array(
     'type' => 'text',
   );
-  $overrides["search_api_index.default_node_index.options|fields|field_radioactivity"] = array(
-    'type' => 'decimal',
-  );
   $overrides["search_api_index.default_node_index.options|fields|search_api_aggregation_1"] = array(
     'type' => 'text',
     'boost' => 0.5,
@@ -55,7 +52,9 @@ function linux_search_features_override_default_overrides() {
     'type' => 'text',
     'boost' => 0.8,
   );
-  $overrides["search_api_index.default_node_index.server"] = 'linux_solr_search_server';
+  // $overrides["search_api_index.default_node_index.server"] = 'database_search_server';
 
- return $overrides;
+  features_alter_code('features_overrides', $overrides);
+
+  return $overrides;
 }
