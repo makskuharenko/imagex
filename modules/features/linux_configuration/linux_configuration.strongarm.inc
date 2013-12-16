@@ -76,6 +76,18 @@ function linux_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'flickr_block_3';
+  $strongarm->value = array(
+    'user_id' => '',
+    'show_n' => 15,
+    'size' => 's',
+    'media' => 'all',
+  );
+  $export['flickr_block_3'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'flickr_cache_duration';
   $strongarm->value = '3600';
   $export['flickr_cache_duration'] = $strongarm;
@@ -98,7 +110,7 @@ function linux_configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flickr_default_userid';
-  $strongarm->value = '';
+  $strongarm->value = 'linux_foundation';
   $export['flickr_default_userid'] = $strongarm;
 
   $strongarm = new stdClass();
