@@ -41,10 +41,12 @@ function linux_landing_pages_node_insert($node) {
       ->condition('options', '%' . db_like($menu_id) . '%', 'LIKE')
       ->fields('m', array('mlid'))
       ->execute()->fetchField();
-    $link = menu_link_load($mlid);
-    $link['link_path'] = 'node/' . $node->nid;
-    menu_link_save($link);
-    menu_cache_clear_all();
+    if (is_numeric($mlid)) {
+      $link = menu_link_load($mlid);
+      $link['link_path'] = 'node/' . $node->nid;
+      menu_link_save($link);
+      menu_cache_clear_all();
+    }
   }
 }
 
@@ -110,25 +112,25 @@ function linux_landing_pages_uuid_to_menu_link() {
     // Home Page
     '1a77a768-bb9c-412a-b9c5-0e1eb0a326ba' => NULL,
     // Tutorials
-    '41eceaf9-1fc8-4a70-9780-24c99540d4c0' => 'menu-primary-menu_linux-tutorials:',
+    '41eceaf9-1fc8-4a70-9780-24c99540d4c0' => 'menu-primary-menu_linux-tutorials',
     // Special Feature
-    '8125d7c5-2083-4a99-a4b7-585ff1dd157a' => 'menu-primary-menu_special-feature:',
+    '8125d7c5-2083-4a99-a4b7-585ff1dd157a' => 'menu-primary-menu_special-feature',
     // Community Blogs
-    '971c81fc-2fd8-4b6e-8b67-4214f23ef1b8' => 'menu-primary-menu_community-blogs:',
+    '971c81fc-2fd8-4b6e-8b67-4214f23ef1b8' => 'menu-primary-menu_community-blogs',
     // News
-    '9c3ac9f6-6eb2-4e3e-8378-be32d3cad171' => 'menu-primary-menu_linux-news:',
+    '9c3ac9f6-6eb2-4e3e-8378-be32d3cad171' => 'menu-primary-menu_linux-news',
     // Linux Humor
-    'b7e3c5e9-26a7-48c2-8c0c-04d1351e0b1f' => 'menu-primary-menu_linux-humor:',
+    'b7e3c5e9-26a7-48c2-8c0c-04d1351e0b1f' => 'menu-primary-menu_linux-humor',
     // Linux Answers
-    'c7c9ea4e-c6c1-4fec-9822-62e2e404d82f' => 'menu-primary-menu_linux-answers:',
+    'c7c9ea4e-c6c1-4fec-9822-62e2e404d82f' => 'menu-primary-menu_linux-answers',
     // Contests & Polls
-    'de271999-04f9-4d83-98bb-6e5e4489cbf6' => 'menu-primary-menu_contests--polls:',
+    'de271999-04f9-4d83-98bb-6e5e4489cbf6' => 'menu-primary-menu_contests--polls',
     // Linux Foundation Blogs
-    'f82c4447-883a-40fa-9777-f55b3293beff' => 'menu-primary-menu_linux-foundation-blogs:',
+    'f82c4447-883a-40fa-9777-f55b3293beff' => 'menu-primary-menu_linux-foundation-blogs',
     // Photos & Videos
     'bc3bb864-590a-4070-a47d-60e6c148f7b9' => 'menu-primary-menu_photos',
     // Events
-    '66c01ed1-2ffd-47a1-8bed-62e19446734f' => 'menu-primary-menu_linux_events',
+    '66c01ed1-2ffd-47a1-8bed-62e19446734f' => 'menu-primary-menu_linux-events',
     // Documentation
     'e920a520-fa3a-4f93-97ff-10b075333ef9' => 'menu-primary-menu_documentation',
     // Man Pages
