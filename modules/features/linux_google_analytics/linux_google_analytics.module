@@ -30,7 +30,7 @@ function linux_google_analytics_chart_alter(&$chart, $chart_id) {
 }
 
 /**
- * Implements hook_views_pre_view().
+ * Implements hook_views_pre_build().
  */
 function linux_google_analytics_views_pre_build(&$view) {
   // google_analytics_reports module allows GA related views run even if no accounts authorised
