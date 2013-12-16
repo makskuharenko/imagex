@@ -1980,6 +1980,16 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 
 .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
   display: none; }
+  @media (min-width: 22.75em) {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+      width: 100%;
+      float: left;
+      margin-right: 1.44928%; } }
+  @media (min-width: 35em) {
+    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+      width: 100%;
+      float: left;
+      margin-right: 1.44928%; } }
   @media (min-width: 45.5em) {
     .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
       width: 34.78261%;
@@ -2007,6 +2017,16 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
       width: 42.02899%;
       float: left;
       margin-right: 1.44928%; } }
+@media (min-width: 22.75em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-third {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
+@media (min-width: 35em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-third {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
 @media (min-width: 45.5em) {
   .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-third {
     width: 63.76812%;
@@ -2633,7 +2653,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -3661,6 +3681,9 @@ nav.tabs {
   display: inline-block;
   width: 100%;
   margin: 0 0 20px; }
+
+.not-front nav.tabs {
+  margin: 20px 0; }
 
 #mini-panel-mobile_main_menu {
   position: relative;
@@ -4713,6 +4736,11 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+div.messages {
+  width: 100%;
+  float: left;
+  margin: 20px 0; }
+
 .not-front #header-wrapper {
   padding: 0;
   margin-bottom: -1px; }
@@ -4789,17 +4817,17 @@ a.label:hover, a.badge:hover {
 .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field label {
   font-family: "Open Sans Condensed";
   font-size: 1.1em; }
-@media (min-width: 35em) {
+@media (min-width: 45.5em) {
   .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .three-25-50-25-third {
     width: 100%;
     float: right;
     margin-right: 0; } }
-@media (min-width: 35em) {
+@media (min-width: 45.5em) {
   .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .three-25-50-25-third .standard-bean {
     width: 48.27586%;
     float: left;
     margin-right: 3.44828%; } }
-@media (min-width: 35em) {
+@media (min-width: 45.5em) {
   .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .three-25-50-25-third .standard-bean:last-child {
     width: 48.27586%;
     float: right;
@@ -4985,7 +5013,7 @@ a.label:hover, a.badge:hover {
     right: 0; } }
 
 #block-workbench-block {
-  padding: 1.5em; }
+  padding: 0 1.5em 1.5em; }
   @media (min-width: 62.125em) {
     #block-workbench-block {
       max-width: 88.5em;
@@ -5011,12 +5039,18 @@ a {
 
 .standard-bean {
   clear: left;
-  padding: 0 0 2em;
   position: relative; }
+  .standard-bean.custom-expand {
+    padding: 0 0 2em; }
   .standard-bean > div {
-    padding: 0 0 1px; }
+    padding: 0 0 1px;
+    display: none; }
+    @media (min-width: 45.5em) {
+      .standard-bean > div {
+        display: block;
+        padding: 0 0 2em; } }
   .standard-bean h2 {
-    margin: 0;
+    margin: 0 0 1px;
     padding: 0 0 0 1.5em;
     font-size: 13px;
     font-weight: 700;
@@ -5025,11 +5059,16 @@ a {
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
     background: #bbbbbb url("../img/block-arrow-white.png") no-repeat center right 1.5em;
-    color: white; }
+    color: white;
+    cursor: pointer; }
     .standard-bean h2.expanded {
       color: #666666;
       background: transparent url("../img/block-arrow-gray.png") no-repeat center right 1.5em;
       border-color: #e5e5e5; }
+  @media (min-width: 45.5em) {
+    .standard-bean h2 {
+      margin: 0;
+      cursor: auto; } }
   @media (min-width: 45.5em) {
     .standard-bean h2 {
       color: #666666;
@@ -5803,6 +5842,8 @@ a {
 
 .editorial {
   position: relative; }
+  .editorial > div {
+    display: block; }
   .editorial h2 {
     border-bottom: 0;
     font-weight: 300;
@@ -5811,13 +5852,16 @@ a {
     padding: 0 20px;
     background: transparent none no-repeat 0 0;
     color: #666666;
-    border-top: 1px solid #e5e5e5; }
+    border-top: 1px solid #e5e5e5;
+    cursor: auto;
+    margin: 2em 0 0; }
   @media (min-width: 45.5em) {
     .editorial h2 {
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0;
       padding: 0;
+      margin: 0;
       border-color: white; } }
   .editorial .editorial-updated {
     display: block;
@@ -5987,6 +6031,10 @@ a {
   color: #333333;
   margin: 0; }
 
+.recent-events .view-home-page {
+  display: block !important; }
+.recent-events h2 {
+  color: #333333; }
 .recent-events ul li {
   margin: 0;
   list-style-type: none; }
@@ -6671,15 +6719,20 @@ a {
   clear: left;
   background: white; }
 
+.view-landing-pages .views-row,
 .view-linux-answers .views-row {
   border-bottom: 1px solid #e5e5e5; }
-  .view-linux-answers .views-row.views-row-odd, .view-linux-answers .views-row.views-row-even {
+  .view-landing-pages .views-row.views-row-odd, .view-landing-pages .views-row.views-row-even,
+  .view-linux-answers .views-row.views-row-odd,
+  .view-linux-answers .views-row.views-row-even {
     background: white; }
+  .view-landing-pages .views-row h3,
   .view-linux-answers .views-row h3 {
     font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
     font-weight: 300;
     font-size: 20px;
     line-height: 24px; }
+  .view-landing-pages .views-row .username,
   .view-linux-answers .views-row .username {
     display: block;
     margin: 0 10px 0 0;
@@ -6689,9 +6742,11 @@ a {
     font-size: 13px;
     color: #333333; }
     @media (min-width: 35em) {
+      .view-landing-pages .views-row .username,
       .view-linux-answers .views-row .username {
         border-right: 1px solid #e5e5e5;
         float: left; } }
+  .view-landing-pages .views-row .date,
   .view-linux-answers .views-row .date {
     display: block;
     margin: 0 10px 0 0;
@@ -6700,9 +6755,11 @@ a {
     font-size: 13px;
     color: #666666; }
     @media (min-width: 35em) {
+      .view-landing-pages .views-row .date,
       .view-linux-answers .views-row .date {
         border-right: 1px solid #e5e5e5;
         float: left; } }
+  .view-landing-pages .views-row .comments,
   .view-linux-answers .views-row .comments {
     display: block;
     margin: 0 10px 10px 0;
@@ -6713,15 +6770,19 @@ a {
     color: #666666;
     border-bottom: 1px solid #e5e5e5; }
     @media (min-width: 35em) {
+      .view-landing-pages .views-row .comments,
       .view-linux-answers .views-row .comments {
         margin: 0 10px 0 0;
         padding: 0 10px 0 22px;
         float: left;
         border: none; } }
+  .view-landing-pages .views-row .content,
   .view-linux-answers .views-row .content {
     clear: left; }
+  .view-landing-pages .views-row .links,
   .view-linux-answers .views-row .links {
     margin: 0; }
+    .view-landing-pages .views-row .links .node-readmore a,
     .view-linux-answers .views-row .links .node-readmore a {
       display: block;
       width: auto;
@@ -6738,6 +6799,7 @@ a {
       background: #f17700;
       color: white;
       float: left; }
+      .view-landing-pages .views-row .links .node-readmore a:hover,
       .view-linux-answers .views-row .links .node-readmore a:hover {
         background: #bb5c00; }
 
