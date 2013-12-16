@@ -17,15 +17,6 @@ function linux_landing_pages_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_ctools_plugin_directory
- */
-function linux_landing_pages_ctools_plugin_directory($owner, $plugin_type) {
-  if ($owner == 'ctools' && $plugin_type == 'content_types') {
-    return 'plugins/' . $plugin_type;
-  }
-}
-
-/**
  * Implements hook_views_api().
  */
 function linux_landing_pages_views_api($module = NULL, $api = NULL) {
@@ -87,4 +78,24 @@ function linux_landing_pages_image_default_styles() {
   features_alter_code('image', $styles);
 
   return $styles;
+}
+
+/**
+ * Implements hook_node_info().
+ */
+function linux_landing_pages_node_info() {
+  $items = array(
+    'webform' => array(
+      'name' => t('Webform'),
+      'base' => 'node_content',
+      'description' => t('Create a new form or questionnaire accessible to users. Submission results and statistics are recorded and accessible to privileged users.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+
+  features_alter_code('node', $items);
+
+  return $items;
 }

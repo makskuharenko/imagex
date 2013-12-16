@@ -1180,7 +1180,6 @@ function linux_landing_pages_views_default_views() {
     'manual_section' => 'manual_section',
     'manual_sub_sections' => 'manual_sub_sections',
     'question_category' => 'question_category',
-    'sections' => 'sections',
     'tags' => 'tags',
     'linux_user_tags' => 'linux_user_tags',
     'wiki_topics' => 'wiki_topics',
