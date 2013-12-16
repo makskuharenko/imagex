@@ -17,6 +17,15 @@ function linux_landing_pages_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_ctools_plugin_directory
+ */
+function linux_landing_pages_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function linux_landing_pages_views_api($module = NULL, $api = NULL) {

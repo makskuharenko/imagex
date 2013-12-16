@@ -137,3 +137,12 @@ function linux_landing_pages_uuid_to_menu_link() {
     'd3ba32f7-4d5b-4564-b6b5-375b0517d6c2' => 'menu-primary-menu_linux-whitepapers'
   );
 }
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ * 
+ * We need to wrap the block contents in a div other wise it just outputs a tags with no wrapper
+ */
+function linux_landing_pages_block_view_flickr_3_alter(&$block, $info) {
+  $block['content'] = '<div class="content pagination-centered">' . $block['content'] . '</div>';
+}
