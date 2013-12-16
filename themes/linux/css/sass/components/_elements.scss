@@ -427,11 +427,11 @@ small {
     text-transform: uppercase;
     border-top: 1px solid $btnBorder;
     border-bottom: 1px solid $btnBorder;
-    background: $btnBorder url('../img/block-arrow-white.png') no-repeat center right 1.5em;
+    background: $btnBorder url('../img/block-arrow-white-down.png') no-repeat center right 1.5em;
     color: white;
     cursor: pointer;
 
-    &.expanded {
+    &.custom-expanded {
       color: $linuxDarkGray;
       background: transparent url('../img/block-arrow-gray.png') no-repeat center right 1.5em;
       border-color: $dropdownDividerTop;

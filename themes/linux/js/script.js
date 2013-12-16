@@ -4,7 +4,7 @@
   // ----------------------------------------------------------------------------
 
   var jPM = $.jPanelMenu({
-    menu: '.three-25-50-25-first',
+    menu: '.recent-events',
     trigger: '.menu-profile'
   });
 
@@ -42,7 +42,7 @@
       },
       exit: function() {
         jPM.off();
-        expandBlocks();
+        clearBlocks();
       }
     },{
       breakpoint: 'tablet',
@@ -52,7 +52,7 @@
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
-        expandBlocks();
+        clearBlocks();
       }
     },{
       breakpoint: 'computer',
@@ -145,10 +145,17 @@
       var insideDiv = $(this).closest('.standard-bean');
 
       if (!insideDiv.hasClass('recent-events')) {
-        insideDiv.find('> div').slideToggle();
-        insideDiv.find('> div').toggleClass('custom-expanded');
+        insideDiv.find('> div.view').slideToggle();
+        insideDiv.find('> div.view').toggleClass('custom-expanded');
+        $(this).toggleClass('custom-expanded');
       }
     });
+  }
+
+  function clearBlocks() {
+    $('.standard-bean').find('> div.view').attr('style', '');
+    $('.standard-bean').off('click', 'h2');
+    $('.standard-bean div.view, .standard-bean h2').removeClass('custom-expanded');
   }
 
 })(jQuery);

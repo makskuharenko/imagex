@@ -5058,10 +5058,10 @@ a {
     text-transform: uppercase;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
-    background: #bbbbbb url("../img/block-arrow-white.png") no-repeat center right 1.5em;
+    background: #bbbbbb url("../img/block-arrow-white-down.png") no-repeat center right 1.5em;
     color: white;
     cursor: pointer; }
-    .standard-bean h2.expanded {
+    .standard-bean h2.custom-expanded {
       color: #666666;
       background: transparent url("../img/block-arrow-gray.png") no-repeat center right 1.5em;
       border-color: #e5e5e5; }
