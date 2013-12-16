@@ -1,0 +1,103 @@
+<?php
+/**
+ * @file
+ */
+
+define('LINUX_WIDGETS_TRAINING_FEED_REFRESH', 3600);
+define('LINUX_WIDGETS_TRAINING_TRAINING_FEED_CACHE', 'linux_training_feed_cache');
+define('LINUX_WIDGETS_TRAINING_TRAINING_FEED_ITEMS_MAX', 3);
+
+function linux_widgets_training_block_info() {
+  $blocks['linux-training-feed'] = array(
+    'info' => t('Linux.com Training Feed'),
+    'cache' => DRUPAL_NO_CACHE,
+    'properties' => array(
+      'administrative' => FALSE,
+    ),
+  );
+  return $blocks;
+}
+
+function linux_widgets_training_theme($existing, $type, $theme, $path) {
+  return array(
+    'linux_training_feed' => array(
+      'variables' => array(
+        'items' => array(),
+      ),
+      'template' => 'linux_training_feed.block'
+    ),
+  );
+}
+
+function linux_widgets_training_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'linux-training-feed':
+      $block['subject'] = t('Training');
+      $feed = _linux_widgets_training_get_training_feed();
+      if (!empty($feed)) {
+        $items = array();
+        $items_count = 0;
+        foreach ($feed as $feed_item) {
+          if (LINUX_WIDGETS_TRAINING_TRAINING_FEED_ITEMS_MAX <= $items_count) {
+            break;
+          }
+
+          $item = array(
+            'title' => check_plain($feed_item['title']),
+            'date' => t('!date_start - !date_end', array(
+              '!date_start' => date('j M', strtotime($feed_item['start_date'])),
+              '!date_end' => date('j M', strtotime($feed_item['end_date'])),
+            )),
+            'location' => check_plain($feed_item['location_name']),
+            'links' => array(),
+            'options' => array('attributes' => array()),
+          );
+
+          if (!empty($feed_item['url'])) {
+            $item['links']['learn-more'] = theme_link(array(
+              'text' => t('Learn More'),
+              'path' => $feed_item['url'],
+              'options' => array('attributes' => array(), 'html' => FALSE),
+            ));
+          }
+          $items[] = $item;
+          ++$items_count;
+        }
+
+        $block['content'] = array(
+          '#theme' => 'linux_training_feed',
+          '#items' => $items,
+        );
+      }
+      else {
+        $block['content'] = t('There is currently no upcoming training.');
+      }
+      break;
+  }
+  return $block;
+}
+
+function _linux_widgets_training_get_training_feed() {
+  $cached = cache_get(LINUX_WIDGETS_TRAINING_TRAINING_FEED_CACHE);
+  if (!empty($cached) && ($cached->created + LINUX_WIDGETS_TRAINING_FEED_REFRESH) > REQUEST_TIME) {
+    return $cached->data;
+  }
+
+  $result = drupal_http_request('http://training.linuxfoundation.org/linux-courses/find-linux-training-courses?format=json');
+  if (!isset($result->error)) {
+    $data = json_decode($result->data, TRUE);
+    cache_set(LINUX_WIDGETS_TRAINING_TRAINING_FEED_CACHE, $data, 'cache', REQUEST_TIME + LINUX_WIDGETS_TRAINING_FEED_REFRESH);
+    return $data;
+  }
+  else {
+    watchdog('linux', t('Error retrieving Linux Training feed. Error: @error'), array(
+      '@error' => $result->error
+    ), WATCHDOG_ERROR);
+
+    if (!empty($cached) && !empty($cached->data)) {
+      return $cached->data;
+    }
+  }
+  return NULL;
+}
