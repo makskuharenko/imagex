@@ -32,16 +32,3 @@ function linux_dashboard_menu_alter(&$items) {
     $items['admin/content/node']['title'] = 'All Content';
   }
 }
-
-/**
- * Implements hook_default_alter().
- *
- * This is a features hook lacking in good docs.
- */
-function linux_dashboard_default_page_manager_pages_alter(&$defaults) {
-  // Since panels are not added to the dashboard by this module we don't want to store them in this feature
-  if (!empty($defaults['linux_dashboard']->default_handlers['page_linux_dashboard_panel_context']->conf['display'])) {
-    $display = $defaults['linux_dashboard']->default_handlers['page_linux_dashboard_panel_context']->conf['display'];
-    $panes = $display->panels;
-  }
-}

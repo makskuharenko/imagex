@@ -28,3 +28,20 @@ function linux_google_analytics_chart_alter(&$chart, $chart_id) {
     }
   }
 }
+
+/**
+ * Implements hook_views_pre_view().
+ */
+function linux_google_analytics_views_pre_build(&$view) {
+  // google_analytics_reports module allows GA related views run even if no accounts authorised
+  // this = errors so add some santity checks
+  if ($view->base_table == 'google_analytics' && function_exists('google_analytics_api_new_gafeed')) {
+    $ga_account = google_analytics_api_new_gafeed();
+    $profile_id = variable_get('google_analytics_reports_profile_id', 0);
+    if (!$ga_account->isAuthenticated() || empty($profile_id)) {
+      // If no account or defined profile then bail out
+      $view->executed = TRUE;
+      $view->built = TRUE;
+    }
+  }
+}
