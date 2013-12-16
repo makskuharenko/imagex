@@ -156,6 +156,12 @@ function linux_google_analytics_views_default_views() {
     4 => 0,
     8 => 0,
   );
+  /* Filter criterion: Visitor Metrics: ga:visitors */
+  $handler->display->display_options['filters']['visitors']['id'] = 'visitors';
+  $handler->display->display_options['filters']['visitors']['table'] = 'google_analytics';
+  $handler->display->display_options['filters']['visitors']['field'] = 'visitors';
+  $handler->display->display_options['filters']['visitors']['operator'] = '>';
+  $handler->display->display_options['filters']['visitors']['value']['value'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -252,6 +258,12 @@ function linux_google_analytics_views_default_views() {
     4 => 0,
     8 => 0,
   );
+  /* Filter criterion: Page Tracking Metrics: ga:pageviews */
+  $handler->display->display_options['filters']['pageviews']['id'] = 'pageviews';
+  $handler->display->display_options['filters']['pageviews']['table'] = 'google_analytics';
+  $handler->display->display_options['filters']['pageviews']['field'] = 'pageviews';
+  $handler->display->display_options['filters']['pageviews']['operator'] = '>';
+  $handler->display->display_options['filters']['pageviews']['value']['value'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;
@@ -332,6 +344,12 @@ function linux_google_analytics_views_default_views() {
   $handler->display->display_options['filters']['referralPath']['field'] = 'referralPath';
   $handler->display->display_options['filters']['referralPath']['operator'] = 'not_regular_expression';
   $handler->display->display_options['filters']['referralPath']['value'] = '(not set)';
+  /* Filter criterion: Session Metrics: ga:visits */
+  $handler->display->display_options['filters']['visits']['id'] = 'visits';
+  $handler->display->display_options['filters']['visits']['table'] = 'google_analytics';
+  $handler->display->display_options['filters']['visits']['field'] = 'visits';
+  $handler->display->display_options['filters']['visits']['operator'] = '>';
+  $handler->display->display_options['filters']['visits']['value']['value'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;
