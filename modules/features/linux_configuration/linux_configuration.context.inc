@@ -62,6 +62,12 @@ function linux_configuration_context_default_contexts() {
           'region' => 'header',
           'weight' => '-8',
         ),
+        'bean-pull-out-menu-button' => array(
+          'module' => 'bean',
+          'delta' => 'pull-out-menu-button',
+          'region' => 'header',
+          'weight' => '-7',
+        ),
         'panels_mini-global_footer' => array(
           'module' => 'panels_mini',
           'delta' => 'global_footer',

@@ -4,8 +4,8 @@
   // ----------------------------------------------------------------------------
 
   var jPM = $.jPanelMenu({
-    menu: '.three-25-50-25-first',
-    trigger: '.menu-profile'
+    menu: '.recent-events',
+    trigger: '.pullout-menu'
   });
 
   var jRes = jRespond([
@@ -37,27 +37,26 @@
       enter: function() {
         jPM.on();
         expandBlocks();
-        filteredView();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
         jPM.off();
-        expandBlocks();
+        clearBlocks();
       }
     },{
       breakpoint: 'tablet',
       enter: function() {
-        filteredView();
+        jPM.on();
         expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
-        expandBlocks();
+        jPM.off();
+        clearBlocks();
       }
     },{
       breakpoint: 'computer',
       enter: function() {
-        filteredView();
         moveBlocks($('.three-25-50-25-third .pane-menu-menu-join-us'), $('.three-25-50-25-first .standard-bean:first-child'), true);
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
@@ -67,7 +66,6 @@
     },{
       breakpoint: 'wide',
       enter: function() {
-        filteredView();
         moveBlocks($('.three-25-50-25-first .pane-menu-menu-join-us'), $('.three-25-50-25-third .standard-bean:first-child'), true);
         moveBlocks($('.three-25-50-25-third'), $('.three-25-50-25-second'), false);
       },
@@ -99,7 +97,7 @@
 
   // Show and Hide the filter for the most of something block
   // ----------------------------------------------------------------------------
-
+/*
   function filteredView() {
     var filtersMenu, filtersView, currentClass;
 
@@ -124,7 +122,7 @@
       filtersMenu.hide();
     });
   }
-
+*/
   // Moving blocks to appropriate locations based on responsive layout
   // ----------------------------------------------------------------------------
 
@@ -145,10 +143,17 @@
       var insideDiv = $(this).closest('.standard-bean');
 
       if (!insideDiv.hasClass('recent-events')) {
-        insideDiv.find('> div').slideToggle();
-        insideDiv.find('> div').toggleClass('custom-expanded');
+        insideDiv.find('> div.view').slideToggle();
+        insideDiv.find('> div.view').toggleClass('custom-expanded');
+        $(this).toggleClass('custom-expanded');
       }
     });
+  }
+
+  function clearBlocks() {
+    $('.standard-bean').find('> div.view').attr('style', '');
+    $('.standard-bean').off('click', 'h2');
+    $('.standard-bean div.view, .standard-bean h2').removeClass('custom-expanded');
   }
 
 })(jQuery);
