@@ -5028,6 +5028,9 @@ span.pullout-menu {
   background: #b7b7b7 url("../img/pullout-icon.png") no-repeat center center;
   cursor: pointer;
   overflow: hidden; }
+  @media (min-width: 45.5em) {
+    span.pullout-menu {
+      display: none; } }
 
 h1 {
   display: inline-block;
@@ -6045,7 +6048,8 @@ a {
 .recent-events .view-home-page {
   display: block !important; }
 .recent-events h2 {
-  color: #333333; }
+  color: #333333;
+  border-color: #e5e5e5; }
 .recent-events ul li {
   margin: 0;
   list-style-type: none; }

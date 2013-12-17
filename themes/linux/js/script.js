@@ -46,10 +46,12 @@
     },{
       breakpoint: 'tablet',
       enter: function() {
+        jPM.on();
         expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
       },
       exit: function() {
+        jPM.off();
         clearBlocks();
       }
     },{

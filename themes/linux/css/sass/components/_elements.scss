@@ -385,6 +385,10 @@ span.pullout-menu {
   background: #B7B7B7 url('../img/pullout-icon.png') no-repeat center center;
   cursor: pointer;
   overflow: hidden;
+
+  @include at-breakpoint($computer) {
+    display: none;
+  }
 }
 
 // Standard styling for headers and text in the main content area
@@ -1687,6 +1691,7 @@ small {
 
   h2 {
     color: $grayDark;
+    border-color: $dropdownDividerTop;
   }
 
   ul {
