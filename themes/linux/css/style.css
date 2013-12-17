@@ -5927,6 +5927,8 @@ a {
       margin: 0 8px 0 0;
       padding: 0 8px 0 0;
       border-right: 1px solid #e5e5e5; }
+      .editorial .views-row .views-field-name span.field-content a {
+        color: #333333; }
     .editorial .views-row .views-field-created span {
       display: block;
       float: left;
@@ -5944,7 +5946,6 @@ a {
     .editorial .views-row .views-field-body,
     .editorial .views-row .field-type-text-with-summary {
       visibility: hidden;
-      position: absolute;
       margin: 25px 0 0;
       height: 0;
       font-size: 12px;
@@ -6029,6 +6030,9 @@ a {
         .editorial .views-row:hover .views-field-created span {
           color: #bb5c00;
           border-right-color: #bb5c00; }
+          .editorial .views-row:hover .views-field-name span a,
+          .editorial .views-row:hover .views-field-created span a {
+            color: #bb5c00; }
         .editorial .views-row:hover .views-field-comment-count,
         .editorial .views-row:hover .views-field-field-image {
           visibility: hidden; }

@@ -1528,6 +1528,10 @@ small {
         margin: 0 8px 0 0;
         padding: 0 8px 0 0;
         border-right: 1px solid $dropdownDividerTop;
+
+        a {
+          color: $grayDark;
+        }
       }
     }
 
@@ -1556,7 +1560,6 @@ small {
     .views-field-body,
     .field-type-text-with-summary {
       visibility: hidden;
-      position: absolute;
       margin: 25px 0 0;
       height: 0;
       font-size: 12px;
@@ -1641,6 +1644,10 @@ small {
           span {
             color: $linuxDarkestOrange;
             border-right-color: $linuxDarkestOrange;
+
+            a {
+              color: $linuxDarkestOrange;
+            }
           }
         }
 
