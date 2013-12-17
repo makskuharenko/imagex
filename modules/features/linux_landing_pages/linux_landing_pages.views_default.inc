@@ -174,7 +174,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-small.png" />';
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-small.png" width="330" height="223" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'small_tile__330x223_',
@@ -230,7 +230,7 @@ function linux_landing_pages_views_default_views() {
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
+  
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_ajax'] = TRUE;
@@ -319,7 +319,7 @@ function linux_landing_pages_views_default_views() {
     6 => 0,
     4 => 0,
   );
-
+  
   /* Display: Left Sidebar */
   $handler = $view->new_display('panel_pane', 'Left Sidebar', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -331,6 +331,18 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'sidebar';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Flags: imagex_node_like counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'like';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'imagex_node_like';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -367,6 +379,13 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['sorts']['created']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['created']['expose']['label'] = 'Most Recent';
+  /* Sort criterion: Content: field_radioactivity (field_radioactivity:radioactivity_energy) */
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['id'] = 'field_radioactivity_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['table'] = 'field_data_field_radioactivity';
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['field'] = 'field_radioactivity_radioactivity_energy';
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['field_radioactivity_radioactivity_energy']['expose']['label'] = 'Most Popular';
   /* Sort criterion: Content: Comment count */
   $handler->display->display_options['sorts']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['sorts']['comment_count']['table'] = 'node_comment_statistics';
@@ -374,6 +393,14 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['sorts']['comment_count']['order'] = 'DESC';
   $handler->display->display_options['sorts']['comment_count']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['comment_count']['expose']['label'] = 'Most Comments';
+  /* Sort criterion: Flags: Flag counter */
+  $handler->display->display_options['sorts']['count']['id'] = 'count';
+  $handler->display->display_options['sorts']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['sorts']['count']['field'] = 'count';
+  $handler->display->display_options['sorts']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['sorts']['count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['count']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['count']['expose']['label'] = 'Most Liked';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Type */
   $handler->display->display_options['arguments']['type']['id'] = 'type';
@@ -409,7 +436,7 @@ function linux_landing_pages_views_default_views() {
       'label' => 'Content: Type',
     ),
   );
-
+  
   /* Display: Latest Answers */
   $handler = $view->new_display('panel_pane', 'Latest Answers', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -474,7 +501,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Latest Forum Posts */
   $handler = $view->new_display('panel_pane', 'Latest Forum Posts', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -556,7 +583,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Latest Comments */
   $handler = $view->new_display('panel_pane', 'Latest Comments', 'panel_pane_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -642,7 +669,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Latest Video */
   $handler = $view->new_display('panel_pane', 'Latest Video', 'panel_pane_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -736,7 +763,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Latest Poll */
   $handler = $view->new_display('panel_pane', 'Latest Poll', 'panel_pane_6');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -828,7 +855,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Featured */
   $handler = $view->new_display('panel_pane', 'Featured', 'panel_pane_7');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -964,7 +991,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 0;
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
-
+  
   /* Display: Editorial Feature */
   $handler = $view->new_display('panel_pane', 'Editorial Feature', 'panel_pane_8');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -1180,7 +1207,6 @@ function linux_landing_pages_views_default_views() {
     'manual_section' => 'manual_section',
     'manual_sub_sections' => 'manual_sub_sections',
     'question_category' => 'question_category',
-    'sections' => 'sections',
     'tags' => 'tags',
     'linux_user_tags' => 'linux_user_tags',
     'wiki_topics' => 'wiki_topics',

@@ -59,14 +59,14 @@ function linux_search_default_search_api_index_alter(&$data) {
       'type' => 'text',
       'boost' => 0.8,
     ); /* WAS: '' */
-    $data['default_node_index']->server = 'linux_solr_search_server'; /* WAS: 'database_search_server' */
+    $data['default_node_index']->server = 'database_search_server'; /* WAS: 'database_search_server' */
   }
 }
 
 /**
  * Implements hook_default_search_api_server().
  */
-function linux_search_default_search_api_server() {
+/* function linux_search_default_search_api_server() {
   $items = array();
   $items['linux_solr_search_server'] = entity_import('search_api_server', '{
     "name" : "Linux Solr Search Server",
@@ -90,4 +90,4 @@ function linux_search_default_search_api_server() {
     "rdf_mapping" : []
   }');
   return $items;
-}
+} */

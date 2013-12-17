@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Linux Question Answer feature.
  */
+
+include_once 'linux_question_answer.features.inc';
