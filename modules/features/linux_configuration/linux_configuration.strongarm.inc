@@ -49,7 +49,7 @@ function linux_configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'features_admin_show_component_uuid_node';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['features_admin_show_component_uuid_node'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -476,25 +476,8 @@ function linux_configuration_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'uuid_features_entity_node';
   $strongarm->value = array(
-    'answer' => 'answer',
-    'blog' => 'blog',
-    'directory' => 'directory',
-    'event' => 'event',
-    'faq_topic' => 'faq_topic',
-    'forum' => 'forum',
-    'gallery' => 'gallery',
-    'group' => 'group',
-    'humor' => 'humor',
     'landing_page' => 'landing_page',
-    'manual' => 'manual',
-    'imagex_news' => 'imagex_news',
     'page' => 'page',
-    'advpoll' => 'advpoll',
-    'question' => 'question',
-    'tutorial' => 'tutorial',
-    'webform' => 'webform',
-    'whitepaper' => 'whitepaper',
-    'wiki' => 'wiki',
   );
   $export['uuid_features_entity_node'] = $strongarm;
 
