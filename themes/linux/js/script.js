@@ -5,7 +5,7 @@
 
   var jPM = $.jPanelMenu({
     menu: '.recent-events',
-    trigger: '.menu-profile'
+    trigger: '.pullout-menu'
   });
 
   var jRes = jRespond([
