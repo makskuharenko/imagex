@@ -1,6 +1,12 @@
 // Temporary
 // -----------------------------------------
 
+.three-25-50-25-second {
+  .filtered-view {
+    display: none;
+  }
+}
+
 // Standard elements and node/comment styles
 // -----------------------------------------
 
@@ -1819,6 +1825,16 @@ small {
       li {
         margin: 12px 0 0 6px;
       }
+    }
+  }
+}
+
+div[role="main"] {
+  .pane-menu-menu-join-us {
+    display: none;
+
+    @include at-breakpoint($computer) {
+      display: block;
     }
   }
 }

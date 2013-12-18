@@ -1978,29 +1978,27 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   text-align: center;
   text-shadow: none; }
 
-.parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-  display: none; }
-  @media (min-width: 22.75em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 100%;
-      float: left;
-      margin-right: 1.44928%; } }
-  @media (min-width: 35em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 100%;
-      float: left;
-      margin-right: 1.44928%; } }
-  @media (min-width: 45.5em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 34.78261%;
-      float: left;
-      margin-right: 1.44928%;
-      display: block; } }
-  @media (min-width: 62.125em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 27.53623%;
-      float: left;
-      margin-right: 1.44928%; } }
+@media (min-width: 22.75em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
+@media (min-width: 35em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
+@media (min-width: 45.5em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 34.78261%;
+    float: left;
+    margin-right: 1.44928%;
+    display: block; } }
+@media (min-width: 62.125em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 27.53623%;
+    float: left;
+    margin-right: 1.44928%; } }
 .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second {
   width: 100%;
   float: right;
@@ -4736,6 +4734,9 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+.three-25-50-25-second .filtered-view {
+  display: none; }
+
 div.messages {
   width: 100%;
   float: left;
@@ -6243,6 +6244,12 @@ a {
     padding: 0 1.5em; }
     .pane-menu-menu-join-us ul li {
       margin: 12px 0 0 6px; } }
+div[role="main"] .pane-menu-menu-join-us {
+  display: none; }
+  @media (min-width: 45.5em) {
+    div[role="main"] .pane-menu-menu-join-us {
+      display: block; } }
+
 .js-leftbar-dropdown {
   width: 100%;
   background-color: #333333;
