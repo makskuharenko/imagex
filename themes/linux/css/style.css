@@ -5215,11 +5215,11 @@ a {
     line-height: 50px;
     font-size: 16px;
     padding-right: 1.5em; }
-  .filtered-view h2.js-leftbar-option-popular {
+  .filtered-view h2.js-leftbar-option-field_radioactivity_radioactivity_energy {
     background-image: url("../img/most-popular-gray.png"); }
   .filtered-view h2.js-leftbar-option-comment_count {
     background-image: url("../img/most-comments-gray.png"); }
-  .filtered-view h2.js-leftbar-option-shared {
+  .filtered-view h2.js-leftbar-option-count {
     background-image: url("../img/most-shared-gray.png"); }
 
 #user-wrapper {
@@ -6268,11 +6268,11 @@ div[role="main"] .pane-menu-menu-join-us {
       color: #666666; }
     .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-created {
       background: transparent url("../img/most-recent-white.png") no-repeat right center; }
-    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-popular {
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background: transparent url("../img/most-popular-white.png") no-repeat right center; }
     .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-comment_count {
       background: transparent url("../img/most-comments-white.png") no-repeat right center; }
-    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-shared {
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-count {
       background: transparent url("../img/most-shared-white.png") no-repeat right center; }
 
 .user-activity {

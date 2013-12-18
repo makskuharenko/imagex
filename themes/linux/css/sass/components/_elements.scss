@@ -611,7 +611,7 @@ small {
       padding-right: 1.5em;
     }
 
-    &.js-leftbar-option-popular {
+    &.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background-image: url('../img/most-popular-gray.png');
     }
 
@@ -619,7 +619,7 @@ small {
       background-image: url('../img/most-comments-gray.png');
     }
 
-    &.js-leftbar-option-shared {
+    &.js-leftbar-option-count {
       background-image: url('../img/most-shared-gray.png');
     }
   }
@@ -1866,7 +1866,7 @@ div[role="main"] {
       background: transparent url('../img/most-recent-white.png') no-repeat right center;
     }
 
-    &.js-leftbar-option-popular {
+    &.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background: transparent url('../img/most-popular-white.png') no-repeat right center;
     }
 
@@ -1874,7 +1874,7 @@ div[role="main"] {
       background: transparent url('../img/most-comments-white.png') no-repeat right center;
     }
 
-    &.js-leftbar-option-shared {
+    &.js-leftbar-option-count {
       background: transparent url('../img/most-shared-white.png') no-repeat right center;
     }
   }
