@@ -376,20 +376,25 @@ div.messages {
 // Pullout Menu Button
 // --------------------------------------------------------------
 
-span.pullout-menu {
-  position: absolute;
-  left: 0;
-  height: 0px;
-  width: 25px;
-  padding: 25px 0 0;
-  background: #B7B7B7 url('../img/pullout-icon.png') no-repeat center center;
-  cursor: pointer;
-  overflow: hidden;
+#block-bean-pull-out-menu-button {
+  display: block;
 
   @include at-breakpoint($computer) {
     display: none;
   }
+
+  span.pullout-menu {
+    position: absolute;
+    left: 0;
+    height: 0px;
+    width: 25px;
+    padding: 25px 0 0;
+    background: #B7B7B7 url('../img/pullout-icon.png') no-repeat center center;
+    cursor: pointer;
+    overflow: hidden;
+  }
 }
+
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
@@ -1081,8 +1086,10 @@ small {
   background-color: white;
 
   &:hover {
-    img {
-      @include opacity(0.3);
+    @include at-breakpoint($computer) {
+      img {
+        @include opacity(0.3);
+      }
     }
   }
 
@@ -1465,7 +1472,7 @@ small {
       border: 0;
       position: absolute;
       right: 0;
-      top: 38px;
+      top: 34px;
     }
   }
 
@@ -1567,6 +1574,8 @@ small {
       letter-spacing: 0.1em;
       line-height: 20px;
       color: white;
+      position: relative;
+      top: 20px;
     }
 
     @include at-breakpoint($computer) {
