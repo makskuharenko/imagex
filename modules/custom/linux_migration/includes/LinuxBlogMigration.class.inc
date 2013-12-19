@@ -64,7 +64,6 @@ class LinuxBlogMigration extends LinuxContentMigration {
     else {
       $row->old_path = 'community/blogs/' . $this->categories[$row->catid] . '/' . $row->id;
     }
-
     return TRUE;
   }
 
@@ -116,6 +115,7 @@ class LinuxBlogMigration extends LinuxContentMigration {
    *   The source database row.
    */
   public function complete($entity, stdClass $row) {
+    //$row->workbench_access = 5;
     parent::complete($entity, $row);
   }
 }

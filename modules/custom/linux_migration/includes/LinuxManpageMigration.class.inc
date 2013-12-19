@@ -16,6 +16,7 @@ class LinuxManpageMigration extends LinuxMigration {
     $this->addFieldMapping('field_manual_section', 'section')->arguments(array('create_term' => TRUE));
     $this->addFieldMapping('status')->defaultValue(1);
     $this->addFieldMapping('uid')->defaultValue(1);
+    $this->addFieldMapping('workbench_access', 'workbench_access');
   }
 
   public function prepareRow($row) {

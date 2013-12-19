@@ -13,6 +13,7 @@ class LinuxAnswerMigration extends LinuxMigration {
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('status', 'published');
     $this->addFieldMapping('field_answer_question', 'question_id')->sourceMigration('LinuxQuestion');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
 
   }
 

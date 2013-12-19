@@ -22,6 +22,7 @@ class LinuxGalleryMigration extends LinuxMigration {
     $this->addFieldMapping('field_gallery_images:title', 'titles')->separator('||');
     $this->addFieldMapping('field_gallery_images:preserve_files')
       ->defaultValue(TRUE);
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
   public function prepareRow($row) {
     if (parent::prepareRow($row) === FALSE) {

@@ -21,6 +21,7 @@ class LinuxWhitepaperMigration extends LinuxMigration {
     $this->addFieldMapping('field_file:source_dir')->defaultValue($this->sourcePath);
     $this->addFieldMapping('field_file:destination_dir')->defaultValue('public://whitepapers');
     $this->addFieldMapping('field_file:destination_file', 'filename');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
 
   }
   public function prepareRow($row) {
