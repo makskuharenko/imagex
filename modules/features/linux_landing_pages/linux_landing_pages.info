@@ -123,6 +123,7 @@ features[uuid_node][] = de271999-04f9-4d83-98bb-6e5e4489cbf6
 features[uuid_node][] = e920a520-fa3a-4f93-97ff-10b075333ef9
 features[uuid_node][] = f82c4447-883a-40fa-9777-f55b3293beff
 features[uuid_node][] = f863771a-9d36-48cd-80fa-2d35552932c1
+features[uuid_node][] = 6229070f-80c1-43e0-9111-7b543187b39d
 features[views_view][] = featured_tiles
 features[views_view][] = home_page
 features[views_view][] = landing_pages
