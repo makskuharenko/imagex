@@ -4772,6 +4772,26 @@ div.messages {
   .not-front .node-title h2.pane-title {
     font-size: 44px;
     line-height: 48px; } }
+.not-front .node-title-teaser {
+  margin: 0 0 5px; }
+  .not-front .node-title-teaser a {
+    color: #333333;
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px; }
+    @media (min-width: 35em) {
+      .not-front .node-title-teaser a {
+        font-size: 26px;
+        line-height: 30px; } }
+    @media (min-width: 45.5em) {
+      .not-front .node-title-teaser a {
+        font-size: 34px;
+        line-height: 36px; } }
+.not-front .node-meta-wrapper {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0 0 10px 0; }
 .not-front .node-author {
   display: block;
   float: left;
@@ -4811,6 +4831,28 @@ div.messages {
   border-right: none; }
   .not-front .node-meta-last:after {
     clear: left; }
+.not-front .node-text-teaser {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  color: #555555; }
+.not-front .node-teaser {
+  margin-bottom: 2em; }
+  .not-front .node-teaser .links {
+    margin: 10px 0 0 0; }
+  .not-front .node-teaser .node-readmore a {
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: #f17700;
+    float: left;
+    font-family: "Open Sans Condensed"; }
+    .not-front .node-teaser .node-readmore a:hover {
+      color: #bb5c00; }
 .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field-type-file img,
 .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field-type-image img {
   margin: 1em 0 2em;
@@ -5059,13 +5101,6 @@ a {
   position: relative; }
   .standard-bean.custom-expand {
     padding: 0 0 2em; }
-  .standard-bean > div {
-    padding: 0 0 1px;
-    display: none; }
-    @media (min-width: 45.5em) {
-      .standard-bean > div {
-        display: block;
-        padding: 0 0 2em; } }
   .standard-bean h2 {
     margin: 0 0 1px;
     padding: 0 0 0 1.5em;
@@ -5145,6 +5180,12 @@ a {
       .standard-bean .views-row.even,
       .standard-bean .views-row.views-row-even {
         background: transparent; } }
+    .standard-bean .linux-training-feed li .node-title h3,
+    .standard-bean .linux-training-feed li .node-title span,
+    .standard-bean .linux-training-feed li .node-title a,
+    .standard-bean .linux-training-feed li .node-body h3,
+    .standard-bean .linux-training-feed li .node-body span,
+    .standard-bean .linux-training-feed li .node-body a,
     .standard-bean .linux-training-feed li .views-field-body h3,
     .standard-bean .linux-training-feed li .views-field-body span,
     .standard-bean .linux-training-feed li .views-field-body a,
@@ -5154,6 +5195,12 @@ a {
     .standard-bean .linux-training-feed li .views-field-comment-body h3,
     .standard-bean .linux-training-feed li .views-field-comment-body span,
     .standard-bean .linux-training-feed li .views-field-comment-body a,
+    .standard-bean .views-row .node-title h3,
+    .standard-bean .views-row .node-title span,
+    .standard-bean .views-row .node-title a,
+    .standard-bean .views-row .node-body h3,
+    .standard-bean .views-row .node-body span,
+    .standard-bean .views-row .node-body a,
     .standard-bean .views-row .views-field-body h3,
     .standard-bean .views-row .views-field-body span,
     .standard-bean .views-row .views-field-body a,
@@ -5168,6 +5215,12 @@ a {
       font-weight: 400;
       line-height: 20px;
       margin: 0; }
+      .standard-bean .linux-training-feed li .node-title h3 a,
+      .standard-bean .linux-training-feed li .node-title span a,
+      .standard-bean .linux-training-feed li .node-title a a,
+      .standard-bean .linux-training-feed li .node-body h3 a,
+      .standard-bean .linux-training-feed li .node-body span a,
+      .standard-bean .linux-training-feed li .node-body a a,
       .standard-bean .linux-training-feed li .views-field-body h3 a,
       .standard-bean .linux-training-feed li .views-field-body span a,
       .standard-bean .linux-training-feed li .views-field-body a a,
@@ -5177,6 +5230,12 @@ a {
       .standard-bean .linux-training-feed li .views-field-comment-body h3 a,
       .standard-bean .linux-training-feed li .views-field-comment-body span a,
       .standard-bean .linux-training-feed li .views-field-comment-body a a,
+      .standard-bean .views-row .node-title h3 a,
+      .standard-bean .views-row .node-title span a,
+      .standard-bean .views-row .node-title a a,
+      .standard-bean .views-row .node-body h3 a,
+      .standard-bean .views-row .node-body span a,
+      .standard-bean .views-row .node-body a a,
       .standard-bean .views-row .views-field-body h3 a,
       .standard-bean .views-row .views-field-body span a,
       .standard-bean .views-row .views-field-body a a,
@@ -5193,6 +5252,17 @@ a {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important; }
+
+.secondary-content .standard-bean > div {
+  padding: 0 0 1px;
+  display: none; }
+  @media (min-width: 45.5em) {
+    .secondary-content .standard-bean > div {
+      display: block;
+      padding: 0 0 2em; } }
+.secondary-content .standard-bean-full > div {
+  display: block !important;
+  padding: 0 0 2em; }
 
 @media (min-width: 45.5em) {
   .diagonal-lines h2 {

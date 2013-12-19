@@ -13,7 +13,7 @@
 <div class="panel-display parrot-panels one-column clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
   <div id="one-wrapper" class="fullwidth">
     <div class="container">
-      <div class="region region-one-main">
+      <div class="region region-one-main primary-content">
         <div class="region-inner clearfix">
           <?php print $content['one_main']; ?>
         </div>
