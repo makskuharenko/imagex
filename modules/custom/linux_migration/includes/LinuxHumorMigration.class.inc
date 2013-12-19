@@ -18,7 +18,7 @@ class LinuxHumorMigration extends LinuxMigration {
     $this->addFieldMapping('field_image', 'filename');
     $this->addFieldMapping('field_image:source_dir')->defaultValue($this->sourcePath);
     $this->addFieldMapping('field_image:destination_dir')->defaultValue('public://humor');
-    $this->addFieldMapping('workbench_access', 'workbench_access');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
 
   }
   public function prepareRow($row) {
