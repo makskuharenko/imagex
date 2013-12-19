@@ -23,6 +23,7 @@ function linux_widgets_training_theme($existing, $type, $theme, $path) {
     'linux_training_feed' => array(
       'variables' => array(
         'items' => array(),
+        'more_link' => NULL,
       ),
       'template' => 'linux_training_feed.block'
     ),
@@ -38,11 +39,17 @@ function linux_widgets_training_block_view($delta = '') {
       if (!empty($feed)) {
         $items = array();
         $items_count = 0;
+        $flip = array(
+          'even' => 'odd',
+          'odd' => 'even',
+        );
+        $class = 'even';
         foreach ($feed as $feed_item) {
           if (LINUX_WIDGETS_TRAINING_TRAINING_FEED_ITEMS_MAX <= $items_count) {
             break;
           }
-
+          
+          $class = $flip[$class];
           $item = array(
             'title' => check_plain($feed_item['title']),
             'date' => t('!date_start - !date_end', array(
@@ -51,15 +58,20 @@ function linux_widgets_training_block_view($delta = '') {
             )),
             'location' => check_plain($feed_item['location_name']),
             'links' => array(),
-            'options' => array('attributes' => array()),
+            'class' => $class,
           );
 
           if (!empty($feed_item['url'])) {
-            $item['links']['learn-more'] = theme_link(array(
+            $item['links']['learn-more'] = theme('link', array(
               'text' => t('Learn More'),
               'path' => $feed_item['url'],
               'options' => array('attributes' => array(), 'html' => FALSE),
             ));
+            $item['title'] = theme('link', array(
+              'text' => $item['title'],
+              'path' => $feed_item['url'],
+              'options' => array('attributes' => array(), 'html' => FALSE),
+            ));            
           }
           $items[] = $item;
           ++$items_count;
@@ -68,6 +80,7 @@ function linux_widgets_training_block_view($delta = '') {
         $block['content'] = array(
           '#theme' => 'linux_training_feed',
           '#items' => $items,
+          '#more_link' => l(t('See All'), 'http://training.linuxfoundation.org', array('attributes' => array('title' => t('See All')))),
         );
       }
       else {
