@@ -6963,6 +6963,10 @@ div[role="main"] .pane-menu-menu-join-us {
     font-weight: 700;
     letter-spacing: 1px; }
 
+.page-404-not-found .page,
+.page-403-forbidden .page {
+  padding-bottom: 2em; }
+
 a.imagex-contest-add-entry,
 a.imagex-contest-voting-add-vote,
 a.imagex-contest-contest-entry-admin {

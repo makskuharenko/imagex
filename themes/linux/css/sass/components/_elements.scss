@@ -2648,3 +2648,12 @@ div[role="main"] {
     letter-spacing: 1px;
   }
 }
+
+// 404 & 403 error pages
+// ------------------------------------
+.page-404-not-found,
+.page-403-forbidden {
+  .page {
+    padding-bottom: 2em;
+  }
+}

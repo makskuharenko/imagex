@@ -5,17 +5,20 @@
 
 
 function linux_preprocess_html(&$vars) {
-  //  kpr($vars['content']);
+  //404 & 403 Page classes
+  $headers = drupal_get_http_header();
+  $error_statuses = array('403 Forbidden', '404 Not Found');
+  if (isset($headers['status'])) {
+    $vars['classes_array'][] = drupal_html_class('page-' . $headers['status']);
+    
+    // force html.tpl file
+    if (in_array($headers['status'], $error_statuses)) {
+      $vars['theme_hook_suggestions'][] = 'html';
+    }
+  }
 }
 
 function linux_preprocess_page(&$vars,$hook) {
-  //typekit
-  //drupal_add_js('http://use.typekit.com/XXX.js', 'external');
-  //drupal_add_js('try{Typekit.load();}catch(e){}', array('type' => 'inline'));
-
-  //webfont
-  //drupal_add_css('http://cloud.webtype.com/css/CXXXX.css','external');
-
   //googlefont
   drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Kreon:300,400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300','external');
 
@@ -32,7 +35,23 @@ function linux_preprocess_page(&$vars,$hook) {
       //add a body class for good measure
       $body_classes[] = 'page-panel';
     }
-  }
+  } 
+}
+
+/**
+ * Implements hook_process_page().
+ */
+function linux_process_page(&$vars) {
+  // 404 & 403 Pages - force page.tpl
+  // doing it here ensures our page.tpl is picked
+  // as mothership provides page--404 tpl after this theme
+  $headers = drupal_get_http_header();
+  $error_statuses = array('403 Forbidden', '404 Not Found');
+  if (isset($headers['status'])) {
+    if (in_array($headers['status'], $error_statuses)) {
+      $vars['theme_hook_suggestions'][] = 'page';
+    }
+  } 
 }
 
 function linux_preprocess_region(&$vars,$hook) {
