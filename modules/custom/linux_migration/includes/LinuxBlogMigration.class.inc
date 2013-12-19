@@ -115,7 +115,6 @@ class LinuxBlogMigration extends LinuxContentMigration {
    *   The source database row.
    */
   public function complete($entity, stdClass $row) {
-    //$row->workbench_access = 5;
     parent::complete($entity, $row);
   }
 }
