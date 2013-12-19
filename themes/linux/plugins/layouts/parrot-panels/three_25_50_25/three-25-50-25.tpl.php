@@ -26,21 +26,21 @@
     <div id="three-25-50-25-middle-wrapper" class="fullwidth">
       <div class="container">
       <?php if ($content['three_25_50_25_first']): ?>
-      <div class="region three-25-50-25-first">
+      <div class="region three-25-50-25-first secondary-content">
           <div class="region-inner clearfix">
             <?php print $content['three_25_50_25_first']; ?>
           </div>
         </div>
       <?php endif; ?>
       <?php if ($content['three_25_50_25_second']): ?>
-        <div class="region three-25-50-25-second">
+        <div class="region three-25-50-25-second primary-content">
           <div class="region-inner clearfix">
             <?php print $content['three_25_50_25_second']; ?>
           </div>
         </div>
       <?php endif; ?>
       <?php if ($content['three_25_50_25_third']): ?>
-        <div class="region three-25-50-25-third">
+        <div class="region three-25-50-25-third secondary-content">
           <div class="region-inner clearfix">
             <?php print $content['three_25_50_25_third']; ?>
           </div>

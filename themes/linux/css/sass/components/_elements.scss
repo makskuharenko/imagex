@@ -56,6 +56,33 @@ div.messages {
       }
     }
   }
+  
+  .node-title-teaser {
+    margin: 0 0 5px;
+
+    a {
+      color: $grayDark;
+      font-family: $monoFontFamily;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+
+      @include at-breakpoint($tablet) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+  
+      @include at-breakpoint($computer) {
+        font-size: 34px;
+        line-height: 36px;
+      }
+    } 
+  }
+  
+  .node-meta-wrapper {
+    @include clearfix();
+    margin: 0 0 10px 0;
+  }
 
   .node-author {
     display: block;
@@ -109,6 +136,40 @@ div.messages {
 
     &:after {
       clear: left;
+    }
+  }
+  
+  .node-text-teaser {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 20px;
+    color: $gray;
+  }
+  
+  .node-teaser {
+    margin-bottom: 2em;
+    
+    .links {
+      margin: 10px 0 0 0;
+    }
+    
+    .node-readmore {
+      a {
+        display: block;
+        width: auto;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 25px;
+        color: $linuxStdOrange;
+        float: left;
+        font-family: $condensedFontFamily;
+
+        &:hover {
+          color: $linuxDarkestOrange;
+        }
+      }
     }
   }
 
@@ -438,16 +499,6 @@ small {
     padding: 0 0 2em;
   }
 
-  > div {
-    padding: 0 0 1px;
-    display: none;
-
-    @include at-breakpoint($computer) {
-      display: block;
-      padding: 0 0 2em;
-    }
-  }
-
   h2 {
     margin: 0 0 1px;
     padding: 0 0 0 1.5em;
@@ -550,6 +601,9 @@ small {
         background: transparent;
       }
     }
+    
+    .node-title,
+    .node-body,
     .views-field-body,
     .views-field-title,
     .views-field-comment-body {
@@ -577,6 +631,26 @@ small {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    
+    
+  }
+}
+
+// only hide standard-beans wrap with secondary-content with panels layout
+.secondary-content {
+  .standard-bean > div {
+    padding: 0 0 1px;
+    display: none;
+
+    @include at-breakpoint($computer) {
+      display: block;
+      padding: 0 0 2em;
+    }
+  }
+  
+  .standard-bean-full > div {
+    display: block !important;
+    padding: 0 0 2em;
   }
 }
 

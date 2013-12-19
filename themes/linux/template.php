@@ -105,10 +105,20 @@ function linux_preprocess_node(&$vars,$hook) {
   if ($vars['view_mode'] == 'sidebar' && !in_array($vars['type'], array('question'))) {
      _linux_shared_sidebar_preprocess($vars);
   }
-
-  if ($vars['view_mode'] == 'teaser') {
-    $vars['theme_hook_suggestions'][] = 'node__teaser';
-    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+  
+  // Add some reusable options based on view mode
+  if (!empty($vars['view_mode'])) {
+    // Template suggestions
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['view_mode'];
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+    
+    // Title attribute/class
+    $vars['title_attributes_array']['class'][] = 'node-title-' . $vars['view_mode'];    
+    
+    // wrapper attributes/classes
+    $vars['attributes_array']['class'][] = 'node-' . $vars['view_mode'];
+    $vars['attributes_array']['class'][] = 'node-' . $vars['node']->type . '-' . $vars['view_mode'];
+    $vars['attributes_array']['id'] = 'node-' . $vars['node']->nid;
   }
 }
 
