@@ -40,6 +40,9 @@ class LinuxPageMigrationSourceSql extends ImagexMigrateSourceSql {
       );
     $query->addExpression('`fulltext`', 'full');
     $query->condition('jc.sectionid', 28);
+    // Exclude: Contact us, About, Advertise, Privacy, How to Contribute
+    $query->condition('jc.id', array(361, 360, 310994, 185, 1759), 'NOT IN');
+
     return $query;
   }
 }

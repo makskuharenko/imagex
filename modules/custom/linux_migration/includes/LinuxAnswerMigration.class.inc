@@ -50,7 +50,7 @@ class LinuxAnswerMigration extends LinuxMigration {
   protected function createStub(Migration $migration, array $source_id) {
     $node = new stdClass();
     $node->title = t('Stub for @id', array('@id' => $source_id[0]));
-    $node->body[LANGUAGE_NONE][0] = t('Stub body');
+    $node->body[LANGUAGE_NONE][0]['value'] = t('Stub body');
     $node->type = 'answer';
     $node->uid = 1;
     $node->status = 0;
