@@ -35,6 +35,7 @@ class LinuxEventMigration extends LinuxMigration {
     );
 
     $this->addFieldMapping('field_address', 'country')->arguments($address_arguments);
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
 
   public function prepareRow($row) {

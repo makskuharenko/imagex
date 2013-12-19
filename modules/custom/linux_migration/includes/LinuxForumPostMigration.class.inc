@@ -22,6 +22,7 @@ class LinuxForumPostMigration extends LinuxMigration {
     $this->addFieldMapping('field_file:source_dir')->defaultValue($this->sourcePath);
     $this->addFieldMapping('field_file:destination_dir')->defaultValue('public://forum');
     $this->addFieldMapping('field_file:destination_file', 'filenames')->separator(',');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
 
   public function prepareRow($row) {

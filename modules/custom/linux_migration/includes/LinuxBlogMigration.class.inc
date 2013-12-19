@@ -64,7 +64,6 @@ class LinuxBlogMigration extends LinuxContentMigration {
     else {
       $row->old_path = 'community/blogs/' . $this->categories[$row->catid] . '/' . $row->id;
     }
-
     return TRUE;
   }
 

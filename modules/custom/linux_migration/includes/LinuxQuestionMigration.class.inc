@@ -24,6 +24,7 @@ class LinuxQuestionMigration extends LinuxMigration {
     $this->addFieldMapping('field_answer_count', 'answers');
     $this->addFieldMapping('field_chosen_answer', 'accepted_answer')->SourceMigration('LinuxAnswer');
     $this->addFieldMapping('status', 'state');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
 
   public function prepareRow($row) {

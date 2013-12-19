@@ -34,6 +34,7 @@ abstract class LinuxContentMigration extends LinuxMigration {
     $this->addFieldMapping('created', 'created');
     $this->addFieldMapping('changed', 'modified');
     $this->addFieldMapping('status', 'state');
+    $this->addFieldMapping('workbench_access', 'workbench_access');
   }
 
   /**
@@ -58,6 +59,8 @@ abstract class LinuxContentMigration extends LinuxMigration {
 
     // Migrate's strtotime doesn't like Joomla's default.
     $row->modified = ($row->modified == '0000-00-00 00:00:00') ? $row->created : $row->modified;
+
+    $row->workbench_access = $this->workbench_default_tid;
 
     return TRUE;
   }

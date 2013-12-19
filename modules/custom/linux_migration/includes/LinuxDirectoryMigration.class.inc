@@ -61,6 +61,7 @@ class LinuxDirectoryMigration extends LinuxMigration {
     $this->addFieldMapping('field_directory_gallery:destination_dir')->defaultValue('public://directory');
 
     $this->addFieldMapping('field_rating', 'link_rating');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
 
   public function prepareRow($row) {
