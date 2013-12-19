@@ -8316,6 +8316,475 @@ function linux_landing_pages_uuid_features_default_content() {
     ),
   ),
 );
+$nodes[] = array(
+  'uid' => 1,
+  'title' => 'Newsletter Signup',
+  'log' => '',
+  'status' => 1,
+  'comment' => 2,
+  'promote' => 1,
+  'sticky' => 0,
+  'vuuid' => '97a29694-4f0b-47f0-acf0-9a96a6a2a79d',
+  'type' => 'webform',
+  'language' => 'und',
+  'created' => 1386902636,
+  'tnid' => 0,
+  'translate' => 0,
+  'uuid' => '6229070f-80c1-43e0-9111-7b543187b39d',
+  'revision_uid' => 1,
+  'body' => array(),
+  'metatags' => array(),
+  'rdf_mapping' => array(
+    'rdftype' => array(
+      0 => 'sioc:Item',
+      1 => 'foaf:Document',
+    ),
+    'title' => array(
+      'predicates' => array(
+        0 => 'dc:title',
+      ),
+    ),
+    'created' => array(
+      'predicates' => array(
+        0 => 'dc:date',
+        1 => 'dc:created',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'changed' => array(
+      'predicates' => array(
+        0 => 'dc:modified',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+    'body' => array(
+      'predicates' => array(
+        0 => 'content:encoded',
+      ),
+    ),
+    'uid' => array(
+      'predicates' => array(
+        0 => 'sioc:has_creator',
+      ),
+      'type' => 'rel',
+    ),
+    'name' => array(
+      'predicates' => array(
+        0 => 'foaf:name',
+      ),
+    ),
+    'comment_count' => array(
+      'predicates' => array(
+        0 => 'sioc:num_replies',
+      ),
+      'datatype' => 'xsd:integer',
+    ),
+    'last_activity' => array(
+      'predicates' => array(
+        0 => 'sioc:last_activity_date',
+      ),
+      'datatype' => 'xsd:dateTime',
+      'callback' => 'date_iso8601',
+    ),
+  ),
+  'webform' => array(
+    'nid' => 62182,
+    'confirmation' => '',
+    'confirmation_format' => 'filtered_html',
+    'redirect_url' => '<confirmation>',
+    'status' => 1,
+    'block' => 0,
+    'teaser' => 0,
+    'allow_draft' => 0,
+    'auto_save' => 0,
+    'submit_notice' => 1,
+    'submit_text' => 'Subscribe',
+    'submit_limit' => -1,
+    'submit_interval' => -1,
+    'total_submit_limit' => -1,
+    'total_submit_interval' => -1,
+    'record_exists' => TRUE,
+    'roles' => array(
+      0 => 1,
+      1 => 2,
+    ),
+    'emails' => array(),
+    'components' => array(
+      1 => array(
+        'nid' => 62182,
+        'cid' => 1,
+        'pid' => 0,
+        'form_key' => 'first_name',
+        'name' => 'First Name',
+        'type' => 'textfield',
+        'value' => '',
+        'extra' => array(
+          'title_display' => 'before',
+          'private' => 0,
+          'disabled' => 0,
+          'unique' => 0,
+          'conditional_operator' => '=',
+          'width' => '',
+          'maxlength' => '',
+          'field_prefix' => '',
+          'field_suffix' => '',
+          'description' => '',
+          'attributes' => array(),
+          'conditional_component' => '',
+          'conditional_values' => '',
+        ),
+        'mandatory' => 1,
+        'weight' => 0,
+        'page_num' => 1,
+      ),
+      2 => array(
+        'nid' => 62182,
+        'cid' => 2,
+        'pid' => 0,
+        'form_key' => 'last_name',
+        'name' => 'Last Name',
+        'type' => 'textfield',
+        'value' => '',
+        'extra' => array(
+          'title_display' => 'before',
+          'private' => 0,
+          'disabled' => 0,
+          'unique' => 0,
+          'conditional_operator' => '=',
+          'width' => '',
+          'maxlength' => '',
+          'field_prefix' => '',
+          'field_suffix' => '',
+          'description' => '',
+          'attributes' => array(),
+          'conditional_component' => '',
+          'conditional_values' => '',
+        ),
+        'mandatory' => 1,
+        'weight' => 1,
+        'page_num' => 1,
+      ),
+      3 => array(
+        'nid' => 62182,
+        'cid' => 3,
+        'pid' => 0,
+        'form_key' => 'email_address',
+        'name' => 'Email Address',
+        'type' => 'email',
+        'value' => '',
+        'extra' => array(
+          'title_display' => 'before',
+          'private' => 0,
+          'width' => 30,
+          'disabled' => 0,
+          'unique' => 0,
+          'conditional_operator' => '=',
+          'description' => '',
+          'attributes' => array(),
+          'conditional_component' => '',
+          'conditional_values' => '',
+        ),
+        'mandatory' => 1,
+        'weight' => 2,
+        'page_num' => 1,
+      ),
+      4 => array(
+        'nid' => 62182,
+        'cid' => 4,
+        'pid' => 0,
+        'form_key' => 'country',
+        'name' => 'Country',
+        'type' => 'select',
+        'value' => 'US',
+        'extra' => array(
+          'items' => 'AF|Afghanistan
+AX|Aland Islands
+AL|Albania
+DZ|Algeria
+AS|American Samoa
+AD|Andorra
+AO|Angola
+AI|Anguilla
+AQ|Antarctica
+AG|Antigua and Barbuda
+AR|Argentina
+AM|Armenia
+AW|Aruba
+AU|Australia
+AT|Austria
+AZ|Azerbaijan
+BS|Bahamas
+BH|Bahrain
+BD|Bangladesh
+BB|Barbados
+BY|Belarus
+BE|Belgium
+BZ|Belize
+BJ|Benin
+BM|Bermuda
+BT|Bhutan
+BO|Bolivia
+BA|Bosnia and Herzegovina
+BW|Botswana
+BV|Bouvet Island
+BR|Brazil
+IO|British Indian Ocean Territory
+VG|British Virgin Islands
+BN|Brunei
+BG|Bulgaria
+BF|Burkina Faso
+BI|Burundi
+KH|Cambodia
+CM|Cameroon
+CA|Canada
+CV|Cape Verde
+KY|Cayman Islands
+CF|Central African Republic
+TD|Chad
+CL|Chile
+CN|China
+CX|Christmas Island
+CC|Cocos (Keeling) Islands
+CO|Colombia
+KM|Comoros
+CG|Congo (Brazzaville)
+CD|Congo (Kinshasa)
+CK|Cook Islands
+CR|Costa Rica
+HR|Croatia
+CU|Cuba
+CW|Curaçao
+CY|Cyprus
+CZ|Czech Republic
+DK|Denmark
+DJ|Djibouti
+DM|Dominica
+DO|Dominican Republic
+EC|Ecuador
+EG|Egypt
+SV|El Salvador
+GQ|Equatorial Guinea
+ER|Eritrea
+EE|Estonia
+ET|Ethiopia
+FK|Falkland Islands
+FO|Faroe Islands
+FJ|Fiji
+FI|Finland
+FR|France
+GF|French Guiana
+PF|French Polynesia
+TF|French Southern Territories
+GA|Gabon
+GM|Gambia
+GE|Georgia
+DE|Germany
+GH|Ghana
+GI|Gibraltar
+GR|Greece
+GL|Greenland
+GD|Grenada
+GP|Guadeloupe
+GU|Guam
+GT|Guatemala
+GG|Guernsey
+GN|Guinea
+GW|Guinea-Bissau
+GY|Guyana
+HT|Haiti
+HM|Heard Island and McDonald Islands
+HN|Honduras
+HK|Hong Kong S.A.R., China
+HU|Hungary
+IS|Iceland
+IN|India
+ID|Indonesia
+IR|Iran
+IQ|Iraq
+IE|Ireland
+IM|Isle of Man
+IL|Israel
+IT|Italy
+CI|Ivory Coast
+JM|Jamaica
+JP|Japan
+JE|Jersey
+JO|Jordan
+KZ|Kazakhstan
+KE|Kenya
+KI|Kiribati
+KW|Kuwait
+KG|Kyrgyzstan
+LA|Laos
+LV|Latvia
+LB|Lebanon
+LS|Lesotho
+LR|Liberia
+LY|Libya
+LI|Liechtenstein
+LT|Lithuania
+LU|Luxembourg
+MO|Macao S.A.R., China
+MK|Macedonia
+MG|Madagascar
+MW|Malawi
+MY|Malaysia
+MV|Maldives
+ML|Mali
+MT|Malta
+MH|Marshall Islands
+MQ|Martinique
+MR|Mauritania
+MU|Mauritius
+YT|Mayotte
+MX|Mexico
+FM|Micronesia
+MD|Moldova
+MC|Monaco
+MN|Mongolia
+ME|Montenegro
+MS|Montserrat
+MA|Morocco
+MZ|Mozambique
+MM|Myanmar
+NA|Namibia
+NR|Nauru
+NP|Nepal
+NL|Netherlands
+AN|Netherlands Antilles
+NC|New Caledonia
+NZ|New Zealand
+NI|Nicaragua
+NE|Niger
+NG|Nigeria
+NU|Niue
+NF|Norfolk Island
+MP|Northern Mariana Islands
+KP|North Korea
+NO|Norway
+OM|Oman
+PK|Pakistan
+PW|Palau
+PS|Palestinian Territory
+PA|Panama
+PG|Papua New Guinea
+PY|Paraguay
+PE|Peru
+PH|Philippines
+PN|Pitcairn
+PL|Poland
+PT|Portugal
+PR|Puerto Rico
+QA|Qatar
+RE|Reunion
+RO|Romania
+RU|Russia
+RW|Rwanda
+BL|Saint Barthélemy
+SH|Saint Helena
+KN|Saint Kitts and Nevis
+LC|Saint Lucia
+MF|Saint Martin (French part)
+PM|Saint Pierre and Miquelon
+VC|Saint Vincent and the Grenadines
+WS|Samoa
+SM|San Marino
+ST|Sao Tome and Principe
+SA|Saudi Arabia
+SN|Senegal
+RS|Serbia
+SC|Seychelles
+SL|Sierra Leone
+SG|Singapore
+SK|Slovakia
+SI|Slovenia
+SB|Solomon Islands
+SO|Somalia
+ZA|South Africa
+GS|South Georgia and the South Sandwich Islands
+KR|South Korea
+ES|Spain
+LK|Sri Lanka
+SD|Sudan
+SR|Suriname
+SJ|Svalbard and Jan Mayen
+SZ|Swaziland
+SE|Sweden
+CH|Switzerland
+SY|Syria
+TW|Taiwan
+TJ|Tajikistan
+TZ|Tanzania
+TH|Thailand
+TL|Timor-Leste
+TG|Togo
+TK|Tokelau
+TO|Tonga
+TT|Trinidad and Tobago
+TN|Tunisia
+TR|Turkey
+TM|Turkmenistan
+TC|Turks and Caicos Islands
+TV|Tuvalu
+VI|U.S. Virgin Islands
+UG|Uganda
+UA|Ukraine
+AE|United Arab Emirates
+GB|United Kingdom
+US|United States
+UM|United States Minor Outlying Islands
+UY|Uruguay
+UZ|Uzbekistan
+VU|Vanuatu
+VA|Vatican
+VE|Venezuela
+VN|Vietnam
+WF|Wallis and Futuna
+EH|Western Sahara
+YE|Yemen
+ZM|Zambia
+ZW|Zimbabwe
+',
+          'options_source' => 'countries',
+          'multiple' => 0,
+          'title_display' => 'before',
+          'private' => 0,
+          'aslist' => 1,
+          'optrand' => 0,
+          'conditional_operator' => '=',
+          'other_option' => NULL,
+          'other_text' => 'Other...',
+          'description' => '',
+          'custom_keys' => FALSE,
+          'conditional_component' => '',
+          'conditional_values' => '',
+        ),
+        'mandatory' => 1,
+        'weight' => 3,
+        'page_num' => 1,
+      ),
+    ),
+  ),
+  'cid' => 0,
+  'last_comment_name' => NULL,
+  'last_comment_uid' => 1,
+  'comment_count' => 0,
+  'name' => 'admin',
+  'picture' => 0,
+  'data' => 'b:0;',
+  'workbench_access' => array(),
+  'date' => '2013-12-13 02:43:56 +0000',
+  'url_alias' => array(
+    50525 => array(
+      'pid' => 50525,
+      'source' => 'node/62182',
+      'alias' => 'newsletter-signup',
+      'language' => 'und',
+    ),
+  ),
+);
 
   features_alter_code('uuid_node', $nodes);
 
