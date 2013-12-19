@@ -503,32 +503,41 @@ small {
       display: block;
     }
   }
-
+  
+  .linux-training-feed {
+    margin: 0;
+  }
+  
+  .linux-training-feed li,
   .views-row {
     padding: 12px 20px;
     display: inline-block;
     width: 100%;
-
+    list-style: none;
+    
+    &.odd,
     &.views-row-odd {
       background: transparent;
     }
 
     @include at-breakpoint($computer) {
+      &.odd,
       &.views-row-odd {
         background: $tableBackgroundHover;
       }
     }
-
+    
+    &.even,
     &.views-row-even {
       background: $tableBackgroundHover;
     }
 
     @include at-breakpoint($computer) {
+      &.even,
       &.views-row-even {
         background: transparent;
       }
     }
-
     .views-field-body,
     .views-field-title,
     .views-field-comment-body {
@@ -1356,7 +1365,7 @@ small {
   ul {
     list-style-type: none;
     margin: 0;
-
+    
     .views-row {
       margin: 0;
       width: 100%;
@@ -2579,5 +2588,30 @@ small {
         }
       }
     }
+  }
+}
+
+// Linux Training Block
+// Most is covered by standard-bean styles
+// ---------------------------------------
+.linux-training-feed li {
+  font-weight: 400;
+  
+  .title,
+  .title a {
+    font-weight: 700;
+    color: $grayDark;
+    font-size: 13px;
+    line-height: normal;
+  }
+  .meta {
+    font-size: 12px;
+    color: lighten($grayDark, 50%);    
+  }
+  .links {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 }

@@ -2653,7 +2653,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -5115,20 +5115,41 @@ a {
   @media (min-width: 45.5em) {
     .standard-bean .more-link a {
       display: block; } }
+  .standard-bean .linux-training-feed {
+    margin: 0; }
+  .standard-bean .linux-training-feed li,
   .standard-bean .views-row {
     padding: 12px 20px;
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    list-style: none; }
+    .standard-bean .linux-training-feed li.odd, .standard-bean .linux-training-feed li.views-row-odd,
+    .standard-bean .views-row.odd,
     .standard-bean .views-row.views-row-odd {
       background: transparent; }
     @media (min-width: 45.5em) {
+      .standard-bean .linux-training-feed li.odd, .standard-bean .linux-training-feed li.views-row-odd,
+      .standard-bean .views-row.odd,
       .standard-bean .views-row.views-row-odd {
         background: whitesmoke; } }
+    .standard-bean .linux-training-feed li.even, .standard-bean .linux-training-feed li.views-row-even,
+    .standard-bean .views-row.even,
     .standard-bean .views-row.views-row-even {
       background: whitesmoke; }
     @media (min-width: 45.5em) {
+      .standard-bean .linux-training-feed li.even, .standard-bean .linux-training-feed li.views-row-even,
+      .standard-bean .views-row.even,
       .standard-bean .views-row.views-row-even {
         background: transparent; } }
+    .standard-bean .linux-training-feed li .views-field-body h3,
+    .standard-bean .linux-training-feed li .views-field-body span,
+    .standard-bean .linux-training-feed li .views-field-body a,
+    .standard-bean .linux-training-feed li .views-field-title h3,
+    .standard-bean .linux-training-feed li .views-field-title span,
+    .standard-bean .linux-training-feed li .views-field-title a,
+    .standard-bean .linux-training-feed li .views-field-comment-body h3,
+    .standard-bean .linux-training-feed li .views-field-comment-body span,
+    .standard-bean .linux-training-feed li .views-field-comment-body a,
     .standard-bean .views-row .views-field-body h3,
     .standard-bean .views-row .views-field-body span,
     .standard-bean .views-row .views-field-body a,
@@ -5143,6 +5164,15 @@ a {
       font-weight: 400;
       line-height: 20px;
       margin: 0; }
+      .standard-bean .linux-training-feed li .views-field-body h3 a,
+      .standard-bean .linux-training-feed li .views-field-body span a,
+      .standard-bean .linux-training-feed li .views-field-body a a,
+      .standard-bean .linux-training-feed li .views-field-title h3 a,
+      .standard-bean .linux-training-feed li .views-field-title span a,
+      .standard-bean .linux-training-feed li .views-field-title a a,
+      .standard-bean .linux-training-feed li .views-field-comment-body h3 a,
+      .standard-bean .linux-training-feed li .views-field-comment-body span a,
+      .standard-bean .linux-training-feed li .views-field-comment-body a a,
       .standard-bean .views-row .views-field-body h3 a,
       .standard-bean .views-row .views-field-body span a,
       .standard-bean .views-row .views-field-body a a,
@@ -6899,6 +6929,23 @@ a {
           margin: 0; } }
       .page-taxonomy .node .links .node-readmore a:hover {
         background: #bb5c00; }
+
+.linux-training-feed li {
+  font-weight: 400; }
+  .linux-training-feed li .title,
+  .linux-training-feed li .title a {
+    font-weight: 700;
+    color: #333333;
+    font-size: 13px;
+    line-height: normal; }
+  .linux-training-feed li .meta {
+    font-size: 12px;
+    color: #b3b3b3; }
+  .linux-training-feed li .links {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px; }
 
 a.imagex-contest-add-entry,
 a.imagex-contest-voting-add-vote,
