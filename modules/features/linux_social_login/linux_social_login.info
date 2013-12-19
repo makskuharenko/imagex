@@ -1,0 +1,10 @@
+name = Social Login
+description = Provides the integration with the HybrdAuth module to create social login functionality.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_social_login
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = hybridauth
+features[features_api][] = api:2
