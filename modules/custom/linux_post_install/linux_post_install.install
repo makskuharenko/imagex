@@ -21,7 +21,7 @@ function linux_post_install_install() {
     foreach ($nodes as $data) {
       $node = (object) $data;
       $nids = entity_get_id_by_uuid('node', array($node->uuid));
-      if (isset($nids[$node->uuid])) {
+      if (isset($nids[$node->uuid]) && $node->type == 'landing_page') {
         $deleted = entity_uuid_delete('node', $node->uuid);
       }
     }
@@ -31,7 +31,7 @@ function linux_post_install_install() {
     
     foreach ($nodes as $data) {
       $node = (object) $data;
-      if ($node->uuid == 'cc69210b-36ab-45ee-928b-ffceb64c22a5') {
+      if ($node->uuid == 'cc69210b-36ab-45ee-928b-ffceb64c22a5' || $node->type != 'landing_page') {
         // Don't resave the default news page. We recreated our own in Landing Pages
         continue;
       }
