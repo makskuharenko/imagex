@@ -1978,29 +1978,27 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
   text-align: center;
   text-shadow: none; }
 
-.parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-  display: none; }
-  @media (min-width: 22.75em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 100%;
-      float: left;
-      margin-right: 1.44928%; } }
-  @media (min-width: 35em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 100%;
-      float: left;
-      margin-right: 1.44928%; } }
-  @media (min-width: 45.5em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 34.78261%;
-      float: left;
-      margin-right: 1.44928%;
-      display: block; } }
-  @media (min-width: 62.125em) {
-    .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
-      width: 27.53623%;
-      float: left;
-      margin-right: 1.44928%; } }
+@media (min-width: 22.75em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
+@media (min-width: 35em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%; } }
+@media (min-width: 45.5em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 34.78261%;
+    float: left;
+    margin-right: 1.44928%;
+    display: block; } }
+@media (min-width: 62.125em) {
+  .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-first {
+    width: 27.53623%;
+    float: left;
+    margin-right: 1.44928%; } }
 .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second {
   width: 100%;
   float: right;
@@ -2653,7 +2651,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -4736,6 +4734,9 @@ a.label:hover, a.badge:hover {
 .carousel-caption p {
   margin-bottom: 0; }
 
+.three-25-50-25-second .filtered-view {
+  display: none; }
+
 div.messages {
   width: 100%;
   float: left;
@@ -4771,6 +4772,26 @@ div.messages {
   .not-front .node-title h2.pane-title {
     font-size: 44px;
     line-height: 48px; } }
+.not-front .node-title-teaser {
+  margin: 0 0 5px; }
+  .not-front .node-title-teaser a {
+    color: #333333;
+    font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px; }
+    @media (min-width: 35em) {
+      .not-front .node-title-teaser a {
+        font-size: 26px;
+        line-height: 30px; } }
+    @media (min-width: 45.5em) {
+      .not-front .node-title-teaser a {
+        font-size: 34px;
+        line-height: 36px; } }
+.not-front .node-meta-wrapper {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0 0 10px 0; }
 .not-front .node-author {
   display: block;
   float: left;
@@ -4810,6 +4831,28 @@ div.messages {
   border-right: none; }
   .not-front .node-meta-last:after {
     clear: left; }
+.not-front .node-text-teaser {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  color: #555555; }
+.not-front .node-teaser {
+  margin-bottom: 2em; }
+  .not-front .node-teaser .links {
+    margin: 10px 0 0 0; }
+  .not-front .node-teaser .node-readmore a {
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: #f17700;
+    float: left;
+    font-family: "Open Sans Condensed"; }
+    .not-front .node-teaser .node-readmore a:hover {
+      color: #bb5c00; }
 .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field-type-file img,
 .not-front .parrot-panels #three-25-50-25-middle-wrapper .three-25-50-25-second .field-type-image img {
   margin: 1em 0 2em;
@@ -5019,18 +5062,21 @@ div.messages {
       max-width: 88.5em;
       margin: 0 auto; } }
 
-span.pullout-menu {
-  position: absolute;
-  left: 0;
-  height: 0px;
-  width: 25px;
-  padding: 25px 0 0;
-  background: #b7b7b7 url("../img/pullout-icon.png") no-repeat center center;
-  cursor: pointer;
-  overflow: hidden; }
+#block-bean-pull-out-menu-button {
+  display: block; }
   @media (min-width: 45.5em) {
-    span.pullout-menu {
+    #block-bean-pull-out-menu-button {
       display: none; } }
+  #block-bean-pull-out-menu-button span.pullout-menu {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    height: 0px;
+    width: 25px;
+    padding: 25px 0 0;
+    background: #b7b7b7 url("../img/pullout-icon.png") no-repeat center center;
+    cursor: pointer;
+    overflow: hidden; }
 
 h1 {
   display: inline-block;
@@ -5055,13 +5101,6 @@ a {
   position: relative; }
   .standard-bean.custom-expand {
     padding: 0 0 2em; }
-  .standard-bean > div {
-    padding: 0 0 1px;
-    display: none; }
-    @media (min-width: 45.5em) {
-      .standard-bean > div {
-        display: block;
-        padding: 0 0 2em; } }
   .standard-bean h2 {
     margin: 0 0 1px;
     padding: 0 0 0 1.5em;
@@ -5115,20 +5154,53 @@ a {
   @media (min-width: 45.5em) {
     .standard-bean .more-link a {
       display: block; } }
+  .standard-bean .linux-training-feed {
+    margin: 0; }
+  .standard-bean .linux-training-feed li,
   .standard-bean .views-row {
     padding: 12px 20px;
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    list-style: none; }
+    .standard-bean .linux-training-feed li.odd, .standard-bean .linux-training-feed li.views-row-odd,
+    .standard-bean .views-row.odd,
     .standard-bean .views-row.views-row-odd {
       background: transparent; }
     @media (min-width: 45.5em) {
+      .standard-bean .linux-training-feed li.odd, .standard-bean .linux-training-feed li.views-row-odd,
+      .standard-bean .views-row.odd,
       .standard-bean .views-row.views-row-odd {
         background: whitesmoke; } }
+    .standard-bean .linux-training-feed li.even, .standard-bean .linux-training-feed li.views-row-even,
+    .standard-bean .views-row.even,
     .standard-bean .views-row.views-row-even {
       background: whitesmoke; }
     @media (min-width: 45.5em) {
+      .standard-bean .linux-training-feed li.even, .standard-bean .linux-training-feed li.views-row-even,
+      .standard-bean .views-row.even,
       .standard-bean .views-row.views-row-even {
         background: transparent; } }
+    .standard-bean .linux-training-feed li .node-title h3,
+    .standard-bean .linux-training-feed li .node-title span,
+    .standard-bean .linux-training-feed li .node-title a,
+    .standard-bean .linux-training-feed li .node-body h3,
+    .standard-bean .linux-training-feed li .node-body span,
+    .standard-bean .linux-training-feed li .node-body a,
+    .standard-bean .linux-training-feed li .views-field-body h3,
+    .standard-bean .linux-training-feed li .views-field-body span,
+    .standard-bean .linux-training-feed li .views-field-body a,
+    .standard-bean .linux-training-feed li .views-field-title h3,
+    .standard-bean .linux-training-feed li .views-field-title span,
+    .standard-bean .linux-training-feed li .views-field-title a,
+    .standard-bean .linux-training-feed li .views-field-comment-body h3,
+    .standard-bean .linux-training-feed li .views-field-comment-body span,
+    .standard-bean .linux-training-feed li .views-field-comment-body a,
+    .standard-bean .views-row .node-title h3,
+    .standard-bean .views-row .node-title span,
+    .standard-bean .views-row .node-title a,
+    .standard-bean .views-row .node-body h3,
+    .standard-bean .views-row .node-body span,
+    .standard-bean .views-row .node-body a,
     .standard-bean .views-row .views-field-body h3,
     .standard-bean .views-row .views-field-body span,
     .standard-bean .views-row .views-field-body a,
@@ -5143,6 +5215,27 @@ a {
       font-weight: 400;
       line-height: 20px;
       margin: 0; }
+      .standard-bean .linux-training-feed li .node-title h3 a,
+      .standard-bean .linux-training-feed li .node-title span a,
+      .standard-bean .linux-training-feed li .node-title a a,
+      .standard-bean .linux-training-feed li .node-body h3 a,
+      .standard-bean .linux-training-feed li .node-body span a,
+      .standard-bean .linux-training-feed li .node-body a a,
+      .standard-bean .linux-training-feed li .views-field-body h3 a,
+      .standard-bean .linux-training-feed li .views-field-body span a,
+      .standard-bean .linux-training-feed li .views-field-body a a,
+      .standard-bean .linux-training-feed li .views-field-title h3 a,
+      .standard-bean .linux-training-feed li .views-field-title span a,
+      .standard-bean .linux-training-feed li .views-field-title a a,
+      .standard-bean .linux-training-feed li .views-field-comment-body h3 a,
+      .standard-bean .linux-training-feed li .views-field-comment-body span a,
+      .standard-bean .linux-training-feed li .views-field-comment-body a a,
+      .standard-bean .views-row .node-title h3 a,
+      .standard-bean .views-row .node-title span a,
+      .standard-bean .views-row .node-title a a,
+      .standard-bean .views-row .node-body h3 a,
+      .standard-bean .views-row .node-body span a,
+      .standard-bean .views-row .node-body a a,
       .standard-bean .views-row .views-field-body h3 a,
       .standard-bean .views-row .views-field-body span a,
       .standard-bean .views-row .views-field-body a a,
@@ -5159,6 +5252,17 @@ a {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important; }
+
+.secondary-content .standard-bean > div {
+  padding: 0 0 1px;
+  display: none; }
+  @media (min-width: 45.5em) {
+    .secondary-content .standard-bean > div {
+      display: block;
+      padding: 0 0 2em; } }
+.secondary-content .standard-bean-full > div {
+  display: block !important;
+  padding: 0 0 2em; }
 
 @media (min-width: 45.5em) {
   .diagonal-lines h2 {
@@ -5211,11 +5315,11 @@ a {
     line-height: 50px;
     font-size: 16px;
     padding-right: 1.5em; }
-  .filtered-view h2.js-leftbar-option-popular {
+  .filtered-view h2.js-leftbar-option-field_radioactivity_radioactivity_energy {
     background-image: url("../img/most-popular-gray.png"); }
   .filtered-view h2.js-leftbar-option-comment_count {
     background-image: url("../img/most-comments-gray.png"); }
-  .filtered-view h2.js-leftbar-option-shared {
+  .filtered-view h2.js-leftbar-option-count {
     background-image: url("../img/most-shared-gray.png"); }
 
 #user-wrapper {
@@ -5648,9 +5752,9 @@ a {
   *margin-left: -1.5em;
   display: inline;
   background-color: white; }
-  .featured-slideshow:hover img {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-    opacity: 0.3; }
+  @media (min-width: 45.5em) {
+    .featured-slideshow:hover img {
+      opacity: 0.3; } }
   .featured-slideshow .flex-nav-container {
     margin: 0; }
   .featured-slideshow .flexslider {
@@ -5892,7 +5996,7 @@ a {
       border: 0;
       position: absolute;
       right: 0;
-      top: 38px; } }
+      top: 34px; } }
   .editorial .views-row {
     margin: 0;
     padding: 20px;
@@ -5927,6 +6031,8 @@ a {
       margin: 0 8px 0 0;
       padding: 0 8px 0 0;
       border-right: 1px solid #e5e5e5; }
+      .editorial .views-row .views-field-name span.field-content a {
+        color: #333333; }
     .editorial .views-row .views-field-created span {
       display: block;
       float: left;
@@ -5944,14 +6050,15 @@ a {
     .editorial .views-row .views-field-body,
     .editorial .views-row .field-type-text-with-summary {
       visibility: hidden;
-      position: absolute;
       margin: 25px 0 0;
       height: 0;
       font-size: 12px;
       font-weight: 300;
       letter-spacing: 0.1em;
       line-height: 20px;
-      color: white; }
+      color: white;
+      position: relative;
+      top: 20px; }
     .editorial .views-row .views-field-view-node {
       text-transform: uppercase;
       font-size: 10px;
@@ -6029,6 +6136,9 @@ a {
         .editorial .views-row:hover .views-field-created span {
           color: #bb5c00;
           border-right-color: #bb5c00; }
+          .editorial .views-row:hover .views-field-name span a,
+          .editorial .views-row:hover .views-field-created span a {
+            color: #bb5c00; }
         .editorial .views-row:hover .views-field-comment-count,
         .editorial .views-row:hover .views-field-field-image {
           visibility: hidden; }
@@ -6234,6 +6344,12 @@ a {
     padding: 0 1.5em; }
     .pane-menu-menu-join-us ul li {
       margin: 12px 0 0 6px; } }
+div[role="main"] .pane-menu-menu-join-us {
+  display: none; }
+  @media (min-width: 45.5em) {
+    div[role="main"] .pane-menu-menu-join-us {
+      display: block; } }
+
 .js-leftbar-dropdown {
   width: 100%;
   background-color: #333333;
@@ -6252,11 +6368,11 @@ a {
       color: #666666; }
     .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-created {
       background: transparent url("../img/most-recent-white.png") no-repeat right center; }
-    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-popular {
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background: transparent url("../img/most-popular-white.png") no-repeat right center; }
     .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-comment_count {
       background: transparent url("../img/most-comments-white.png") no-repeat right center; }
-    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-shared {
+    .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-count {
       background: transparent url("../img/most-shared-white.png") no-repeat right center; }
 
 .user-activity {
@@ -6899,6 +7015,27 @@ a {
           margin: 0; } }
       .page-taxonomy .node .links .node-readmore a:hover {
         background: #bb5c00; }
+
+.linux-training-feed li {
+  font-weight: 400; }
+  .linux-training-feed li .title,
+  .linux-training-feed li .title a {
+    font-weight: 700;
+    color: #333333;
+    font-size: 13px;
+    line-height: normal; }
+  .linux-training-feed li .meta {
+    font-size: 12px;
+    color: #b3b3b3; }
+  .linux-training-feed li .links {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px; }
+
+.page-404-not-found .page,
+.page-403-forbidden .page {
+  padding-bottom: 2em; }
 
 a.imagex-contest-add-entry,
 a.imagex-contest-voting-add-vote,

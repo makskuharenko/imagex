@@ -1,6 +1,12 @@
 // Temporary
 // -----------------------------------------
 
+.three-25-50-25-second {
+  .filtered-view {
+    display: none;
+  }
+}
+
 // Standard elements and node/comment styles
 // -----------------------------------------
 
@@ -49,6 +55,33 @@ div.messages {
         line-height: 48px;
       }
     }
+  }
+  
+  .node-title-teaser {
+    margin: 0 0 5px;
+
+    a {
+      color: $grayDark;
+      font-family: $monoFontFamily;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+
+      @include at-breakpoint($tablet) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+  
+      @include at-breakpoint($computer) {
+        font-size: 34px;
+        line-height: 36px;
+      }
+    } 
+  }
+  
+  .node-meta-wrapper {
+    @include clearfix();
+    margin: 0 0 10px 0;
   }
 
   .node-author {
@@ -103,6 +136,40 @@ div.messages {
 
     &:after {
       clear: left;
+    }
+  }
+  
+  .node-text-teaser {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 20px;
+    color: $gray;
+  }
+  
+  .node-teaser {
+    margin-bottom: 2em;
+    
+    .links {
+      margin: 10px 0 0 0;
+    }
+    
+    .node-readmore {
+      a {
+        display: block;
+        width: auto;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 25px;
+        color: $linuxStdOrange;
+        float: left;
+        font-family: $condensedFontFamily;
+
+        &:hover {
+          color: $linuxDarkestOrange;
+        }
+      }
     }
   }
 
@@ -376,20 +443,26 @@ div.messages {
 // Pullout Menu Button
 // --------------------------------------------------------------
 
-span.pullout-menu {
-  position: absolute;
-  left: 0;
-  height: 0px;
-  width: 25px;
-  padding: 25px 0 0;
-  background: #B7B7B7 url('../img/pullout-icon.png') no-repeat center center;
-  cursor: pointer;
-  overflow: hidden;
+#block-bean-pull-out-menu-button {
+  display: block;
 
   @include at-breakpoint($computer) {
     display: none;
   }
+
+  span.pullout-menu {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    height: 0px;
+    width: 25px;
+    padding: 25px 0 0;
+    background: #B7B7B7 url('../img/pullout-icon.png') no-repeat center center;
+    cursor: pointer;
+    overflow: hidden;
+  }
 }
+
 
 // Standard styling for headers and text in the main content area
 // --------------------------------------------------------------
@@ -424,16 +497,6 @@ small {
 
   &.custom-expand {
     padding: 0 0 2em;
-  }
-
-  > div {
-    padding: 0 0 1px;
-    display: none;
-
-    @include at-breakpoint($computer) {
-      display: block;
-      padding: 0 0 2em;
-    }
   }
 
   h2 {
@@ -503,32 +566,44 @@ small {
       display: block;
     }
   }
-
+  
+  .linux-training-feed {
+    margin: 0;
+  }
+  
+  .linux-training-feed li,
   .views-row {
     padding: 12px 20px;
     display: inline-block;
     width: 100%;
-
+    list-style: none;
+    
+    &.odd,
     &.views-row-odd {
       background: transparent;
     }
 
     @include at-breakpoint($computer) {
+      &.odd,
       &.views-row-odd {
         background: $tableBackgroundHover;
       }
     }
-
+    
+    &.even,
     &.views-row-even {
       background: $tableBackgroundHover;
     }
 
     @include at-breakpoint($computer) {
+      &.even,
       &.views-row-even {
         background: transparent;
       }
     }
-
+    
+    .node-title,
+    .node-body,
     .views-field-body,
     .views-field-title,
     .views-field-comment-body {
@@ -556,6 +631,26 @@ small {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    
+    
+  }
+}
+
+// only hide standard-beans wrap with secondary-content with panels layout
+.secondary-content {
+  .standard-bean > div {
+    padding: 0 0 1px;
+    display: none;
+
+    @include at-breakpoint($computer) {
+      display: block;
+      padding: 0 0 2em;
+    }
+  }
+  
+  .standard-bean-full > div {
+    display: block !important;
+    padding: 0 0 2em;
   }
 }
 
@@ -599,7 +694,7 @@ small {
       padding-right: 1.5em;
     }
 
-    &.js-leftbar-option-popular {
+    &.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background-image: url('../img/most-popular-gray.png');
     }
 
@@ -607,7 +702,7 @@ small {
       background-image: url('../img/most-comments-gray.png');
     }
 
-    &.js-leftbar-option-shared {
+    &.js-leftbar-option-count {
       background-image: url('../img/most-shared-gray.png');
     }
   }
@@ -1081,8 +1176,10 @@ small {
   background-color: white;
 
   &:hover {
-    img {
-      @include opacity(0.3);
+    @include at-breakpoint($computer) {
+      img {
+        @include opacity(0.3);
+      }
     }
   }
 
@@ -1356,7 +1453,7 @@ small {
   ul {
     list-style-type: none;
     margin: 0;
-
+    
     .views-row {
       margin: 0;
       width: 100%;
@@ -1465,7 +1562,7 @@ small {
       border: 0;
       position: absolute;
       right: 0;
-      top: 38px;
+      top: 34px;
     }
   }
 
@@ -1528,6 +1625,10 @@ small {
         margin: 0 8px 0 0;
         padding: 0 8px 0 0;
         border-right: 1px solid $dropdownDividerTop;
+
+        a {
+          color: $grayDark;
+        }
       }
     }
 
@@ -1556,7 +1657,6 @@ small {
     .views-field-body,
     .field-type-text-with-summary {
       visibility: hidden;
-      position: absolute;
       margin: 25px 0 0;
       height: 0;
       font-size: 12px;
@@ -1564,6 +1664,8 @@ small {
       letter-spacing: 0.1em;
       line-height: 20px;
       color: white;
+      position: relative;
+      top: 20px;
     }
 
     @include at-breakpoint($computer) {
@@ -1641,6 +1743,10 @@ small {
           span {
             color: $linuxDarkestOrange;
             border-right-color: $linuxDarkestOrange;
+
+            a {
+              color: $linuxDarkestOrange;
+            }
           }
         }
 
@@ -1806,6 +1912,16 @@ small {
   }
 }
 
+div[role="main"] {
+  .pane-menu-menu-join-us {
+    display: none;
+
+    @include at-breakpoint($computer) {
+      display: block;
+    }
+  }
+}
+
 // Most Recent menu filter
 // -----------------------
 
@@ -1833,7 +1949,7 @@ small {
       background: transparent url('../img/most-recent-white.png') no-repeat right center;
     }
 
-    &.js-leftbar-option-popular {
+    &.js-leftbar-option-field_radioactivity_radioactivity_energy {
       background: transparent url('../img/most-popular-white.png') no-repeat right center;
     }
 
@@ -1841,7 +1957,7 @@ small {
       background: transparent url('../img/most-comments-white.png') no-repeat right center;
     }
 
-    &.js-leftbar-option-shared {
+    &.js-leftbar-option-count {
       background: transparent url('../img/most-shared-white.png') no-repeat right center;
     }
   }
@@ -2579,5 +2695,39 @@ small {
         }
       }
     }
+  }
+}
+
+// Linux Training Block
+// Most is covered by standard-bean styles
+// ---------------------------------------
+.linux-training-feed li {
+  font-weight: 400;
+  
+  .title,
+  .title a {
+    font-weight: 700;
+    color: $grayDark;
+    font-size: 13px;
+    line-height: normal;
+  }
+  .meta {
+    font-size: 12px;
+    color: lighten($grayDark, 50%);    
+  }
+  .links {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+// 404 & 403 error pages
+// ------------------------------------
+.page-404-not-found,
+.page-403-forbidden {
+  .page {
+    padding-bottom: 2em;
   }
 }

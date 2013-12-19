@@ -78,8 +78,6 @@ Block clearfix - yup its a recap of the clearfix trick, no reason to do class="c
 
   #three-25-50-25-middle-wrapper {
     .three-25-50-25-first {
-      display: none;
-
       @include at-breakpoint($narrow) {
         @include span-columns(14 ,14);
       }
