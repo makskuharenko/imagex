@@ -141,11 +141,9 @@ span.forum-list-icon-new-posts {
   .forum-table-topics thead {
     background: transparent url("../img/content-lines.png") repeat top left; }
     .forum-table-topics thead th {
-      padding: 1em 0;
       border-bottom: 0;
       font-weight: 300;
-      color: #222222;
-      text-transform: capitalize; }
+      color: #222222; }
       .forum-table-topics thead th.active {
         font-weight: 600; }
       .forum-table-topics thead th.views-field-comment-count {
@@ -163,8 +161,7 @@ span.forum-list-icon-new-posts {
       line-height: 18px;
       font-style: italic;
       font-size: 12px;
-      color: #999999;
-      padding: 0 0 0 5px; }
+      color: #999999; }
       .forum-table-topics tbody tr td.views-field-title .marker {
         color: #f17700; }
       .forum-table-topics tbody tr td.views-field-title .forum-topic-title {
@@ -228,37 +225,51 @@ table.sticky-header {
 #forum-pager-top .pager {
   padding: 0; }
 
-.forum-pager .pager {
-  margin: 0;
-  padding: 0;
-  width: auto; }
-  .forum-pager .pager li a, .forum-pager .pager li.current {
-    display: block;
-    float: left;
-    margin: 0 2px;
-    width: 28px;
-    height: 28px;
-    border-radius: 2px;
-    border: 1px solid #eeeeee;
+.page-forum .item-list-pager,
+.forum-pager {
+  margin-bottom: 1em; }
+  .page-forum .item-list-pager .pager,
+  .forum-pager .pager {
+    margin: 0;
     padding: 0;
-    text-align: center;
-    line-height: 28px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    color: #666666; }
-    .forum-pager .pager li a:hover, .forum-pager .pager li.current:hover {
-      background: rgba(238, 238, 238, 0.5); }
-  .forum-pager .pager li.current {
-    font-weight: 700;
-    color: #f17700;
-    background: rgba(238, 238, 238, 0.3); }
-    .forum-pager .pager li.current:hover {
+    width: auto; }
+    .page-forum .item-list-pager .pager li a, .page-forum .item-list-pager .pager li.current,
+    .forum-pager .pager li a,
+    .forum-pager .pager li.current {
+      display: block;
+      float: left;
+      margin: 0 2px;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      border: 1px solid #eeeeee;
+      padding: 0;
+      text-align: center;
+      line-height: 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      color: #666666; }
+      .page-forum .item-list-pager .pager li a:hover, .page-forum .item-list-pager .pager li.current:hover,
+      .forum-pager .pager li a:hover,
+      .forum-pager .pager li.current:hover {
+        background: rgba(238, 238, 238, 0.5); }
+    .page-forum .item-list-pager .pager li.current,
+    .forum-pager .pager li.current {
+      font-weight: 700;
+      color: #f17700;
       background: rgba(238, 238, 238, 0.3); }
-  .forum-pager .pager li.next a, .forum-pager .pager li.previous a, .forum-pager .pager li.first a, .forum-pager .pager li.last a {
-    width: auto;
-    padding: 0 8px; }
+      .page-forum .item-list-pager .pager li.current:hover,
+      .forum-pager .pager li.current:hover {
+        background: rgba(238, 238, 238, 0.3); }
+    .page-forum .item-list-pager .pager li.next a, .page-forum .item-list-pager .pager li.previous a, .page-forum .item-list-pager .pager li.first a, .page-forum .item-list-pager .pager li.last a,
+    .forum-pager .pager li.next a,
+    .forum-pager .pager li.previous a,
+    .forum-pager .pager li.first a,
+    .forum-pager .pager li.last a {
+      width: auto;
+      padding: 0 8px; }
 
 span.topic-icon {
   width: 10px !important;
@@ -468,3 +479,85 @@ h2.comment-form {
   @media (min-width: 35em) {
     .comment-form .form-managed-file #edit-field-file-und-0-remove-button {
       margin: 1px 8px 5px 10px; } }
+
+.page-forum .view,
+.page-forum .view-content,
+.page-forum #forum-topic-list {
+  overflow: hidden;
+  *zoom: 1; }
+
+.forum-pager .pager, .forum-comment-wrapper .pager {
+  float: none; }
+
+.forum-table-wrap .forum-table-superheader .forum-table-name {
+  padding-left: 0.8em; }
+
+.forum-table td.forum-details .forum-description,
+.forum-table td.forum-details .forum-subforums,
+.forum-table td.views-field-name {
+  font-size: 0.9em; }
+.forum-table th, .forum-table td {
+  padding: 0.8em; }
+.forum-table thead.forum-header th {
+  padding: 0.8em; }
+.forum-table tbody .forum-row td {
+  height: auto; }
+.forum-table tr td.forum-list-icon {
+  width: auto; }
+.forum-table tr .forum-last-reply,
+.forum-table tr .forum-last-post,
+.forum-table tr .forum-posts,
+.forum-table tr .forum-number-posts,
+.forum-table tr .views-field-last-updated,
+.forum-table tr .views-field-name {
+  display: none; }
+.forum-table tr .forum-number-new-topics {
+  font-size: 11px;
+  line-height: 1; }
+
+.forum-node-create-links,
+.forum-node-create-links .forum-add-node,
+#forum-sort,
+.forum-tools {
+  float: none;
+  margin: 0.5em 0; }
+
+@media (min-width: 35em) {
+  .forum-pager, .forum-comment-wrapper,
+  .page-forum .item-list-pager {
+    overflow: hidden; }
+    .forum-pager .pager, .forum-comment-wrapper .pager,
+    .page-forum .item-list-pager .pager {
+      float: right; }
+
+  #forum-sort {
+    float: left;
+    width: 60%; }
+
+  .forum-tools {
+    float: right;
+    margin: 0;
+    width: 40%;
+    text-align: right; }
+
+  .forum-table-wrap .forum-table-superheader .forum-table-name {
+    padding-left: 1.5em; }
+
+  .forum-table th, .forum-table td {
+    padding: 1.5em; }
+  .forum-table thead.forum-header th {
+    padding: 1em; }
+  .forum-table tbody .forum-row td {
+    min-height: 100px; }
+  .forum-table tr td.forum-list-icon {
+    width: 70px; }
+  .forum-table tr .forum-last-reply,
+  .forum-table tr .forum-last-post,
+  .forum-table tr .forum-posts,
+  .forum-table tr .forum-number-posts,
+  .forum-table tr .views-field-last-updated,
+  .forum-table tr .views-field-name {
+    display: table-cell; }
+  .forum-table tr .forum-number-new-topics {
+    font-size: 13px;
+    line-height: normal; } }

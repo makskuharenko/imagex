@@ -1,8 +1,26 @@
 <?php
+
+/**
+ * Alter Hooks.
+ */
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function linux_theme_registry_alter(&$theme_registry) {
+  // Kill motherships crappy forum function as causes errors
+  if (!empty($theme_registry['forum_list']['preprocess functions'])) {
+    foreach ($theme_registry['forum_list']['preprocess functions'] as $k => $function) {
+      if ($function == 'mothership_preprocess_forum_list') {
+        unset($theme_registry['forum_list']['preprocess functions'][$k]);
+      }
+    }
+  }
+}
+
 /*
   Preprocess
 */
-
 
 function linux_preprocess_html(&$vars) {
   //404 & 403 Page classes

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Installation code for linux_forum.
+ */
+
+/**
+ * Implements hook_enable()
+ */
+function linux_forum_install() {
+  // Set default not to use page manager
+  // page manager page is disabled = blank page
+  if (variable_get('advanced_forum_forum_disabled') == NULL) {
+    variable_set('advanced_forum_forum_disabled', TRUE);
+    if (function_exists('menu_rebuild')) {
+      menu_rebuild();
+    }
+    else {
+      drupal_set_message(t('The Linux Forum feature requires the Drupal cache to be clear now.'));
+    }
+  }
+}

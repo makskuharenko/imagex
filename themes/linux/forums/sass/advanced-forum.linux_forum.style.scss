@@ -224,11 +224,9 @@ span.forum-list-icon-new-posts {
     background: transparent url('../img/content-lines.png') repeat top left;
 
     th {
-      padding: 1em 0;
       border-bottom: 0;
       font-weight: 300;
       color: $grayDarker;
-      text-transform: capitalize;
 
       &.active {
         font-weight: 600;
@@ -261,7 +259,6 @@ span.forum-list-icon-new-posts {
           font-style: italic;
           font-size: 12px;
           color: $grayLight;
-          padding: 0 0 0 5px;
 
           .marker {
             color: $linuxStdOrange;
@@ -368,7 +365,10 @@ table.sticky-header {
   }
 }
 
+.page-forum .item-list-pager,
 .forum-pager {
+  margin-bottom: 1em;
+  
   .pager {
     margin: 0;
     padding: 0;
@@ -753,3 +753,123 @@ h2.comment-form {
     }
   }
 }
+
+// @Responsive
+// Group all table responsiveness 
+// -------------------------------------
+.page-forum {
+  .view,
+  .view-content,
+  #forum-topic-list {
+    @include clearfix;
+  }
+}
+.forum-pager, .forum-comment-wrapper {
+  .pager {
+    float: none;
+  }
+}
+.forum-table-wrap .forum-table-superheader .forum-table-name {
+  padding-left: 0.8em;
+}
+.forum-table {
+  // Mobile
+  td.forum-details .forum-description,
+  td.forum-details .forum-subforums,
+  td.views-field-name {
+    font-size: 0.9em;
+  }
+  th, td {
+    padding: 0.8em;
+  }
+  thead.forum-header th {
+    padding: 0.8em;
+  }
+  tbody .forum-row td {
+    height: auto;
+  }
+  
+  tr {
+    td.forum-list-icon {
+      width: auto;
+    }
+    
+    // Hidden on mobile
+    .forum-last-reply,
+    .forum-last-post,
+    .forum-posts,
+    .forum-number-posts,
+    .views-field-last-updated,
+    .views-field-name {
+      display: none;
+    }
+    
+    .forum-number-new-topics {
+      font-size: 11px;
+      line-height: 1;
+    }
+  } 
+}
+.forum-node-create-links,
+.forum-node-create-links .forum-add-node,
+#forum-sort,
+.forum-tools {
+  float: none;
+  margin: 0.5em 0;
+}
+
+// Enhancements from tablet up
+@include at-breakpoint($tablet) {
+  .forum-pager, .forum-comment-wrapper,
+  .page-forum .item-list-pager {
+    @include clearfix;
+    
+    .pager {
+      float: right;
+    }
+  }  
+  
+  #forum-sort {
+    float: left;
+    width: 60%;
+  }
+  .forum-tools {
+    float: right;
+    margin: 0;
+    width: 40%;
+    text-align: right;
+  }  
+  .forum-table-wrap .forum-table-superheader .forum-table-name {
+    padding-left: 1.5em;
+  }
+  .forum-table {
+    th, td {
+      padding: 1.5em;
+    }
+    thead.forum-header th {
+      padding: 1em;
+    }    
+    tbody .forum-row td {
+      min-height: 100px;
+    }
+    tr {
+      td.forum-list-icon {
+        width: 70px;
+      }      
+      
+      .forum-last-reply,
+      .forum-last-post,
+      .forum-posts,
+      .forum-number-posts,
+      .views-field-last-updated,
+      .views-field-name {
+        display: table-cell;
+      }
+      
+      .forum-number-new-topics {
+        font-size: 13px;
+        line-height: normal;
+      }      
+    }
+  }
+} 
