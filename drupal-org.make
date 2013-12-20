@@ -207,6 +207,12 @@ projects[imagex_search][download][type] = "git"
 projects[imagex_search][download][url] = "git@github.com:imagex/imagex_search.git"
 projects[imagex_search][download][branch] = "7.x-dev"
 
+projects[imagex_gamification][type] = "module"
+projects[imagex_gamification][subdir] = "imagex/modules"
+projects[imagex_gamification][download][type] = "git"
+projects[imagex_gamification][download][url] = "git@github.com:imagex/imagex_gamification.git"
+projects[imagex_gamification][download][branch] = "7.x-dev"
+
 ; Libraries
 libraries[flexslider][download][type] = "get"
 libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/zipball/master"
