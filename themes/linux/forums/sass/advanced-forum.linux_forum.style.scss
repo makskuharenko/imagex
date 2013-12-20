@@ -365,7 +365,10 @@ table.sticky-header {
   }
 }
 
+.page-forum .item-list-pager,
 .forum-pager {
+  margin-bottom: 1em;
+  
   .pager {
     margin: 0;
     padding: 0;
@@ -772,7 +775,8 @@ h2.comment-form {
 .forum-table {
   // Mobile
   td.forum-details .forum-description,
-  td.forum-details .forum-subforums {
+  td.forum-details .forum-subforums,
+  td.views-field-name {
     font-size: 0.9em;
   }
   th, td {
@@ -795,7 +799,8 @@ h2.comment-form {
     .forum-last-post,
     .forum-posts,
     .forum-number-posts,
-    .views-field-last-updated {
+    .views-field-last-updated,
+    .views-field-name {
       display: none;
     }
     
@@ -815,7 +820,8 @@ h2.comment-form {
 
 // Enhancements from tablet up
 @include at-breakpoint($tablet) {
-  .forum-pager, .forum-comment-wrapper {
+  .forum-pager, .forum-comment-wrapper,
+  .page-forum .item-list-pager {
     @include clearfix;
     
     .pager {
@@ -855,7 +861,8 @@ h2.comment-form {
       .forum-last-post,
       .forum-posts,
       .forum-number-posts,
-      .views-field-last-updated {
+      .views-field-last-updated,
+      .views-field-name {
         display: table-cell;
       }
       

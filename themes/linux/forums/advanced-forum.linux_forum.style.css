@@ -225,37 +225,51 @@ table.sticky-header {
 #forum-pager-top .pager {
   padding: 0; }
 
-.forum-pager .pager {
-  margin: 0;
-  padding: 0;
-  width: auto; }
-  .forum-pager .pager li a, .forum-pager .pager li.current {
-    display: block;
-    float: left;
-    margin: 0 2px;
-    width: 28px;
-    height: 28px;
-    border-radius: 2px;
-    border: 1px solid #eeeeee;
+.page-forum .item-list-pager,
+.forum-pager {
+  margin-bottom: 1em; }
+  .page-forum .item-list-pager .pager,
+  .forum-pager .pager {
+    margin: 0;
     padding: 0;
-    text-align: center;
-    line-height: 28px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    color: #666666; }
-    .forum-pager .pager li a:hover, .forum-pager .pager li.current:hover {
-      background: rgba(238, 238, 238, 0.5); }
-  .forum-pager .pager li.current {
-    font-weight: 700;
-    color: #f17700;
-    background: rgba(238, 238, 238, 0.3); }
-    .forum-pager .pager li.current:hover {
+    width: auto; }
+    .page-forum .item-list-pager .pager li a, .page-forum .item-list-pager .pager li.current,
+    .forum-pager .pager li a,
+    .forum-pager .pager li.current {
+      display: block;
+      float: left;
+      margin: 0 2px;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      border: 1px solid #eeeeee;
+      padding: 0;
+      text-align: center;
+      line-height: 28px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 400;
+      color: #666666; }
+      .page-forum .item-list-pager .pager li a:hover, .page-forum .item-list-pager .pager li.current:hover,
+      .forum-pager .pager li a:hover,
+      .forum-pager .pager li.current:hover {
+        background: rgba(238, 238, 238, 0.5); }
+    .page-forum .item-list-pager .pager li.current,
+    .forum-pager .pager li.current {
+      font-weight: 700;
+      color: #f17700;
       background: rgba(238, 238, 238, 0.3); }
-  .forum-pager .pager li.next a, .forum-pager .pager li.previous a, .forum-pager .pager li.first a, .forum-pager .pager li.last a {
-    width: auto;
-    padding: 0 8px; }
+      .page-forum .item-list-pager .pager li.current:hover,
+      .forum-pager .pager li.current:hover {
+        background: rgba(238, 238, 238, 0.3); }
+    .page-forum .item-list-pager .pager li.next a, .page-forum .item-list-pager .pager li.previous a, .page-forum .item-list-pager .pager li.first a, .page-forum .item-list-pager .pager li.last a,
+    .forum-pager .pager li.next a,
+    .forum-pager .pager li.previous a,
+    .forum-pager .pager li.first a,
+    .forum-pager .pager li.last a {
+      width: auto;
+      padding: 0 8px; }
 
 span.topic-icon {
   width: 10px !important;
@@ -479,7 +493,8 @@ h2.comment-form {
   padding-left: 0.8em; }
 
 .forum-table td.forum-details .forum-description,
-.forum-table td.forum-details .forum-subforums {
+.forum-table td.forum-details .forum-subforums,
+.forum-table td.views-field-name {
   font-size: 0.9em; }
 .forum-table th, .forum-table td {
   padding: 0.8em; }
@@ -493,7 +508,8 @@ h2.comment-form {
 .forum-table tr .forum-last-post,
 .forum-table tr .forum-posts,
 .forum-table tr .forum-number-posts,
-.forum-table tr .views-field-last-updated {
+.forum-table tr .views-field-last-updated,
+.forum-table tr .views-field-name {
   display: none; }
 .forum-table tr .forum-number-new-topics {
   font-size: 11px;
@@ -507,9 +523,11 @@ h2.comment-form {
   margin: 0.5em 0; }
 
 @media (min-width: 35em) {
-  .forum-pager, .forum-comment-wrapper {
+  .forum-pager, .forum-comment-wrapper,
+  .page-forum .item-list-pager {
     overflow: hidden; }
-    .forum-pager .pager, .forum-comment-wrapper .pager {
+    .forum-pager .pager, .forum-comment-wrapper .pager,
+    .page-forum .item-list-pager .pager {
       float: right; }
 
   #forum-sort {
@@ -537,7 +555,8 @@ h2.comment-form {
   .forum-table tr .forum-last-post,
   .forum-table tr .forum-posts,
   .forum-table tr .forum-number-posts,
-  .forum-table tr .views-field-last-updated {
+  .forum-table tr .views-field-last-updated,
+  .forum-table tr .views-field-name {
     display: table-cell; }
   .forum-table tr .forum-number-new-topics {
     font-size: 13px;
