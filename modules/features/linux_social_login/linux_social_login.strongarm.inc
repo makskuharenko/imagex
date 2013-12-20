@@ -124,14 +124,14 @@ function linux_social_login_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Facebook_keys_id';
-  $strongarm->value = '1441352819412413';
+  $strongarm->value = '675344615820717';
   $export['hybridauth_provider_Facebook_keys_id'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Facebook_keys_secret';
-  $strongarm->value = '0585b79aba98a95d9fe96f471acab237';
+  $strongarm->value = '51a0e4391f6cca79fccc62951ebcb328';
   $export['hybridauth_provider_Facebook_keys_secret'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -290,14 +290,14 @@ function linux_social_login_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Google_keys_id';
-  $strongarm->value = '342997526155.apps.googleusercontent.com';
+  $strongarm->value = '342997526155-7f1f9res3egr9m9iielg7v2j5d8ia4g8.apps.googleusercontent.com';
   $export['hybridauth_provider_Google_keys_id'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Google_keys_secret';
-  $strongarm->value = '8eBQ3poeKSMczabG9a1lh2PW';
+  $strongarm->value = 'bVrTMkoqQH7i8YoNkeSiFvM1';
   $export['hybridauth_provider_Google_keys_secret'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -388,14 +388,14 @@ function linux_social_login_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_LinkedIn_keys_key';
-  $strongarm->value = '75rgffx21nlt34';
+  $strongarm->value = '75llh51in1hf4u';
   $export['hybridauth_provider_LinkedIn_keys_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_LinkedIn_keys_secret';
-  $strongarm->value = 'ojEluQSnQRrzm7fi';
+  $strongarm->value = 'QaVAyI1gbfOvl4Hn';
   $export['hybridauth_provider_LinkedIn_keys_secret'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -661,14 +661,14 @@ function linux_social_login_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Twitter_keys_key';
-  $strongarm->value = 'Lz2iiUmOnGXZCockzFFiA';
+  $strongarm->value = 'ntMhGT2WGdkqGfwT0KLHw';
   $export['hybridauth_provider_Twitter_keys_key'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Twitter_keys_secret';
-  $strongarm->value = 's688PfJ3FtQzh1LO6zywuLUYECBRlfnyr52MVPto';
+  $strongarm->value = '1L1SuuXUD0rTpBXPQdzfSVIEC2kdTQ1CSCiJAQa2w';
   $export['hybridauth_provider_Twitter_keys_secret'] = $strongarm;
 
   $strongarm = new stdClass();
