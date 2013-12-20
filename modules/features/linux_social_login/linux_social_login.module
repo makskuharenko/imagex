@@ -29,7 +29,6 @@ function linux_social_login_preprocess_hybridauth_provider_icon(&$vars, $hook) {
  */
 function linux_social_login_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_login_form' || $form_id == 'user_register_form') {
-    dpm($form);
     // Move the Hybrid Auth Widget to the very end of the form. After even the Submit buttons.
     $form['actions']['#weight'] = 99;
     $form['hybridauth']['#weight'] = 999;
