@@ -592,13 +592,26 @@ function linux_question_answer_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-21';
     $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'entity_field_extra';
-    $pane->subtype = 'node:answers_to_a_question_entity_view_1';
+    $pane->type = 'views';
+    $pane->subtype = 'answers_to_a_question';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'context' => 'panelizer',
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'entity_view_1',
+      'context' => array(
+        0 => '',
+      ),
       'override_title' => 0,
       'override_title_text' => '',
     );
