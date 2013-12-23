@@ -1,0 +1,80 @@
+// -----------------------------------------
+// Any poll specific style not covered by
+// general styles
+//
+// Use !important to prevent need to nesting
+// @see: _elements.scss
+// -----------------------------------------
+
+// Teaser
+// -----------------------------------------
+.view-display-id-panel_pane_6 {
+  li.odd,
+  .views-row.odd,
+  .views-row.views-row-odd {
+    background: transparent !important;
+  }
+  
+  .contextual-links-region,
+  &.contextual-links-region {
+    position: static !important;
+  }
+  .total {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.node-advpoll {
+  font-size: 13px;
+  
+  input[type="submit"] {
+    margin: 1em 0 0 0;
+  }
+}
+
+.node-advpoll-teaser {
+  font-size: 13px;
+  
+  .node-title-teaser {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 1em 0;
+
+    a {
+      color: $grayDark;
+      text-decoration: none;
+    } 
+  }
+}
+
+.poll {
+  .poll-bar {
+    .text {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    .bar,
+    .foreground {
+      height: 0.6em;
+    }
+    
+    .foreground {
+      background-color: $linuxGreen;
+    }
+  }
+  .voted {
+    .bar {
+      border: none;
+    }
+  }
+  .percent-percentage {
+    font-weight: bold; 
+  }
+}
