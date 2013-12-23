@@ -48,7 +48,3 @@ features[variable][] = scheduler_unpublish_required_humor
 features[variable][] = scheduler_unpublish_revision_humor
 features_exclude[field][node-humor-body] = node-humor-body
 features_exclude[field][node-humor-field_image] = node-humor-field_image
-features_exclude[field][node-humor-field_addthis] = node-humor-field_addthis
-features_exclude[dependencies][imagex_addthis] = imagex_addthis
-features_exclude[field_instance][node-humor-field_addthis] = node-humor-field_addthis
-project path = profiles/linux/modules/features
