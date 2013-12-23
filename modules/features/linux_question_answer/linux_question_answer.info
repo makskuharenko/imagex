@@ -36,6 +36,7 @@ features[field_instance][] = node-question-field_tags
 features[panelizer_defaults][] = node:answer:default
 features[panelizer_defaults][] = node:question:default
 features[taxonomy][] = question_category
+features[variable][] = panelizer_defaults_node_answer
 features[variable][] = panelizer_defaults_node_question
 features_exclude[field_base][field_tags] = field_tags
 features_exclude[dependencies][strongarm] = strongarm
