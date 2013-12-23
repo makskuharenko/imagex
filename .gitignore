@@ -2,3 +2,4 @@
 modules/contrib/*
 modules/imagex/*
 libraries/*
+modules/libraries/*

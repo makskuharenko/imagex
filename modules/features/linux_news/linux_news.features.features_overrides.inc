@@ -199,14 +199,6 @@ function linux_news_features_override_default_overrides() {
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|panel"] = 'three_25_50_25_second';
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|position"] = 5;
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|subtype"] = 'node:body';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|delta_limit"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|delta_reversed"] = FALSE;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|formatter"] = 'addthis_disabled';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|override_title"] = 1;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|override_title_text"] = 'Share article';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|panel"] = 'three_25_50_25_second';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|position"] = 6;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|subtype"] = 'node:field_addthis';
   $overrides["panelizer_defaults.node:imagex_news:default.display|layout"] = 'three_25_50_25';
   $overrides["panelizer_defaults.node:imagex_news:default.display|panels|three_25_50_25_first"] = array(
     0 => 'new-1',
@@ -219,10 +211,9 @@ function linux_news_features_override_default_overrides() {
     3 => 'new-6',
     4 => 'new-7',
     5 => 'new-8',
-    6 => 'new-9',
-    7 => 'new-10',
-    8 => 'new-11',
-    9 => 'new-12',
+    6 => 'new-10',
+    7 => 'new-11',
+    8 => 'new-12',
   );
   $overrides["panelizer_defaults.node:imagex_news:default.display|panels|three_25_50_25_third"] = array(
     0 => 'new-13',

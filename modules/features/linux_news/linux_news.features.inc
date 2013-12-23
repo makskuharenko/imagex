@@ -169,14 +169,6 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
     $data['node:imagex_news:default']->display->content['new-8']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
     $data['node:imagex_news:default']->display->content['new-8']->position = 5; /* WAS: 7 */
     $data['node:imagex_news:default']->display->content['new-8']->subtype = 'node:body'; /* WAS: 'node:field_addthis' */
-    $data['node:imagex_news:default']->display->content['new-9']->configuration['delta_limit'] = 0; /* WAS: 0 */
-    $data['node:imagex_news:default']->display->content['new-9']->configuration['delta_reversed'] = FALSE; /* WAS: 0 */
-    $data['node:imagex_news:default']->display->content['new-9']->configuration['formatter'] = 'addthis_disabled'; /* WAS: 'taxonomy_term_reference_link' */
-    $data['node:imagex_news:default']->display->content['new-9']->configuration['override_title'] = 1; /* WAS: 0 */
-    $data['node:imagex_news:default']->display->content['new-9']->configuration['override_title_text'] = 'Share article'; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-9']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
-    $data['node:imagex_news:default']->display->content['new-9']->position = 6; /* WAS: 8 */
-    $data['node:imagex_news:default']->display->content['new-9']->subtype = 'node:field_addthis'; /* WAS: 'node:field_tags' */
     $data['node:imagex_news:default']->display->layout = 'three_25_50_25'; /* WAS: 'two_33_66' */
     $data['node:imagex_news:default']->display->panels['three_25_50_25_first'] = array(
       0 => 'new-1',
@@ -189,10 +181,9 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
       3 => 'new-6',
       4 => 'new-7',
       5 => 'new-8',
-      6 => 'new-9',
-      7 => 'new-10',
-      8 => 'new-11',
-      9 => 'new-12',
+      6 => 'new-10',
+      7 => 'new-11',
+      8 => 'new-12',
     ); /* WAS: '' */
     $data['node:imagex_news:default']->display->panels['three_25_50_25_third'] = array(
       0 => 'new-13',
