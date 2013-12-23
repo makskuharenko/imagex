@@ -56,7 +56,7 @@ div.messages {
       }
     }
   }
-  
+
   .node-title-teaser {
     margin: 0 0 5px;
 
@@ -71,19 +71,20 @@ div.messages {
         font-size: 26px;
         line-height: 30px;
       }
-  
+
       @include at-breakpoint($computer) {
         font-size: 34px;
         line-height: 36px;
       }
-    } 
+    }
   }
-  
+
   .node-meta-wrapper {
     @include clearfix();
     margin: 0 0 10px 0;
   }
 
+  .node .author,
   .node-author {
     display: block;
     float: left;
@@ -101,6 +102,7 @@ div.messages {
     }
   }
 
+  .node .date,
   .node-meta,
   .node-date {
     display: block;
@@ -113,9 +115,9 @@ div.messages {
     color: $linuxDarkGray;
   }
 
+  .node .comments,
   .node-comment-counter {
-    display: block;
-    float: left;
+    display: inline-block;
     margin: 0 10px 0 0;
     padding: 0 10px 0 22px;
     background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
@@ -138,7 +140,7 @@ div.messages {
       clear: left;
     }
   }
-  
+
   .node-text-teaser {
     font-size: 12px;
     font-weight: 300;
@@ -146,14 +148,14 @@ div.messages {
     line-height: 20px;
     color: $gray;
   }
-  
+
   .node-teaser {
     margin-bottom: 2em;
-    
+
     .links {
       margin: 10px 0 0 0;
     }
-    
+
     .node-readmore {
       a {
         display: block;
@@ -566,18 +568,18 @@ small {
       display: block;
     }
   }
-  
+
   .linux-training-feed {
     margin: 0;
   }
-  
+
   .linux-training-feed li,
   .views-row {
     padding: 12px 20px;
     display: inline-block;
     width: 100%;
     list-style: none;
-    
+
     &.odd,
     &.views-row-odd {
       background: transparent;
@@ -589,7 +591,7 @@ small {
         background: $tableBackgroundHover;
       }
     }
-    
+
     &.even,
     &.views-row-even {
       background: $tableBackgroundHover;
@@ -601,7 +603,7 @@ small {
         background: transparent;
       }
     }
-    
+
     .node-title,
     .node-body,
     .views-field-body,
@@ -631,8 +633,8 @@ small {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    
-    
+
+
   }
 }
 
@@ -647,7 +649,7 @@ small {
       padding: 0 0 2em;
     }
   }
-  
+
   .standard-bean-full > div {
     display: block !important;
     padding: 0 0 2em;
@@ -1453,7 +1455,7 @@ small {
   ul {
     list-style-type: none;
     margin: 0;
-    
+
     .views-row {
       margin: 0;
       width: 100%;
@@ -2703,7 +2705,7 @@ div[role="main"] {
 // ---------------------------------------
 .linux-training-feed li {
   font-weight: 400;
-  
+
   .title,
   .title a {
     font-weight: 700;
@@ -2713,7 +2715,7 @@ div[role="main"] {
   }
   .meta {
     font-size: 12px;
-    color: lighten($grayDark, 50%);    
+    color: lighten($grayDark, 50%);
   }
   .links {
     font-size: 11px;

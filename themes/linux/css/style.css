@@ -2651,7 +2651,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -4792,6 +4792,7 @@ div.messages {
   overflow: hidden;
   *zoom: 1;
   margin: 0 0 10px 0; }
+.not-front .node .author,
 .not-front .node-author {
   display: block;
   float: left;
@@ -4803,8 +4804,10 @@ div.messages {
   font-family: "Open Sans Condensed";
   border-right: 1px solid #e5e5e5;
   color: #333333; }
+  .not-front .node .author a,
   .not-front .node-author a {
     color: inherit; }
+.not-front .node .date,
 .not-front .node-meta,
 .not-front .node-date {
   display: block;
@@ -4815,16 +4818,18 @@ div.messages {
   font-size: 13px;
   border-right: 1px solid #e5e5e5;
   color: #666666; }
+.not-front .node .comments,
 .not-front .node-comment-counter {
-  display: block;
-  float: left;
+  display: inline-block;
   margin: 0 10px 0 0;
   padding: 0 10px 0 22px;
   background: transparent url("../img/comment-icon-orange.png") no-repeat left center; }
+  .not-front .node .comments p,
   .not-front .node-comment-counter p {
     margin: 0;
     font-size: 13px;
     font-weight: 700; }
+    .not-front .node .comments p a,
     .not-front .node-comment-counter p a {
       color: #666666; }
 .not-front .node-meta-last {
