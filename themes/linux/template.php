@@ -129,11 +129,13 @@ function linux_preprocess_node(&$vars,$hook) {
     // Template suggestions
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['view_mode'];
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type;
     
     // Title attribute/class
     $vars['title_attributes_array']['class'][] = 'node-title-' . $vars['view_mode'];    
     
     // wrapper attributes/classes
+    $vars['attributes_array']['class'][] = 'node-' . $vars['node']->type;
     $vars['attributes_array']['class'][] = 'node-' . $vars['view_mode'];
     $vars['attributes_array']['class'][] = 'node-' . $vars['node']->type . '-' . $vars['view_mode'];
     $vars['attributes_array']['id'] = 'node-' . $vars['node']->nid;
