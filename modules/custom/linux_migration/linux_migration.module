@@ -346,6 +346,72 @@ function linux_migration_migrate_api() {
           ),
         ),
       ),
+      'LinuxArchive09Category' => array(
+        'class_name' => 'LinuxArchive09CategoryMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com categories',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxArchive09Article' => array(
+        'class_name' => 'LinuxArchive09ArticleMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com articles',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxArchive09ArticleComment' => array(
+        'class_name' => 'LinuxArchive09ArticleCommentMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com article comments',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxArchive09Forum' => array(
+        'class_name' => 'LinuxArchive09ForumMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com forums',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxArchive09ForumTopic' => array(
+        'class_name' => 'LinuxArchive09ForumTopicMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com forum topics',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
+      'LinuxArchive09ForumPost' => array(
+        'class_name' => 'LinuxArchive09ForumPostMigration',
+        'group_name' => 'linux',
+        'description' => 'Migrate archived Linux.com forum posts',
+        'source' => array(
+          'connection' => array(
+            'name' => 'linux-archive',
+            'target' => 'default',
+          ),
+        ),
+      ),
     ),
   );
 }
