@@ -9,7 +9,8 @@ projects[imagex_installkit][type] = "profile"
 projects[imagex_installkit][download][type] = "git"
 projects[imagex_installkit][download][url] = "git@github.com:imagex/imagex_installkit.git"
 projects[imagex_installkit][download][branch] = "7.x-1.x-dev"
-projects[imagex_installkit][patch][] = "https://raw.github.com/imagex/linux.com/7.x-dev/patches/imagex_installkit/drupal-org.make-versions-and-patches.patch?token=316512__eyJzY29wZSI6IlJhd0Jsb2I6aW1hZ2V4L2xpbnV4LmNvbS83LngtZGV2L3BhdGNoZXMvaW1hZ2V4X2luc3RhbGxraXQvZHJ1cGFsLW9yZy5tYWtlLXZlcnNpb25zLWFuZC1wYXRjaGVzLnBhdGNoIiwiZXhwaXJlcyI6MTM4NzgxNzU4M30%3D--34fad2583523c89e10c2716062285d09f853dbea"
+projects[imagex_installkit][patch][] = "https://raw.github.com/imagex/linux.com/7.x-dev/patches/imagex_installkit/drupal-org.make-versions-and-patches.patch?token=316512__eyJzY29wZSI6IlJhd0Jsb2I6aW1hZ2V4L2xpbnV4LmNvbS83LngtZGV2L3BhdGNoZXMvaW1hZ2V4X2luc3RhbGxraXQvZHJ1cGFsLW9yZy5tYWtlLXZlcnNpb25zLWFuZC1wYXRjaGVzLnBhdGNoIiwiZXhwaXJlcyI6MTM4OTAzMjQ4OH0%3D--31022f43449164fc92daede8564ae55a2cd20805"
+
 ; Download the Linux.com's installation profile, inherits ImageX base.
 projects[linux][type] = "profile"
 projects[linux][download][type] = "git"
