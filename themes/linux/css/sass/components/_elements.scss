@@ -2492,6 +2492,18 @@ div[role="main"] {
   }
 }
 
+.no-odd-even {
+  .views-row {
+    border-bottom: 1px solid $dropdownDividerTop;
+    margin-bottom: 2em;
+
+    &.views-row-odd,
+    &.views-row-even {
+      background: white;
+    }
+  }
+}
+
 .view-landing-pages,
 .view-linux-answers {
   display: block !important;
@@ -2703,10 +2715,11 @@ div[role="main"] {
 // Linux Training Block & Linux Events Block
 // Most is covered by standard-bean styles
 // ---------------------------------------
-.view-linux-events .views-row,
+.secondary-content .standard-bean .view-linux-events .views-row,
 .linux-training-feed li {
   font-weight: normal;
   color: lighten($grayDark, 70%);
+  @include clearfix;
   
   .views-field-title,
   .views-field-title a,
@@ -2723,6 +2736,10 @@ div[role="main"] {
     font-size: 12px;
     color: lighten($grayDark, 50%);
   }
+  .views-field-body {
+    color: lighten($grayDark, 40%);
+  }
+  
   .views-field-field-event-external-link,
   .views-field-view-node,
   .links {
@@ -2730,6 +2747,10 @@ div[role="main"] {
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
+  }
+  
+  .views-field-field-logo {
+    float: left;
   }
 }
 
