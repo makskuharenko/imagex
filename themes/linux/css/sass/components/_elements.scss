@@ -2700,12 +2700,16 @@ div[role="main"] {
   }
 }
 
-// Linux Training Block
+// Linux Training Block & Linux Events Block
 // Most is covered by standard-bean styles
 // ---------------------------------------
+.view-linux-events .views-row,
 .linux-training-feed li {
-  font-weight: 400;
-
+  font-weight: normal;
+  color: lighten($grayDark, 70%);
+  
+  .views-field-title,
+  .views-field-title a,
   .title,
   .title a {
     font-weight: 700;
@@ -2713,12 +2717,16 @@ div[role="main"] {
     font-size: 13px;
     line-height: normal;
   }
+  .views-field-field-event-date,
+  .views-field-field-address,
   .meta {
     font-size: 12px;
     color: lighten($grayDark, 50%);
   }
+  .views-field-field-event-external-link,
+  .views-field-view-node,
   .links {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;

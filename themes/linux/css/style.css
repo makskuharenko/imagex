@@ -7021,19 +7021,37 @@ div[role="main"] .pane-menu-menu-join-us {
       .page-taxonomy .node .links .node-readmore a:hover {
         background: #bb5c00; }
 
+.view-linux-events .views-row,
 .linux-training-feed li {
-  font-weight: 400; }
+  font-weight: normal;
+  color: #e6e6e6; }
+  .view-linux-events .views-row .views-field-title,
+  .view-linux-events .views-row .views-field-title a,
+  .view-linux-events .views-row .title,
+  .view-linux-events .views-row .title a,
+  .linux-training-feed li .views-field-title,
+  .linux-training-feed li .views-field-title a,
   .linux-training-feed li .title,
   .linux-training-feed li .title a {
     font-weight: 700;
     color: #333333;
     font-size: 13px;
     line-height: normal; }
+  .view-linux-events .views-row .views-field-field-event-date,
+  .view-linux-events .views-row .views-field-field-address,
+  .view-linux-events .views-row .meta,
+  .linux-training-feed li .views-field-field-event-date,
+  .linux-training-feed li .views-field-field-address,
   .linux-training-feed li .meta {
     font-size: 12px;
     color: #b3b3b3; }
+  .view-linux-events .views-row .views-field-field-event-external-link,
+  .view-linux-events .views-row .views-field-view-node,
+  .view-linux-events .views-row .links,
+  .linux-training-feed li .views-field-field-event-external-link,
+  .linux-training-feed li .views-field-view-node,
   .linux-training-feed li .links {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px; }
