@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function linux_landing_pages_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "flexslider" && $api == "flexslider_default_preset") {
+    return array("version" => "1");
+  }
   if ($module == "panelizer" && $api == "panelizer") {
     return array("version" => "1");
   }
