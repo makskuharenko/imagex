@@ -473,6 +473,7 @@ function linux_configuration_strongarm() {
   $strongarm->value = array(
     'landing_page' => 'landing_page',
     'page' => 'page',
+    'webform' => 'webform',
   );
   $export['uuid_features_entity_node'] = $strongarm;
 
