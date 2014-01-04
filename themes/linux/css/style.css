@@ -5268,6 +5268,8 @@ a {
 .secondary-content .standard-bean-full > div {
   display: block !important;
   padding: 0 0 2em; }
+.secondary-content .standard-bean .contextual-links-region {
+  position: static; }
 
 @media (min-width: 45.5em) {
   .diagonal-lines h2 {

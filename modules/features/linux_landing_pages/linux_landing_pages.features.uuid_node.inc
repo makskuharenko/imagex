@@ -2911,7 +2911,14 @@ ZW|Zimbabwe
   'data' => 'b:0;',
   'workbench_access' => array(),
   'date' => '2013-12-11 04:22:32 +0000',
-  'url_alias' => array(),
+  'url_alias' => array(
+    135 => array(
+      'pid' => 135,
+      'source' => 'node/25',
+      'alias' => 'linux-events',
+      'language' => 'und',
+    ),
+  ),
 );
   $nodes[] = array(
   'uid' => 0,
