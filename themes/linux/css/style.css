@@ -6513,11 +6513,13 @@ div[role="main"] .pane-menu-menu-join-us {
     .profile-details .views-row .views-field-nothing .facebook,
     .profile-details .views-row .views-field-nothing .google,
     .profile-details .views-row .views-field-nothing .linkedin,
+    .profile-details .views-row .views-field-nothing .github,
     .profile-details .views-row .views-field-nothing .rss,
     .profile-details .views-row .views-field-nothing-1 .twitter,
     .profile-details .views-row .views-field-nothing-1 .facebook,
     .profile-details .views-row .views-field-nothing-1 .google,
     .profile-details .views-row .views-field-nothing-1 .linkedin,
+    .profile-details .views-row .views-field-nothing-1 .github,
     .profile-details .views-row .views-field-nothing-1 .rss {
       width: 18px;
       height: 18px;
@@ -6537,11 +6539,13 @@ div[role="main"] .pane-menu-menu-join-us {
       .profile-details .views-row .views-field-nothing .facebook:before,
       .profile-details .views-row .views-field-nothing .google:before,
       .profile-details .views-row .views-field-nothing .linkedin:before,
+      .profile-details .views-row .views-field-nothing .github:before,
       .profile-details .views-row .views-field-nothing .rss:before,
       .profile-details .views-row .views-field-nothing-1 .twitter:before,
       .profile-details .views-row .views-field-nothing-1 .facebook:before,
       .profile-details .views-row .views-field-nothing-1 .google:before,
       .profile-details .views-row .views-field-nothing-1 .linkedin:before,
+      .profile-details .views-row .views-field-nothing-1 .github:before,
       .profile-details .views-row .views-field-nothing-1 .rss:before {
         display: block !important;
         padding: 0 !important;
@@ -6551,11 +6555,13 @@ div[role="main"] .pane-menu-menu-join-us {
       .profile-details .views-row .views-field-nothing .facebook a,
       .profile-details .views-row .views-field-nothing .google a,
       .profile-details .views-row .views-field-nothing .linkedin a,
+      .profile-details .views-row .views-field-nothing .github a,
       .profile-details .views-row .views-field-nothing .rss a,
       .profile-details .views-row .views-field-nothing-1 .twitter a,
       .profile-details .views-row .views-field-nothing-1 .facebook a,
       .profile-details .views-row .views-field-nothing-1 .google a,
       .profile-details .views-row .views-field-nothing-1 .linkedin a,
+      .profile-details .views-row .views-field-nothing-1 .github a,
       .profile-details .views-row .views-field-nothing-1 .rss a {
         position: absolute;
         top: 0;
@@ -6639,6 +6645,31 @@ div[role="main"] .pane-menu-menu-join-us {
     .profile-details .views-row .views-field-nothing .linkedin:before,
     .profile-details .views-row .views-field-nothing-1 .linkedin:before {
       content: "\f0e1";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      padding-right: 5px;
+      text-decoration: none;
+      /* sprites.less reset */
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      line-height: normal;
+      vertical-align: baseline;
+      background-image: none;
+      background-position: 0% 0%;
+      background-repeat: repeat; }
+    .profile-details .views-row .views-field-nothing .github:before,
+    .profile-details .views-row .views-field-nothing-1 .github:before {
+      content: "\f09b";
       font-family: FontAwesome;
       font-weight: normal;
       font-style: normal;
