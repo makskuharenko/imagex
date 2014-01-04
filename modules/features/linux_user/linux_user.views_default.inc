@@ -312,6 +312,15 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_linkedin']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_linux_linkedin']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_linux_linkedin']['click_sort_column'] = 'url';
+  /* Field: User: GitHub Profile */
+  $handler->display->display_options['fields']['field_linux_github_profile']['id'] = 'field_linux_github_profile';
+  $handler->display->display_options['fields']['field_linux_github_profile']['table'] = 'field_data_field_linux_github_profile';
+  $handler->display->display_options['fields']['field_linux_github_profile']['field'] = 'field_linux_github_profile';
+  $handler->display->display_options['fields']['field_linux_github_profile']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['field_linux_github_profile']['label'] = '';
+  $handler->display->display_options['fields']['field_linux_github_profile']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_github_profile']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_github_profile']['click_sort_column'] = 'url';
   /* Field: User: RSS */
   $handler->display->display_options['fields']['field_linux_rss']['id'] = 'field_linux_rss';
   $handler->display->display_options['fields']['field_linux_rss']['table'] = 'field_data_field_linux_rss';
@@ -351,6 +360,7 @@ function linux_user_views_default_views() {
 <div class="twitter">[field_linux_twitter]</div>
 <div class="google">[field_linux_google_]</div>
 <div class="linkedin">[field_linux_linkedin]</div>
+<div class="github">[field_linux_github_profile]</div>
 <div class="rss">[field_linux_rss]</div>';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;

@@ -2196,6 +2196,7 @@ div[role="main"] {
       .facebook,
       .google,
       .linkedin,
+      .github,
       .rss {
         width: 18px;
         height: 18px;
@@ -2237,6 +2238,10 @@ div[role="main"] {
 
       .linkedin {
         @include icon-linkedin;
+      }
+      
+      .github {
+        @include icon-github;
       }
 
       .rss {
