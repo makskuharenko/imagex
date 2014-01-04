@@ -5268,6 +5268,8 @@ a {
 .secondary-content .standard-bean-full > div {
   display: block !important;
   padding: 0 0 2em; }
+.secondary-content .standard-bean .contextual-links-region {
+  position: static; }
 
 @media (min-width: 45.5em) {
   .diagonal-lines h2 {
@@ -6886,6 +6888,12 @@ div[role="main"] .pane-menu-menu-join-us {
   clear: left;
   background: white; }
 
+.no-odd-even .views-row {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 2em; }
+  .no-odd-even .views-row.views-row-odd, .no-odd-even .views-row.views-row-even {
+    background: white; }
+
 .view-landing-pages,
 .view-linux-answers {
   display: block !important; }
@@ -7052,22 +7060,48 @@ div[role="main"] .pane-menu-menu-join-us {
       .page-taxonomy .node .links .node-readmore a:hover {
         background: #bb5c00; }
 
+.secondary-content .standard-bean .view-linux-events .views-row,
 .linux-training-feed li {
-  font-weight: 400; }
+  font-weight: normal;
+  color: #e6e6e6;
+  overflow: hidden;
+  *zoom: 1; }
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-title,
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-title a,
+  .secondary-content .standard-bean .view-linux-events .views-row .title,
+  .secondary-content .standard-bean .view-linux-events .views-row .title a,
+  .linux-training-feed li .views-field-title,
+  .linux-training-feed li .views-field-title a,
   .linux-training-feed li .title,
   .linux-training-feed li .title a {
     font-weight: 700;
     color: #333333;
     font-size: 13px;
     line-height: normal; }
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-field-event-date,
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-field-address,
+  .secondary-content .standard-bean .view-linux-events .views-row .meta,
+  .linux-training-feed li .views-field-field-event-date,
+  .linux-training-feed li .views-field-field-address,
   .linux-training-feed li .meta {
     font-size: 12px;
     color: #b3b3b3; }
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-body,
+  .linux-training-feed li .views-field-body {
+    color: #999999; }
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-field-event-external-link,
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-view-node,
+  .secondary-content .standard-bean .view-linux-events .views-row .links,
+  .linux-training-feed li .views-field-field-event-external-link,
+  .linux-training-feed li .views-field-view-node,
   .linux-training-feed li .links {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px; }
+  .secondary-content .standard-bean .view-linux-events .views-row .views-field-field-logo,
+  .linux-training-feed li .views-field-field-logo {
+    float: left; }
 
 .page-404-not-found .page,
 .page-403-forbidden .page {

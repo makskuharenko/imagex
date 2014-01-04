@@ -654,6 +654,10 @@ small {
     display: block !important;
     padding: 0 0 2em;
   }
+  
+  .standard-bean .contextual-links-region {
+    position: static;
+  }
 }
 
 .diagonal-lines {
@@ -1449,6 +1453,7 @@ small {
 }
 
 // Events View Listing
+// legacy?
 // -------------------
 
 .events {
@@ -2497,6 +2502,18 @@ div[role="main"] {
   }
 }
 
+.no-odd-even {
+  .views-row {
+    border-bottom: 1px solid $dropdownDividerTop;
+    margin-bottom: 2em;
+
+    &.views-row-odd,
+    &.views-row-even {
+      background: white;
+    }
+  }
+}
+
 .view-landing-pages,
 .view-linux-answers {
   display: block !important;
@@ -2705,12 +2722,17 @@ div[role="main"] {
   }
 }
 
-// Linux Training Block
+// Linux Training Block & Linux Events Block
 // Most is covered by standard-bean styles
 // ---------------------------------------
+.secondary-content .standard-bean .view-linux-events .views-row,
 .linux-training-feed li {
-  font-weight: 400;
-
+  font-weight: normal;
+  color: lighten($grayDark, 70%);
+  @include clearfix;
+  
+  .views-field-title,
+  .views-field-title a,
   .title,
   .title a {
     font-weight: 700;
@@ -2718,15 +2740,27 @@ div[role="main"] {
     font-size: 13px;
     line-height: normal;
   }
+  .views-field-field-event-date,
+  .views-field-field-address,
   .meta {
     font-size: 12px;
     color: lighten($grayDark, 50%);
   }
+  .views-field-body {
+    color: lighten($grayDark, 40%);
+  }
+  
+  .views-field-field-event-external-link,
+  .views-field-view-node,
   .links {
-    font-size: 11px;
+    font-size: 10px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
+  }
+  
+  .views-field-field-logo {
+    float: left;
   }
 }
 

@@ -24,7 +24,10 @@ function linux_events_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Linux Events';
   $handler->display->display_options['use_ajax'] = TRUE;
-  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['use_more_text'] = 'See All';
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -61,38 +64,33 @@ function linux_events_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Event Logo */
-  $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
-  $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_logo']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-  );
-  /* Field: : field_event_date */
+  /* Field: Content: Event Date */
   $handler->display->display_options['fields']['field_event_date']['id'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['fields']['field_event_date']['field'] = 'field_event_date';
   $handler->display->display_options['fields']['field_event_date']['label'] = '';
+  $handler->display->display_options['fields']['field_event_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_date']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_event_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_date']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_event_date']['settings'] = array(
-    'format_type' => 'day_month_short',
+    'format_type' => 'linux_events_short_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Address */
+  /* Field: Date + Address */
   $handler->display->display_options['fields']['field_address']['id'] = 'field_address';
   $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
+  $handler->display->display_options['fields']['field_address']['ui_name'] = 'Date + Address';
   $handler->display->display_options['fields']['field_address']['label'] = '';
   $handler->display->display_options['fields']['field_address']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_address']['alter']['text'] = '[field_address-locality], [field_address-country]';
+  $handler->display->display_options['fields']['field_address']['alter']['text'] = '<div class="meta">[field_event_date], [field_address-locality], [field_address-country]</div>';
+  $handler->display->display_options['fields']['field_address']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_address']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
   $handler->display->display_options['fields']['field_address']['settings'] = array(
     'use_widget_handlers' => 1,
@@ -114,7 +112,9 @@ function linux_events_views_default_views() {
   $handler->display->display_options['fields']['field_event_external_link']['label'] = '';
   $handler->display->display_options['fields']['field_event_external_link']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_event_external_link']['alter']['text'] = '<a href="[field_event_external_link-url]" class="event-register uppercase">Register Now</a>';
+  $handler->display->display_options['fields']['field_event_external_link']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_event_external_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_event_external_link']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_event_external_link']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_event_external_link']['type'] = 'link_plain';
   /* Field: Content: Link */
@@ -122,14 +122,16 @@ function linux_events_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_type'] = 'span';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['view_node']['text'] = 'Learn More';
-  /* Sort criterion: : field_event_linux_foundation (field_event_linux_foundation) */
+  /* Sort criterion: Content: Linux Foundation Event (field_event_linux_foundation) */
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['id'] = 'field_event_linux_foundation_value';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['table'] = 'field_data_field_event_linux_foundation';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['field'] = 'field_event_linux_foundation_value';
   $handler->display->display_options['sorts']['field_event_linux_foundation_value']['order'] = 'DESC';
-  /* Sort criterion: : field_event_date (field_event_date) */
+  /* Sort criterion: Content: Event Date -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
   $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
@@ -196,22 +198,58 @@ function linux_events_views_default_views() {
   $handler->display->display_options['filters']['field_event_date_value']['field'] = 'field_event_date_value';
   $handler->display->display_options['filters']['field_event_date_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_date_value']['granularity'] = 'second';
-  $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';  
+  $handler->display->display_options['filters']['field_event_date_value']['default_date'] = 'now';
 
-  /* Display: Events List Content pane */
-  $handler = $view->new_display('panel_pane', 'Events List Content pane', 'panel_pane_2');
+  /* Display: Events List Content pane (no filters) */
+  $handler = $view->new_display('panel_pane', 'Events List Content pane (no filters)', 'panel_pane_1');
+  $handler->display->display_options['link_url'] = 'linux-events';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_event_external_link' => 'field_event_external_link',
+    'view_node' => 'view_node',
+  );
+  $handler->display->display_options['row_options']['separator'] = ' | ';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'Linux.com';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
   $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 'link_to_view';
+  $handler->display->display_options['allow']['more_link'] = 'more_link';
+  $handler->display->display_options['allow']['path_override'] = 'path_override';
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
+  $handler->display->display_options['allow']['fields_override'] = 'fields_override';
+
+  /* Display: Events List Content pane (filters) */
+  $handler = $view->new_display('panel_pane', 'Events List Content pane (filters)', 'panel_pane_3');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['pane_description'] = 'Contains exposed filters for use on "pages"';
+  $handler->display->display_options['pane_category']['name'] = 'Linux.com';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 'use_pager';
+  $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 'link_to_view';
   $handler->display->display_options['allow']['more_link'] = 'more_link';
   $handler->display->display_options['allow']['path_override'] = 'path_override';
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
   $export['linux_events'] = $view;
+
+  features_alter_code('views_view', $export);
 
   return $export;
 }

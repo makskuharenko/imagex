@@ -28,7 +28,7 @@ function linux_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -50,43 +50,7 @@ function linux_events_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-event-field_groups'
-  $field_instances['node-event-field_groups'] = array(
-    'bundle' => 'event',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'og_role_field',
-        'settings' => array(),
-        'type' => 'og_role_field_formatter_plain',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_groups',
-    'label' => 'Groups',
-    'required' => FALSE,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 7,
-    ),
-  );
-  
-// Exported field_instance: 'node-event-field_event_date'
+  // Exported field_instance: 'node-event-field_event_date'
   $field_instances['node-event-field_event_date'] = array(
     'bundle' => 'event',
     'deleted' => 0,
@@ -106,10 +70,17 @@ function linux_events_field_default_field_instances() {
         'weight' => 17,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'linux_events_short_date',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -162,7 +133,7 @@ function linux_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -182,15 +153,53 @@ function linux_events_field_default_field_instances() {
       'weight' => 4,
     ),
     'workbench_access_field' => 0,
-  );  
+  );
+
+  // Exported field_instance: 'node-event-field_groups'
+  $field_instances['node-event-field_groups'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'og_role_field',
+        'settings' => array(),
+        'type' => 'og_role_field_formatter_plain',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_groups',
+    'label' => 'Groups',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 7,
+    ),
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Event Date');
   t('Event category');
   t('Groups');
-  t('Event Date');
   t('Is this a Linux Foundation event?');
-  t('Linux Foundation Event');  
+  t('Linux Foundation Event');
+
+  features_alter_code('field_instance', $field_instances);
 
   return $field_instances;
 }

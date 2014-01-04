@@ -5,3 +5,36 @@
  */
 
 include_once 'linux_events.features.inc';
+
+/**
+ * Implements hook_date_format_types()
+ *
+ * Workaround for https://drupal.org/node/1279928
+ */
+function linux_events_date_format_types() {
+  // Mini/short date for events
+  return array(
+    'linux_events_short_date' => t('Events Short Date'),
+  );
+}
+
+/**
+ * Implements hook_date_formats()
+ */
+function linux_events_date_formats() {
+  $formats = array();
+  $formats[] = array(
+    'type' => 'linux_events_short_date',
+    'format' => 'j M',
+    'locales' => array(),
+   );
+  
+  // save the new date formats into variables
+  foreach ($formats as $format) {
+    $existing = variable_get('date_format_' . $format['type']);
+    if (empty($existing)) {
+      variable_set('date_format_' . $format['type'], $format['format']);
+    }
+  }
+  return $formats;  
+}
