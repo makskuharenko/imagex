@@ -5,3 +5,88 @@
  */
 
 include_once 'linux_directory_page.features.inc';
+
+
+/**
+ * Implements of hook_entity_info_alter().
+ */
+function linux_directory_page_entity_info_alter(&$entity_info) {
+  if (!empty($entity_info['taxonomy_term'])) {
+    $entity_info['taxonomy_term']['uri callback'] = 'linux_directory_page_taxonomy_term_uri';
+  }
+}
+ 
+/**
+ * Custom entity uri callback for directory sections vocab
+ */
+function linux_directory_page_taxonomy_term_uri($term) {
+  if ($term->vocabulary_machine_name == 'directory_sections') {
+    $term = taxonomy_term_load($term->tid);
+    return array(
+      'path' => 'directory/section/' . check_url($term->name),
+    );
+  }
+  return taxonomy_term_uri($term);
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function linux_directory_page_block_info() {
+  $blocks = array();
+
+  // Since views only can list A-Z if theres a node for
+  // each letter we have to code it
+  $blocks['directory_page_az'] = array(
+    'info' => t('Directory A-Z list'),
+    'cache' => DRUPAL_NO_CACHE,
+  );  
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ * Return a rendered or renderable view of a block.
+ */
+function linux_directory_page_block_view($delta = '') {
+  $block = array();
+  
+  if ($delta == 'directory_page_az') {
+    $directory_az = linux_directory_page_directory_az();
+    $block['subject'] = NULL;
+    $block['content'] = array(
+      '#markup' => $directory_az,
+    );
+  }
+  
+  return $block;
+}
+
+/**
+ * Return an A to Z list
+ */
+function linux_directory_page_directory_az() {
+  $links = array();
+  
+  $directory_base_url = 'directory';
+  $links[] = l(t('0-9'), $directory_base_url . '/9');
+  
+  $list = range('a', 'z');
+  foreach ($list as $key => $label) {
+    $value = variable_get('views_az_filter_uppercase', TRUE) ? drupal_strtoupper($label) : $label;
+    $links[] = l(drupal_strtoupper(t($label)), $directory_base_url . '/'. $value);
+  }
+  
+  $render = array(
+    '#theme' => 'item_list',
+    '#type' => 'ul',
+    '#items' => $links,
+    '#attributes' => array(
+      'class' => array(
+        'directory-a-z',
+      )
+    )
+  );
+  
+  return drupal_render($render);
+}
