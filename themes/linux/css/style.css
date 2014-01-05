@@ -7310,3 +7310,41 @@ a.imagex-contest-contest-entry-admin {
   border: none; }
 .poll .percent-percentage {
   font-weight: bold; }
+
+.directory-a-z {
+  padding: 0.3em 0.6em;
+  margin: 1em 0 2em 0;
+  background-color: #f17700; }
+  .directory-a-z li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0; }
+    .directory-a-z li.first {
+      padding-right: 8px; }
+  .directory-a-z a {
+    color: #f2f2f2;
+    padding: 0 2px; }
+    .directory-a-z a:hover {
+      text-decoration: underline;
+      color: white; }
+    .directory-a-z a.active {
+      color: white;
+      font-weight: bold; }
+
+.view-linux-directory-glossary {
+  margin: 1em 0 2em 0; }
+  .view-linux-directory-glossary .views-row {
+    padding: 0.5em 0; }
+  .view-linux-directory-glossary .views-field-description {
+    font-size: 0.9em; }
+
+@media (min-width: 35em) {
+  .view-linux-directory-glossary {
+    overflow: hidden; }
+    .view-linux-directory-glossary .views-row {
+      padding: 0.5em;
+      float: left;
+      width: 48%; }
+      .view-linux-directory-glossary .views-row.views-row-even {
+        float: right; } }
