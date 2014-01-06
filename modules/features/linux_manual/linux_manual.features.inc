@@ -38,7 +38,7 @@ function linux_manual_node_info() {
     'manual' => array(
       'name' => t('Manual'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>manual</em> to create a Linux manual page.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

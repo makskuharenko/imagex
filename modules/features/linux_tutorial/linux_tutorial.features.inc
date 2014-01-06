@@ -24,7 +24,7 @@ function linux_tutorial_node_info() {
     'tutorial' => array(
       'name' => t('Tutorial'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>tutorial</em> to create a new How To like articles.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

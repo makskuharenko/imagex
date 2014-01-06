@@ -31,7 +31,7 @@ function linux_gallery_node_info() {
     'gallery' => array(
       'name' => t('Gallery'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>gallery</em> sharing and categorizing a single image or photo.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

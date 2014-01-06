@@ -21,7 +21,7 @@ function linux_humor_node_info() {
     'humor' => array(
       'name' => t('Humor'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Use <em>humor</em> to create a new comic strip entry (e.g. Friday Funnies).'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
