@@ -10,6 +10,38 @@ class LinuxForumMigration extends LinuxMigration {
     $this->addFieldMapping('weight', 'ordering');
     $this->addFieldMapping('parent', 'parent_id')->sourceMigration('LinuxForum');
   }
+  public function prepareRow($row) {
+    switch ($row->title) {
+      case 'Productivity':
+        $row->title = 'Applications';
+        break;
+      case 'Desktop':
+        return FALSE;
+      case 'Scanners':
+       return FALSE;
+      case 'OpenSUSE':
+        $row->title = 'SUSE';
+        break;
+      case 'SUSE enterprise':
+        $row->title = 'SUSE';
+        break;
+      case 'Open Source Cloud Computing':
+        $row->title = 'Cloud Computing';
+        $row->parent_id = 37;
+        break;
+      case 'Cloud Management':
+        return FALSE;
+      case 'MeeGo':
+        $row->title = 'Operating Systems';
+        break;
+      case 'Yocto Project':
+        $row->title = 'Development';
+        break;
+      case 'MEPIS':
+        $row->title = 'Debian';
+        break;
+    }
+  }
   /**
    * Returns the source object instance for this migration.
    *

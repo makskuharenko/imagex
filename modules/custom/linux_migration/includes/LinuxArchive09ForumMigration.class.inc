@@ -3,14 +3,31 @@
 class LinuxArchive09ForumMigration extends LinuxMigration {
   protected function init() {
     parent::init();
+    $this->dependencies = array('LinuxForum');
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('name', 'xar_fname');
     $this->addFieldMapping('description', 'xar_fdesc');
+    $this->addFieldMapping('parent', 'xar_parent')->sourceMigration('LinuxForum');
 
   }
   public function prepareRow($row) {
-
+    // These get remapped to existing forum tids during the topic migration.
+    switch ($row->xar_fid) {
+      case 3:
+        return FALSE;
+      case 4:
+        return FALSE;
+      case 5:
+        $row->xar_fname = 'Development';
+        $row->xar_parent = 5;
+        break;
+      case 6:
+        return FALSE;
+      case 7:
+        return FALSE;
+    }
+    return TRUE;
   }
   /**
    * Returns the source object instance for this migration.
