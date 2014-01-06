@@ -35,6 +35,7 @@ class LinuxForumTopicMigration extends LinuxMigration {
     $this->addFieldMapping('field_file:source_dir')->defaultValue($this->sourcePath);
     $this->addFieldMapping('field_file:destination_dir')->defaultValue('public://forum');
     $this->addFieldMapping('field_file:destination_file', 'filenames')->separator(',');
+    $this->addFieldMapping('workbench_access')->defaultValue($this->workbench_default_tid);
   }
 
   public function prepareRow($row) {
@@ -68,6 +69,21 @@ class LinuxForumTopicMigration extends LinuxMigration {
     }
     $row->filesources = implode(',', $row_files);
     $row->filenames = implode(',', $file_names);
+
+    switch ($row->forum_id) {
+      // Remap Desktop to Productivity->Applications
+      case 20:
+        $row->forum_id = 22;
+        break;
+      // Remamp Scanners to Printers
+      case 31:
+        $row->forum_id = 30;
+        break;
+      // Remap Cloud Management to Open Source Cloud Management->Cloud Management
+      case 38:
+        $row->forum_id = 55;
+        break;
+    }
   }
   /**
    * Returns the source object instance for this migration.

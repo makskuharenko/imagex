@@ -19,6 +19,9 @@ function linux_migration_migrate_api() {
       'nodereference_count',
       'media',
     ),
+    'file_presave' => array(
+      'media_browser_plus',
+    )
   );
   return array(
     'api' => 2,
