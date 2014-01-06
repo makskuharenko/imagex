@@ -21,7 +21,7 @@ function linux_whitepapers_node_info() {
     'whitepaper' => array(
       'name' => t('Whitepaper'),
       'base' => 'node_content',
-      'description' => t('Linux whitepapers and industry insights.'),
+      'description' => t('Use <em>whitepapers</em> to create new authoritative report (e.g. industry insights).'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
