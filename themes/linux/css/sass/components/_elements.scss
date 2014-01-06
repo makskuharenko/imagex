@@ -497,7 +497,7 @@ small {
   clear: left;
   position: relative;
 
-  &.custom-expand {
+  &.custom-expanded {
     padding: 0 0 2em;
   }
 
@@ -513,6 +513,7 @@ small {
     background: $btnBorder url('../img/block-arrow-white-down.png') no-repeat center right 1.5em;
     color: white;
     cursor: pointer;
+    zoom: 1;
 
     &.custom-expanded {
       color: $linuxDarkGray;
@@ -639,9 +640,23 @@ small {
 // only hide standard-beans wrap with secondary-content with panels layout
 .secondary-content {
   .standard-bean {
-    > div {
+    
+    .bean-imagex-widget-basic {
+      padding: 2em 0;
+    }    
+    
+    @include at-breakpoint($computer) {
+      .bean-imagex-widget-basic {
+        padding-top: 0;
+      }
+    }
+    
+    > div,
+    > .linux-training-feed {
       padding: 0 0 1px;
       display: none;
+      overflow:hidden;
+      border: 1px solid transparent;
   
       @include at-breakpoint($computer) {
         display: block;
