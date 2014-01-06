@@ -2,10 +2,11 @@
 
   // jPanel Menu settings
   // ----------------------------------------------------------------------------
-
+  var jPanelMenuMenu = '.recent-events';
+  var jPanelMenuTrigger = '.pullout-menu';
   var jPM = $.jPanelMenu({
-    menu: '.recent-events',
-    trigger: '.pullout-menu'
+    menu: jPanelMenuMenu,
+    trigger: jPanelMenuTrigger
   });
 
   var jRes = jRespond([
@@ -35,7 +36,13 @@
     {
       breakpoint: 'mobile',
       enter: function() {
-        jPM.on();
+        if ($(jPanelMenuMenu).size() > 0) {
+          jPM.on();
+        }
+        else {
+          //hide the trigger
+          $(jPanelMenuTrigger).hide();
+        }
         expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
         moveBlocks($('.three-25-50-25-first'), $('.editorial'), false);
@@ -47,7 +54,13 @@
     },{
       breakpoint: 'tablet',
       enter: function() {
-        jPM.on();
+        if ($(jPanelMenuMenu).size() > 0) {
+          jPM.on();
+        }
+        else {
+          //hide the trigger
+          $(jPanelMenuTrigger).hide();
+        }
         expandBlocks();
         moveBlocks($('.three-25-50-25-third'), $('#comments'), true);
         moveBlocks($('.three-25-50-25-first'), $('.editorial'), false);
@@ -147,15 +160,16 @@
       var insideDiv = $(this).closest('.standard-bean');
 
       if (!insideDiv.hasClass('recent-events')) {
-        insideDiv.find('> div.view, > div.entity, > div.content').slideToggle();
-        insideDiv.find('> div.view, > div.entity, > div.content').toggleClass('custom-expanded');
+        insideDiv.find('> div.view, > div.entity, > div.content, > .linux-training-feed, > .newsletter-signup').slideToggle(200, function() {
+          $(this).toggleClass('custom-expanded');
+        });
         $(this).toggleClass('custom-expanded');
       }
     });
   }
 
   function clearBlocks() {
-    $('.standard-bean').find('> div.view, > div.entity, > div.content').attr('style', '');
+    $('.standard-bean').find('> div.view, > div.entity, > div.content, > .linux-training-feed, > .newsletter-signup').attr('style', '');
     $('.standard-bean').off('click', 'h2');
     $('.standard-bean div.view, .standard-bean div.entity, .standard-bean div.content, .standard-bean h2').removeClass('custom-expanded');
   }

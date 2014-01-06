@@ -5123,7 +5123,7 @@ a {
 .standard-bean {
   clear: left;
   position: relative; }
-  .standard-bean.custom-expand {
+  .standard-bean.custom-expanded {
     padding: 0 0 2em; }
   .standard-bean h2 {
     margin: 0 0 1px;
@@ -5136,7 +5136,8 @@ a {
     border-bottom: 1px solid #bbbbbb;
     background: #bbbbbb url("../img/block-arrow-white-down.png") no-repeat center right 1.5em;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    zoom: 1; }
     .standard-bean h2.custom-expanded {
       color: #666666;
       background: transparent url("../img/block-arrow-gray.png") no-repeat center right 1.5em;
@@ -5277,11 +5278,20 @@ a {
     margin-left: 0 !important;
     margin-right: 0 !important; }
 
-.secondary-content .standard-bean > div {
+.secondary-content .standard-bean .bean-imagex-widget-basic {
+  padding: 2em 0; }
+@media (min-width: 45.5em) {
+  .secondary-content .standard-bean .bean-imagex-widget-basic {
+    padding-top: 0; } }
+.secondary-content .standard-bean > div,
+.secondary-content .standard-bean > .linux-training-feed {
   padding: 0 0 1px;
-  display: none; }
+  display: none;
+  overflow: hidden;
+  border: 1px solid transparent; }
   @media (min-width: 45.5em) {
-    .secondary-content .standard-bean > div {
+    .secondary-content .standard-bean > div,
+    .secondary-content .standard-bean > .linux-training-feed {
       display: block;
       padding: 0 0 2em; } }
 .secondary-content .standard-bean .view-empty {
