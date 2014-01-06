@@ -4826,6 +4826,10 @@ div.messages {
   .not-front .node .author a,
   .not-front .node-author a {
     color: inherit; }
+  .not-front .node .author .username,
+  .not-front .node-author .username {
+    float: none !important;
+    border-right: none !important; }
 .not-front .node .date,
 .not-front .node-meta,
 .not-front .node-date {

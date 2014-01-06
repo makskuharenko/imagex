@@ -3,20 +3,12 @@
 //http://drupalcontrib.org/api/drupal/drupal--modules--node--node.tpl.php
 //node--[CONTENT TYPE].tpl.php
 
-if ($classes) {
-  $classes = ' class="'. $classes . ' "';
-}
-
-if ($id_node) {
-  $id_node = ' id="'. $id_node . '"';
-}
-
 hide($content['comments']);
 hide($content['links']);
 ?>
 
 <!-- node.tpl.php -->
-<article <?php print $id_node . $classes .  $attributes; ?> role="article">
+<article <?php print $attributes; ?> role="article">
   <?php print $mothership_poorthemers_helper; ?>
 
   <?php print render($title_prefix); ?>
@@ -26,22 +18,19 @@ hide($content['links']);
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
-  <footer>
-    <?php print $user_picture; ?>
-    <span class="author"><?php print $name; ?></span>
-    <span class="date"><time><?php print $date; ?></time></span>
+  <div class="node-meta-wrapper">
+    <span class="node-author"><?php print $name; ?></span>
+    <span class="node-date"><time><?php print $date; ?></time></span>
 
     <?php if(module_exists('comment')): ?>
-      <span class="comments"><?php print $comment_count; ?> Answers</span>
+      <span class="node-meta-last node-comment-counter"><?php print $comment_count; ?></span>
     <?php endif; ?>
-  </footer>
+  </div>
   <?php endif; ?>
 
-  <div class="content">
+  <div class="content node-text-teaser">
     <?php print render($content);?>
   </div>
 
   <?php print render($content['links']); ?>
-
-  <?php print render($content['comments']); ?>
 </article>
