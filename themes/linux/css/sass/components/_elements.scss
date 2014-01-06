@@ -633,21 +633,71 @@ small {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-
-
   }
 }
 
 // only hide standard-beans wrap with secondary-content with panels layout
 .secondary-content {
-  .standard-bean > div {
-    padding: 0 0 1px;
-    display: none;
-
-    @include at-breakpoint($computer) {
-      display: block;
-      padding: 0 0 2em;
+  .standard-bean {
+    > div {
+      padding: 0 0 1px;
+      display: none;
+  
+      @include at-breakpoint($computer) {
+        display: block;
+        padding: 0 0 2em;
+      }
     }
+    
+    .view-empty {
+      text-align: center;
+    }
+    
+    // Webforms within standard-bean
+    form.webform-client-form {
+      padding: 0 !important;
+      
+      .form-item {
+        margin-top: 0;
+        
+        textarea,
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="email"],
+        input[type="month"],
+        input[type="number"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="text"],
+        input[type="time"],
+        input[type="url"],
+        input[type="week"] {
+          width: 100%;
+        }
+        .chosen-container {
+          width: 100% !important;
+        }
+      }
+      .webform-component-textfield,
+      .webform-component-textarea,
+      .webform-component-email {
+        label {
+          // Enabled placeholders in template.php so hide labels
+          // IE gets placeholders via JS
+          display: none;
+        }
+      }
+      .form-actions {
+        margin-top: 1.5em;
+        
+        button, a.button, input[type="reset"], input[type="submit"], input[type="button"] {
+          display: block;
+          width: 100%;
+        }
+      }
+    }    
   }
 
   .standard-bean-full > div {
@@ -669,7 +719,7 @@ small {
 
   > div,
   > form {
-    padding: 2em;
+    padding: 2em 1em !important;
     background: transparent url('../img/content-lines.png') repeat top left;
   }
 }

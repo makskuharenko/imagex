@@ -5,6 +5,30 @@
  */
 
 /**
+ * Implements hook_css_alter().
+ */
+function linux_css_alter(&$css) {
+  //Here we go smack all css files into 1 (one) - we like less http request 
+  //IE + respond.js need this
+  foreach ($css as $path => $value) {
+    if ($css[$path]['media'] == 'all') {
+      $css[$path]['media'] = 'screen';
+    }
+  }
+  
+  //grap the css and punch it into one file
+  //credits to metaltoad http://www.metaltoad.com/blog/drupal-7-taking-control-css-and-js-aggregation
+  uasort($css, 'drupal_sort_css_js');
+  $i = 0;
+  foreach ($css as $name => $style) {
+    $css[$name]['weight'] = $i++;
+    $css[$name]['group'] = CSS_DEFAULT;
+    $css[$name]['every_page'] = FALSE;
+  }
+
+} 
+ 
+/**
  * Implements hook_theme_registry_alter().
  */
 function linux_theme_registry_alter(&$theme_registry) {
@@ -14,6 +38,26 @@ function linux_theme_registry_alter(&$theme_registry) {
       if ($function == 'mothership_preprocess_forum_list') {
         unset($theme_registry['forum_list']['preprocess functions'][$k]);
       }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function linux_form_alter(&$form, &$form_state, $form_id) {
+  // If webform, add "placeholder" attributes to all textfields
+  // got code here:http://drupal.stackexchange.com/questions/12706/adding-html5-placeholder-to-all-drupal-forms
+  if (isset($form['#node']->type) && ($form['#node']->type == 'webform')) {
+    foreach ($form["submitted"] as $key => $value) {
+      switch ($value["#type"]) {
+        case 'textfield':
+        case 'textarea':
+        case 'webform_email':
+          $form["submitted"][$key]['#attributes']["placeholder"] = $value["#title"];
+          $form["submitted"][$key]['#attributes']['class'][] = 'has-placeholder';
+          break;
+      } 
     }
   }
 }
@@ -52,22 +96,6 @@ function linux_preprocess_page(&$vars,$hook) {
 
       //add a body class for good measure
       $body_classes[] = 'page-panel';
-    }
-  } 
-}
-
-/**
- * Implements hook_process_page().
- */
-function linux_process_page(&$vars) {
-  // 404 & 403 Pages - force page.tpl
-  // doing it here ensures our page.tpl is picked
-  // as mothership provides page--404 tpl after this theme
-  $headers = drupal_get_http_header();
-  $error_statuses = array('403 Forbidden', '404 Not Found');
-  if (isset($headers['status'])) {
-    if (in_array($headers['status'], $error_statuses)) {
-      $vars['theme_hook_suggestions'][] = 'page';
     }
   } 
 }
@@ -179,4 +207,20 @@ function linux_preprocess_field(&$vars,$hook) {
 
 function linux_preprocess_maintenance_page(){
   //  kpr($vars['content']);
+}
+
+/**
+ * Implements hook_process_page().
+ */
+function linux_process_page(&$vars) {
+  // 404 & 403 Pages - force page.tpl
+  // doing it here ensures our page.tpl is picked
+  // as mothership provides page--404 tpl after this theme
+  $headers = drupal_get_http_header();
+  $error_statuses = array('403 Forbidden', '404 Not Found');
+  if (isset($headers['status'])) {
+    if (in_array($headers['status'], $error_statuses)) {
+      $vars['theme_hook_suggestions'][] = 'page';
+    }
+  } 
 }
