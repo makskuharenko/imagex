@@ -826,13 +826,15 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['operator'] = 'not in';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'all' => 'all',
     'answer' => 'answer',
     'blog' => 'blog',
+    'contest' => 'contest',
+    'contest_entry' => 'contest_entry',
     'directory' => 'directory',
     'event' => 'event',
     'faq_topic' => 'faq_topic',
     'forum' => 'forum',
+    'gallery' => 'gallery',
     'group' => 'group',
     'humor' => 'humor',
     'landing_page' => 'landing_page',
@@ -841,6 +843,8 @@ function linux_landing_pages_views_default_views() {
     'page' => 'page',
     'question' => 'question',
     'tutorial' => 'tutorial',
+    'webform' => 'webform',
+    'whitepaper' => 'whitepaper',
     'wiki' => 'wiki',
   );
   $handler->display->display_options['pane_title'] = 'Latest Poll';
