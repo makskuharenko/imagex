@@ -2584,7 +2584,9 @@ input[type="week"] {
   -o-border-radius: 2px;
   border-radius: 2px;
   margin: 0;
-  padding: 20px 15px; }
+  padding: 20px 15px;
+  font-weight: 600;
+  color: #555555; }
 
 select {
   margin: 0;
@@ -2790,6 +2792,23 @@ a:link.fieldset-title, .fieldset-legend{
 
 .views-exposed-form .views-exposed-widget input[type="submit"] {
   margin-top: 2em; }
+
+.chosen-container-single .chosen-single, .chosen-container-single.chosen-container-active.chosen-with-drop .chosen-single {
+  border-radius: 0;
+  height: 36px;
+  line-height: 37px;
+  background: #eeeeee url("../img/form-line.png") repeat top left;
+  color: #555555;
+  border: none;
+  box-shadow: none;
+  font-weight: 600; }
+  .chosen-container-single .chosen-single div b, .chosen-container-single.chosen-container-active.chosen-with-drop .chosen-single div b {
+    margin-top: 8px; }
+.chosen-container-single .chosen-drop {
+  border: none; }
+.chosen-container-single .chosen-results li.highlighted {
+  background: #f17700;
+  color: white; }
 
 table {
   max-width: 100%;
@@ -5265,6 +5284,38 @@ a {
     .secondary-content .standard-bean > div {
       display: block;
       padding: 0 0 2em; } }
+.secondary-content .standard-bean .view-empty {
+  text-align: center; }
+.secondary-content .standard-bean form.webform-client-form {
+  padding: 0 !important; }
+  .secondary-content .standard-bean form.webform-client-form .form-item {
+    margin-top: 0; }
+    .secondary-content .standard-bean form.webform-client-form .form-item textarea,
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="date"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="datetime"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="datetime-local"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="email"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="month"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="number"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="password"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="search"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="tel"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="text"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="time"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="url"],
+    .secondary-content .standard-bean form.webform-client-form .form-item input[type="week"] {
+      width: 100%; }
+    .secondary-content .standard-bean form.webform-client-form .form-item .chosen-container {
+      width: 100% !important; }
+  .secondary-content .standard-bean form.webform-client-form .webform-component-textfield label,
+  .secondary-content .standard-bean form.webform-client-form .webform-component-textarea label,
+  .secondary-content .standard-bean form.webform-client-form .webform-component-email label {
+    display: none; }
+  .secondary-content .standard-bean form.webform-client-form .form-actions {
+    margin-top: 1.5em; }
+    .secondary-content .standard-bean form.webform-client-form .form-actions button, .secondary-content .standard-bean form.webform-client-form .form-actions a.button, .secondary-content .standard-bean form.webform-client-form .form-actions input[type="reset"], .secondary-content .standard-bean form.webform-client-form .form-actions input[type="submit"], .secondary-content .standard-bean form.webform-client-form .form-actions input[type="button"] {
+      display: block;
+      width: 100%; }
 .secondary-content .standard-bean-full > div {
   display: block !important;
   padding: 0 0 2em; }
@@ -5276,7 +5327,7 @@ a {
     margin-bottom: 0; } }
 .diagonal-lines > div,
 .diagonal-lines > form {
-  padding: 2em;
+  padding: 2em 1em !important;
   background: transparent url("../img/content-lines.png") repeat top left; }
 
 .filtered-view h2 {
