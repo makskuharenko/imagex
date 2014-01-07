@@ -2634,6 +2634,16 @@ select[size="1"] {
   height: 1.8em;
   *height: auto; }
 
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-image: none; }
+
+html.js input.throbbing {
+  background-image: url(../img/ajax-loader.gif);
+  background-position: 99.5% center;
+  /* LTR */
+  background-repeat: no-repeat; }
+
 @media (-webkit-min-device-pixel-ratio: 0) {
   select[size],
   select[multiple],
@@ -2793,7 +2803,7 @@ a:link.fieldset-title, .fieldset-legend{
   margin: 1em 0; }
 
 .views-exposed-form .views-exposed-widget input[type="submit"] {
-  margin-top: 2em; }
+  margin-top: 2.5em; }
 
 .chosen-container-single .chosen-single, .chosen-container-single.chosen-container-active.chosen-with-drop .chosen-single {
   border-radius: 0;
