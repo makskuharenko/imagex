@@ -1059,11 +1059,16 @@ small {
 
             &.menu-utility {
               @include icon-reorder;
-
+              
+              //active clashes with drupal default .active class
               &.active {
+                color: $linuxDarkGray;
+              }
+              &.open { 
                 background: transparent url('../img/content-lines.png') repeat 0px 4px;
                 border: none;
                 height: 49px;
+                color: $linuxStdOrange;
               }
             }
 

@@ -54,3 +54,4 @@ features[menu_links][] = menu-primary-menu_videos:http://video.linux.com/
 features[menu_links][] = menu-primary-menu_what-is-linux:<front>
 features[menu_links][] = menu-utility-menu_localization:user
 features[menu_links][] = menu-utility-menu_profile:user
+features[menu_links][] = menu-utility-menu_mobile-menu:<front>

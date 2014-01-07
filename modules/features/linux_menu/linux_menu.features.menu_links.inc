@@ -738,6 +738,28 @@ function linux_menu_menu_default_menu_links() {
     'expanded' => 0,
     'weight' => 0,
   );
+  // Exported menu link: menu-utility-menu_mobile-menu:<front>
+  $menu_links['menu-utility-menu_mobile-menu:<front>'] = array(
+    'menu_name' => 'menu-utility-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Mobile Menu',
+    'options' => array(
+      'attributes' => array(
+        'class' => array(
+          0 => 'menu-icon',
+          1 => 'menu-utility',
+        ),
+      ),
+      'identifier' => 'menu-utility-menu_mobile-menu:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => 50,
+  );  
   // Translatables
   // Included for use with string extractors like potx.
   t('Applications');
@@ -771,6 +793,7 @@ function linux_menu_menu_default_menu_links() {
   t('Localization');
   t('Man Pages');
   t('Mobile');
+  t('Mobile Menu');
   t('News & Features');
   t('Peripherals');
   t('Photos');

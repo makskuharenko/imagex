@@ -105,12 +105,23 @@
     }
   });
 
-  // Show and hide the mobile menu
-
-  $('.menu-utility').click(function() {
-    $('#mini-panel-mobile_main_menu').toggle();
-    $(this).toggleClass('active');
-  });
+  // Show and hide the mobile menu & search form on desktop
+  var mobileMenu = $('#mini-panel-mobile_main_menu');
+  var mobileMenuTrigger = $('.menu-utility');
+  
+  // Sanity checks
+  if (mobileMenu.size() > 0 && $.trim(mobileMenu.text()) !== '') {
+    // mobileMenu exists & contains something 
+    mobileMenuTrigger.click(function(e) {
+      mobileMenu.toggle();
+      $(this).toggleClass('open');
+      e.preventDefault();
+    });
+  }
+  else {
+    // No mobileMenu so hide the trigger
+    mobileMenuTrigger.hide();
+  }
 
   // Show and Hide the filter for the most of something block
   // ----------------------------------------------------------------------------
