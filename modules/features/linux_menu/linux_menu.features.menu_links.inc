@@ -336,14 +336,14 @@ function linux_menu_menu_default_menu_links() {
     'weight' => 5,
     'parent_identifier' => 'menu-primary-menu_linuxcom-community:<front>',
   );
-  // Exported menu link: menu-primary-menu_learn-linux:<front>
-  $menu_links['menu-primary-menu_learn-linux:<front>'] = array(
+  // Exported menu link: menu-primary-menu_learn-linux:node/32
+  $menu_links['menu-primary-menu_learn-linux:node/32'] = array(
     'menu_name' => 'menu-primary-menu',
-    'link_path' => '<front>',
-    'router_path' => '<front>',
+    'link_path' => 'node/32',
+    'router_path' => 'node/%',
     'link_title' => 'Learn Linux',
     'options' => array(
-      'identifier' => 'menu-primary-menu_learn-linux:<front>',
+      'identifier' => 'menu-primary-menu_learn-linux:node/32',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -401,7 +401,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
-    'parent_identifier' => 'menu-primary-menu_learn-linux:<front>',
+    'parent_identifier' => 'menu-primary-menu_learn-linux:node/32',
   );
   // Exported menu link: menu-primary-menu_linux-foundation-blogs:node/29
   $menu_links['menu-primary-menu_linux-foundation-blogs:node/29'] = array(
@@ -504,7 +504,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 1,
-    'parent_identifier' => 'menu-primary-menu_learn-linux:<front>',
+    'parent_identifier' => 'menu-primary-menu_learn-linux:node/32',
   );
   // Exported menu link: menu-primary-menu_linux-tutorials:node/17
   $menu_links['menu-primary-menu_linux-tutorials:node/17'] = array(
@@ -692,7 +692,7 @@ function linux_menu_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 2,
-    'parent_identifier' => 'menu-primary-menu_learn-linux:<front>',
+    'parent_identifier' => 'menu-primary-menu_learn-linux:node/32',
   );
   // Exported menu link: menu-utility-menu_localization:user
   $menu_links['menu-utility-menu_localization:user'] = array(

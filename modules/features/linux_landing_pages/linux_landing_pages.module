@@ -122,6 +122,8 @@ function linux_landing_pages_uuid_to_menu_link() {
     '1a77a768-bb9c-412a-b9c5-0e1eb0a326ba' => NULL,
     // Tutorials
     '41eceaf9-1fc8-4a70-9780-24c99540d4c0' => 'menu-primary-menu_linux-tutorials',
+    // Learn Linux
+    'c3e9fa2b-a5b7-44a9-a095-b0426ef370ed' => 'menu-primary-menu_learn-linux',
     // Special Feature
     '8125d7c5-2083-4a99-a4b7-585ff1dd157a' => 'menu-primary-menu_special-feature',
     // Community Blogs
