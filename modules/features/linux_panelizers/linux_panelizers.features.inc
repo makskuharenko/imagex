@@ -20,7 +20,7 @@ function linux_panelizers_panelizer_defaults_override_alter(&$data) {
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = '';
   $panelizer->css = '';
-  $panelizer->pipeline = 'standard';
+  $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array(
     0 => array(
