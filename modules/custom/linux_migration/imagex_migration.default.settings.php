@@ -8,7 +8,7 @@
 $settings['source']['sql']['connections'] = array(
   'linux-joomla' => array(
     'default' => array(
-      'database' => 'MIGRATE_DB',
+      'database' => 'MIGRATE_DB_LCOM',
       'username' => 'MIGRATE_UN',
       'password' => 'MIGRATE_PW',
       'host' => 'MIGRATE_HOST',
@@ -17,6 +17,16 @@ $settings['source']['sql']['connections'] = array(
       'prefix' => '',
     ),
   ),
+  'linux-archive' => array(
+    'default' => array(
+      'database' => 'MIGRATE_DB_ARCHIVE',
+      'username' => 'MIGRATE_UN',
+      'password' => 'MIGRATE_PW',
+      'host' => 'MIGRATE_HOST',
+      'port' => '',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
 );
 
 // Joomla files.
