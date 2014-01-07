@@ -27,6 +27,7 @@ $settings['source']['sql']['connections'] = array(
       'driver' => 'mysql',
       'prefix' => '',
     ),
+  ),
 );
 
 // Joomla files.
