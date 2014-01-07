@@ -2540,7 +2540,6 @@ input[type="week"] {
   text-align: left;
   font-size: 13px;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-  height: 1.8em;
   vertical-align: top;
   *padding-top: 2px;
   *padding-bottom: 1px;
@@ -2584,9 +2583,12 @@ input[type="week"] {
   -o-border-radius: 2px;
   border-radius: 2px;
   margin: 0;
-  padding: 20px 15px;
+  padding: 12px 15px;
   font-weight: 600;
   color: #555555; }
+
+textarea {
+  padding: 8px 15px; }
 
 select {
   margin: 0;
