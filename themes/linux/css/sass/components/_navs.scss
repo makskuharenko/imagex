@@ -116,6 +116,7 @@ nav.tabs {
         @include border-radius(4px);
         width: 100%;
         height: 35px;
+        font-weight: normal;
       }
 
       input[type="submit"] {
@@ -154,15 +155,16 @@ nav.tabs {
 
           a,
           span {
-            color: $linuxStdOrange;
+            color: $linuxDarkGray;
             letter-spacing: 0.1em;
             line-height: 32px;
             text-transform: uppercase;
             text-decoration: none;
             font-weight: 700;
 
-            &:hover {
-              color: $linuxDarkOrange;
+            &:hover,
+            &.active {
+              color: $linuxStdOrange;
             }
           }
         }
@@ -198,12 +200,11 @@ nav.tabs {
         li {
           background-color: white;
 
-          span {
+          span,
+          a {
             color: $userBar;
-          }
-
-          &:hover {
-            span {
+            
+            &:hover {
               color: $linuxStdOrange;
             }
           }
