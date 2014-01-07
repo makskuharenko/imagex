@@ -260,6 +260,16 @@ select[size="1"] {
   *height: auto;
 }
 
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-image: none;
+}
+html.js input.throbbing {
+  background-image: url(../img/ajax-loader.gif);
+  background-position: 99.5% center; /* LTR */
+  background-repeat: no-repeat;
+}
+
 // Tweaks for Safari + Chrome.
 @media (-webkit-min-device-pixel-ratio: 0) {
   select[size],
@@ -429,7 +439,7 @@ a:link.fieldset-title, .fieldset-legend{
 // Views Exposed Filters
 // -------------------------------------
 .views-exposed-form .views-exposed-widget input[type="submit"] {
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 
 // Chosen
