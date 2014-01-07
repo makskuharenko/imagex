@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Linux User Points feature.
  */
+
+include_once 'linux_user_points.features.inc';
