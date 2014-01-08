@@ -37,6 +37,7 @@ function linux_configuration_uuid_features_default_beans() {
         ),
       ),
     ),
+    'aggregator_item' => FALSE,
   );
 
   features_alter_code('uuid_bean', $beans);
