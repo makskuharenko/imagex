@@ -2068,16 +2068,12 @@ div[role="main"] {
       border-right: 1px solid $dropdownDividerTop;
       padding: 0 7px 0 0;
       margin: 0 10px 0 0;
-
-      @include at-breakpoint($tablet) {
-        display: inline;
-      }
     }
 
-    .views-field-title {
+    .views-field-title {      
       a {
-        display: inline;
         color: $grayDark;
+        display: inline;
       }
     }
 
@@ -2088,9 +2084,6 @@ div[role="main"] {
 
       font-weight: 300;
       font-family: $condensedFontFamily;
-      border-left: 1px solid $dropdownDividerTop;
-      margin: 0 0 0 7px;
-      padding: 0 0 0 10px;
     }
 
     &.Forum,
@@ -2105,7 +2098,6 @@ div[role="main"] {
     &.News {
       padding: 0 26px 0 46px;
     }
-
 
     &.Forum,
     &.Group {
@@ -2137,6 +2129,45 @@ div[role="main"] {
     &.Review {
       background: transparent url('../img/reviews-icon.png') no-repeat 20px center;
     }
+    
+    &.Forum,
+    &.Blog,
+    &.Answer,
+    &.Question,
+    &.Article,
+    &.Tutorial,
+    &.Shared,
+    &.Review,
+    &.Group,
+    &.News {
+      background-position: 20px 5px;
+    }
+    
+     @include at-breakpoint($tablet) {
+      .views-field-type,
+      .views-field-title,
+      .views-field-created {
+        display: inline;
+      }
+      .views-field-created {
+        border-left: 1px solid $dropdownDividerTop;
+        margin: 0 0 0 7px;
+        padding: 0 0 0 10px;
+      }
+    
+      &.Forum,
+      &.Blog,
+      &.Answer,
+      &.Question,
+      &.Article,
+      &.Tutorial,
+      &.Shared,
+      &.Review,
+      &.Group,
+      &.News {
+        background-position: 20px center;
+      }      
+    }    
   }
 }
 
@@ -2211,52 +2242,15 @@ div[role="main"] {
     float: left;
     width: 100%;
 
-    .views-field-field-profile-image {
-      padding-right: 20px;
-
-      @include at-breakpoint($tablet) {
-        float: left;
-      }
-
-      img {
-        @include border-radius(4px);
-      }
-    }
-
-    .views-field-field-linux-name {
-      margin: 1em 0;
-
-      @include at-breakpoint($tablet) {
-        margin-top: 0;
-      }
-
-      h1 {
-        display: inline;
-        font-size: 32px;
-        line-height: 36px;
-
-        @include at-breakpoint($tablet) {
-          font-size: 48px;
-          line-height: 52px;
-        }
-      }
-    }
-
-    .views-field-nothing,
-    .views-field-nothing-1 {
+    .views-field {
       font-size: 13px;
-
-      @include at-breakpoint($wide) {
-        display: block;
-        width: 45%;
-        float: left;
-      }
-
+      
       a {
         color: $grayDark;
       }
 
-      .field-label {
+      .field-label,
+      .views-label {
         font-weight: 700;
         font-size: 13px;
         font-family: $condensedFontFamily;
@@ -2328,13 +2322,44 @@ div[role="main"] {
         @include icon-rss;
       }
     }
+      
+    
+    div.views-field-field-profile-image {
+      padding-right: 1em;
 
-    .views-field-nothing-1 {
-      display: inline-block;
-
-      @include at-breakpoint($wide) {
-        width: 25%;
+      img {
+        @include border-radius(4px);
       }
+    }
+
+    .views-field-field-linux-name {
+      margin: 1em 0;
+      float: none;
+      width: auto;
+
+      @include at-breakpoint($tablet) {
+        margin-top: 0;
+      }
+
+      h1,
+      .field-content {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 0;
+
+        @include at-breakpoint($tablet) {
+          font-size: 48px;
+          line-height: 52px;
+        }
+      }
+    }    
+
+    // mini panel
+    .container {
+      padding: 0 !important;
+    }
+    @include at-breakpoint($tablet) {
+
     }
   }
 }
