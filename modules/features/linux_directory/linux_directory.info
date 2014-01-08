@@ -79,6 +79,7 @@ features[variable][] = menu_parent_directory
 features[variable][] = node_options_directory
 features[variable][] = node_preview_directory
 features[variable][] = node_submitted_directory
+features[variable][] = panelizer_defaults_node_directory
 features_exclude[field][node-directory-body] = node-directory-body
 features_exclude[field][node-directory-field_directory_isbn] = node-directory-field_directory_isbn
 features_exclude[field][node-directory-field_link] = node-directory-field_link
