@@ -1,7 +1,5 @@
 <?php
 /**
  * @file
- * Code for the Linux User Permissions feature.
+ * Drupal needs this blank file.
  */
-
-include_once 'linux_user_permissions.features.inc';
