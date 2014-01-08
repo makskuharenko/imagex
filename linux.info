@@ -57,6 +57,7 @@ dependencies[] = imagex_faq
 dependencies[] = imagex_faq_permissions
 dependencies[] = imagex_faq_rss
 dependencies[] = imagex_faq_workflow
+dependencies[] = imagex_gamification
 dependencies[] = imagex_group
 dependencies[] = imagex_group_permissions
 dependencies[] = imagex_group_workflow
