@@ -5307,7 +5307,6 @@ a {
 .secondary-content .standard-bean > .linux-training-feed {
   padding: 0 0 1px;
   display: none;
-  overflow: hidden;
   border: 1px solid transparent; }
   @media (min-width: 45.5em) {
     .secondary-content .standard-bean > div,

@@ -660,7 +660,6 @@ small {
     > .linux-training-feed {
       padding: 0 0 1px;
       display: none;
-      overflow:hidden;
       border: 1px solid transparent;
   
       @include at-breakpoint($computer) {
