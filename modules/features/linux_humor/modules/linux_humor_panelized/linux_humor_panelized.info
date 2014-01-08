@@ -25,6 +25,7 @@ features[variable][] = flippy_random_humor
 features[variable][] = flippy_random_label_humor
 features[variable][] = flippy_show_empty_humor
 features[variable][] = flippy_sort_humor
+features[variable][] = panelizer_defaults_node_humor
 features[variable][] = panelizer_node:humor_allowed_layouts
 features[variable][] = panelizer_node:humor_allowed_layouts_default
 features[variable][] = panelizer_node:humor_allowed_types_default

@@ -39,5 +39,6 @@ features[variable][] = menu_parent_tutorial
 features[variable][] = node_options_tutorial
 features[variable][] = node_preview_tutorial
 features[variable][] = node_submitted_tutorial
+features[variable][] = panelizer_defaults_node_tutorial
 features_exclude[field][node-tutorial-body] = node-tutorial-body
 features_exclude[field_base][field_tags] = field_tags

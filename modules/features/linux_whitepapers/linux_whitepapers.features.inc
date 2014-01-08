@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function linux_whitepapers_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "panelizer" && $api == "panelizer") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -27,5 +30,8 @@ function linux_whitepapers_node_info() {
       'help' => '',
     ),
   );
+
+  features_alter_code('node', $items);
+
   return $items;
 }
