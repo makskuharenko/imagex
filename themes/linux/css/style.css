@@ -5420,6 +5420,8 @@ a {
     background: transparent url("../img/linux-foundation-network.png") no-repeat left center;
     color: transparent;
     cursor: pointer; }
+    #user-wrapper .nice-menu > .menuparent > span.nolink {
+      display: none; }
     #user-wrapper .nice-menu > .menuparent ul,
     #user-wrapper .nice-menu > .menuparent li {
       border: 0;
