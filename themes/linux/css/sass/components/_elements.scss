@@ -1125,7 +1125,7 @@ small {
     list-style: none;
 
     .expanded {
-      @include span-columns(7, 16);
+      @include span-columns(7, 18);
       display: none;
       list-style-type: none;
       list-style-image: none;
@@ -1150,18 +1150,24 @@ small {
     @include at-breakpoint($computer) {
       .expanded {
         display: block;
-        @include span-columns(2, 16);
+        @include span-columns(2, 18);
       }
     }
 
     @include at-breakpoint($wide) {
       .expanded {
-        @include span-columns(2, 16);
+        @include span-columns(2, 18);
       }
     }
 
     .menu-icon {
       display: none;
+    }
+  }
+  
+  .pane-menu-menu-footer ul {
+    .expanded {
+      margin-right: 0;
     }
   }
 
@@ -1221,7 +1227,7 @@ small {
   @include at-breakpoint($computer) {
     #block-bean-copyright,
     #block-bean-about-linux-foundation {
-      @include span-columns(5 omega, 16);
+      @include span-columns(6 omega, 18);
       text-align: right;
     }
 
