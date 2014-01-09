@@ -797,6 +797,11 @@ small {
       background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
       color: transparent;
       cursor: pointer;
+      
+      // IE
+      > span.nolink {
+        display: none;
+      }
 
       ul,
       li {
