@@ -27,6 +27,21 @@ function linux_configuration_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_filter_default_formats_alter().
+ */
+function linux_configuration_filter_default_formats_alter(&$data) {
+  if (isset($data['filtered_html'])) {
+    $data['filtered_html']['weight'] = -8; /* WAS: -10 */
+  }
+  if (isset($data['full_html'])) {
+    $data['full_html']['weight'] = -10; /* WAS: -8 */
+  }
+  if (isset($data['plain_text'])) {
+    $data['plain_text']['weight'] = -4; /* WAS: -6 */
+  }
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function linux_configuration_image_default_styles() {

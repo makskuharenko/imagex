@@ -62,6 +62,13 @@ function linux_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'filter_fallback_format';
+  $strongarm->value = 'plain_text';
+  $export['filter_fallback_format'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'flickr_api_key';
   $strongarm->value = '7b1a81c47ade21877c6515fe5188a38b';
   $export['flickr_api_key'] = $strongarm;
@@ -142,13 +149,6 @@ function linux_configuration_strongarm() {
   $strongarm->name = 'jquery_update_jquery_version';
   $strongarm->value = '1.7';
   $export['jquery_update_jquery_version'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'nice_menus_js';
-  $strongarm->value = 0;
-  $export['nice_menus_js'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -429,7 +429,6 @@ function linux_configuration_strongarm() {
   $strongarm->name = 'path_alias_whitelist';
   $strongarm->value = array(
     'file' => TRUE,
-    'forum' => TRUE,
     'node' => TRUE,
     'taxonomy' => TRUE,
     'user' => TRUE,
@@ -512,7 +511,7 @@ function linux_configuration_strongarm() {
   $strongarm->name = 'redirect_warning';
   $strongarm->value = FALSE;
   $export['redirect_warning'] = $strongarm;
-  
+
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
