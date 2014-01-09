@@ -5748,9 +5748,9 @@ a {
     font-size: 10px;
     list-style: none; }
     #footer-wrapper .footer-menu ul .expanded {
-      width: 43.03797%;
+      width: 38.20225%;
       float: left;
-      margin-right: 1.26582%;
+      margin-right: 1.1236%;
       display: inline;
       display: none;
       list-style-type: none;
@@ -5767,16 +5767,18 @@ a {
     @media (min-width: 45.5em) {
       #footer-wrapper .footer-menu ul .expanded {
         display: block;
-        width: 11.39241%;
+        width: 10.11236%;
         float: left;
-        margin-right: 1.26582%; } }
+        margin-right: 1.1236%; } }
     @media (min-width: 62.125em) {
       #footer-wrapper .footer-menu ul .expanded {
-        width: 11.39241%;
+        width: 10.11236%;
         float: left;
-        margin-right: 1.26582%; } }
+        margin-right: 1.1236%; } }
     #footer-wrapper .footer-menu ul .menu-icon {
       display: none; }
+  #footer-wrapper .pane-menu-menu-footer ul .expanded {
+    margin-right: 0; }
   #footer-wrapper #block-bean-about-linux-foundation {
     font-size: 10px;
     color: #bbbbbb;
@@ -5813,7 +5815,7 @@ a {
   @media (min-width: 45.5em) {
     #footer-wrapper #block-bean-copyright,
     #footer-wrapper #block-bean-about-linux-foundation {
-      width: 30.37975%;
+      width: 32.58427%;
       float: right;
       margin-right: 0;
       text-align: right; }
