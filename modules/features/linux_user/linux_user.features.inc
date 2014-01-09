@@ -75,12 +75,13 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
           'pid' => 'new-4',
           'panel' => 'three_inset_right_sidebar',
           'type' => 'views_panes',
-          'subtype' => 'home_page-panel_pane_2',
+          'subtype' => 'home_page-panel_pane_1',
           'shown' => TRUE,
           'access' => array(),
           'configuration' => array(
-            'more_link' => 1,
-            'path' => '',
+            'arguments' => array(
+              'type' => 'blog+imagex_news+event',
+            ),
           ),
           'cache' => array(),
           'style' => array(
@@ -88,7 +89,7 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
           ),
           'css' => array(
             'css_id' => '',
-            'css_class' => 'standard-bean numbered',
+            'css_class' => 'standard-bean recent-events filtered-view landing-pages-left-bar',
           ),
           'extras' => array(),
           'position' => 0,
