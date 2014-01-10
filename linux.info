@@ -73,6 +73,7 @@ dependencies[] = imagex_radioactivity
 dependencies[] = imagex_rss
 dependencies[] = imagex_search_db
 dependencies[] = imagex_search_permissions
+dependencies[] = imagex_socialmedia
 dependencies[] = imagex_user
 dependencies[] = imagex_userbadge
 ; @TODO: Resolve conflict between this and linux_user.
@@ -117,6 +118,7 @@ dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_search
 dependencies[] = linux_social_login
+dependencies[] = linux_socialmedia_addtoany
 dependencies[] = linux_question_answer
 dependencies[] = linux_tutorial
 dependencies[] = linux_user

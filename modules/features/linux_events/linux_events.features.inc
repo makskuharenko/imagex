@@ -157,32 +157,6 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
     $data['node:event:default']->display->content['new-16'] = (object) array(
           'pid' => 'new-16',
           'panel' => 'three_25_50_25_second',
-          'type' => 'node_links',
-          'subtype' => 'node_links',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'override_title' => FALSE,
-            'override_title_text' => '',
-            'build_mode' => 'page_manager',
-            'identifier' => '',
-            'link' => TRUE,
-            'context' => 'panelizer',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(
-            'css_class' => 'link-wrapper',
-          ),
-          'extras' => array(),
-          'position' => 13,
-          'locks' => array(),
-        ); /* WAS: '' */
-    $data['node:event:default']->display->content['new-17'] = (object) array(
-          'pid' => 'new-17',
-          'panel' => 'three_25_50_25_second',
           'type' => 'entity_field',
           'subtype' => 'node:field_event_category',
           'shown' => TRUE,
@@ -203,6 +177,32 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
             'settings' => NULL,
           ),
           'css' => array(),
+          'extras' => array(),
+          'position' => 13,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['node:event:default']->display->content['new-17'] = (object) array(
+          'pid' => 'new-17',
+          'panel' => 'three_25_50_25_second',
+          'type' => 'node_links',
+          'subtype' => 'node_links',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => FALSE,
+            'override_title_text' => '',
+            'build_mode' => 'page_manager',
+            'identifier' => '',
+            'link' => TRUE,
+            'context' => 'panelizer',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(
+            'css_class' => 'link-wrapper',
+          ),
           'extras' => array(),
           'position' => 14,
           'locks' => array(),
@@ -443,8 +443,7 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
       1 => 'new-21',
       2 => 'new-22',
     ); /* WAS: '' */
-    $data['node:event:default']->display->title_pane = 'new-16'; /* WAS: 'new-12' */
-    $data['node:event:default']->pipeline = 'ipe'; /* WAS: 'standard' */
+    $data['node:event:default']->display->title_pane = 'new-17'; /* WAS: 'new-12' */
     unset($data['node:event:default']->display->content['new-12']->configuration['build_mode']);
     unset($data['node:event:default']->display->content['new-12']->configuration['identifier']);
     unset($data['node:event:default']->display->content['new-12']->configuration['link']);

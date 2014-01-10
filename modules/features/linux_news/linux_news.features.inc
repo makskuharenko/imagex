@@ -9,49 +9,14 @@
  */
 function linux_news_panelizer_defaults_override_alter(&$data) {
   if (isset($data['node:imagex_news:default'])) {
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['delta_limit'] = 0; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['delta_offset'] = 0; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['delta_reversed'] = 0; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['formatter'] = 'taxonomy_term_reference_link'; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['formatter_settings'] = array(); /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['label'] = 'hidden'; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-10']->configuration['override_title'] = 0; /* WAS: 1 */
     $data['node:imagex_news:default']->display->content['new-10']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
     $data['node:imagex_news:default']->display->content['new-10']->position = 7; /* WAS: 9 */
-    $data['node:imagex_news:default']->display->content['new-10']->subtype = 'node:field_tags'; /* WAS: 'node_comment_form' */
-    $data['node:imagex_news:default']->display->content['new-10']->type = 'entity_field'; /* WAS: 'node_comment_form' */
-    $data['node:imagex_news:default']->display->content['new-11']->configuration['anon_links'] = 1; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-11']->css['css_class'] = ''; /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-11']->css['css_id'] = 'comments'; /* WAS: '' */
+    $data['node:imagex_news:default']->display->content['new-11']->configuration['comments_per_page'] = 50; /* WAS: 50 */
+    $data['node:imagex_news:default']->display->content['new-11']->configuration['mode'] = 1; /* WAS: 1 */
     $data['node:imagex_news:default']->display->content['new-11']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
     $data['node:imagex_news:default']->display->content['new-11']->position = 8; /* WAS: 10 */
-    $data['node:imagex_news:default']->display->content['new-11']->subtype = 'node_comment_form'; /* WAS: 'node_comments' */
-    $data['node:imagex_news:default']->display->content['new-11']->type = 'node_comment_form'; /* WAS: 'node_comments' */
     $data['node:imagex_news:default']->display->content['new-12'] = (object) array(
           'pid' => 'new-12',
-          'panel' => 'three_25_50_25_second',
-          'type' => 'node_comments',
-          'subtype' => 'node_comments',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'mode' => 1,
-            'comments_per_page' => 50,
-            'context' => 'panelizer',
-            'override_title' => 1,
-            'override_title_text' => '',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(),
-          'extras' => array(),
-          'position' => 9,
-          'locks' => array(),
-        ); /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-13'] = (object) array(
-          'pid' => 'new-13',
           'panel' => 'three_25_50_25_third',
           'type' => 'block',
           'subtype' => 'menu-menu-join-us',
@@ -70,8 +35,8 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
           'position' => 0,
           'locks' => array(),
         ); /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-14'] = (object) array(
-          'pid' => 'new-14',
+    $data['node:imagex_news:default']->display->content['new-13'] = (object) array(
+          'pid' => 'new-13',
           'panel' => 'three_25_50_25_third',
           'type' => 'views_panes',
           'subtype' => 'home_page-panel_pane_3',
@@ -93,8 +58,8 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
           'position' => 1,
           'locks' => array(),
         ); /* WAS: '' */
-    $data['node:imagex_news:default']->display->content['new-15'] = (object) array(
-          'pid' => 'new-15',
+    $data['node:imagex_news:default']->display->content['new-14'] = (object) array(
+          'pid' => 'new-14',
           'panel' => 'three_25_50_25_third',
           'type' => 'views_panes',
           'subtype' => 'home_page-panel_pane_4',
@@ -163,12 +128,40 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
     $data['node:imagex_news:default']->display->content['new-7']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
     $data['node:imagex_news:default']->display->content['new-7']->position = 4; /* WAS: 6 */
     $data['node:imagex_news:default']->display->content['new-7']->subtype = 'node:field_image'; /* WAS: 'node:body' */
-    $data['node:imagex_news:default']->display->content['new-8']->configuration['formatter'] = 'text_default'; /* WAS: 'addthis_disabled' */
-    $data['node:imagex_news:default']->display->content['new-8']->configuration['override_title'] = 0; /* WAS: 1 */
-    $data['node:imagex_news:default']->display->content['new-8']->configuration['override_title_text'] = ''; /* WAS: 'Share article' */
-    $data['node:imagex_news:default']->display->content['new-8']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
-    $data['node:imagex_news:default']->display->content['new-8']->position = 5; /* WAS: 7 */
-    $data['node:imagex_news:default']->display->content['new-8']->subtype = 'node:body'; /* WAS: 'node:field_addthis' */
+    $data['node:imagex_news:default']->display->content['new-8'] = (object) array(
+          'pid' => 'new-8',
+          'panel' => 'three_25_50_25_second',
+          'type' => 'entity_field',
+          'subtype' => 'node:field_tags',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'context' => 'panelizer',
+            'override_title' => 0,
+            'override_title_text' => '',
+            'delta_limit' => 0,
+            'delta_offset' => 0,
+            'delta_reversed' => 0,
+            'formatter' => 'taxonomy_term_reference_link',
+            'formatter_settings' => array(),
+            'label' => 'hidden',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 5,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['node:imagex_news:default']->display->content['new-9']->configuration['build_mode'] = 'full'; /* WAS: '' */
+    $data['node:imagex_news:default']->display->content['new-9']->configuration['identifier'] = ''; /* WAS: '' */
+    $data['node:imagex_news:default']->display->content['new-9']->configuration['link'] = 0; /* WAS: '' */
+    $data['node:imagex_news:default']->display->content['new-9']->panel = 'three_25_50_25_second'; /* WAS: 'two_33_66_second' */
+    $data['node:imagex_news:default']->display->content['new-9']->position = 6; /* WAS: 8 */
+    $data['node:imagex_news:default']->display->content['new-9']->subtype = 'node_links'; /* WAS: 'node:field_tags' */
+    $data['node:imagex_news:default']->display->content['new-9']->type = 'node_links'; /* WAS: 'entity_field' */
     $data['node:imagex_news:default']->display->layout = 'three_25_50_25'; /* WAS: 'two_33_66' */
     $data['node:imagex_news:default']->display->panels['three_25_50_25_first'] = array(
       0 => 'new-1',
@@ -181,20 +174,15 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
       3 => 'new-6',
       4 => 'new-7',
       5 => 'new-8',
-      6 => 'new-10',
-      7 => 'new-11',
-      8 => 'new-12',
+      6 => 'new-9',
+      7 => 'new-10',
+      8 => 'new-11',
     ); /* WAS: '' */
     $data['node:imagex_news:default']->display->panels['three_25_50_25_third'] = array(
-      0 => 'new-13',
-      1 => 'new-14',
-      2 => 'new-15',
+      0 => 'new-12',
+      1 => 'new-13',
+      2 => 'new-14',
     ); /* WAS: '' */
-    unset($data['node:imagex_news:default']->display->content['new-10']->configuration['anon_links']);
-    unset($data['node:imagex_news:default']->display->content['new-10']->css['css_class']);
-    unset($data['node:imagex_news:default']->display->content['new-10']->css['css_id']);
-    unset($data['node:imagex_news:default']->display->content['new-11']->configuration['comments_per_page']);
-    unset($data['node:imagex_news:default']->display->content['new-11']->configuration['mode']);
     unset($data['node:imagex_news:default']->display->content['new-1']->configuration['context']);
     unset($data['node:imagex_news:default']->display->content['new-1']->configuration['delta_limit']);
     unset($data['node:imagex_news:default']->display->content['new-1']->configuration['delta_offset']);
@@ -217,6 +205,12 @@ function linux_news_panelizer_defaults_override_alter(&$data) {
     unset($data['node:imagex_news:default']->display->content['new-3']->configuration['label']);
     unset($data['node:imagex_news:default']->display->content['new-4']->configuration['format']);
     unset($data['node:imagex_news:default']->display->content['new-5']->configuration['link']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['delta_limit']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['delta_offset']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['delta_reversed']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['formatter']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['formatter_settings']);
+    unset($data['node:imagex_news:default']->display->content['new-9']->configuration['label']);
     unset($data['node:imagex_news:default']->display->panels['two_33_66_second']);
   }
 }

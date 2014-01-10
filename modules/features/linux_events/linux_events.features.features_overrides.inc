@@ -141,32 +141,6 @@ function linux_events_features_override_default_overrides() {
   $overrides["panelizer_defaults.node:event:default.display|content|new-16"] = (object) array(
       'pid' => 'new-16',
       'panel' => 'three_25_50_25_second',
-      'type' => 'node_links',
-      'subtype' => 'node_links',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'override_title' => FALSE,
-        'override_title_text' => '',
-        'build_mode' => 'page_manager',
-        'identifier' => '',
-        'link' => TRUE,
-        'context' => 'panelizer',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(
-        'css_class' => 'link-wrapper',
-      ),
-      'extras' => array(),
-      'position' => 13,
-      'locks' => array(),
-    );
-  $overrides["panelizer_defaults.node:event:default.display|content|new-17"] = (object) array(
-      'pid' => 'new-17',
-      'panel' => 'three_25_50_25_second',
       'type' => 'entity_field',
       'subtype' => 'node:field_event_category',
       'shown' => TRUE,
@@ -187,6 +161,32 @@ function linux_events_features_override_default_overrides() {
         'settings' => NULL,
       ),
       'css' => array(),
+      'extras' => array(),
+      'position' => 13,
+      'locks' => array(),
+    );
+  $overrides["panelizer_defaults.node:event:default.display|content|new-17"] = (object) array(
+      'pid' => 'new-17',
+      'panel' => 'three_25_50_25_second',
+      'type' => 'node_links',
+      'subtype' => 'node_links',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'override_title' => FALSE,
+        'override_title_text' => '',
+        'build_mode' => 'page_manager',
+        'identifier' => '',
+        'link' => TRUE,
+        'context' => 'panelizer',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(
+        'css_class' => 'link-wrapper',
+      ),
       'extras' => array(),
       'position' => 14,
       'locks' => array(),
@@ -462,8 +462,7 @@ function linux_events_features_override_default_overrides() {
     1 => 'new-21',
     2 => 'new-22',
   );
-  $overrides["panelizer_defaults.node:event:default.display|title_pane"] = 'new-16';
-  $overrides["panelizer_defaults.node:event:default.pipeline"] = 'ipe';
+  $overrides["panelizer_defaults.node:event:default.display|title_pane"] = 'new-17';
 
   // Exported overrides for: variable
   $overrides["variable.panelizer_defaults_node_event.value|status"] = 1;

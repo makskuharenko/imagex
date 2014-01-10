@@ -539,6 +539,7 @@ function linux_configuration_strongarm() {
   $strongarm->name = 'uuid_features_entity_bean';
   $strongarm->value = array(
     'imagex_widget_basic' => 'imagex_widget_basic',
+    'imagex_widget_code' => 'imagex_widget_code',
   );
   $export['uuid_features_entity_bean'] = $strongarm;
 

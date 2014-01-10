@@ -268,25 +268,23 @@ function linux_tutorial_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-9';
     $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'mode' => '1',
-      'comments_per_page' => '50',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 0,
       'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => 'Comments',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'standard-bean',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
@@ -317,6 +315,33 @@ function linux_tutorial_panelizer_defaults() {
     $display->panels['three_25_50_25_second'][7] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
+    $pane->panel = 'three_25_50_25_second';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '1',
+      'comments_per_page' => '50',
+      'context' => 'panelizer',
+      'override_title' => 1,
+      'override_title_text' => 'Comments',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'standard-bean',
+    );
+    $pane->extras = array();
+    $pane->position = 8;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['three_25_50_25_second'][8] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-join-us';
@@ -334,10 +359,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['three_25_50_25_third'][0] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_1';
@@ -363,10 +388,10 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['three_25_50_25_third'][1] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-14';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_2';
@@ -392,8 +417,8 @@ function linux_tutorial_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['three_25_50_25_third'][2] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['three_25_50_25_third'][2] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;

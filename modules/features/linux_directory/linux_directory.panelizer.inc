@@ -285,6 +285,31 @@ function linux_directory_panelizer_defaults() {
     $display->panels['three_25_50_25_second'][5] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
+    $pane->panel = 'three_25_50_25_second';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 0,
+      'context' => 'panelizer',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['three_25_50_25_second'][6] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_1';
@@ -310,10 +335,10 @@ function linux_directory_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['three_25_50_25_third'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-11';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_2';
@@ -337,10 +362,10 @@ function linux_directory_panelizer_defaults() {
       'css_class' => 'standard-bean',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-10';
+    $display->content['new-11'] = $pane;
+    $display->panels['three_25_50_25_third'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
