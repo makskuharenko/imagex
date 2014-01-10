@@ -1,7 +1,6 @@
 (function ($) {
 
   // Expand and Collapsing blocks for standard sidebar block
-  // ----------------------------------------------------------------------------
 
   Drupal.behaviors.mobileActions = {
     attach: function(context, settings) {
@@ -130,7 +129,6 @@
 
 
   // Changing class on scroll so that the navigation rests at the top of the page
-  // ----------------------------------------------------------------------------
 
   var eTop = $('#block-panels-mini-global-header').offset().top;
 
