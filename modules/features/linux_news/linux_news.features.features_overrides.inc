@@ -12,54 +12,14 @@ function linux_news_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: panelizer_defaults
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|anon_links"]["DELETED"] = TRUE;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|delta_limit"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|delta_offset"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|delta_reversed"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|formatter"] = 'taxonomy_term_reference_link';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|formatter_settings"] = array();
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|label"] = 'hidden';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|configuration|override_title"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|css|css_class"]["DELETED"] = TRUE;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|css|css_id"]["DELETED"] = TRUE;
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|panel"] = 'three_25_50_25_second';
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|position"] = 7;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|subtype"] = 'node:field_tags';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-10|type"] = 'entity_field';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|configuration|anon_links"] = 1;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|configuration|comments_per_page"]["DELETED"] = TRUE;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|configuration|mode"]["DELETED"] = TRUE;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|css|css_class"] = '';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|css|css_id"] = 'comments';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|configuration|comments_per_page"] = 50;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|configuration|mode"] = 1;
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|panel"] = 'three_25_50_25_second';
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|position"] = 8;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|subtype"] = 'node_comment_form';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-11|type"] = 'node_comment_form';
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-12"] = (object) array(
       'pid' => 'new-12',
-      'panel' => 'three_25_50_25_second',
-      'type' => 'node_comments',
-      'subtype' => 'node_comments',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'mode' => 1,
-        'comments_per_page' => 50,
-        'context' => 'panelizer',
-        'override_title' => 1,
-        'override_title_text' => '',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 9,
-      'locks' => array(),
-    );
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-13"] = (object) array(
-      'pid' => 'new-13',
       'panel' => 'three_25_50_25_third',
       'type' => 'block',
       'subtype' => 'menu-menu-join-us',
@@ -78,8 +38,8 @@ function linux_news_features_override_default_overrides() {
       'position' => 0,
       'locks' => array(),
     );
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-14"] = (object) array(
-      'pid' => 'new-14',
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-13"] = (object) array(
+      'pid' => 'new-13',
       'panel' => 'three_25_50_25_third',
       'type' => 'views_panes',
       'subtype' => 'home_page-panel_pane_3',
@@ -101,8 +61,8 @@ function linux_news_features_override_default_overrides() {
       'position' => 1,
       'locks' => array(),
     );
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-15"] = (object) array(
-      'pid' => 'new-15',
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-14"] = (object) array(
+      'pid' => 'new-14',
       'panel' => 'three_25_50_25_third',
       'type' => 'views_panes',
       'subtype' => 'home_page-panel_pane_4',
@@ -193,12 +153,46 @@ function linux_news_features_override_default_overrides() {
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-7|panel"] = 'three_25_50_25_second';
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-7|position"] = 4;
   $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-7|subtype"] = 'node:field_image';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|configuration|formatter"] = 'text_default';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|configuration|override_title"] = 0;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|configuration|override_title_text"] = '';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|panel"] = 'three_25_50_25_second';
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|position"] = 5;
-  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8|subtype"] = 'node:body';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-8"] = (object) array(
+      'pid' => 'new-8',
+      'panel' => 'three_25_50_25_second',
+      'type' => 'entity_field',
+      'subtype' => 'node:field_tags',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'context' => 'panelizer',
+        'override_title' => 0,
+        'override_title_text' => '',
+        'delta_limit' => 0,
+        'delta_offset' => 0,
+        'delta_reversed' => 0,
+        'formatter' => 'taxonomy_term_reference_link',
+        'formatter_settings' => array(),
+        'label' => 'hidden',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 5,
+      'locks' => array(),
+    );
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|build_mode"] = 'full';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|delta_limit"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|delta_offset"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|delta_reversed"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|formatter"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|formatter_settings"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|identifier"] = '';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|label"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|configuration|link"] = 0;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|panel"] = 'three_25_50_25_second';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|position"] = 6;
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|subtype"] = 'node_links';
+  $overrides["panelizer_defaults.node:imagex_news:default.display|content|new-9|type"] = 'node_links';
   $overrides["panelizer_defaults.node:imagex_news:default.display|layout"] = 'three_25_50_25';
   $overrides["panelizer_defaults.node:imagex_news:default.display|panels|three_25_50_25_first"] = array(
     0 => 'new-1',
@@ -211,16 +205,18 @@ function linux_news_features_override_default_overrides() {
     3 => 'new-6',
     4 => 'new-7',
     5 => 'new-8',
-    6 => 'new-10',
-    7 => 'new-11',
-    8 => 'new-12',
+    6 => 'new-9',
+    7 => 'new-10',
+    8 => 'new-11',
   );
   $overrides["panelizer_defaults.node:imagex_news:default.display|panels|three_25_50_25_third"] = array(
-    0 => 'new-13',
-    1 => 'new-14',
-    2 => 'new-15',
+    0 => 'new-12',
+    1 => 'new-13',
+    2 => 'new-14',
   );
   $overrides["panelizer_defaults.node:imagex_news:default.display|panels|two_33_66_second"]["DELETED"] = TRUE;
 
- return $overrides;
+  features_alter_code('features_overrides', $overrides);
+
+  return $overrides;
 }
