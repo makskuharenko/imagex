@@ -2665,7 +2665,7 @@ html.js input.throbbing {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -4775,7 +4775,102 @@ a.label:hover, a.badge:hover {
 div.messages {
   width: 100%;
   float: left;
-  margin: 20px 0; }
+  margin: 10px 0;
+  padding: 15px 15px 15px 70px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  text-indent: -27px; }
+  div.messages.status {
+    background: #8fd400; }
+    div.messages.status:before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      padding-right: 5px;
+      text-decoration: none;
+      /* sprites.less reset */
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      line-height: normal;
+      vertical-align: baseline;
+      background-image: none;
+      background-position: 0% 0%;
+      background-repeat: repeat; }
+  div.messages.warning {
+    background: #ffb60f; }
+    div.messages.warning:before {
+      content: "\f071";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      padding-right: 5px;
+      text-decoration: none;
+      /* sprites.less reset */
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      line-height: normal;
+      vertical-align: baseline;
+      background-image: none;
+      background-position: 0% 0%;
+      background-repeat: repeat; }
+  div.messages.error {
+    background: #e24912; }
+    div.messages.error:before {
+      content: "\f00d";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit;
+      -webkit-font-smoothing: antialiased;
+      padding-right: 5px;
+      text-decoration: none;
+      /* sprites.less reset */
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      width: auto;
+      height: auto;
+      margin-top: 0;
+      line-height: normal;
+      vertical-align: baseline;
+      background-image: none;
+      background-position: 0% 0%;
+      background-repeat: repeat; }
+  div.messages.status:before, div.messages.warning:before, div.messages.error:before {
+    vertical-align: middle;
+    font-size: 26px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    text-align: center; }
 
 .not-front #header-wrapper {
   padding: 0;
