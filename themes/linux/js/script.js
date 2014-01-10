@@ -12,6 +12,7 @@
     }
   };
 
+
   // Expand and Collapsing blocks for standard sidebar block
   // ----------------------------------------------------------------------------
 
@@ -28,11 +29,12 @@
     });
   }
 
-  Drupal.behaviors.clearBlocks = function(context) {
+  Drupal.behaviors.clearBlocks = function (context) {
     $('.standard-bean').find('> div.view, > div.entity, > div.content, > .linux-training-feed, > .newsletter-signup').attr('style', '');
     $('.standard-bean').off('click', 'h2');
     $('.standard-bean div.view, .standard-bean div.entity, .standard-bean div.content, .standard-bean h2').removeClass('custom-expanded');
   }
+
 
   // jPanel Menu settings
   // ----------------------------------------------------------------------------
@@ -62,6 +64,7 @@
         exit: 10000
     }
   ]);
+
 
   // register enter and exit functions for multiple breakpoints and functions
   // ----------------------------------------------------------------------------
@@ -125,6 +128,7 @@
       }
     }
   ]);
+
 
   // Changing class on scroll so that the navigation rests at the top of the page
   // ----------------------------------------------------------------------------
