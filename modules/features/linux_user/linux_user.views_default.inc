@@ -205,6 +205,7 @@ function linux_user_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'panels_fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['row_options']['layout'] = 'three_inset_right';
   $handler->display->display_options['row_options']['regions'] = array(
     'field_profile_image' => 'three_inset_right_sidebar',
