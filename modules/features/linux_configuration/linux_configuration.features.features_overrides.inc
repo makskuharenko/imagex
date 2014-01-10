@@ -11,6 +11,9 @@ function linux_configuration_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: ckeditor_profile
+  $overrides["ckeditor_profile.Advanced.settings|css_mode"] = 'none';
+
   // Exported overrides for: filter
   $overrides["filter.filtered_html.weight"] = -8;
   $overrides["filter.full_html.weight"] = -10;
