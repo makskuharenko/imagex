@@ -13,7 +13,7 @@ function linux_landing_pages_default_panels_mini() {
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'global_landing_page_right_sidebar';
+  $mini->name = 'global_landing_page_right';
   $mini->category = 'Global Panels';
   $mini->admin_title = 'Global Landing Page Right Sidebar';
   $mini->admin_description = '';
@@ -180,12 +180,12 @@ function linux_landing_pages_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $mini->display = $display;
-  $export['global_landing_page_right_sidebar'] = $mini;
+  $export['global_landing_page_right'] = $mini;
 
   $mini = new stdClass();
   $mini->disabled = FALSE; /* Edit this to true to make a default mini disabled initially */
   $mini->api_version = 1;
-  $mini->name = 'global_standard_page_right_sidebar';
+  $mini->name = 'global_standard_page_right';
   $mini->category = 'Global Panels';
   $mini->admin_title = 'Global Standard Page Right Sidebar';
   $mini->admin_description = '';
@@ -352,7 +352,7 @@ function linux_landing_pages_default_panels_mini() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-6';
   $mini->display = $display;
-  $export['global_standard_page_right_sidebar'] = $mini;
+  $export['global_standard_page_right'] = $mini;
 
   features_alter_code('panels_mini', $export);
 
