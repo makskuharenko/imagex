@@ -109,7 +109,8 @@ div.messages {
 
   .node .date,
   .node-meta,
-  .node-date {
+  .node-date,
+  .social-share {
     display: block;
     float: left;
     margin: 0 10px 0 0;
@@ -119,12 +120,13 @@ div.messages {
     border-right: 1px solid $dropdownDividerTop;
     color: $linuxDarkGray;
   }
-
+  
   .node .comments,
   .node-comment-counter {
-    display: inline-block;
+    display: block;
+    float: left;
     margin: 0 10px 0 0;
-    padding: 0 10px 0 22px;
+    padding: 0 0 0 22px;
     background: transparent url('../img/comment-icon-orange.png') no-repeat left center;
 
     p {
@@ -137,12 +139,31 @@ div.messages {
       }
     }
   }
-
+  
+  .social-share {
+    float: none;
+    clear: left;
+    
+    div.contextual-links-wrapper {
+      display: none !important;
+    }
+  }  
+  
+  .social-share,
   .node-meta-last {
     border-right: none;
 
     &:after {
       clear: left;
+    }
+  }
+  
+  @include at-breakpoint($tablet) {
+    .social-share {
+      border-left: 1px solid $dropdownDividerTop;
+      padding: 2px 0 0 10px;
+      float: left;
+      clear: none;
     }
   }
 
@@ -355,6 +376,14 @@ div.messages {
     width: 100%;
     margin: 0 0 30px;
     list-style-type: none;
+    
+    li {
+      display: block;
+      
+      @include at-breakpoint($tablet) {
+        display: inline-block;
+      }
+    }
 
     li.comment-delete,
     li.comment-edit,
@@ -2881,4 +2910,94 @@ div[role="main"] {
   .page {
     padding-bottom: 2em;
   }
+}
+
+// AddToAny
+// theme as flat icons unless .addtoany-dropdown class present
+// ------------------------------------
+.addtoany,
+.bean-imagex-widget-code {
+  .a2a_dd {
+    display: none !important; 
+  }
+  .addtoany_list,
+  .a2a_default_style {
+    line-height: 22px !important;
+    
+    .a2a_svg,
+    .a2a_img {
+      height: 22px !important;
+      width: 22px !important;
+    }
+    
+    // icons - only touch these icons not all
+    .a2a_button_email,
+    .a2a_button_facebook,
+    .a2a_button_twitter,
+    .a2a_button_linkedin,
+    .a2a_button_pinterest,
+    .a2a_button_google_plus {
+      background: $linuxStdOrange !important;
+      color: white !important;
+      text-align: center !important;
+      @include border-radius(2px);
+      line-height: 1 !important;
+      height: 22px !important;
+      width: 22px !important;
+      margin-right: 2px;
+      padding: 0 !important;
+      display: block !important;
+      float: left !important;
+    }     
+    .a2a_i_email,
+    .a2a_i_facebook,
+    .a2a_i_twitter,
+    .a2a_i_linkedin,
+    .a2a_i_pinterest,
+    .a2a_i_google_plus {
+      background: none !important;
+      color: white !important;
+      text-align: center !important;
+      font-size: 15px;
+      float: none !important;
+      display: inline-block !important;
+      line-height: 17px !important;
+      
+      &:before {
+        padding: 0 !important;
+        vertical-align: middle !important;
+      }      
+    }     
+    .a2a_i_email {
+      @include icon-envelope;
+    }
+    .a2a_i_facebook {
+      @include icon-facebook;
+    }
+    .a2a_i_twitter {
+      @include icon-twitter;
+    }
+    .a2a_i_linkedin {
+      @include icon-linkedin;
+    }
+    .a2a_i_pinterest {
+      @include icon-pinterest;
+    }
+    .a2a_i_google_plus {
+      @include icon-google-plus;
+    }    
+    .a2a_i_pinterest {
+      @include icon-pinterest;
+    }    
+  }
+}
+
+.addtoany_list a span.a2a_img {
+  background: url(../img/share-icon.png) center center no-repeat;
+  height: 19px;
+  width: 19px;
+}
+
+.addtoany-dropdown {
+  
 }
