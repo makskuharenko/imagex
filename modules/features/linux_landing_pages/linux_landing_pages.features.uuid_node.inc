@@ -1100,7 +1100,7 @@ function linux_landing_pages_uuid_features_default_content() {
             'did' => 27,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_standard_page_right_sidebar',
+            'subtype' => 'global_standard_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -1644,7 +1644,7 @@ function linux_landing_pages_uuid_features_default_content() {
             'did' => 3,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -2835,7 +2835,7 @@ ZW|Zimbabwe
             'did' => 5,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -3247,7 +3247,7 @@ ZW|Zimbabwe
             'did' => 28,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_standard_page_right_sidebar',
+            'subtype' => 'global_standard_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -3856,7 +3856,7 @@ ZW|Zimbabwe
             'did' => 23,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_standard_page_right_sidebar',
+            'subtype' => 'global_standard_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -4801,7 +4801,7 @@ ZW|Zimbabwe
             'did' => 26,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_standard_page_right_sidebar',
+            'subtype' => 'global_standard_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -5357,7 +5357,7 @@ ZW|Zimbabwe
             'did' => 7,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -5711,7 +5711,7 @@ ZW|Zimbabwe
             'did' => 8,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -6395,7 +6395,7 @@ ZW|Zimbabwe
             'did' => 10,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -7151,7 +7151,7 @@ ZW|Zimbabwe
             'did' => 12,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -7873,7 +7873,7 @@ ZW|Zimbabwe
             'did' => 14,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -8616,7 +8616,7 @@ ZW|Zimbabwe
             'did' => 16,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_landing_page_right_sidebar',
+            'subtype' => 'global_landing_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
@@ -9053,7 +9053,7 @@ ZW|Zimbabwe
             'did' => 29,
             'panel' => 'three_25_50_25_third',
             'type' => 'panels_mini',
-            'subtype' => 'global_standard_page_right_sidebar',
+            'subtype' => 'global_standard_page_right',
             'shown' => 1,
             'access' => array(),
             'configuration' => array(
