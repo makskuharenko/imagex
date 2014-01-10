@@ -13,7 +13,42 @@
 div.messages {
   width: 100%;
   float: left;
-  margin: 20px 0;
+  margin: 10px 0;
+  padding: 15px 15px 15px 70px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  @include border-radius(2px);
+  text-indent: -27px;
+
+
+  &.status {
+    background: #8fd400;
+    @include icon-ok;
+  }
+
+  &.warning {
+    background: #ffb60f;
+    @include icon-warning-sign;
+  }
+
+  &.error {
+    background: #e24912;
+    @include icon-remove;
+  }
+
+  &.status,
+  &.warning,
+  &.error {
+    &:before {
+      vertical-align: middle;
+      font-size: 26px;
+      border-right: 1px solid rgba(255,255,255,0.3);
+      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+      text-align: center;
+    }
+  }
 }
 
 .not-front {
@@ -100,7 +135,7 @@ div.messages {
     a {
       color: inherit;
     }
-    
+
     .username {
       float: none !important;
       border-right: none !important;
@@ -120,7 +155,7 @@ div.messages {
     border-right: 1px solid $dropdownDividerTop;
     color: $linuxDarkGray;
   }
-  
+
   .node .comments,
   .node-comment-counter {
     display: block;
@@ -139,16 +174,16 @@ div.messages {
       }
     }
   }
-  
+
   .social-share {
     float: none;
     clear: left;
-    
+
     div.contextual-links-wrapper {
       display: none !important;
     }
-  }  
-  
+  }
+
   .social-share,
   .node-meta-last {
     border-right: none;
@@ -157,7 +192,7 @@ div.messages {
       clear: left;
     }
   }
-  
+
   @include at-breakpoint($tablet) {
     .social-share {
       border-left: 1px solid $dropdownDividerTop;
@@ -376,10 +411,10 @@ div.messages {
     width: 100%;
     margin: 0 0 30px;
     list-style-type: none;
-    
+
     li {
       display: block;
-      
+
       @include at-breakpoint($tablet) {
         display: inline-block;
       }
@@ -674,40 +709,40 @@ small {
 // only hide standard-beans wrap with secondary-content with panels layout
 .secondary-content {
   .standard-bean {
-    
+
     .bean-imagex-widget-basic {
       padding: 2em 0;
-    }    
-    
+    }
+
     @include at-breakpoint($computer) {
       .bean-imagex-widget-basic {
         padding-top: 0;
       }
     }
-    
+
     > div,
     > .linux-training-feed {
       padding: 0 0 1px;
       display: none;
       border: 1px solid transparent;
-  
+
       @include at-breakpoint($computer) {
         display: block;
         padding: 0 0 2em;
       }
     }
-    
+
     .view-empty {
       text-align: center;
     }
-    
+
     // Webforms within standard-bean
     form.webform-client-form {
       padding: 0 !important;
-      
+
       .form-item {
         margin-top: 0;
-        
+
         textarea,
         input[type="date"],
         input[type="datetime"],
@@ -739,20 +774,20 @@ small {
       }
       .form-actions {
         margin-top: 1.5em;
-        
+
         button, a.button, input[type="reset"], input[type="submit"], input[type="button"] {
           display: block;
           width: 100%;
         }
       }
-    }    
+    }
   }
 
   .standard-bean-full > div {
     display: block !important;
     padding: 0 0 2em;
   }
-  
+
   .standard-bean .contextual-links-region {
     position: static;
   }
@@ -826,7 +861,7 @@ small {
       background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
       color: transparent;
       cursor: pointer;
-      
+
       // IE
       > span.nolink {
         display: none;
@@ -1092,12 +1127,12 @@ small {
 
             &.menu-utility {
               @include icon-reorder;
-              
+
               //active clashes with drupal default .active class
               &.active {
                 color: $linuxDarkGray;
               }
-              &.open { 
+              &.open {
                 background: transparent url('../img/content-lines.png') repeat 0px 4px;
                 border: none;
                 height: 49px;
@@ -1193,7 +1228,7 @@ small {
       display: none;
     }
   }
-  
+
   .pane-menu-menu-footer ul {
     .expanded {
       margin-right: 0;
@@ -2109,7 +2144,7 @@ div[role="main"] {
       margin: 0 10px 0 0;
     }
 
-    .views-field-title {      
+    .views-field-title {
       a {
         color: $grayDark;
         display: inline;
@@ -2168,7 +2203,7 @@ div[role="main"] {
     &.Review {
       background: transparent url('../img/reviews-icon.png') no-repeat 20px center;
     }
-    
+
     &.Forum,
     &.Blog,
     &.Answer,
@@ -2181,7 +2216,7 @@ div[role="main"] {
     &.News {
       background-position: 20px 5px;
     }
-    
+
      @include at-breakpoint($tablet) {
       .views-field-type,
       .views-field-title,
@@ -2193,7 +2228,7 @@ div[role="main"] {
         margin: 0 0 0 7px;
         padding: 0 0 0 10px;
       }
-    
+
       &.Forum,
       &.Blog,
       &.Answer,
@@ -2205,8 +2240,8 @@ div[role="main"] {
       &.Group,
       &.News {
         background-position: 20px center;
-      }      
-    }    
+      }
+    }
   }
 }
 
@@ -2283,7 +2318,7 @@ div[role="main"] {
 
     .views-field {
       font-size: 13px;
-      
+
       a {
         color: $grayDark;
       }
@@ -2352,7 +2387,7 @@ div[role="main"] {
       .linkedin {
         @include icon-linkedin;
       }
-      
+
       .github {
         @include icon-github;
       }
@@ -2361,8 +2396,8 @@ div[role="main"] {
         @include icon-rss;
       }
     }
-      
-    
+
+
     div.views-field-field-profile-image {
       padding-right: 1em;
 
@@ -2391,7 +2426,7 @@ div[role="main"] {
           line-height: 52px;
         }
       }
-    }    
+    }
 
     // mini panel
     .container {
@@ -2869,7 +2904,7 @@ div[role="main"] {
   font-weight: normal;
   color: lighten($grayDark, 70%);
   @include clearfix;
-  
+
   .views-field-title,
   .views-field-title a,
   .title,
@@ -2888,7 +2923,7 @@ div[role="main"] {
   .views-field-body {
     color: lighten($grayDark, 40%);
   }
-  
+
   .views-field-field-event-external-link,
   .views-field-view-node,
   .links {
@@ -2897,7 +2932,7 @@ div[role="main"] {
     font-weight: 700;
     letter-spacing: 1px;
   }
-  
+
   .views-field-field-logo {
     float: left;
   }
@@ -2918,18 +2953,18 @@ div[role="main"] {
 .addtoany,
 .bean-imagex-widget-code {
   .a2a_dd {
-    display: none !important; 
+    display: none !important;
   }
   .addtoany_list,
   .a2a_default_style {
     line-height: 22px !important;
-    
+
     .a2a_svg,
     .a2a_img {
       height: 22px !important;
       width: 22px !important;
     }
-    
+
     // icons - only touch these icons not all
     .a2a_button_email,
     .a2a_button_facebook,
@@ -2948,7 +2983,7 @@ div[role="main"] {
       padding: 0 !important;
       display: block !important;
       float: left !important;
-    }     
+    }
     .a2a_i_email,
     .a2a_i_facebook,
     .a2a_i_twitter,
@@ -2962,12 +2997,12 @@ div[role="main"] {
       float: none !important;
       display: inline-block !important;
       line-height: 17px !important;
-      
+
       &:before {
         padding: 0 !important;
         vertical-align: middle !important;
-      }      
-    }     
+      }
+    }
     .a2a_i_email {
       @include icon-envelope;
     }
@@ -2985,10 +3020,10 @@ div[role="main"] {
     }
     .a2a_i_google_plus {
       @include icon-google-plus;
-    }    
+    }
     .a2a_i_pinterest {
       @include icon-pinterest;
-    }    
+    }
   }
 }
 
@@ -2999,5 +3034,5 @@ div[role="main"] {
 }
 
 .addtoany-dropdown {
-  
+
 }
