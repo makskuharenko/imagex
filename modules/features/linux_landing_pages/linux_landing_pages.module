@@ -159,3 +159,10 @@ function linux_landing_pages_uuid_to_menu_link() {
 function linux_landing_pages_block_view_flickr_3_alter(&$block, $info) {
   $block['content'] = '<div class="content pagination-centered">' . $block['content'] . '</div>';
 }
+
+/**
+ * Implements hook_event_info_alter().
+ */
+function linux_landing_pages_event_info_alter(&$events) { 
+  $events['workbench_moderation_after_moderation_transition']['variables']['previous_state']['optional'] = TRUE;
+}
