@@ -2471,15 +2471,6 @@ function linux_user_permissions_user_default_permissions() {
     'module' => 'search_api_sorts',
   );
 
-  // Exported permission: 'use text format unfiltered'.
-  $permissions['use text format unfiltered'] = array(
-    'name' => 'use text format unfiltered',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'filter',
-  );
-
   // Exported permission: 'use text format xbbcode'.
   $permissions['use text format xbbcode'] = array(
     'name' => 'use text format xbbcode',
