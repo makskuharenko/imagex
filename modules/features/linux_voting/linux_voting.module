@@ -210,6 +210,9 @@ function linux_voting_node_comments_content_type_render($subtype, $conf, $panel_
   $block = new stdClass();
   $block->module = 'comments';
   $block->delta  = $node->nid;
+  if (empty($node->comment_count)) {
+    return $block;
+  }
 
   $block->title = t('Comments');
   if (empty($node)) {
