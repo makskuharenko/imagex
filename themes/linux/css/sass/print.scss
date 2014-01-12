@@ -1,0 +1,95 @@
+// Custom print styles follow here
+
+// Hiding user content area
+#user-wrapper {
+  display: none;
+}
+
+// Hiding pullout menu
+#block-bean-pull-out-menu-button {
+  display: none;
+}
+
+// Hiding primary Menu
+.nice-menu-menu-primary-menu {
+  display: none;
+}
+
+// Hide utility menu
+.pane-menu-menu-utility-menu {
+  display: none;
+}
+
+// Hiding mobile menu
+#block-panels-mini-mobile-main-menu {
+  display: none;
+}
+
+// Hiding ad space from print
+div[about="/block/ad-space-homepage-right-top"],
+div[about="/block/ad-space---header"] {
+  display: none;
+}
+
+// Hide skip to main content
+a[href="#main-content"] {
+  display: none;
+}
+
+// Hide More Links
+.more-link {
+  display: none;
+}
+
+// Center logo and add some padding
+#logo {
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+}
+
+// Killing flexslider inline styles and hiding unessecary elements
+.flexslider {
+  ul {
+    padding: 0 !important;
+
+    li {
+      width: 100% !important;
+      float: left !important;
+      margin-right: 0 !important;
+      position: relative !important;
+      opacity: 1 !important;
+      display: block !important;
+      z-index: 1 !important;
+    }
+  }
+
+  .flex-direction-nav,
+  .flex-control-nav.flex-control-paging {
+    display: none;
+  }
+}
+
+// Adding borders to regions to give them some space on paper
+.region {
+  border-bottom: 2px solid lightgray;
+  padding: 3em 0;
+}
+
+// Hiding footer elements
+#footer-wrapper {
+  .pane-menu-menu-join-us {
+    display: none;
+  }
+}
+
+// Numbered view
+.numbered {
+  ol {
+    .views-row {
+      .views-field-counter {
+        display: none;
+      }
+    }
+  }
+}

@@ -38,6 +38,7 @@ regions[highlighted] = Highlighted
 
 ;-------------- C S S -------------
 stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
 
 ;-------------- CSS FOAD -------------
 ;stylesheets[all][] = donteverloadmeagain.css
