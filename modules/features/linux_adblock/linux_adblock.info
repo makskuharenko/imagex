@@ -1,0 +1,6 @@
+name = Linux AdBlock
+description = Helper functions for rendering adblocks.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_blog

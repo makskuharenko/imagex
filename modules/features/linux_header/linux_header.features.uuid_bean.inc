@@ -30,13 +30,14 @@ function linux_header_uuid_features_default_beans() {
     'field_widget_basic__markup' => array(
       'und' => array(
         0 => array(
-          'value' => '<p class="ad-space">Ad Space</p>',
+          'value' => '<div id="azk98143_leaderboard" style="border: none;" class="ad-space"></div>',
           'format' => 'full_html',
-          'safe_value' => '<p class="ad-space">Ad Space</p>
+          'safe_value' => '<div style="border:none;" class="ad-space"></div>
 ',
         ),
       ),
     ),
+    'aggregator_item' => FALSE,
   );
 
   features_alter_code('uuid_bean', $beans);

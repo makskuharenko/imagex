@@ -19,6 +19,7 @@ dependencies[] = migrate_extras
 dependencies[] = date_migrate
 dependencies[] = xbbcode
 dependencies[] = xbbcode_basic
+dependencies[] = php
 
 ; ImageX component dependencies
 ; dependencies[] = imagex_aggregator
@@ -91,6 +92,7 @@ dependencies[] = imagex_wysiwyg_profiles_codehighlighter
 dependencies[] = imagex_vocabulary_tags_related_content
 
 ; Linux.com specific components.
+dependencies[] = linux_adblock
 dependencies[] = linux_blog
 dependencies[] = linux_blog_metadata
 dependencies[] = linux_common_fields
