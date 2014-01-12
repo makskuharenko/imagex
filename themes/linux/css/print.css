@@ -46,5 +46,8 @@ a[href="#main-content"] {
   border-bottom: 2px solid lightgray;
   padding: 3em 0; }
 
+#footer-wrapper .pane-menu-menu-join-us {
+  display: none; }
+
 .numbered ol .views-row .views-field-counter {
   display: none; }

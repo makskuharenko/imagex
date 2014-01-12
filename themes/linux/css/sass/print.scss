@@ -76,6 +76,13 @@ a[href="#main-content"] {
   padding: 3em 0;
 }
 
+// Hiding footer elements
+#footer-wrapper {
+  .pane-menu-menu-join-us {
+    display: none;
+  }
+}
+
 // Numbered view
 .numbered {
   ol {
