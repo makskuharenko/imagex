@@ -42,8 +42,16 @@ function linux_user_features_override_default_overrides() {
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|css|css_class"] = 'standard-bean user-activity';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|css|css_id"] = '';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|panel"] = 'three_inset_right_middle';
-  $overrides["panelizer_defaults.user:user:default.display|content|new-3|position"] = 1;
+  $overrides["panelizer_defaults.user:user:default.display|content|new-3|position"] = 2;
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|subtype"] = 'user_activity-panel_pane_2';
+  $overrides["panelizer_defaults.user:user:default.display|content|new-3|type"] = 'views_panes';
+  $overrides["panelizer_defaults.user:user:default.display|content|new-7|configuration|override_title"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.user:user:default.display|content|new-7|configuration|override_title_text"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.user:user:default.display|content|new-7|css|css_class"] = 'standard-bean';
+  $overrides["panelizer_defaults.user:user:default.display|content|new-7|css|css_id"] = '';
+  $overrides["panelizer_defaults.user:user:default.display|content|new-7|panel"] = 'three_inset_right_middle';
+  $overrides["panelizer_defaults.user:user:default.display|content|new-3|position"] = 1;
+  $overrides["panelizer_defaults.user:user:default.display|content|new-3|subtype"] = 'linux_user_badges-panel_pane_1';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|type"] = 'views_panes';
   $overrides["panelizer_defaults.user:user:default.display|content|new-4"] = (object) array(
       'pid' => 'new-4',
@@ -103,7 +111,8 @@ function linux_user_features_override_default_overrides() {
   );
   $overrides["panelizer_defaults.user:user:default.display|panels|three_inset_right_middle"] = array(
     0 => 'new-2',
-    1 => 'new-3',
+    1 => 'new-7',
+    2 => 'new-3',
   );
   $overrides["panelizer_defaults.user:user:default.display|panels|three_inset_right_sidebar"] = array(
     0 => 'new-4',
