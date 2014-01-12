@@ -45,6 +45,7 @@ features[variable][] = menu_parent_manual
 features[variable][] = node_options_manual
 features[variable][] = node_preview_manual
 features[variable][] = node_submitted_manual
+features[variable][] = panelizer_defaults_node_manual
 features_exclude[field][node-manual-body] = node-manual-body
 features_exclude[field][node-manual-field_date] = node-manual-field_date
 features_exclude[field][node-manual-field_manual_section] = node-manual-field_manual_section

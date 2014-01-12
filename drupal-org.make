@@ -63,6 +63,12 @@ projects[xbbcode][subdir] = "contrib"
 projects[xbbcode][version] = "1.5"
 
 ; Download ImageX components for this project.
+projects[imagex_activity][type] = "module"
+projects[imagex_activity][subdir] = "imagex/modules"
+projects[imagex_activity][download][type] = "git"
+projects[imagex_activity][download][url] = "git@github.com:imagex/imagex_activity.git"
+projects[imagex_activity][download][branch] = "master"
+
 projects[imagex_aggregator][type] = "module"
 projects[imagex_aggregator][subdir] = "imagex/modules"
 projects[imagex_aggregator][download][type] = "git"

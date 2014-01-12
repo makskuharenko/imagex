@@ -59,37 +59,36 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
     $data['node:event:default']->display->content['new-11']->subtype = 'node:field_address'; /* WAS: 'node:field_file_attachment' */
     $data['node:event:default']->display->content['new-12']->configuration['delta_limit'] = 0; /* WAS: '' */
     $data['node:event:default']->display->content['new-12']->configuration['delta_offset'] = 0; /* WAS: '' */
-    $data['node:event:default']->display->content['new-12']->configuration['delta_reversed'] = FALSE; /* WAS: '' */
-    $data['node:event:default']->display->content['new-12']->configuration['formatter'] = 'number_integer'; /* WAS: '' */
-    $data['node:event:default']->display->content['new-12']->configuration['formatter_settings'] = array(
-      'decimal_separator' => '.',
-      'prefix_suffix' => TRUE,
-      'scale' => 0,
-      'thousand_separator' => ' ',
-    ); /* WAS: '' */
-    $data['node:event:default']->display->content['new-12']->configuration['label'] = 'above'; /* WAS: '' */
+    $data['node:event:default']->display->content['new-12']->configuration['delta_reversed'] = 0; /* WAS: '' */
+    $data['node:event:default']->display->content['new-12']->configuration['formatter'] = 'og_list_default'; /* WAS: '' */
+    $data['node:event:default']->display->content['new-12']->configuration['formatter_settings'] = array(); /* WAS: '' */
+    $data['node:event:default']->display->content['new-12']->configuration['label'] = 'inline'; /* WAS: '' */
+    $data['node:event:default']->display->content['new-12']->configuration['override_title'] = 0; /* WAS: FALSE */
     $data['node:event:default']->display->content['new-12']->panel = 'three_25_50_25_second'; /* WAS: 'center' */
     $data['node:event:default']->display->content['new-12']->position = 9; /* WAS: 0 */
     $data['node:event:default']->display->content['new-12']->style['settings'] = NULL; /* WAS: '' */
-    $data['node:event:default']->display->content['new-12']->subtype = 'node:field_number_of_attendee'; /* WAS: 'node_links' */
+    $data['node:event:default']->display->content['new-12']->subtype = 'node:og_group_ref'; /* WAS: 'node_links' */
     $data['node:event:default']->display->content['new-12']->type = 'entity_field'; /* WAS: 'node_links' */
     $data['node:event:default']->display->content['new-13'] = (object) array(
           'pid' => 'new-13',
           'panel' => 'three_25_50_25_second',
           'type' => 'entity_field',
-          'subtype' => 'node:field_event_linux_foundation',
+          'subtype' => 'node:field_number_of_attendee',
           'shown' => TRUE,
           'access' => array(),
           'configuration' => array(
-            'label' => 'hidden',
-            'formatter' => 'list_default',
+            'context' => 'panelizer',
             'delta_limit' => 0,
             'delta_offset' => 0,
             'delta_reversed' => FALSE,
-            'formatter_settings' => array(),
-            'context' => 'panelizer',
-            'override_title' => 1,
-            'override_title_text' => '',
+            'formatter' => 'number_integer',
+            'formatter_settings' => array(
+              'decimal_separator' => '.',
+              'prefix_suffix' => TRUE,
+              'scale' => 0,
+              'thousand_separator' => ' ',
+            ),
+            'label' => 'above',
           ),
           'cache' => array(),
           'style' => array(
@@ -104,18 +103,18 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
           'pid' => 'new-14',
           'panel' => 'three_25_50_25_second',
           'type' => 'entity_field',
-          'subtype' => 'node:field_group',
+          'subtype' => 'node:field_event_linux_foundation',
           'shown' => TRUE,
           'access' => array(),
           'configuration' => array(
-            'label' => 'inline',
+            'label' => 'hidden',
             'formatter' => 'list_default',
             'delta_limit' => 0,
             'delta_offset' => 0,
             'delta_reversed' => FALSE,
             'formatter_settings' => array(),
             'context' => 'panelizer',
-            'override_title' => 0,
+            'override_title' => 1,
             'override_title_text' => '',
           ),
           'cache' => array(),
@@ -157,32 +156,6 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
     $data['node:event:default']->display->content['new-16'] = (object) array(
           'pid' => 'new-16',
           'panel' => 'three_25_50_25_second',
-          'type' => 'node_links',
-          'subtype' => 'node_links',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'override_title' => FALSE,
-            'override_title_text' => '',
-            'build_mode' => 'page_manager',
-            'identifier' => '',
-            'link' => TRUE,
-            'context' => 'panelizer',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(
-            'css_class' => 'link-wrapper',
-          ),
-          'extras' => array(),
-          'position' => 13,
-          'locks' => array(),
-        ); /* WAS: '' */
-    $data['node:event:default']->display->content['new-17'] = (object) array(
-          'pid' => 'new-17',
-          'panel' => 'three_25_50_25_second',
           'type' => 'entity_field',
           'subtype' => 'node:field_event_category',
           'shown' => TRUE,
@@ -203,6 +176,32 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
             'settings' => NULL,
           ),
           'css' => array(),
+          'extras' => array(),
+          'position' => 13,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['node:event:default']->display->content['new-17'] = (object) array(
+          'pid' => 'new-17',
+          'panel' => 'three_25_50_25_second',
+          'type' => 'node_links',
+          'subtype' => 'node_links',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => FALSE,
+            'override_title_text' => '',
+            'build_mode' => 'page_manager',
+            'identifier' => '',
+            'link' => TRUE,
+            'context' => 'panelizer',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(
+            'css_class' => 'link-wrapper',
+          ),
           'extras' => array(),
           'position' => 14,
           'locks' => array(),
@@ -380,10 +379,10 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
     $data['node:event:default']->display->content['new-7']->access['plugins'] = array(); /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->configuration['admin_title'] = 'Comment Count'; /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->configuration['body'] = '<a href="#comments" class="comment-count"><span class="comments-icon"></span>%node:comment-count</a>'; /* WAS: '' */
-    $data['node:event:default']->display->content['new-7']->configuration['format'] = 'unfiltered'; /* WAS: '' */
+    $data['node:event:default']->display->content['new-7']->configuration['format'] = 'full_html'; /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->configuration['substitute'] = 1; /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->configuration['title'] = ''; /* WAS: '' */
-    $data['node:event:default']->display->content['new-7']->css['css_class'] = 'node-comment-counter'; /* WAS: '' */
+    $data['node:event:default']->display->content['new-7']->css['css_class'] = 'node-comment-counter node-meta-last'; /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->css['css_id'] = ''; /* WAS: '' */
     $data['node:event:default']->display->content['new-7']->panel = 'three_25_50_25_second'; /* WAS: 'center' */
     $data['node:event:default']->display->content['new-7']->position = 4; /* WAS: 0 */
@@ -443,13 +442,10 @@ function linux_events_panelizer_defaults_override_alter(&$data) {
       1 => 'new-21',
       2 => 'new-22',
     ); /* WAS: '' */
-    $data['node:event:default']->display->title_pane = 'new-16'; /* WAS: 'new-12' */
-    $data['node:event:default']->pipeline = 'ipe'; /* WAS: 'standard' */
+    $data['node:event:default']->display->title_pane = 'new-17'; /* WAS: 'new-12' */
     unset($data['node:event:default']->display->content['new-12']->configuration['build_mode']);
     unset($data['node:event:default']->display->content['new-12']->configuration['identifier']);
     unset($data['node:event:default']->display->content['new-12']->configuration['link']);
-    unset($data['node:event:default']->display->content['new-12']->configuration['override_title']);
-    unset($data['node:event:default']->display->content['new-12']->configuration['override_title_text']);
     unset($data['node:event:default']->display->content['new-12']->css['css_class']);
     unset($data['node:event:default']->display->content['new-1']->configuration['context']);
     unset($data['node:event:default']->display->content['new-1']->configuration['delta_limit']);

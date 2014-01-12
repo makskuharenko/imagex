@@ -1,0 +1,12 @@
+name = Linux Content Likes
+description = Overrides the defaults page in Imagex Content Likes
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_content_likes
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = who_liked_this

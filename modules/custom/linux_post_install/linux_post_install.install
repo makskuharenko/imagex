@@ -57,6 +57,25 @@ function linux_post_install_install() {
       node_save($node);
     }
   }
+  _linux_install_change_comments();
+}
+
+/**
+ * Changes the comment bodies to plain text
+ */
+function _linux_install_change_comments() {
+  // Get all the fields that are comment bodies
+  $results = db_select('field_config_instance', 'f')->fields('f')->condition('field_name', 'comment_body')->execute()->fetchAllAssoc('id');
+
+  foreach ($results as &$row) {
+    $row = (array) $row;
+    $row['data'] = unserialize($row['data']);
+    // Change the field to no text formats/WYSIWYG
+    $row['data']['settings']['text_processing'] = 0;
+    $row['data'] = serialize($row['data']);
+    // Resave the instance with the new settings
+    db_update('field_config_instance')->fields($row)->condition('id', $row['id'])->execute();
+  }
 }
 
 /**

@@ -11,6 +11,35 @@ function linux_landing_pages_uuid_features_default_beans() {
   $beans = array();
 
   $beans[] = array(
+    'label' => 'Adspace: Landing Page Right Sidebar',
+    'description' => NULL,
+    'title' => '',
+    'type' => 'imagex_widget_basic',
+    'data' => array(
+      'view_mode' => 'default',
+    ),
+    'delta' => 'adspace-landing-page-right-sideb',
+    'view_mode' => 'default',
+    'created' => 1389257173,
+    'log' => '',
+    'uid' => 1,
+    'default_revision' => 1,
+    'revisions' => array(),
+    'uuid' => '2ef1eba6-65cb-4fae-af20-9b5dcabbd15a',
+    'field_widget_basic__image' => array(),
+    'field_widget_basic__markup' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<p style="text-align:center;"><img alt="" src="http://placehold.it/320/eeeeee/999999.png&amp;text=Ad+Space" style="height:320px; width:320px" /></p>',
+          'format' => 'full_html',
+          'safe_value' => '<p style="text-align:center;"><img alt="" src="http://placehold.it/320/eeeeee/999999.png&amp;text=Ad+Space" style="height:320px;width:320px;" /></p>
+',
+        ),
+      ),
+    ),
+    'aggregator_item' => FALSE,
+  );
+  $beans[] = array(
     'label' => 'Have a tip',
     'description' => NULL,
     'title' => '',

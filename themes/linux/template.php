@@ -8,14 +8,14 @@
  * Implements hook_css_alter().
  */
 function linux_css_alter(&$css) {
-  //Here we go smack all css files into 1 (one) - we like less http request 
+  //Here we go smack all css files into 1 (one) - we like less http request
   //IE + respond.js need this
   foreach ($css as $path => $value) {
     if ($css[$path]['media'] == 'all') {
       $css[$path]['media'] = 'screen';
     }
   }
-  
+
   //grap the css and punch it into one file
   //credits to metaltoad http://www.metaltoad.com/blog/drupal-7-taking-control-css-and-js-aggregation
   uasort($css, 'drupal_sort_css_js');
@@ -26,8 +26,8 @@ function linux_css_alter(&$css) {
     $css[$name]['every_page'] = FALSE;
   }
 
-} 
- 
+}
+
 /**
  * Implements hook_theme_registry_alter().
  */
@@ -57,7 +57,7 @@ function linux_form_alter(&$form, &$form_state, $form_id) {
           $form["submitted"][$key]['#attributes']["placeholder"] = $value["#title"];
           $form["submitted"][$key]['#attributes']['class'][] = 'has-placeholder';
           break;
-      } 
+      }
     }
   }
 }
@@ -72,7 +72,7 @@ function linux_preprocess_html(&$vars) {
   $error_statuses = array('403 Forbidden', '404 Not Found');
   if (isset($headers['status'])) {
     $vars['classes_array'][] = drupal_html_class('page-' . $headers['status']);
-    
+
     // force html.tpl file
     if (in_array($headers['status'], $error_statuses)) {
       $vars['theme_hook_suggestions'][] = 'html';
@@ -97,7 +97,7 @@ function linux_preprocess_page(&$vars,$hook) {
       //add a body class for good measure
       $body_classes[] = 'page-panel';
     }
-  } 
+  }
 }
 
 function linux_preprocess_region(&$vars,$hook) {
@@ -151,17 +151,17 @@ function linux_preprocess_node(&$vars,$hook) {
   if ($vars['view_mode'] == 'sidebar' && !in_array($vars['type'], array('question'))) {
      _linux_shared_sidebar_preprocess($vars);
   }
-  
+
   // Add some reusable options based on view mode
   if (!empty($vars['view_mode'])) {
     // Template suggestions
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['view_mode'];
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__' . $vars['view_mode'];
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type;
-    
+
     // Title attribute/class
-    $vars['title_attributes_array']['class'][] = 'node-title-' . $vars['view_mode'];    
-    
+    $vars['title_attributes_array']['class'][] = 'node-title-' . $vars['view_mode'];
+
     // wrapper attributes/classes
     $vars['attributes_array']['class'][] = 'node-' . $vars['node']->type;
     $vars['attributes_array']['class'][] = 'node-' . $vars['view_mode'];
@@ -222,5 +222,34 @@ function linux_process_page(&$vars) {
     if (in_array($headers['status'], $error_statuses)) {
       $vars['theme_hook_suggestions'][] = 'page';
     }
-  } 
+  }
+}
+
+function linux_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"messages $type\">\n<div class=\"messages-icon\"></div>\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= $messages[0];
+    }
+    $output .= "</div>\n";
+  }
+  return $output;
 }

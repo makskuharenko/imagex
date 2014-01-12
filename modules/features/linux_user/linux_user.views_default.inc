@@ -35,10 +35,9 @@ function linux_user_views_default_views() {
   $handler->display->display_options['style_options']['row_class'] = '[type]';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
-    'type' => 'type',
-    'title' => 'title',
     'created' => 'created',
   );
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   /* Field: Content: Type */
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
@@ -200,6 +199,31 @@ function linux_user_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = '[type]';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'panels_fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['layout'] = 'three_inset_right';
+  $handler->display->display_options['row_options']['regions'] = array(
+    'field_profile_image' => 'three_inset_right_sidebar',
+    'field_linux_name' => 'three_inset_right_top',
+    'field_linux_occupation' => 'three_inset_right_middle',
+    'field_linux_city' => 'three_inset_right_middle',
+    'field_linux_country' => 'three_inset_right_middle',
+    'field_linux_user_tags' => 'three_inset_right_middle',
+    'created' => 'three_inset_right_inset',
+    'login' => 'three_inset_right_inset',
+    'field_linux_facebook' => 'three_inset_right_inset',
+    'field_linux_twitter' => 'three_inset_right_inset',
+    'field_linux_google_' => 'three_inset_right_inset',
+    'field_linux_linkedin' => 'three_inset_right_inset',
+    'field_linux_github_profile' => 'three_inset_right_inset',
+    'field_linux_rss' => 'three_inset_right_inset',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
@@ -243,21 +267,24 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_occupation']['table'] = 'field_data_field_linux_occupation';
   $handler->display->display_options['fields']['field_linux_occupation']['field'] = 'field_linux_occupation';
   $handler->display->display_options['fields']['field_linux_occupation']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_linux_occupation']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_occupation']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_occupation']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_occupation']['element_label_colon'] = FALSE;
   /* Field: User: City */
   $handler->display->display_options['fields']['field_linux_city']['id'] = 'field_linux_city';
   $handler->display->display_options['fields']['field_linux_city']['table'] = 'field_data_field_linux_city';
   $handler->display->display_options['fields']['field_linux_city']['field'] = 'field_linux_city';
   $handler->display->display_options['fields']['field_linux_city']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_linux_city']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_city']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_city']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_city']['element_label_colon'] = FALSE;
   /* Field: User: Country */
   $handler->display->display_options['fields']['field_linux_country']['id'] = 'field_linux_country';
   $handler->display->display_options['fields']['field_linux_country']['table'] = 'field_data_field_linux_country';
   $handler->display->display_options['fields']['field_linux_country']['field'] = 'field_linux_country';
   $handler->display->display_options['fields']['field_linux_country']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_linux_country']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_country']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_country']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_country']['element_label_colon'] = FALSE;
   /* Field: User: User Tags */
   $handler->display->display_options['fields']['field_linux_user_tags']['id'] = 'field_linux_user_tags';
@@ -265,8 +292,10 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_user_tags']['field'] = 'field_linux_user_tags';
   $handler->display->display_options['fields']['field_linux_user_tags']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_user_tags']['label'] = 'Interests';
-  $handler->display->display_options['fields']['field_linux_user_tags']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_user_tags']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_user_tags']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_user_tags']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_user_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_linux_user_tags']['delta_offset'] = '0';
   /* Field: User: Created date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -274,15 +303,18 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['relationship'] = 'uid';
   $handler->display->display_options['fields']['created']['label'] = 'Joined';
-  $handler->display->display_options['fields']['created']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created']['element_type'] = 'span';
+  $handler->display->display_options['fields']['created']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['created']['date_format'] = 'medium';
   /* Field: User: Last login */
   $handler->display->display_options['fields']['login']['id'] = 'login';
   $handler->display->display_options['fields']['login']['table'] = 'users';
   $handler->display->display_options['fields']['login']['field'] = 'login';
   $handler->display->display_options['fields']['login']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['login']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['login']['element_type'] = 'span';
+  $handler->display->display_options['fields']['login']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['login']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['login']['date_format'] = 'medium';
   /* Field: User: FaceBook */
@@ -291,17 +323,32 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_facebook']['field'] = 'field_linux_facebook';
   $handler->display->display_options['fields']['field_linux_facebook']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_facebook']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_facebook']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_facebook']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_facebook']['element_class'] = 'facebook';
   $handler->display->display_options['fields']['field_linux_facebook']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_facebook']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_facebook']['click_sort_column'] = 'url';
+  /* Field: User: Twitter */
+  $handler->display->display_options['fields']['field_linux_twitter']['id'] = 'field_linux_twitter';
+  $handler->display->display_options['fields']['field_linux_twitter']['table'] = 'field_data_field_linux_twitter';
+  $handler->display->display_options['fields']['field_linux_twitter']['field'] = 'field_linux_twitter';
+  $handler->display->display_options['fields']['field_linux_twitter']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['field_linux_twitter']['label'] = '';
+  $handler->display->display_options['fields']['field_linux_twitter']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_twitter']['element_class'] = 'twitter';
+  $handler->display->display_options['fields']['field_linux_twitter']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_twitter']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_twitter']['click_sort_column'] = 'url';
   /* Field: User: Google Plus */
   $handler->display->display_options['fields']['field_linux_google_']['id'] = 'field_linux_google_';
   $handler->display->display_options['fields']['field_linux_google_']['table'] = 'field_data_field_linux_google_';
   $handler->display->display_options['fields']['field_linux_google_']['field'] = 'field_linux_google_';
   $handler->display->display_options['fields']['field_linux_google_']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_google_']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_google_']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_google_']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_linux_google_']['element_class'] = 'google';
   $handler->display->display_options['fields']['field_linux_google_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_google_']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_google_']['click_sort_column'] = 'url';
   /* Field: User: LinkedIn */
   $handler->display->display_options['fields']['field_linux_linkedin']['id'] = 'field_linux_linkedin';
@@ -309,8 +356,9 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_linkedin']['field'] = 'field_linux_linkedin';
   $handler->display->display_options['fields']['field_linux_linkedin']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_linkedin']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_linkedin']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_linkedin']['element_class'] = 'linkedin';
   $handler->display->display_options['fields']['field_linux_linkedin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_linkedin']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_linkedin']['click_sort_column'] = 'url';
   /* Field: User: GitHub Profile */
   $handler->display->display_options['fields']['field_linux_github_profile']['id'] = 'field_linux_github_profile';
@@ -318,8 +366,9 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_github_profile']['field'] = 'field_linux_github_profile';
   $handler->display->display_options['fields']['field_linux_github_profile']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_github_profile']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_github_profile']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_github_profile']['element_class'] = 'github';
   $handler->display->display_options['fields']['field_linux_github_profile']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_github_profile']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_github_profile']['click_sort_column'] = 'url';
   /* Field: User: RSS */
   $handler->display->display_options['fields']['field_linux_rss']['id'] = 'field_linux_rss';
@@ -327,42 +376,10 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_linux_rss']['field'] = 'field_linux_rss';
   $handler->display->display_options['fields']['field_linux_rss']['relationship'] = 'uid';
   $handler->display->display_options['fields']['field_linux_rss']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_rss']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_linux_rss']['element_class'] = 'rss';
   $handler->display->display_options['fields']['field_linux_rss']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_linux_rss']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_linux_rss']['click_sort_column'] = 'url';
-  /* Field: User: Twitter */
-  $handler->display->display_options['fields']['field_linux_twitter']['id'] = 'field_linux_twitter';
-  $handler->display->display_options['fields']['field_linux_twitter']['table'] = 'field_data_field_linux_twitter';
-  $handler->display->display_options['fields']['field_linux_twitter']['field'] = 'field_linux_twitter';
-  $handler->display->display_options['fields']['field_linux_twitter']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['field_linux_twitter']['label'] = '';
-  $handler->display->display_options['fields']['field_linux_twitter']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_linux_twitter']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_linux_twitter']['click_sort_column'] = 'url';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="field-content"><span class="field-label">Occupation</span>[field_linux_occupation]</div>
-<div class="field-content"><span class="field-label">City</span>[field_linux_city]</div>
-<div class="field-content"><span class="field-label">Country</span>[field_linux_country]</div>
-<div class="field-content"><span class="field-label">Interests</span>[field_linux_user_tags]</div>';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<div class="field-content"><span class="field-label">Joined</span>[created]</div>
-<div class="field-content"><span class="field-label">Last Login</span>[login]</div>
-<div class="facebook">[field_linux_facebook]</div>
-<div class="twitter">[field_linux_twitter]</div>
-<div class="google">[field_linux_google_]</div>
-<div class="linkedin">[field_linux_linkedin]</div>
-<div class="github">[field_linux_github_profile]</div>
-<div class="rss">[field_linux_rss]</div>';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: User: Uid */

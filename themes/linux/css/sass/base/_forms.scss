@@ -378,6 +378,7 @@ a:link.fieldset-title, .fieldset-legend{
 }
 */
 
+#comments,
 .comment-form {
   display: inline-block;
   width: 100%;
@@ -412,6 +413,10 @@ a:link.fieldset-title, .fieldset-legend{
   textarea {
     height: 200px;
     resize: none;
+  }
+  
+  h2, h3, {
+    display: none;
   }
 }
 

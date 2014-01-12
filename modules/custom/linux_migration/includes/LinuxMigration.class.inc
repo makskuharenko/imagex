@@ -12,9 +12,10 @@ abstract class LinuxMigration extends ImagexMigrationSqlMigration {
     parent::init();
 
     $this->workbench_default_tid = db_query("SELECT ttd.tid FROM {taxonomy_term_data} ttd
-     INNER JOIN {taxonomy_vocabulary} tv on ttd.vid = tv.vid
-     WHERE ttd.name = 'Default' AND tv.machine_name = 'workbench_section'"
+      INNER JOIN {taxonomy_vocabulary} tv on ttd.vid = tv.vid
+      WHERE ttd.name = 'Default' AND tv.machine_name = 'workbench_section'"
     )->fetchField();
+
   }
 
   /**

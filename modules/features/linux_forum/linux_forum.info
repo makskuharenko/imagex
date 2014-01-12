@@ -34,3 +34,4 @@ features[variable][] = advanced_forum_collapsible_containers
 features[variable][] = advanced_forum_default_collapsed_list
 features[variable][] = advanced_forum_style
 features[variable][] = advanced_forum_styled_node_types
+features[variable][] = panelizer_defaults_node_forum
