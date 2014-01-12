@@ -163,6 +163,6 @@ function linux_landing_pages_block_view_flickr_3_alter(&$block, $info) {
 /**
  * Implements hook_event_info_alter().
  */
-function linux_landing_pages_event_info_alter(&$events) { 
+function linux_landing_pages_rules_event_info_alter(&$events) { 
   $events['workbench_moderation_after_moderation_transition']['variables']['previous_state']['optional'] = TRUE;
 }
