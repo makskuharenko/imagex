@@ -226,6 +226,10 @@ div.messages {
       clear: none;
     }
   }
+  
+  .field {
+    clear: left;
+  }
 
   .node-text-teaser {
     font-size: 12px;
@@ -2147,7 +2151,8 @@ div[role="main"] {
 // User views and views rows with content type icons
 // -------------------------------------------------
 
-.user-activity {
+.user-activity,
+.group-activity {
   margin: 0 0 10px;
 
   .views-row {

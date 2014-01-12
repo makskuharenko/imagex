@@ -2767,6 +2767,7 @@ a:link.fieldset-title, .fieldset-legend{
   display:block; height:25px; font-weight:bold; padding-bottom:0;
 }
 */
+#comments,
 .comment-form {
   display: inline-block;
   width: 100%;
@@ -2774,14 +2775,23 @@ a:link.fieldset-title, .fieldset-legend{
   border-bottom: 1px solid #e5e5e5;
   padding: 20px 0;
   margin: 0 0 20px; }
+  #comments label,
+  #comments .username,
   .comment-form label,
   .comment-form .username {
     display: none; }
+  #comments .filter-wrapper,
   .comment-form .filter-wrapper {
     padding: 0; }
+  #comments input[type="text"],
   .comment-form input[type="text"] {
     width: 100%;
     margin: 0 0 1em; }
+  #comments button,
+  #comments a.button,
+  #comments input[type="reset"],
+  #comments input[type="submit"],
+  #comments input[type="button"],
   .comment-form button,
   .comment-form a.button,
   .comment-form input[type="reset"],
@@ -2789,9 +2799,14 @@ a:link.fieldset-title, .fieldset-legend{
   .comment-form input[type="button"] {
     float: right;
     margin: 5px 0 5px 10px; }
+  #comments textarea,
   .comment-form textarea {
     height: 200px;
     resize: none; }
+  #comments h2, #comments h3,
+  .comment-form h2,
+  .comment-form h3 {
+    display: none; }
 
 .confirmation h3 {
   font-family: "Open Sans Condensed"; }
@@ -4996,6 +5011,8 @@ div.messages {
     padding: 2px 0 0 10px;
     float: left;
     clear: none; } }
+.not-front .field {
+  clear: left; }
 .not-front .node-text-teaser {
   font-size: 12px;
   font-weight: 300;
@@ -6596,15 +6613,19 @@ div[role="main"] .pane-menu-menu-join-us {
     .js-leftbar-dropdown .js-leftbar-option.js-leftbar-option-count {
       background: transparent url("../img/most-shared-white.png") no-repeat right center; }
 
-.user-activity {
+.user-activity,
+.group-activity {
   margin: 0 0 10px; }
-  .user-activity .views-row {
+  .user-activity .views-row,
+  .group-activity .views-row {
     margin: 10px 0;
     background-color: transparent !important;
     padding: 0 26px 0 20px; }
-    .user-activity .views-row .views-field span {
+    .user-activity .views-row .views-field span,
+    .group-activity .views-row .views-field span {
       display: inline; }
-    .user-activity .views-row .views-field-type {
+    .user-activity .views-row .views-field-type,
+    .group-activity .views-row .views-field-type {
       display: none;
       font-weight: 700;
       font-family: "Open Sans Condensed";
@@ -6612,42 +6633,89 @@ div[role="main"] .pane-menu-menu-join-us {
       border-right: 1px solid #e5e5e5;
       padding: 0 7px 0 0;
       margin: 0 10px 0 0; }
-    .user-activity .views-row .views-field-title a {
+    .user-activity .views-row .views-field-title a,
+    .group-activity .views-row .views-field-title a {
       color: #333333;
       display: inline; }
-    .user-activity .views-row .views-field-created {
+    .user-activity .views-row .views-field-created,
+    .group-activity .views-row .views-field-created {
       font-weight: 300;
       font-family: "Open Sans Condensed"; }
-      .user-activity .views-row .views-field-created em {
+      .user-activity .views-row .views-field-created em,
+      .group-activity .views-row .views-field-created em {
         font-style: normal; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News {
+    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
+    .group-activity .views-row.Forum,
+    .group-activity .views-row.Blog,
+    .group-activity .views-row.Answer,
+    .group-activity .views-row.Question,
+    .group-activity .views-row.Article,
+    .group-activity .views-row.Tutorial,
+    .group-activity .views-row.Shared,
+    .group-activity .views-row.Review,
+    .group-activity .views-row.Group,
+    .group-activity .views-row.News {
       padding: 0 26px 0 46px; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Group {
+    .user-activity .views-row.Forum, .user-activity .views-row.Group,
+    .group-activity .views-row.Forum,
+    .group-activity .views-row.Group {
       background: transparent url("../img/forums-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Blog {
+    .user-activity .views-row.Blog,
+    .group-activity .views-row.Blog {
       background: transparent url("../img/blogs-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Answer, .user-activity .views-row.Question {
+    .user-activity .views-row.Answer, .user-activity .views-row.Question,
+    .group-activity .views-row.Answer,
+    .group-activity .views-row.Question {
       background: transparent url("../img/answers-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Article, .user-activity .views-row.News {
+    .user-activity .views-row.Article, .user-activity .views-row.News,
+    .group-activity .views-row.Article,
+    .group-activity .views-row.News {
       background: transparent url("../img/articles-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Tutorial {
+    .user-activity .views-row.Tutorial,
+    .group-activity .views-row.Tutorial {
       background: transparent url("../img/tutorials-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Shared {
+    .user-activity .views-row.Shared,
+    .group-activity .views-row.Shared {
       background: transparent url("../img/shared-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Review {
+    .user-activity .views-row.Review,
+    .group-activity .views-row.Review {
       background: transparent url("../img/reviews-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News {
+    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
+    .group-activity .views-row.Forum,
+    .group-activity .views-row.Blog,
+    .group-activity .views-row.Answer,
+    .group-activity .views-row.Question,
+    .group-activity .views-row.Article,
+    .group-activity .views-row.Tutorial,
+    .group-activity .views-row.Shared,
+    .group-activity .views-row.Review,
+    .group-activity .views-row.Group,
+    .group-activity .views-row.News {
       background-position: 20px 5px; }
     @media (min-width: 35em) {
       .user-activity .views-row .views-field-type,
       .user-activity .views-row .views-field-title,
-      .user-activity .views-row .views-field-created {
+      .user-activity .views-row .views-field-created,
+      .group-activity .views-row .views-field-type,
+      .group-activity .views-row .views-field-title,
+      .group-activity .views-row .views-field-created {
         display: inline; }
-      .user-activity .views-row .views-field-created {
+      .user-activity .views-row .views-field-created,
+      .group-activity .views-row .views-field-created {
         border-left: 1px solid #e5e5e5;
         margin: 0 0 0 7px;
         padding: 0 0 0 10px; }
-      .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News {
+      .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
+      .group-activity .views-row.Forum,
+      .group-activity .views-row.Blog,
+      .group-activity .views-row.Answer,
+      .group-activity .views-row.Question,
+      .group-activity .views-row.Article,
+      .group-activity .views-row.Tutorial,
+      .group-activity .views-row.Shared,
+      .group-activity .views-row.Review,
+      .group-activity .views-row.Group,
+      .group-activity .views-row.News {
         background-position: 20px center; } }
 
 .user-activity-stats .views-row {

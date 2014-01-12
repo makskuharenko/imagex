@@ -13,7 +13,7 @@ function linux_group_views_default_views() {
   $view = new view();
   $view->name = 'linux_og_content';
   $view->description = 'Show all content (nodes) of a group.';
-  $view->tag = 'og';
+  $view->tag = 'Linux.com';
   $view->base_table = 'node';
   $view->human_name = 'Linux OG content';
   $view->core = 0;
@@ -31,6 +31,7 @@ function linux_group_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = '[type]';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'type' => 'type',

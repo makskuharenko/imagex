@@ -53,7 +53,6 @@ features[features_overrides][] = panelizer_defaults.node:event:default.display|c
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|configuration|label
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|configuration|link
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|configuration|override_title
-features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|configuration|override_title_text
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|css|css_class
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|panel
 features[features_overrides][] = panelizer_defaults.node:event:default.display|content|new-12|position
