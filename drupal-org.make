@@ -61,6 +61,12 @@ projects[search_api_solr][version] = "1.3"
 projects[xbbcode][type] = "module"
 projects[xbbcode][subdir] = "contrib"
 projects[xbbcode][version] = "1.5"
+projects[user_badges][type] = "module"
+projects[user_badges][subdir] = "contrib"
+projects[user_badges][version] = "3.x-dev"
+projects[voting_rules][type] = "module"
+projects[voting_rules][subdir] = "contrib"
+projects[voting_rules][version] = "1.0-alpha1"
 
 ; Download ImageX components for this project.
 projects[imagex_activity][type] = "module"
