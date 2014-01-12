@@ -836,6 +836,10 @@ small {
   }
 }
 
+.newsletter-signup.custom-expanded {
+  overflow: visible !important;
+}
+
 .filtered-view {
   h2 {
     @include icon-caret-down;

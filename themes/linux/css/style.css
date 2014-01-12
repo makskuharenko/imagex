@@ -5502,6 +5502,9 @@ a {
   padding: 2em 1em !important;
   background: transparent url("../img/content-lines.png") repeat top left; }
 
+.newsletter-signup.custom-expanded {
+  overflow: visible !important; }
+
 .filtered-view h2 {
   background: transparent url("../img/most-recent-gray.png") no-repeat 85% center;
   background-position: -webkit-calc(100% - 45px) center;
