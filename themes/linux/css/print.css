@@ -1,0 +1,50 @@
+#user-wrapper {
+  display: none; }
+
+#block-bean-pull-out-menu-button {
+  display: none; }
+
+.nice-menu-menu-primary-menu {
+  display: none; }
+
+.pane-menu-menu-utility-menu {
+  display: none; }
+
+#block-panels-mini-mobile-main-menu {
+  display: none; }
+
+div[about="/block/ad-space-homepage-right-top"],
+div[about="/block/ad-space---header"] {
+  display: none; }
+
+a[href="#main-content"] {
+  display: none; }
+
+.more-link {
+  display: none; }
+
+#logo {
+  display: block;
+  margin: 2em auto;
+  text-align: center; }
+
+.flexslider ul {
+  padding: 0 !important; }
+  .flexslider ul li {
+    width: 100% !important;
+    float: left !important;
+    margin-right: 0 !important;
+    position: relative !important;
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 1 !important; }
+.flexslider .flex-direction-nav,
+.flexslider .flex-control-nav.flex-control-paging {
+  display: none; }
+
+.region {
+  border-bottom: 2px solid lightgray;
+  padding: 3em 0; }
+
+.numbered ol .views-row .views-field-counter {
+  display: none; }
