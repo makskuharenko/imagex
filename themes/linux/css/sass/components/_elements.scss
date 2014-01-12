@@ -1410,6 +1410,12 @@ small {
     }
   }
 
+  .field-type-image {
+    img {
+      max-height: 446px;
+    }
+  }
+
   .views-field-title {
     h2 {
       border: 0;
@@ -1565,6 +1571,12 @@ small {
       img {
         @include opacity(0.3);
       }
+    }
+  }
+
+  .field-type-image {
+    img {
+      max-height: 223px;
     }
   }
 
