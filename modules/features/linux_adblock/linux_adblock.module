@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file
+ */
+
+define('LINUX_ADBLOCK_TYPE_RECTANGLE', 'rectangle');
+define('LINUX_ADBLOCK_TYPE_LEADERBOARD', 'leaderboard');
+
+function linux_adblock_init() {
+  _linux_adblock_add_js();
+}
+
+function linux_adblock_block_info() {
+  $blocks['linux-adblock-' . LINUX_ADBLOCK_TYPE_LEADERBOARD] = array(
+    'info' => t('Linux AdBlock - Leaderboard'),
+    'properties' => array(
+      'administrative' => FALSE,
+    ),
+  );
+  $blocks['linux-adblock-' . LINUX_ADBLOCK_TYPE_RECTANGLE] = array(
+    'info' => t('Linux AdBlock - Rectangle'),
+    'properties' => array(
+      'administrative' => FALSE,
+    ),
+  );
+  return $blocks;
+}
+
+function linux_adblock_theme() {
+  return array(
+    'linux_adblock' => array(
+      'type' => ''
+    ),
+  );
+}
+
+function linux_adblock_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'linux-adblock-rectangle':
+      $block['content'] = array(
+        'ad' => array(
+          '#type' => 'markup',
+          '#markup' => theme_linux_adblock(array('#type' => LINUX_ADBLOCK_TYPE_RECTANGLE)),
+        ),
+      );
+      break;
+
+    case 'linux-adblock-leaderboard':
+      $block['content'] = array(
+        'ad' => array(
+          '#type' => 'markup',
+          '#markup' => theme_linux_adblock(array('#type' => LINUX_ADBLOCK_TYPE_LEADERBOARD)),
+        )
+      );
+      break;
+  }
+  return $block;
+}
+
+function theme_linux_adblock($variables) {
+  // $output = '<div id="azk59340_tracking" style="border: none;"></div>';
+  $output = '';
+  switch ($variables['#type']) {
+    case LINUX_ADBLOCK_TYPE_RECTANGLE:
+      $output .= '<div id="azk85217_rectangle" style="border: none;" class="ad-space"></div>';
+      break;
+    case LINUX_ADBLOCK_TYPE_LEADERBOARD:
+      $output .= '<div id="azk98143_leaderboard" style="border: none;" class="ad-space"></div>';
+      break;
+  }
+  return $output;
+}
+
+function _linux_adblock_add_js() {
+  drupal_add_js(drupal_get_path('module', 'linux_adblock') . '/linux_adblock.js', array('type' => 'file', 'scope' => 'footer'));
+}
