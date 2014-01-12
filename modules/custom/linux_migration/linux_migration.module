@@ -13,11 +13,13 @@ function linux_migration_migrate_api() {
       'creativecommons',
       'nodereference_count',
       'media',
+      'workbench_moderation',
     ),
     'node_update' => array(
       'creativecommons',
       'nodereference_count',
       'media',
+      'workbench_moderation',
     ),
     'file_presave' => array(
       'media_browser_plus',
