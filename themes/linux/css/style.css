@@ -6020,6 +6020,8 @@ a {
         content: none; }
     .featured-slideshow .flexslider .slides li {
       position: relative; }
+  .featured-slideshow .field-type-image img {
+    max-height: 446px; }
   .featured-slideshow .views-field-title h2 {
     border: 0;
     margin: 0;
@@ -6119,6 +6121,8 @@ a {
     .featured-tiles .views-row:hover img {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
       opacity: 0.3; }
+  .featured-tiles .field-type-image img {
+    max-height: 223px; }
   .featured-tiles .views-field-title {
     position: absolute;
     top: 0px; }
