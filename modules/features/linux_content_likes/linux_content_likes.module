@@ -9,14 +9,14 @@ include_once 'linux_content_likes.features.inc';
 /**
  * Implements hook_views_api().
  */
-function linux_configuration_views_api($module = NULL, $api = NULL) {
+function linux_content_likes_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_views_default_views_alter
  */
-function linux_configuration_views_default_views_alter(&$views) {
+function linux_content_likes_views_default_views_alter(&$views) {
   if (isset($views['imagex_who_liked_this']->display['page_1'])) {
     unset($views['imagex_who_liked_this']->display['page_1']);
   }
