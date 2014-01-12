@@ -55,7 +55,7 @@ class LinuxArchive09ForumTopicMigration extends LinuxMigration {
    * migration, see: https://drupal.org/node/1096132
    *
    */
-  protected function handleSourceMigration($source_migrations, $source_keys, $default, $migration) {
+  protected function handleSourceMigration($source_migrations, $source_keys, $default = NULL, $migration = NULL) {
     if (!is_array($source_keys) && strpos($source_keys, 'forum') !== FALSE) {
       $source_keys = str_replace('forum-', '', $source_keys);
       return parent::handleSourceMigration(array('LinuxForum'), $source_keys, $default, $migration);
