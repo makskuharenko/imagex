@@ -4776,7 +4776,7 @@ div.messages {
   width: 100%;
   float: left;
   margin: 10px 0;
-  padding: 15px 15px 15px 70px;
+  padding: 15px;
   border: none;
   color: white;
   font-weight: bold;
@@ -4784,11 +4784,20 @@ div.messages {
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  border-radius: 2px;
-  text-indent: -27px; }
+  border-radius: 2px; }
+  div.messages ul {
+    width: 80%;
+    text-indent: 0;
+    margin: 0;
+    float: left; }
+    div.messages ul li {
+      list-style-type: none;
+      margin: 10px 0 0; }
+      div.messages ul li:first-child {
+        margin: 0; }
   div.messages.status {
     background: #8fd400; }
-    div.messages.status:before {
+    div.messages.status .messages-icon:before {
       content: "\f00c";
       font-family: FontAwesome;
       font-weight: normal;
@@ -4814,7 +4823,7 @@ div.messages {
       background-repeat: repeat; }
   div.messages.warning {
     background: #ffb60f; }
-    div.messages.warning:before {
+    div.messages.warning .messages-icon:before {
       content: "\f071";
       font-family: FontAwesome;
       font-weight: normal;
@@ -4840,7 +4849,7 @@ div.messages {
       background-repeat: repeat; }
   div.messages.error {
     background: #e24912; }
-    div.messages.error:before {
+    div.messages.error .messages-icon:before {
       content: "\f00d";
       font-family: FontAwesome;
       font-weight: normal;
@@ -4864,13 +4873,15 @@ div.messages {
       background-image: none;
       background-position: 0% 0%;
       background-repeat: repeat; }
-  div.messages.status:before, div.messages.warning:before, div.messages.error:before {
-    vertical-align: middle;
-    font-size: 26px;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0 10px 0 0;
-    margin: 0 10px 0 0;
-    text-align: center; }
+  div.messages.status .messages-icon, div.messages.warning .messages-icon, div.messages.error .messages-icon {
+    float: left; }
+    div.messages.status .messages-icon:before, div.messages.warning .messages-icon:before, div.messages.error .messages-icon:before {
+      vertical-align: middle;
+      font-size: 26px;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0 10px 0 0;
+      margin: 0 15px 0 0;
+      text-align: center; }
 
 .not-front #header-wrapper {
   padding: 0;
