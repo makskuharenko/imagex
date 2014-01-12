@@ -8,7 +8,7 @@
  * Implements hook_taxonomy_default_vocabularies().
  */
 function linux_events_taxonomy_default_vocabularies() {
-  return array(
+  $taxonomy = array(
     'event_category' => array(
       'name' => 'Event Category',
       'machine_name' => 'event_category',
@@ -16,6 +16,7 @@ function linux_events_taxonomy_default_vocabularies() {
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
+      'aggregator_item' => FALSE,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -33,4 +34,8 @@ function linux_events_taxonomy_default_vocabularies() {
       ),
     ),
   );
+
+  features_alter_code('taxonomy', $taxonomy);
+
+  return $taxonomy;
 }

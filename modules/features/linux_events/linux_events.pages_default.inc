@@ -97,6 +97,8 @@ function linux_events_default_page_manager_pages() {
   $page->default_handlers[$handler->name] = $handler;
   $pages['linux_events'] = $page;
 
+  features_alter_code('page_manager_pages', $pages);
+
   return $pages;
 
 }

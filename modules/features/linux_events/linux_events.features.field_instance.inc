@@ -155,8 +155,8 @@ function linux_events_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-event-field_groups'
-  $field_instances['node-event-field_groups'] = array(
+  // Exported field_instance: 'node-event-og_group_ref'
+  $field_instances['node-event-og_group_ref'] = array(
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
@@ -164,30 +164,53 @@ function linux_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'og_role_field',
+        'module' => 'og_ui',
         'settings' => array(),
-        'type' => 'og_role_field_formatter_plain',
-        'weight' => 3,
+        'type' => 'og_list_default',
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_groups',
-    'label' => 'Groups',
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
     'required' => FALSE,
     'settings' => array(
+      'behaviors' => array(
+        'og_widget' => array(
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
+      ),
       'user_register_form' => FALSE,
     ),
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
+      ),
+      'teaser' => array(
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
+      ),
+    ),
     'widget' => array(
-      'module' => 'options',
+      'module' => 'og',
       'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 7,
+      'type' => 'og_complex',
+      'weight' => 38,
     ),
   );
 
@@ -195,7 +218,7 @@ function linux_events_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Event Date');
   t('Event category');
-  t('Groups');
+  t('Groups audience');
   t('Is this a Linux Foundation event?');
   t('Linux Foundation Event');
 
