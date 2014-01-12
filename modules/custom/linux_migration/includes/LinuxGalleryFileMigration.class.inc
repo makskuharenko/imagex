@@ -9,7 +9,7 @@ class LinuxGalleryFileMigration extends LinuxMigration {
   protected function setFieldMappings() {
     $this->addFieldMapping('value', 'filename');
     $this->addFieldMapping('source_dir', 'source');
-    $this->addFieldMapping('destination_dir', 'public://galleries');
+    $this->addFieldMapping('destination_dir')->defaultValue('public://gallery');;
   }
   public function prepareRow($row) {
     $row->source = $this->sourcePath . '/' . $row->path;
