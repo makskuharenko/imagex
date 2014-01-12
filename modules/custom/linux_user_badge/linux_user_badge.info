@@ -1,0 +1,7 @@
+name = Linux.com User Badge
+description = Lightweight utilities and default user badges for Linux.com. Truncates user_badge_badges.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0-dev
+project = linux_user_badge
+dependencies[] = user_badges

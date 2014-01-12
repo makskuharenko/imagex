@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function linux_user_badge_install() {
+  $user_badge_directory = 'public://linux_user_badge';
+
+  if (!is_dir($user_badge_directory)) {
+    drupal_mkdir($user_badge_directory);
+  }
+
+  $default_badges = array(
+    array(
+      'name' => 'Hacker Penguin',
+      'image' => 'hacker.png',
+      'weight' => 0,
+    ),
+    array(
+      'name' => 'Guru Penguin',
+      'image' => 'guru.png',
+      'weight' => 1,
+    ),
+    array(
+      'name' => 'Ninja Penguin',
+      'image' => 'ninja.png',
+      'weight' => 2,
+    ),
+    array(
+      'name' => 'Iron Penguin',
+      'image' => 'iron.png',
+      'weight' => 3,
+    ),
+    array(
+      'name' => 'Jedi Penguin',
+      'image' => 'jedi.png',
+      'weight' => 4,
+    ),
+  );
+
+  db_truncate('user_badges_badges')->execute();
+  foreach ($default_badges as $default_badge) {
+    // Move file to public.
+    $file_source = drupal_get_path('module', 'linux_user_badge') . '/images/' . $default_badge['image'];
+    file_unmanaged_copy($file_source, $user_badge_directory, FILE_EXISTS_REPLACE);
+
+    $default_badge['image'] = $user_badge_directory . '/' . $default_badge['image'];
+    drupal_write_record('user_badges_badges', $default_badge);
+  }
+}
