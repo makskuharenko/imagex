@@ -28,7 +28,7 @@ function linux_configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'compact_forms_ids';
-  $strongarm->value = 'question-node-form';
+  $strongarm->value = 'random-id';
   $export['compact_forms_ids'] = $strongarm;
 
   $strongarm = new stdClass();
