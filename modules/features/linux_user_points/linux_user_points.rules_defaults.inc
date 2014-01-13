@@ -380,6 +380,190 @@ function linux_user_points_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_linux_reverse_answer_forum'] = entity_import('rules_config', '{ "rules_linux_reverse_answer_forum" : {
+      "LABEL" : "Linux: Reverse Answer Forum",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules", "comment" ],
+      "ON" : [ "comment_delete" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "comment:node" ],
+            "type" : { "value" : { "forum" : "forum" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "comment:author" ],
+            "points" : "-250",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for answer forum",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_answer_question'] = entity_import('rules_config', '{ "rules_linux_reverse_answer_question" : {
+      "LABEL" : "Linux: Reverse Answer Question",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "node_delete" ],
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "answer" : "answer" } } } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "node:author" ],
+            "points" : "-250",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for answer question",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_calendar_item_accepted'] = entity_import('rules_config', '{ "rules_linux_reverse_calendar_item_accepted" : {
+      "LABEL" : "Linux: Reverse Calendar Item Accepted",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "node_delete" ],
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "event" : "event" } } } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "node:author" ],
+            "points" : "-100",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for calendar item accepted",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_comment'] = entity_import('rules_config', '{ "rules_linux_reverse_comment" : {
+      "LABEL" : "Linux: Reverse Comment",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules", "comment" ],
+      "ON" : [ "comment_delete" ],
+      "IF" : [
+        { "NOT entity_is_of_bundle" : {
+            "entity" : [ "comment:node" ],
+            "type" : "node",
+            "bundle" : { "value" : { "forum" : "forum" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "comment:author" ],
+            "points" : "-100",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for comment",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_comment_upvote_post'] = entity_import('rules_config', '{ "rules_linux_reverse_comment_upvote_post" : {
+      "LABEL" : "Linux: Reverse Comment Upvote Post",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "userpoints_rules", "voting_rules" ],
+      "ON" : [ "voting_rules_delete_comment" ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "vote:user" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for comment upvote",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        },
+        { "userpoints_action_grant_points" : {
+            "user" : [ "comment:author" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for comment upvote",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_contest_entry'] = entity_import('rules_config', '{ "rules_linux_reverse_contest_entry" : {
+      "LABEL" : "Linux: Reverse Contest Entry",
+      "PLUGIN" : "reaction rule",
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "node_delete" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "node" ],
+            "type" : { "value" : { "contest_entry" : "contest_entry" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "node:author" ],
+            "points" : "-100",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for contest entry",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_directory_item_accepted'] = entity_import('rules_config', '{ "rules_linux_reverse_directory_item_accepted" : {
+      "LABEL" : "Linux: Reverse Directory Item Accepted",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "node_delete" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "node" ],
+            "type" : { "value" : { "directory" : "directory" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "node:author" ],
+            "points" : "-100",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for directory item accepted",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_linux_reverse_guru_penguin_badge'] = entity_import('rules_config', '{ "rules_linux_reverse_guru_penguin_badge" : {
       "LABEL" : "Linux: Reverse Guru Penguin Badge",
       "PLUGIN" : "reaction rule",
@@ -487,6 +671,105 @@ function linux_user_points_default_rules_configuration() {
       ],
       "DO" : [
         { "remove_badge_by_name" : { "badge" : "3", "user" : [ "userpoints-transaction:user" ] } }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_node_upvote_post'] = entity_import('rules_config', '{ "rules_linux_reverse_node_upvote_post" : {
+      "LABEL" : "Linux: Reverse Node Upvote Post",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "userpoints_rules", "flag" ],
+      "ON" : [ "flag_unflagged_imagex_node_like" ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "flagging-user" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for node upvote post",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        },
+        { "userpoints_action_grant_points" : {
+            "user" : [ "flagged-node:author" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for node upvote post",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_report_comment_spam'] = entity_import('rules_config', '{ "rules_linux_reverse_report_comment_spam" : {
+      "LABEL" : "Linux: Reverse Report Comment Spam",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "userpoints_rules", "flag" ],
+      "ON" : [ "flag_unflagged_inappropriate_content_comment" ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "flagging-user" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for flagging comment",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_report_node_spam'] = entity_import('rules_config', '{ "rules_linux_reverse_report_node_spam" : {
+      "LABEL" : "Linux: Reverse Report Node Spam",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "userpoints_rules", "flag" ],
+      "ON" : [ "flag_unflagged_inappropriate_content_node" ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "flagging-user" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for flagging node",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_start_a_forum_that_others_respond_to'] = entity_import('rules_config', '{ "rules_linux_reverse_start_a_forum_that_others_respond_to" : {
+      "LABEL" : "Linux: Reverse Start a Forum That Others Respond to",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules", "comment" ],
+      "ON" : [ "comment_delete" ],
+      "IF" : [
+        { "entity_is_of_bundle" : {
+            "entity" : [ "comment:node" ],
+            "type" : "node",
+            "bundle" : { "value" : { "forum" : "forum" } }
+          }
+        },
+        { "data_is" : { "data" : [ "comment:node:comment-count" ], "value" : "1" } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "comment:node:author" ],
+            "points" : "-250",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for start a forum that others respond to",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
       ]
     }
   }');
