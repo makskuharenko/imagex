@@ -237,6 +237,7 @@ function linux_user_views_default_views() {
   $handler->display->display_options['fields']['field_profile_image']['field'] = 'field_profile_image';
   $handler->display->display_options['fields']['field_profile_image']['label'] = '';
   $handler->display->display_options['fields']['field_profile_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_image']['empty'] = '<div class="no-photo">Photo Not Available</div>';
   $handler->display->display_options['fields']['field_profile_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_profile_image']['settings'] = array(
     'image_style' => 'profile_image',
