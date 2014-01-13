@@ -945,7 +945,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-large.png" />';
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="profiles/linux/themes/linux/img/tile-default-large.png" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'large_tile__700x360_',
