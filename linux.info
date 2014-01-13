@@ -77,7 +77,6 @@ dependencies[] = imagex_search_db
 dependencies[] = imagex_search_permissions
 dependencies[] = imagex_socialmedia_addtoany
 dependencies[] = imagex_user
-dependencies[] = imagex_userbadge
 dependencies[] = imagex_widgets_basic
 dependencies[] = imagex_widgets_basic_permissions
 dependencies[] = imagex_wiki
