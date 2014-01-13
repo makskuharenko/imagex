@@ -36,14 +36,35 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
     $data['user:user:default']->display->content['new-2']->panel = 'three_inset_right_middle'; /* WAS: 'one_main' */
     $data['user:user:default']->display->content['new-2']->position = 0; /* WAS: 1 */
     $data['user:user:default']->display->content['new-2']->subtype = 'user_activity-panel_pane_1'; /* WAS: 'imagex_activity-panel_pane_1' */
-    $data['user:user:default']->display->content['new-3']->css['css_class'] = 'standard-bean user-activity'; /* WAS: '' */
+    $data['user:user:default']->display->content['new-3']->configuration['path'] = ''; /* WAS: '' */
+    $data['user:user:default']->display->content['new-3']->css['css_class'] = 'standard-bean'; /* WAS: '' */
     $data['user:user:default']->display->content['new-3']->css['css_id'] = ''; /* WAS: '' */
     $data['user:user:default']->display->content['new-3']->panel = 'three_inset_right_middle'; /* WAS: 'one_main' */
-    $data['user:user:default']->display->content['new-3']->position = 2; /* WAS: 2 */
-    $data['user:user:default']->display->content['new-3']->subtype = 'user_activity-panel_pane_2'; /* WAS: 'follow-user' */
+    $data['user:user:default']->display->content['new-3']->position = 1; /* WAS: 2 */
+    $data['user:user:default']->display->content['new-3']->subtype = 'linux_user_badges-panel_pane_1'; /* WAS: 'follow-user' */
     $data['user:user:default']->display->content['new-3']->type = 'views_panes'; /* WAS: 'block' */
     $data['user:user:default']->display->content['new-4'] = (object) array(
           'pid' => 'new-4',
+          'panel' => 'three_inset_right_middle',
+          'type' => 'views_panes',
+          'subtype' => 'user_activity-panel_pane_2',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(
+            'css_class' => 'standard-bean user-activity',
+            'css_id' => '',
+          ),
+          'extras' => array(),
+          'position' => 2,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['user:user:default']->display->content['new-5'] = (object) array(
+          'pid' => 'new-5',
           'panel' => 'three_inset_right_sidebar',
           'type' => 'views_panes',
           'subtype' => 'home_page-panel_pane_1',
@@ -66,16 +87,14 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
           'position' => 0,
           'locks' => array(),
         ); /* WAS: '' */
-    $data['user:user:default']->display->content['new-5'] = (object) array(
-          'pid' => 'new-5',
+    $data['user:user:default']->display->content['new-6'] = (object) array(
+          'pid' => 'new-6',
           'panel' => 'three_inset_right_top',
           'type' => 'views_panes',
-          'subtype' => 'user_activity-panel_pane_4',
+          'subtype' => 'user_details-panel_pane_1',
           'shown' => TRUE,
           'access' => array(),
-          'configuration' => array(
-            'path' => '',
-          ),
+          'configuration' => array(),
           'cache' => array(),
           'style' => array(
             'settings' => NULL,
@@ -86,28 +105,6 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
           ),
           'extras' => array(),
           'position' => 0,
-          'locks' => array(),
-        ); /* WAS: '' */
-    $data['user:user:default']->display->content['new-6'] = (object) array(
-          'pid' => 'new-6',
-          'panel' => 'three_inset_right_middle',
-          'type' => 'views_panes',
-          'subtype' => 'linux_user_badges-panel_pane_1',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'path' => '',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(
-            'css_id' => '',
-            'css_class' => 'standard-bean',
-          ),
-          'extras' => array(),
-          'position' => 1,
           'locks' => array(),
         ); /* WAS: '' */
     $data['user:user:default']->display->layout = 'three_inset_right'; /* WAS: 'one' */
@@ -121,14 +118,14 @@ function linux_user_panelizer_defaults_override_alter(&$data) {
     ); /* WAS: '' */
     $data['user:user:default']->display->panels['three_inset_right_middle'] = array(
       0 => 'new-2',
-      1 => 'new-6',
-      2 => 'new-3',
+      1 => 'new-3',
+      2 => 'new-4',
     ); /* WAS: '' */
     $data['user:user:default']->display->panels['three_inset_right_sidebar'] = array(
-      0 => 'new-4',
+      0 => 'new-5',
     ); /* WAS: '' */
     $data['user:user:default']->display->panels['three_inset_right_top'] = array(
-      0 => 'new-5',
+      0 => 'new-6',
     ); /* WAS: '' */
     unset($data['user:user:default']->display->content['new-1']->configuration['context']);
     unset($data['user:user:default']->display->content['new-1']->configuration['override_title']);
