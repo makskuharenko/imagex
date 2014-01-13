@@ -108,7 +108,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-large.png" />';
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="profiles/linux/themes/linux/img/tile-default-large.png" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'large_tile__700x360_',
@@ -174,7 +174,7 @@ function linux_landing_pages_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="/profiles/linux/themes/linux/img/tile-default-small.png" width="330" height="223" />';
+  $handler->display->display_options['fields']['field_image']['empty'] = '<img src="profiles/linux/themes/linux/img/tile-default-small.png" width="330" height="223" />';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'small_tile__330x223_',
