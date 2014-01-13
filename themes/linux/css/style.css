@@ -6782,7 +6782,8 @@ div[role="main"] .pane-menu-menu-join-us {
     .profile-details .views-row .views-field .field-content {
       font-size: 14px;
       font-family: "Open Sans Condensed";
-      font-weight: 700; }
+      font-weight: 700;
+      display: inline; }
     .profile-details .views-row .views-field .twitter,
     .profile-details .views-row .views-field .facebook,
     .profile-details .views-row .views-field .google,
