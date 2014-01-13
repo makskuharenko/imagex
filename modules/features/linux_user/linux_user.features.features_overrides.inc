@@ -42,7 +42,7 @@ function linux_user_features_override_default_overrides() {
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|css|css_class"] = 'standard-bean user-activity';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|css|css_id"] = '';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|panel"] = 'three_inset_right_middle';
-  $overrides["panelizer_defaults.user:user:default.display|content|new-3|position"] = 1;
+  $overrides["panelizer_defaults.user:user:default.display|content|new-3|position"] = 2;
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|subtype"] = 'user_activity-panel_pane_2';
   $overrides["panelizer_defaults.user:user:default.display|content|new-3|type"] = 'views_panes';
   $overrides["panelizer_defaults.user:user:default.display|content|new-4"] = (object) array(
@@ -91,6 +91,28 @@ function linux_user_features_override_default_overrides() {
       'position' => 0,
       'locks' => array(),
     );
+  $overrides["panelizer_defaults.user:user:default.display|content|new-6"] = (object) array(
+      'pid' => 'new-6',
+      'panel' => 'three_inset_right_middle',
+      'type' => 'views_panes',
+      'subtype' => 'linux_user_badges-panel_pane_1',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'path' => '',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(
+        'css_id' => '',
+        'css_class' => 'standard-bean',
+      ),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+    );
   $overrides["panelizer_defaults.user:user:default.display|layout"] = 'three_inset_right';
   $overrides["panelizer_defaults.user:user:default.display|panel_settings|style_settings|three_inset_right_bottom"] = NULL;
   $overrides["panelizer_defaults.user:user:default.display|panel_settings|style_settings|three_inset_right_inset"] = NULL;
@@ -103,7 +125,8 @@ function linux_user_features_override_default_overrides() {
   );
   $overrides["panelizer_defaults.user:user:default.display|panels|three_inset_right_middle"] = array(
     0 => 'new-2',
-    1 => 'new-3',
+    1 => 'new-6',
+    2 => 'new-3',
   );
   $overrides["panelizer_defaults.user:user:default.display|panels|three_inset_right_sidebar"] = array(
     0 => 'new-4',
@@ -112,8 +135,8 @@ function linux_user_features_override_default_overrides() {
     0 => 'new-5',
   );
   $overrides["panelizer_defaults.user:user:default:default.display|content|new-4"]["DELETED"] = TRUE;
-  $overrides["panelizer_defaults.user:user:default:default.display|content|new-6"] = (object) array(
-      'pid' => 'new-6',
+  $overrides["panelizer_defaults.user:user:default:default.display|content|new-7"] = (object) array(
+      'pid' => 'new-7',
       'panel' => 'one_main',
       'type' => 'entity_view',
       'subtype' => 'user',
@@ -134,7 +157,7 @@ function linux_user_features_override_default_overrides() {
       'position' => 0,
       'locks' => array(),
     );
-  $overrides["panelizer_defaults.user:user:default:default.display|panels|one_main|0"] = 'new-6';
+  $overrides["panelizer_defaults.user:user:default:default.display|panels|one_main|0"] = 'new-7';
 
   // Exported overrides for: variable
   $overrides["variable.panelizer_defaults_user_user.value|view modes|default|default"] = 0;

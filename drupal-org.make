@@ -61,6 +61,12 @@ projects[search_api_solr][version] = "1.3"
 projects[xbbcode][type] = "module"
 projects[xbbcode][subdir] = "contrib"
 projects[xbbcode][version] = "1.5"
+projects[user_badges][type] = "module"
+projects[user_badges][subdir] = "contrib"
+projects[user_badges][version] = "3.x-dev"
+projects[voting_rules][type] = "module"
+projects[voting_rules][subdir] = "contrib"
+projects[voting_rules][version] = "1.0-alpha1"
 
 ; Download ImageX components for this project.
 projects[imagex_activity][type] = "module"
@@ -212,12 +218,6 @@ projects[imagex_search][subdir] = "imagex/modules"
 projects[imagex_search][download][type] = "git"
 projects[imagex_search][download][url] = "git@github.com:imagex/imagex_search.git"
 projects[imagex_search][download][branch] = "7.x-dev"
-
-projects[imagex_gamification][type] = "module"
-projects[imagex_gamification][subdir] = "imagex/modules"
-projects[imagex_gamification][download][type] = "git"
-projects[imagex_gamification][download][url] = "git@github.com:imagex/imagex_gamification.git"
-projects[imagex_gamification][download][branch] = "7.x-dev"
 
 ; Libraries
 libraries[flexslider][download][type] = "get"
