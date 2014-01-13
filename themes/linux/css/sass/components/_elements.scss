@@ -453,9 +453,11 @@ div.messages {
 
     li {
       display: block;
+      margin-bottom: 10px;
 
       @include at-breakpoint($tablet) {
         display: inline-block;
+        margin-bottom: 0;
       }
     }
 
@@ -3050,10 +3052,10 @@ div[role="main"] {
       line-height: 1 !important;
       height: 22px !important;
       width: 22px !important;
-      margin-right: 2px;
+      margin-right: 1px;
       padding: 0 !important;
-      display: block !important;
-      float: left !important;
+      display: inline-block !important;
+      float: none !important;
     }
     .a2a_i_email,
     .a2a_i_facebook,
