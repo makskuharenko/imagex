@@ -2463,6 +2463,18 @@ div[role="main"] {
       img {
         @include border-radius(4px);
       }
+
+      .no-photo {
+        width: 100%;
+        text-align: center;
+        line-height: 175px;
+        height: 175px;
+        border: 1px solid #CCC;
+        color: #AAA;
+        font-weight: 400;
+        @include border-radius(4px);
+        float: left;
+      }
     }
 
     .views-field-field-linux-name {
