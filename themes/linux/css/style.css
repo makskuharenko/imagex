@@ -2665,7 +2665,7 @@ html.js input.throbbing {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -5163,10 +5163,12 @@ div.messages {
   margin: 0 0 30px;
   list-style-type: none; }
   .not-front ul.links li {
-    display: block; }
+    display: block;
+    margin-bottom: 10px; }
     @media (min-width: 35em) {
       .not-front ul.links li {
-        display: inline-block; } }
+        display: inline-block;
+        margin-bottom: 0; } }
   .not-front ul.links li.comment-delete,
   .not-front ul.links li.comment-edit,
   .not-front ul.links li.comment-reply,
@@ -7430,10 +7432,10 @@ div[role="main"] .pane-menu-menu-join-us {
     line-height: 1 !important;
     height: 22px !important;
     width: 22px !important;
-    margin-right: 2px;
+    margin-right: 1px;
     padding: 0 !important;
-    display: block !important;
-    float: left !important; }
+    display: inline-block !important;
+    float: none !important; }
   .addtoany .addtoany_list .a2a_i_email,
   .addtoany .addtoany_list .a2a_i_facebook,
   .addtoany .addtoany_list .a2a_i_twitter,
@@ -7703,24 +7705,39 @@ a.imagex-contest-contest-entry-admin {
   letter-spacing: 0.1em;
   color: white;
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-top: 0.5em;
   padding: 4px 12px;
   display: block;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600; }
   a.imagex-contest-add-entry:hover,
   a.imagex-contest-voting-add-vote:hover,
   a.imagex-contest-contest-entry-admin:hover {
     background: #bb5c00;
     color: white; }
 
+.imagex_contest_add_entry,
+.imagex_contest_voting_add_vote {
+  clear: left; }
+
 .imagex_contest_add_entry_noaccess,
 .imagex_contest_voting_add_vote {
-  display: block !important; }
+  display: block !important;
+  clear: both; }
 
 .imagex_contest_add_entry_noaccess {
   font-weight: 700;
-  margin: 1em 0 0 10px !important; }
+  padding: 1em 0 0 0 !important; }
+
+.node-contest-teaser a.imagex-contest-add-entry,
+.node-contest-teaser a.imagex-contest-voting-add-vote,
+.node-contest-teaser a.imagex-contest-contest-entry-admin {
+  padding: 0 10px;
+  font-size: 10px; }
+.node-contest-teaser .imagex_contest_add_entry_noaccess {
+  display: none !important; }
 
 .node-type-contest .field-type-text-with-summary,
 .node-type-contest-entry .field-type-text-with-summary {
@@ -7772,13 +7789,14 @@ a.imagex-contest-contest-entry-admin {
     padding: 10px; }
 
 @media (min-width: 35em) {
+  .imagex_contest_add_entry,
+  .imagex_contest_voting_add_vote {
+    display: block !important; }
+
   a.imagex-contest-add-entry,
   a.imagex-contest-voting-add-vote,
   a.imagex-contest-contest-entry-admin {
-    float: left; }
-
-  .imagex_contest_add_entry_noaccess {
-    margin: 0 !important; } }
+    float: left; } }
 .date-nav-wrapper .date-heading h3,
 .date-nav-wrapper .pager h3 {
   font-family: Kreon, Monaco, Menlo, Consolas, "Courier New", monospace;

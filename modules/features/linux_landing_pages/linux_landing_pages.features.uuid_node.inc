@@ -7852,7 +7852,7 @@ ZW|Zimbabwe
             'access' => array(),
             'configuration' => array(
               'arguments' => array(
-                'type' => 'advpoll',
+                'type' => 'advpoll,contest',
                 'tid' => '',
               ),
             ),

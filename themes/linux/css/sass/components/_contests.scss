@@ -12,20 +12,39 @@ a.imagex-contest-add-entry,
 a.imagex-contest-voting-add-vote,
 a.imagex-contest-contest-entry-admin {
   @include linuxOrangeButton();
-  font-size: 1.2em;
+  font-size: 1em;
   margin-top: 0.5em;
   padding: 4px 12px;
   display: block;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
+.imagex_contest_add_entry,
+.imagex_contest_voting_add_vote  {
+  clear: left;
+}
 .imagex_contest_add_entry_noaccess,
 .imagex_contest_voting_add_vote{
   display: block !important;
+  clear: both;
 }
 .imagex_contest_add_entry_noaccess {
   font-weight: 700;
-  margin: 1em 0 0 10px !important;
+  padding: 1em 0 0 0 !important;
+}
+
+.node-contest-teaser {
+  a.imagex-contest-add-entry,
+  a.imagex-contest-voting-add-vote,
+  a.imagex-contest-contest-entry-admin {
+    padding: 0 10px;
+    font-size: 10px;
+  }
+  .imagex_contest_add_entry_noaccess {
+    display: none !important;
+  }
 }
 
 .node-type-contest,
@@ -108,13 +127,13 @@ a.imagex-contest-contest-entry-admin {
 // @responsive
 // -----------------------------------------
 @include at-breakpoint($tablet) {
+  .imagex_contest_add_entry,
+  .imagex_contest_voting_add_vote  {
+    display: block !important;
+  }
   a.imagex-contest-add-entry,
   a.imagex-contest-voting-add-vote,
   a.imagex-contest-contest-entry-admin {
     float: left;
-  }
-  
-  .imagex_contest_add_entry_noaccess {
-    margin: 0 !important;
-  }  
+  } 
 }
