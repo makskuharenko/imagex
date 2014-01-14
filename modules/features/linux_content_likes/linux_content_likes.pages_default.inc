@@ -18,12 +18,12 @@ function linux_content_likes_default_page_manager_pages() {
   $page->path = 'node/%node/likes';
   $page->access = array(
     'plugins' => array(
-      0 => array(
-        'name' => 'perm',
+      1 => array(
+        'name' => 'php',
         'settings' => array(
-          'perm' => 'view who liked this node tab',
+          'description' => 'Access Callback: imagex_content_likes_user_has_access',
+          'php' => 'return imagex_content_likes_user_has_access($contexts[\'argument_entity_id:node_1\']->argument);',
         ),
-        'context' => 'logged-in-user',
         'not' => FALSE,
       ),
     ),
