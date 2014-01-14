@@ -94,6 +94,7 @@ dependencies[] = linux_blog
 dependencies[] = linux_blog_metadata
 dependencies[] = linux_common_fields
 dependencies[] = linux_configuration
+dependencies[] = linux_content_likes
 dependencies[] = linux_coveritlive
 dependencies[] = linux_dashboard
 dependencies[] = linux_directory
