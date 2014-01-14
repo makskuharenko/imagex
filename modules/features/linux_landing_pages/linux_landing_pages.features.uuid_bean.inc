@@ -93,7 +93,7 @@ function linux_landing_pages_uuid_features_default_beans() {
     See All  </a>
 </div>
 <iframe src="//player.vimeo.com/video/77970709?title=0&amp;byline=0&amp;portrait=0&amp;color=f17700" width="274" height="185" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin:0 auto; display: block;"></iframe>',
-          'format' => 'unfiltered',
+          'format' => 'full_html',
           'safe_value' => '<div class="more-link">
   <a href="http://video.linux.com/">
     See All  </a>
