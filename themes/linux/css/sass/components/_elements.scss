@@ -1,3 +1,4 @@
+
 // Temporary
 // -----------------------------------------
 
@@ -18,6 +19,7 @@ div.messages {
   border: none;
   color: white;
   @include border-radius(2px);
+  word-wrap: break-word;
 
   a {
     color: white;
@@ -892,64 +894,7 @@ small {
   }
 }
 
-// User bar styles and structure
-#user-wrapper {
-  margin: 0;
-  position: relative;
-  z-index: 501;
 
-  .nice-menu {
-    > .menuparent {
-      width: 235px;
-      height: 30px;
-      border: none;
-      background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
-      color: transparent;
-      cursor: pointer;
-
-      // IE
-      > span.nolink {
-        display: none;
-      }
-
-      ul,
-      li {
-        border: 0;
-        width: 195px;
-      }
-
-      ul {
-        top: 31px;
-        padding: 0px 1.5em;
-        width: auto;
-        background: $userBar url('../img/header-lines.png') repeat top left;
-
-        li {
-          padding: 0;
-          border-top: 1px solid #888;
-          background: transparent;
-
-          &:first-child {
-            border: none;
-          }
-
-          a,
-          span {
-            display: block;
-            color: white;
-            font-size: 11px;
-            font-weight: 400;
-            line-height: 50px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding: 0;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-}
 
 #header-wrapper {
   padding: 0 0 20px;
@@ -1009,203 +954,6 @@ small {
       float: left;
       margin: 11px 15px 0 0;
     }
-
-    .linux-main-menu {
-      display: none;
-
-      ul.nice-menu {
-        border: none;
-        width: 73%;
-        text-align: left;
-        float: left;
-
-        > li {
-          border: none;
-          width: 20%;
-          float: left;
-          background: transparent;
-          position: relative;
-          text-align: center;
-
-          &:hover,
-          &.active,
-          &.active-trail {
-            border-bottom: 4px solid $dropdownDividerTop;
-
-            > a,
-            > span {
-              height: 44px;
-              color: $linuxStdOrange;
-
-              &.active {
-                border-bottom: none;
-              }
-            }
-          }
-
-          > a,
-          > span {
-            display: block;
-            height: 48px;
-            text-transform: uppercase;
-            padding: 0;
-            font-size: 9px;
-            font-weight: 700;
-            line-height: 48px;
-            color: $linuxDarkGray;
-            cursor: pointer;
-          }
-
-          @include at-breakpoint(60em) {
-            > a,
-            > span {
-              letter-spacing: 0;
-            }
-          }
-
-          @include at-breakpoint(75em) {
-            > a,
-            > span {
-              font-size: 10px;
-              letter-spacing: 0.1em;
-            }
-          }
-
-          ul {
-            background: $userBar url('../img/header-lines.png') repeat top left;
-            top: 48px;
-            left: 0;
-            border: none;
-            z-index: 998;
-            list-style: none;
-            width: 220px;
-            @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
-
-            li {
-              border: none;
-              background: transparent;
-              text-align: left;
-
-              a,
-              span {
-                margin: 0 1em;
-                padding: 0;
-                line-height: 40px;
-                border-top: 1px solid #888;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                font-size: 10px;
-                color: white;
-                cursor: pointer;
-                width: 200px;
-
-                &:hover {
-                  @include opacity(0.7);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    @include at-breakpoint($wide) {
-      .linux-main-menu {
-        display: block;
-      }
-    }
-
-    .pane-menu-menu-utility-menu {
-      ul {
-        border: none;
-        width: auto;
-        margin: 0;
-        float: right;
-
-        > li {
-          border: none;
-          width: auto;
-          float: left;
-          background: transparent;
-          position: relative;
-
-          &:hover {
-            border-bottom: 4px solid $dropdownDividerTop;
-
-            a {
-              height: 44px;
-            }
-          }
-
-          &.active,
-          &.active-trail {
-            border-bottom: 4px solid $dropdownDividerTop;
-          }
-
-          > a,
-          > span {
-            display: block;
-            height: 48px;
-            text-transform: uppercase;
-            padding: 0 1.2em;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            line-height: 48px;
-            color: $linuxDarkGray;
-            cursor: pointer;
-
-            &.menu-icon {
-              display: block;
-              width: 26px;
-              height: 44px;
-              padding: 0;
-              font-size: 18px;
-              overflow: hidden;
-              text-align: center;
-              letter-spacing: 0;
-            }
-
-            &.menu-profile {
-              @include icon-user;
-            }
-
-            &.menu-utility {
-              @include icon-reorder;
-
-              //active clashes with drupal default .active class
-              &.active {
-                color: $linuxDarkGray;
-              }
-              &.open {
-                background: transparent url('../img/content-lines.png') repeat 0px 4px;
-                border: none;
-                height: 49px;
-                color: $linuxStdOrange;
-              }
-            }
-
-            @include at-breakpoint($wide) {
-              &.menu-utility {
-                @include icon-search;
-              }
-            }
-
-            &.menu-localization {
-              @include icon-globe;
-            }
-
-            &:before {
-              padding-right: 0 !important;
-            }
-
-            &.active {
-              color: $linuxStdOrange;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -1227,52 +975,6 @@ small {
   background: $userBar url('../img/header-lines.png') repeat top left;
   font-weight: 600;
   text-transform: uppercase;
-
-  .footer-menu ul {
-    margin: 0;
-    font-size: 10px;
-    list-style: none;
-
-    .expanded {
-      @include span-columns(7, 18);
-      display: none;
-      list-style-type: none;
-      list-style-image: none;
-      padding: 0;
-
-
-      > a,
-      > span {
-        color: $btnBorder;
-        cursor: pointer;
-      }
-
-      li {
-        a,
-        span, {
-          color: white;
-          cursor: pointer;
-        }
-      }
-    }
-
-    @include at-breakpoint($computer) {
-      .expanded {
-        display: block;
-        @include span-columns(2, 18);
-      }
-    }
-
-    @include at-breakpoint($wide) {
-      .expanded {
-        @include span-columns(2, 18);
-      }
-    }
-
-    .menu-icon {
-      display: none;
-    }
-  }
 
   .pane-menu-menu-footer ul {
     .expanded {
@@ -3109,3 +2811,5 @@ div[role="main"] {
 .addtoany-dropdown {
 
 }
+
+
