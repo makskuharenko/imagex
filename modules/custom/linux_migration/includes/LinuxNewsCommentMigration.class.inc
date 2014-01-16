@@ -29,6 +29,7 @@ class LinuxNewsCommentMigration extends LinuxMigration {
     $row->parent = (is_numeric($last)) ? $last : NULL;
 
     $row->username = truncate_utf8($row->username, 60);
+    $row->email = truncate_utf8($row->email, 64);
   }
 
   /**
