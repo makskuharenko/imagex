@@ -25,6 +25,7 @@ class LinuxArchive09ArticleCommentMigration extends LinuxMigration {
     }
 
     $row->xar_title = truncate_utf8($row->xar_title, 64);
+    $row->xar_email = truncate_utf8($row->xar_email, 64);
   }
   /**
    * Returns the source object instance for this migration.

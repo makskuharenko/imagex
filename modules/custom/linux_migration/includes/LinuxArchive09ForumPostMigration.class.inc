@@ -23,6 +23,7 @@ class LinuxArchive09ForumPostMigration extends LinuxMigration {
       $row->status = 0;
     }
     $row->xar_title = truncate_utf8($row->xar_title, 64);
+    $row->xar_email = truncate_utf8($row->xar_email, 64);
   }
 
   /**

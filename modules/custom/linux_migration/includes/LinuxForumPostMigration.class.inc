@@ -54,6 +54,7 @@ class LinuxForumPostMigration extends LinuxMigration {
     }
     $row->filesources = implode(',', $row_files);
     $row->filenames = implode(',', $file_names);
+    $row->guest_email = truncate_utf8($row->guest_email, 64);
     return TRUE;
   }
   /**

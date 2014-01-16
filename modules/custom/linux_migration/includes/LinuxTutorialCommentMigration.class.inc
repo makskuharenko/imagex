@@ -10,7 +10,6 @@ class LinuxTutorialCommentMigration extends LinuxMigration {
     $this->addFieldMapping('nid', 'row')->sourceMigration('LinuxTutorial');
     $this->addFieldMapping('uid', 'created_by')->sourceMigration('LinuxUser');
     $this->addFieldMapping('comment_body', 'comment')->arguments(array('format' => 'xbbcode'));
-    //@TODO: bbcode again
     $this->addFieldMapping('created', 'created_on');
     $this->addFieldMapping('hostname', 'ip');
     $this->addFieldMapping('name', 'username')->defaultValue(NULL);
@@ -29,6 +28,7 @@ class LinuxTutorialCommentMigration extends LinuxMigration {
     $row->parent = (is_numeric($last)) ? $last : NULL;
 
     $row->username = truncate_utf8($row->username, 60);
+    $row->email = truncate_utf8($row->email, 64);
   }
 
   /**
