@@ -4080,6 +4080,7 @@ input[type="submit"].btn {
 
 ul.tabs.primary {
   float: left;
+  width: 100%;
   margin: 0;
   padding: 15px;
   border-bottom: none;
@@ -6287,6 +6288,12 @@ a {
           height: 40px;
           line-height: 40px;
           color: #666666; }
+      .numbered ol .views-row .views-field-title {
+        margin-left: 40px;
+        display: block; }
+      .numbered ol .views-row .views-field-body {
+        margin-left: 40px;
+        display: block; }
 
 .events ul {
   list-style-type: none;
@@ -6742,107 +6749,77 @@ div[role="main"] .pane-menu-menu-join-us {
 .user-activity,
 .group-activity {
   margin: 0 0 10px; }
-  .user-activity .views-row,
-  .group-activity .views-row {
-    margin: 10px 0;
+  .user-activity table,
+  .group-activity table {
+    margin: 0; }
+  .user-activity tbody,
+  .group-activity tbody {
+    border-top: none; }
+  .user-activity tr,
+  .group-activity tr {
+    margin: 0;
     background-color: transparent !important;
-    padding: 0 26px 0 20px; }
-    .user-activity .views-row .views-field span,
-    .group-activity .views-row .views-field span {
-      display: inline; }
-    .user-activity .views-row .views-field-type,
-    .group-activity .views-row .views-field-type {
-      display: none;
+    padding: 0px; }
+    .user-activity tr.Forum .views-field-type, .user-activity tr.Group .views-field-type,
+    .group-activity tr.Forum .views-field-type,
+    .group-activity tr.Group .views-field-type {
+      background: transparent url("../img/forums-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Blog .views-field-type,
+    .group-activity tr.Blog .views-field-type {
+      background: transparent url("../img/blogs-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Answer .views-field-type, .user-activity tr.Question .views-field-type,
+    .group-activity tr.Answer .views-field-type,
+    .group-activity tr.Question .views-field-type {
+      background: transparent url("../img/answers-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Article .views-field-type, .user-activity tr.News .views-field-type, .user-activity tr.Gallery .views-field-type,
+    .group-activity tr.Article .views-field-type,
+    .group-activity tr.News .views-field-type,
+    .group-activity tr.Gallery .views-field-type {
+      background: transparent url("../img/articles-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Tutorial .views-field-type,
+    .group-activity tr.Tutorial .views-field-type {
+      background: transparent url("../img/tutorials-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Shared .views-field-type,
+    .group-activity tr.Shared .views-field-type {
+      background: transparent url("../img/shared-icon.png") no-repeat 0px 14px; }
+    .user-activity tr.Review .views-field-type,
+    .group-activity tr.Review .views-field-type {
+      background: transparent url("../img/reviews-icon.png") no-repeat 0px 14px; }
+    .user-activity tr td,
+    .group-activity tr td {
+      border-top: none; }
+    .user-activity tr .views-field-type,
+    .group-activity tr .views-field-type {
       font-weight: 700;
       font-family: "Open Sans Condensed";
       text-transform: capitalize;
-      border-right: 1px solid #e5e5e5;
-      padding: 0 7px 0 0;
-      margin: 0 10px 0 0; }
-    .user-activity .views-row .views-field-title a,
-    .group-activity .views-row .views-field-title a {
-      color: #333333;
-      display: inline; }
-    .user-activity .views-row .views-field-created,
-    .group-activity .views-row .views-field-created {
+      padding: 10px 0px 0 20px;
+      width: 80px; }
+    .user-activity tr .views-field-title,
+    .group-activity tr .views-field-title {
+      background: none;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      margin: 0;
+      padding: 10px 5px 0 0; }
+      .user-activity tr .views-field-title a,
+      .group-activity tr .views-field-title a {
+        border-left: 1px solid #e5e5e5;
+        padding-left: 10px;
+        color: #333333;
+        display: block; }
+    .user-activity tr .views-field-created,
+    .group-activity tr .views-field-created {
+      background: none;
+      width: 80px;
+      padding: 10px 5px 0;
+      line-height: 1.1em;
       font-weight: 300;
       font-family: "Open Sans Condensed"; }
-      .user-activity .views-row .views-field-created em,
-      .group-activity .views-row .views-field-created em {
+      .user-activity tr .views-field-created em,
+      .group-activity tr .views-field-created em {
         font-style: normal; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
-    .group-activity .views-row.Forum,
-    .group-activity .views-row.Blog,
-    .group-activity .views-row.Answer,
-    .group-activity .views-row.Question,
-    .group-activity .views-row.Article,
-    .group-activity .views-row.Tutorial,
-    .group-activity .views-row.Shared,
-    .group-activity .views-row.Review,
-    .group-activity .views-row.Group,
-    .group-activity .views-row.News {
-      padding: 0 26px 0 46px; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Group,
-    .group-activity .views-row.Forum,
-    .group-activity .views-row.Group {
-      background: transparent url("../img/forums-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Blog,
-    .group-activity .views-row.Blog {
-      background: transparent url("../img/blogs-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Answer, .user-activity .views-row.Question,
-    .group-activity .views-row.Answer,
-    .group-activity .views-row.Question {
-      background: transparent url("../img/answers-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Article, .user-activity .views-row.News,
-    .group-activity .views-row.Article,
-    .group-activity .views-row.News {
-      background: transparent url("../img/articles-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Tutorial,
-    .group-activity .views-row.Tutorial {
-      background: transparent url("../img/tutorials-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Shared,
-    .group-activity .views-row.Shared {
-      background: transparent url("../img/shared-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Review,
-    .group-activity .views-row.Review {
-      background: transparent url("../img/reviews-icon.png") no-repeat 20px center; }
-    .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
-    .group-activity .views-row.Forum,
-    .group-activity .views-row.Blog,
-    .group-activity .views-row.Answer,
-    .group-activity .views-row.Question,
-    .group-activity .views-row.Article,
-    .group-activity .views-row.Tutorial,
-    .group-activity .views-row.Shared,
-    .group-activity .views-row.Review,
-    .group-activity .views-row.Group,
-    .group-activity .views-row.News {
-      background-position: 20px 5px; }
-    @media (min-width: 35em) {
-      .user-activity .views-row .views-field-type,
-      .user-activity .views-row .views-field-title,
-      .user-activity .views-row .views-field-created,
-      .group-activity .views-row .views-field-type,
-      .group-activity .views-row .views-field-title,
-      .group-activity .views-row .views-field-created {
-        display: inline; }
-      .user-activity .views-row .views-field-created,
-      .group-activity .views-row .views-field-created {
-        border-left: 1px solid #e5e5e5;
-        margin: 0 0 0 7px;
-        padding: 0 0 0 10px; }
-      .user-activity .views-row.Forum, .user-activity .views-row.Blog, .user-activity .views-row.Answer, .user-activity .views-row.Question, .user-activity .views-row.Article, .user-activity .views-row.Tutorial, .user-activity .views-row.Shared, .user-activity .views-row.Review, .user-activity .views-row.Group, .user-activity .views-row.News,
-      .group-activity .views-row.Forum,
-      .group-activity .views-row.Blog,
-      .group-activity .views-row.Answer,
-      .group-activity .views-row.Question,
-      .group-activity .views-row.Article,
-      .group-activity .views-row.Tutorial,
-      .group-activity .views-row.Shared,
-      .group-activity .views-row.Review,
-      .group-activity .views-row.Group,
-      .group-activity .views-row.News {
-        background-position: 20px center; } }
 
 .user-activity-stats .views-row {
   height: 32px;

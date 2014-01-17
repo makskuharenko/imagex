@@ -1356,6 +1356,14 @@ small {
           color: $linuxDarkGray;
         }
       }
+      .views-field-title{
+        margin-left: 40px;
+        display: block;
+      }
+      .views-field-body{
+        margin-left: 40px;
+        display: block;
+      }
     }
   }
 }
@@ -1885,35 +1893,121 @@ div[role="main"] {
 .group-activity {
   margin: 0 0 10px;
 
-  .views-row {
-    margin: 10px 0;
+  table{
+    margin: 0;
+  }
+  tbody {
+  border-top: none;
+  }
+  tr{
+    margin: 0;
     background-color: transparent !important;
-    padding: 0 26px 0 20px;
+    padding: 0px;
 
-    .views-field {
-      span {
-        display: inline;
+      &.Forum,
+      &.Group {
+        .views-field-type {
+          background: transparent url('../img/forums-icon.png') no-repeat 0px 14px;
+        }
       }
+
+      &.Blog {
+        .views-field-type {
+          background: transparent url('../img/blogs-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+      &.Answer,
+      &.Question {
+        .views-field-type {
+          background: transparent url('../img/answers-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+      &.Article,
+      &.News,
+      &.Gallery {
+        .views-field-type {
+          background: transparent url('../img/articles-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+      &.Tutorial {
+        .views-field-type {
+          background: transparent url('../img/tutorials-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+      &.Shared {
+        .views-field-type {
+          background: transparent url('../img/shared-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+      &.Review {
+        .views-field-type {
+          background: transparent url('../img/reviews-icon.png') no-repeat 0px 14px;
+        }
+      }
+
+    //   &.Forum,
+    //   &.Blog,
+    //   &.Answer,
+    //   &.Question,
+    //   &.Article,
+    //   &.Tutorial,
+    //   &.Shared,
+    //   &.Review,
+    //   &.Group,
+    //   &.News {
+    //     .views-field-type {
+    //       background-position: 0px 5px;
+
+    //      @include at-breakpoint($tablet) {
+    //         background-position: 0px 10px;
+    //       }
+    //     }
+    // }
+
+    td{
+      border-top: none;
     }
 
     .views-field-type {
-      display: none;
+      //display: none;
       font-weight: 700;
       font-family: $condensedFontFamily;
       text-transform: capitalize;
-      border-right: 1px solid $dropdownDividerTop;
-      padding: 0 7px 0 0;
-      margin: 0 10px 0 0;
+      padding: 10px 0px 0 20px;
+      width: 80px;
+
+
     }
 
     .views-field-title {
+      background: none;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      margin: 0;
+      padding: 10px 5px 0 0;
+
+
       a {
+        border-left: 1px solid $dropdownDividerTop;
+        padding-left:10px;
         color: $grayDark;
-        display: inline;
+        display: block;
       }
     }
 
     .views-field-created {
+      background: none;
+      width: 80px;
+      padding: 10px 5px 0;
+      line-height: 1.1em;
+
+
       em {
         font-style: normal;
       }
@@ -1921,90 +2015,8 @@ div[role="main"] {
       font-weight: 300;
       font-family: $condensedFontFamily;
     }
+}
 
-    &.Forum,
-    &.Blog,
-    &.Answer,
-    &.Question,
-    &.Article,
-    &.Tutorial,
-    &.Shared,
-    &.Review,
-    &.Group,
-    &.News {
-      padding: 0 26px 0 46px;
-    }
-
-    &.Forum,
-    &.Group {
-      background: transparent url('../img/forums-icon.png') no-repeat 20px center;
-    }
-
-    &.Blog {
-      background: transparent url('../img/blogs-icon.png') no-repeat 20px center;
-    }
-
-    &.Answer,
-    &.Question {
-      background: transparent url('../img/answers-icon.png') no-repeat 20px center;
-    }
-
-    &.Article,
-    &.News {
-      background: transparent url('../img/articles-icon.png') no-repeat 20px center;
-    }
-
-    &.Tutorial {
-      background: transparent url('../img/tutorials-icon.png') no-repeat 20px center;
-    }
-
-    &.Shared {
-      background: transparent url('../img/shared-icon.png') no-repeat 20px center;
-    }
-
-    &.Review {
-      background: transparent url('../img/reviews-icon.png') no-repeat 20px center;
-    }
-
-    &.Forum,
-    &.Blog,
-    &.Answer,
-    &.Question,
-    &.Article,
-    &.Tutorial,
-    &.Shared,
-    &.Review,
-    &.Group,
-    &.News {
-      background-position: 20px 5px;
-    }
-
-     @include at-breakpoint($tablet) {
-      .views-field-type,
-      .views-field-title,
-      .views-field-created {
-        display: inline;
-      }
-      .views-field-created {
-        border-left: 1px solid $dropdownDividerTop;
-        margin: 0 0 0 7px;
-        padding: 0 0 0 10px;
-      }
-
-      &.Forum,
-      &.Blog,
-      &.Answer,
-      &.Question,
-      &.Article,
-      &.Tutorial,
-      &.Shared,
-      &.Review,
-      &.Group,
-      &.News {
-        background-position: 20px center;
-      }
-    }
-  }
 }
 
 .user-activity-stats {
