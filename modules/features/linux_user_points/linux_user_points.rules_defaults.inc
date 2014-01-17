@@ -773,6 +773,266 @@ function linux_user_points_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_linux_reverse_user_profile_city'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_city" : {
+      "LABEL" : "Linux: Reverse user profile city",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-city" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-city" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile city",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_country'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_country" : {
+      "LABEL" : "Linux: Reverse user profile country",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account:field-linux-country" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-country" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile country",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_facebook'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_facebook" : {
+      "LABEL" : "Linux: Reverse user profile Facebook",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-facebook:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-facebook:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile Facebook",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_github'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_github" : {
+      "LABEL" : "Linux: Reverse user profile GitHub",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-github-profile:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-github-profile:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile GitHub",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_google_plus'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_google_plus" : {
+      "LABEL" : "Linux: Reverse user profile Google Plus",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-google-:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-google-:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile Google Plus",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_image'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_image" : {
+      "LABEL" : "Linux: Reverse User Profile Image",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account:field-profile-image:file" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-profile-image:file" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile image removed",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_linkedin'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_linkedin" : {
+      "LABEL" : "Linux: Reverse user profile LinkedIn",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-linkedin:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-linkedin:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile LinkedIn",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_occupation'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_occupation" : {
+      "LABEL" : "Linux: Reverse user profile occupation",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-occupation" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-occupation" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for occupation",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_rss'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_rss" : {
+      "LABEL" : "Linux: Reverse user profile RSS",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-rss:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-rss:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile RSS",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_reverse_user_profile_twitter'] = entity_import('rules_config', '{ "rules_linux_reverse_user_profile_twitter" : {
+      "LABEL" : "Linux: Reverse user profile Twitter",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-twitter:url" ] } },
+        { "data_is_empty" : { "data" : [ "account:field-linux-twitter:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "-50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Remove points for user profile Twitter",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_social_share'] = entity_import('rules_config', '{ "rules_linux_social_share" : {
+      "LABEL" : "Linux: Social Share",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "userpoints_rules", "linux_user_badge" ],
+      "ON" : [ "linux_user_badge_addtoany_track" ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "user" ],
+            "points" : "100",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for social share",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_linux_start_a_forum_that_others_respond_to'] = entity_import('rules_config', '{ "rules_linux_start_a_forum_that_others_respond_to" : {
       "LABEL" : "Linux: Start a forum that others respond to",
       "PLUGIN" : "reaction rule",
@@ -796,6 +1056,246 @@ function linux_user_points_default_rules_configuration() {
             "tid" : "0",
             "entity" : [ "" ],
             "operation" : "Points for forum responded to",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_points_for_github'] = entity_import('rules_config', '{ "rules_linux_user_points_for_github" : {
+      "LABEL" : "Linux: User points for GitHub",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-github-profile:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-github-profile:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile GitHub",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_points_for_linkedin'] = entity_import('rules_config', '{ "rules_linux_user_points_for_linkedin" : {
+      "LABEL" : "Linux: User points for LinkedIn",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-linkedin:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-linkedin:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile LinkedIn",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_city'] = entity_import('rules_config', '{ "rules_linux_user_profile_city" : {
+      "LABEL" : "Linux: User profile city",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-city" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-city" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile city",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_country'] = entity_import('rules_config', '{ "rules_linux_user_profile_country" : {
+      "LABEL" : "Linux: User profile country",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-country" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-country" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile country",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_facebook'] = entity_import('rules_config', '{ "rules_linux_user_profile_facebook" : {
+      "LABEL" : "Linux: User profile Facebook",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-facebook:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-facebook:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile Facebook",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_google_plus'] = entity_import('rules_config', '{ "rules_linux_user_profile_google_plus" : {
+      "LABEL" : "Linux: User profile Google Plus",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-google-:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-google-:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile Google Plus",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_occupation'] = entity_import('rules_config', '{ "rules_linux_user_profile_occupation" : {
+      "LABEL" : "Linux: User profile occupation",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-occupation" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-occupation" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile occupation",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_rss'] = entity_import('rules_config', '{ "rules_linux_user_profile_rss" : {
+      "LABEL" : "Linux: User profile RSS",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-rss:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-rss:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile RSS",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_linux_user_profile_twitter'] = entity_import('rules_config', '{ "rules_linux_user_profile_twitter" : {
+      "LABEL" : "Linux: User profile Twitter",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-twitter:url" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-linux-twitter:url" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile Twitter",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_test_test'] = entity_import('rules_config', '{ "rules_test_test" : {
+      "LABEL" : "Linux: User profile image",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Linux User Points" ],
+      "REQUIRES" : [ "rules", "userpoints_rules" ],
+      "ON" : [ "user_presave" ],
+      "IF" : [
+        { "data_is_empty" : { "data" : [ "account-unchanged:field-profile-image:file" ] } },
+        { "NOT data_is_empty" : { "data" : [ "account:field-profile-image:file" ] } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "account" ],
+            "points" : "50",
+            "tid" : "0",
+            "entity" : [ "" ],
+            "operation" : "Points for user profile image",
             "display" : 1,
             "moderate" : "default"
           }
