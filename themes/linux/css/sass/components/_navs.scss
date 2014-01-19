@@ -2,6 +2,360 @@
 // Navs
 // --------------------------------------------------
 
+// User bar styles and structure
+
+#block-panels-mini-global-header {
+
+  .linux-main-menu {
+    display: none;
+
+    ul.nice-menu {
+      border: none;
+      width: 63%;
+      text-align: left;
+      float: left;
+      list-style: none;
+
+      @include at-breakpoint(56em) {
+        width: 66%;
+      }
+      @include at-breakpoint(58em) {
+        width: 67%;
+      }
+      @include at-breakpoint(60em) {
+        width: 69%;
+      }
+      @include at-breakpoint(65em) {
+        width: 71%;
+      }
+      @include at-breakpoint(75em) {
+        width: 75%;
+      }
+      @include at-breakpoint(83em) {
+        width: 77%;
+      }
+      > li {
+        border: none;
+        width: auto;
+        float: none;
+        @include inline-block;
+        background: transparent;
+        position: relative;
+        text-align: center;
+
+
+        &:hover,
+        &.active,
+        &.active-trail {
+          border-bottom: 4px solid $dropdownDividerTop;
+
+          > a,
+          > span {
+            //height: 44px;
+            padding-bottom: 15px;
+            color: $linuxStdOrange;
+
+            @include at-breakpoint(60em) {
+              padding-bottom: 15px;
+            }
+
+            @include at-breakpoint(75em) {
+              padding-bottom: 15px;
+            }
+
+            &.active {
+              border-bottom: none;
+            }
+          }
+        }
+
+        > a,
+        > span {
+          display: block;
+          //height: 48px;
+          text-transform: uppercase;
+          padding: 19px 5px;
+          font-size: 9px;
+          font-weight: 700;
+          line-height: 10px;
+          color: $linuxDarkGray;
+          cursor: pointer;
+          letter-spacing: 0em;
+
+          @include at-breakpoint(60em) {
+            font-size: 10px;
+            padding: 19px 6px;
+          }
+
+          @include at-breakpoint(68em) {
+            letter-spacing: 0.1em;
+            padding: 19px 8px;
+          }
+
+          @include at-breakpoint(70em) {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            padding: 19px 9px;
+          }
+          @include at-breakpoint(72em) {
+            padding: 19px 10px;
+          }
+          @include at-breakpoint(75em) {
+            padding: 19px 15px;
+          }
+          @include at-breakpoint(78em) {
+            padding: 19px 16px;
+          }
+          @include at-breakpoint(80em) {
+            padding: 19px 20px;
+          }
+        }
+
+        ul {
+          background: $userBar url('../img/header-lines.png') repeat top left;
+          top: 48px;
+          left: 0;
+          border: none;
+          z-index: 998;
+          list-style: none;
+          width: 220px;
+          @include box-shadow(0px 2px 3px rgba(0,0,0,0.3));
+
+          li {
+            border: none;
+            background: transparent;
+            text-align: left;
+
+            a,
+            span {
+              margin: 0 1em;
+              padding: 0;
+              line-height: 40px;
+              border-top: 1px solid #888;
+              text-transform: uppercase;
+              letter-spacing: 0.1em;
+              font-size: 10px;
+              color: white;
+              cursor: pointer;
+              width: 200px;
+
+              &:hover {
+                @include opacity(0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include at-breakpoint($computer) {
+    .linux-main-menu {
+      display: block;
+    }
+  }
+
+  .pane-menu-menu-utility-menu {
+    ul {
+      border: none;
+      width: auto;
+      margin: 0;
+      float: right;
+
+      > li {
+        border: none;
+        width: auto;
+        float: left;
+        background: transparent;
+        position: relative;
+
+        &:hover {
+          border-bottom: 4px solid $dropdownDividerTop;
+
+          a {
+            height: 44px;
+          }
+        }
+
+        &.active,
+        &.active-trail {
+          border-bottom: 4px solid $dropdownDividerTop;
+        }
+
+        > a,
+        > span {
+          display: block;
+          height: 48px;
+          text-transform: uppercase;
+          padding: 0 1.2em;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          line-height: 48px;
+          color: $linuxDarkGray;
+          cursor: pointer;
+
+          &.menu-icon {
+            display: block;
+            width: 26px;
+            height: 44px;
+            padding: 0;
+            font-size: 18px;
+            overflow: hidden;
+            text-align: center;
+            letter-spacing: 0;
+          }
+
+          &.menu-profile {
+            @include icon-user;
+          }
+
+          &.menu-utility {
+            @include icon-reorder;
+
+            //active clashes with drupal default .active class
+            &.active {
+              color: $linuxDarkGray;
+            }
+            &.open {
+              background: transparent url('../img/content-lines.png') repeat 0px 4px;
+              border: none;
+              height: 49px;
+              color: $linuxStdOrange;
+            }
+          }
+
+          @include at-breakpoint($computer) {
+            &.menu-utility {
+              @include icon-search;
+            }
+          }
+
+          &.menu-localization {
+            @include icon-globe;
+          }
+
+          &:before {
+            padding-right: 0 !important;
+          }
+
+          &.active {
+            color: $linuxStdOrange;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#user-wrapper {
+  margin: 0;
+  position: relative;
+  z-index: 501;
+
+  .nice-menu {
+    > .menuparent {
+      width: 235px;
+      height: 30px;
+      border: none;
+      background: transparent url('../img/linux-foundation-network.png') no-repeat left center;
+      color: transparent;
+      cursor: pointer;
+
+      // IE
+      > span.nolink {
+        display: none;
+      }
+
+      ul,
+      li {
+        border: 0;
+        width: 195px;
+      }
+
+      ul {
+        top: 31px;
+        padding: 0px 1.5em;
+        width: auto;
+        background: $userBar url('../img/header-lines.png') repeat top left;
+
+        li {
+          padding: 0;
+          border-top: 1px solid #888;
+          background: transparent;
+
+          &:first-child {
+            border: none;
+          }
+
+          a,
+          span {
+            display: block;
+            color: white;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#footer-wrapper {
+
+  .footer-menu ul {
+    margin: 0;
+    font-size: 10px;
+    list-style: none;
+
+    .expanded {
+      @include span-columns(7, 18);
+      display: none;
+      list-style-type: none;
+      list-style-image: none;
+      padding: 0;
+
+
+      > a,
+      > span {
+        color: $btnBorder;
+        cursor: pointer;
+      }
+
+      li {
+        a,
+        span, {
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @include at-breakpoint($computer) {
+      .expanded {
+        display: block;
+        @include span-columns(2, 18);
+      }
+    }
+
+    @include at-breakpoint($wide) {
+      .expanded {
+        @include span-columns(2, 18);
+      }
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+}
 
 //
 // Custom tab styling
@@ -15,8 +369,12 @@ ul.tabs.primary {
   border-bottom: none;
   text-align: center;
   background: $linuxStdOrange;
+  white-space: normal;
 
   li {
+    @include inline-block;
+    margin: 8px 0;
+
     a {
       padding: 0.5em 1em;
       border-radius: 3px;
@@ -26,6 +384,7 @@ ul.tabs.primary {
       text-transform: uppercase;
       font-size: 12px;
       background: transparent;
+      white-space: normal;
 
       &.active {
         background-color: rgba(255, 255, 255, 0.2);
@@ -124,7 +483,7 @@ nav.tabs {
         margin: auto;
         position: absolute;
         z-index: 10;
-        top: 15px;
+        top: 0px;
         right: 10px;
         @include border-radius(0px);
         background: transparent;
@@ -134,6 +493,7 @@ nav.tabs {
         height: 45px;
         width: 25px;
         padding: 0 0 0 30px;
+        text-indent: -9999px;
 
         &:before {
           color: $gray;
@@ -171,7 +531,7 @@ nav.tabs {
       }
     }
 
-    @include at-breakpoint($wide) {
+    @include at-breakpoint($computer) {
       .pane-menu-menu-primary-menu {
         display: none;
       }
@@ -203,7 +563,7 @@ nav.tabs {
           span,
           a {
             color: $userBar;
-            
+
             &:hover {
               color: $linuxStdOrange;
             }
@@ -212,7 +572,7 @@ nav.tabs {
       }
     }
 
-    @include at-breakpoint($wide) {
+    @include at-breakpoint($computer) {
       .pane-menu-menu-join-us {
         display: none;
       }
