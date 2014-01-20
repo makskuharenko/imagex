@@ -674,6 +674,9 @@ small {
         background: $linuxDarkOrange;
       }
     }
+    .latest-video {
+      margin-top: 31px;
+    }
   }
 
   @include at-breakpoint($computer) {
