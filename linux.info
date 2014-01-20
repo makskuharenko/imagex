@@ -113,6 +113,7 @@ dependencies[] = linux_landing_pages
 dependencies[] = linux_manual
 dependencies[] = linux_menu
 dependencies[] = linux_migration
+dependencies[] = linux_multilingual
 dependencies[] = linux_news
 dependencies[] = linux_news_humor
 dependencies[] = linux_pardot_integration
