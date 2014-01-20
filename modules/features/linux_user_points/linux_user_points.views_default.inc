@@ -75,6 +75,18 @@ function linux_user_points_views_default_views() {
     ),
   );
   $handler->display->display_options['inherit_panels_path'] = '1';
+  $translatables['linux_user_badges'] = array(
+    t('Master'),
+    t('Badges'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('All'),
+    t('View panes'),
+  );
   $export['linux_user_badges'] = $view;
 
   features_alter_code('views_view', $export);
