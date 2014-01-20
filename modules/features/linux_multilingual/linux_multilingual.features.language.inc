@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * linux_com_multilingual.features.language.inc
+ * linux_multilingual.features.language.inc
  */
 
 /**
  * Implements hook_locale_default_languages().
  */
-function linux_com_multilingual_locale_default_languages() {
+function linux_multilingual_locale_default_languages() {
   $languages = array();
 
   // Exported language: en.
