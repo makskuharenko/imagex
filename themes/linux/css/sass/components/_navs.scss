@@ -254,6 +254,10 @@
   position: relative;
   z-index: 501;
 
+  .user-region {
+    position: relative;
+  }
+
   .nice-menu {
     > .menuparent {
       width: 235px;
