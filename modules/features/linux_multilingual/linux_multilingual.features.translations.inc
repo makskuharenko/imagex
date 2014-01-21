@@ -73,6 +73,14 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
+  $translations['ja:default']['82f39f739d3507106bbc9387c7ff6876'] = array(
+    'source' => 'Configure',
+    'context' => '',
+    'location' => '; modules/contextual/contextual.js; profiles/imagex_installkit/themes/mothership/mothership/js/contextual.js',
+    'translation' => '設定',
+    'plid' => 0,
+    'plural' => 0,
+  );
   $translations['ja:default']['fe2874cc5a4550c7835db0c6038dbb34'] = array(
     'source' => 'Please wait...',
     'context' => '',
@@ -81,11 +89,3556 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['82f39f739d3507106bbc9387c7ff6876'] = array(
-    'source' => 'Configure',
+  $translations['ja:default']['750f1df3182758a1d508f1307ef5c904'] = array(
+    'source' => 'Hide',
     'context' => '',
-    'location' => '; modules/contextual/contextual.js; profiles/imagex_installkit/themes/mothership/mothership/js/contextual.js',
-    'translation' => '設定',
+    'location' => '; misc/collapse.js',
+    'translation' => '非表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7df7ea17592e1a9ed4d48e94361ee873'] = array(
+    'source' => 'Show',
+    'context' => '',
+    'location' => '; misc/collapse.js',
+    'translation' => '表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2b1ef0961e7cc2c70685e9798967b220'] = array(
+    'source' => 'Public files',
+    'context' => '',
+    'location' => '',
+    'translation' => 'パブリックファイル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4c148b1b74accb6918b429ab84356589'] = array(
+    'source' => 'Public local files served by the webserver.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルをWebサーバーで公開する。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6af7995cdc6e79af27e8984a112a37da'] = array(
+    'source' => 'Temporary files',
+    'context' => '',
+    'location' => '',
+    'translation' => '一時ファイル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['11bab98ed5d9d49bfd9bbe488177675d'] = array(
+    'source' => 'Temporary local files for upload and previews.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アップロード・プレビュー用の一時フォルダー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ed1e8ac96ad97a47f679c5d045292b4d'] = array(
+    'source' => 'Block',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブロック',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fbee784b38776b5f0143a0d57288b712'] = array(
+    'source' => 'Default',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['00d9f5f3459992c3e525c59f6aea06e7'] = array(
+    'source' => 'Title',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイトル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6b2883367a7785328aa1850d2d9506bc'] = array(
+    'source' => 'Comment',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['329c5e408071514ad83d517ff3bd4c9c'] = array(
+    'source' => 'Full comment',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント全文',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['78a11e0e0575e0a4834499433057f285'] = array(
+    'source' => 'Question',
+    'context' => '',
+    'location' => '',
+    'translation' => '質問',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d2c4d84374d86334140e1fc4cf5639ba'] = array(
+    'source' => 'Blog',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブログ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ce2ad447297faf361cd62cf1ee6cc697'] = array(
+    'source' => 'Group',
+    'context' => '',
+    'location' => '',
+    'translation' => 'グループ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b80945efd900d5c308ddef828fb44eaf'] = array(
+    'source' => 'Page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b382314a1f65956ef3dea49284f5ee2d'] = array(
+    'source' => 'Use <em>basic pages</em> for your static content, such as an \'About us\' page.',
+    'context' => '',
+    'location' => '',
+    'translation' => '「About us」のような、あまり更新されない内容の場合は <em>基本ページ</em> を使ってください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6a319fc41861910fdac7848129b02d26'] = array(
+    'source' => 'Poll',
+    'context' => '',
+    'location' => '',
+    'translation' => '投票',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1b912e5a76bdb1468fa3bf2008710013'] = array(
+    'source' => 'Forum topic',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フォーラムトピック',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cdc8cf399a3ff0cffa8d46db032dd2d8'] = array(
+    'source' => 'A <em>forum topic</em> starts a new discussion thread within a forum.',
+    'context' => '',
+    'location' => '',
+    'translation' => '<strong>フォーラム記事</strong>はフォーラム内で新しいディスカッションを開始するものです。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9743bda1fff64438cf37fe79764b4c1f'] = array(
+    'source' => 'Subject',
+    'context' => '',
+    'location' => '',
+    'translation' => '件名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['35543b1d3c404ee664950aa6cf51d3d4'] = array(
+    'source' => '@node_type comment',
+    'context' => '',
+    'location' => '',
+    'translation' => '@node_type コメント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c631237f5a729828b6d9db83f42acf41'] = array(
+    'source' => 'Teaser',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ティーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['62d884c71c26fb928e0e216dbf533aca'] = array(
+    'source' => 'Full content',
+    'context' => '',
+    'location' => '',
+    'translation' => '全文',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e6adba1fc37c4c00ecc9d668c4577f52'] = array(
+    'source' => 'Menu link',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メニューリンク',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['620ee2c08fdbb0df9bd43b102b25b102'] = array(
+    'source' => 'Node',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノード',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dc58b0df9b07d293b8879a60619982ec'] = array(
+    'source' => 'RSS',
+    'context' => '',
+    'location' => '',
+    'translation' => 'RSS',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e01e9adabbe4d16f9f083638d15cf0a8'] = array(
+    'source' => 'Search index',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索インデックス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['323b1f66f9470499e6e4a4e9a24897a9'] = array(
+    'source' => 'Search result',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索結果',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c821a631d92845f8e4dce7fd1c041693'] = array(
+    'source' => 'File',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['276cf395c7ea8f506f9db2b3a754b876'] = array(
+    'source' => 'Taxonomy term',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーターム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['913b401d84211a96d3923a9f59e8934b'] = array(
+    'source' => 'Taxonomy term page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームのページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cd7e59798a2e1e91696ff1851a1628ed'] = array(
+    'source' => 'Taxonomy vocabulary',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーボキャブラリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f6901d7ecda7e8dc74f1b83afc9950a3'] = array(
+    'source' => 'User',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2d45e9715ea2102b380688ef3e54c3c1'] = array(
+    'source' => 'User account',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアカウント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f0f0c8a62e73e2ff8c6dc86fce2e1373'] = array(
+    'source' => 'Preview',
+    'context' => '',
+    'location' => '',
+    'translation' => 'プレビュー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['98bedc90777bf92703f9c0de88c160fa'] = array(
+    'source' => 'Image',
+    'context' => '',
+    'location' => '',
+    'translation' => '画像',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['64c280522c4570da90b1fc2d14374f1a'] = array(
+    'source' => 'File name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイル名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5dade64de3a57512130d7f392c191fa8'] = array(
+    'source' => 'Print',
+    'context' => '',
+    'location' => '',
+    'translation' => '印刷',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b3ef7a9b8b590c83cf21c24ca3030fc5'] = array(
+    'source' => 'Content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e90184552664547d1fbf4f2ed61d7c99'] = array(
+    'source' => 'Left',
+    'context' => '',
+    'location' => '',
+    'translation' => '左',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['660d1091222cf0130f3594845c0f9afe'] = array(
+    'source' => 'Right',
+    'context' => '',
+    'location' => '',
+    'translation' => '右',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['141580f5b25253283cfc767029dfbae7'] = array(
+    'source' => 'Header',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ヘッダー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['07851be33688902ae9fd66e2067ad829'] = array(
+    'source' => 'Footer',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フッター',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e7ae60c886399eb1193800301adf6def'] = array(
+    'source' => 'Reset',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リセット',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e17f1936f7a83e8f23f8af6e93a73a3b'] = array(
+    'source' => 'Top',
+    'context' => '',
+    'location' => '',
+    'translation' => 'トップ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5098d81564deaedbd17d1bdc7a6fada4'] = array(
+    'source' => 'Bottom',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ボトム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['207f1671cb7a8229cc997b8c7bd912c7'] = array(
+    'source' => 'Center',
+    'context' => '',
+    'location' => '',
+    'translation' => '中央',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6ecbc29ba7ea4401c16c46b126c05b69'] = array(
+    'source' => 'Nodes',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノード',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9e7e667787c47b7baf02e0be5d72a42b'] = array(
+    'source' => 'Users',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['adf6dfd7d9b1c2f761da52b391c215f9'] = array(
+    'source' => 'Files',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0add1583586487cfe759bed66e64ed4e'] = array(
+    'source' => 'Comments',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5bb040257a5f6570a6d5ec427734b5c0'] = array(
+    'source' => 'Taxonomy terms',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーターム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['24c73ad458c4d17d47b5a37ba81163c2'] = array(
+    'source' => 'Attachment',
+    'context' => '',
+    'location' => '',
+    'translation' => '添付',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['206bc0e3a9ca74e65434adf1371d5baf'] = array(
+    'source' => 'Description',
+    'context' => '',
+    'location' => '',
+    'translation' => '説明',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6e0d0ef452f17c9b416d5dc7fc12289e'] = array(
+    'source' => 'Status',
+    'context' => '',
+    'location' => '',
+    'translation' => '状態',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['045a0fc54e394fda749abebf7e51698c'] = array(
+    'source' => 'Categories',
+    'context' => '',
+    'location' => '',
+    'translation' => 'カテゴリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['264dfacda3aee2406eb6a31be1d4772a'] = array(
+    'source' => 'Tags',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タグ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['06b69f14b9f9587049f313a5a3afcd03'] = array(
+    'source' => 'Media',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メディア',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a1d7e06bf478db04b92db914e8a17f9e'] = array(
+    'source' => 'Link',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リンク',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a7e6723a9abf5bdaf86e60b1cd3528bf'] = array(
+    'source' => 'Date',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['62b27e166c6c1ed6f728d5ba3cbd9db4'] = array(
+    'source' => 'Location',
+    'context' => '',
+    'location' => '',
+    'translation' => '場所',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['aec9181405bc071332e873d791338da4'] = array(
+    'source' => 'Forums',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フォーラム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2c4b214d3c9cb727fe71e0422e9fc352'] = array(
+    'source' => 'Author',
+    'context' => '',
+    'location' => '',
+    'translation' => '投稿者',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fa20d2f15d4fc07be53be72db1b3a0be'] = array(
+    'source' => 'Category',
+    'context' => '',
+    'location' => '',
+    'translation' => 'カテゴリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6981735bd8791ace3be83c78dd240f94'] = array(
+    'source' => 'Name',
+    'context' => '',
+    'location' => '',
+    'translation' => '名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['70ed3317ec7bcd905d72836de506a87c'] = array(
+    'source' => 'Long',
+    'context' => '',
+    'location' => '',
+    'translation' => '長い',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f75e9c15fe6a95578899ec2f7c11afa8'] = array(
+    'source' => 'Medium',
+    'context' => '',
+    'location' => '',
+    'translation' => '中程度',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['44375f1ad4365b5b1f052c4a4d47f7a9'] = array(
+    'source' => 'Short',
+    'context' => '',
+    'location' => '',
+    'translation' => '短い',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8878c04f8634dfd34d52a73870ad8758'] = array(
+    'source' => 'Home',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ホーム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0329de65d232b7f89b305578becb3b9c'] = array(
+    'source' => 'Feed aggregator',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィードアグリゲーター',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['987e221e80ba972f83237c0a3970f831'] = array(
+    'source' => 'Compose tips',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツ作成のヒント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6855613bcfeded52de3e0b0369b52e7c'] = array(
+    'source' => 'Add content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツの追加',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4ed7579ce7906f745067e906909f3402'] = array(
+    'source' => 'Machine-readable name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'システム内部名称',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9c50bc30734f458ce7148e69c27ec926'] = array(
+    'source' => 'Label',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ラベル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['588aaca4cfec2b28db60de953e187a74'] = array(
+    'source' => 'URL',
+    'context' => '',
+    'location' => '',
+    'translation' => 'URL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['609709886790564e0b5d55185bb442ad'] = array(
+    'source' => 'Field name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィールド名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e12f0387627ec82d87c39d0eb0c62fc0'] = array(
+    'source' => 'Comment ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['70ad76ea6c25ab2a0428b8a81bb2ffae'] = array(
+    'source' => 'The unique ID of the comment.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントに付与される固有のID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1078f32991e44b288adf63400cc8edfd'] = array(
+    'source' => 'IP Address',
+    'context' => '',
+    'location' => '',
+    'translation' => 'IPアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dee83bff14ea6c7b5d6b9675f45a419e'] = array(
+    'source' => 'The IP address of the computer the comment was posted from.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント投稿元のコンピューターのIPアドレス。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c62a02fba7fedc9c1c85c23aa30b7a55'] = array(
+    'source' => 'The name left by the comment author.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント投稿者が入力した名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6b9bc7e0071336959864eac9d8d34f93'] = array(
+    'source' => 'Email address',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メールアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6a1d98965b5a536c21a179c349e6d5ee'] = array(
+    'source' => 'The email address left by the comment author.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント投稿者が入力したメールアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['37729a21b23c7602f1debf8cc4069b93'] = array(
+    'source' => 'Home page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ホームページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['00443137dac51443bbd4dcf74a0b6dd9'] = array(
+    'source' => 'The home page URL left by the comment author.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント投稿者が入力したホームページのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2b0b00106a9eb5a3a5c09df5a794b12d'] = array(
+    'source' => 'The URL of the comment.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e97cf225fe6a585c17e46141c34eef86'] = array(
+    'source' => 'Edit URL',
+    'context' => '',
+    'location' => '',
+    'translation' => 'URLの編集',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3d370e5d4a44dabff76c1210058f51bd'] = array(
+    'source' => 'The URL of the comment\'s edit page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント編集ページのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9a5c2f2d2da20f5a6bc1a3739855da85'] = array(
+    'source' => 'Date created',
+    'context' => '',
+    'location' => '',
+    'translation' => '作成日時',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['324738609a9e514462ff8b2278b5f145'] = array(
+    'source' => 'The date the comment was posted.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントが投稿された日時。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5d45ae4e94d6a2ddea664386ab83e8eb'] = array(
+    'source' => 'Parent',
+    'context' => '',
+    'location' => '',
+    'translation' => '親',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['014c0571b454646955303c5a26a52222'] = array(
+    'source' => 'The comment\'s parent, if comment threading is active.',
+    'context' => '',
+    'location' => '',
+    'translation' => '上位コメント（スレッド形式が有効になっている場合のみ）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['56e0860625de5547c2b7d6d9bb904c37'] = array(
+    'source' => 'The node the comment was posted to.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントが投稿されたノード。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b0921e03df2621fcea3c4dded27a4a5f'] = array(
+    'source' => 'This field stores the ID of a file as an integer value.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはファイルのIDを整数値として保存します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c3ab0f708a956a166cf437ed17926a6f'] = array(
+    'source' => 'This field stores the ID of an image file as an integer value.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは画像ファイルを整数で表現したIDを格納します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['99fb4bfe1c15a29baa9968bd7d63ba7a'] = array(
+    'source' => 'List (integer)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リスト(整数)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['076622822508c6499f335352debd8e1f'] = array(
+    'source' => 'This field stores integer values from a list of allowed \'value => label\' pairs, i.e. \'Lifetime in days\': 1 => 1 day, 7 => 1 week, 31 => 1 month.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択された整数値を、データベースに格納します。例. \'期間(日数)\': 1 => 1日, 7 => 1週間, 31 => 1ヶ月',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3c356223a7914a9350ab041e6afc5d3c'] = array(
+    'source' => 'List (float)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リスト(浮動小数点数値)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fb97c6019ddaedf8a01fdc29d228ff6b'] = array(
+    'source' => 'This field stores float values from a list of allowed \'value => label\' pairs, i.e. \'Fraction\': 0 => 0, .25 => 1/4, .75 => 3/4, 1 => 1.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択された浮動小数点数値を、データベースに格納します。例. \'分数\': 0 => 0, .25 => 1/4, .75 => 3/4, 1 => 1',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['eb495ef4a85743544abb8c63173e901a'] = array(
+    'source' => 'List (text)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リスト(テキスト)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ff79b8c5387067401e5ef233ae49bd41'] = array(
+    'source' => 'This field stores text values from a list of allowed \'value => label\' pairs, i.e. \'US States\': IL => Illinois, IA => Iowa, IN => Indiana.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択されたテキストを、データベースに格納します。例. \'アメリカ合衆国\': IL => イリノイ州, IA => アイオワ州, IN => インディアナ州',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c61f10d39e087f00f3c17a8482788b3e'] = array(
+    'source' => 'Boolean',
+    'context' => '',
+    'location' => '',
+    'translation' => '真偽値',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e1a6bec3958f8622eed1760e93e9f616'] = array(
+    'source' => 'This field stores simple on/off or yes/no options.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは単純な on/off や yes/no オプションを入力します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f1a493e0c40e7fe3e8fbffa6834cca76'] = array(
+    'source' => 'Integer',
+    'context' => '',
+    'location' => '',
+    'translation' => '整数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2a156166594593e9aabf25b76ea5c0b5'] = array(
+    'source' => 'This field stores a number in the database as an integer.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはデータベースに整数として保存される数値を入力します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['45c0ca09de4bd4ecaec4b2204578c44a'] = array(
+    'source' => 'Decimal',
+    'context' => '',
+    'location' => '',
+    'translation' => '固定小数点数値',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0d34a1e5f04c369d58a34afec337cd27'] = array(
+    'source' => 'This field stores a number in the database in a fixed decimal format.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは、データベースに固定小数点フォーマットで保存する数値を入力します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7f168c9ecb6b6d5113ce6b5f8737faf8'] = array(
+    'source' => 'Float',
+    'context' => '',
+    'location' => '',
+    'translation' => '浮動小数点数値',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['81809da52474476c4aa394355e5f0ad5'] = array(
+    'source' => 'This field stores a number in the database in a floating point format.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドは、データベースに浮動小数点フォーマットで保存する数値を入力します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1870987274aff13dd921140a2cfeba74'] = array(
+    'source' => 'Term reference',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ターム参照',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1bdc7cb479aa0ef0be9adb2643a5d9ab'] = array(
+    'source' => 'This field stores a reference to a taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはタクソノミータームへの参照ほ格納します。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b9f42963dd03484692339a0bac3d8dde'] = array(
+    'source' => 'Text',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テキスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dfd66f76330c275b8b88fd332f92130a'] = array(
+    'source' => 'This field stores varchar text in the database.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはデータベースに varchar テキストとして保存されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fee01db902374ac5b79205c694f96982'] = array(
+    'source' => 'Long text',
+    'context' => '',
+    'location' => '',
+    'translation' => '長い文章',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a6e4328c086cc681630ceb5ba57073f2'] = array(
+    'source' => 'This field stores long text in the database.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはデータベースに long text として保存されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2be17bf0a9278c0731e25f57e7effa94'] = array(
+    'source' => 'Long text and summary',
+    'context' => '',
+    'location' => '',
+    'translation' => '長い文章と概要',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['446d659423be1a4e271e4899b55528f0'] = array(
+    'source' => 'This field stores long text in the database along with optional summary text.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このフィールドはオプションの概要テキストつきでデータベースに long text として保存されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['14f4f8dcf4916f2c6d1fa0f9cf85b341'] = array(
+    'source' => 'Select list',
+    'context' => '',
+    'location' => '',
+    'translation' => '選択リスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['91895364e234a0fbad8871aa531b3b2b'] = array(
+    'source' => 'Text field',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テキストフィールド',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['836e7b55f41f98823b4ba7ff7789e49d'] = array(
+    'source' => 'Hidden',
+    'context' => '',
+    'location' => '',
+    'translation' => '非表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fdfee5e580e51a71cadf411fddc69e38'] = array(
+    'source' => 'Check boxes/radio buttons',
+    'context' => '',
+    'location' => '',
+    'translation' => 'チェックボックス/ラジオボタン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ca64d1f404103e0c8b96b73ffcce5a75'] = array(
+    'source' => 'Single on/off checkbox',
+    'context' => '',
+    'location' => '',
+    'translation' => '一つの on/off チェックボックス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8b865ae6988e1686b30416bf3487c691'] = array(
+    'source' => 'Autocomplete term widget (tagging)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タームの自動補完ウィジェット（タグ付け）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['136008d1ed7e92504cff451b81aabea4'] = array(
+    'source' => 'Text area (multiple rows)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テキストエリア(複数行)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['35d5f8830f5f06c7fcede77311ff8e5b'] = array(
+    'source' => 'Text area with a summary',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テキストエリアと概要',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c52d36234880976051763fa391d4b2bf'] = array(
+    'source' => 'Date and time',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付と時刻',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
+    'source' => 'Edit',
+    'context' => '',
+    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js; misc/machine-name.js',
+    'translation' => '編集',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['af367676c6aedc8e4138bd78c4cec8a3'] = array(
+    'source' => 'Delete',
+    'context' => '',
+    'location' => '',
+    'translation' => '削除',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4d899e8b2c578d4a0e874a671bb0f5f9'] = array(
+    'source' => 'Add',
+    'context' => '',
+    'location' => '',
+    'translation' => '追加',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6233820820968f236a5fb1bfeec276a3'] = array(
+    'source' => 'Generic file',
+    'context' => '',
+    'location' => '',
+    'translation' => '一般のファイル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['acef205d6ee64904a6cccf989a95ada8'] = array(
+    'source' => 'Table of files',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイル一覧',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cc807a52d3098ad36bb22d14fcc6633d'] = array(
+    'source' => 'URL to file',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['984d45f54dead08d64f5fc17e45582e9'] = array(
+    'source' => 'Key',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['09d6774d2c9444c9ae886e0110c419fb'] = array(
+    'source' => 'Unformatted',
+    'context' => '',
+    'location' => '',
+    'translation' => '未フォーマット',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f0d58f85e84a3d330e02a68814b84dcd'] = array(
+    'source' => 'Plain text',
+    'context' => '',
+    'location' => '',
+    'translation' => 'プレーンテキスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8c35614eb88ea1f4b601a7c3ae90b19c'] = array(
+    'source' => 'RSS category',
+    'context' => '',
+    'location' => '',
+    'translation' => 'RSS カテゴリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['32da57dddbd83c23852fb7e5ae623993'] = array(
+    'source' => 'Trimmed',
+    'context' => '',
+    'location' => '',
+    'translation' => '切り詰め',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['677c23d849afbb1d602a63d0fa4bd451'] = array(
+    'source' => 'Summary or trimmed',
+    'context' => '',
+    'location' => '',
+    'translation' => '概要か切り詰め',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['00c41526fba2735a332c07d5985d646e'] = array(
+    'source' => 'Default SQL storage',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトの SQL ストレージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['729eb7736d90c32e8afd590a1bcff29a'] = array(
+    'source' => 'Stores fields in the local SQL database, using per-field tables.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィールドを、フィールド毎のテーブルを使用してローカルのSQLデータベースに格納。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['69c8db7a1873e4a61f41818bbdc933ff'] = array(
+    'source' => 'Summary',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サマリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f31d9814cf00a748c8a9dd1aa5f0eb49'] = array(
+    'source' => 'Text format',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テキストフォーマット',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['23220ae7103e4e37029d711375a576c0'] = array(
+    'source' => 'Revision ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リビジョンID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0100197e2b77819823bb3f6fe3b33542'] = array(
+    'source' => 'Content type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツタイプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e88acf5c793fbb20e5ed3b0a394b583d'] = array(
+    'source' => 'The type of the node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードのコンテンツタイプ。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5bfeb567704a0b26e406ea4ee3d2735f'] = array(
+    'source' => 'The title of the node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードのタイトル。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3b6849d84e055b3f7a1a7e7d07cd4416'] = array(
+    'source' => 'Language',
+    'context' => '',
+    'location' => '',
+    'translation' => '言語',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d955f3245f216d5a99ac05b96bea1bd1'] = array(
+    'source' => 'The language the node is written in.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノード内記事の言語。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ebba55dc75accde7a58f0064610e6d72'] = array(
+    'source' => 'The URL of the node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードのURL。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8add0716d60a92454ba08bee946f623b'] = array(
+    'source' => 'The URL of the node\'s edit page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードの編集ページのURL。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3045ef7ffde08bf4e57337250d2444d9'] = array(
+    'source' => 'The date the node was posted.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードが投稿された日付。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['20abf8558abadc78843a90de213e12d6'] = array(
+    'source' => 'Date changed',
+    'context' => '',
+    'location' => '',
+    'translation' => '更新日付',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['21b10e922ea53f0bf71a874bdf03d66a'] = array(
+    'source' => 'The date the node was most recently updated.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードの最終更新日付。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2ea11497b96399a86f382717af69b590'] = array(
+    'source' => 'The author of the node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードの作成者。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f54d6a98b40f3b82426a6e0d6ffe22ab'] = array(
+    'source' => 'Revision log message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リビジョンログメッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d01255aa2a8e3f126b628e0769811ee7'] = array(
+    'source' => 'Term ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タームID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b7f7265e0a9aca86af11f9f1f618353a'] = array(
+    'source' => 'The unique ID of the taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームのユニークID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8b0a0f9d0d7fd1a755e56c5f702aa437'] = array(
+    'source' => 'The name of the taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームの名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['05fbd927a41e1dd216c742909e31d867'] = array(
+    'source' => 'The optional description of the taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームの説明（任意）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7ea5f602cb63494dc956f1a4713b24d4'] = array(
+    'source' => 'Weight',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ウェイト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4af89cf7f6e058c95783e6cb632b636b'] = array(
+    'source' => 'Node count',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノード数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a958ebe204d7d90f192e84bfca6d597f'] = array(
+    'source' => 'The number of nodes tagged with the taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームでタグ付けされたノード数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1b1edbda154bd8476a4363ee357c505d'] = array(
+    'source' => 'The URL of the taxonomy term.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e380ffc8b52116a10a66fe694aa78f6b'] = array(
+    'source' => 'Vocabulary',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ボキャブラリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0d53b86e0e5d6c5b39fd0e7e993ef197'] = array(
+    'source' => 'The vocabulary the taxonomy term belongs to.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームが属するボキャブラリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['815302576c78e35ef2682ad79a9567fd'] = array(
+    'source' => 'Parent terms',
+    'context' => '',
+    'location' => '',
+    'translation' => '上位のターム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7554ff3460fcb4d774cf2c1c989c04b0'] = array(
+    'source' => 'Vocabulary ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ボキャブラリーID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5798e5a23955aefa5da29358c1912757'] = array(
+    'source' => 'The unique ID of the taxonomy vocabulary.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーのユニークID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5ab9aa336973d37b6a60c2c48adf685a'] = array(
+    'source' => 'The name of the taxonomy vocabulary.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーの名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['84dae42202d9b18dc506477dd856526b'] = array(
+    'source' => 'Machine name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'システム内部名称',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f173078ddf0fbfcfb7783dde28f6831c'] = array(
+    'source' => 'The optional description of the taxonomy vocabulary.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーの説明（任意）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['44b04b0ce6f56e017e0ac35a61076ef9'] = array(
+    'source' => 'Term count',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タームの数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d92bfc0c6b5686cd0f18b178f9345830'] = array(
+    'source' => 'The number of terms belonging to the taxonomy vocabulary.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーに属するタームの数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fb46d0b467f379f15fabfc77ff04ddd3'] = array(
+    'source' => 'User ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1c295055fb970540ea6d19f28b564edc'] = array(
+    'source' => 'The unique ID of the user account.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアカウント固有のID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f647334e1ff0d7ca7dc1e0a219472424'] = array(
+    'source' => 'The login name of the user account.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアカウントのログイン名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6619cbc667fa9eb505e5c4141395dc33'] = array(
+    'source' => 'Email',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メール',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e8a693be2cda690a8005db68ff72917f'] = array(
+    'source' => 'The email address of the user account.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアカウントのメールアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b7789076ffcca926d66efa47c6265ee8'] = array(
+    'source' => 'The URL of the account profile page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウントプロフィールページのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ae93cb62e2d857ebbbe69b6911297bd0'] = array(
+    'source' => 'Last access',
+    'context' => '',
+    'location' => '',
+    'translation' => '前回のアクセス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['bcd563dc353d85018c5b591a5c1b1710'] = array(
+    'source' => 'Last login',
+    'context' => '',
+    'location' => '',
+    'translation' => '最終ログイン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2de6a8e651b5a8cdfecbbaf7556ac4fe'] = array(
+    'source' => 'The date the user last logged in to the site.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーの最終ログイン日時',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3359de2a1756f0c83210315a6f2f22bf'] = array(
+    'source' => 'Created',
+    'context' => '',
+    'location' => '',
+    'translation' => '作成',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fb45e991e145ee5e57599b4db0f32eee'] = array(
+    'source' => 'The date the user account was created.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアカウントが作成された日時',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['40d027bdb9f7bb0cba7ae8fab49a90eb'] = array(
+    'source' => 'Default theme',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトテーマ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2914c8c58a631adbe44d1caa60d7a0e1'] = array(
+    'source' => 'The name of the site.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイト名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c6d6d16b351ed40e529d16ae9beddb90'] = array(
+    'source' => 'Slogan',
+    'context' => '',
+    'location' => '',
+    'translation' => 'スローガン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7adc573f445da5ab73ed6010b9f2acaf'] = array(
+    'source' => 'The slogan of the site.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトのスローガン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6b6f166842a4e9ecb73bf51c740f213e'] = array(
+    'source' => 'The administrative email address for the site.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトの管理用メールアドレス。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a6c3d3c6f988662b5d95e4215f1a8ee9'] = array(
+    'source' => 'The URL of the site\'s front page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このサイトのトップページのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7069c8fe5aa3937ba504a1b87f22ffe1'] = array(
+    'source' => 'Login page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ログインページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['43c9e198ca6c0e586eeb4565506d6369'] = array(
+    'source' => 'The URL of the site\'s login page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトログインページURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['eabaa7b033370940bcf32780f78a257c'] = array(
+    'source' => 'Path',
+    'context' => '',
+    'location' => '',
+    'translation' => 'パス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['09dce2aaffaea766776beec7d5f8b253'] = array(
+    'source' => 'File ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c76396b0d0b5c0bf27cd8aa76dbaaf25'] = array(
+    'source' => 'The unique ID of the uploaded file.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アップロードされたファイルのユニークID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['abfd45c85efdfe14bb91aa953f3341b6'] = array(
+    'source' => 'The name of the file on disk.',
+    'context' => '',
+    'location' => '',
+    'translation' => '保存されたファイルの名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ef68ef5687593bfdf326bc5d2198afbb'] = array(
+    'source' => 'MIME type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'MIME タイプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6ee4c2d263e33d76f44db8f9cfec9ac7'] = array(
+    'source' => 'The MIME type of the file.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルの MIME タイプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9c90c315d7eb6dfcf32e5122fef658ad'] = array(
+    'source' => 'File size',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルサイズ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1dbcbcace455146879ebc3c6338c3259'] = array(
+    'source' => 'The web-accessible URL for the file.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Web がアクセス可能なファイルのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fc0b899539f1f1beef33144e53a0f415'] = array(
+    'source' => 'Timestamp',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイムスタンプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['58a157ea0e2cf187be21445b4f2a600d'] = array(
+    'source' => 'The date the file was most recently changed.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルの最終更新日時',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5916a5296b6da225fcb485e5f8b2cde4'] = array(
+    'source' => 'Owner',
+    'context' => '',
+    'location' => '',
+    'translation' => '所有者',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['626cf9b48729e833f859c6f72ea127a8'] = array(
+    'source' => 'The user who originally uploaded the file.',
+    'context' => '',
+    'location' => '',
+    'translation' => '最初にファイルをアップロードしたユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['19bcfae5522c36e92b8cff9e997a4a41'] = array(
+    'source' => 'Active',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アクティブ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e1758cd457e149cf20556907d4675d56'] = array(
+    'source' => 'Blocked',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブロック',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8033d01df2a2304b9b6b97c1b704103f'] = array(
+    'source' => 'Enabled',
+    'context' => '',
+    'location' => '',
+    'translation' => '有効',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0bbfa838905fe5c880b5e825561f9aac'] = array(
+    'source' => 'Comment count',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメント数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['be9648fbbf790094561273311e9f943a'] = array(
+    'source' => 'The number of comments posted on a node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードに投稿されたコメントの数。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['749a4e6817a43438ee0ec2522e9e06c7'] = array(
+    'source' => 'New comment count',
+    'context' => '',
+    'location' => '',
+    'translation' => '新しいコメントの数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9f72f6186b203215e4dba0d8786eeb23'] = array(
+    'source' => 'The number of comments posted on a node since the reader last viewed it.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーが最後にノードを訪れてから投稿されたコメントの数。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2953d24492a62391f0e744a9b0c78910'] = array(
+    'source' => 'This account\'s default language for e-mails, and preferred language for site presentation.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メール用のデフォルト言語と、サイト表示用の好みの言語を指定してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2198308b6548ffb6d11ae96b58a40371'] = array(
+    'source' => 'OpenID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'OpenID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fd6a2c102113f622d18a07343838c33f'] = array(
+    'source' => 'History',
+    'context' => '',
+    'location' => '',
+    'translation' => '履歴',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['312812a94480aae57e6ae2c43d8e9bfe'] = array(
+    'source' => 'Member for',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザー登録から',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d36e2377d0f924cbdb73d8ee26eb131a'] = array(
+    'source' => '@count sec',
+    'context' => '',
+    'location' => '',
+    'translation' => '@count秒',
+    'plid' => 0,
+    'plural' => 1,
+  );
+  $translations['ja:default']['2ba69f51a809094c2c29f3f89e72da1c'] = array(
+    'source' => 'Settings',
+    'context' => '',
+    'location' => '',
+    'translation' => '環境設定',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8d8fac4275d268176c82855790166d55'] = array(
+    'source' => 'General',
+    'context' => '',
+    'location' => '',
+    'translation' => '全般',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f255c3af80328a5d34de3aed447d8a12'] = array(
+    'source' => 'Context',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテキスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ee9cb1d991b307a5052b9dce519f0237'] = array(
+    'source' => 'Standard',
+    'context' => '',
+    'location' => '',
+    'translation' => '標準',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['884871369254e79505fedb2238b84fe7'] = array(
+    'source' => 'Aggregator',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Aggregator',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['19523c6fc7d9a207615db00948495e2f'] = array(
+    'source' => 'Body',
+    'context' => '',
+    'location' => '',
+    'translation' => '本文',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c8faeeca24410899f3bea65cbbc5cb7d'] = array(
+    'source' => 'The title of the comment.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントのタイトル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ff197caeca2729bdae8ce1e517531b0b'] = array(
+    'source' => 'Hostname',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ホスト名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['09dcac04247ea4566b0057ef52686f8b'] = array(
+    'source' => 'Field',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィールド',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c9c8dc60b2f699516b8dff373f392c62'] = array(
+    'source' => 'Type',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ae38949676de87d2bad6e666a7243eae'] = array(
+    'source' => 'Content ID',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['129e390bf43248a471978e788a1f375c'] = array(
+    'source' => 'Version',
+    'context' => '',
+    'location' => '',
+    'translation' => 'バージョン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['af1ea77dfef90a85968be051767b139c'] = array(
+    'source' => 'Published',
+    'context' => '',
+    'location' => '',
+    'translation' => '掲載',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['59d16f561ead061e48a1000af68dfca5'] = array(
+    'source' => 'Not published',
+    'context' => '',
+    'location' => '; modules/node/content_types.js',
+    'translation' => '非掲載',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['68c4f85b80a504783656884a3ed41f00'] = array(
+    'source' => 'Promoted to front page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フロントページへ掲載',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['baf47eaf778bf1183262210380394470'] = array(
+    'source' => 'Printer-friendly version',
+    'context' => '',
+    'location' => '',
+    'translation' => '印刷用ページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8eb4c1aedefa9349c8e9d6cf765aa50f'] = array(
+    'source' => 'user',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2b043ea0ee63bdfccada8ace1aadc50b'] = array(
+    'source' => 'Current user',
+    'context' => '',
+    'location' => '',
+    'translation' => '現在のユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b68f4f1a4c1c012cce808c8483d3073d'] = array(
+    'source' => 'Operations',
+    'context' => '',
+    'location' => '',
+    'translation' => '操作',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['13fc7185f32e9df72ca3919c801c034c'] = array(
+    'source' => 'Search',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c6440974c7d0279b537211b8a43d707e'] = array(
+    'source' => 'Language neutral',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ニュートラル言語',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['74a473acc8b75515a1b48de7d4b4f4eb'] = array(
+    'source' => 'Size',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイズ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b3cc9c2cf9c61cd9a85bdc50e8fff274'] = array(
+    'source' => 'The size of the file.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルのサイズ。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['027da27a23740f7cfcc7b9152609ffc4'] = array(
+    'source' => 'System',
+    'context' => '',
+    'location' => '',
+    'translation' => 'システム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b9383a59a87800893545d63b66729935'] = array(
+    'source' => 'Term description',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タームの説明',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['27da1ff38b6fed0a1e7cc06996784fc3'] = array(
+    'source' => 'node',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノード',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9abaae8e6adec4e949062c6c0fbf5270'] = array(
+    'source' => 'Parent term',
+    'context' => '',
+    'location' => '',
+    'translation' => '上位の分類用語',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6ee33fc18ed76496ca5d6406b83279f9'] = array(
+    'source' => 'E-mail',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メール',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['af20af163d25ff4c10e95148fda8bb27'] = array(
+    'source' => 'Picture',
+    'context' => '',
+    'location' => '',
+    'translation' => '写真',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1dff41724adaba4c8c33c70caf1b3e13'] = array(
+    'source' => 'Signature',
+    'context' => '',
+    'location' => '',
+    'translation' => '署名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['27e92da9a9af2dcd5a896df80417af66'] = array(
+    'source' => 'Roles',
+    'context' => '',
+    'location' => '',
+    'translation' => '役割',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b9b5750a8b29d22604a5d12c0f107b83'] = array(
+    'source' => 'Permission',
+    'context' => '',
+    'location' => '',
+    'translation' => '権限',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4760f2674363fbe9e1c505813c679166'] = array(
+    'source' => 'Operation',
+    'context' => '',
+    'location' => '',
+    'translation' => '操作',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b01ada33056e6acd7860906656cf109e'] = array(
+    'source' => 'Votes',
+    'context' => '',
+    'location' => '',
+    'translation' => '投票',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['10f3a3034f67ecc0266ea2fd7f94443b'] = array(
+    'source' => 'Function',
+    'context' => '',
+    'location' => '',
+    'translation' => '機能',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3729d25204952412fd71ef1282831d1a'] = array(
+    'source' => 'New comments',
+    'context' => '',
+    'location' => '',
+    'translation' => '新しいコメント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c819b2f851ea9ed9e2a34cf853633355'] = array(
+    'source' => 'Menu name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メニューの名前',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2892f67c1dc0da7fd013bcf5b9e63346'] = array(
+    'source' => 'Actions',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アクション',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e842c75015a25fdb6d821ef73bed9779'] = array(
+    'source' => 'Navigation',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ナビゲーション',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['939d536998df2bcdf075fb054236566a'] = array(
+    'source' => 'Table',
+    'context' => '',
+    'location' => '',
+    'translation' => 'テーブル',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c540f28fc3634c4fa660726ad023a84a'] = array(
+    'source' => 'List',
+    'context' => '',
+    'location' => '',
+    'translation' => 'リスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5771ea6d5a41635fc7c5012d974a4778'] = array(
+    'source' => 'None',
+    'context' => '',
+    'location' => '',
+    'translation' => 'なし',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1f674d9aaa4452df644b5e1944cbdf50'] = array(
+    'source' => 'Role',
+    'context' => '',
+    'location' => '',
+    'translation' => '役割',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['044dfaa8de446dcc48937bec7ef334aa'] = array(
+    'source' => 'Basic',
+    'context' => '',
+    'location' => '',
+    'translation' => '基本',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['100cba98b8d4d695a423e7bd7a6cc417'] = array(
+    'source' => 'Core',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コア',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['aa0b377712fdfc8ba93492d22507bd2c'] = array(
+    'source' => 'Overridden',
+    'context' => '',
+    'location' => '',
+    'translation' => 'オーバーライド',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['aca7c9e162edf3c60bc647577a8b08ca'] = array(
+    'source' => 'Active forum topics',
+    'context' => '',
+    'location' => '',
+    'translation' => '活発なフォーラムトピック',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['25d2e95908a5a429bc6e74c122ca6985'] = array(
+    'source' => 'All',
+    'context' => '',
+    'location' => '',
+    'translation' => 'すべて',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5534ea5cd8ebaae755e58b74546b7519'] = array(
+    'source' => 'Blogs',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブログ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f793e07391fcf0c63f673e88a74dc3f4'] = array(
+    'source' => 'Statistics',
+    'context' => '',
+    'location' => '',
+    'translation' => '統計',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9f1516162b642143e60f0fbf0ee71d4e'] = array(
+    'source' => 'Count',
+    'context' => '',
+    'location' => '',
+    'translation' => '回数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d49e32b3281e2d94e781fe777f180708'] = array(
+    'source' => 'Minimum',
+    'context' => '',
+    'location' => '',
+    'translation' => '最小',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0ead438cc1a20710e36b90649c6cdd13'] = array(
+    'source' => 'Maximum',
+    'context' => '',
+    'location' => '',
+    'translation' => '最大',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d58cc2026f7f6e41956484155653f98e'] = array(
+    'source' => 'Options',
+    'context' => '',
+    'location' => '',
+    'translation' => 'オプション',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9142b9f13cfb944c442ca15e60fb1e6c'] = array(
+    'source' => 'Order',
+    'context' => '',
+    'location' => '',
+    'translation' => 'オーダー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cb379948a655b401c582699001f5c0dd'] = array(
+    'source' => 'Content types',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツタイプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['722dfc5bb7005cb0336bd30e8c3ee831'] = array(
+    'source' => 'IP address',
+    'context' => '',
+    'location' => '',
+    'translation' => 'IPアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3c01450cfce233f8c50c266806b17988'] = array(
+    'source' => 'Number',
+    'context' => '',
+    'location' => '',
+    'translation' => '数値',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ad86555745c94311325995631c582a07'] = array(
+    'source' => 'Tokens for comments posted on the site.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトに掲載されたコメントのトークン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2e07ecc74df282d4d3495299cad94ccc'] = array(
+    'source' => 'The formatted content of the comment itself.',
+    'context' => '',
+    'location' => '',
+    'translation' => '書式設定されたコメントのコンテンツそのもの',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e84ea453480042358d09e8d3cab3f2d5'] = array(
+    'source' => 'The date the comment was most recently updated.',
+    'context' => '',
+    'location' => '',
+    'translation' => '最後にコメントが追加された日。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0d397168545be89db4a3080510f11317'] = array(
+    'source' => 'The author of the comment, if they were logged in.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コメントの投稿者（ログインしていた場合のみ）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3fe0fdf505bf558a449c08f1dcd45e3c'] = array(
+    'source' => 'Search results',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索結果',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['91b3ccb26c781a75ed4864f37fd64a23'] = array(
+    'source' => 'E-mail address',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メールアドレス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2ba0df3c19a798615ddb7b2bc41f4bf0'] = array(
+    'source' => 'Menus',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メニュー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9ab03bb18d9ada7d773da105c056e5ff'] = array(
+    'source' => 'Menu',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メニュー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['89ea3d87fd7ffd415bf6b8b43f6fd8f1'] = array(
+    'source' => 'Tokens related to individual content items, or "nodes".',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツ(ノード)関係のトークン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5c561faab248c6b4160e16ccedb3ba6e'] = array(
+    'source' => 'The unique ID of the content item, or "node".',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツ(ノード)のユニークID。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8ef848bfa547c66438487ec74cbbe3ff'] = array(
+    'source' => 'The unique ID of the node\'s latest revision.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このノードの最新リビジョンのユニークID。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dfd1984163328dd6d7499e873651fa8f'] = array(
+    'source' => 'Translation set ID',
+    'context' => '',
+    'location' => '',
+    'translation' => '翻訳設定ID',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b19c4f26e673801ea778c19dc270d516'] = array(
+    'source' => 'The unique ID of the original-language version of this node, if one exists.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このノードのオリジナル言語バージョンが存在する場合、そのユニークID。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dbb9cdf7c13ae07480aba50dafa65ab0'] = array(
+    'source' => 'Content type name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツタイプ名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['38d26ffaea5955611016d79787ca5ead'] = array(
+    'source' => 'The human-readable name of the node type.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードのコンテンツタイプの人間用の名称。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['83e0d4618f31552e69771a92f64ad31c'] = array(
+    'source' => 'The main body text of the node.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードの本文。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f83a06f605097bc2753d025e6b29015f'] = array(
+    'source' => 'The summary of the node\'s main body text.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ノードの本文の要約。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9a8e72a8872372e6434d65c96c0a1b6b'] = array(
+    'source' => 'Site information',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイト情報',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b6203d98ba6b41090a184541dedfa65e'] = array(
+    'source' => 'Tokens for site-wide settings and other global information.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイト全体の情報トークン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b0213c8af5a41369ab1a9f51bc578087'] = array(
+    'source' => 'Dates',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ae07e4f5323894d300cc7fea7c104161'] = array(
+    'source' => 'Tokens related to times and dates.',
+    'context' => '',
+    'location' => '',
+    'translation' => '時刻と日付関係のトークン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a3f0726ab826b93a9469e0a448958cf2'] = array(
+    'source' => 'Tokens related to uploaded files.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アップロードされたファイル関係のトークン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['53da9e1e7a68086e5928b8b9b8fef4ce'] = array(
+    'source' => 'URL (brief)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'URL(短)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4f5138b68067033eb1f3545f55468551'] = array(
+    'source' => 'The URL of the site\'s front page without the protocol.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトのスキーム(http://など)抜きのトップページURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1c03f3c9e43bd5d66de70f61c3cc10b7'] = array(
+    'source' => 'Short format',
+    'context' => '',
+    'location' => '',
+    'translation' => '日時（短い書式）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['78724a358b5636ea326894fdf59992ac'] = array(
+    'source' => 'A date in \'short\' format. (%date)',
+    'context' => '',
+    'location' => '',
+    'translation' => '短い日付書式の日時 (%date)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3a55f54c9d453a43db8ba35f2bc5199a'] = array(
+    'source' => 'Medium format',
+    'context' => '',
+    'location' => '',
+    'translation' => '日時（中程度の書式）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a8db46b7a657dcf9bf22a1c0c2580d3f'] = array(
+    'source' => 'January',
+    'context' => 'Long month name',
+    'location' => '',
+    'translation' => '1月',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['da2b94875e9361ba893ea35e04bc89b5'] = array(
+    'source' => 'A date in \'medium\' format. (%date)',
+    'context' => '',
+    'location' => '',
+    'translation' => '中程度の日付書式の日時 (%date)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e05e554b4d7ea80b02f02fa0c08c006d'] = array(
+    'source' => 'Long format',
+    'context' => '',
+    'location' => '',
+    'translation' => '日時（長い書式）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cbc6bcf1f2b57402abfd381066acd6fa'] = array(
+    'source' => 'Tuesday',
+    'context' => '',
+    'location' => '',
+    'translation' => '火曜日',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6bd934bad873a5d279a4f9537bbdb3b0'] = array(
+    'source' => 'A date in \'long\' format. (%date)',
+    'context' => '',
+    'location' => '',
+    'translation' => '長い形式の日付フォーマット(%date)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4c86a60369b86ffaa00338b2cd0a1b95'] = array(
+    'source' => 'Custom format',
+    'context' => '',
+    'location' => '',
+    'translation' => 'カスタムフォーマット',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3e10ba0e8bd7fe67e3a68a94113d6283'] = array(
+    'source' => 'the PHP documentation',
+    'context' => '',
+    'location' => '',
+    'translation' => 'PHPドキュメント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['79ed8ca7b7b7b2f8e9a4f0767e7de062'] = array(
+    'source' => 'A date in a custom format. See !php-date for details.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'カスタムフォーマットの日付。詳細は !php-date 参照。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['46e2c380d9acb150425de6a64483f899'] = array(
+    'source' => 'Time-since',
+    'context' => '',
+    'location' => '',
+    'translation' => '日時（経過時間）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9820f8a59915106d4edd6db5f1658488'] = array(
+    'source' => '@count years',
+    'context' => '',
+    'location' => '',
+    'translation' => '@count年',
+    'plid' => 0,
+    'plural' => 1,
+  );
+  $translations['ja:default']['2c8d2f47b1752fec13b7ebffdc5bec88'] = array(
+    'source' => '1 month',
+    'context' => '',
+    'location' => '',
+    'translation' => '1ヶ月',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['382759a2f174d8dd277b1ae840086ea7'] = array(
+    'source' => 'A date in \'time-since\' format. (%date)',
+    'context' => '',
+    'location' => '',
+    'translation' => '経過時間での日時の表示。(%date)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5299bcc4b8e1e83f3d806ec8b1a1528f'] = array(
+    'source' => 'Raw timestamp',
+    'context' => '',
+    'location' => '',
+    'translation' => '日時（Unix timestamp 書式）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['77bb4a4398130faf592edd56539e2f48'] = array(
+    'source' => 'A date in UNIX timestamp format (%date)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'Unix timestamp 書式の日付 (%date)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8b706adb6dc23e38ee614fc2ad21b218'] = array(
+    'source' => 'The location of the file relative to Drupal root.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルの場所。Drupalのルートからの相対パスです。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['01b31fbf6f97e0661bbc262061ef6ceb'] = array(
+    'source' => 'Tokens related to taxonomy terms.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームを表すトークン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['bab9ab65dd0fee4711f10e6d5b76f16e'] = array(
+    'source' => 'Vocabularies',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ボキャブラリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4697ad382834efb27ab38462529ad4e3'] = array(
+    'source' => 'Tokens related to taxonomy vocabularies.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーを表すトークン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['75185db68a767ef7f97bd36d1031eb2e'] = array(
+    'source' => 'The number of nodes tagged with terms belonging to the taxonomy vocabulary.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミーのボキャブラリーに属するタームでタグ付けされたノード数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6158758ae0bc632388fe25e29351a865'] = array(
+    'source' => 'The parent term of the taxonomy term, if one exists.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タクソノミータームの上位のターム（存在する場合）',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ea69f1e416b0d9d1d38ef0f0bec9cc7d'] = array(
+    'source' => 'Tokens related to individual user accounts.',
+    'context' => '',
+    'location' => '',
+    'translation' => '個々のユーザーアカウントを表すトークン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1a7e67109e655490770d22130ba4a7ed'] = array(
+    'source' => 'Tokens related to the currently logged in user.',
+    'context' => '',
+    'location' => '',
+    'translation' => '現在のログインユーザーを表すトークン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['55427cb4ff38972485af5d9b14fe7c9f'] = array(
+    'source' => 'The URL of the account edit page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウント編集ページのURL',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['61a2b67e8f4d0bae48480ce8bf3a9d80'] = array(
+    'source' => 'Display',
+    'context' => '',
+    'location' => '',
+    'translation' => '表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['db0bddc343459595d843a085df6521d2'] = array(
+    'source' => 'Multilingual support',
+    'context' => '',
+    'location' => '',
+    'translation' => '多言語サポート',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['60ba6963a2917e8608c295927b8b6770'] = array(
+    'source' => 'Disabled',
+    'context' => '',
+    'location' => '',
+    'translation' => '無効',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8fa16d82f924b588fb82861cde938004'] = array(
+    'source' => 'Enable multilingual support for this content type. If enabled, a language selection field will be added to the editing form, allowing you to select from one of the <a href="!languages">enabled languages</a>. If disabled, new posts are saved with the default language. Existing content will not be affected by changing this option.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このコンテンツタイプの多言語サポートを、有効にするかどうかを指定してください。 有効にした場合、<a href="!languages">使用可能な言語</a>から1つを選ぶことのできる、言語選択フィールドが編集フォームに追加されます。 無効にした場合、新しい投稿はデフォルト言語で保存されます。 このオプションの変更によって、既存のコンテンツに影響を与えることはありません',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['16061158e27239e7025fa4deb5b943c5'] = array(
+    'source' => 'Source for the Main links',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メインリンクのソース',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['bbbd8efcbe8437f8f369cc8419efe108'] = array(
+    'source' => 'No Main links',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メインリンクなし',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['31af53f3462adca02fc8ca33b08424c2'] = array(
+    'source' => 'Select what should be displayed as the Main links (typically at the top of the page).',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メインリンク(一般的にページの上部)に表示する項目を選択。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['29bed2adc11b766bb42ecb28388cc52c'] = array(
+    'source' => 'Source for the Secondary links',
+    'context' => '',
+    'location' => '',
+    'translation' => 'セカンダリーリンクのソース',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8523450b14acb01b856cbfdf828080ab'] = array(
+    'source' => 'No Secondary links',
+    'context' => '',
+    'location' => '',
+    'translation' => 'セカンダリーリンクなし',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cf7816affd5cf9d7326b59d262017106'] = array(
+    'source' => 'Preview before submitting',
+    'context' => '',
+    'location' => '',
+    'translation' => '投稿前にプレビュー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['77222cb1a2abd7476913470cecea213c'] = array(
+    'source' => 'Default options',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトオプション',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['eba6f15f8f14a6dfd33807bdca8b7f72'] = array(
+    'source' => 'Display author and date information.',
+    'context' => '',
+    'location' => '',
+    'translation' => '作成者と日付情報を表示。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a0f656f02b5bf94b2af75f902fa30100'] = array(
+    'source' => 'Author username and publish date will be displayed.',
+    'context' => '',
+    'location' => '',
+    'translation' => '作成者のユーザー名と公開日付が表示されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6fcae6afedf0c075174440af7e045ef7'] = array(
+    'source' => 'Site name',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイト名',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['419074c1e1859d19d0b75185dde0b9ce'] = array(
+    'source' => 'The <em>From</em> address in automated e-mails sent during registration and new password requests, and other notifications. (Use an address ending in your site\'s domain to help prevent this e-mail being flagged as spam.)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このサイトの代表メールアドレスを入力してください。 これはユーザー登録やパスワードの再発行メール、各種の通知など、自動送信メールの「From:（差出人）」として使われます。 受信者にスパムメールと見なされる可能性を減らすために、できる限りウェブサイトと同じドメインで終わるアドレスを使用してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fbfb77639c4301638b2455b062fbfa9a'] = array(
+    'source' => 'Site slogan',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトスローガン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['41bd001c8e06fbf45f7d6bc7a74c216c'] = array(
+    'source' => 'Anonymous',
+    'context' => '',
+    'location' => '',
+    'translation' => '匿名ユーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3d1c4b709428bfe15b9435e736cf9839'] = array(
+    'source' => 'The name used to indicate anonymous users.',
+    'context' => '',
+    'location' => '',
+    'translation' => '匿名ユーザーを示す名称を入力してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['30f84a3e663a895e12995b994a4c8347'] = array(
+    'source' => 'Default front page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトのフロントページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['28d030b0c6a5ac3cf3296e630967d63a'] = array(
+    'source' => 'The maximum number of posts displayed on overview pages such as the front page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'トップページのように、記事が一覧として表示されるページの最大記事数。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1eea416d9a6fc131d912bf688f172ccb'] = array(
+    'source' => 'Default 403 (access denied) page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトの403（access denied）ページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7189f9cdf7ac446772cb40d108ddef55'] = array(
+    'source' => 'This page is displayed when the requested document is denied to the current user. Leave blank to display a generic "access denied" page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このページは、ページへのユーザーアクセスが拒否された際に表示されるページです。空白にすると、標準の"アクセスが拒否されました"ページが表示されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['306b022df66c841118706d8c19197faa'] = array(
+    'source' => 'Default 404 (not found) page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトの404（not found）ページ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['024ee179ef56015bece5bba2b6b5ef6a'] = array(
+    'source' => 'This page is displayed when no other content matches the requested document. Leave blank to display a generic "page not found" page.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'このページは、要求された文書に該当する文書がない場合に表示されます。空白にすると、標準の "ページが見つかりませんでした"ページが表示されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5d71a263727cc07c6560cdb8459d3033'] = array(
+    'source' => 'Feed description',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィードの説明',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a8408c043c2e9b812a9ef94a8e559d25'] = array(
+    'source' => 'Description of your site, included in each feed.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'すべてのフィードに含まれるサイトの説明。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9b182f193e4ac4617d1383c7233f6376'] = array(
+    'source' => 'Number of items in each feed',
+    'context' => '',
+    'location' => '',
+    'translation' => '各フィードのアイテム数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b5c0bb7c36c2df9f78509ba3055168ab'] = array(
+    'source' => 'Default number of items to include in each feed.',
+    'context' => '',
+    'location' => '',
+    'translation' => '各フィードに含める、デフォルトのアイテム数を指定してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['aacbb05c3d54095cd0fa2b340653c48e'] = array(
+    'source' => 'Feed content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フィードの内容',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2b0b064baae7faa0b734552a971e7798'] = array(
+    'source' => 'Titles only',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイトルのみ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b783275764cb8057b95401a8c7448092'] = array(
+    'source' => 'Titles plus teaser',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイトルとティーザー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2156bfdccec70335ffb0566e39f5d8b8'] = array(
+    'source' => 'Full text',
+    'context' => '',
+    'location' => '',
+    'translation' => 'すべてのテキスト',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['334b560cc5b7660ce40213c0fe7b785c'] = array(
+    'source' => 'Global setting for the default display of content items in each feed.',
+    'context' => '',
+    'location' => '',
+    'translation' => '各フィードのアイテムにデフォルトで表示する内容を指定してください。 この設定はサイト全般で使用されます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3f3b1bd98f3724fe578f24ff92d18bca'] = array(
+    'source' => 'Default country',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトの国',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['f89a34509705bc38c198e342340633a3'] = array(
+    'source' => 'First day of week',
+    'context' => '',
+    'location' => '',
+    'translation' => '週の最初の曜日',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['fbf2f0da2bfcacad63b9c63a17125208'] = array(
+    'source' => 'Default time zone',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトのタイムゾーン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['04b6bd9680aef04214529d57845abeb2'] = array(
+    'source' => 'Users may set their own time zone.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーが自分のタイムゾーンを設定できる',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['417fb9be5fad9036e05a952d937c94d6'] = array(
+    'source' => 'Remind users at login if their time zone is not set.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイムゾーンが設定されていない場合、ログイン時にユーザーに注意をうながす',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c8cd17a3de0db09258fce520ecc887d7'] = array(
+    'source' => 'Only applied if users may set their own time zone.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーが自分のタイムゾーンを設定できる場合のみに適用',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6456c3bfc373fec187e82b08167a1d14'] = array(
+    'source' => 'Time zone for new users',
+    'context' => '',
+    'location' => '',
+    'translation' => '新規ユーザーのタイムゾーン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1e9491f3c1af787dbcc47b9e8eb81dc5'] = array(
+    'source' => 'Default time zone.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトタイムゾーン。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['40471c543807f01b6cc5c372bbeb565f'] = array(
+    'source' => 'Empty time zone.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'タイムゾーンなし。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b5512dec8dfb21b9ccea6d914d7193e7'] = array(
+    'source' => 'Users may set their own time zone at registration.',
+    'context' => '',
+    'location' => '',
+    'translation' => '登録時にユーザーが自分のタイムゾーンを設定できる',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2f0a1020f5d582dc33061bc4e4d6c54b'] = array(
+    'source' => 'Date format',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付の書式',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['43ca2219753ad4239b1d1a478dd2dbae'] = array(
+    'source' => 'Put site into maintenance mode',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトをメンテナンスモードにする',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6bb550ede8b1cf2afe537e4dfd2f1aa3'] = array(
+    'source' => 'When enabled, only users with the "Use the site in maintenance mode" <a href="@permissions-url">permission</a> are able to access your site to perform maintenance; all other visitors see the maintenance mode message configured below. Authorized users can log in directly via the <a href="@user-login">user login</a> page.',
+    'context' => '',
+    'location' => '',
+    'translation' => '有効にすると、「メンテナンスモードのサイトにアクセス」の<a href="@permissions-url">権限</a>を持っているユーザーのみがサイトにアクセスできる状態になります。他のユーザーに対しては以下で設定したメッセージが表示されます。この権限をもつユーザーは<a href="@user-login">ユーザーログイン</a>ページからログインできます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c251e46ff27815e7a834109d02a56b6a'] = array(
+    'source' => 'Maintenance mode message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メンテナンスモードメッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e2d77b0cf70e2d94309827270511e78e'] = array(
+    'source' => '@site is currently under maintenance. We should be back shortly. Thank you for your patience.',
+    'context' => '',
+    'location' => '',
+    'translation' => '@site は現在メンテナンス中です。まもなく再開しますので、しばらくお待ちください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['70d67482c7ab049885ca4ef191e7ca47'] = array(
+    'source' => 'Message to show visitors when the site is in maintenance mode.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'サイトがメンテナンスモードの時に表示されるメッセージ。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6e85a7ec7e1bf5c46fd8f29e7be454c3'] = array(
+    'source' => 'Cache pages for anonymous users',
+    'context' => '',
+    'location' => '',
+    'translation' => '匿名ユーザー向けページをキャッシュする',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['77fe0991e1b080e7feec788c761e31fa'] = array(
+    'source' => 'Cache blocks',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブロックをキャッシュする',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['545a76aacd94a87471d127fdc8303664'] = array(
+    'source' => 'Minimum cache lifetime',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キャッシュの存続期間',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['22aad97e552b4fa1bcf05fbeaa1106cb'] = array(
+    'source' => 'Cached pages will not be re-created until at least this much time has elapsed.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キャッシュされたページは最低でもこの時間が経過するまで再生成されません。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['78cf2904ee8c41f9991f4fa8f5c0ce30'] = array(
+    'source' => 'Expiration of cached pages',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キャッシュされたページの期限',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['03ba94e7d44a0547f0b841a751b96151'] = array(
+    'source' => 'The maximum time an external cache can use an old version of a page.',
+    'context' => '',
+    'location' => '',
+    'translation' => '外部キャッシュが古いバージョンのページを利用できる最終期限。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6df362e483ca55300239af17cdcc6713'] = array(
+    'source' => 'External resources can be optimized automatically, which can reduce both the size and number of requests made to your website.',
+    'context' => '',
+    'location' => '',
+    'translation' => '外部リソースは自動的に最適化することができ、これによりあなたのウェブサイトに対するリクエスト数およびサイズの両方を削減できます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['235979f470a6da7252076cbd0b5941bb'] = array(
+    'source' => 'Compress cached pages.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キャッシュされたページを圧縮。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e939da3baa42dfb3e9b378d585fe2f6a'] = array(
+    'source' => 'Aggregate and compress CSS files.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'CSSファイルをまとめて圧縮する。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cf37ea91f9623f6e345cfc911e51a84e'] = array(
+    'source' => 'Aggregate JavaScript files.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'JavaScriptファイルをまとめる。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['88790adfca3b813d495817dfab46f423'] = array(
+    'source' => 'Available variables are: [site:name], [site:url], [user:name], [user:mail], [site:login-url], [site:url-brief], [user:edit-url], [user:one-time-login-url], [user:cancel-url].',
+    'context' => '',
+    'location' => '',
+    'translation' => '利用可能な変数は以下です： [site:name], [site:url], [user:name], [user:mail], [site:login-url], [site:url-brief], [user:edit-url], [user:one-time-login-url], [user:cancel-url].',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['30c7fa41b3827e6da619eb9ac7b32a98'] = array(
+    'source' => 'Notify user when account is activated.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウントが有効化された際にユーザーへ通知',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['80af83eef4ad3011142b02ce95089290'] = array(
+    'source' => 'Notify user when account is blocked.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウントがブロックされた際にユーザーへ通知',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['83145d5c8d4d49814ac2bf1351c12dd4'] = array(
+    'source' => 'Account cancellation confirmation',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウント無効化の確認',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6fe63b76096934caa0a65282c78efcd3'] = array(
+    'source' => 'Edit the e-mail messages sent to users when they attempt to cancel their accounts.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウントが削除しようとした際にユーザーへ送信する、メールのメッセージの編集と、送信するかどうかを指定してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1a70155c981533d8af1767efd78173cd'] = array(
+    'source' => 'Picture directory',
+    'context' => '',
+    'location' => '',
+    'translation' => '画像のディレクトリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9b02817d3a992047a91b1a83ba865b37'] = array(
+    'source' => 'Subdirectory in the file upload directory where pictures will be stored.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルアップロード用ディレクトリー内の、写真保存用サブディレクトリーです。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7fcd343bf13fa31f1e73ee9de0704e7d'] = array(
+    'source' => 'Default picture',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトのユーザーアバター',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['71b32d51ff76689f601cb3267a5b8a6d'] = array(
+    'source' => 'URL of picture to display for users with no custom picture selected. Leave blank for none.',
+    'context' => '',
+    'location' => '',
+    'translation' => '独自のユーザーアバターを選択していないユーザーに表示される、デフォルトのユーザーアバター画像のパスを入力してください。（ 例： misc/druplicon-small.png ）<br />指定しない場合は空欄にしてください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6a0c3a9438b7f408a9eea8a9a7548f5e'] = array(
+    'source' => 'Picture guidelines',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ユーザーアバターのガイドライン',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['cf0be4cb23a5449a4bb0a852f33e0253'] = array(
+    'source' => 'This text is displayed at the picture upload form in addition to the default guidelines. It\'s useful for helping or instructing your users.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アバターに関してユーザーに提示したいテキストを記入してください。<br />
+このテキストはユーザーアバターのアップロードフォームに表示される、デフォルトのガイドラインに追加されます。 ユーザーが作業を円滑に進めるられるように、アップロードに関する説明などを掲示するのに役立ちます。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['a24cafca2ab57d932a474a0d8c711339'] = array(
+    'source' => 'Hot topic threshold',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ホットトピックのしきい値',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c6352eebefde9397d328d2ec03cb3c80'] = array(
+    'source' => 'The number of replies a topic must have to be considered "hot".',
+    'context' => '',
+    'location' => '',
+    'translation' => '記事が"活発"と評価される返信数。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7fd5856ff63387bc8dfea60d35c194e7'] = array(
+    'source' => 'Topics per page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ページ単位のトピック数',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['94ff340a58805f0a288d45151fa1ee96'] = array(
+    'source' => 'Default number of forum topics displayed per page.',
+    'context' => '',
+    'location' => '',
+    'translation' => '各ページに表示するデフォルトのフォーラムトピック数を指定してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['46d105ac1913ca099db9c18c2cf78b26'] = array(
+    'source' => 'Date - newest first',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付の新しい順',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6a6eafeaf56fc8d03acd9774ce32387a'] = array(
+    'source' => 'Date - oldest first',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付の古い順',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4ec97b6782030fde73a5d9671e91b5b8'] = array(
+    'source' => 'Posts - most active first',
+    'context' => '',
+    'location' => '',
+    'translation' => '投稿が活発な順',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['653b3e1dfc09e7d94b147717c9de7286'] = array(
+    'source' => 'Posts - least active first',
+    'context' => '',
+    'location' => '',
+    'translation' => '投稿が不活発な順',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['eaf1be94f9624f1b515e8e7035c5cc8f'] = array(
+    'source' => 'Default order',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトの並び順',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4e175021cef4fd349da0879b5e489fe6'] = array(
+    'source' => 'Default display order for topics.',
+    'context' => '',
+    'location' => '',
+    'translation' => 'デフォルトのトピックの表示順を指定してください。',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ffa104d3b2492ca364a7f7d2849406a9'] = array(
+    'source' => 'Forum navigation vocabulary',
+    'context' => '',
+    'location' => '',
+    'translation' => 'フォーラムナビゲーション用語集',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['77a02ac6372ef137a84cddbf5c541e6e'] = array(
+    'source' => 'Vote',
+    'context' => '',
+    'location' => '',
+    'translation' => '投票',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['0be82819a707238cfb28dedae880de40'] = array(
+    'source' => 'View',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ビュー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['db244aa5ba173f96ace912ef1bebac26'] = array(
+    'source' => 'Severity',
+    'context' => '',
+    'location' => '',
+    'translation' => '重大度',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['d9bee0718519a8aa8f6daf7b339c2c98'] = array(
+    'source' => 'date',
+    'context' => '',
+    'location' => '',
+    'translation' => '日付',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['787b9696df852c2a9b64726a9758d4fa'] = array(
+    'source' => 'PHP',
+    'context' => '',
+    'location' => '',
+    'translation' => 'PHP',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7550f008ab2b65cc015a02d70188b067'] = array(
+    'source' => 'Existing system path',
+    'context' => '',
+    'location' => '',
+    'translation' => '既存のシステムパス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['52b5fd1e247a97de9cb72852f7f9453f'] = array(
+    'source' => 'URL alias',
+    'context' => '',
+    'location' => '',
+    'translation' => 'URLエイリアス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7f8355158ac7d04bcbeaebe53001ca87'] = array(
+    'source' => 'File directory',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ファイルディレクトリー',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3f87c254833ed57dd67f29663c5f670e'] = array(
+    'source' => 'Day',
+    'context' => '',
+    'location' => '',
+    'translation' => '日',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['af63e19d403efa83ebd151f796edcfee'] = array(
+    'source' => 'Month',
+    'context' => '',
+    'location' => '',
+    'translation' => '月',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4d555fc63f7ae8af09b7c094a0883866'] = array(
+    'source' => 'Year',
+    'context' => '',
+    'location' => '',
+    'translation' => '年',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['6df155022137b522a1a38be6ffcb9881'] = array(
+    'source' => 'Index',
+    'context' => '',
+    'location' => '',
+    'translation' => 'インデックス',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['842249b2655448ffcff457e1d67865b3'] = array(
+    'source' => 'Publish content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツを掲載',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['03f1fa5d412fb389e2267a76800c53d9'] = array(
+    'source' => 'Unpublish content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツを非公開にする',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['8bb38b5f6bd025c55e8ac032c28e4315'] = array(
+    'source' => 'Make content sticky',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツをリスト上部に固定',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4aa73cc6ceefc978baa08503a80ffe2f'] = array(
+    'source' => 'Make content unsticky',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツをリスト上部に固定しない',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['ec8cd4e06cade1b491ddf6623b25f0b3'] = array(
+    'source' => 'Promote content to front page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツをトップページに表示する',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['547ddde4e5e469b4ac76aa07413d377f'] = array(
+    'source' => 'Remove content from front page',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツをトップページから削除する',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['bd9abe1ff312814f39444355de86ce21'] = array(
+    'source' => 'Change the author of content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツの作成者を変更',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e49f89fdc57acf0746d7a59a0f685faf'] = array(
+    'source' => 'Save content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'コンテンツの保存',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['75b8164618ff4239bf5611d9c62c7c50'] = array(
+    'source' => 'Unpublish content containing keyword(s)',
+    'context' => '',
+    'location' => '',
+    'translation' => 'キーワードを含むコンテンツを非公開にする',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['9204942a7e93cb6b577c149879474c52'] = array(
+    'source' => 'Message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b72256d164635873b53653a3bc7e94aa'] = array(
+    'source' => 'To',
+    'context' => '',
+    'location' => '',
+    'translation' => '宛先',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['2b871e98b222954d66f9fd57fe0ca213'] = array(
+    'source' => 'Jan',
+    'context' => '',
+    'location' => '',
+    'translation' => '1月',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['973ec6c470eb033feb1b9dcc34089281'] = array(
+    'source' => 'Help',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ヘルプ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['b1ae3ef8481fd877d821eddb68d5db76'] = array(
+    'source' => 'Highlighted',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ハイライトされた',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['77113c812897fa8f93a7a12b861db01d'] = array(
+    'source' => 'Account',
+    'context' => '',
+    'location' => '',
+    'translation' => 'アカウント',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['dfb6b8637998688c9a7d4d09d62731fa'] = array(
+    'source' => 'Profiles',
+    'context' => '',
+    'location' => '',
+    'translation' => 'プロフィール',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['1e8fdc8c32d7c2d4a200f4a601653b84'] = array(
+    'source' => 'Search form',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索フォーム',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['3f61a905e7726d0c369da68659571304'] = array(
+    'source' => 'Enter the terms you wish to search for.',
+    'context' => '',
+    'location' => '',
+    'translation' => '検索したいキーワードを入力してください',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['65b199c36c55184c70d271aac63fa3ef'] = array(
+    'source' => 'Blocks',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ブロック',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7987eece048e7049c59d03fb6c1b7f67'] = array(
+    'source' => 'You are here',
+    'context' => '',
+    'location' => '',
+    'translation' => '現在地',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['56d4496796b79ba936001fd57dd4cf32'] = array(
+    'source' => 'Status message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'ステータスメッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['c3a9e958b07ffba8321390a20cc3d306'] = array(
+    'source' => 'Error message',
+    'context' => '',
+    'location' => '',
+    'translation' => 'エラーメッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['63befaa6d713035f163736d5b6ffe400'] = array(
+    'source' => 'Warning message',
+    'context' => '',
+    'location' => '',
+    'translation' => '警告メッセージ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['768d9afb8043755bc198721bd02f4c39'] = array(
+    'source' => 'Primary tabs',
+    'context' => '',
+    'location' => '',
+    'translation' => 'プライマリータブ',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['86dcff77a1656d9df7945a70e7d96ef9'] = array(
+    'source' => '(active tab)',
+    'context' => '',
+    'location' => '; misc/vertical-tabs.js',
+    'translation' => '(アクティブなタブ)',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['5463eca0538c1b35d6f3ff8e9eecc4b5'] = array(
+    'source' => '!local-task-title!active',
+    'context' => '',
+    'location' => '',
+    'translation' => '!local-task-title!active',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['4f457ab875450626b78cb52ab2e6871e'] = array(
+    'source' => 'Skip to main content',
+    'context' => '',
+    'location' => '',
+    'translation' => 'メインコンテンツに移動',
     'plid' => 0,
     'plural' => 0,
   );
@@ -129,38 +3682,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['750f1df3182758a1d508f1307ef5c904'] = array(
-    'source' => 'Hide',
-    'context' => '',
-    'location' => '; misc/collapse.js',
-    'translation' => '非表示',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7df7ea17592e1a9ed4d48e94361ee873'] = array(
-    'source' => 'Show',
-    'context' => '',
-    'location' => '; misc/collapse.js',
-    'translation' => '表示',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
-    'source' => 'Edit',
-    'context' => '',
-    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js; misc/machine-name.js',
-    'translation' => '編集',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['86dcff77a1656d9df7945a70e7d96ef9'] = array(
-    'source' => '(active tab)',
-    'context' => '',
-    'location' => '; misc/vertical-tabs.js',
-    'translation' => '(アクティブなタブ)',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['da6c2824214c47f47f49430289e12732'] = array(
     'source' => 'view',
     'context' => '',
@@ -185,14 +3706,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['8878c04f8634dfd34d52a73870ad8758'] = array(
-    'source' => 'Home',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ホーム',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c33f0aecd948b6d8d17230e9e1a630f0'] = array(
     'source' => 'User interface',
     'context' => '',
@@ -201,35 +3714,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['00d9f5f3459992c3e525c59f6aea06e7'] = array(
-    'source' => 'Title',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイトル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['19523c6fc7d9a207615db00948495e2f'] = array(
-    'source' => 'Body',
-    'context' => '',
-    'location' => '',
-    'translation' => '本文',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['2f934876a8bec88fc004869f71c05ac3'] = array(
     'source' => 'Next',
     'context' => '',
     'location' => '',
     'translation' => '次へ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8eb4c1aedefa9349c8e9d6cf765aa50f'] = array(
-    'source' => 'user',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -262,14 +3751,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '削除',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6e0d0ef452f17c9b416d5dc7fc12289e'] = array(
-    'source' => 'Status',
-    'context' => '',
-    'location' => '',
-    'translation' => '状態',
     'plid' => 0,
     'plural' => 0,
   );
@@ -313,14 +3794,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['6ee33fc18ed76496ca5d6406b83279f9'] = array(
-    'source' => 'E-mail',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メール',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c7185d94e02f2b419f34a27688099ef1'] = array(
     'source' => 'Approve',
     'context' => '',
@@ -329,43 +3802,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['af367676c6aedc8e4138bd78c4cec8a3'] = array(
-    'source' => 'Delete',
-    'context' => '',
-    'location' => '',
-    'translation' => '削除',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b68f4f1a4c1c012cce808c8483d3073d'] = array(
-    'source' => 'Operations',
-    'context' => '',
-    'location' => '',
-    'translation' => '操作',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b3ef7a9b8b590c83cf21c24ca3030fc5'] = array(
-    'source' => 'Content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['01890e7055df4f97d96d55a224e40d7c'] = array(
     'source' => 'Username',
     'context' => '',
     'location' => '',
     'translation' => 'ユーザー名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6b9bc7e0071336959864eac9d8d34f93'] = array(
-    'source' => 'Email address',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メールアドレス',
     'plid' => 0,
     'plural' => 0,
   );
@@ -382,30 +3823,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '開発',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ce2ad447297faf361cd62cf1ee6cc697'] = array(
-    'source' => 'Group',
-    'context' => '',
-    'location' => '',
-    'translation' => 'グループ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c9c8dc60b2f699516b8dff373f392c62'] = array(
-    'source' => 'Type',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2c4b214d3c9cb727fe71e0422e9fc352'] = array(
-    'source' => 'Author',
-    'context' => '',
-    'location' => '',
-    'translation' => '投稿者',
     'plid' => 0,
     'plural' => 0,
   );
@@ -433,35 +3850,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c540f28fc3634c4fa660726ad023a84a'] = array(
-    'source' => 'List',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9743bda1fff64438cf37fe79764b4c1f'] = array(
-    'source' => 'Subject',
-    'context' => '',
-    'location' => '',
-    'translation' => '件名',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['1d69679ab7142bedfccabe9763c7b6d4'] = array(
     'source' => 'closed',
     'context' => '',
     'location' => '',
     'translation' => 'クローズド',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2892f67c1dc0da7fd013bcf5b9e63346'] = array(
-    'source' => 'Actions',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アクション',
     'plid' => 0,
     'plural' => 0,
   );
@@ -505,22 +3898,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['206bc0e3a9ca74e65434adf1371d5baf'] = array(
-    'source' => 'Description',
-    'context' => '',
-    'location' => '',
-    'translation' => '説明',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3b6849d84e055b3f7a1a7e7d07cd4416'] = array(
-    'source' => 'Language',
-    'context' => '',
-    'location' => '',
-    'translation' => '言語',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['3bf84af6f96924bc21ad649cf6073c99'] = array(
     'source' => 'RSS feed',
     'context' => '',
@@ -561,35 +3938,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['60ba6963a2917e8608c295927b8b6770'] = array(
-    'source' => 'Disabled',
-    'context' => '',
-    'location' => '',
-    'translation' => '無効',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8033d01df2a2304b9b6b97c1b704103f'] = array(
-    'source' => 'Enabled',
-    'context' => '',
-    'location' => '',
-    'translation' => '有効',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['024b4d15dff4f3f93f3bf3085940cb7f'] = array(
     'source' => 'Administration',
     'context' => '',
     'location' => '',
     'translation' => '管理',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0add1583586487cfe759bed66e64ed4e'] = array(
-    'source' => 'Comments',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント',
     'plid' => 0,
     'plural' => 0,
   );
@@ -638,14 +3991,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'エラー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['264dfacda3aee2406eb6a31be1d4772a'] = array(
-    'source' => 'Tags',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タグ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -817,14 +4162,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['cb379948a655b401c582699001f5c0dd'] = array(
-    'source' => 'Content types',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツタイプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['203231509a84226104c6beb751e57561'] = array(
     'source' => 'Homepage',
     'context' => '',
@@ -833,35 +4170,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['37729a21b23c7602f1debf8cc4069b93'] = array(
-    'source' => 'Home page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ホームページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['045a0fc54e394fda749abebf7e51698c'] = array(
-    'source' => 'Categories',
-    'context' => '',
-    'location' => '',
-    'translation' => 'カテゴリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['250304879796888557f8883811a973ec'] = array(
     'source' => 'Download',
     'context' => '',
     'location' => '',
     'translation' => 'ダウンロード',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['129e390bf43248a471978e788a1f375c'] = array(
-    'source' => 'Version',
-    'context' => '',
-    'location' => '',
-    'translation' => 'バージョン',
     'plid' => 0,
     'plural' => 0,
   );
@@ -889,14 +4202,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c821a631d92845f8e4dce7fd1c041693'] = array(
-    'source' => 'File',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイル',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['38cd95d313a7737793e325745f4cc5d2'] = array(
     'source' => 'Advanced options',
     'context' => '',
@@ -913,38 +4218,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['a7e6723a9abf5bdaf86e60b1cd3528bf'] = array(
-    'source' => 'Date',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['74a473acc8b75515a1b48de7d4b4f4eb'] = array(
-    'source' => 'Size',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイズ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['13fc7185f32e9df72ca3919c801c034c'] = array(
-    'source' => 'Search',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e7ae60c886399eb1193800301adf6def'] = array(
-    'source' => 'Reset',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リセット',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9cf9aae692d68e5e33387953eb69268b'] = array(
     'source' => 'Daily',
     'context' => '',
@@ -958,14 +4231,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '毎週',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5771ea6d5a41635fc7c5012d974a4778'] = array(
-    'source' => 'None',
-    'context' => '',
-    'location' => '',
-    'translation' => 'なし',
     'plid' => 0,
     'plural' => 0,
   );
@@ -993,22 +4258,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['3c01450cfce233f8c50c266806b17988'] = array(
-    'source' => 'Number',
-    'context' => '',
-    'location' => '',
-    'translation' => '数値',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9204942a7e93cb6b577c149879474c52'] = array(
-    'source' => 'Message',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メッセージ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['fc267ea478b852c63c8d00c04f3e4a42'] = array(
     'source' => 'No log messages available.',
     'context' => '',
@@ -1033,43 +4282,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['7ea5f602cb63494dc956f1a4713b24d4'] = array(
-    'source' => 'Weight',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ウェイト',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['353dfe9606d7c30d455b62570863edc8'] = array(
     'source' => 'The configuration options have been saved.',
     'context' => '',
     'location' => '',
     'translation' => '設定オプションが保存されました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a1d7e06bf478db04b92db914e8a17f9e'] = array(
-    'source' => 'Link',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リンク',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['98bedc90777bf92703f9c0de88c160fa'] = array(
-    'source' => 'Image',
-    'context' => '',
-    'location' => '',
-    'translation' => '画像',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['207f1671cb7a8229cc997b8c7bd912c7'] = array(
-    'source' => 'Center',
-    'context' => '',
-    'location' => '',
-    'translation' => '中央',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1105,14 +4322,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['5d45ae4e94d6a2ddea664386ab83e8eb'] = array(
-    'source' => 'Parent',
-    'context' => '',
-    'location' => '',
-    'translation' => '親',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['2b57726096f8a282dec94d6527c06c5b'] = array(
     'source' => 'Pages at a given level are ordered first by weight and then by title.',
     'context' => '',
@@ -1129,14 +4338,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fa20d2f15d4fc07be53be72db1b3a0be'] = array(
-    'source' => 'Category',
-    'context' => '',
-    'location' => '',
-    'translation' => 'カテゴリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['597d410c5bfe9a9d7fe492bfa493cdb2'] = array(
     'source' => 'Add container',
     'context' => '',
@@ -1145,27 +4346,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2ba69f51a809094c2c29f3f89e72da1c'] = array(
-    'source' => 'Settings',
-    'context' => '',
-    'location' => '',
-    'translation' => '環境設定',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['0b500aeb8883c2ce22d237ef66569095'] = array(
     'source' => 'Add category',
     'context' => '',
     'location' => '',
     'translation' => 'カテゴリーの追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6981735bd8791ace3be83c78dd240f94'] = array(
-    'source' => 'Name',
-    'context' => '',
-    'location' => '',
-    'translation' => '名前',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1265,43 +4450,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['276cf395c7ea8f506f9db2b3a754b876'] = array(
-    'source' => 'Taxonomy term',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーターム',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['09dcac04247ea4566b0057ef52686f8b'] = array(
-    'source' => 'Field',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィールド',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8734cd8bad8a6593881aebeb0ca80661'] = array(
     'source' => 'Outline',
     'context' => '',
     'location' => '',
     'translation' => 'アウトライン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9c50bc30734f458ce7148e69c27ec926'] = array(
-    'source' => 'Label',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ラベル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f0f0c8a62e73e2ff8c6dc86fce2e1373'] = array(
-    'source' => 'Preview',
-    'context' => '',
-    'location' => '',
-    'translation' => 'プレビュー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1321,30 +4474,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['973ec6c470eb033feb1b9dcc34089281'] = array(
-    'source' => 'Help',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ヘルプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['fbee784b38776b5f0143a0d57288b712'] = array(
-    'source' => 'Default',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルト',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['69c8db7a1873e4a61f41818bbdc933ff'] = array(
-    'source' => 'Summary',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サマリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9fd2c7cdda858a0c49f2f526342afe61'] = array(
     'source' => 'Update',
     'context' => '',
@@ -1361,14 +4490,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e17f1936f7a83e8f23f8af6e93a73a3b'] = array(
-    'source' => 'Top',
-    'context' => '',
-    'location' => '',
-    'translation' => 'トップ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a55c8b785f905485549239490d6cf1f2'] = array(
     'source' => 'Sunday',
     'context' => '',
@@ -1382,14 +4503,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '月曜日',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['cbc6bcf1f2b57402abfd381066acd6fa'] = array(
-    'source' => 'Tuesday',
-    'context' => '',
-    'location' => '',
-    'translation' => '火曜日',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1425,35 +4538,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['100cba98b8d4d695a423e7bd7a6cc417'] = array(
-    'source' => 'Core',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コア',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a341b139a6cd4583412694a66a35e70c'] = array(
     'source' => 'Time',
     'context' => '',
     'location' => '',
     'translation' => '時間',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4d899e8b2c578d4a0e874a671bb0f5f9'] = array(
-    'source' => 'Add',
-    'context' => '',
-    'location' => '',
-    'translation' => '追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0be82819a707238cfb28dedae880de40'] = array(
-    'source' => 'View',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ビュー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1465,43 +4554,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fd6a2c102113f622d18a07343838c33f'] = array(
-    'source' => 'History',
-    'context' => '',
-    'location' => '',
-    'translation' => '履歴',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['588aaca4cfec2b28db60de953e187a74'] = array(
-    'source' => 'URL',
-    'context' => '',
-    'location' => '',
-    'translation' => 'URL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['eabaa7b033370940bcf32780f78a257c'] = array(
-    'source' => 'Path',
-    'context' => '',
-    'location' => '',
-    'translation' => 'パス',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4578854a3dff04ce5a3651b532e8675e'] = array(
     'source' => 'Filename',
     'context' => '',
     'location' => '',
     'translation' => 'ファイル名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['bab9ab65dd0fee4711f10e6d5b76f16e'] = array(
-    'source' => 'Vocabularies',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ボキャブラリー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1593,22 +4650,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['61a2b67e8f4d0bae48480ce8bf3a9d80'] = array(
-    'source' => 'Display',
-    'context' => '',
-    'location' => '',
-    'translation' => '表示',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9ab03bb18d9ada7d773da105c056e5ff'] = array(
-    'source' => 'Menu',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メニュー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['de8eb7962858ad850383cd0b4df0c45f'] = array(
     'source' => 'Advanced settings',
     'context' => '',
@@ -1630,14 +4671,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '検索',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c631237f5a729828b6d9db83f42acf41'] = array(
-    'source' => 'Teaser',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ティーザー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1678,14 +4711,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'アクション',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b9f42963dd03484692339a0bac3d8dde'] = array(
-    'source' => 'Text',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テキスト',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1753,14 +4778,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fc0b899539f1f1beef33144e53a0f415'] = array(
-    'source' => 'Timestamp',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイムスタンプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['096f824a0c7d0448faf96bbe9b380214'] = array(
     'source' => 'Keywords',
     'context' => '',
@@ -1817,14 +4834,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f793e07391fcf0c63f673e88a74dc3f4'] = array(
-    'source' => 'Statistics',
-    'context' => '',
-    'location' => '',
-    'translation' => '統計',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['0657f4767b7d53074f98d1a81476de81'] = array(
     'source' => 'Advanced search',
     'context' => '',
@@ -1849,14 +4858,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['24c73ad458c4d17d47b5a37ba81163c2'] = array(
-    'source' => 'Attachment',
-    'context' => '',
-    'location' => '',
-    'translation' => '添付',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['01e0195e93e5b8623a12d3bf0327ace9'] = array(
     'source' => 'n/a',
     'context' => '',
@@ -1870,14 +4871,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'アップロード',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['af20af163d25ff4c10e95148fda8bb27'] = array(
-    'source' => 'Picture',
-    'context' => '',
-    'location' => '',
-    'translation' => '写真',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1905,22 +4898,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f6901d7ecda7e8dc74f1b83afc9950a3'] = array(
-    'source' => 'User',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0100197e2b77819823bb3f6fe3b33542'] = array(
-    'source' => 'Content type',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツタイプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['7aa909391028b274fc9d27f14aa868da'] = array(
     'source' => 'action',
     'context' => '',
@@ -1934,22 +4911,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '継続',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6619cbc667fa9eb505e5c4141395dc33'] = array(
-    'source' => 'Email',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メール',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['adf6dfd7d9b1c2f761da52b391c215f9'] = array(
-    'source' => 'Files',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイル',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1969,27 +4930,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fb46d0b467f379f15fabfc77ff04ddd3'] = array(
-    'source' => 'User ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーID',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['20fcc7a0c5aa6f7d1d4b576c1ff2a35f'] = array(
     'source' => 'Error',
     'context' => '',
     'location' => '',
     'translation' => 'エラー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d58cc2026f7f6e41956484155653f98e'] = array(
-    'source' => 'Options',
-    'context' => '',
-    'location' => '',
-    'translation' => 'オプション',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2006,22 +4951,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'いいえ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3359de2a1756f0c83210315a6f2f22bf'] = array(
-    'source' => 'Created',
-    'context' => '',
-    'location' => '',
-    'translation' => '作成',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['620ee2c08fdbb0df9bd43b102b25b102'] = array(
-    'source' => 'Node',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノード',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2081,27 +5010,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['78a11e0e0575e0a4834499433057f285'] = array(
-    'source' => 'Question',
-    'context' => '',
-    'location' => '',
-    'translation' => '質問',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4ea7c529d6a775b49412f095c1c15161'] = array(
     'source' => 'Add child page',
     'context' => '',
     'location' => '',
     'translation' => '下位ページの追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['baf47eaf778bf1183262210380394470'] = array(
-    'source' => 'Printer-friendly version',
-    'context' => '',
-    'location' => '',
-    'translation' => '印刷用ページ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2137,22 +5050,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['25d2e95908a5a429bc6e74c122ca6985'] = array(
-    'source' => 'All',
-    'context' => '',
-    'location' => '',
-    'translation' => 'すべて',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['19bcfae5522c36e92b8cff9e997a4a41'] = array(
-    'source' => 'Active',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アクティブ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['7ad00256c39846fd804266dcb6678e2b'] = array(
     'source' => 'Done',
     'context' => '',
@@ -2177,30 +5074,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['4d555fc63f7ae8af09b7c094a0883866'] = array(
-    'source' => 'Year',
-    'context' => '',
-    'location' => '',
-    'translation' => '年',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2f0a1020f5d582dc33061bc4e4d6c54b'] = array(
-    'source' => 'Date format',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付の書式',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6855613bcfeded52de3e0b0369b52e7c'] = array(
-    'source' => 'Add content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツの追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['3a7132eb42ff6c7aacba485add6b127c'] = array(
     'source' => 'Page title',
     'context' => '',
@@ -2209,43 +5082,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['ed1e8ac96ad97a47f679c5d045292b4d'] = array(
-    'source' => 'Block',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブロック',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8f81862b85ddebd1c8c35ed447149a99'] = array(
     'source' => 'Add block',
     'context' => '',
     'location' => '',
     'translation' => 'ブロックを追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b80945efd900d5c308ddef828fb44eaf'] = array(
-    'source' => 'Page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5098d81564deaedbd17d1bdc7a6fada4'] = array(
-    'source' => 'Bottom',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ボトム',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['dc58b0df9b07d293b8879a60619982ec'] = array(
-    'source' => 'RSS',
-    'context' => '',
-    'location' => '',
-    'translation' => 'RSS',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2289,35 +5130,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['5bb040257a5f6570a6d5ec427734b5c0'] = array(
-    'source' => 'Taxonomy terms',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーターム',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['d79ef8677f7b587854150e33371b482b'] = array(
     'source' => 'Logo',
     'context' => '',
     'location' => '',
     'translation' => 'ロゴ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6fcae6afedf0c075174440af7e045ef7'] = array(
-    'source' => 'Site name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイト名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['fbfb77639c4301638b2455b062fbfa9a'] = array(
-    'source' => 'Site slogan',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトスローガン',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2366,14 +5183,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'URL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['787b9696df852c2a9b64726a9758d4fa'] = array(
-    'source' => 'PHP',
-    'context' => '',
-    'location' => '',
-    'translation' => 'PHP',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2457,14 +5266,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['141580f5b25253283cfc767029dfbae7'] = array(
-    'source' => 'Header',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ヘッダー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6fb72a520392661d9aa4d5f1f2e0da1c'] = array(
     'source' => 'Left sidebar',
     'context' => '',
@@ -2478,14 +5279,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '右サイドバー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['07851be33688902ae9fd66e2067ad829'] = array(
-    'source' => 'Footer',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フッター',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2593,30 +5386,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e6adba1fc37c4c00ecc9d668c4577f52'] = array(
-    'source' => 'Menu link',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メニューリンク',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b72256d164635873b53653a3bc7e94aa'] = array(
-    'source' => 'To',
-    'context' => '',
-    'location' => '',
-    'translation' => '宛先',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5d71a263727cc07c6560cdb8459d3033'] = array(
-    'source' => 'Feed description',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィードの説明',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6c867e0fb2b1609b2f3b43a5c50b0b58'] = array(
     'source' => 'Custom',
     'context' => '',
@@ -2633,75 +5402,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['27e92da9a9af2dcd5a896df80417af66'] = array(
-    'source' => 'Roles',
-    'context' => '',
-    'location' => '',
-    'translation' => '役割',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['23220ae7103e4e37029d711375a576c0'] = array(
-    'source' => 'Revision ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リビジョンID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6b2883367a7785328aa1850d2d9506bc'] = array(
-    'source' => 'Comment',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e12f0387627ec82d87c39d0eb0c62fc0'] = array(
-    'source' => 'Comment ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ff197caeca2729bdae8ce1e517531b0b'] = array(
-    'source' => 'Hostname',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ホスト名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['af1ea77dfef90a85968be051767b139c'] = array(
-    'source' => 'Published',
-    'context' => '',
-    'location' => '',
-    'translation' => '掲載',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1dff41724adaba4c8c33c70caf1b3e13'] = array(
-    'source' => 'Signature',
-    'context' => '',
-    'location' => '',
-    'translation' => '署名',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a11194280ee3931e5dc4293e7618da70'] = array(
     'source' => 'Filter',
     'context' => '',
     'location' => '',
     'translation' => 'フィルター',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['62b27e166c6c1ed6f728d5ba3cbd9db4'] = array(
-    'source' => 'Location',
-    'context' => '',
-    'location' => '',
-    'translation' => '場所',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2721,14 +5426,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['68c4f85b80a504783656884a3ed41f00'] = array(
-    'source' => 'Promoted to front page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フロントページへ掲載',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['658ef3e9c6b98c1b3c291f42fc3b31c8'] = array(
     'source' => 'Sticky at top of lists',
     'context' => '',
@@ -2742,14 +5439,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'リビジョン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['52b5fd1e247a97de9cb72852f7f9453f'] = array(
-    'source' => 'URL alias',
-    'context' => '',
-    'location' => '',
-    'translation' => 'URLエイリアス',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2793,59 +5482,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['09dce2aaffaea766776beec7d5f8b253'] = array(
-    'source' => 'File ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['64c280522c4570da90b1fc2d14374f1a'] = array(
-    'source' => 'File name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイル名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9c90c315d7eb6dfcf32e5122fef658ad'] = array(
-    'source' => 'File size',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルサイズ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e380ffc8b52116a10a66fe694aa78f6b'] = array(
-    'source' => 'Vocabulary',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ボキャブラリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7554ff3460fcb4d774cf2c1c989c04b0'] = array(
-    'source' => 'Vocabulary ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ボキャブラリーID',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['bbb41039c1b6554a9eb00f273cbdee49'] = array(
     'source' => 'Vocabulary name',
     'context' => '',
     'location' => '',
     'translation' => 'ボキャブラリーの名称',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d01255aa2a8e3f126b628e0769811ee7'] = array(
-    'source' => 'Term ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タームID',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2857,51 +5498,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['91b3ccb26c781a75ed4864f37fd64a23'] = array(
-    'source' => 'E-mail address',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メールアドレス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ae93cb62e2d857ebbbe69b6911297bd0'] = array(
-    'source' => 'Last access',
-    'context' => '',
-    'location' => '',
-    'translation' => '前回のアクセス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['bcd563dc353d85018c5b591a5c1b1710'] = array(
-    'source' => 'Last login',
-    'context' => '',
-    'location' => '',
-    'translation' => '最終ログイン',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['861673a3c138882ef21135ab75fc33b4'] = array(
     'source' => 'Time zone',
     'context' => '',
     'location' => '',
     'translation' => 'タイムゾーン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['db244aa5ba173f96ace912ef1bebac26'] = array(
-    'source' => 'Severity',
-    'context' => '',
-    'location' => '',
-    'translation' => '重大度',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['609709886790564e0b5d55185bb442ad'] = array(
-    'source' => 'Field name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィールド名',
     'plid' => 0,
     'plural' => 0,
   );
@@ -2926,30 +5527,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'ウィジェットタイプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['77a02ac6372ef137a84cddbf5c541e6e'] = array(
-    'source' => 'Vote',
-    'context' => '',
-    'location' => '',
-    'translation' => '投票',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9f1516162b642143e60f0fbf0ee71d4e'] = array(
-    'source' => 'Count',
-    'context' => '',
-    'location' => '',
-    'translation' => '回数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['aa0b377712fdfc8ba93492d22507bd2c'] = array(
-    'source' => 'Overridden',
-    'context' => '',
-    'location' => '',
-    'translation' => 'オーバーライド',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3193,14 +5770,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['6ecbc29ba7ea4401c16c46b126c05b69'] = array(
-    'source' => 'Nodes',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノード',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['7d69ae4a9d1a645f1b7ee47974a0be50'] = array(
     'source' => 'Authored by',
     'context' => '',
@@ -3289,14 +5858,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['0ead438cc1a20710e36b90649c6cdd13'] = array(
-    'source' => 'Maximum',
-    'context' => '',
-    'location' => '',
-    'translation' => '最大',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['0450d9b84066cc34800f927320eac47d'] = array(
     'source' => 'Line',
     'context' => '',
@@ -3313,43 +5874,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f75e9c15fe6a95578899ec2f7c11afa8'] = array(
-    'source' => 'Medium',
-    'context' => '',
-    'location' => '',
-    'translation' => '中程度',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['06b69f14b9f9587049f313a5a3afcd03'] = array(
-    'source' => 'Media',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メディア',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f0d58f85e84a3d330e02a68814b84dcd'] = array(
-    'source' => 'Plain text',
-    'context' => '',
-    'location' => '',
-    'translation' => 'プレーンテキスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['d494150cf6670ca1fe30c5a8522449d5'] = array(
     'source' => 'Caching',
     'context' => '',
     'location' => '',
     'translation' => 'キャッシュ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['af63e19d403efa83ebd151f796edcfee'] = array(
-    'source' => 'Month',
-    'context' => '',
-    'location' => '',
-    'translation' => '月',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3382,14 +5911,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '前へ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['027da27a23740f7cfcc7b9152609ffc4'] = array(
-    'source' => 'System',
-    'context' => '',
-    'location' => '',
-    'translation' => 'システム',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3441,14 +5962,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['5916a5296b6da225fcb485e5f8b2cde4'] = array(
-    'source' => 'Owner',
-    'context' => '',
-    'location' => '',
-    'translation' => '所有者',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4112821595ae27aeaea6e9c14d5f3e65'] = array(
     'source' => 'Recipient',
     'context' => '',
@@ -3481,27 +5994,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['27da1ff38b6fed0a1e7cc06996784fc3'] = array(
-    'source' => 'node',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノード',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c7e7550af9267e521b8dbd3dc65e6dde'] = array(
     'source' => 'Administer content',
     'context' => '',
     'location' => '',
     'translation' => 'コンテンツの管理',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8d8fac4275d268176c82855790166d55'] = array(
-    'source' => 'General',
-    'context' => '',
-    'location' => '',
-    'translation' => '全般',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3654,22 +6151,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'トルコ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3f87c254833ed57dd67f29663c5f670e'] = array(
-    'source' => 'Day',
-    'context' => '',
-    'location' => '',
-    'translation' => '日',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['939d536998df2bcdf075fb054236566a'] = array(
-    'source' => 'Table',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テーブル',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3881,22 +6362,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e842c75015a25fdb6d821ef73bed9779'] = array(
-    'source' => 'Navigation',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ナビゲーション',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['044dfaa8de446dcc48937bec7ef334aa'] = array(
-    'source' => 'Basic',
-    'context' => '',
-    'location' => '',
-    'translation' => '基本',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4b24bf19bcf30369015ba2bc1e882765'] = array(
     'source' => 'Color',
     'context' => '',
@@ -3910,14 +6375,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'テーマ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1f674d9aaa4452df644b5e1944cbdf50'] = array(
-    'source' => 'Role',
-    'context' => '',
-    'location' => '',
-    'translation' => '役割',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3942,14 +6399,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'フィード %title のURLを %url に更新しました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d2c4d84374d86334140e1fc4cf5639ba'] = array(
-    'source' => 'Blog',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブログ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -4009,14 +6458,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['9e7e667787c47b7baf02e0be5d72a42b'] = array(
-    'source' => 'Users',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['d387a69c34e4e0b985577a97bab28c11'] = array(
     'source' => 'Not installed',
     'context' => '',
@@ -4030,14 +6471,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '選択肢',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['545a76aacd94a87471d127fdc8303664'] = array(
-    'source' => 'Minimum cache lifetime',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キャッシュの存続期間',
     'plid' => 0,
     'plural' => 0,
   );
@@ -4064,22 +6497,6 @@ function linux_multilingual_translations_defaults() {
     'translation' => '得票数：@count',
     'plid' => '3d2884e69910dd566e626c8d9ba5f91f',
     'plural' => 1,
-  );
-  $translations['ja:default']['e2d77b0cf70e2d94309827270511e78e'] = array(
-    'source' => '@site is currently under maintenance. We should be back shortly. Thank you for your patience.',
-    'context' => '',
-    'location' => '',
-    'translation' => '@site は現在メンテナンス中です。まもなく再開しますので、しばらくお待ちください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['30f84a3e663a895e12995b994a4c8347'] = array(
-    'source' => 'Default front page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトのフロントページ',
-    'plid' => 0,
-    'plural' => 0,
   );
   $translations['ja:default']['1669df802fcb0fe90523a4754a4761a9'] = array(
     'source' => 'Top pages',
@@ -4129,14 +6546,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['41bd001c8e06fbf45f7d6bc7a74c216c'] = array(
-    'source' => 'Anonymous',
-    'context' => '',
-    'location' => '',
-    'translation' => '匿名ユーザー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['087f2d697e1d12d99c783b4642e600f8'] = array(
     'source' => 'Uninstall',
     'context' => '',
@@ -4161,14 +6570,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['9142b9f13cfb944c442ca15e60fb1e6c'] = array(
-    'source' => 'Order',
-    'context' => '',
-    'location' => '',
-    'translation' => 'オーダー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['bd9a4b07273a350f110fc48f08c117de'] = array(
     'source' => 'Recent comments',
     'context' => '',
@@ -4190,22 +6591,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'デフォルトに設定',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f1a493e0c40e7fe3e8fbffa6834cca76'] = array(
-    'source' => 'Integer',
-    'context' => '',
-    'location' => '',
-    'translation' => '整数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1078f32991e44b288adf63400cc8edfd'] = array(
-    'source' => 'IP Address',
-    'context' => '',
-    'location' => '',
-    'translation' => 'IPアドレス',
     'plid' => 0,
     'plural' => 0,
   );
@@ -4257,22 +6642,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['b01ada33056e6acd7860906656cf109e'] = array(
-    'source' => 'Votes',
-    'context' => '',
-    'location' => '',
-    'translation' => '投票',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b9383a59a87800893545d63b66729935'] = array(
-    'source' => 'Term description',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タームの説明',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['901b50796f78809b3b30c4a445cdeaea'] = array(
     'source' => 'Save settings',
     'context' => '',
@@ -4281,27 +6650,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['4760f2674363fbe9e1c505813c679166'] = array(
-    'source' => 'Operation',
-    'context' => '',
-    'location' => '',
-    'translation' => '操作',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['b6ec41b617fe73c64a3d66e7794d219b'] = array(
     'source' => 'reply',
     'context' => '',
     'location' => '',
     'translation' => '返信',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['10f3a3034f67ecc0266ea2fd7f94443b'] = array(
-    'source' => 'Function',
-    'context' => '',
-    'location' => '',
-    'translation' => '機能',
     'plid' => 0,
     'plural' => 0,
   );
@@ -6017,14 +8370,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['836e7b55f41f98823b4ba7ff7789e49d'] = array(
-    'source' => 'Hidden',
-    'context' => '',
-    'location' => '',
-    'translation' => '非表示',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6b8500d0d758cddde4cd24b6fa418e85'] = array(
     'source' => 'Enable or disable page caching for anonymous users and set CSS and JS bandwidth optimization options.',
     'context' => '',
@@ -6038,14 +8383,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'Syslog',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['984d45f54dead08d64f5fc17e45582e9'] = array(
-    'source' => 'Key',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -6313,22 +8650,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2b0b064baae7faa0b734552a971e7798'] = array(
-    'source' => 'Titles only',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイトルのみ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2156bfdccec70335ffb0566e39f5d8b8'] = array(
-    'source' => 'Full text',
-    'context' => '',
-    'location' => '',
-    'translation' => 'すべてのテキスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4f669aaaf6a55d49de8565f84c6977e8'] = array(
     'source' => 'This cannot be undone.',
     'context' => '',
@@ -6409,14 +8730,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['312812a94480aae57e6ae2c43d8e9bfe'] = array(
-    'source' => 'Member for',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザー登録から',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['08f016fc501936a7b6843afd5b26370a'] = array(
     'source' => '@time ago',
     'context' => '',
@@ -6454,14 +8767,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'このテーブルのすべての列を非選択にする',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3fe0fdf505bf558a449c08f1dcd45e3c'] = array(
-    'source' => 'Search results',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索結果',
     'plid' => 0,
     'plural' => 0,
   );
@@ -6617,14 +8922,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2b871e98b222954d66f9fd57fe0ca213'] = array(
-    'source' => 'Jan',
-    'context' => '',
-    'location' => '',
-    'translation' => '1月',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['049c3d4fafcd4791ee4adb4d0de2084c'] = array(
     'source' => 'Feb',
     'context' => '',
@@ -6705,38 +9002,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['14f4f8dcf4916f2c6d1fa0f9cf85b341'] = array(
-    'source' => 'Select list',
-    'context' => '',
-    'location' => '',
-    'translation' => '選択リスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['91895364e234a0fbad8871aa531b3b2b'] = array(
-    'source' => 'Text field',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テキストフィールド',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['70ed3317ec7bcd905d72836de506a87c'] = array(
-    'source' => 'Long',
-    'context' => '',
-    'location' => '',
-    'translation' => '長い',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['44375f1ad4365b5b1f052c4a4d47f7a9'] = array(
-    'source' => 'Short',
-    'context' => '',
-    'location' => '',
-    'translation' => '短い',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9bddd91c5eceb8034943140d92b17f75'] = array(
     'source' => 'Posts',
     'context' => '',
@@ -6782,14 +9047,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '空',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7550f008ab2b65cc015a02d70188b067'] = array(
-    'source' => 'Existing system path',
-    'context' => '',
-    'location' => '',
-    'translation' => '既存のシステムパス',
     'plid' => 0,
     'plural' => 0,
   );
@@ -6953,35 +9210,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f89a34509705bc38c198e342340633a3'] = array(
-    'source' => 'First day of week',
-    'context' => '',
-    'location' => '',
-    'translation' => '週の最初の曜日',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['e555fb309d165553c8c70147abeb3461'] = array(
     'source' => 'Autocomplete taxonomy',
     'context' => '',
     'location' => '',
     'translation' => 'タクソノミーの自動補完',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e90184552664547d1fbf4f2ed61d7c99'] = array(
-    'source' => 'Left',
-    'context' => '',
-    'location' => '',
-    'translation' => '左',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['660d1091222cf0130f3594845c0f9afe'] = array(
-    'source' => 'Right',
-    'context' => '',
-    'location' => '',
-    'translation' => '右',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7113,22 +9346,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['9a8e72a8872372e6434d65c96c0a1b6b'] = array(
-    'source' => 'Site information',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイト情報',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e1758cd457e149cf20556907d4675d56'] = array(
-    'source' => 'Blocked',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブロック',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['edbf753f33f78aaf190f70e00626041e'] = array(
     'source' => 'Enabled filters',
     'context' => '',
@@ -7233,35 +9450,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['9abaae8e6adec4e949062c6c0fbf5270'] = array(
-    'source' => 'Parent term',
-    'context' => '',
-    'location' => '',
-    'translation' => '上位の分類用語',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['815302576c78e35ef2682ad79a9567fd'] = array(
-    'source' => 'Parent terms',
-    'context' => '',
-    'location' => '',
-    'translation' => '上位のターム',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['2a912d1e5a87ad1d117aced87c17900e'] = array(
     'source' => 'Syndicate',
     'context' => '',
     'location' => '',
     'translation' => '配信',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5534ea5cd8ebaae755e58b74546b7519'] = array(
-    'source' => 'Blogs',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブログ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7286,14 +9479,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '%site からのフィードは、%line行目のエラー "%error" のために破損しているようです。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['aec9181405bc071332e873d791338da4'] = array(
-    'source' => 'Forums',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フォーラム',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7441,27 +9626,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['9a5c2f2d2da20f5a6bc1a3739855da85'] = array(
-    'source' => 'Date created',
-    'context' => '',
-    'location' => '',
-    'translation' => '作成日時',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['14aa59c79362fc31edda54170f23e524'] = array(
     'source' => 'Testing',
     'context' => '',
     'location' => '',
     'translation' => 'テスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ee9cb1d991b307a5052b9dce519f0237'] = array(
-    'source' => 'Standard',
-    'context' => '',
-    'location' => '',
-    'translation' => '標準',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7593,14 +9762,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['59d16f561ead061e48a1000af68dfca5'] = array(
-    'source' => 'Not published',
-    'context' => '',
-    'location' => '; modules/node/content_types.js',
-    'translation' => '非掲載',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c7cc52ba12de14ff023a3aa8c9f1365b'] = array(
     'source' => 'Menu settings',
     'context' => '',
@@ -7614,14 +9775,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '配色',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['09d6774d2c9444c9ae886e0110c419fb'] = array(
-    'source' => 'Unformatted',
-    'context' => '',
-    'location' => '',
-    'translation' => '未フォーマット',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7646,14 +9799,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '許可されている拡張子',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3729d25204952412fd71ef1282831d1a'] = array(
-    'source' => 'New comments',
-    'context' => '',
-    'location' => '',
-    'translation' => '新しいコメント',
     'plid' => 0,
     'plural' => 0,
   );
@@ -7881,22 +10026,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['7987eece048e7049c59d03fb6c1b7f67'] = array(
-    'source' => 'You are here',
-    'context' => '',
-    'location' => '',
-    'translation' => '現在地',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['77222cb1a2abd7476913470cecea213c'] = array(
-    'source' => 'Default options',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトオプション',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['90decf543c4b3efb5c54223cd81533a1'] = array(
     'source' => 'Contact settings',
     'context' => '',
@@ -7942,14 +10071,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'テンポラリーディレクトリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d9bee0718519a8aa8f6daf7b339c2c98'] = array(
-    'source' => 'date',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8017,22 +10138,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c6d6d16b351ed40e529d16ae9beddb90'] = array(
-    'source' => 'Slogan',
-    'context' => '',
-    'location' => '',
-    'translation' => 'スローガン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3d1c4b709428bfe15b9435e736cf9839'] = array(
-    'source' => 'The name used to indicate anonymous users.',
-    'context' => '',
-    'location' => '',
-    'translation' => '匿名ユーザーを示す名称を入力してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['1cb560dc59ec4d17b8c4e3e5afbf0111'] = array(
     'source' => 'Alternate text',
     'context' => '',
@@ -8078,14 +10183,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '@numberページへ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3f61a905e7726d0c369da68659571304'] = array(
-    'source' => 'Enter the terms you wish to search for.',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索したいキーワードを入力してください',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8233,14 +10330,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['65b199c36c55184c70d271aac63fa3ef'] = array(
-    'source' => 'Blocks',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブロック',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['67c7a3b8817e6d35c87b511fc37b11eb'] = array(
     'source' => 'Configure what block content appears in your site\'s sidebars and other regions.',
     'context' => '',
@@ -8353,14 +10442,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2ba0df3c19a798615ddb7b2bc41f4bf0'] = array(
-    'source' => 'Menus',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メニュー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9813cf38db5d5e88b15e8ca785e92f43'] = array(
     'source' => 'Any customizations will be lost. This action cannot be undone.',
     'context' => '',
@@ -8449,14 +10530,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fbf2f0da2bfcacad63b9c63a17125208'] = array(
-    'source' => 'Default time zone',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトのタイムゾーン',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['ba1f1b9691124e2d0dfd81b11a4f37c5'] = array(
     'source' => 'Add another item',
     'context' => '',
@@ -8478,14 +10551,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'フィールドの追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['32da57dddbd83c23852fb7e5ae623993'] = array(
-    'source' => 'Trimmed',
-    'context' => '',
-    'location' => '',
-    'translation' => '切り詰め',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8545,30 +10610,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => '81c693dba51641a51bc42a289d21db21',
     'plural' => 1,
   );
-  $translations['ja:default']['45c0ca09de4bd4ecaec4b2204578c44a'] = array(
-    'source' => 'Decimal',
-    'context' => '',
-    'location' => '',
-    'translation' => '固定小数点数値',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7f168c9ecb6b6d5113ce6b5f8737faf8'] = array(
-    'source' => 'Float',
-    'context' => '',
-    'location' => '',
-    'translation' => '浮動小数点数値',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d49e32b3281e2d94e781fe777f180708'] = array(
-    'source' => 'Minimum',
-    'context' => '',
-    'location' => '',
-    'translation' => '最小',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4d5912bb1132196e58151afd5ba972b2'] = array(
     'source' => 'Precision',
     'context' => '',
@@ -8625,22 +10666,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fdfee5e580e51a71cadf411fddc69e38'] = array(
-    'source' => 'Check boxes/radio buttons',
-    'context' => '',
-    'location' => '',
-    'translation' => 'チェックボックス/ラジオボタン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ca64d1f404103e0c8b96b73ffcce5a75'] = array(
-    'source' => 'Single on/off checkbox',
-    'context' => '',
-    'location' => '',
-    'translation' => '一つの on/off チェックボックス',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a0bbf5a1799932945ac03c3b591d4096'] = array(
     'source' => 'Defines selection, check box and radio button widgets for text and numeric fields.',
     'context' => '',
@@ -8649,27 +10674,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['136008d1ed7e92504cff451b81aabea4'] = array(
-    'source' => 'Text area (multiple rows)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テキストエリア(複数行)',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['d91cb04f18c8fb467abf3934447f69f2'] = array(
     'source' => 'Defines simple text field types.',
     'context' => '',
     'location' => '',
     'translation' => 'シンプルテキストフィールド型を定義。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6df155022137b522a1a38be6ffcb9881'] = array(
-    'source' => 'Index',
-    'context' => '',
-    'location' => '',
-    'translation' => 'インデックス',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8710,14 +10719,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '例外',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b9b5750a8b29d22604a5d12c0f107b83'] = array(
-    'source' => 'Permission',
-    'context' => '',
-    'location' => '',
-    'translation' => '権限',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8814,22 +10815,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'コメントに表示したい署名を記入してください。 この署名はコメント投稿の際にフォームに自動挿入されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['46d105ac1913ca099db9c18c2cf78b26'] = array(
-    'source' => 'Date - newest first',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付の新しい順',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6a6eafeaf56fc8d03acd9774ce32387a'] = array(
-    'source' => 'Date - oldest first',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付の古い順',
     'plid' => 0,
     'plural' => 0,
   );
@@ -8953,14 +10938,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c819b2f851ea9ed9e2a34cf853633355'] = array(
-    'source' => 'Menu name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メニューの名前',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['0d45b53ceb4019d328674321e4b8ae08'] = array(
     'source' => 'Are you sure you want to delete the custom menu %title?',
     'context' => '',
@@ -9001,14 +10978,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['dfb6b8637998688c9a7d4d09d62731fa'] = array(
-    'source' => 'Profiles',
-    'context' => '',
-    'location' => '',
-    'translation' => 'プロフィール',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['7f4992573d11c997accef9160d05a1f2'] = array(
     'source' => 'Edit container',
     'context' => '',
@@ -9022,38 +10991,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '前回の訪問',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a24cafca2ab57d932a474a0d8c711339'] = array(
-    'source' => 'Hot topic threshold',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ホットトピックのしきい値',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7fd5856ff63387bc8dfea60d35c194e7'] = array(
-    'source' => 'Topics per page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ページ単位のトピック数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4ec97b6782030fde73a5d9671e91b5b8'] = array(
-    'source' => 'Posts - most active first',
-    'context' => '',
-    'location' => '',
-    'translation' => '投稿が活発な順',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['653b3e1dfc09e7d94b147717c9de7286'] = array(
-    'source' => 'Posts - least active first',
-    'context' => '',
-    'location' => '',
-    'translation' => '投稿が不活発な順',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9134,14 +11071,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'ページが見つかりません',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c6440974c7d0279b537211b8a43d707e'] = array(
-    'source' => 'Language neutral',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ニュートラル言語',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9270,14 +11199,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '%identity が正常に追加されました',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2198308b6548ffb6d11ae96b58a40371'] = array(
-    'source' => 'OpenID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'OpenID',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9553,14 +11474,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['884871369254e79505fedb2238b84fe7'] = array(
-    'source' => 'Aggregator',
-    'context' => '',
-    'location' => '',
-    'translation' => 'Aggregator',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6ceddb1684bbf8db2b8175936c277c13'] = array(
     'source' => 'The feed from %site seems to be broken, because of error "%error".',
     'context' => '',
@@ -9590,14 +11503,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '%site からのフィードは、"%error" が原因で破損しているようです。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0329de65d232b7f89b305578becb3b9c'] = array(
-    'source' => 'Feed aggregator',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィードアグリゲーター',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9670,14 +11575,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'トピック数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['aca7c9e162edf3c60bc647577a8b08ca'] = array(
-    'source' => 'Active forum topics',
-    'context' => '',
-    'location' => '',
-    'translation' => '活発なフォーラムトピック',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9761,27 +11658,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f255c3af80328a5d34de3aed447d8a12'] = array(
-    'source' => 'Context',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテキスト',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c35f26ee721ecb5b83ee33aa8203a24e'] = array(
     'source' => 'Book navigation',
     'context' => '',
     'location' => '',
     'translation' => 'ブックナビゲーション',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['cd7e59798a2e1e91696ff1851a1628ed'] = array(
-    'source' => 'Taxonomy vocabulary',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーボキャブラリー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -9792,14 +11673,6 @@ function linux_multilingual_translations_defaults() {
     'translation' => '1年',
     'plid' => 0,
     'plural' => 0,
-  );
-  $translations['ja:default']['9820f8a59915106d4edd6db5f1658488'] = array(
-    'source' => '@count years',
-    'context' => '',
-    'location' => '',
-    'translation' => '@count年',
-    'plid' => 'c2f9d1620694d9d4b4dd6eb6c4413005',
-    'plural' => 1,
   );
   $translations['ja:default']['70e0ccbc8524451056a95bce2d7a4cfd'] = array(
     'source' => '1 week',
@@ -9840,14 +11713,6 @@ function linux_multilingual_translations_defaults() {
     'translation' => '1秒',
     'plid' => 0,
     'plural' => 0,
-  );
-  $translations['ja:default']['d36e2377d0f924cbdb73d8ee26eb131a'] = array(
-    'source' => '@count sec',
-    'context' => '',
-    'location' => '',
-    'translation' => '@count秒',
-    'plid' => '54a41e4bd39a7238afee96c60d6e0509',
-    'plural' => 1,
   );
   $translations['ja:default']['07f67e0308634686b17800d50e030e2a'] = array(
     'source' => '-n/a-',
@@ -10057,14 +11922,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['84dae42202d9b18dc506477dd856526b'] = array(
-    'source' => 'Machine name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'システム内部名称',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['eb1ef7f31ecdd0d72629bfb25619c26e'] = array(
     'source' => 'Allow Upscaling',
     'context' => '',
@@ -10105,14 +11962,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['5dade64de3a57512130d7f392c191fa8'] = array(
-    'source' => 'Print',
-    'context' => '',
-    'location' => '',
-    'translation' => '印刷',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['fab99416942193df20a33c3ef1287644'] = array(
     'source' => 'The file could not be created.',
     'context' => '',
@@ -10142,14 +11991,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'メールアドレス %mail が有効ではありません。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['77113c812897fa8f93a7a12b861db01d'] = array(
-    'source' => 'Account',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウント',
     'plid' => 0,
     'plural' => 0,
   );
@@ -10489,27 +12330,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['4af89cf7f6e058c95783e6cb632b636b'] = array(
-    'source' => 'Node count',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノード数',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['629462c0fa57223e1238622e4fea13ae'] = array(
     'source' => 'Field settings',
     'context' => '',
     'location' => '',
     'translation' => 'フィールドの設定',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4f457ab875450626b78cb52ab2e6871e'] = array(
-    'source' => 'Skip to main content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メインコンテンツに移動',
     'plid' => 0,
     'plural' => 0,
   );
@@ -10526,14 +12351,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'フォーラムの編集',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['eaf1be94f9624f1b515e8e7035c5cc8f'] = array(
-    'source' => 'Default order',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトの並び順',
     'plid' => 0,
     'plural' => 0,
   );
@@ -10729,14 +12546,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['ae38949676de87d2bad6e666a7243eae'] = array(
-    'source' => 'Content ID',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツID',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9a641e26bae7c307869103a76824405a'] = array(
     'source' => 'About',
     'context' => '',
@@ -10774,22 +12583,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'レポート',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7fcd343bf13fa31f1e73ee9de0704e7d'] = array(
-    'source' => 'Default picture',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトのユーザーアバター',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['71b32d51ff76689f601cb3267a5b8a6d'] = array(
-    'source' => 'URL of picture to display for users with no custom picture selected. Leave blank for none.',
-    'context' => '',
-    'location' => '',
-    'translation' => '独自のユーザーアバターを選択していないユーザーに表示される、デフォルトのユーザーアバター画像のパスを入力してください。（ 例： misc/druplicon-small.png ）<br />指定しない場合は空欄にしてください。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -10841,22 +12634,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['7f8355158ac7d04bcbeaebe53001ca87'] = array(
-    'source' => 'File directory',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルディレクトリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['40d027bdb9f7bb0cba7ae8fab49a90eb'] = array(
-    'source' => 'Default theme',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトテーマ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['da5349a235b0ce3ca96a3b00bd72a5d6'] = array(
     'source' => 'Web server',
     'context' => '',
@@ -10902,14 +12679,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'ユーザー名またはパスワードが承認されませんでした。<br /><a href="@password">パスワードをお忘れですか？ 再発行を希望する場合はここをクリックしてください。</a>',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['842249b2655448ffcff457e1d67865b3'] = array(
-    'source' => 'Publish content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツを掲載',
     'plid' => 0,
     'plural' => 0,
   );
@@ -11641,14 +13410,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c3a9e958b07ffba8321390a20cc3d306'] = array(
-    'source' => 'Error message',
-    'context' => '',
-    'location' => '',
-    'translation' => 'エラーメッセージ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['ea2f0b69d271c68fe03324dbe6294fec'] = array(
     'source' => 'Original text',
     'context' => '',
@@ -11745,14 +13506,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2d45e9715ea2102b380688ef3e54c3c1'] = array(
-    'source' => 'User account',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアカウント',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['83fbca81cd399b5da7808eb912afcad8'] = array(
     'source' => 'File download',
     'context' => '',
@@ -11785,14 +13538,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['b0213c8af5a41369ab1a9f51bc578087'] = array(
-    'source' => 'Dates',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['83062abdec77d0b72e368befc57f772e'] = array(
     'source' => 'The field has been updated.',
     'context' => '',
@@ -11806,14 +13551,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'ピクセル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2c8d2f47b1752fec13b7ebffdc5bec88'] = array(
-    'source' => '1 month',
-    'context' => '',
-    'location' => '',
-    'translation' => '1ヶ月',
     'plid' => 0,
     'plural' => 0,
   );
@@ -11854,14 +13591,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '役割の編集',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4c86a60369b86ffaa00338b2cd0a1b95'] = array(
-    'source' => 'Custom format',
-    'context' => '',
-    'location' => '',
-    'translation' => 'カスタムフォーマット',
     'plid' => 0,
     'plural' => 0,
   );
@@ -12054,14 +13783,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'cronの実行',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['63befaa6d713035f163736d5b6ffe400'] = array(
-    'source' => 'Warning message',
-    'context' => '',
-    'location' => '',
-    'translation' => '警告メッセージ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -12369,14 +14090,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['722dfc5bb7005cb0336bd30e8c3ee831'] = array(
-    'source' => 'IP address',
-    'context' => '',
-    'location' => '',
-    'translation' => 'IPアドレス',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['af447465000e6e39da492f69f0a4dd90'] = array(
     'source' => 'Maximum height',
     'context' => '',
@@ -12401,14 +14114,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['768d9afb8043755bc198721bd02f4c39'] = array(
-    'source' => 'Primary tabs',
-    'context' => '',
-    'location' => '',
-    'translation' => 'プライマリータブ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a70f5ee73c167eb37dcd0cb594e88d0a'] = array(
     'source' => 'Secondary tabs',
     'context' => '',
@@ -12430,14 +14135,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'コンテンツを追加',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c61f10d39e087f00f3c17a8482788b3e'] = array(
-    'source' => 'Boolean',
-    'context' => '',
-    'location' => '',
-    'translation' => '真偽値',
     'plid' => 0,
     'plural' => 0,
   );
@@ -12558,14 +14255,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'カスタムアイコンへのパス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2b043ea0ee63bdfccada8ace1aadc50b'] = array(
-    'source' => 'Current user',
-    'context' => '',
-    'location' => '',
-    'translation' => '現在のユーザー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -12721,14 +14410,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['ef68ef5687593bfdf326bc5d2198afbb'] = array(
-    'source' => 'MIME type',
-    'context' => '',
-    'location' => '',
-    'translation' => 'MIME タイプ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a80dfac7a1d3e8a57c38c26127c4c642'] = array(
     'source' => 'File system',
     'context' => '',
@@ -12806,30 +14487,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'ダッシュボード',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e01e9adabbe4d16f9f083638d15cf0a8'] = array(
-    'source' => 'Search index',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索インデックス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b3cc9c2cf9c61cd9a85bdc50e8fff274'] = array(
-    'source' => 'The size of the file.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルのサイズ。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6ee4c2d263e33d76f44db8f9cfec9ac7'] = array(
-    'source' => 'The MIME type of the file.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルの MIME タイプ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -13030,14 +14687,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '1ページあたりのコメント数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['db0bddc343459595d843a085df6521d2'] = array(
-    'source' => 'Multilingual support',
-    'context' => '',
-    'location' => '',
-    'translation' => '多言語サポート',
     'plid' => 0,
     'plural' => 0,
   );
@@ -13745,46 +15394,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c8faeeca24410899f3bea65cbbc5cb7d'] = array(
-    'source' => 'The title of the comment.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントのタイトル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0bbfa838905fe5c880b5e825561f9aac'] = array(
-    'source' => 'Comment count',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5bfeb567704a0b26e406ea4ee3d2735f'] = array(
-    'source' => 'The title of the node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードのタイトル。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3045ef7ffde08bf4e57337250d2444d9'] = array(
-    'source' => 'The date the node was posted.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードが投稿された日付。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6a319fc41861910fdac7848129b02d26'] = array(
-    'source' => 'Poll',
-    'context' => '',
-    'location' => '',
-    'translation' => '投票',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6fb73368b6f0c775ead214f462de2eb3'] = array(
     'source' => 'Views today',
     'context' => '',
@@ -13870,14 +15479,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'フィールドの最大文字数。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4ed7579ce7906f745067e906909f3402'] = array(
-    'source' => 'Machine-readable name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'システム内部名称',
     'plid' => 0,
     'plural' => 0,
   );
@@ -14190,14 +15791,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'サイトのメールアドレス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['419074c1e1859d19d0b75185dde0b9ce'] = array(
-    'source' => 'The <em>From</em> address in automated e-mails sent during registration and new password requests, and other notifications. (Use an address ending in your site\'s domain to help prevent this e-mail being flagged as spam.)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このサイトの代表メールアドレスを入力してください。 これはユーザー登録やパスワードの再発行メール、各種の通知など、自動送信メールの「From:（差出人）」として使われます。 受信者にスパムメールと見なされる可能性を減らすために、できる限りウェブサイトと同じドメインで終わるアドレスを使用してください。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -17145,14 +18738,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['987e221e80ba972f83237c0a3970f831'] = array(
-    'source' => 'Compose tips',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツ作成のヒント',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['970e3607395c4450356f303f7508e0c5'] = array(
     'source' => 'Short but meaningful name for this collection of threaded discussions.',
     'context' => '',
@@ -17209,22 +18794,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['94ff340a58805f0a288d45151fa1ee96'] = array(
-    'source' => 'Default number of forum topics displayed per page.',
-    'context' => '',
-    'location' => '',
-    'translation' => '各ページに表示するデフォルトのフォーラムトピック数を指定してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4e175021cef4fd349da0879b5e489fe6'] = array(
-    'source' => 'Default display order for topics.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトのトピックの表示順を指定してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['cfc844e07fbb795e4f7663d4567c8274'] = array(
     'source' => 'Containers are usually placed at the top (root) level, but may also be placed inside another container or forum.',
     'context' => '',
@@ -17246,14 +18815,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'より詳しい情報は、オンラインハンドブックの<a href="@forum">Forum module（英文）</a>を参照してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1b912e5a76bdb1468fa3bf2008710013'] = array(
-    'source' => 'Forum topic',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フォーラムトピック',
     'plid' => 0,
     'plural' => 0,
   );
@@ -17305,14 +18866,6 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2953d24492a62391f0e744a9b0c78910'] = array(
-    'source' => 'This account\'s default language for e-mails, and preferred language for site presentation.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メール用のデフォルト言語と、サイト表示用の好みの言語を指定してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['82ea5465d6d1fcc8f21ce574d83c9b37'] = array(
     'source' => 'This account\'s default language for e-mails.',
     'context' => '',
@@ -17326,14 +18879,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'このエイリアスを適用する言語を指定してください。 特定の言語を指定した場合、その言語で表示する際には常にこのパスエイリアスが使用され、「すべての言語」用に設定されたパスエイリアスに優先します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8fa16d82f924b588fb82861cde938004'] = array(
-    'source' => 'Enable multilingual support for this content type. If enabled, a language selection field will be added to the editing form, allowing you to select from one of the <a href="!languages">enabled languages</a>. If disabled, new posts are saved with the default language. Existing content will not be affected by changing this option.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このコンテンツタイプの多言語サポートを、有効にするかどうかを指定してください。 有効にした場合、<a href="!languages">使用可能な言語</a>から1つを選ぶことのできる、言語選択フィールドが編集フォームに追加されます。 無効にした場合、新しい投稿はデフォルト言語で保存されます。 このオプションの変更によって、既存のコンテンツに影響を与えることはありません',
     'plid' => 0,
     'plural' => 0,
   );
@@ -18370,14 +19915,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['1e8fdc8c32d7c2d4a200f4a601653b84'] = array(
-    'source' => 'Search form',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索フォーム',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['9190e0a574e0d1ac542fc50c593e1b21'] = array(
     'source' => 'Top search phrases',
     'context' => '',
@@ -18818,22 +20355,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['1eea416d9a6fc131d912bf688f172ccb'] = array(
-    'source' => 'Default 403 (access denied) page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトの403（access denied）ページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['306b022df66c841118706d8c19197faa'] = array(
-    'source' => 'Default 404 (not found) page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトの404（not found）ページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8cc2dd8ddc2b67cd4ee4317006c99e02'] = array(
     'source' => 'Caches cleared.',
     'context' => '',
@@ -18847,46 +20368,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '画像処理ツールキットの選択',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9b182f193e4ac4617d1383c7233f6376'] = array(
-    'source' => 'Number of items in each feed',
-    'context' => '',
-    'location' => '',
-    'translation' => '各フィードのアイテム数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b5c0bb7c36c2df9f78509ba3055168ab'] = array(
-    'source' => 'Default number of items to include in each feed.',
-    'context' => '',
-    'location' => '',
-    'translation' => '各フィードに含める、デフォルトのアイテム数を指定してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['aacbb05c3d54095cd0fa2b340653c48e'] = array(
-    'source' => 'Feed content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィードの内容',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b783275764cb8057b95401a8c7448092'] = array(
-    'source' => 'Titles plus teaser',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイトルとティーザー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['334b560cc5b7660ce40213c0fe7b785c'] = array(
-    'source' => 'Global setting for the default display of content items in each feed.',
-    'context' => '',
-    'location' => '',
-    'translation' => '各フィードのアイテムにデフォルトで表示する内容を指定してください。 この設定はサイト全般で使用されます。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -19007,14 +20488,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'RSS配信',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c52d36234880976051763fa391d4b2bf'] = array(
-    'source' => 'Date and time',
-    'context' => '',
-    'location' => '',
-    'translation' => '日付と時刻',
     'plid' => 0,
     'plural' => 0,
   );
@@ -19490,39 +20963,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['30c7fa41b3827e6da619eb9ac7b32a98'] = array(
-    'source' => 'Notify user when account is activated.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウントが有効化された際にユーザーへ通知',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['80af83eef4ad3011142b02ce95089290'] = array(
-    'source' => 'Notify user when account is blocked.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウントがブロックされた際にユーザーへ通知',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6a0c3a9438b7f408a9eea8a9a7548f5e'] = array(
-    'source' => 'Picture guidelines',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアバターのガイドライン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['cf0be4cb23a5449a4bb0a852f33e0253'] = array(
-    'source' => 'This text is displayed at the picture upload form in addition to the default guidelines. It\'s useful for helping or instructing your users.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アバターに関してユーザーに提示したいテキストを記入してください。<br />
-このテキストはユーザーアバターのアップロードフォームに表示される、デフォルトのガイドラインに追加されます。 ユーザーが作業を円滑に進めるられるように、アップロードに関する説明などを掲示するのに役立ちます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['95572dc877eeb9cff6e8f489987ee14a'] = array(
     'source' => 'The name for this role. Example: "moderator", "editorial board", "site architect".',
     'context' => '',
@@ -19803,14 +21243,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['cc807a52d3098ad36bb22d14fcc6633d'] = array(
-    'source' => 'URL to file',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['245031af8561ba40534ea8ee0e99c1ea'] = array(
     'source' => 'An unrecoverable error occurred. The uploaded file likely exceeded the maximum file size (@size) that this server supports.',
     'context' => '',
@@ -19979,14 +21411,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f31d9814cf00a748c8a9dd1aa5f0eb49'] = array(
-    'source' => 'Text format',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テキストフォーマット',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a45a89b1ed7c17516f4a5b667302f091'] = array(
     'source' => 'No new posts',
     'context' => '',
@@ -20008,14 +21432,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '翻訳ファイル %filepath にはエラーが含まれています： %line 行目に予期しない"msgctxt"があります。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2914c8c58a631adbe44d1caa60d7a0e1'] = array(
-    'source' => 'The name of the site.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイト名',
     'plid' => 0,
     'plural' => 0,
   );
@@ -20088,14 +21504,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'ロケール毎の日付書式を変更します',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['dbb9cdf7c13ae07480aba50dafa65ab0'] = array(
-    'source' => 'Content type name',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツタイプ名',
     'plid' => 0,
     'plural' => 0,
   );
@@ -20891,222 +22299,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['70ad76ea6c25ab2a0428b8a81bb2ffae'] = array(
-    'source' => 'The unique ID of the comment.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントに付与される固有のID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['dee83bff14ea6c7b5d6b9675f45a419e'] = array(
-    'source' => 'The IP address of the computer the comment was posted from.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント投稿元のコンピューターのIPアドレス。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c62a02fba7fedc9c1c85c23aa30b7a55'] = array(
-    'source' => 'The name left by the comment author.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント投稿者が入力した名前',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6a1d98965b5a536c21a179c349e6d5ee'] = array(
-    'source' => 'The email address left by the comment author.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント投稿者が入力したメールアドレス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['00443137dac51443bbd4dcf74a0b6dd9'] = array(
-    'source' => 'The home page URL left by the comment author.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント投稿者が入力したホームページのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2e07ecc74df282d4d3495299cad94ccc'] = array(
-    'source' => 'The formatted content of the comment itself.',
-    'context' => '',
-    'location' => '',
-    'translation' => '書式設定されたコメントのコンテンツそのもの',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2b0b00106a9eb5a3a5c09df5a794b12d'] = array(
-    'source' => 'The URL of the comment.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e97cf225fe6a585c17e46141c34eef86'] = array(
-    'source' => 'Edit URL',
-    'context' => '',
-    'location' => '',
-    'translation' => 'URLの編集',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3d370e5d4a44dabff76c1210058f51bd'] = array(
-    'source' => 'The URL of the comment\'s edit page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント編集ページのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['324738609a9e514462ff8b2278b5f145'] = array(
-    'source' => 'The date the comment was posted.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントが投稿された日時。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['014c0571b454646955303c5a26a52222'] = array(
-    'source' => 'The comment\'s parent, if comment threading is active.',
-    'context' => '',
-    'location' => '',
-    'translation' => '上位コメント（スレッド形式が有効になっている場合のみ）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['56e0860625de5547c2b7d6d9bb904c37'] = array(
-    'source' => 'The node the comment was posted to.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントが投稿されたノード。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0d397168545be89db4a3080510f11317'] = array(
-    'source' => 'The author of the comment, if they were logged in.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメントの投稿者（ログインしていた場合のみ）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['be9648fbbf790094561273311e9f943a'] = array(
-    'source' => 'The number of comments posted on a node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードに投稿されたコメントの数。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['749a4e6817a43438ee0ec2522e9e06c7'] = array(
-    'source' => 'New comment count',
-    'context' => '',
-    'location' => '',
-    'translation' => '新しいコメントの数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9f72f6186b203215e4dba0d8786eeb23'] = array(
-    'source' => 'The number of comments posted on a node since the reader last viewed it.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーが最後にノードを訪れてから投稿されたコメントの数。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8ef848bfa547c66438487ec74cbbe3ff'] = array(
-    'source' => 'The unique ID of the node\'s latest revision.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このノードの最新リビジョンのユニークID。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['dfd1984163328dd6d7499e873651fa8f'] = array(
-    'source' => 'Translation set ID',
-    'context' => '',
-    'location' => '',
-    'translation' => '翻訳設定ID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b19c4f26e673801ea778c19dc270d516'] = array(
-    'source' => 'The unique ID of the original-language version of this node, if one exists.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このノードのオリジナル言語バージョンが存在する場合、そのユニークID。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e88acf5c793fbb20e5ed3b0a394b583d'] = array(
-    'source' => 'The type of the node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードのコンテンツタイプ。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['38d26ffaea5955611016d79787ca5ead'] = array(
-    'source' => 'The human-readable name of the node type.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードのコンテンツタイプの人間用の名称。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d955f3245f216d5a99ac05b96bea1bd1'] = array(
-    'source' => 'The language the node is written in.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノード内記事の言語。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ebba55dc75accde7a58f0064610e6d72'] = array(
-    'source' => 'The URL of the node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードのURL。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8add0716d60a92454ba08bee946f623b'] = array(
-    'source' => 'The URL of the node\'s edit page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードの編集ページのURL。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['20abf8558abadc78843a90de213e12d6'] = array(
-    'source' => 'Date changed',
-    'context' => '',
-    'location' => '',
-    'translation' => '更新日付',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['21b10e922ea53f0bf71a874bdf03d66a'] = array(
-    'source' => 'The date the node was most recently updated.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードの最終更新日付。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2ea11497b96399a86f382717af69b590'] = array(
-    'source' => 'The author of the node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードの作成者。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8be09955822427ec3ee0e2ffd7bf48be'] = array(
     'source' => 'Poll winner',
     'context' => '',
@@ -21187,238 +22379,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['7adc573f445da5ab73ed6010b9f2acaf'] = array(
-    'source' => 'The slogan of the site.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトのスローガン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6b6f166842a4e9ecb73bf51c740f213e'] = array(
-    'source' => 'The administrative email address for the site.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトの管理用メールアドレス。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a6c3d3c6f988662b5d95e4215f1a8ee9'] = array(
-    'source' => 'The URL of the site\'s front page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このサイトのトップページのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7069c8fe5aa3937ba504a1b87f22ffe1'] = array(
-    'source' => 'Login page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ログインページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['43c9e198ca6c0e586eeb4565506d6369'] = array(
-    'source' => 'The URL of the site\'s login page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトログインページURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c76396b0d0b5c0bf27cd8aa76dbaaf25'] = array(
-    'source' => 'The unique ID of the uploaded file.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アップロードされたファイルのユニークID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['abfd45c85efdfe14bb91aa953f3341b6'] = array(
-    'source' => 'The name of the file on disk.',
-    'context' => '',
-    'location' => '',
-    'translation' => '保存されたファイルの名前',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1dbcbcace455146879ebc3c6338c3259'] = array(
-    'source' => 'The web-accessible URL for the file.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'Web がアクセス可能なファイルのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['58a157ea0e2cf187be21445b4f2a600d'] = array(
-    'source' => 'The date the file was most recently changed.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルの最終更新日時',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['626cf9b48729e833f859c6f72ea127a8'] = array(
-    'source' => 'The user who originally uploaded the file.',
-    'context' => '',
-    'location' => '',
-    'translation' => '最初にファイルをアップロードしたユーザー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b7f7265e0a9aca86af11f9f1f618353a'] = array(
-    'source' => 'The unique ID of the taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームのユニークID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8b0a0f9d0d7fd1a755e56c5f702aa437'] = array(
-    'source' => 'The name of the taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームの名前',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['05fbd927a41e1dd216c742909e31d867'] = array(
-    'source' => 'The optional description of the taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームの説明（任意）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a958ebe204d7d90f192e84bfca6d597f'] = array(
-    'source' => 'The number of nodes tagged with the taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームでタグ付けされたノード数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1b1edbda154bd8476a4363ee357c505d'] = array(
-    'source' => 'The URL of the taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0d53b86e0e5d6c5b39fd0e7e993ef197'] = array(
-    'source' => 'The vocabulary the taxonomy term belongs to.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームが属するボキャブラリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6158758ae0bc632388fe25e29351a865'] = array(
-    'source' => 'The parent term of the taxonomy term, if one exists.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームの上位のターム（存在する場合）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5798e5a23955aefa5da29358c1912757'] = array(
-    'source' => 'The unique ID of the taxonomy vocabulary.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーのユニークID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5ab9aa336973d37b6a60c2c48adf685a'] = array(
-    'source' => 'The name of the taxonomy vocabulary.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーの名前',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f173078ddf0fbfcfb7783dde28f6831c'] = array(
-    'source' => 'The optional description of the taxonomy vocabulary.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーの説明（任意）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['75185db68a767ef7f97bd36d1031eb2e'] = array(
-    'source' => 'The number of nodes tagged with terms belonging to the taxonomy vocabulary.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーに属するタームでタグ付けされたノード数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['44b04b0ce6f56e017e0ac35a61076ef9'] = array(
-    'source' => 'Term count',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タームの数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['d92bfc0c6b5686cd0f18b178f9345830'] = array(
-    'source' => 'The number of terms belonging to the taxonomy vocabulary.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーに属するタームの数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1c295055fb970540ea6d19f28b564edc'] = array(
-    'source' => 'The unique ID of the user account.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアカウント固有のID',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f647334e1ff0d7ca7dc1e0a219472424'] = array(
-    'source' => 'The login name of the user account.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアカウントのログイン名',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e8a693be2cda690a8005db68ff72917f'] = array(
-    'source' => 'The email address of the user account.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアカウントのメールアドレス',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b7789076ffcca926d66efa47c6265ee8'] = array(
-    'source' => 'The URL of the account profile page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウントプロフィールページのURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2de6a8e651b5a8cdfecbbaf7556ac4fe'] = array(
-    'source' => 'The date the user last logged in to the site.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーの最終ログイン日時',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['fb45e991e145ee5e57599b4db0f32eee'] = array(
-    'source' => 'The date the user account was created.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーアカウントが作成された日時',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['127ab876086ce2b2894ef727dba73758'] = array(
     'source' => 'Your OpenID',
     'context' => '',
@@ -21488,14 +22448,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'サイトがメンテナンスモードのため、Cron が実行できませんでした。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3f3b1bd98f3724fe578f24ff92d18bca'] = array(
-    'source' => 'Default country',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトの国',
     'plid' => 0,
     'plural' => 0,
   );
@@ -22008,14 +22960,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '%module モジュールが無効化されました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['56d4496796b79ba936001fd57dd4cf32'] = array(
-    'source' => 'Status message',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ステータスメッセージ',
     'plid' => 0,
     'plural' => 0,
   );
@@ -22668,14 +23612,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['77fe0991e1b080e7feec788c761e31fa'] = array(
-    'source' => 'Cache blocks',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ブロックをキャッシュする',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a11de9a995b8ad15de12f39d50f6b791'] = array(
     'source' => 'Block caching is inactive because you have enabled modules defining content access restrictions.',
     'context' => '',
@@ -23028,14 +23964,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['ad86555745c94311325995631c582a07'] = array(
-    'source' => 'Tokens for comments posted on the site.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトに掲載されたコメントのトークン',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8bafac251bb576be23c6229e4fe2e385'] = array(
     'source' => 'The Comment module allows users to comment on site content, set commenting defaults and permissions, and moderate comments. For more information, see the online handbook entry for <a href="@comment">Comment module</a>.',
     'context' => '',
@@ -23057,14 +23985,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'それぞれの<a href=\'@content-type\'>コンテンツタイプ</a>に、デフォルトのコメント設定を適用することができます。デフォルトの設定には、新しいコメントを受け入れる<em>オープン</em>、既存コメントを非表示にし新しいコメントを受け入れない<em>非表示</em>、また既存コメントを表示して新規受付をしない<em>クローズド</em>があります。これらのデフォルト設定は新しく作成されたコンテンツに適用されます（既存のコンテンツに対しての変更は手動で行わねばなりません）。他のコメント設定もコンテンツタイプごとにカスタマイズすることができ、コンテンツごとに設定の上書きが可能です。投稿者は返答のないコメントを編集することができます。ただし、サイトにそのユーザーのアカウントが存在し、ログインしている必要があります。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['329c5e408071514ad83d517ff3bd4c9c'] = array(
-    'source' => 'Full comment',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コメント全文',
     'plid' => 0,
     'plural' => 0,
   );
@@ -23764,22 +24684,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['00c41526fba2735a332c07d5985d646e'] = array(
-    'source' => 'Default SQL storage',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトの SQL ストレージ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['729eb7736d90c32e8afd590a1bcff29a'] = array(
-    'source' => 'Stores fields in the local SQL database, using per-field tables.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フィールドを、フィールド毎のテーブルを使用してローカルのSQLデータベースに格納。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['2e23d8acab9f98c4c57212446678c240'] = array(
     'source' => 'Field SQL storage',
     'context' => '',
@@ -23801,22 +24705,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'ListモジュールはFieldモジュールで利用される項目リストを格納する様々なフィールドを定義します。通常これらの項目は、選択リスト・チェックボックス・ラジオボタンを使って入力されます。詳細については、<a href="@field-help">Fieldモジュールヘルプ</a>ページをご覧ください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e1a6bec3958f8622eed1760e93e9f616'] = array(
-    'source' => 'This field stores simple on/off or yes/no options.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは単純な on/off や yes/no オプションを入力します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['eb495ef4a85743544abb8c63173e901a'] = array(
-    'source' => 'List (text)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リスト(テキスト)',
     'plid' => 0,
     'plural' => 0,
   );
@@ -23884,30 +24772,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2a156166594593e9aabf25b76ea5c0b5'] = array(
-    'source' => 'This field stores a number in the database as an integer.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはデータベースに整数として保存される数値を入力します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['0d34a1e5f04c369d58a34afec337cd27'] = array(
-    'source' => 'This field stores a number in the database in a fixed decimal format.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは、データベースに固定小数点フォーマットで保存する数値を入力します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['81809da52474476c4aa394355e5f0ad5'] = array(
-    'source' => 'This field stores a number in the database in a floating point format.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは、データベースに浮動小数点フォーマットで保存する数値を入力します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['61727d666d2027341d785a2104605f95'] = array(
     'source' => 'The minimum value that should be allowed in this field. Leave blank for no minimum.',
     'context' => '',
@@ -23956,46 +24820,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['dfd66f76330c275b8b88fd332f92130a'] = array(
-    'source' => 'This field stores varchar text in the database.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはデータベースに varchar テキストとして保存されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['fee01db902374ac5b79205c694f96982'] = array(
-    'source' => 'Long text',
-    'context' => '',
-    'location' => '',
-    'translation' => '長い文章',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a6e4328c086cc681630ceb5ba57073f2'] = array(
-    'source' => 'This field stores long text in the database.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはデータベースに long text として保存されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['2be17bf0a9278c0731e25f57e7effa94'] = array(
-    'source' => 'Long text and summary',
-    'context' => '',
-    'location' => '',
-    'translation' => '長い文章と概要',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['446d659423be1a4e271e4899b55528f0'] = array(
-    'source' => 'This field stores long text in the database along with optional summary text.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはオプションの概要テキストつきでデータベースに long text として保存されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['cac0ede8db43c3e05bd28b6142df1f7f'] = array(
     'source' => 'Filtered text (user selects text format)',
     'context' => '',
@@ -24033,22 +24857,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '%name: 概要は %max 文字以上にできません。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['677c23d849afbb1d602a63d0fa4bd451'] = array(
-    'source' => 'Summary or trimmed',
-    'context' => '',
-    'location' => '',
-    'translation' => '概要か切り詰め',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['35d5f8830f5f06c7fcede77311ff8e5b'] = array(
-    'source' => 'Text area with a summary',
-    'context' => '',
-    'location' => '',
-    'translation' => 'テキストエリアと概要',
     'plid' => 0,
     'plural' => 0,
   );
@@ -24332,14 +25140,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['b0921e03df2621fcea3c4dded27a4a5f'] = array(
-    'source' => 'This field stores the ID of a file as an integer value.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはファイルのIDを整数値として保存します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['a0d311080d9b45df9246d6a466059508'] = array(
     'source' => 'Enable <em>Display</em> field',
     'context' => '',
@@ -24433,22 +25233,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '許可する拡張子のリストが不正です。先頭のドットをつけないで、カンマかスペースで区切った拡張子のリストになっているか確認してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6233820820968f236a5fb1bfeec276a3'] = array(
-    'source' => 'Generic file',
-    'context' => '',
-    'location' => '',
-    'translation' => '一般のファイル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['acef205d6ee64904a6cccf989a95ada8'] = array(
-    'source' => 'Table of files',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイル一覧',
     'plid' => 0,
     'plural' => 0,
   );
@@ -24900,14 +25684,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['c6352eebefde9397d328d2ec03cb3c80'] = array(
-    'source' => 'The number of replies a topic must have to be considered "hot".',
-    'context' => '',
-    'location' => '',
-    'translation' => '記事が"活発"と評価される返信数。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['aa52b14afc2c294aaee367f11642741b'] = array(
     'source' => 'No containers or forums available. <a href="@container">Add container</a> or <a href="@forum">Add forum</a>.',
     'context' => '',
@@ -25092,27 +25868,11 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['cdc8cf399a3ff0cffa8d46db032dd2d8'] = array(
-    'source' => 'A <em>forum topic</em> starts a new discussion thread within a forum.',
-    'context' => '',
-    'location' => '',
-    'translation' => '<strong>フォーラム記事</strong>はフォーラム内で新しいディスカッションを開始するものです。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['8b5a1d30463ac1883aae2b9584e064d4'] = array(
     'source' => 'Control forum hierarchy settings.',
     'context' => '',
     'location' => '',
     'translation' => 'フォーラムの階層を設定します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ffa104d3b2492ca364a7f7d2849406a9'] = array(
-    'source' => 'Forum navigation vocabulary',
-    'context' => '',
-    'location' => '',
-    'translation' => 'フォーラムナビゲーション用語集',
     'plid' => 0,
     'plural' => 0,
   );
@@ -25609,14 +26369,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '%path (%mimetype, %dimensions) に、ツールキット %toolkit を適用する際、画像の回転に失敗しました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c3ab0f708a956a166cf437ed17926a6f'] = array(
-    'source' => 'This field stores the ID of an image file as an integer value.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは画像ファイルを整数で表現したIDを格納します。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -26308,14 +27060,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['a8db46b7a657dcf9bf22a1c0c2580d3f'] = array(
-    'source' => 'January',
-    'context' => 'Long month name',
-    'location' => '',
-    'translation' => '1月',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['7f0b7e522520847aa2da91d127fcdfd1'] = array(
     'source' => 'February',
     'context' => 'Long month name',
@@ -26513,46 +27257,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'メニューリンクはデフォルト設定にリセットされました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['bbbd8efcbe8437f8f369cc8419efe108'] = array(
-    'source' => 'No Main links',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メインリンクなし',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['16061158e27239e7025fa4deb5b943c5'] = array(
-    'source' => 'Source for the Main links',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メインリンクのソース',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['31af53f3462adca02fc8ca33b08424c2'] = array(
-    'source' => 'Select what should be displayed as the Main links (typically at the top of the page).',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メインリンク(一般的にページの上部)に表示する項目を選択。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8523450b14acb01b856cbfdf828080ab'] = array(
-    'source' => 'No Secondary links',
-    'context' => '',
-    'location' => '',
-    'translation' => 'セカンダリーリンクなし',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['29bed2adc11b766bb42ecb28388cc52c'] = array(
-    'source' => 'Source for the Secondary links',
-    'context' => '',
-    'location' => '',
-    'translation' => 'セカンダリーリンクのソース',
     'plid' => 0,
     'plural' => 0,
   );
@@ -26804,14 +27508,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['cf7816affd5cf9d7326b59d262017106'] = array(
-    'source' => 'Preview before submitting',
-    'context' => '',
-    'location' => '',
-    'translation' => '投稿前にプレビュー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6d25599bd51f08fce58714073ba01cb1'] = array(
     'source' => 'This text will be displayed at the top of the page when creating or editing content of this type.',
     'context' => '',
@@ -26825,22 +27521,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => '<strong>ノードの管理</strong>権を持ったユーザーは、これらのオプションを変更できます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['eba6f15f8f14a6dfd33807bdca8b7f72'] = array(
-    'source' => 'Display author and date information.',
-    'context' => '',
-    'location' => '',
-    'translation' => '作成者と日付情報を表示。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a0f656f02b5bf94b2af75f902fa30100'] = array(
-    'source' => 'Author username and publish date will be displayed.',
-    'context' => '',
-    'location' => '',
-    'translation' => '作成者のユーザー名と公開日付が表示されます。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -26964,51 +27644,11 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['f54d6a98b40f3b82426a6e0d6ffe22ab'] = array(
-    'source' => 'Revision log message',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リビジョンログメッセージ',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['38f323285adb0292c793be0c4a19ebb5'] = array(
     'source' => 'Provide an explanation of the changes you are making. This will help other authors understand your motivations.',
     'context' => '',
     'location' => '',
     'translation' => '変更についての説明を記入。あなたが行った更新を別の更新者が理解するのに役立ちます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['89ea3d87fd7ffd415bf6b8b43f6fd8f1'] = array(
-    'source' => 'Tokens related to individual content items, or "nodes".',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツ(ノード)関係のトークン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5c561faab248c6b4160e16ccedb3ba6e'] = array(
-    'source' => 'The unique ID of the content item, or "node".',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツ(ノード)のユニークID。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['83e0d4618f31552e69771a92f64ad31c'] = array(
-    'source' => 'The main body text of the node.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードの本文。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['f83a06f605097bc2753d025e6b29015f'] = array(
-    'source' => 'The summary of the node\'s main body text.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ノードの本文の要約。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -27137,22 +27777,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'リビジョンを使うと、コンテンツの複数バージョンの違いを確認したり、古いバージョンに復帰させたりすることができます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['62d884c71c26fb928e0e216dbf533aca'] = array(
-    'source' => 'Full content',
-    'context' => '',
-    'location' => '',
-    'translation' => '全文',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['323b1f66f9470499e6e4a4e9a24897a9'] = array(
-    'source' => 'Search result',
-    'context' => '',
-    'location' => '',
-    'translation' => '検索結果',
     'plid' => 0,
     'plural' => 0,
   );
@@ -27297,70 +27921,6 @@ Unless you know what you are doing, it is highly recommended that you prefix the
     'context' => '',
     'location' => '',
     'translation' => 'フロントページ向けコンテンツはまだ作成されていません。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['03f1fa5d412fb389e2267a76800c53d9'] = array(
-    'source' => 'Unpublish content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツを非公開にする',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8bb38b5f6bd025c55e8ac032c28e4315'] = array(
-    'source' => 'Make content sticky',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツをリスト上部に固定',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4aa73cc6ceefc978baa08503a80ffe2f'] = array(
-    'source' => 'Make content unsticky',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツをリスト上部に固定しない',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ec8cd4e06cade1b491ddf6623b25f0b3'] = array(
-    'source' => 'Promote content to front page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツをトップページに表示する',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['547ddde4e5e469b4ac76aa07413d377f'] = array(
-    'source' => 'Remove content from front page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツをトップページから削除する',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['bd9abe1ff312814f39444355de86ce21'] = array(
-    'source' => 'Change the author of content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツの作成者を変更',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e49f89fdc57acf0746d7a59a0f685faf'] = array(
-    'source' => 'Save content',
-    'context' => '',
-    'location' => '',
-    'translation' => 'コンテンツの保存',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['75b8164618ff4239bf5611d9c62c7c50'] = array(
-    'source' => 'Unpublish content containing keyword(s)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キーワードを含むコンテンツを非公開にする',
     'plid' => 0,
     'plural' => 0,
   );
@@ -29020,30 +29580,6 @@ else {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['28d030b0c6a5ac3cf3296e630967d63a'] = array(
-    'source' => 'The maximum number of posts displayed on overview pages such as the front page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'トップページのように、記事が一覧として表示されるページの最大記事数。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7189f9cdf7ac446772cb40d108ddef55'] = array(
-    'source' => 'This page is displayed when the requested document is denied to the current user. Leave blank to display a generic "access denied" page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このページは、ページへのユーザーアクセスが拒否された際に表示されるページです。空白にすると、標準の"アクセスが拒否されました"ページが表示されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['024ee179ef56015bece5bba2b6b5ef6a'] = array(
-    'source' => 'This page is displayed when no other content matches the requested document. Leave blank to display a generic "page not found" page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このページは、要求された文書に該当する文書がない場合に表示されます。空白にすると、標準の "ページが見つかりませんでした"ページが表示されます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['cd846649ad9a492829dff7bb57256f96'] = array(
     'source' => 'Errors and warnings',
     'context' => '',
@@ -29073,14 +29609,6 @@ else {
     'context' => '',
     'location' => '',
     'translation' => '帯域幅最適化',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['235979f470a6da7252076cbd0b5941bb'] = array(
-    'source' => 'Compress cached pages.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キャッシュされたページを圧縮。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -29140,75 +29668,11 @@ else {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['a8408c043c2e9b812a9ef94a8e559d25'] = array(
-    'source' => 'Description of your site, included in each feed.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'すべてのフィードに含まれるサイトの説明。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['489ab969ec0f6cdd3f347513b55cc4c0'] = array(
     'source' => 'Time zones',
     'context' => '',
     'location' => '',
     'translation' => 'タイムゾーン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['04b6bd9680aef04214529d57845abeb2'] = array(
-    'source' => 'Users may set their own time zone.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーが自分のタイムゾーンを設定できる',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['417fb9be5fad9036e05a952d937c94d6'] = array(
-    'source' => 'Remind users at login if their time zone is not set.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイムゾーンが設定されていない場合、ログイン時にユーザーに注意をうながす',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c8cd17a3de0db09258fce520ecc887d7'] = array(
-    'source' => 'Only applied if users may set their own time zone.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ユーザーが自分のタイムゾーンを設定できる場合のみに適用',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6456c3bfc373fec187e82b08167a1d14'] = array(
-    'source' => 'Time zone for new users',
-    'context' => '',
-    'location' => '',
-    'translation' => '新規ユーザーのタイムゾーン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1e9491f3c1af787dbcc47b9e8eb81dc5'] = array(
-    'source' => 'Default time zone.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'デフォルトタイムゾーン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['40471c543807f01b6cc5c372bbeb565f'] = array(
-    'source' => 'Empty time zone.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タイムゾーンなし。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b5512dec8dfb21b9ccea6d914d7193e7'] = array(
-    'source' => 'Users may set their own time zone at registration.',
-    'context' => '',
-    'location' => '',
-    'translation' => '登録時にユーザーが自分のタイムゾーンを設定できる',
     'plid' => 0,
     'plural' => 0,
   );
@@ -29249,30 +29713,6 @@ else {
     'context' => '',
     'location' => '',
     'translation' => '新しい日付型が正常に追加されました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['43ca2219753ad4239b1d1a478dd2dbae'] = array(
-    'source' => 'Put site into maintenance mode',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトをメンテナンスモードにする',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['c251e46ff27815e7a834109d02a56b6a'] = array(
-    'source' => 'Maintenance mode message',
-    'context' => '',
-    'location' => '',
-    'translation' => 'メンテナンスモードメッセージ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['70d67482c7ab049885ca4ef191e7ca47'] = array(
-    'source' => 'Message to show visitors when the site is in maintenance mode.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトがメンテナンスモードの時に表示されるメッセージ。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -29451,134 +29891,6 @@ else {
     'translation' => 'モジュール @module をインストールするには、依存する @required モジュールを有効にしなければなりません。',
     'plid' => '67f62105df0b1ae3e77eed738625a7f3',
     'plural' => 1,
-  );
-  $translations['ja:default']['b6203d98ba6b41090a184541dedfa65e'] = array(
-    'source' => 'Tokens for site-wide settings and other global information.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイト全体の情報トークン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ae07e4f5323894d300cc7fea7c104161'] = array(
-    'source' => 'Tokens related to times and dates.',
-    'context' => '',
-    'location' => '',
-    'translation' => '時刻と日付関係のトークン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['a3f0726ab826b93a9469e0a448958cf2'] = array(
-    'source' => 'Tokens related to uploaded files.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アップロードされたファイル関係のトークン。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['53da9e1e7a68086e5928b8b9b8fef4ce'] = array(
-    'source' => 'URL (brief)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'URL(短)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4f5138b68067033eb1f3545f55468551'] = array(
-    'source' => 'The URL of the site\'s front page without the protocol.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'サイトのスキーム(http://など)抜きのトップページURL',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1c03f3c9e43bd5d66de70f61c3cc10b7'] = array(
-    'source' => 'Short format',
-    'context' => '',
-    'location' => '',
-    'translation' => '日時（短い書式）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['78724a358b5636ea326894fdf59992ac'] = array(
-    'source' => 'A date in \'short\' format. (%date)',
-    'context' => '',
-    'location' => '',
-    'translation' => '短い日付書式の日時 (%date)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3a55f54c9d453a43db8ba35f2bc5199a'] = array(
-    'source' => 'Medium format',
-    'context' => '',
-    'location' => '',
-    'translation' => '日時（中程度の書式）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['da2b94875e9361ba893ea35e04bc89b5'] = array(
-    'source' => 'A date in \'medium\' format. (%date)',
-    'context' => '',
-    'location' => '',
-    'translation' => '中程度の日付書式の日時 (%date)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e05e554b4d7ea80b02f02fa0c08c006d'] = array(
-    'source' => 'Long format',
-    'context' => '',
-    'location' => '',
-    'translation' => '日時（長い書式）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6bd934bad873a5d279a4f9537bbdb3b0'] = array(
-    'source' => 'A date in \'long\' format. (%date)',
-    'context' => '',
-    'location' => '',
-    'translation' => '長い形式の日付フォーマット(%date)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['79ed8ca7b7b7b2f8e9a4f0767e7de062'] = array(
-    'source' => 'A date in a custom format. See !php-date for details.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'カスタムフォーマットの日付。詳細は !php-date 参照。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3e10ba0e8bd7fe67e3a68a94113d6283'] = array(
-    'source' => 'the PHP documentation',
-    'context' => '',
-    'location' => '',
-    'translation' => 'PHPドキュメント',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['46e2c380d9acb150425de6a64483f899'] = array(
-    'source' => 'Time-since',
-    'context' => '',
-    'location' => '',
-    'translation' => '日時（経過時間）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['5299bcc4b8e1e83f3d806ec8b1a1528f'] = array(
-    'source' => 'Raw timestamp',
-    'context' => '',
-    'location' => '',
-    'translation' => '日時（Unix timestamp 書式）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['77bb4a4398130faf592edd56539e2f48'] = array(
-    'source' => 'A date in UNIX timestamp format (%date)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'Unix timestamp 書式の日付 (%date)',
-    'plid' => 0,
-    'plural' => 0,
   );
   $translations['ja:default']['f861fab71d87dc0400fde973c163e3d3'] = array(
     'source' => 'The System module is integral to the site, and provides basic but extensible functionality for use by other modules and themes. Some integral elements of Drupal are contained in and managed by the System module, including caching, enabling and disabling modules and themes, preparing and displaying the administrative page, and configuring fundamental site settings. A number of key system maintenance operations are also part of the System module. For more information, see the online handbook entry for <a href="@system">System module</a>.',
@@ -29804,43 +30116,11 @@ else {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['2b1ef0961e7cc2c70685e9798967b220'] = array(
-    'source' => 'Public files',
-    'context' => '',
-    'location' => '',
-    'translation' => 'パブリックファイル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4c148b1b74accb6918b429ab84356589'] = array(
-    'source' => 'Public local files served by the webserver.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルをWebサーバーで公開する。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['ab030086438acc0dc6dd98f078f2510f'] = array(
     'source' => 'Private local files served by Drupal.',
     'context' => '',
     'location' => '',
     'translation' => 'プライベートファイル。Drupal が取り扱う。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6af7995cdc6e79af27e8984a112a37da'] = array(
-    'source' => 'Temporary files',
-    'context' => '',
-    'location' => '',
-    'translation' => '一時ファイル',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['11bab98ed5d9d49bfd9bbe488177675d'] = array(
-    'source' => 'Temporary local files for upload and previews.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アップロード・プレビュー用の一時フォルダー',
     'plid' => 0,
     'plural' => 0,
   );
@@ -30348,22 +30628,6 @@ else {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['01b31fbf6f97e0661bbc262061ef6ceb'] = array(
-    'source' => 'Tokens related to taxonomy terms.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームを表すトークン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['4697ad382834efb27ab38462529ad4e3'] = array(
-    'source' => 'Tokens related to taxonomy vocabularies.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミーのボキャブラリーを表すトークン',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['e52fe3223bb3b8d55519276ac7a58cba'] = array(
     'source' => 'The Taxonomy module allows you to classify the content of your website. To classify content, you define <em>vocabularies</em> that contain related <em>terms</em>, and then assign the vocabularies to content types. For more information, see the online handbook entry for the <a href="@taxonomy">Taxonomy module</a>.',
     'context' => '',
@@ -30577,38 +30841,6 @@ else {
     'context' => '',
     'location' => '',
     'translation' => '%vocabulary のタームの削除',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['913b401d84211a96d3923a9f59e8934b'] = array(
-    'source' => 'Taxonomy term page',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タクソノミータームのページ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1870987274aff13dd921140a2cfeba74'] = array(
-    'source' => 'Term reference',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ターム参照',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1bdc7cb479aa0ef0be9adb2643a5d9ab'] = array(
-    'source' => 'This field stores a reference to a taxonomy term.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドはタクソノミータームへの参照ほ格納します。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8b865ae6988e1686b30416bf3487c691'] = array(
-    'source' => 'Autocomplete term widget (tagging)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'タームの自動補完ウィジェット（タグ付け）',
     'plid' => 0,
     'plural' => 0,
   );
@@ -31740,14 +31972,6 @@ else {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['1a70155c981533d8af1767efd78173cd'] = array(
-    'source' => 'Picture directory',
-    'context' => '',
-    'location' => '',
-    'translation' => '画像のディレクトリー',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['e3e952e9c5238910369bd4807ce02fb7'] = array(
     'source' => 'Picture display style',
     'context' => '',
@@ -31873,22 +32097,6 @@ else {
     'context' => '',
     'location' => '',
     'translation' => 'アカウントがブロックされた際にユーザーへ送信する、メールのメッセージの編集と、送信するかどうかを指定してください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['83145d5c8d4d49814ac2bf1351c12dd4'] = array(
-    'source' => 'Account cancellation confirmation',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウント無効化の確認',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6fe63b76096934caa0a65282c78efcd3'] = array(
-    'source' => 'Edit the e-mail messages sent to users when they attempt to cancel their accounts.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウントが削除しようとした際にユーザーへ送信する、メールのメッセージの編集と、送信するかどうかを指定してください。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -32089,22 +32297,6 @@ else {
     'context' => '',
     'location' => '',
     'translation' => '%name（%email）さんへアカウント無効化リクエストが送信されました。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ea69f1e416b0d9d1d38ef0f0bec9cc7d'] = array(
-    'source' => 'Tokens related to individual user accounts.',
-    'context' => '',
-    'location' => '',
-    'translation' => '個々のユーザーアカウントを表すトークン',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['1a7e67109e655490770d22130ba4a7ed'] = array(
-    'source' => 'Tokens related to the currently logged in user.',
-    'context' => '',
-    'location' => '',
-    'translation' => '現在のログインユーザーを表すトークン',
     'plid' => 0,
     'plural' => 0,
   );
@@ -32610,14 +32802,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['b382314a1f65956ef3dea49284f5ee2d'] = array(
-    'source' => 'Use <em>basic pages</em> for your static content, such as an \'About us\' page.',
-    'context' => '',
-    'location' => '',
-    'translation' => '「About us」のような、あまり更新されない内容の場合は <em>基本ページ</em> を使ってください。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['4cfb43b757d41ab0a07ddf1b5cd40289'] = array(
     'source' => 'Use tags to group articles on similar topics into categories.',
     'context' => '',
@@ -33095,14 +33279,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'context' => '',
     'location' => '',
     'translation' => '表示する最新ブログポストの数',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['35543b1d3c404ee664950aa6cf51d3d4'] = array(
-    'source' => '@node_type comment',
-    'context' => '',
-    'location' => '',
-    'translation' => '@node_type コメント',
     'plid' => 0,
     'plural' => 0,
   );
@@ -33634,14 +33810,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e84ea453480042358d09e8d3cab3f2d5'] = array(
-    'source' => 'The date the comment was most recently updated.',
-    'context' => '',
-    'location' => '',
-    'translation' => '最後にコメントが追加された日。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['f023ef9c27e481808da20c24a4111cea'] = array(
     'source' => 'Comment posted: %subject.',
     'context' => '',
@@ -33751,30 +33919,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'context' => '',
     'location' => '',
     'translation' => 'syslogエントリーのフォーマットを指定してください：<dl><dt><code>!base_url</code></dt><dd>サイトのベースURL。</dd><dt><code>!timestamp</code></dt><dd>ログ作成時のUnixタイムスタンプ 。</dd><dt><code>!type</code></dt><dd>メッセージが属しているカテゴリー</dd><dt><code>!ip</code></dt><dd>メッセージをトリガーしたユーザーのIP。</dd><dt><code>!request_uri</code></dt><dd>リクエストされたURI</dd><dt><code>!referer</code></dt><dd>HTTP リファラー（もし存在する場合）。</dd><dt><code>!uid</code></dt><dd>ユーザーID.</dd><dt><code>!link</code></dt><dd>メッセージに関連付けるリンク。</dd><dt><code>!message</code></dt><dd>ログに含めるメッセージ。</dd></dl>',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['6df362e483ca55300239af17cdcc6713'] = array(
-    'source' => 'External resources can be optimized automatically, which can reduce both the size and number of requests made to your website.',
-    'context' => '',
-    'location' => '',
-    'translation' => '外部リソースは自動的に最適化することができ、これによりあなたのウェブサイトに対するリクエスト数およびサイズの両方を削減できます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['382759a2f174d8dd277b1ae840086ea7'] = array(
-    'source' => 'A date in \'time-since\' format. (%date)',
-    'context' => '',
-    'location' => '',
-    'translation' => '経過時間での日時の表示。(%date)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8b706adb6dc23e38ee614fc2ad21b218'] = array(
-    'source' => 'The location of the file relative to Drupal root.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルの場所。Drupalのルートからの相対パスです。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -33893,14 +34037,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['6e85a7ec7e1bf5c46fd8f29e7be454c3'] = array(
-    'source' => 'Cache pages for anonymous users',
-    'context' => '',
-    'location' => '',
-    'translation' => '匿名ユーザー向けページをキャッシュする',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['cf69150472baacccb673dd9732d4b927'] = array(
     'source' => 'Bartik',
     'context' => '',
@@ -33914,14 +34050,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'context' => '',
     'location' => '',
     'translation' => '柔軟で色を変更でき、多くのリージョンがあるテーマ。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['b1ae3ef8481fd877d821eddb68d5db76'] = array(
-    'source' => 'Highlighted',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ハイライトされた',
     'plid' => 0,
     'plural' => 0,
   );
@@ -33997,14 +34125,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['5463eca0538c1b35d6f3ff8e9eecc4b5'] = array(
-    'source' => '!local-task-title!active',
-    'context' => '',
-    'location' => '',
-    'translation' => '!local-task-title!active',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['c25a854a3b6e34cb91bd700117001e9d'] = array(
     'source' => 'A space-separated list of HTML tags allowed in the content of feed items. Disallowed tags are stripped from the content.',
     'context' => '',
@@ -34064,30 +34184,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
 サイト構造に関わるアクションの例として、タクソノミータームの削除・編集する場合、テキストをコンテンツに追加するモジュール（タクソノミー、コメント、フィールドを追加するモジュール等）を無効化する場合、コンテンツタイプのフィールドや表示のパラメーターを変更する場合などが挙げられます。
 もし、これらのアクションを実行したり、サイト構造の変更を確実にサーチインデックスへ反映したい場合は、<a href="@searchsettings">検索設定ページ</a>の”サイトインデックスの再構築”ボタンをクリックして全てのコンテンツをマークすることができます。
 もし、大量のコンテンツがある場合は全てのコンテンツが再インデックスされるまで数回のCronの実行が必要になることがあります。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['22aad97e552b4fa1bcf05fbeaa1106cb'] = array(
-    'source' => 'Cached pages will not be re-created until at least this much time has elapsed.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キャッシュされたページは最低でもこの時間が経過するまで再生成されません。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['78cf2904ee8c41f9991f4fa8f5c0ce30'] = array(
-    'source' => 'Expiration of cached pages',
-    'context' => '',
-    'location' => '',
-    'translation' => 'キャッシュされたページの期限',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['03ba94e7d44a0547f0b841a751b96151'] = array(
-    'source' => 'The maximum time an external cache can use an old version of a page.',
-    'context' => '',
-    'location' => '',
-    'translation' => '外部キャッシュが古いバージョンのページを利用できる最終期限。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -34523,14 +34619,6 @@ Thank you for registering at [site:name]. Your application for an account is cur
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['88790adfca3b813d495817dfab46f423'] = array(
-    'source' => 'Available variables are: [site:name], [site:url], [user:name], [user:mail], [site:login-url], [site:url-brief], [user:edit-url], [user:one-time-login-url], [user:cancel-url].',
-    'context' => '',
-    'location' => '',
-    'translation' => '利用可能な変数は以下です： [site:name], [site:url], [user:name], [user:mail], [site:login-url], [site:url-brief], [user:edit-url], [user:one-time-login-url], [user:cancel-url].',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['6656c667b21f2ef1ea1fc8f35c4f807e'] = array(
     'source' => 'not yet assigned',
     'context' => '',
@@ -34714,14 +34802,6 @@ Your account on [site:name] has been canceled.
     'context' => '',
     'location' => '',
     'translation' => 'なし（オリジナル画像）',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['55427cb4ff38972485af5d9b14fe7c9f'] = array(
-    'source' => 'The URL of the account edit page.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'アカウント編集ページのURL',
     'plid' => 0,
     'plural' => 0,
   );
@@ -35317,14 +35397,6 @@ Your account on [site:name] has been canceled.
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['6bb550ede8b1cf2afe537e4dfd2f1aa3'] = array(
-    'source' => 'When enabled, only users with the "Use the site in maintenance mode" <a href="@permissions-url">permission</a> are able to access your site to perform maintenance; all other visitors see the maintenance mode message configured below. Authorized users can log in directly via the <a href="@user-login">user login</a> page.',
-    'context' => '',
-    'location' => '',
-    'translation' => '有効にすると、「メンテナンスモードのサイトにアクセス」の<a href="@permissions-url">権限</a>を持っているユーザーのみがサイトにアクセスできる状態になります。他のユーザーに対しては以下で設定したメッセージが表示されます。この権限をもつユーザーは<a href="@user-login">ユーザーログイン</a>ページからログインできます。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['d493a01bbc987f5d6a83d16142b7921b'] = array(
     'source' => 'In order for the site and its modules to continue to operate well, a set of routine administrative operations must run on a regular basis. The System module manages this task by making use of a system cron job. You can verify the status of cron tasks by visiting the <a href="@status">Status report page</a>. For more information, see the online handbook entry for <a href="@handbook">configuring cron jobs</a>. You can set up cron job by visiting <a href="@cron">Cron configuration</a> page',
     'context' => '',
@@ -35362,14 +35434,6 @@ Your account on [site:name] has been canceled.
     'context' => '',
     'location' => '',
     'translation' => '追加されたタームのウェイト',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['9b02817d3a992047a91b1a83ba865b37'] = array(
-    'source' => 'Subdirectory in the file upload directory where pictures will be stored.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'ファイルアップロード用ディレクトリー内の、写真保存用サブディレクトリーです。',
     'plid' => 0,
     'plural' => 0,
   );
@@ -36459,22 +36523,6 @@ password: Your password
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e939da3baa42dfb3e9b378d585fe2f6a'] = array(
-    'source' => 'Aggregate and compress CSS files.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'CSSファイルをまとめて圧縮する。',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['cf37ea91f9623f6e345cfc911e51a84e'] = array(
-    'source' => 'Aggregate JavaScript files.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'JavaScriptファイルをまとめる。',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['df50da9278137fd4ac3f6845525aa50b'] = array(
     'source' => 'To uninstall @module, the following module must be uninstalled first: @required_modules',
     'context' => '',
@@ -36739,46 +36787,6 @@ password: Your password
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['99fb4bfe1c15a29baa9968bd7d63ba7a'] = array(
-    'source' => 'List (integer)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リスト(整数)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['076622822508c6499f335352debd8e1f'] = array(
-    'source' => 'This field stores integer values from a list of allowed \'value => label\' pairs, i.e. \'Lifetime in days\': 1 => 1 day, 7 => 1 week, 31 => 1 month.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択された整数値を、データベースに格納します。例. \'期間(日数)\': 1 => 1日, 7 => 1週間, 31 => 1ヶ月',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['3c356223a7914a9350ab041e6afc5d3c'] = array(
-    'source' => 'List (float)',
-    'context' => '',
-    'location' => '',
-    'translation' => 'リスト(浮動小数点数値)',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['fb97c6019ddaedf8a01fdc29d228ff6b'] = array(
-    'source' => 'This field stores float values from a list of allowed \'value => label\' pairs, i.e. \'Fraction\': 0 => 0, .25 => 1/4, .75 => 3/4, 1 => 1.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択された浮動小数点数値を、データベースに格納します。例. \'分数\': 0 => 0, .25 => 1/4, .75 => 3/4, 1 => 1',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['ff79b8c5387067401e5ef233ae49bd41'] = array(
-    'source' => 'This field stores text values from a list of allowed \'value => label\' pairs, i.e. \'US States\': IL => Illinois, IA => Iowa, IN => Indiana.',
-    'context' => '',
-    'location' => '',
-    'translation' => 'このフィールドは、利用可能な \'値 => ラベル\' の対のリストから選択されたテキストを、データベースに格納します。例. \'アメリカ合衆国\': IL => イリノイ州, IA => アイオワ州, IN => インディアナ州',
-    'plid' => 0,
-    'plural' => 0,
-  );
   $translations['ja:default']['87749c5381bc76bc3102e38b1f560983'] = array(
     'source' => 'The possible values this field can contain. Enter one value per line, in the format key|label.',
     'context' => '',
@@ -36953,14 +36961,6 @@ password: Your password
     'context' => '',
     'location' => '',
     'translation' => 'コメントフィールド',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['8c35614eb88ea1f4b601a7c3ae90b19c'] = array(
-    'source' => 'RSS category',
-    'context' => '',
-    'location' => '',
-    'translation' => 'RSS カテゴリー',
     'plid' => 0,
     'plural' => 0,
   );
