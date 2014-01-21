@@ -7488,7 +7488,7 @@ div[role="main"] .pane-menu-menu-join-us {
 .user-log-links {
   position: absolute;
   right: 0;
-  background: #333333;
+  background: #555555;
   height: 32px;
   -moz-border-radius-bottomleft: 2px;
   -webkit-border-bottom-left-radius: 2px;
@@ -7505,7 +7505,7 @@ div[role="main"] .pane-menu-menu-join-us {
     .user-log-links a:hover {
       text-decoration: underline; }
     .user-log-links a:first-child {
-      border-right: 1px solid #555555;
+      border-right: 1px solid #999999;
       padding: 0 7px 0 0;
       margin: 0 7px 0 0; }
 
