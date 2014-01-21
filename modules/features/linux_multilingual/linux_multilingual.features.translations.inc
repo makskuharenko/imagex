@@ -12,7 +12,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['3965c7b6e8d14614c8d82ef7a5f275bc'] = array(
     'source' => 'An AJAX HTTP error occurred.',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'AJAX HTTPエラーが発生しました。',
     'plid' => 0,
     'plural' => 0,
@@ -20,7 +20,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['195c251176a521a37afc44f3c373e9b5'] = array(
     'source' => 'HTTP Result Code: !status',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'HTTP リザルトコード: !status',
     'plid' => 0,
     'plural' => 0,
@@ -28,7 +28,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['9a234749c4c1b3710c78bf6cee25c633'] = array(
     'source' => 'An AJAX HTTP request terminated abnormally.',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'AJAX HTTPリクエストが異常終了しました。',
     'plid' => 0,
     'plural' => 0,
@@ -36,7 +36,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['710fc399a942a423edfb8075c4475f3a'] = array(
     'source' => 'Debugging information follows.',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'デバッグ用情報は以下の通りです。',
     'plid' => 0,
     'plural' => 0,
@@ -44,7 +44,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['66b8d53ac2c82be2dfc7dba6420f7636'] = array(
     'source' => 'Path: !uri',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'パス： !uri',
     'plid' => 0,
     'plural' => 0,
@@ -52,7 +52,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['cfe83ebb2a830be1ce4a105f216d7191'] = array(
     'source' => 'StatusText: !statusText',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'ステータステキスト: !statusText',
     'plid' => 0,
     'plural' => 0,
@@ -60,7 +60,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['13c7746f81cfa13ee261c2a0b72c72b5'] = array(
     'source' => 'ResponseText: !responseText',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'レスポンステキスト:  !responseText',
     'plid' => 0,
     'plural' => 0,
@@ -68,16 +68,8 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['fa826bc6783757481ae02bbde37b4d5f'] = array(
     'source' => 'ReadyState: !readyState',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/drupal.js',
     'translation' => 'レディーステート: !readyState',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['82f39f739d3507106bbc9387c7ff6876'] = array(
-    'source' => 'Configure',
-    'context' => '',
-    'location' => '',
-    'translation' => '設定',
     'plid' => 0,
     'plural' => 0,
   );
@@ -89,27 +81,11 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
-    'source' => 'Edit',
+  $translations['ja:default']['82f39f739d3507106bbc9387c7ff6876'] = array(
+    'source' => 'Configure',
     'context' => '',
-    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js',
-    'translation' => '編集',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['750f1df3182758a1d508f1307ef5c904'] = array(
-    'source' => 'Hide',
-    'context' => '',
-    'location' => '; misc/collapse.js',
-    'translation' => '非表示',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['7df7ea17592e1a9ed4d48e94361ee873'] = array(
-    'source' => 'Show',
-    'context' => '',
-    'location' => '; misc/collapse.js',
-    'translation' => '表示',
+    'location' => '; modules/contextual/contextual.js; profiles/imagex_installkit/themes/mothership/mothership/js/contextual.js',
+    'translation' => '設定',
     'plid' => 0,
     'plural' => 0,
   );
@@ -153,10 +129,34 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
+  $translations['ja:default']['750f1df3182758a1d508f1307ef5c904'] = array(
+    'source' => 'Hide',
+    'context' => '',
+    'location' => '; misc/collapse.js',
+    'translation' => '非表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['7df7ea17592e1a9ed4d48e94361ee873'] = array(
+    'source' => 'Show',
+    'context' => '',
+    'location' => '; misc/collapse.js',
+    'translation' => '表示',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
+    'source' => 'Edit',
+    'context' => '',
+    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js; misc/machine-name.js',
+    'translation' => '編集',
+    'plid' => 0,
+    'plural' => 0,
+  );
   $translations['ja:default']['86dcff77a1656d9df7945a70e7d96ef9'] = array(
     'source' => '(active tab)',
     'context' => '',
-    'location' => '',
+    'location' => '; misc/vertical-tabs.js',
     'translation' => '(アクティブなタブ)',
     'plid' => 0,
     'plural' => 0,
@@ -220,7 +220,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['2f934876a8bec88fc004869f71c05ac3'] = array(
     'source' => 'Next',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '次へ',
     'plid' => 0,
     'plural' => 0,
@@ -1372,7 +1372,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['a55c8b785f905485549239490d6cf1f2'] = array(
     'source' => 'Sunday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '日曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1380,7 +1380,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['360c7af8ae532ba762e06afcdacf2ca2'] = array(
     'source' => 'Monday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '月曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1388,7 +1388,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['cbc6bcf1f2b57402abfd381066acd6fa'] = array(
     'source' => 'Tuesday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '火曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1396,7 +1396,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['e34b5ed8ea6596f0bb01c8b53eff911d'] = array(
     'source' => 'Wednesday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '水曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1404,7 +1404,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['620d2806be10834ddee585418e0fd887'] = array(
     'source' => 'Thursday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '木曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1412,7 +1412,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['f37ae179639817ee977b0e4b82b63ae6'] = array(
     'source' => 'Friday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '金曜日',
     'plid' => 0,
     'plural' => 0,
@@ -1420,7 +1420,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['6642fbd63f9e70ff14588b61076a2efe'] = array(
     'source' => 'Saturday',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '土曜日',
     'plid' => 0,
     'plural' => 0,
@@ -2156,7 +2156,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['7ad00256c39846fd804266dcb6678e2b'] = array(
     'source' => 'Done',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '完了',
     'plid' => 0,
     'plural' => 0,
@@ -3036,7 +3036,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['3fb4ecd55e0b63c07310d58541db9310'] = array(
     'source' => 'OK',
     'context' => '',
-    'location' => '',
+    'location' => '; profiles/imagex_installkit/modules/contrib/media/js/media.popups.js',
     'translation' => 'OK',
     'plid' => 0,
     'plural' => 0,
@@ -3380,7 +3380,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['67006a10e39f5b8d5ff8cd4d068fb118'] = array(
     'source' => 'Prev',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '前へ',
     'plid' => 0,
     'plural' => 0,
@@ -3676,7 +3676,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['486c31c037e9251291fca8b62c137418'] = array(
     'source' => 'Mon',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '月',
     'plid' => 0,
     'plural' => 0,
@@ -3684,7 +3684,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['a3a7447ca09e3e0b8a2bb6348bd30f53'] = array(
     'source' => 'Tue',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '火',
     'plid' => 0,
     'plural' => 0,
@@ -3692,7 +3692,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['462c25b9b2a5255ce312262089efcd54'] = array(
     'source' => 'Wed',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '水',
     'plid' => 0,
     'plural' => 0,
@@ -3700,7 +3700,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['0eaca86c9277073432d5b7a84f45b11b'] = array(
     'source' => 'Thu',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '木',
     'plid' => 0,
     'plural' => 0,
@@ -3708,7 +3708,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['f2420623f1737a864ee28145488d71da'] = array(
     'source' => 'Fri',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '金',
     'plid' => 0,
     'plural' => 0,
@@ -3716,7 +3716,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['643638b6625c7f5ce96d7f71ff3f07a5'] = array(
     'source' => 'Sat',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '土',
     'plid' => 0,
     'plural' => 0,
@@ -3724,7 +3724,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['6e4606271390904e6ca362fbee2d80a4'] = array(
     'source' => 'Sun',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '日',
     'plid' => 0,
     'plural' => 0,
@@ -3732,7 +3732,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['30ad6b30896596a87c29119435656068'] = array(
     'source' => 'January',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '1月',
     'plid' => 0,
     'plural' => 0,
@@ -3740,7 +3740,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['74de606c5004b0ada2dd2e96167afdc5'] = array(
     'source' => 'February',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '2月',
     'plid' => 0,
     'plural' => 0,
@@ -3748,7 +3748,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['3a92d4109a5d1e51b389dc8657c4e72b'] = array(
     'source' => 'March',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '3月',
     'plid' => 0,
     'plural' => 0,
@@ -3756,7 +3756,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['4cc1b6474c9f9afe922c50a8605b08c8'] = array(
     'source' => 'April',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '4月',
     'plid' => 0,
     'plural' => 0,
@@ -3764,7 +3764,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['6f81794f6e3a021bed0af5165d033638'] = array(
     'source' => 'May',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '5月',
     'plid' => 0,
     'plural' => 0,
@@ -3772,7 +3772,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['69bd8cdddf2204f1f80c9355a37ae7c1'] = array(
     'source' => 'June',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '6月',
     'plid' => 0,
     'plural' => 0,
@@ -3780,7 +3780,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['ba4d99ec708a432ffe60a6b64c7ec814'] = array(
     'source' => 'July',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '7月',
     'plid' => 0,
     'plural' => 0,
@@ -3788,7 +3788,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['01a6e549757575e0ec2a95aa9d5f01c9'] = array(
     'source' => 'August',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '8月',
     'plid' => 0,
     'plural' => 0,
@@ -3796,7 +3796,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['c28e7a67520e804a9a7d47a251e046b2'] = array(
     'source' => 'September',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '9月',
     'plid' => 0,
     'plural' => 0,
@@ -3804,7 +3804,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['7a015436df1e5e7d64d82459c329acb2'] = array(
     'source' => 'October',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '10月',
     'plid' => 0,
     'plural' => 0,
@@ -3812,7 +3812,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['2af965795658e494c3ce3a08f5891e42'] = array(
     'source' => 'November',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '11月',
     'plid' => 0,
     'plural' => 0,
@@ -3820,7 +3820,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['2381b0f75a19c8d0c20b6fb2c26fef9c'] = array(
     'source' => 'December',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '12月',
     'plid' => 0,
     'plural' => 0,
@@ -6540,7 +6540,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['d889f8b1a24d94d2c4b6146f4a0e1ec5'] = array(
     'source' => 'Today',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '今日',
     'plid' => 0,
     'plural' => 0,
@@ -6620,7 +6620,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['2b871e98b222954d66f9fd57fe0ca213'] = array(
     'source' => 'Jan',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '1月',
     'plid' => 0,
     'plural' => 0,
@@ -6628,7 +6628,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['049c3d4fafcd4791ee4adb4d0de2084c'] = array(
     'source' => 'Feb',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '2月',
     'plid' => 0,
     'plural' => 0,
@@ -6636,7 +6636,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['ac7c23a1d6a648550311605302dc1b41'] = array(
     'source' => 'Mar',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '3月',
     'plid' => 0,
     'plural' => 0,
@@ -6644,7 +6644,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['f311a64f15170c4388a08e9b9482a63a'] = array(
     'source' => 'Apr',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '4月',
     'plid' => 0,
     'plural' => 0,
@@ -6652,7 +6652,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['f84536492e11d2e8bfdd46028d4fee05'] = array(
     'source' => 'Jun',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '6月',
     'plid' => 0,
     'plural' => 0,
@@ -6660,7 +6660,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['f2d9cd2950fea3bdfd1a937879752966'] = array(
     'source' => 'Jul',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '7月',
     'plid' => 0,
     'plural' => 0,
@@ -6668,7 +6668,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['e259f2adeef18844a5d710180349b93a'] = array(
     'source' => 'Aug',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '8月',
     'plid' => 0,
     'plural' => 0,
@@ -6676,7 +6676,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['2f0873e7241861458aeb2a1c6dac9480'] = array(
     'source' => 'Sep',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '9月',
     'plid' => 0,
     'plural' => 0,
@@ -6684,7 +6684,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['d0feb2762d87f19189c43c74a84296a8'] = array(
     'source' => 'Oct',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '10月',
     'plid' => 0,
     'plural' => 0,
@@ -6692,7 +6692,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['66d61f57bb29c430dc6fa8c67f1b7002'] = array(
     'source' => 'Nov',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '11月',
     'plid' => 0,
     'plural' => 0,
@@ -6700,7 +6700,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['0a02debfefcdce4eed3a6e3eb99671ea'] = array(
     'source' => 'Dec',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '12月',
     'plid' => 0,
     'plural' => 0,
@@ -6900,7 +6900,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['c6765e431f7f93b91b021596b7c55d71'] = array(
     'source' => 'Su',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '日',
     'plid' => 0,
     'plural' => 0,
@@ -6908,7 +6908,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['bafe61a3f7b6ef4b240d4c99e135b2ae'] = array(
     'source' => 'Mo',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '月',
     'plid' => 0,
     'plural' => 0,
@@ -6916,7 +6916,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['dc148762a9b6d2a8d0e61a0e0fca37ca'] = array(
     'source' => 'Tu',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '火',
     'plid' => 0,
     'plural' => 0,
@@ -6924,7 +6924,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['d8b2e40b49226ca484c969a85f380cd4'] = array(
     'source' => 'We',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '水',
     'plid' => 0,
     'plural' => 0,
@@ -6932,7 +6932,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['1c0eaa3cc61ee1f097bfc71a38bda041'] = array(
     'source' => 'Th',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '木',
     'plid' => 0,
     'plural' => 0,
@@ -6940,7 +6940,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['8cbc14f867fbaa564dd12cd75ffe41bd'] = array(
     'source' => 'Fr',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '金',
     'plid' => 0,
     'plural' => 0,
@@ -6948,7 +6948,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['e0da55a8e41b9ee89270f2b5d199db6e'] = array(
     'source' => 'Sa',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => '土',
     'plid' => 0,
     'plural' => 0,
@@ -7596,7 +7596,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['59d16f561ead061e48a1000af68dfca5'] = array(
     'source' => 'Not published',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/content_types.js; modules/node/node.js',
     'translation' => '非掲載',
     'plid' => 0,
     'plural' => 0,
@@ -11428,7 +11428,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['0f821da1b0d3b1c38b9729e686b6833b'] = array(
     'source' => 'mm/dd/yy',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/locale/locale.datepicker.js',
     'translation' => 'yy/mm/dd',
     'plid' => 0,
     'plural' => 0,
@@ -13524,7 +13524,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['5d840b1c55c896bbed0d066304a5f6ef'] = array(
     'source' => 'By @name on @date',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => '日付 @date 　　投稿者 @name',
     'plid' => 0,
     'plural' => 0,
@@ -13532,7 +13532,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['0b4014e871448de20adeab82f254e1d6'] = array(
     'source' => 'By @name',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => '@name 作成',
     'plid' => 0,
     'plural' => 0,
@@ -13540,7 +13540,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['d38225bad9970fc1b9702c8ea4db9420'] = array(
     'source' => 'Not in menu',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/menu/menu.js',
     'translation' => 'メニューには表示されていません。',
     'plid' => 0,
     'plural' => 0,
@@ -13548,7 +13548,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['dcd26b4ecfef42500f147c1096a033f3'] = array(
     'source' => 'Alias: @alias',
     'context' => '',
-    'location' => '',
+    'location' => '; profiles/imagex_installkit/modules/contrib/pathauto/pathauto.js',
     'translation' => 'エイリアス: @alias',
     'plid' => 0,
     'plural' => 0,
@@ -13556,7 +13556,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['273fef4fc1a989e11ea42b4ab6741c47'] = array(
     'source' => 'No alias',
     'context' => '',
-    'location' => '',
+    'location' => '; profiles/imagex_installkit/modules/contrib/pathauto/pathauto.js',
     'translation' => 'エイリアスなし',
     'plid' => 0,
     'plural' => 0,
@@ -13660,7 +13660,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['c73ea58a8a75cc185b1591da4221393a'] = array(
     'source' => 'New revision',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => '新規リビジョン',
     'plid' => 0,
     'plural' => 0,
@@ -16300,7 +16300,7 @@ function linux_multilingual_translations_defaults() {
   $translations['ja:default']['60f46e50c42c0394b448b310aa7376c8'] = array(
     'source' => 'The changes to these blocks will not be saved until the <em>Save blocks</em> button is clicked.',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/block/block.js',
     'translation' => '「ブロックの保存」ボタンをクリックするまで、これらのブロックへの変更は保存されません。',
     'plid' => 0,
     'plural' => 0,
@@ -20846,7 +20846,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['da059bcdb9af39974c042f1b856c95c5'] = array(
     'source' => 'No revision',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/node.js',
     'translation' => 'リビジョンなし',
     'plid' => 0,
     'plural' => 0,
@@ -20854,7 +20854,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['a720d7b8244c9b95ff7da7dfca0a1077'] = array(
     'source' => '@number comments per page',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/comment/comment-node-form.js',
     'translation' => '１ページあたり @number コメント',
     'plid' => 0,
     'plural' => 0,
@@ -20862,7 +20862,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['38e9d171fd858a4e80076cbd5956b224'] = array(
     'source' => 'Requires a title',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/content_types.js',
     'translation' => 'タイトルが必要です',
     'plid' => 0,
     'plural' => 0,
@@ -20878,7 +20878,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['c85d51df08876e72935a48d4b44ba06b'] = array(
     'source' => 'Not restricted',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/block/block.js',
     'translation' => '制限なし',
     'plid' => 0,
     'plural' => 0,
@@ -22534,7 +22534,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['229526f4858cfa7fbea1bf0617f5fa2e'] = array(
     'source' => 'Not customizable',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/block/block.js',
     'translation' => 'カスタマイズ不可',
     'plid' => 0,
     'plural' => 0,
@@ -22695,7 +22695,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['26382e1847972e0e53374d1c167b8471'] = array(
     'source' => 'Restricted to certain pages',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/block/block.js',
     'translation' => '特定のページに制限',
     'plid' => 0,
     'plural' => 0,
@@ -22703,7 +22703,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['07acfae79a768b20a482462c2d89038d'] = array(
     'source' => 'The block cannot be placed in this region.',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/block/block.js',
     'translation' => 'そのブロックはこのリージョンに設置できません。',
     'plid' => 0,
     'plural' => 0,
@@ -24063,7 +24063,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['e50b8483327eff6a8015fb2eed406f5e'] = array(
     'source' => 'Hide summary',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/field/modules/text/text.js',
     'translation' => '概要を隠す',
     'plid' => 0,
     'plural' => 0,
@@ -24071,7 +24071,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['72dcd863a72f235ab9a25e3811c7ddc1'] = array(
     'source' => 'Edit summary',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/field/modules/text/text.js',
     'translation' => '概要を編集',
     'plid' => 0,
     'plural' => 0,
@@ -27431,7 +27431,7 @@ Unless you know what you are doing, it is highly recommended that you prefix the
   $translations['ja:default']['3c48de6e99eb7341877ed1be27678cfd'] = array(
     'source' => 'Don\'t display post information',
     'context' => '',
-    'location' => '',
+    'location' => '; modules/node/content_types.js',
     'translation' => '投稿情報を表示しない',
     'plid' => 0,
     'plural' => 0,
