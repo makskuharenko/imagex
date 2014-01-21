@@ -10,6 +10,7 @@ dependencies[] = advanced_forum
 ; dependencies[] = creativecommons
 dependencies[] = compact_forms
 dependencies[] = flickr
+dependencies[] = luxe
 dependencies[] = og
 dependencies[] = og_role_field
 dependencies[] = pardot

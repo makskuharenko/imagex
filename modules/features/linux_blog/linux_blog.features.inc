@@ -272,11 +272,6 @@ function linux_blog_panelizer_defaults_override_alter(&$data) {
       8 => 'new-10',
       9 => 'new-11',
       10 => 'new-12',
-      11 => 'new-13',
-    ); /* WAS: '' */
-    $data['node:blog:default']->display->panels['three_25_50_25_third'] = array(
-      0 => 'new-14',
-      1 => 'new-15',
     ); /* WAS: '' */
     $data['node:blog:default']->display->title_pane = 'new-11'; /* WAS: 'new-4' */
     unset($data['node:blog:default']->display->content['new-1']->configuration['context']);
