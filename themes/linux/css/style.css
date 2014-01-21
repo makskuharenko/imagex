@@ -4093,10 +4093,10 @@ ul.tabs.secondary {
 nav.tabs {
   display: inline-block;
   width: 100%;
-  margin: 0 0 20px; }
+  margin: 0 0 14px; }
 
 .not-front nav.tabs {
-  margin: 20px 0; }
+  margin: 20px 0 14px; }
 
 #mini-panel-mobile_main_menu {
   position: relative;
