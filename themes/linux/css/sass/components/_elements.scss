@@ -904,7 +904,19 @@ small {
   background: white;
   text-align: center;
 
+  .header-region {
+    margin: 35px 0 0;
+    display: inline-block;
+    width: 100%;
+
+    @include at-breakpoint($wide) {
+      margin: 0;
+    }
+  }
+
   @include at-breakpoint($wide) {
+    margin: 0;
+
     &.fixed {
       position: fixed;
       z-index: 999;
@@ -2741,8 +2753,6 @@ div[role="main"] {
 // ------------------------------------
 
 .user-log-links {
-  position: absolute;
-  right: 0;
   background: $gray;
   height: 32px;
   @include border-bottom-left-radius(2px);
@@ -2751,6 +2761,15 @@ div[role="main"] {
   padding: 5px 12px;
   font-size: 9px;
   text-transform: uppercase;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+
+  @include at-breakpoint($tablet) {
+    right: 0;
+    width: auto;
+  }
 
   a {
     color: white;
