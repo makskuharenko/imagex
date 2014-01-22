@@ -2241,18 +2241,6 @@ function linux_user_permissions_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'Content Administrator' => 'Content Administrator',
-      'Content Creator' => 'Content Creator',
-      'Content Manager' => 'Content Manager',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'migration information'.
   $permissions['migration information'] = array(
     'name' => 'migration information',
