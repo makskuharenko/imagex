@@ -254,6 +254,10 @@
   position: relative;
   z-index: 501;
 
+  .user-region {
+    position: relative;
+  }
+
   .nice-menu {
     > .menuparent {
       width: 235px;
@@ -474,7 +478,7 @@ nav.tabs {
         background: white;
         @include border-radius(4px);
         width: 100%;
-        height: 35px;
+        height: 41px;
         font-weight: normal;
       }
 

@@ -45,5 +45,7 @@ function linux_foundation_network_header_strongarm() {
   $strongarm->value = 'down';
   $export['nice_menus_type_2'] = $strongarm;
 
+  features_alter_code('variable', $export);
+
   return $export;
 }
