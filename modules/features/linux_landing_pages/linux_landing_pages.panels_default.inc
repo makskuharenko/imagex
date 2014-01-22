@@ -21,7 +21,7 @@ function linux_landing_pages_default_panels_mini() {
   $mini->contexts = array();
   $mini->relationships = array();
   $display = new panels_display();
-  $display->layout = 'one_mp_fw';
+  $display->layout = 'one_mp';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -35,7 +35,7 @@ function linux_landing_pages_default_panels_mini() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_events-panel_pane_1';
     $pane->shown = TRUE;
@@ -74,10 +74,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['minipanel_one_main_fw'][0] = 'new-1';
+    $display->panels['minipanel_one_main'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'linux_widgets_training-linux-training-feed';
     $pane->shown = TRUE;
@@ -98,10 +98,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['minipanel_one_main_fw'][1] = 'new-2';
+    $display->panels['minipanel_one_main'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'bean-adspace-landing-page-right-sideb';
     $pane->shown = TRUE;
@@ -119,10 +119,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['minipanel_one_main_fw'][2] = 'new-3';
+    $display->panels['minipanel_one_main'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_1';
     $pane->shown = TRUE;
@@ -145,10 +145,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['minipanel_one_main_fw'][3] = 'new-4';
+    $display->panels['minipanel_one_main'][3] = 'new-4';
     $pane = new stdClass();
     $pane->pid = 'new-5';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'node_uuid';
     $pane->subtype = 'node_uuid';
     $pane->shown = TRUE;
@@ -176,9 +176,9 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
-    $display->panels['minipanel_one_main_fw'][4] = 'new-5';
+    $display->panels['minipanel_one_main'][4] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['global_landing_page_right'] = $mini;
 
@@ -193,7 +193,7 @@ function linux_landing_pages_default_panels_mini() {
   $mini->contexts = array();
   $mini->relationships = array();
   $display = new panels_display();
-  $display->layout = 'one_mp_fw';
+  $display->layout = 'one_mp';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -207,7 +207,7 @@ function linux_landing_pages_default_panels_mini() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-6';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_events-panel_pane_1';
     $pane->shown = TRUE;
@@ -246,10 +246,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-6'] = $pane;
-    $display->panels['minipanel_one_main_fw'][0] = 'new-6';
+    $display->panels['minipanel_one_main'][0] = 'new-6';
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'linux_widgets_training-linux-training-feed';
     $pane->shown = TRUE;
@@ -270,10 +270,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['minipanel_one_main_fw'][1] = 'new-7';
+    $display->panels['minipanel_one_main'][1] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'block';
     $pane->subtype = 'bean-adspace-landing-page-right-sideb';
     $pane->shown = TRUE;
@@ -291,10 +291,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['minipanel_one_main_fw'][2] = 'new-8';
+    $display->panels['minipanel_one_main'][2] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'views_panes';
     $pane->subtype = 'landing_pages-panel_pane_1';
     $pane->shown = TRUE;
@@ -317,10 +317,10 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['minipanel_one_main_fw'][3] = 'new-9';
+    $display->panels['minipanel_one_main'][3] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'minipanel_one_main_fw';
+    $pane->panel = 'minipanel_one_main';
     $pane->type = 'node_uuid';
     $pane->subtype = 'node_uuid';
     $pane->shown = TRUE;
@@ -348,9 +348,9 @@ function linux_landing_pages_default_panels_mini() {
     $pane->position = 4;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['minipanel_one_main_fw'][4] = 'new-10';
+    $display->panels['minipanel_one_main'][4] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-6';
+  $display->title_pane = '0';
   $mini->display = $display;
   $export['global_standard_page_right'] = $mini;
 
