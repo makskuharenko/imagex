@@ -2589,8 +2589,12 @@ textarea {
 select {
   margin: 0;
   padding: 6px;
-  height: auto;
-  width: auto; }
+  width: auto;
+  height: 35px !important;
+  background-color: #eeeeee;
+  border: none;
+  font-weight: bold;
+  padding-left: 10px; }
 
 button[disabled],
 input[disabled],

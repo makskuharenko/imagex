@@ -1,4 +1,4 @@
-// Note: This file is dependent on Sass and Compass.
+   // Note: This file is dependent on Sass and Compass.
 // Sass = http://sass-lang.com
 // Compass = http://compass-style.org
 
@@ -209,8 +209,12 @@ textarea {
 select {
   margin: 0;
   padding: 6px;
-  height: auto;
   width: auto;
+  height: 35px !important;
+  background-color: rgb(238, 238, 238);
+  border: none;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 button[disabled],
