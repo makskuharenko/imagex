@@ -3685,6 +3685,10 @@ input[type="submit"].btn {
 .alert-block p + p {
   margin-top: 5px; }
 
+.drupal-messages {
+  float: left;
+  margin-bottom: 14px; }
+
 #block-panels-mini-global-header .linux-main-menu {
   display: none; }
   #block-panels-mini-global-header .linux-main-menu ul.nice-menu {
