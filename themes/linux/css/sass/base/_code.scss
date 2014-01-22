@@ -56,3 +56,12 @@ pre {
   max-height: 340px;
   overflow-y: scroll;
 }
+
+// Filter/Tips page code snippet styles
+
+.filter-type {
+  code {
+    color: $linuxStdOrange;
+    font-size: $baseFontSize - 1;
+  }
+}

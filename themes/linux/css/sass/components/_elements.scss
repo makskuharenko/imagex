@@ -2737,6 +2737,36 @@ div[role="main"] {
   }
 }
 
+// User login and logout links
+// ------------------------------------
+
+.user-log-links {
+  position: absolute;
+  right: 0;
+  background: $gray;
+  height: 32px;
+  @include border-bottom-left-radius(2px);
+  @include border-bottom-right-radius(2px);
+  color: white;
+  padding: 5px 12px;
+  font-size: 9px;
+  text-transform: uppercase;
+
+  a {
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:first-child {
+      border-right: 1px solid $grayLight;
+      padding: 0 7px 0 0;
+      margin: 0 7px 0 0;
+    }
+  }
+}
+
 // AddToAny
 // theme as flat icons unless .addtoany-dropdown class present
 // ------------------------------------
@@ -2827,4 +2857,39 @@ div[role="main"] {
 
 }
 
+// Filter/Tips page styling
+// -----------------------------------------
 
+.filter-type {
+  background: #EAEAEA url('../img/content-lines.png') repeat top left;
+  padding: 25px;
+  margin: 0 0 25px;
+  @include border-radius(3px);
+
+  object {
+    position: relative !important;
+  }
+
+  h3 {
+    margin: 0 0 1em;
+  }
+
+  ul {
+    margin: 0 25px;
+
+    li {
+      font-weight: bold;
+    }
+  }
+}
+
+.page-filter-tips {
+  h1 {
+    padding: 0 0 0.35em;
+    border-bottom: 1px solid $dropdownDividerTop;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
