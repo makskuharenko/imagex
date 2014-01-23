@@ -8,7 +8,7 @@ includes[] = "https://raw.github.com/imagex/imagex_installkit/7.x-1.x/drupal-org
 projects[imagex_installkit][type] = "profile"
 projects[imagex_installkit][download][type] = "git"
 projects[imagex_installkit][download][url] = "git@github.com:imagex/imagex_installkit.git"
-projects[imagex_installkit][download][tag] = "7.x-1.0.1"
+projects[imagex_installkit][download][tag] = "7.x-1.0.2"
 projects[imagex_installkit][patch][] = "http://github.develop.ixm.ca/get.php?repo=linux.com&path=patches/imagex_installkit/drupal-org.make-versions-and-patches.patch"
 
 ; Download the Linux.com's installation profile, inherits ImageX base.
