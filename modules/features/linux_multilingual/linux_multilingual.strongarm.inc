@@ -481,6 +481,13 @@ function linux_multilingual_strongarm() {
   );
   $export['variable_realm_list_language'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_localization_plugin';
+  $strongarm->value = 'i18nstrings';
+  $export['views_localization_plugin'] = $strongarm;
+
   features_alter_code('variable', $export);
 
   return $export;

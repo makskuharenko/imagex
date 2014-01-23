@@ -73,6 +73,14 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
+  $translations['ja:default']['fe2874cc5a4550c7835db0c6038dbb34'] = array(
+    'source' => 'Please wait...',
+    'context' => '',
+    'location' => '; misc/ajax.js',
+    'translation' => 'しばらくお待ちください...',
+    'plid' => 0,
+    'plural' => 0,
+  );
   $translations['ja:default']['82f39f739d3507106bbc9387c7ff6876'] = array(
     'source' => 'Configure',
     'context' => '',
@@ -81,11 +89,19 @@ function linux_multilingual_translations_defaults() {
     'plid' => 0,
     'plural' => 0,
   );
-  $translations['ja:default']['fe2874cc5a4550c7835db0c6038dbb34'] = array(
-    'source' => 'Please wait...',
+  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
+    'source' => 'Edit',
     'context' => '',
-    'location' => '; misc/ajax.js',
-    'translation' => 'しばらくお待ちください...',
+    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js; misc/machine-name.js',
+    'translation' => '編集',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translations['ja:default']['86dcff77a1656d9df7945a70e7d96ef9'] = array(
+    'source' => '(active tab)',
+    'context' => '',
+    'location' => '; misc/vertical-tabs.js',
+    'translation' => '(アクティブなタブ)',
     'plid' => 0,
     'plural' => 0,
   );
@@ -1094,14 +1110,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => '日付と時刻',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['e407e40f16f4638cae791db015287a5d'] = array(
-    'source' => 'Edit',
-    'context' => '',
-    'location' => '; profiles/imagex_installkit/modules/contrib/features/features.js; misc/machine-name.js',
-    'translation' => '編集',
     'plid' => 0,
     'plural' => 0,
   );
@@ -3615,14 +3623,6 @@ function linux_multilingual_translations_defaults() {
     'context' => '',
     'location' => '',
     'translation' => 'プライマリータブ',
-    'plid' => 0,
-    'plural' => 0,
-  );
-  $translations['ja:default']['86dcff77a1656d9df7945a70e7d96ef9'] = array(
-    'source' => '(active tab)',
-    'context' => '',
-    'location' => '; misc/vertical-tabs.js',
-    'translation' => '(アクティブなタブ)',
     'plid' => 0,
     'plural' => 0,
   );
