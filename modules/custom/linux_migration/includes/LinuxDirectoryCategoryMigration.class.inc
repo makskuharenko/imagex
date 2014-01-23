@@ -6,9 +6,10 @@ class LinuxDirectoryCategoryMigration extends LinuxMigration {
   }
   protected function setFieldMappings() {
     $this->addFieldMapping('name', 'cat_name');
-    $this->addFieldMapping('description', 'cat_desc')->arguments(array('format' => 'filtered_html'));;
+    $this->addFieldMapping('description', 'cat_desc');
     $this->addFieldMapping('weight', 'ordering');
     $this->addFieldMapping('parent', 'cat_parent')->sourceMigration($this->machineName);
+    $this->addFieldMapping('format')->defaultValue('filtered_html');
   }
   public function prepareRow($row) {
     $row->cat_parent = (!$row->cat_parent) ? NULL : $row->cat_parent;

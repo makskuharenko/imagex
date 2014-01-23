@@ -19,11 +19,11 @@ table {
 table {
   width: 100%;
   margin: $baseLineHeight 0;
-  
+
   tr.even, tr.odd {
     background: transparent;
   }
-  
+
   // Cells
   th,
   td {
@@ -47,7 +47,7 @@ table {
     border-top: 1px solid $tableBorder;
     border-bottom: 1px solid $tableBorder;
     font-family: $condensedFontFamily;
-    
+
     th {
       vertical-align: bottom;
     }
@@ -246,14 +246,14 @@ Drupal Tables
 
 // Calendar module tables
 // @todo - extend to other views
-// ------------------------------------- 
+// -------------------------------------
 .calendar-calendar {
   // Month view
   .month-view {
     table {
       margin: $baseLineHeight 0;
     }
-    
+
     // Elements
     td.past .inner {
       @include opacity(0.3);
@@ -265,7 +265,7 @@ Drupal Tables
       td {
         padding: 0;
       }
-      
+
       .day,
       .days,
       .week {
@@ -282,14 +282,40 @@ Drupal Tables
         border-radius: 0;
         line-height: 1.4;
         font-size: 11px;
-        
+
         .views-field-title {
           font-size: 12px;
           margin-bottom: 4px;
         }
       }
-      
+
     }
   }
 }
 
+
+// Filter/Tips page styling
+// -----------------------------------------
+
+.filter-type {
+  table {
+    border-color: #eaeaea;
+    font-weight: normal;
+    background: white;
+
+    thead,
+    tbody {
+      border-color: #eaeaea;
+
+      tr {
+        border-color: #eaeaea;
+
+        th,
+        td {
+          background: transparent;
+          border-color: #eaeaea;
+        }
+      }
+    }
+  }
+}
