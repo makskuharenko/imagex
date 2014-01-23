@@ -3087,59 +3087,53 @@ Drupal Tables
         background: transparent;
         border-color: #eaeaea; }
 
-table.diff {
-  background: white url("../img/content-lines.png") repeat top left;
-  padding: 25px;
-  display: block; }
-  table.diff thead {
+table.diff thead {
+  border: none; }
+  table.diff thead tr {
+    padding: 0;
     border: none; }
-    table.diff thead tr {
-      padding: 0;
-      border: none; }
-      table.diff thead tr th {
-        background: #FFF;
-        padding: 1em 0 1em 0.6em;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: capitalize;
-        font-style: italic; }
-  table.diff tbody tr {
-    padding: 0; }
-    table.diff tbody tr td {
-      background: #FFF; }
-      table.diff tbody tr td.diff-links {
-        text-align: center;
-        background: #333333;
-        padding-top: 1em;
-        color: white; }
-        table.diff tbody tr td.diff-links ul {
-          margin: 0; }
-          table.diff tbody tr td.diff-links ul a {
-            color: #f17700; }
-      table.diff tbody tr td.diff-section-title {
-        background-color: #333333;
-        text-align: center;
-        padding-bottom: 1em;
-        font-size: 20px;
-        border-top: 0;
-        color: white; }
-      table.diff tbody tr td.diff-addedline {
-        background-color: #afa; }
-      table.diff tbody tr td.diff-deletedline {
-        background-color: #ffa; }
-      table.diff tbody tr td.diff-marker {
-        font-weight: bold;
-        font-size: 20px; }
-      table.diff tbody tr td.diff-context {
-        border-right: 2px solid #333333; }
-      table.diff tbody tr td:last-child {
-        border-right: none; }
-      table.diff tbody tr td.diff-prevlink, table.diff tbody tr td.diff-nextlink {
-        font-size: 11px; }
-      table.diff tbody tr td .diffchange {
-        color: #e65b04; }
-      table.diff tbody tr td p.revision-log {
-        margin: 0;
-        display: none; }
+    table.diff thead tr th {
+      background: #FFF;
+      padding: 1em 0 1em 0.6em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+table.diff tbody tr {
+  padding: 0; }
+  table.diff tbody tr td {
+    background: #FFF; }
+    table.diff tbody tr td.diff-links {
+      text-align: center;
+      background: #f17700;
+      padding-top: 1em;
+      color: white; }
+      table.diff tbody tr td.diff-links ul {
+        margin: 0; }
+        table.diff tbody tr td.diff-links ul a {
+          color: #333333; }
+    table.diff tbody tr td.diff-section-title {
+      background-color: #f17700;
+      text-align: center;
+      padding-bottom: 1em;
+      font-size: 20px;
+      border-top: 0;
+      color: white; }
+    table.diff tbody tr td.diff-addedline {
+      background-color: #afa; }
+    table.diff tbody tr td.diff-deletedline {
+      background-color: #ffa; }
+    table.diff tbody tr td.diff-marker {
+      font-weight: bold;
+      font-size: 20px; }
+    table.diff tbody tr td.diff-context {
+      border-right: 2px solid #f17700; }
+    table.diff tbody tr td:last-child {
+      border-right: none; }
+    table.diff tbody tr td.diff-prevlink, table.diff tbody tr td.diff-nextlink {
+      font-size: 11px; }
+    table.diff tbody tr td .diffchange {
+      color: #e65b04; }
+    table.diff tbody tr td p.revision-log {
+      margin: 0;
+      display: none; }
 
 img {
   max-width: 100%;

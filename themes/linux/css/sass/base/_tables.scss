@@ -323,10 +323,6 @@ Drupal Tables
 // -----------------------------------------
 
 table.diff {
-  background: #FFF url('../img/content-lines.png') repeat top left;
-  padding: 25px;
-  display: block;
-
   thead {
     border: none;
 
@@ -338,8 +334,6 @@ table.diff {
         background: #FFF;
         padding: 1em 0 1em 0.6em;
         font-family: $sansFontFamily;
-        text-transform: capitalize;
-        font-style: italic;
       }
     }
   }
@@ -353,7 +347,7 @@ table.diff {
 
         &.diff-links {
           text-align: center;
-          background: $grayDark;
+          background: $linuxStdOrange;
           padding-top: 1em;
           color: white;
 
@@ -361,13 +355,13 @@ table.diff {
             margin: 0;
 
             a {
-              color: $linuxStdOrange;
+              color: $grayDark;
             }
           }
         }
 
         &.diff-section-title {
-          background-color: $grayDark;
+          background-color: $linuxStdOrange;
           text-align: center;
           padding-bottom: 1em;
           font-size: 20px;
@@ -389,7 +383,7 @@ table.diff {
         }
 
         &.diff-context {
-          border-right: 2px solid $grayDark;
+          border-right: 2px solid $linuxStdOrange;
         }
 
         &:last-child {
