@@ -3127,7 +3127,8 @@ table.diff {
       table.diff tbody tr td.diff-deletedline {
         background-color: #ffa; }
       table.diff tbody tr td.diff-marker {
-        font-weight: bold; }
+        font-weight: bold;
+        font-size: 20px; }
       table.diff tbody tr td.diff-context {
         border-right: 2px solid #333333; }
       table.diff tbody tr td:last-child {
