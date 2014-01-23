@@ -5409,6 +5409,14 @@ div.messages {
       margin: 0 15px 0 0;
       text-align: center; }
 
+.print_html {
+  margin: 0; }
+  .print_html a {
+    background: transparent url("../img/print-this.png") no-repeat center left;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 22px;
+    font-size: 12px; }
+
 .not-front #header-wrapper {
   padding: 0;
   margin-bottom: -1px; }
@@ -5670,7 +5678,8 @@ div.messages {
   list-style-type: none; }
   .not-front ul.links li {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    padding: 0; }
     @media (min-width: 35em) {
       .not-front ul.links li {
         display: inline-block;
@@ -6139,6 +6148,15 @@ a {
   background: #807f83 url("../img/header-lines.png") repeat top left;
   font-weight: 600;
   text-transform: uppercase; }
+  #footer-wrapper footer.row {
+    position: relative; }
+  #footer-wrapper .print_html {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    text-transform: capitalize; }
   #footer-wrapper .pane-menu-menu-footer ul .expanded {
     margin-right: 0; }
   #footer-wrapper #block-bean-about-linux-foundation {

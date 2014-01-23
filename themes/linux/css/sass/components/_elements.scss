@@ -88,6 +88,17 @@ div.messages {
   }
 }
 
+.print_html {
+  margin: 0;
+
+  a {
+    background: transparent url('../img/print-this.png') no-repeat center left;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 22px;
+    font-size: 12px;
+  }
+}
+
 .not-front {
   #header-wrapper {
     padding: 0;
@@ -182,7 +193,7 @@ div.messages {
   .node-date {
     margin-bottom:15px;
   }
-  
+
   .node .date,
   .node-meta,
   .node-date,
@@ -460,6 +471,7 @@ div.messages {
     li {
       display: block;
       margin-bottom: 10px;
+      padding: 0;
 
       @include at-breakpoint($tablet) {
         display: inline-block;
@@ -994,6 +1006,19 @@ small {
   background: $userBar url('../img/header-lines.png') repeat top left;
   font-weight: 600;
   text-transform: uppercase;
+
+  footer.row {
+    position: relative;
+  }
+
+  .print_html {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
 
   .pane-menu-menu-footer ul {
     .expanded {
