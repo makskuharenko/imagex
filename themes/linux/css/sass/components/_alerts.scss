@@ -63,3 +63,11 @@
 .alert-block p + p {
   margin-top: 5px;
 }
+
+// Drupal warnings alignment adjustment
+// --------------------------
+
+.drupal-messages {
+  float:left;
+  margin-bottom:14px;
+}
