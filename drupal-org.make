@@ -91,7 +91,7 @@ projects[imagex_answers][type] = "module"
 projects[imagex_answers][subdir] = "imagex/modules"
 projects[imagex_answers][download][type] = "git"
 projects[imagex_answers][download][url] = "git@github.com:imagex/imagex_answers.git"
-projects[imagex_answers][download][tag] = "7.x-1.0"
+projects[imagex_answers][download][tag] = "7.x-1.0.1"
 
 projects[imagex_blog][type] = "module"
 projects[imagex_blog][subdir] = "imagex/modules"
