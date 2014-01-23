@@ -179,8 +179,8 @@ dfn {
  * Known issue: no IE 6/7 normalization.
  */
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -306,17 +306,17 @@ fieldset {
   border-color: #c0c0c0;
   margin: 0 2px;
   /* Apply borders and padding that keep the vertical rhythm. */
-  border-top-width: 0.0625em;
   border-top-style: solid;
+  border-top-width: 0.0625em;
   padding-top: 0.4625em;
-  border-bottom-width: 0.0625em;
   border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
   padding-bottom: 0.9125em;
-  border-left-width: 0.0625em;
   border-left-style: solid;
+  border-left-width: 0.0625em;
   padding-left: 0.875em;
-  border-right-width: 0.0625em;
   border-right-style: solid;
+  border-right-width: 0.0625em;
   padding-right: 0.875em; }
 
 /**
@@ -406,8 +406,8 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -425,8 +425,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   /* 2 */ }
 
@@ -476,7 +476,7 @@ img, video {
   max-width: 100%;
   height: auto; }
 
-/*!
+/*
  *  Font Awesome 3.0.2
  *  the iconic font designed for use with Twitter Bootstrap
  *  -------------------------------------------------------
@@ -504,6 +504,7 @@ img, video {
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.0.1") format("truetype"), url("../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /*  Font Awesome styles
     ------------------------------------------------------- */
 /* makes the font 33% larger relative to the icon container */
@@ -513,30 +514,35 @@ img, video {
 
   100% {
     -moz-transform: rotate(359deg); } }
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
 
   100% {
     -webkit-transform: rotate(359deg); } }
+
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg); }
 
   100% {
     -o-transform: rotate(359deg); } }
+
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg); }
 
   100% {
     -ms-transform: rotate(359deg); } }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg); }
 
   100% {
     transform: rotate(359deg); } }
+
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
     readers do not read off random characters that represent icons */
 /* \f020 doesn't work in Safari. all shifted one down */
@@ -575,13 +581,13 @@ $wide: 80em;
   padding-right: 1.5em;
   margin-left: auto;
   margin-right: auto;
-  -moz-background-origin: content;
-  -o-background-origin: content-box;
   -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
   background-origin: content-box;
-  -moz-background-clip: content;
-  -o-background-clip: content-box;
-  -webkit-background-clip: content;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
   background-clip: content-box; }
   .container:after {
     content: "";
@@ -589,19 +595,18 @@ $wide: 80em;
     clear: both; }
   @media (min-width: 22.75em) {
     .container {
-      *zoom: 1;
       max-width: 43.5em;
       padding-left: 1.5em;
       padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
-      -moz-background-origin: content;
-      -o-background-origin: content-box;
       -webkit-background-origin: content;
+      -moz-background-origin: content;
+      -ms-background-origin: content-box;
+      -o-background-origin: content-box;
       background-origin: content-box;
-      -moz-background-clip: content;
-      -o-background-clip: content-box;
-      -webkit-background-clip: content;
+      -webkit-background-clip: content-box;
+      -moz-background-clip: content-box;
       background-clip: content-box; }
       .container:after {
         content: "";
@@ -609,19 +614,18 @@ $wide: 80em;
         clear: both; } }
   @media (min-width: 35em) {
     .container {
-      *zoom: 1;
       max-width: 58.5em;
       padding-left: 1.5em;
       padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
-      -moz-background-origin: content;
-      -o-background-origin: content-box;
       -webkit-background-origin: content;
+      -moz-background-origin: content;
+      -ms-background-origin: content-box;
+      -o-background-origin: content-box;
       background-origin: content-box;
-      -moz-background-clip: content;
-      -o-background-clip: content-box;
-      -webkit-background-clip: content;
+      -webkit-background-clip: content-box;
+      -moz-background-clip: content-box;
       background-clip: content-box; }
       .container:after {
         content: "";
@@ -629,19 +633,18 @@ $wide: 80em;
         clear: both; } }
   @media (min-width: 49em) {
     .container {
-      *zoom: 1;
       max-width: 88.5em;
       padding-left: 1.5em;
       padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
-      -moz-background-origin: content;
-      -o-background-origin: content-box;
       -webkit-background-origin: content;
+      -moz-background-origin: content;
+      -ms-background-origin: content-box;
+      -o-background-origin: content-box;
       background-origin: content-box;
-      -moz-background-clip: content;
-      -o-background-clip: content-box;
-      -webkit-background-clip: content;
+      -webkit-background-clip: content-box;
+      -moz-background-clip: content-box;
       background-clip: content-box; }
       .container:after {
         content: "";
@@ -649,19 +652,18 @@ $wide: 80em;
         clear: both; } }
   @media (min-width: 62.125em) {
     .container {
-      *zoom: 1;
       max-width: 88.5em;
       padding-left: 1.5em;
       padding-right: 1.5em;
       margin-left: auto;
       margin-right: auto;
-      -moz-background-origin: content;
-      -o-background-origin: content-box;
       -webkit-background-origin: content;
+      -moz-background-origin: content;
+      -ms-background-origin: content-box;
+      -o-background-origin: content-box;
       background-origin: content-box;
-      -moz-background-clip: content;
-      -o-background-clip: content-box;
-      -webkit-background-clip: content;
+      -webkit-background-clip: content-box;
+      -moz-background-clip: content-box;
       background-clip: content-box; }
       .container:after {
         content: "";
@@ -2413,16 +2415,16 @@ button:invalid,
 a.button:invalid,
 select:invalid,
 textarea:invalid {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 input:focus,
 button:focus,
 a.button:focus,
 select:focus,
 textarea:focus {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   z-index: 1; }
 
@@ -2431,8 +2433,8 @@ input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
 input[type="checkbox"]:active {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 
 button,
@@ -2441,14 +2443,17 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   cursor: pointer;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   outline: 0;
   overflow: visible;
@@ -2479,12 +2484,13 @@ input[type="button"] {
   input[type="reset"]:active,
   input[type="submit"]:active,
   input[type="button"]:active {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dddddd), color-stop(100%, #eeeeee));
+    background-image: -webkit-linear-gradient(#dddddd, #eeeeee);
     background-image: -moz-linear-gradient(#dddddd, #eeeeee);
     background-image: -o-linear-gradient(#dddddd, #eeeeee);
-    background-image: -webkit-linear-gradient(#dddddd, #eeeeee);
     background-image: linear-gradient(#dddddd, #eeeeee);
-    -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
     -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
     box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
     border-color: #999999 #bbbbbb #dddddd; }
   button::-moz-focus-inner,
@@ -2517,15 +2523,16 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   -webkit-appearance: none;
   background-color: white;
@@ -2575,8 +2582,10 @@ input[type="url"],
 input[type="week"] {
   background: #eeeeee url("../img/form-line.png") repeat top left;
   border: none;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   margin: 0;
   padding: 0px 15px;
@@ -2603,8 +2612,8 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 a.button_disabled {
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -2684,8 +2693,10 @@ textarea {
   width: 100%;
   background: #eeeeee url("../img/form-line.png") repeat top left;
   border: none;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   margin: 0;
   padding: 10px;
@@ -2922,8 +2933,10 @@ table {
   border-collapse: separate;
   *border-collapse: collapse;
   border-left: 0;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
   .table-bordered th,
   .table-bordered td {
@@ -2951,8 +2964,10 @@ table {
   .table-bordered thead:last-child tr:last-child th:first-child,
   .table-bordered tbody:last-child tr:last-child td:first-child,
   .table-bordered tfoot:last-child tr:last-child td:first-child {
+    -webkit-border-radius: 0 0 0 4px;
     -moz-border-radius: 0 0 0 4px;
-    -webkit-border-radius: 0;
+    -ms-border-radius: 0 0 0 4px;
+    -o-border-radius: 0 0 0 4px;
     border-radius: 0 0 0 4px;
     -webkit-border-bottom-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -3072,6 +3087,58 @@ Drupal Tables
         background: transparent;
         border-color: #eaeaea; }
 
+table.diff thead {
+  border: none; }
+  table.diff thead tr {
+    padding: 0;
+    border: none; }
+    table.diff thead tr th {
+      background: #FFF;
+      padding: 1em 0 1em 0.6em;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+table.diff tbody tr {
+  padding: 0; }
+  table.diff tbody tr td {
+    background: #FFF; }
+    table.diff tbody tr td.diff-links {
+      text-align: center;
+      background: #f17700;
+      padding-top: 1em;
+      color: white;
+      border-top: 0; }
+      table.diff tbody tr td.diff-links ul {
+        margin: 0; }
+        table.diff tbody tr td.diff-links ul a {
+          color: #333333; }
+    table.diff tbody tr td.diff-section-title {
+      background-color: #f17700;
+      text-align: center;
+      padding-bottom: 1em;
+      font-size: 20px;
+      border-top: 0;
+      color: white; }
+    table.diff tbody tr td.diff-addedline {
+      background-color: #afa; }
+    table.diff tbody tr td.diff-deletedline {
+      background-color: #ffa; }
+    table.diff tbody tr td.diff-marker {
+      font-weight: bold;
+      font-size: 20px;
+      padding: 0;
+      text-align: center; }
+    table.diff tbody tr td.diff-context {
+      border-right: 2px solid #f17700; }
+    table.diff tbody tr td:last-child {
+      border-right: none; }
+    table.diff tbody tr td.diff-prevlink, table.diff tbody tr td.diff-nextlink {
+      font-size: 11px;
+      border-top: 0; }
+    table.diff tbody tr td .diffchange {
+      color: #e65b04; }
+    table.diff tbody tr td p.revision-log {
+      margin: 0;
+      display: none; }
+
 img {
   max-width: 100%;
   width: auto\9;
@@ -3086,10 +3153,11 @@ img {
 audio,
 canvas,
 video {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline; }
 
 audio:not([controls]) {
@@ -3101,15 +3169,18 @@ input.panels-ipe-cancel {
   margin: 5px;
   height: 33px;
   padding: 0 0.8em 0 33px;
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   color: #ddd;
   text-shadow: none;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   border: none; }
 
@@ -3136,10 +3207,11 @@ input.panels-ipe-cancel:active {
   margin-top: 12px;
   margin-bottom: 12px; }
   .btn-toolbar .btn-group {
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline; }
   .btn-toolbar .btn + .btn,
   .btn-toolbar .btn-group + .btn,
@@ -3148,8 +3220,10 @@ input.panels-ipe-cancel:active {
 
 .btn-group > .btn {
   position: relative;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0; }
 
 .btn-group > .btn + .btn {
@@ -3217,8 +3291,8 @@ input.panels-ipe-cancel:active {
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
-  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   *padding-top: 5px;
   *padding-bottom: 5px; }
@@ -3241,8 +3315,8 @@ input.panels-ipe-cancel:active {
 
 .btn-group.open .dropdown-toggle {
   background-image: none;
-  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
 .btn-group.open .btn.dropdown-toggle {
   background-color: #e6e6e6; }
@@ -3287,18 +3361,21 @@ input.panels-ipe-cancel:active {
   border-bottom-color: white; }
 
 .btn-group-vertical {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline; }
 
 .btn-group-vertical .btn {
   display: block;
   float: none;
   width: 100%;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0; }
 
 .btn-group-vertical .btn + .btn {
@@ -3306,30 +3383,39 @@ input.panels-ipe-cancel:active {
   margin-top: -1px; }
 
 .btn-group-vertical .btn:first-child {
+  -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0; }
 
 .btn-group-vertical .btn:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px; }
 
 .btn-group-vertical .btn-large:first-child {
+  -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
-  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
   border-radius: 6px 6px 0 0; }
 
 .btn-group-vertical .btn-large:last-child {
+  -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px; }
 
 .btn {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   padding: 4px 14px;
   margin-bottom: 0;
@@ -3357,12 +3443,14 @@ input.panels-ipe-cancel:active {
   border: 1px solid #bbbbbb;
   *border: 0;
   border-bottom-color: #a2a2a2;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   *margin-left: .3em;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
   .btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
     color: #333333;
@@ -3378,9 +3466,9 @@ input.panels-ipe-cancel:active {
     background-color: #e6e6e6;
     *background-color: #d9d9d9;
     background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
     -moz-transition: background-position 0.1s linear;
     -o-transition: background-position 0.1s linear;
-    -webkit-transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
   .btn:focus {
     outline: thin dotted #333;
@@ -3391,8 +3479,8 @@ input.panels-ipe-cancel:active {
     background-color: #d9d9d9 \9;
     background-image: none;
     outline: 0;
-    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
   .btn.disabled, .btn[disabled] {
     cursor: default;
@@ -3400,16 +3488,18 @@ input.panels-ipe-cancel:active {
     background-image: none;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
     opacity: 0.65;
-    -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none; }
 
 .btn-large {
   padding: 9px 14px;
   font-size: 16px;
   line-height: normal;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px; }
 
 .btn-large [class^="icon-"] {
@@ -3433,8 +3523,8 @@ input.panels-ipe-cancel:active {
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .btn-block + .btn-block {
@@ -3621,16 +3711,18 @@ input[type="submit"].btn {
 .btn-link[disabled] {
   background-color: transparent;
   background-image: none;
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 
 .btn-link {
   border-color: transparent;
   cursor: pointer;
   color: #0088cc;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0; }
 
 .btn-link:hover {
@@ -3648,8 +3740,10 @@ input[type="submit"].btn {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
   color: #c09853; }
 
@@ -3723,10 +3817,11 @@ input[type="submit"].btn {
       border: none;
       width: auto;
       float: none;
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       background: transparent;
       position: relative;
@@ -3807,8 +3902,8 @@ input[type="submit"].btn {
         z-index: 998;
         list-style: none;
         width: 220px;
-        -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
         -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3); }
         #block-panels-mini-global-header .linux-main-menu ul.nice-menu > li ul li {
           border: none;
@@ -3883,10 +3978,11 @@ input[type="submit"].btn {
         padding-right: 5px;
         text-decoration: none;
         /* sprites.less reset */
+        display: -moz-inline-stack;
         display: inline-block;
         vertical-align: middle;
         *vertical-align: auto;
-        *zoom: 1;
+        zoom: 1;
         *display: inline;
         width: auto;
         height: auto;
@@ -3907,10 +4003,11 @@ input[type="submit"].btn {
         padding-right: 5px;
         text-decoration: none;
         /* sprites.less reset */
+        display: -moz-inline-stack;
         display: inline-block;
         vertical-align: middle;
         *vertical-align: auto;
-        *zoom: 1;
+        zoom: 1;
         *display: inline;
         width: auto;
         height: auto;
@@ -3941,10 +4038,11 @@ input[type="submit"].btn {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -3965,10 +4063,11 @@ input[type="submit"].btn {
         padding-right: 5px;
         text-decoration: none;
         /* sprites.less reset */
+        display: -moz-inline-stack;
         display: inline-block;
         vertical-align: middle;
         *vertical-align: auto;
-        *zoom: 1;
+        zoom: 1;
         *display: inline;
         width: auto;
         height: auto;
@@ -4072,10 +4171,11 @@ ul.tabs.primary {
   background: #f17700;
   white-space: normal; }
   ul.tabs.primary li {
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     margin: 8px 0; }
     ul.tabs.primary li a {
@@ -4101,13 +4201,15 @@ ul.tabs.secondary {
   margin: 0;
   padding: 6px;
   border: none;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   text-align: center;
   background: #e65b04;
-  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1); }
   ul.tabs.secondary li {
     border: none;
@@ -4139,8 +4241,8 @@ nav.tabs {
     z-index: 501;
     background: white url("../img/content-lines.png") repeat top left;
     min-width: 280px;
-    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); }
     #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form {
       position: relative;
@@ -4155,10 +4257,11 @@ nav.tabs {
         padding-right: 5px;
         text-decoration: none;
         /* sprites.less reset */
+        display: -moz-inline-stack;
         display: inline-block;
         vertical-align: middle;
         *vertical-align: auto;
-        *zoom: 1;
+        zoom: 1;
         *display: inline;
         width: auto;
         height: auto;
@@ -4176,8 +4279,10 @@ nav.tabs {
       #mini-panel-mobile_main_menu .minipanel-one-fw-wrapper #search-block-form input[type="text"] {
         border: 1px solid #e5e5e5;
         background: white;
-        -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
         border-radius: 4px;
         width: 100%;
         height: 41px;
@@ -4189,8 +4294,10 @@ nav.tabs {
         z-index: 10;
         top: 0px;
         right: 10px;
-        -moz-border-radius: 0px;
         -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
         border-radius: 0px;
         background: transparent;
         content: "\f100";
@@ -4265,10 +4372,11 @@ nav.tabs {
   outline: 0; }
 
 .caret {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   width: 0;
   height: 0;
@@ -4298,11 +4406,13 @@ nav.tabs {
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -4423,15 +4533,17 @@ nav.tabs {
 
 .typeahead {
   margin-top: 2px;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
 
 .fade {
   opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
   -moz-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
-  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   .fade.in {
     opacity: 1; }
@@ -4440,9 +4552,9 @@ nav.tabs {
   position: relative;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
-  -webkit-transition: height 0.35s ease;
   transition: height 0.35s ease; }
   .collapse.in {
     height: auto; }
@@ -4534,8 +4646,10 @@ nav.tabs {
   padding-bottom: 8px;
   line-height: 24px;
   border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0; }
   .nav-tabs > li > a:hover {
     border-color: #eeeeee #eeeeee #dddddd; }
@@ -4553,8 +4667,10 @@ nav.tabs {
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px; }
 
 .nav-pills > .active > a,
@@ -4573,8 +4689,10 @@ nav.tabs {
 
 .nav-tabs.nav-stacked > li > a {
   border: 1px solid #ddd;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0; }
 
 .nav-tabs.nav-stacked > li:first-child > a {
@@ -4604,13 +4722,17 @@ nav.tabs {
   margin-bottom: 1px; }
 
 .nav-tabs .dropdown-menu {
+  -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 0 6px 6px;
+  -o-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px; }
 
 .nav-pills .dropdown-menu {
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px; }
 
 .nav .dropdown-toggle .caret {
@@ -4649,7 +4771,7 @@ nav.tabs {
 .nav li.dropdown.open a:hover .caret {
   border-top-color: white;
   border-bottom-color: white;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
 .tabs-stacked .open > a:hover {
@@ -4683,8 +4805,10 @@ nav.tabs {
   margin-bottom: 0; }
 
 .tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px; }
   .tabs-below > .nav-tabs > li > a:hover {
     border-bottom-color: transparent;
@@ -4711,8 +4835,10 @@ nav.tabs {
 
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px; }
 
 .tabs-left > .nav-tabs > li > a:hover {
@@ -4730,8 +4856,10 @@ nav.tabs {
 
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0; }
 
 .tabs-right > .nav-tabs > li > a:hover {
@@ -4763,14 +4891,17 @@ nav.tabs {
   margin: 0 0 24px;
   list-style: none;
   background-color: #f5f5f5;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
   .breadcrumb li {
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     text-shadow: 0 1px 0 white; }
   .breadcrumb .divider {
@@ -4826,18 +4957,21 @@ nav.tabs {
   margin: 24px 0; }
 
 .pagination ul {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   margin-left: 0;
   margin-bottom: 0;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
 
 .pagination ul > li {
@@ -4873,14 +5007,18 @@ nav.tabs {
 .pagination ul > li:first-child > a,
 .pagination ul > li:first-child > span {
   border-left-width: 1px;
+  -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px 0 0 3px;
+  -o-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px; }
 
 .pagination ul > li:last-child > a,
 .pagination ul > li:last-child > span {
+  -webkit-border-radius: 0 3px 3px 0;
   -moz-border-radius: 0 3px 3px 0;
-  -webkit-border-radius: 0;
+  -ms-border-radius: 0 3px 3px 0;
+  -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0; }
 
 .pagination-centered {
@@ -4901,16 +5039,19 @@ nav.tabs {
 
 .pager a,
 .pager span {
+  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  *zoom: 1;
+  zoom: 1;
   *display: inline;
   padding: 5px 14px;
   background-color: #fff;
   border: 1px solid #ddd;
-  -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   border-radius: 15px; }
 
 .pager a:hover {
@@ -4969,14 +5110,18 @@ nav.tabs {
 
 .label {
   padding: 1px 4px 2px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px; }
 
 .badge {
   padding: 1px 9px 2px;
-  -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
   border-radius: 9px; }
 
 a.label:hover, a.badge:hover {
@@ -5029,8 +5174,10 @@ a.label:hover, a.badge:hover {
 .accordion-group {
   margin-bottom: 2px;
   border: 1px solid #e5e5e5;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
 
 .accordion-heading {
@@ -5060,9 +5207,9 @@ a.label:hover, a.badge:hover {
 .carousel .item {
   display: none;
   position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
   -moz-transition: 0.6s ease-in-out left;
   -o-transition: 0.6s ease-in-out left;
-  -webkit-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left; }
 .carousel .item > img {
   display: block;
@@ -5104,8 +5251,10 @@ a.label:hover, a.badge:hover {
   text-align: center;
   background: #222222;
   border: 3px solid white;
-  -moz-border-radius: 23px;
   -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
   border-radius: 23px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5; }
@@ -5148,8 +5297,10 @@ div.messages {
   padding: 15px;
   border: none;
   color: white;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   word-wrap: break-word; }
   div.messages a {
@@ -5182,10 +5333,11 @@ div.messages {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -5207,10 +5359,11 @@ div.messages {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -5232,10 +5385,11 @@ div.messages {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -5426,8 +5580,10 @@ div.messages {
   float: left; }
   .not-front .field-type-taxonomy-term-reference a {
     float: left;
-    -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border-radius: 3px;
     background: #f17700;
     margin: 0 4px 0 0;
@@ -5482,8 +5638,10 @@ div.messages {
     display: none;
     background: #e5e5e5;
     margin: 0 15px 15px 0;
-    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     border-radius: 5px; }
     @media (min-width: 49em) {
       .not-front .comment .picture {
@@ -5681,8 +5839,10 @@ a {
     font-size: 10px;
     line-height: 25px;
     padding: 0 10px;
-    -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
     border-radius: 4px;
     background: #f17700;
     color: white;
@@ -5879,10 +6039,11 @@ a {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -6032,11 +6193,13 @@ a {
   margin: 0;
   padding: 0;
   border: none;
-  -moz-border-radius: none;
   -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
   border-radius: none;
-  -moz-box-shadow: none;
   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none; }
 
 .featured-slideshow {
@@ -6048,7 +6211,6 @@ a {
   background-color: white; }
   @media (min-width: 49em) {
     .featured-slideshow:hover img {
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
       opacity: 0.3; } }
   .featured-slideshow .flex-nav-container {
     margin: 0; }
@@ -6385,10 +6547,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6409,8 +6572,10 @@ a {
       .editorial .views-row .views-field-field-tags a,
       .editorial .views-row .field-type-taxonomy-term-reference a {
         display: inline-block;
-        -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
         border-radius: 3px;
         background: #bb5c00;
         margin: 0 4px 0 0;
@@ -6497,8 +6662,10 @@ a {
       margin: 12px 0 0 4px;
       background: #666666;
       line-height: 26px;
-      -moz-border-radius: 2px;
       -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
       border-radius: 2px;
       color: white;
       text-align: center;
@@ -6521,10 +6688,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6545,10 +6713,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6569,10 +6738,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6593,10 +6763,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6617,10 +6788,11 @@ a {
           padding-right: 5px;
           text-decoration: none;
           /* sprites.less reset */
+          display: -moz-inline-stack;
           display: inline-block;
           vertical-align: middle;
           *vertical-align: auto;
-          *zoom: 1;
+          zoom: 1;
           *display: inline;
           width: auto;
           height: auto;
@@ -6812,8 +6984,10 @@ div[role="main"] .pane-menu-menu-join-us {
       float: left;
       margin: 10px 4px 0 0;
       position: relative;
-      -moz-border-radius: 1px;
       -webkit-border-radius: 1px;
+      -moz-border-radius: 1px;
+      -ms-border-radius: 1px;
+      -o-border-radius: 1px;
       border-radius: 1px; }
       .profile-details .views-row .views-field .twitter:before,
       .profile-details .views-row .views-field .facebook:before,
@@ -6845,10 +7019,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6868,10 +7043,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6891,10 +7067,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6914,10 +7091,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6937,10 +7115,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6960,10 +7139,11 @@ div[role="main"] .pane-menu-menu-join-us {
       padding-right: 5px;
       text-decoration: none;
       /* sprites.less reset */
+      display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      *zoom: 1;
+      zoom: 1;
       *display: inline;
       width: auto;
       height: auto;
@@ -6976,8 +7156,10 @@ div[role="main"] .pane-menu-menu-join-us {
   .profile-details .views-row div.views-field-field-profile-image {
     padding-right: 1em; }
     .profile-details .views-row div.views-field-field-profile-image img {
-      -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
       border-radius: 4px; }
     .profile-details .views-row div.views-field-field-profile-image .no-photo {
       width: 100%;
@@ -6987,8 +7169,10 @@ div[role="main"] .pane-menu-menu-join-us {
       border: 1px solid #CCC;
       color: #AAA;
       font-weight: 400;
-      -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
       border-radius: 4px;
       float: left; }
   .profile-details .views-row .views-field-field-linux-name {
@@ -7063,8 +7247,10 @@ div[role="main"] .pane-menu-menu-join-us {
     .page-search .search-form #edit-basic input#edit-keys {
       border: 1px solid #e5e5e5;
       background: white;
-      -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
       border-radius: 4px;
       height: 35px;
       width: 100%;
@@ -7104,8 +7290,10 @@ div[role="main"] .pane-menu-menu-join-us {
     .page-search .search-form .search-advanced .criterion input[type="text"] {
       border: 1px solid #e5e5e5;
       background: white;
-      -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
       border-radius: 4px;
       height: 35px;
       margin-bottom: 15px; }
@@ -7124,14 +7312,18 @@ div[role="main"] .pane-menu-menu-join-us {
   margin: 0 0 1.5em;
   border: 1px solid #e5e5e5;
   background: white;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
 .node-question-form textarea {
   border: 1px solid #e5e5e5;
   background: white;
-  -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px; }
 .node-question-form input[type="submit"] {
   margin: 0 10px 5px 0;
@@ -7247,8 +7439,10 @@ div[role="main"] .pane-menu-menu-join-us {
         font-size: 10px;
         line-height: 25px;
         padding: 0 10px;
-        -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
         border-radius: 4px;
         background: #f17700;
         color: white;
@@ -7321,8 +7515,10 @@ div[role="main"] .pane-menu-menu-join-us {
       font-size: 10px;
       line-height: 25px;
       padding: 0 10px;
-      -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
       border-radius: 4px;
       background: #f17700;
       color: white;
@@ -7456,8 +7652,10 @@ div[role="main"] .pane-menu-menu-join-us {
     background: #f17700 !important;
     color: white !important;
     text-align: center !important;
-    -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
     border-radius: 2px;
     line-height: 1 !important;
     height: 22px !important;
@@ -7536,10 +7734,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7562,10 +7761,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7588,10 +7788,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7614,10 +7815,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7640,10 +7842,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7666,10 +7869,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7692,10 +7896,11 @@ div[role="main"] .pane-menu-menu-join-us {
     padding-right: 5px;
     text-decoration: none;
     /* sprites.less reset */
+    display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
     *vertical-align: auto;
-    *zoom: 1;
+    zoom: 1;
     *display: inline;
     width: auto;
     height: auto;
@@ -7715,8 +7920,10 @@ div[role="main"] .pane-menu-menu-join-us {
   background: #eaeaea url("../img/content-lines.png") repeat top left;
   padding: 25px;
   margin: 0 0 25px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px; }
   .filter-type object {
     position: relative !important; }
@@ -7736,8 +7943,10 @@ div[role="main"] .pane-menu-menu-join-us {
 a.imagex-contest-add-entry,
 a.imagex-contest-voting-add-vote,
 a.imagex-contest-contest-entry-admin {
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
   background: #f17700;
   margin: 0 4px 0 0;
@@ -7891,8 +8100,7 @@ a.imagex-contest-contest-entry-admin {
     line-height: 36px; }
 
   .entity-assignment {
-    overflow: hidden;
-    *zoom: 1; }
+    overflow: hidden; }
     .entity-assignment .field-type-text-long {
       float: left;
       margin-right: 2.5641%;
@@ -7982,8 +8190,7 @@ a.imagex-contest-contest-entry-admin {
 
 @media (min-width: 35em) {
   .view-linux-directory-glossary {
-    overflow: hidden;
-    *zoom: 1; }
+    overflow: hidden; }
     .view-linux-directory-glossary .views-row {
       padding: 0.5em;
       float: left;
