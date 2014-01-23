@@ -293,7 +293,6 @@ Drupal Tables
   }
 }
 
-
 // Filter/Tips page styling
 // -----------------------------------------
 
@@ -314,6 +313,100 @@ Drupal Tables
         td {
           background: transparent;
           border-color: #eaeaea;
+        }
+      }
+    }
+  }
+}
+
+// Diff Moderation Table
+// -----------------------------------------
+
+table.diff {
+  background: #FFF url('../img/content-lines.png') repeat top left;
+  padding: 25px;
+  display: block;
+
+  thead {
+    border: none;
+
+    tr {
+      padding: 0;
+      border: none;
+
+      th {
+        background: #FFF;
+        padding: 1em 0 1em 0.6em;
+        font-family: $sansFontFamily;
+        text-transform: capitalize;
+        font-style: italic;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      padding: 0;
+
+      td {
+        background: #FFF;
+
+        &.diff-links {
+          text-align: center;
+          background: $grayDark;
+          padding-top: 1em;
+          color: white;
+
+          ul {
+            margin: 0;
+
+            a {
+              color: $linuxStdOrange;
+            }
+          }
+        }
+
+        &.diff-section-title {
+          background-color: $grayDark;
+          text-align: center;
+          padding-bottom: 1em;
+          font-size: 20px;
+          border-top: 0;
+          color: white;
+        }
+
+        &.diff-addedline {
+          background-color: #afa;
+        }
+
+        &.diff-deletedline {
+          background-color: #ffa;
+        }
+
+        &.diff-marker {
+          font-weight: bold;
+        }
+
+        &.diff-context {
+          border-right: 2px solid $grayDark;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &.diff-prevlink,
+        &.diff-nextlink {
+          font-size: 11px;
+        }
+
+        .diffchange {
+          color: $linuxDarkOrange;
+        }
+
+        p.revision-log {
+          margin: 0;
+          display: none;
         }
       }
     }
