@@ -350,6 +350,7 @@ table.diff {
           background: $linuxStdOrange;
           padding-top: 1em;
           color: white;
+          border-top: 0;
 
           ul {
             margin: 0;
@@ -380,6 +381,8 @@ table.diff {
         &.diff-marker {
           font-weight: bold;
           font-size: 20px;
+          padding: 0;
+          text-align: center;
         }
 
         &.diff-context {
@@ -393,6 +396,7 @@ table.diff {
         &.diff-prevlink,
         &.diff-nextlink {
           font-size: 11px;
+          border-top: 0;
         }
 
         .diffchange {

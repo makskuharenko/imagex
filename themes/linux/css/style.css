@@ -3104,7 +3104,8 @@ table.diff tbody tr {
       text-align: center;
       background: #f17700;
       padding-top: 1em;
-      color: white; }
+      color: white;
+      border-top: 0; }
       table.diff tbody tr td.diff-links ul {
         margin: 0; }
         table.diff tbody tr td.diff-links ul a {
@@ -3122,13 +3123,16 @@ table.diff tbody tr {
       background-color: #ffa; }
     table.diff tbody tr td.diff-marker {
       font-weight: bold;
-      font-size: 20px; }
+      font-size: 20px;
+      padding: 0;
+      text-align: center; }
     table.diff tbody tr td.diff-context {
       border-right: 2px solid #f17700; }
     table.diff tbody tr td:last-child {
       border-right: none; }
     table.diff tbody tr td.diff-prevlink, table.diff tbody tr td.diff-nextlink {
-      font-size: 11px; }
+      font-size: 11px;
+      border-top: 0; }
     table.diff tbody tr td .diffchange {
       color: #e65b04; }
     table.diff tbody tr td p.revision-log {
