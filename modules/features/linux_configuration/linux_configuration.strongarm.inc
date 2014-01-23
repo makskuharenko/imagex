@@ -438,6 +438,39 @@ function linux_configuration_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'print_css';
+  $strongarm->value = '%t/css/print.css';
+  $export['print_css'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_link_pos';
+  $strongarm->value = array(
+    'link' => 0,
+    'corner' => 0,
+    'block' => 0,
+    'help' => 0,
+  );
+  $export['print_html_link_pos'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_link_text';
+  $strongarm->value = 'Print This';
+  $export['print_html_link_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'print_html_show_link';
+  $strongarm->value = '1';
+  $export['print_html_show_link'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'redirect_auto_redirect';
   $strongarm->value = 0;
   $export['redirect_auto_redirect'] = $strongarm;
