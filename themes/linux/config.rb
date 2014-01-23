@@ -32,4 +32,6 @@ output_style = :nested
 line_comments = false
 color_output = false
 
+disable_warnings = true
+
 preferred_syntax = :sass
