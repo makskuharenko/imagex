@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Linux.com Multilingual feature.
+ */
+
+include_once 'linux_multilingual.features.inc';
