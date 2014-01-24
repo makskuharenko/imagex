@@ -447,9 +447,9 @@ function linux_configuration_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'print_html_link_pos';
   $strongarm->value = array(
-    'link' => 0,
+    'link' => 'link',
+    'block' => 'block',
     'corner' => 0,
-    'block' => 0,
     'help' => 0,
   );
   $export['print_html_link_pos'] = $strongarm;
