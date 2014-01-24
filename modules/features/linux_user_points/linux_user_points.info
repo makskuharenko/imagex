@@ -53,7 +53,6 @@ features[rules_config][] = rules_linux_reverse_user_profile_linkedin
 features[rules_config][] = rules_linux_reverse_user_profile_occupation
 features[rules_config][] = rules_linux_reverse_user_profile_rss
 features[rules_config][] = rules_linux_reverse_user_profile_twitter
-features[rules_config][] = rules_linux_social_share
 features[rules_config][] = rules_linux_start_a_forum_that_others_respond_to
 features[rules_config][] = rules_linux_user_points_for_github
 features[rules_config][] = rules_linux_user_points_for_linkedin

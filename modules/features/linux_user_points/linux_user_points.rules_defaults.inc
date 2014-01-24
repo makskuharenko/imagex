@@ -780,6 +780,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-city" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-city" ] } }
       ],
@@ -804,6 +805,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-country" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-country" ] } }
       ],
@@ -828,6 +830,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-facebook:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-facebook:url" ] } }
       ],
@@ -852,6 +855,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-github-profile:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-github-profile:url" ] } }
       ],
@@ -876,6 +880,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-google-:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-google-:url" ] } }
       ],
@@ -900,6 +905,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account:field-profile-image:file" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-profile-image:file" ] } }
       ],
@@ -924,6 +930,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-linkedin:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-linkedin:url" ] } }
       ],
@@ -948,6 +955,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-occupation" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-occupation" ] } }
       ],
@@ -972,6 +980,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-rss:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-rss:url" ] } }
       ],
@@ -996,6 +1005,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "NOT data_is_empty" : { "data" : [ "account-unchanged:field-linux-twitter:url" ] } },
         { "data_is_empty" : { "data" : [ "account:field-linux-twitter:url" ] } }
       ],
@@ -1006,26 +1016,6 @@ function linux_user_points_default_rules_configuration() {
             "tid" : "0",
             "entity" : [ "" ],
             "operation" : "Remove points for user profile Twitter",
-            "display" : 1,
-            "moderate" : "default"
-          }
-        }
-      ]
-    }
-  }');
-  $items['rules_linux_social_share'] = entity_import('rules_config', '{ "rules_linux_social_share" : {
-      "LABEL" : "Linux: Social Share",
-      "PLUGIN" : "reaction rule",
-      "TAGS" : [ "Linux User Points" ],
-      "REQUIRES" : [ "userpoints_rules", "linux_user_badge" ],
-      "ON" : [ "linux_user_badge_addtoany_track" ],
-      "DO" : [
-        { "userpoints_action_grant_points" : {
-            "user" : [ "user" ],
-            "points" : "100",
-            "tid" : "0",
-            "entity" : [ "" ],
-            "operation" : "Points for social share",
             "display" : 1,
             "moderate" : "default"
           }
@@ -1070,6 +1060,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-github-profile:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-github-profile:url" ] } }
       ],
@@ -1094,6 +1085,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-linkedin:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-linkedin:url" ] } }
       ],
@@ -1118,6 +1110,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-city" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-city" ] } }
       ],
@@ -1142,6 +1135,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-country" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-country" ] } }
       ],
@@ -1166,6 +1160,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-facebook:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-facebook:url" ] } }
       ],
@@ -1190,6 +1185,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-google-:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-google-:url" ] } }
       ],
@@ -1214,6 +1210,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-occupation" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-occupation" ] } }
       ],
@@ -1238,6 +1235,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-rss:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-rss:url" ] } }
       ],
@@ -1262,6 +1260,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-linux-twitter:url" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-linux-twitter:url" ] } }
       ],
@@ -1286,6 +1285,7 @@ function linux_user_points_default_rules_configuration() {
       "REQUIRES" : [ "rules", "userpoints_rules" ],
       "ON" : [ "user_presave" ],
       "IF" : [
+        { "NOT entity_is_new" : { "entity" : [ "account" ] } },
         { "data_is_empty" : { "data" : [ "account-unchanged:field-profile-image:file" ] } },
         { "NOT data_is_empty" : { "data" : [ "account:field-profile-image:file" ] } }
       ],
