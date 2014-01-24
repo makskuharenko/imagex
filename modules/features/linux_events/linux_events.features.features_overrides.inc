@@ -199,7 +199,7 @@ function linux_events_features_override_default_overrides() {
         'anon_links' => 1,
         'context' => 'panelizer',
         'override_title' => 1,
-        'override_title_text' => '',
+        'override_title_text' => 'Comments',
       ),
       'cache' => array(),
       'style' => array(
