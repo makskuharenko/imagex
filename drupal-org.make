@@ -102,7 +102,7 @@ projects[imagex_aggregator][type] = "module"
 projects[imagex_aggregator][subdir] = "imagex/modules"
 projects[imagex_aggregator][download][type] = "git"
 projects[imagex_aggregator][download][url] = "git@github.com:imagex/imagex_aggregator.git"
-projects[imagex_aggregator][download][tag] = "7.x-1.0"
+projects[imagex_aggregator][download][tag] = "7.x-1.0.1-dev1"
 
 projects[imagex_answers][type] = "module"
 projects[imagex_answers][subdir] = "imagex/modules"
