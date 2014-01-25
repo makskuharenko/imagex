@@ -25,9 +25,9 @@ dependencies[] = xbbcode_basic
 dependencies[] = php
 
 ; ImageX component dependencies
-; dependencies[] = imagex_aggregator
-; dependencies[] = imagex_aggregator_extras
-; dependencies[] = imagex_aggregator_social
+dependencies[] = imagex_aggregator
+dependencies[] = imagex_aggregator_extras
+dependencies[] = imagex_aggregator_social
 dependencies[] = imagex_answers
 dependencies[] = imagex_answers_pane
 dependencies[] = imagex_answers_permissions
