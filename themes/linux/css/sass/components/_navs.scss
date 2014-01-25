@@ -147,8 +147,7 @@
         }
       }
     }
-  }
-
+  }  
   @include at-breakpoint($computer) {
     .linux-main-menu {
       display: block;
@@ -1214,4 +1213,9 @@ nav.tabs {
 
 .contextual-links-region.clearfix:after {
   display: inline;
+}
+
+.user-log-username .username {
+  display:inline-block;
+  padding-right:8px;
 }
