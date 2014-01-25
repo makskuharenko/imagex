@@ -14,6 +14,31 @@ function hook_imagex_mode_changed($mode) {
 }
 
 /**
+ * Allows for environments to be defined.
+ *
+ * @return array
+ *   An associative array of environments defined.
+ */
+function hook_imagex_environments() {
+  return array(
+    'machine_name' => array(
+      'title' => t('My Environment'),
+      'description' => t('This is just an example environment.'),
+    )
+  );
+}
+
+/**
+ * Allows for operations to be performed when the environment has changed.
+ *
+ * @param string $environment
+ *   The environment that operations have been changed too.
+ */
+function hook_imagex_environment_changed($environment) {
+  variable_set('imagex_environment', $environment);
+}
+
+/**
  * Returns an array of variables and their default values.
  *
  * @return array

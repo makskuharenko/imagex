@@ -19,6 +19,21 @@ define('IMAGEX_MODE_STAGING', 2);
 define('IMAGEX_MODE_PRODUCTION', 3);
 
 /**
+ * Default environment identifier.
+ */
+define('IMAGEX_ENVIRONMENT_DEFAULT', 'default');
+
+/**
+ * Denotes a remote development environment.
+ */
+define('IMAGEX_ENVIRONMENT_DEV_REMOTE', 'dev.remote');
+
+/**
+ * Denotes a local development environment.
+ */
+define('IMAGEX_ENVIRONMENT_DEV_LOCAL', 'dev.local');
+
+/**
  * Defines the watchdog type of ImageX.
  */
 define('IMAGEX_WATCHDOG_TYPE', 'imagex');
@@ -78,17 +93,31 @@ function imagex_mode_is_production() {
  * 
  * @param int $mode
  *   The current operating mode. Use one of the IMAGEX_MODE_ constants.
+ *
+ * @return int
+ *   Returns the previously set mode.
  */
 function imagex_mode_set($mode) {
-  if (!imagex_mode_is_valid($mode)) {
-    watchdog(IMAGEX_WATCHDOG_TYPE, 'Attempted to set an invalid mode, %mode.', array('%mode' => $mode), WATCHDOG_DEBUG);
-    return;
+  $valid_modes = imagex_modes();
+  $new_mode = NULL;
+  if (!isset($valid_modes[$mode]) && FALSE !== ($exists = array_search($mode, $valid_modes))) {
+    $new_mode = $exists;
+  }
+  else if(isset($valid_modes[$mode])) {
+    $new_mode = $mode;
   }
 
-  variable_set('imagex_mode', $mode);
-  foreach (module_implements('imagex_mode_changed') as $module) {
-    module_invoke($module, 'imagex_mode_changed', $mode);
+  if (!$new_mode) {
+    watchdog(IMAGEX_WATCHDOG_TYPE, 'Attempted to set an invalid mode, %mode.', array('%mode' => $mode), WATCHDOG_DEBUG);
+    return FALSE;
   }
+
+  $previous_mode = imagex_mode();
+  variable_set('imagex_mode', $new_mode);
+  foreach (module_implements('imagex_mode_changed') as $module) {
+    module_invoke($module, 'imagex_mode_changed', $new_mode);
+  }
+  return $previous_mode;
 }
 
 /**
@@ -101,42 +130,41 @@ function imagex_mode_set($mode) {
  *   Returns TRUE if $mode is valid, otherwise FALSE.
  */
 function imagex_mode_is_valid($mode) {
-  switch ($mode) {
-    case IMAGEX_MODE_PRODUCTION:
-    case IMAGEX_MODE_STAGING:
-    case IMAGEX_MODE_DEVELOPMENT:
-      return TRUE;
-  }
-
-  return FALSE;
+  $valid_modes = imagex_modes();
+  // This allows for "modes" to be tested if the language representation is used.
+  return isset($valid_modes[$mode]) || in_array($mode, $valid_modes);
 }
 
 /**
- * Returns either an array or string representation for mode languages.
+ * Returns an array of valid mode types and their string representations.
  *
- * @param mixed $mode
- *   The mode to return its string representation for. If NULL, an array
- *   of all mode language representations are returned.
- *
- * @return mixed
- *   Returns either a string or an array.
+ * @return array
+ *   Returns an associative array of type => name.
  */
-function imagex_mode_language($mode = NULL) {
-  static $languages = NULL;
-
-  if (NULL === $languages) {
-    $languages =  array(
+function imagex_modes() {
+  static $modes = NULL;
+  if (NULL === $modes) {
+    $modes =  array(
       IMAGEX_MODE_DEVELOPMENT => t('development'),
       IMAGEX_MODE_STAGING => t('staging'),
       IMAGEX_MODE_PRODUCTION => t('production'),
     );
   }
+  return $modes;
+}
 
-  if (NULL !== $mode && isset($languages[$mode])) {
-    return $languages[$mode];
-  }
-
-  return $languages;
+/**
+ * Returns just the string representation of a mode.
+ *
+ * @param int $mode
+ *   The operating mode.
+ *
+ * @return string
+ *   Returns the string representation if $mode exists, otherwise NULL.
+ */
+function imagex_mode_language($mode) {
+  $modes = imagex_modes();
+  return isset($modes[$mode]) ? $modes[$mode] : NULL;
 }
 
 /**
@@ -147,6 +175,103 @@ function imagex_mode_language($mode = NULL) {
  */
 function imagex_mode_default() {
   return IMAGEX_MODE_PRODUCTION;
+}
+
+/**
+ * Implements hook_imagex_environments().
+ */
+function imagex_imagex_environments() {
+  return array(
+    IMAGEX_ENVIRONMENT_DEFAULT => array(
+      'title' => t('Default Environment'),
+      'description' => t('The default environment.'),
+    ),
+    IMAGEX_ENVIRONMENT_DEV_LOCAL => array(
+      'title' => t('Local Development Environment'),
+      'description' => t('The typical development environment on a local developer machine.'),
+    ),
+    IMAGEX_ENVIRONMENT_DEV_REMOTE => array(
+      'title' => t('Remote Development Environment'),
+      'description' => t('A remote development server used as a development environment.'),
+    ),
+  );
+}
+
+/**
+ * Returns the current operating environment.
+ *
+ * @return string
+ *   The machine name of the current operating environment.
+ */
+function imagex_environment() {
+  return variable_get('imagex_environment', imagex_environment_default());
+}
+
+/**
+ * Returns an array of all defined environments.
+ *
+ * @return array
+ *   An associative array of machine_name => info of environments.
+ */
+function imagex_environments() {
+  $environments = &drupal_static(__FUNCTION__, NULL);
+  if (NULL === $environments) {
+    foreach (module_implements('imagex_environments') as $module) {
+      $enviros = module_invoke($module, 'imagex_environments');
+      foreach ($enviros as $environment_name => $environment) {
+        $environments[$environment_name] = array('title' => '', 'description' => '');
+        $environments[$environment_name] = array_merge($environments[$environment_name], $environment);
+      }
+    }
+  }
+  return $environments;
+}
+
+/**
+ * Sets the operating environment.
+ *
+ * @param string $environment
+ *   The machine name of the operating environment to set.
+ *
+ * @return mixed
+ *   Returns the previous operating environment if set; otherwise false.
+ */
+function imagex_environment_set($environment) {
+  if (!imagex_environment_is_valid($environment)) {
+    watchdog(IMAGEX_WATCHDOG_TYPE, 'Attempted to set an invalid environment, %environment.', array('%environment' => $environment), WATCHDOG_DEBUG);
+    return;
+  }
+
+  $previous = imagex_environment();
+  variable_set('imagex_environment', $environment);
+  foreach (module_implements('imagex_environment_changed') as $module) {
+    module_invoke($module, 'imagex_environment_changed', $environment);
+  }
+  return $previous;
+}
+
+/**
+ * Checks if the specified environment is valid.
+ *
+ * @param string $environment
+ *   The environment's machine name to test if it is valid.
+ *
+ * @return bool
+ *   Returns TRUE if valid; otherwise FALSE.
+ */
+function imagex_environment_is_valid($environment) {
+  $environments = imagex_environments();
+  return isset($environments[$environment]) ? TRUE : FALSE;
+}
+
+/**
+ * Returns the default environment.
+ *
+ * @return string
+ *   The default environment's machine name.
+ */
+function imagex_environment_default() {
+  return IMAGEX_ENVIRONMENT_DEFAULT;
 }
 
 /**
