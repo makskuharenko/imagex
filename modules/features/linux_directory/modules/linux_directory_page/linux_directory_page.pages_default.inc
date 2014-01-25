@@ -34,24 +34,25 @@ function linux_directory_page_default_page_manager_pages() {
       'settings' => array(
         'input_form' => 'term',
         'vids' => array(
-          9 => '9',
+          10 => '10',
           1 => 0,
-          3 => 0,
-          10 => 0,
+          4 => 0,
           11 => 0,
           12 => 0,
           13 => 0,
           14 => 0,
           15 => 0,
-          8 => 0,
-          4 => 0,
-          7 => 0,
+          16 => 0,
+          9 => 0,
           5 => 0,
+          8 => 0,
+          3 => 0,
           6 => 0,
+          7 => 0,
           2 => 0,
         ),
         'breadcrumb' => 0,
-        'transform' => 0,
+        'transform' => 1,
       ),
     ),
   );
@@ -62,13 +63,13 @@ function linux_directory_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_directory_panel_context_2';
+  $handler->name = 'page_directory_panel_context_3';
   $handler->task = 'page';
   $handler->subtask = 'directory';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -30;
   $handler->conf = array(
-    'title' => 'Directory Items By Name',
+    'title' => 'Directory Items By Sections',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -79,14 +80,12 @@ function linux_directory_page_default_page_manager_pages() {
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
-        2 => array(
-          'name' => 'string_equal',
+        3 => array(
+          'name' => 'context_exists',
           'settings' => array(
-            'operator' => 'regex',
-            'value' => '/[a-zA-Z9]{1}/',
-            'case' => 0,
+            'exists' => '1',
           ),
-          'context' => 'argument_string_1',
+          'context' => 'argument_term_1',
           'not' => FALSE,
         ),
       ),
@@ -168,7 +167,7 @@ function linux_directory_page_default_page_manager_pages() {
       'class' => '',
       'id' => '',
       'override_title' => 1,
-      'override_title_text' => 'Directory: %glossary:html_safe',
+      'override_title_text' => 'Directory: %term:name',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -205,25 +204,12 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_listing-panel_pane_1';
+    $pane->subtype = 'linux_directory_glossary-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'string_equal',
-          'settings' => array(
-            'operator' => 'regex',
-            'value' => '/[a-z]/',
-            'case' => 0,
-          ),
-          'context' => 'argument_string_1',
-          'not' => FALSE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'title' => '%glossary:raw',
+        'parent' => '%term:tid',
       ),
     );
     $pane->cache = array();
@@ -240,25 +226,12 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->pid = 'new-6';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'views_panes';
-    $pane->subtype = 'directory_listing-panel_pane_1';
+    $pane->subtype = 'directory_listing-panel_pane_2';
     $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'string_equal',
-          'settings' => array(
-            'operator' => 'regex',
-            'value' => '/[0-9]/',
-            'case' => 0,
-          ),
-          'context' => 'argument_string_1',
-          'not' => FALSE,
-        ),
-      ),
-    );
+    $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'title' => '0,1,2,3,4,5,6,7,8,9',
+        'tid' => '%term:tid',
       ),
     );
     $pane->cache = array();
@@ -299,13 +272,13 @@ function linux_directory_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_directory_panel_context';
+  $handler->name = 'page_directory_panel_context_2';
   $handler->task = 'page';
   $handler->subtask = 'directory';
   $handler->handler = 'panel_context';
-  $handler->weight = -26;
+  $handler->weight = -28;
   $handler->conf = array(
-    'title' => 'Default Landing Page',
+    'title' => 'Directory Items By Name',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -314,6 +287,21 @@ function linux_directory_page_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        2 => array(
+          'name' => 'string_equal',
+          'settings' => array(
+            'operator' => 'regex',
+            'value' => '/[a-zA-Z9]{1}/',
+            'case' => 0,
+          ),
+          'context' => 'argument_string_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'three_25_50_25';
@@ -390,7 +378,7 @@ function linux_directory_page_default_page_manager_pages() {
       'class' => '',
       'id' => '',
       'override_title' => 1,
-      'override_title_text' => 'Directory',
+      'override_title_text' => 'Directory: %glossary:html_safe',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -427,10 +415,27 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->pid = 'new-12';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'views_panes';
-    $pane->subtype = 'linux_directory_glossary-panel_pane_1';
+    $pane->subtype = 'directory_listing-panel_pane_1';
     $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'string_equal',
+          'settings' => array(
+            'operator' => 'regex',
+            'value' => '/[a-z]/',
+            'case' => 0,
+          ),
+          'context' => 'argument_string_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'title' => '%glossary:raw',
+      ),
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -443,6 +448,41 @@ function linux_directory_page_default_page_manager_pages() {
     $display->panels['three_25_50_25_second'][2] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
+    $pane->panel = 'three_25_50_25_second';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'directory_listing-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'string_equal',
+          'settings' => array(
+            'operator' => 'regex',
+            'value' => '/[0-9]/',
+            'case' => 0,
+          ),
+          'context' => 'argument_string_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'arguments' => array(
+        'title' => '0,1,2,3,4,5,6,7,8,9',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['three_25_50_25_second'][3] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-join-us';
@@ -460,8 +500,8 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['three_25_50_25_third'][0] = 'new-14';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -469,13 +509,13 @@ function linux_directory_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_directory_panel_context_3';
+  $handler->name = 'page_directory_panel_context';
   $handler->task = 'page';
   $handler->subtask = 'directory';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -26;
   $handler->conf = array(
-    'title' => 'Directory Items By Sections',
+    'title' => 'Default Landing Page',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -484,19 +524,6 @@ function linux_directory_page_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
-    'access' => array(
-      'plugins' => array(
-        3 => array(
-          'name' => 'context_exists',
-          'settings' => array(
-            'exists' => '1',
-          ),
-          'context' => 'argument_term_1',
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
   );
   $display = new panels_display();
   $display->layout = 'three_25_50_25';
@@ -516,7 +543,7 @@ function linux_directory_page_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-15';
     $pane->panel = 'three_25_50_25_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'home_page-panel_pane_1';
@@ -538,10 +565,10 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['three_25_50_25_first'][0] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['three_25_50_25_first'][0] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'three_25_50_25_first';
     $pane->type = 'block';
     $pane->subtype = 'bean-ad-space-homepage-right-top';
@@ -559,10 +586,10 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['three_25_50_25_first'][1] = 'new-15';
+    $display->content['new-16'] = $pane;
+    $display->panels['three_25_50_25_first'][1] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-17';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -573,7 +600,7 @@ function linux_directory_page_default_page_manager_pages() {
       'class' => '',
       'id' => '',
       'override_title' => 1,
-      'override_title_text' => 'Directory: %term:name',
+      'override_title_text' => 'Directory',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -583,10 +610,10 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['three_25_50_25_second'][0] = 'new-16';
+    $display->content['new-17'] = $pane;
+    $display->panels['three_25_50_25_second'][0] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-17';
+    $pane->pid = 'new-18';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'block';
     $pane->subtype = 'linux_directory_page-directory_page_az';
@@ -604,20 +631,16 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['three_25_50_25_second'][1] = 'new-17';
+    $display->content['new-18'] = $pane;
+    $display->panels['three_25_50_25_second'][1] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-19';
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_directory_glossary-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'parent' => '%term:tid',
-      ),
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -626,30 +649,8 @@ function linux_directory_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['three_25_50_25_second'][2] = 'new-18';
-    $pane = new stdClass();
-    $pane->pid = 'new-19';
-    $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'directory_listing-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'name' => '%term:name',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
     $display->content['new-19'] = $pane;
-    $display->panels['three_25_50_25_second'][3] = 'new-19';
+    $display->panels['three_25_50_25_second'][2] = 'new-19';
     $pane = new stdClass();
     $pane->pid = 'new-20';
     $pane->panel = 'three_25_50_25_third';

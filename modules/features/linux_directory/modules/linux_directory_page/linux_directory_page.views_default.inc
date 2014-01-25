@@ -109,34 +109,32 @@ function linux_directory_page_views_default_views() {
   $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
   $handler->display->display_options['empty']['area_text_custom']['content'] = 'No directory items in this section to show.';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Section (field_directory_section) */
-  $handler->display->display_options['relationships']['field_directory_section_tid']['id'] = 'field_directory_section_tid';
-  $handler->display->display_options['relationships']['field_directory_section_tid']['table'] = 'field_data_field_directory_section';
-  $handler->display->display_options['relationships']['field_directory_section_tid']['field'] = 'field_directory_section_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Taxonomy term: Name */
-  $handler->display->display_options['arguments']['name']['id'] = 'name';
-  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['arguments']['name']['field'] = 'name';
-  $handler->display->display_options['arguments']['name']['relationship'] = 'field_directory_section_tid';
-  $handler->display->display_options['arguments']['name']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['name']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['name']['limit'] = '0';
-  $handler->display->display_options['arguments']['name']['path_case'] = 'lower';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'directory_sections' => 'directory_sections',
+  );
+  $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'empty';
   $handler->display->display_options['pane_category']['name'] = 'Directory';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['argument_input'] = array(
-    'name' => array(
+    'tid' => array(
       'type' => 'user',
       'context' => 'entity:assignment.field_assignment_assigned_user',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Taxonomy term: Name',
+      'label' => 'Content: Has taxonomy term ID',
     ),
   );
   $export['directory_listing'] = $view;
