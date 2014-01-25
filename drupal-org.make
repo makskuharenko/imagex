@@ -126,7 +126,7 @@ projects[imagex_content_inappropriate][type] = "module"
 projects[imagex_content_inappropriate][subdir] = "imagex/modules"
 projects[imagex_content_inappropriate][download][type] = "git"
 projects[imagex_content_inappropriate][download][url] = "git@github.com:imagex/imagex_content_inappropriate.git"
-projects[imagex_content_inappropriate][download][tag] = "7.x-1.0"
+projects[imagex_content_inappropriate][download][tag] = "7.x-1.0.1-dev1"
 
 projects[imagex_content_likes][type] = "module"
 projects[imagex_content_likes][subdir] = "imagex/modules"
