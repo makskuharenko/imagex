@@ -12,6 +12,9 @@ The Linux.com Drupal 7 installation profile.
 * Run a `drush site-install`. Typical: `drush site-install linux --account-name=admin --account-pass=password --site-name=Linux.com --db-url=mysql://root@127.0.0.1/linux -y`
 * Enable (and then disable) Linux.com's post installation setup. Typical: `drush en linux_post_install -y` and `drush dis linux_post_install -y`.
 * Enable search modules: `drush en imagex_search -y` and `drush en imagex_search_db -y`
+* Revert all features by running: `drush fra -y`.
+* Set the operating environment by running `drush imagex-environment-set linux` which will ensure all caching is turned on; any variables are updated and so forth.
+* Clear all caches by running: `drush cc all`.
 
 ##### For running migration, continue:
 * Copy the Linux.com's migration settings file to sites/default/. Typical: `cp profiles/linux/modules/custom/linux_migration/imagex_migration.default.settings.php sites/default/imagex_migration.settings.php`.

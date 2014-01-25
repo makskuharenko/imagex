@@ -22,9 +22,10 @@ function linux_configuration_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1387243152,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
+    'vuuid' => 'c1fcd1b1-e529-44de-bcf1-205ec869b466',
     'uuid' => 'f953195a-8dcb-4eb7-b509-1180e4c8a5e4',
     'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
