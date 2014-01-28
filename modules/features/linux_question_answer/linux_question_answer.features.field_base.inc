@@ -207,5 +207,7 @@ function linux_question_answer_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  features_alter_code('field_base', $field_bases);
+
   return $field_bases;
 }

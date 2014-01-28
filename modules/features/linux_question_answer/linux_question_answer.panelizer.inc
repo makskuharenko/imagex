@@ -76,7 +76,7 @@ function linux_question_answer_panelizer_defaults() {
     $pane->panel = 'three_25_50_25_second';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'link' => 0,
@@ -259,7 +259,16 @@ function linux_question_answer_panelizer_defaults() {
   $panelizer->css = '';
   $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
-  $panelizer->relationships = array();
+  $panelizer->relationships = array(
+    0 => array(
+      'identifier' => 'Node from Node (on Node: Chosen Answer [field_chosen_answer])',
+      'keyword' => 'Answer',
+      'name' => 'entity_from_field:field_chosen_answer-node-node',
+      'delta' => 0,
+      'context' => 'panelizer',
+      'id' => 1,
+    ),
+  );
   $panelizer->access = array();
   $panelizer->view_mode = 'page_manager';
   $panelizer->css_class = '';
@@ -627,6 +636,38 @@ function linux_question_answer_panelizer_defaults() {
     $display->panels['three_25_50_25_second'][11] = 'new-21';
     $pane = new stdClass();
     $pane->pid = 'new-22';
+    $pane->panel = 'three_25_50_25_second';
+    $pane->type = 'answer';
+    $pane->subtype = 'answer';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '0',
+          ),
+          'context' => 'relationship_entity_from_field:field_chosen_answer-node-node_1',
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'answer-node-form-pane',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 12;
+    $pane->locks = array();
+    $display->content['new-22'] = $pane;
+    $display->panels['three_25_50_25_second'][12] = 'new-22';
+    $pane = new stdClass();
+    $pane->pid = 'new-23';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'block';
     $pane->subtype = 'menu-menu-join-us';
@@ -644,10 +685,10 @@ function linux_question_answer_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-22';
+    $display->content['new-23'] = $pane;
+    $display->panels['three_25_50_25_third'][0] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-24';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'home_page-panel_pane_2';
@@ -668,10 +709,10 @@ function linux_question_answer_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-23';
+    $display->content['new-24'] = $pane;
+    $display->panels['three_25_50_25_third'][1] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-25';
     $pane->panel = 'three_25_50_25_third';
     $pane->type = 'views_panes';
     $pane->subtype = 'linux_answers-panel_pane_2';
@@ -689,8 +730,8 @@ function linux_question_answer_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['three_25_50_25_third'][2] = 'new-24';
+    $display->content['new-25'] = $pane;
+    $display->panels['three_25_50_25_third'][2] = 'new-25';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-13';
   $panelizer->display = $display;
