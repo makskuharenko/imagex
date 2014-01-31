@@ -14,7 +14,7 @@ define('LINUX_ENVIRONMENT', 'linux');
 function linux_init() {
   switch (imagex_environment()) {
     case LINUX_ENVIRONMENT:
-      if (!_linux_hybrid_authentication_is_set()) {
+      if (!drupal_is_cli() && !imagex_drupal_is_installing() && !_linux_hybrid_authentication_is_set()) {
         drupal_set_message(t('It appears that Hybrid Authentication is not fully configured for one of the enabled Services (Facebook, Google, LinkedIn, or Twitter).'), 'warning');
       }
       break;
@@ -22,7 +22,9 @@ function linux_init() {
     case IMAGEX_ENVIRONMENT_DEFAULT:
     case IMAGEX_ENVIRONMENT_DEV_LOCAL:
     default:
-      drupal_set_message(t('Hybrid Authentication and the enabled services are not available for use within this environment.'), 'warning');
+      if (!drupal_is_cli() && !imagex_drupal_is_installing()) {
+        drupal_set_message(t('Hybrid Authentication and the enabled services are not available for use within this environment.'), 'warning');
+      }
       break;
   }
 }
