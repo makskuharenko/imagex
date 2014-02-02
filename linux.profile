@@ -30,6 +30,18 @@ function linux_init() {
 }
 
 /**
+ * Implements hook_imagex_variables().
+ */
+function linux_imagex_variables() {
+  return array(
+    // Use of `variable_get` for assigning default value is not typical,
+    // however due to the ability of rebuilding variables, we need to persist
+    // the value of the `linux_post_install` variable.
+    'linux_post_install' => variable_get('linux_post_install', FALSE),
+  );
+}
+
+/**
  * Implements hook_imagex_installkit_default_theme().
  */
 function linux_imagex_installkit_default_theme() {
@@ -190,4 +202,85 @@ function _linux_hybrid_authentication_is_set() {
     return FALSE;
   }
   return TRUE;
+}
+
+/**
+ * Performs post-installation operations.
+ *
+ * @return bool
+ *   Returns TRUE if post installation has ran successfully, otherwise
+ *   FALSE if post installation has already ran.
+ */
+function linux_post_install() {
+  if ($has_ran = variable_get('linux_post_install', FALSE)) {
+    return FALSE;
+  }
+
+  // We need to clear out all of the defaults nodes that were loaded an reload them back in
+  features_include_defaults('uuid_node', TRUE);
+  $nodes = module_invoke_all('uuid_features_default_content');
+  // The following is taken from the uuid.node file.
+  // We just add a delete in to remove the nodes first.
+  // This is needed because the panelizer entity_insert hooks do not know what bundles are panelized during install
+  if (!empty($nodes)) {
+    module_load_include('inc', 'node', 'node.pages');
+    foreach ($nodes as $data) {
+      $node = (object) $data;
+      $nids = entity_get_id_by_uuid('node', array($node->uuid));
+      if (isset($nids[$node->uuid]) && $node->type == 'landing_page') {
+        $deleted = entity_uuid_delete('node', $node->uuid);
+      }
+    }
+
+    drupal_flush_all_caches();
+    features_revert_module('linux_menu');
+
+    foreach ($nodes as $data) {
+      $node = (object) $data;
+      if ($node->uuid == 'cc69210b-36ab-45ee-928b-ffceb64c22a5' || $node->type != 'landing_page') {
+        // Don't resave the default news page. We recreated our own in Landing Pages
+        continue;
+      }
+      node_object_prepare($node);
+      // Find the matching UUID, with a fresh cache.
+      $nids = entity_get_id_by_uuid('node', array($node->uuid));
+      if (isset($nids[$node->uuid])) {
+        $nid = array_key_exists($node->uuid, $nids) ? $nids[$node->uuid] : FALSE;
+        $existing = node_load($nid, NULL, TRUE);
+        if (!empty($existing)) {
+          $node->nid = $existing->nid;
+          $node->vid = $existing->vid;
+        }
+      }
+
+      // The hook_alter signature is:
+      // hook_uuid_node_features_rebuild_alter(&node, $module);
+      drupal_alter('uuid_node_features_rebuild', $node, $module);
+
+      $node = node_submit($node);
+      uuid_features_file_field_import($node, 'node');
+      node_save($node);
+    }
+  }
+  _linux_post_install_change_comments();
+  variable_set('linux_post_install', TRUE);
+  return TRUE;
+}
+
+/**
+ * Updates the commenting field instances to ensure no text processing occurs.
+ */
+function _linux_post_install_change_comments() {
+  // Get all the fields that are comment bodies
+  $results = db_select('field_config_instance', 'f')->fields('f')->condition('field_name', 'comment_body')->execute()->fetchAllAssoc('id');
+
+  foreach ($results as &$row) {
+    $row = (array) $row;
+    $row['data'] = unserialize($row['data']);
+    // Change the field to no text formats/WYSIWYG
+    $row['data']['settings']['text_processing'] = 0;
+    $row['data'] = serialize($row['data']);
+    // Resave the instance with the new settings
+    db_update('field_config_instance')->fields($row)->condition('id', $row['id'])->execute();
+  }
 }
