@@ -223,12 +223,17 @@ function linux_views_default_views_alter(&$views) {
 
       // Turn on default caching as type `time` with results and output
       // cached for a total of one hour (3600 seconds).
+      if (!isset($display->display_options['cache'])) {
+        $display->display_options['cache']['type'] = 'none';
+      }
+
       if ('none' == $display->display_options['cache']['type']) {
-        $views[$view_name]->display[$display_name]->display_options['cache']['type'] = 'time';
-        $views[$view_name]->display[$display_name]->display_options['cache']['results_lifespan'] = '3600';
-        $views[$view_name]->display[$display_name]->display_options['cache']['results_lifespan_custom'] = '0';
-        $views[$view_name]->display[$display_name]->display_options['cache']['output_lifespan'] = '3600';
-        $views[$view_name]->display[$display_name]->display_options['cache']['output_lifespan_custom'] = '0';
+        $display->display_options['cache']['type'] = 'time';
+        $display->display_options['cache']['results_lifespan'] = '3600';
+        $display->display_options['cache']['results_lifespan_custom'] = '0';
+        $display->display_options['cache']['output_lifespan'] = '3600';
+        $display->display_options['cache']['output_lifespan_custom'] = '0';
+        $views[$view_name]->display[$display_name] = $display;
       }
     }
   }
