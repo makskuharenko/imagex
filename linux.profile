@@ -205,6 +205,36 @@ function _linux_hybrid_authentication_is_set() {
 }
 
 /**
+ * Implements hook_views_default_views_alter().
+ */
+function linux_views_default_views_alter(&$views) {
+  foreach ($views as $view_name => &$view) {
+    // If the view is disabled, simply continue onto the next.
+    if (TRUE == $view->disabled) {
+      continue;
+    }
+
+    // For each of the displays available for this `$view`, turn on slave option and cache.
+    foreach ($view->display as $display_name => &$display) {
+      // Each view should have the ability to use the Slave database
+      // if it is available. Enabling this option as this will provide this ability.
+      // @see https://imagex.basecamphq.com/projects/11350266-linux-com-development/posts/80365988
+      $views[$view_name]->display[$display_name]->display_options['query']['options']['slave'] = TRUE;
+
+      // Turn on default caching as type `time` with results and output
+      // cached for a total of one hour (3600 seconds).
+      if ('none' == $display->display_options['cache']['type']) {
+        $views[$view_name]->display[$display_name]->display_options['cache']['type'] = 'time';
+        $views[$view_name]->display[$display_name]->display_options['cache']['results_lifespan'] = '3600';
+        $views[$view_name]->display[$display_name]->display_options['cache']['results_lifespan_custom'] = '0';
+        $views[$view_name]->display[$display_name]->display_options['cache']['output_lifespan'] = '3600';
+        $views[$view_name]->display[$display_name]->display_options['cache']['output_lifespan_custom'] = '0';
+      }
+    }
+  }
+}
+
+/**
  * Performs post-installation operations.
  *
  * @return bool
