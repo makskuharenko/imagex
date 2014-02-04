@@ -10,9 +10,8 @@ The Linux.com Drupal 7 installation profile.
 * Create and establish your database and database user credentials.
 * Perform initial file system setup for Drupal. This includes creating sites/default/files writable (`chmod -R 777 sites/default/files`).
 * Run a `drush site-install`. Typical: `drush site-install linux --account-name=admin --account-pass=password --site-name=Linux.com --db-url=mysql://root@127.0.0.1/linux -y`
-* Enable (and then disable) Linux.com's post installation setup. Typical: `drush en linux_post_install -y` and `drush dis linux_post_install -y`.
 * Execute the Linux post installation command with: `drush linux-post-install`.
-* Enable search modules: `drush en imagex_search -y` and `drush en imagex_search_db -y`
+* ~~Enable search modules: `drush en imagex_search -y` and `drush en imagex_search_db -y`~~
 * Revert all features by running: `drush fra -y`.
 * Set the operating environment by running `drush imagex-environment-set linux` which will ensure all caching is turned on; any variables are updated and so forth. Prior to running, please confirm that all variables are set for the Linux.com environment within the `linux.profile`'s implementation of `hook_imagex_environment_changed()`.
 * Clear all caches by running: `drush cc all`.
