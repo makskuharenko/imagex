@@ -2,13 +2,13 @@ api = 2
 core = 7.x
 
 ; Download Drupal core.
-includes[] = "https://raw.github.com/imagex/imagex_installkit/7.x-1.0.3-dev1/drupal-org-core.make"
+includes[] = "https://raw.github.com/imagex/imagex_installkit/7.x-1.0.3-dev6/drupal-org-core.make"
 
 ; Download the ImageX base installation profile.
 projects[imagex_installkit][type] = "profile"
 projects[imagex_installkit][download][type] = "git"
 projects[imagex_installkit][download][url] = "git@github.com:imagex/imagex_installkit.git"
-projects[imagex_installkit][download][tag] = "7.x-1.0.3-dev1"
+projects[imagex_installkit][download][tag] = "7.x-1.0.3-dev6"
 projects[imagex_installkit][patch][] = "http://github.develop.ixm.ca/get.php?repo=linux.com&path=patches/imagex_installkit/drupal-org.make-versions-and-patches.patch"
 
 ; Download the Linux.com's installation profile, inherits ImageX base.
