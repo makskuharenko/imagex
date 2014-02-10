@@ -236,6 +236,18 @@ function linux_views_default_views_alter(&$views) {
 }
 
 /**
+ * Implements hook_imagex_installkit_install_tasks_alter().
+ */
+function linux_imagex_installkit_install_tasks_alter(&$operations) {
+  // $operations['linux_post_install'] = array(
+  //  '_imagex_installkit_install_profile_execute_task', array(
+  //    'ImagexInstallKitInstallCallbackTask',
+  //    array('callback' => 'linux_post_install'),
+  //  )
+  // );
+}
+
+/**
  * Performs post-installation operations.
  *
  * @return bool
