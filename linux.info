@@ -7,7 +7,6 @@ base profile = imagex_installkit
 
 ; Contrib dependencies.
 dependencies[] = advanced_forum
-; dependencies[] = creativecommons
 dependencies[] = compact_forms
 dependencies[] = entity_translation
 dependencies[] = features_translations
@@ -132,7 +131,6 @@ dependencies[] = linux_news_humor
 dependencies[] = linux_pardot_integration
 dependencies[] = linux_poll
 dependencies[] = linux_search
-dependencies[] = linux_social_login
 dependencies[] = linux_socialmedia_addtoany
 dependencies[] = linux_question_answer
 dependencies[] = linux_tutorial
