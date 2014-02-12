@@ -1,1 +1,0 @@
-<span class="<?php print $icon_pack_classes; ?>" title="<?php print $provider_name; ?>">Log in with <strong><?php print $provider_name; ?></strong></span>
