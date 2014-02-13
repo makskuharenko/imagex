@@ -145,3 +145,4 @@ dependencies[] = linux_voting
 dependencies[] = linux_widgets_training
 dependencies[] = linux_whitepapers
 dependencies[] = linux_wiki
+dependencies[] = linux_page_compiler

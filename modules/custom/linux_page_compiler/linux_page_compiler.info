@@ -1,0 +1,6 @@
+name = Linux Page Compiler
+description = Compiles standard Drupal pages from Linux source repositories.
+core = 7.x
+version = 7.x-1.0
+package = Linux.com
+dependencies[] = search_api
