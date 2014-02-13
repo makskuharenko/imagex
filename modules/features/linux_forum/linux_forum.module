@@ -5,3 +5,35 @@
  */
 
 include_once 'linux_forum.features.inc';
+
+/**
+ * Implements hook_uuid_menu_links_info().
+ */
+function linux_forum_uuid_menu_links_info() {
+  return array(
+    'forum' => array(
+      'original_load_hook' => 'advanced_forum_forum_load',
+      'load_hook' => 'linux_forum_forum_load',
+      'menu_path' => array('prefix' => 'forum'),
+    ),
+  );
+}
+
+/**
+ * Universal forum load function for Drupal's menu.
+ *
+ * @param mixed $identifier
+ *   The identifier of the forum to load, represented as a UUID or TID.
+ *
+ * @return mixed
+ *   Returns the loaded forum object if found, otherwise NULL.
+ */
+function linux_forum_forum_load($identifier) {
+  if (!is_numeric($identifier)) {
+    $term = entity_uuid_load('taxonomy_term', array($identifier));
+    if (!empty($term)) {
+      $identifier = $term->tid;
+    }
+  }
+  return advanced_forum_forum_load($identifier);
+}
