@@ -22,9 +22,10 @@ function linux_landing_pages_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1389257173,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
+    'vuuid' => 'f9de99bb-e287-4463-8d72-d59ed5cc9816',
     'uuid' => '2ef1eba6-65cb-4fae-af20-9b5dcabbd15a',
     'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
@@ -38,6 +39,22 @@ function linux_landing_pages_uuid_features_default_beans() {
       ),
     ),
     'aggregator_item' => FALSE,
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'bean',
+          'entity_id' => 6,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 0,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1392309517,
+          'changed' => 1392309517,
+        ),
+      ),
+    ),
   );
   $beans[] = array(
     'label' => 'Have a tip',
@@ -51,9 +68,10 @@ function linux_landing_pages_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1384302812,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
+    'vuuid' => '30ceefc0-4d69-466e-bd49-81804142ac87',
     'uuid' => '3a192767-1354-48fc-b00e-2a1f9127c982',
     'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
@@ -68,6 +86,22 @@ function linux_landing_pages_uuid_features_default_beans() {
       ),
     ),
     'aggregator_item' => FALSE,
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'bean',
+          'entity_id' => 7,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 0,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1392309517,
+          'changed' => 1392309517,
+        ),
+      ),
+    ),
   );
   $beans[] = array(
     'label' => 'Latest Video',
@@ -81,9 +115,10 @@ function linux_landing_pages_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1386898553,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
+    'vuuid' => '4ce20dee-5911-45e4-8a53-a63a28344177',
     'uuid' => '3a67ce5e-210e-4e24-b217-693cf1fd39ea',
     'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
@@ -98,6 +133,22 @@ function linux_landing_pages_uuid_features_default_beans() {
       ),
     ),
     'aggregator_item' => FALSE,
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'bean',
+          'entity_id' => 8,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 0,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1392309517,
+          'changed' => 1392309517,
+        ),
+      ),
+    ),
   );
   $beans[] = array(
     'label' => 'Ad space Homepage right top',
@@ -111,9 +162,10 @@ function linux_landing_pages_uuid_features_default_beans() {
     'view_mode' => 'default',
     'created' => 1384303261,
     'log' => '',
-    'uid' => 1,
+    'uid' => 0,
     'default_revision' => 1,
     'revisions' => array(),
+    'vuuid' => '4de3da00-1b17-4344-abe3-310bcc52541e',
     'uuid' => '7f7d59d3-0458-4535-badc-704c54eb9f0f',
     'field_widget_basic__image' => array(),
     'field_widget_basic__markup' => array(
@@ -127,6 +179,22 @@ function linux_landing_pages_uuid_features_default_beans() {
       ),
     ),
     'aggregator_item' => FALSE,
+    'translations' => array(
+      'original' => 'en',
+      'data' => array(
+        'en' => array(
+          'entity_type' => 'bean',
+          'entity_id' => 9,
+          'language' => 'en',
+          'source' => '',
+          'uid' => 0,
+          'status' => 1,
+          'translate' => 0,
+          'created' => 1392309517,
+          'changed' => 1392309517,
+        ),
+      ),
+    ),
   );
 
   features_alter_code('uuid_bean', $beans);

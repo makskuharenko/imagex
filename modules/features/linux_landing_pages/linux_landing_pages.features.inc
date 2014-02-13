@@ -34,87 +34,6 @@ function linux_landing_pages_views_api($module = NULL, $api = NULL) {
  */
 function linux_landing_pages_panelizer_defaults_override_alter(&$data) {
   if (isset($data['node:page:default'])) {
-    $data['node:page:default']->display->content['new-1']->configuration['arguments'] = array(
-      'type' => '',
-    ); /* WAS: '' */
-    $data['node:page:default']->display->content['new-1']->css['css_class'] = 'standard-bean recent-events filtered-view landing-pages-left-bar'; /* WAS: '' */
-    $data['node:page:default']->display->content['new-1']->css['css_id'] = ''; /* WAS: '' */
-    $data['node:page:default']->display->content['new-1']->panel = 'three_25_50_25_first'; /* WAS: 'two_66_33_first' */
-    $data['node:page:default']->display->content['new-1']->subtype = 'home_page-panel_pane_1'; /* WAS: 'node:body' */
-    $data['node:page:default']->display->content['new-1']->type = 'views_panes'; /* WAS: 'entity_field' */
-    $data['node:page:default']->display->content['new-2']->configuration['override_title'] = 0; /* WAS: '' */
-    $data['node:page:default']->display->content['new-2']->configuration['override_title_text'] = ''; /* WAS: '' */
-    $data['node:page:default']->display->content['new-2']->panel = 'three_25_50_25_first'; /* WAS: 'two_66_33_first' */
-    $data['node:page:default']->display->content['new-2']->subtype = 'bean-ad-space-homepage-right-top'; /* WAS: 'node:field_topics' */
-    $data['node:page:default']->display->content['new-2']->type = 'block'; /* WAS: 'entity_field' */
-    $data['node:page:default']->display->content['new-3']->configuration['class'] = ''; /* WAS: '' */
-    $data['node:page:default']->display->content['new-3']->configuration['id'] = ''; /* WAS: '' */
-    $data['node:page:default']->display->content['new-3']->configuration['link'] = 0; /* WAS: TRUE */
-    $data['node:page:default']->display->content['new-3']->configuration['markup'] = 'h1'; /* WAS: '' */
-    $data['node:page:default']->display->content['new-3']->configuration['override_title'] = 1; /* WAS: FALSE */
-    $data['node:page:default']->display->content['new-3']->configuration['override_title_text'] = '%node:title'; /* WAS: '' */
-    $data['node:page:default']->display->content['new-3']->panel = 'three_25_50_25_second'; /* WAS: 'two_66_33_first' */
-    $data['node:page:default']->display->content['new-3']->position = 0; /* WAS: 2 */
-    $data['node:page:default']->display->content['new-3']->subtype = 'node_title'; /* WAS: 'node_links' */
-    $data['node:page:default']->display->content['new-3']->type = 'node_title'; /* WAS: 'node_links' */
-    $data['node:page:default']->display->content['new-4']->panel = 'three_25_50_25_second'; /* WAS: 'two_66_33_second' */
-    $data['node:page:default']->display->content['new-4']->position = 1; /* WAS: 0 */
-    $data['node:page:default']->display->content['new-5']->configuration['delta_limit'] = 0; /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->configuration['delta_offset'] = 0; /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->configuration['delta_reversed'] = FALSE; /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->configuration['formatter'] = 'text_default'; /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->configuration['formatter_settings'] = array(); /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->configuration['label'] = 'hidden'; /* WAS: '' */
-    $data['node:page:default']->display->content['new-5']->panel = 'three_25_50_25_second'; /* WAS: 'two_66_33_top' */
-    $data['node:page:default']->display->content['new-5']->position = 2; /* WAS: 0 */
-    $data['node:page:default']->display->content['new-5']->subtype = 'node:body'; /* WAS: 'node_title' */
-    $data['node:page:default']->display->content['new-5']->type = 'entity_field'; /* WAS: 'node_title' */
-    $data['node:page:default']->display->content['new-6'] = (object) array(
-          'pid' => 'new-6',
-          'panel' => 'three_25_50_25_second',
-          'type' => 'node_links',
-          'subtype' => 'node_links',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'override_title' => FALSE,
-            'override_title_text' => '',
-            'build_mode' => 'page_manager',
-            'identifier' => '',
-            'link' => TRUE,
-            'context' => 'panelizer',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(
-            'css_class' => 'link-wrapper',
-          ),
-          'extras' => array(),
-          'position' => 3,
-          'locks' => array(),
-        ); /* WAS: '' */
-    $data['node:page:default']->display->content['new-7'] = (object) array(
-          'pid' => 'new-7',
-          'panel' => 'three_25_50_25_third',
-          'type' => 'block',
-          'subtype' => 'menu-menu-join-us',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'override_title' => 0,
-            'override_title_text' => '',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(),
-          'extras' => array(),
-          'position' => 0,
-          'locks' => array(),
-        ); /* WAS: '' */
     $data['node:page:default']->display->layout = 'three_25_50_25'; /* WAS: 'two_66_33' */
     $data['node:page:default']->display->panel_settings['style_settings']['three_25_50_25_bottom'] = NULL; /* WAS: '' */
     $data['node:page:default']->display->panel_settings['style_settings']['three_25_50_25_first'] = NULL; /* WAS: '' */
@@ -122,42 +41,25 @@ function linux_landing_pages_panelizer_defaults_override_alter(&$data) {
     $data['node:page:default']->display->panel_settings['style_settings']['three_25_50_25_third'] = NULL; /* WAS: '' */
     $data['node:page:default']->display->panel_settings['style_settings']['three_25_50_25_top'] = NULL; /* WAS: '' */
     $data['node:page:default']->display->panels['three_25_50_25_first'] = array(
-      0 => 'new-1',
-      1 => 'new-2',
+      0 => 'new-0516e515-53fe-41a3-9461-12dd8b8bcb29',
+      1 => 'new-5b6c586d-dc68-4a46-8e92-a5e8052a19d9',
     ); /* WAS: '' */
     $data['node:page:default']->display->panels['three_25_50_25_second'] = array(
-      0 => 'new-3',
-      1 => 'new-4',
-      2 => 'new-5',
-      3 => 'new-6',
+      0 => 'new-74b5efef-cdfc-4317-8e5e-14ed07cec195',
+      1 => 'new-20d29340-0a73-4478-8182-9a442d427e27',
+      2 => 'new-1257c26a-4ad0-4935-b682-4213f41a3153',
+      3 => 'new-9b9b6c4a-94cc-4cfd-ae65-183c1818d0e7',
     ); /* WAS: '' */
     $data['node:page:default']->display->panels['three_25_50_25_third'] = array(
-      0 => 'new-7',
+      0 => 'new-523680ec-a0a0-4eb8-ac18-94abda3b9342',
     ); /* WAS: '' */
-    $data['node:page:default']->display->title_pane = 'new-5'; /* WAS: 'new-1' */
-    unset($data['node:page:default']->display->content['new-1']->configuration['context']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['delta_limit']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['delta_offset']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['delta_reversed']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['formatter']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['formatter_settings']);
-    unset($data['node:page:default']->display->content['new-1']->configuration['label']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['context']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['delta_limit']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['delta_offset']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['delta_reversed']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['formatter']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['formatter_settings']);
-    unset($data['node:page:default']->display->content['new-2']->configuration['label']);
-    unset($data['node:page:default']->display->content['new-3']->configuration['build_mode']);
-    unset($data['node:page:default']->display->content['new-3']->configuration['identifier']);
-    unset($data['node:page:default']->display->content['new-3']->css['css_class']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['class']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['id']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['link']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['markup']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['override_title']);
-    unset($data['node:page:default']->display->content['new-5']->configuration['override_title_text']);
+    $data['node:page:default']->display->title_pane = 'new-1257c26a-4ad0-4935-b682-4213f41a3153'; /* WAS: 'new-1' */
+    $data['node:page:default']->display->uuid = 'f537172c-b19d-4db3-a71e-1b122374bfcf'; /* WAS: '' */
+    unset($data['node:page:default']->display->content['new-1']);
+    unset($data['node:page:default']->display->content['new-2']);
+    unset($data['node:page:default']->display->content['new-3']);
+    unset($data['node:page:default']->display->content['new-4']);
+    unset($data['node:page:default']->display->content['new-5']);
     unset($data['node:page:default']->display->panels['two_66_33_first']);
     unset($data['node:page:default']->display->panels['two_66_33_second']);
     unset($data['node:page:default']->display->panels['two_66_33_top']);
