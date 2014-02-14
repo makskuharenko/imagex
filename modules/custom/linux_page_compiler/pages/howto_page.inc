@@ -16,8 +16,16 @@ function linux_page_compiler_howto() {
   $filename = $path[count($path) - 1];
   $loaded_page = linux_page_compiler_load_page($filename);
   if (!$loaded_page) {
-    search_api_track_item_delete('source_page', array($loaded_page['page_key']));
-    drupal_not_found();
+    unset($path[0]);
+    $file_uri = variable_get('linux_page_source', '') .'/HOWTO-a/'. implode('/', $path);
+    if (linux_page_compiler_is_new($file_uri) && ($new_page = linux_page_compiler_add_new_page($file_uri))) {
+      search_api_track_item_insert('source_page', array($new_page));
+      $loaded_page = linux_page_compiler_load_page($filename);
+    }
+    else {
+      search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      drupal_not_found();
+    }
   }
   $html = str_replace(' >', '>', str_replace(array("\r", "\n"), ' ', file_get_contents($loaded_page['uri'])));
 

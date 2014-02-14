@@ -132,6 +132,45 @@ function linux_page_compiler_load_page($filename) {
 }
 
 /**
+ * Utility function; Determines if a page is new.
+ *
+ * @param $file_uri
+ *   String defining absolute path to the file to check.
+ *
+ * @return
+ *   Boolean value indicating if page is new or not.
+ */
+function linux_page_compiler_is_new($file_uri) {
+  if (file_exists($file_uri)) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Utility function; Caches a new source page.
+ *
+ * @param $file_uri
+ *   String defining absolute path to the file to add.
+ * 
+ * @return
+ *   String indicating the new pages unique hash ID.
+ */
+function linux_page_compiler_add_new_page($file_uri) {
+  $page_cache = linux_page_compiler_load_cache();
+  if (preg_match('/-a\//i', $file_uri)) {
+    $page_name = explode('/', trim(str_replace(variable_get('linux_page_source', ''), '', $file_uri), '/'));
+    $page_type = explode('-', strtolower($page_name[0]));
+    $page_id = $page_type[0] .'-'. linux_page_compiler_clean_filename($file_uri);
+    $page_stat = stat($file_uri);
+    $page_cache[$page_id] = array('uri' => $file_uri, 'filename' => $page_name[count($page_name) - 1], 'modified' => $page_stat['mtime']);
+    variable_set('linux_page_cache', $page_cache);
+    return $page_id;
+  }
+  return FALSE;
+}
+
+/**
  * Implements hook_search_api_item_type_info().
  */
 function linux_page_compiler_search_api_item_type_info() {

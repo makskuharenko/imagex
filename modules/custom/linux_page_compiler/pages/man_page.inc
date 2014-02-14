@@ -17,8 +17,23 @@
 function linux_page_compiler_manpage($filename) {
   $loaded_page = linux_page_compiler_load_page($filename);
   if (!$loaded_page) {
-    search_api_track_item_delete('source_page', array($loaded_page['page_key']));
-    drupal_not_found();
+
+    // Find if this is a new manpage inside a subdirectory.
+    $man_contents = file_scan_directory(variable_get('linux_page_source', ''), '/\.html/', array('recurse' => TRUE));
+    foreach ($man_contents as $man_content) {
+      if ($man_content->filename == $filename) {
+        $file_uri = $man_content->uri;
+      }
+    }
+    
+    if (linux_page_compiler_is_new($file_uri) && ($new_page = linux_page_compiler_add_new_page($file_uri))) {
+      search_api_track_item_insert('source_page', array($new_page));
+      $loaded_page = linux_page_compiler_load_page($filename);
+    }
+    else {
+      search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      drupal_not_found();
+    }
   }
   $html = file_get_contents($loaded_page['uri']);
 
