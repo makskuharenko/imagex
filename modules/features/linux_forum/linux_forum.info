@@ -13,6 +13,7 @@ dependencies[] = panels
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = uuid_menu_links
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
