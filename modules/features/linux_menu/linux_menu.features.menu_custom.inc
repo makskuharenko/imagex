@@ -10,6 +10,14 @@
 function linux_menu_menu_default_menu_custom() {
   $menus = array();
 
+  // Exported menu: main-menu.
+  $menus['main-menu'] = array(
+    'menu_name' => 'main-menu',
+    'title' => 'Main menu',
+    'description' => 'The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.',
+    'language' => 'und',
+    'i18n_mode' => 0,
+  );
   // Exported menu: menu-footer.
   $menus['menu-footer'] = array(
     'menu_name' => 'menu-footer',
@@ -57,6 +65,7 @@ function linux_menu_menu_default_menu_custom() {
   t('Linux Foundation Network');
   t('Linux.com Footer Menu');
   t('Linux.com Primary Menu');
+  t('Main menu');
   t('Menu of icons that let the user follow Linux social networks.');
   t('Primary Menu');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
