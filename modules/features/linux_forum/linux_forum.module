@@ -40,12 +40,23 @@ function linux_forum_forum_load($identifier) {
 }
 
 /**
+ * Implements hook_module_implements_alter().
+ */
+function linux_forum_module_implements_alter(&$implementations, $hook) {
+  if ('form_taxonomy_form_term_alter' == $hook) {
+    $group = $implementations['linux_forum'];
+    unset($implementations['linux_forum']);
+    $implementations['linux_forum'] = $group;
+  }
+}
+
+/**
  * Implements hook_form_BASE_FORM_ID_alter() for taxonomy_form_term().
  *
  * A re-implementation of Path's and UUID Menu Link's taxonomy_form_term()
  * alter implementation as a result of Advanced Forum's
  */
-function linux_forum_form_taxonomy_term_form_term_alter(&$form, $form_state) {
+function linux_forum_form_taxonomy_form_term_alter(&$form, $form_state) {
   if (empty($form_state['confirm_delete']) && empty($form['path']['pid']['#value'])) {
     $langcode = entity_language('taxonomy_term', (object) $form['#term']);
     $langcode = !empty($langcode) ? $langcode : LANGUAGE_NONE;
