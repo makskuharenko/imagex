@@ -122,7 +122,6 @@ dependencies[] = linux_header
 dependencies[] = linux_humor
 dependencies[] = linux_humor_panelized
 dependencies[] = linux_landing_pages
-dependencies[] = linux_manual
 dependencies[] = linux_menu
 dependencies[] = linux_migration
 dependencies[] = linux_multilingual
