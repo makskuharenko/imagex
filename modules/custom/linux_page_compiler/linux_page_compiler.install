@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Installs index tracking table.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function linux_page_compiler_schema() {
+
+  // Tracking table for content index.
+  $schema['search_api_linux_page'] = array(
+    'description' => 'Stores the items which should be indexed for each index, and their status.',
+    'fields' => array(
+      'item_id' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'index_id' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'changed' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+        'default' => 1,
+      ),
+    ),
+    'indexes' => array(
+      'indexing' => array('index_id', 'changed'),
+    ),
+    'primary key' => array('item_id', 'index_id'),
+  );
+
+  return $schema;
+}

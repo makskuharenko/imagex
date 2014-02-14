@@ -1,7 +1,12 @@
 <?php
 
 /**
- *
+ * @file
+ * Linux page compiler module.
+ */
+
+/**
+ * Implements hook_permission().
  */
 function linux_page_compiler_permission() {
   return array(
@@ -20,22 +25,22 @@ function linux_page_compiler_permission() {
  * handle various pages that link to a specific source file.
  */
 function linux_page_compiler_menu() {
+  $module_path = drupal_get_path('module', 'linux_page_compiler');
 
-  // MAN pages.
+  // Page routers.
   $items['manpage/%'] = array(
     'page callback' => 'linux_page_compiler_manpage',
     'page arguments' => array(1),
     'access arguments' => array('access content'),
-    'file' => 'linux_page_compiler.man.inc',
+    'file' => 'man_page.inc',
+    'file path' => $module_path .'/pages',
     'type' => MENU_CALLBACK,
   );
-
-  // HOWTO pages.
   $items['howto/%'] = array(
     'page callback' => 'linux_page_compiler_howto',
-    'page arguments' => array(1),
     'access arguments' => array('access content'),
-    'file' => 'linux_page_compiler.howto.inc',
+    'file' => 'howto_page.inc',
+    'file path' => $module_path .'/pages',
     'type' => MENU_CALLBACK,
   );
 
@@ -43,7 +48,8 @@ function linux_page_compiler_menu() {
   $items['page/image'] = array(
     'page callback' => 'linux_page_compiler_load_image',
     'access arguments' => array('access content'),
-    'file' => 'linux_page_compiler.images.inc',
+    'file' => 'images.inc',
+    'file path' => $module_path .'/includes',
     'type' => MENU_CALLBACK,
   );
 
@@ -60,42 +66,78 @@ function linux_page_compiler_menu() {
   );
   $items['admin/config/linux/pages'] = array(
     'title' => 'Page compiler',
-    'description' => 'Configure sources for page compiler.',
+    'description' => 'Configure settings for linux page compiler.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('linux_page_compiler_admin_settings'),
     'access arguments' => array('administer linux page compiler'),
-    'file' => 'linux_page_compiler.admin.inc',
+    'file' => 'admin.inc',
+    'file path' => $module_path .'/includes',
   );
-
+  $items['admin/config/linux/pages/compiler'] = array(
+    'title' => 'Compiler',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  $items['admin/config/linux/pages/index'] = array(
+    'title' => 'Index',
+    'description' => 'Manage index for compiled pages.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('linux_page_compiler_manage_index'),
+    'access arguments' => array('administer linux page compiler'),
+    'file' => 'index.inc',
+    'file path' => $module_path .'/includes',
+    'type' => MENU_LOCAL_TASK,
+  );
   return $items;
 }
 
 /**
  * Utility function; Loads the source page cache.
+ *
+ * @return
+ *   Associtiave array of cached source pages.
  */
 function linux_page_compiler_load_cache() {
   return variable_get('linux_page_cache', array());
 }
 
 /**
- * Utility function; Cleans filename of special characters.
+ * Utility function; Cleans filename for search index key.
+ *
+ * @param $string
+ *   A simple text string to clean.
+ *
+ * @return
+ *   Returns hashed ID value (md5).
  */
-function linux_page_compiler_clean_filename($name) {
-  // TODO: Determine if any cleaning should happen to file names.
-  return $name;
+function linux_page_compiler_clean_filename($string) {
+  return md5($string); // Hash for the ID
+}
+
+/**
+ * Utility function; Loads a page based on filename.
+ *
+ * @param $filename
+ *   String defining the filename for the current page.
+ *
+ * @return
+ *   Returns the full absolute path to the pages file.
+ */
+function linux_page_compiler_load_page($filename) {
+  $page_cache = linux_page_compiler_load_cache();
+  foreach ($page_cache as $page_key => $page_data) {
+    if ($page_data['filename'] == $filename) {
+      return array('uri' => $page_data['uri'], 'page_key' => $page_key, 'modified' => $page_data['modified']);
+    }
+  }
 }
 
 /**
  * Implements hook_search_api_item_type_info().
  */
 function linux_page_compiler_search_api_item_type_info() {
-  $types['man_page'] = array(
-    'name' => t('MAN Page'),
-    'datasource controller' => 'LinuxPageCompilerDataSourceController',
-  );
-  $types['howto_page'] = array(
-    'name' => t('HOWTO Page'),
-    'datasource controller' => 'LinuxPageCompilerDataSourceController',
+  $types['source_page'] = array(
+    'name' => t('Source Page'),
+    'datasource controller' => 'LinuxPageDataSourceController',
   );
   return $types;
 }
