@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Linux.com: Creative Commons Configuration feature.
- */
-
-include_once 'linux_creative_commons_configuration.features.inc';
