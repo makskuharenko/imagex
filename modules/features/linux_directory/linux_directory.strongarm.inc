@@ -77,10 +77,13 @@ function linux_directory_strongarm() {
           'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '16',
+          'weight' => '15',
         ),
         'workbench_access' => array(
           'weight' => '0',
+        ),
+        'badges' => array(
+          'weight' => '22',
         ),
       ),
       'display' => array(),
