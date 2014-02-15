@@ -1,0 +1,11 @@
+name = Linux Inappropriate Content Flag Settings
+description = Exports the settings for bundle-specific settings.
+core = 7.x
+package = Linux.com
+version = 7.x-1.0
+project = linux_inappropriate_content_flag_settings
+dependencies[] = comment
+dependencies[] = flag
+features[features_api][] = api:2
+features[flag][] = inappropriate_content_comment
+features[flag][] = inappropriate_content_node
