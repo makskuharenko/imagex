@@ -15,7 +15,7 @@
  *   Outputs the file contents to the Drupal page.
  */
 function linux_page_compiler_manpage($filename) {
-  $loaded_page = linux_page_compiler_load_page($filename);
+  $loaded_page = linux_page_compiler_load_page_by_name($filename);
   if (!$loaded_page) {
 
     // Find if this is a new manpage inside a subdirectory.
@@ -26,12 +26,14 @@ function linux_page_compiler_manpage($filename) {
       }
     }
     
-    if (linux_page_compiler_is_new($file_uri) && ($new_page = linux_page_compiler_add_new_page($file_uri))) {
+    if (isset($file_uri) && linux_page_compiler_is_new($file_uri) && ($new_page = linux_page_compiler_add_new_page($file_uri))) {
       search_api_track_item_insert('source_page', array($new_page));
       $loaded_page = linux_page_compiler_load_page($filename);
     }
     else {
-      search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      if (isset($loaded_page['page_key'])) {
+        search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      }
       drupal_not_found();
     }
   }
