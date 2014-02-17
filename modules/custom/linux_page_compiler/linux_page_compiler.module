@@ -227,7 +227,7 @@ function linux_page_compiler_preprocess_views_view_field(&$vars) {
     unset($page_url[0], $page_url[1]);
     $path_prefix = 'howto';
   }
-  else if (preg_match('/manpage/i', $page_url[1])) {
+  else if (preg_match('/man-html/i', $page_url[1])) {
     unset($page_url[0], $page_url[1], $page_url[2]);
     $path_prefix = 'manpage';
   }
