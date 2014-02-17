@@ -9,6 +9,7 @@
  * Implements hook_schema().
  */
 function linux_page_compiler_schema() {
+
   // Tracking table for content index.
   $schema['search_api_linux_page'] = array(
     'description' => 'Stores the items which should be indexed for each index, and their status.',
@@ -36,5 +37,6 @@ function linux_page_compiler_schema() {
     ),
     'primary key' => array('item_id', 'index_id'),
   );
+
   return $schema;
 }

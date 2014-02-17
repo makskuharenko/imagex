@@ -122,13 +122,36 @@ function linux_page_compiler_clean_filename($string) {
  * @return
  *   Returns the full absolute path to the pages file.
  */
-function linux_page_compiler_load_page($filename) {
+function linux_page_compiler_load_page_by_name($filename) {
   $page_cache = linux_page_compiler_load_cache();
   foreach ($page_cache as $page_key => $page_data) {
     if ($page_data['filename'] == $filename) {
       return array('uri' => $page_data['uri'], 'page_key' => $page_key, 'modified' => $page_data['modified']);
     }
   }
+  return FALSE;
+}
+
+/**
+ * Utility function; Loads a page based on full path.
+ *
+ * @param $path
+ *   String defining the path to the current page.
+ *
+ * @return
+ *   Returns the full absolute path to the pages file.
+ */
+function linux_page_compiler_load_page_by_path($path) {
+  $page_cache = linux_page_compiler_load_cache();
+  foreach ($page_cache as $page_key => $page_data) {
+    $page_url = explode('/', str_replace(variable_get('linux_page_source', ''), '', $page_data['uri']));
+    unset($page_url[0], $page_url[1]);
+    $page_url = implode('/', $page_url);
+    if ($page_url == $path) {
+      return array('uri' => $page_data['uri'], 'page_key' => $page_key, 'modified' => $page_data['modified']);
+    }
+  }
+  return FALSE;
 }
 
 /**
@@ -179,4 +202,50 @@ function linux_page_compiler_search_api_item_type_info() {
     'datasource controller' => 'LinuxPageDataSourceController',
   );
   return $types;
+}
+
+/**
+ * Implements phptemplate_preprocess_views_view_field().
+ */
+function linux_page_compiler_preprocess_views_view_field(&$vars) {
+  $output = '';
+  module_load_include('inc', 'linux_page_compiler', 'includes/excerpt');
+
+  // Load page ID and validate index.
+  $page_id = $vars['row']->entity;
+  $page_cache = linux_page_compiler_load_cache();
+  if (!isset($page_cache[$page_id])) {
+    search_api_track_item_delete('source_page', array($page_id));
+  }
+
+  // Load the page HTML and extract the appropriate data.
+  $html = str_replace(' >', '>', str_replace(array("\r", "\n"), ' ', file_get_contents($page_cache[$page_id]['uri'])));
+
+  // Generate page URL for the source content.
+  $page_url = explode('/', str_replace(variable_get('linux_page_source', ''), '', $page_cache[$page_id]['uri']));
+  if (preg_match('/howto/i', $page_url[1])) {
+    unset($page_url[0], $page_url[1]);
+    $path_prefix = 'howto';
+  }
+  else if (preg_match('/manpage/i', $page_url[1])) {
+    unset($page_url[0], $page_url[1], $page_url[2]);
+    $path_prefix = 'manpage';
+  }
+  $page_url = $path_prefix .'/'. implode('/', $page_url);
+
+  // Extract the <title> text.
+  if ($vars['field']->field == 'source_title' && preg_match('/(?:<title[^>]*>)(.*)<\/title>/isU', $html, $matches)) {
+    $output = l($matches[1], $page_url);
+  }
+
+  // Extract the <body> text.
+  if ($vars['field']->field == 'source_content' && preg_match('/(?:<body[^>]*>)(.*)<\/body>/isU', $html, $matches)) {
+    $excerpt_keywords = array();
+    foreach ($vars['view']->exposed_raw_input as $keywords) {
+      $excerpt_keywords[] = $keywords;
+    }
+    $output = linux_page_compiler_excerpt(implode(' ', $excerpt_keywords), $matches[1]);
+  }
+
+  $vars['output'] = $output;
 }

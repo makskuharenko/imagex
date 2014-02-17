@@ -25,11 +25,11 @@ class LinuxPageDataSourceController extends SearchApiAbstractDataSourceControlle
    * Defines field properties for indexed items.
    */
   protected function getPropertyInfo() {
-    $info['property info']['item_id'] = array(
-      'label' => t('Page ID'),
-      'type' => 'string',
+    $info['property info']['source_title'] = array(
+      'label' => t('Title'),
+      'type' => 'text',
     );
-    $info['property info']['content'] = array(
+    $info['property info']['source_content'] = array(
       'label' => t('Content'),
       'type' => 'text',
     );
@@ -46,7 +46,22 @@ class LinuxPageDataSourceController extends SearchApiAbstractDataSourceControlle
     $items = array();
     foreach ($ids as $id) {
       $index_object = new stdClass();
-      $index_object->content = file_get_contents($page_cache[$id]['uri']);
+      $html = str_replace(' >', '>', str_replace(array("\r", "\n"), ' ', file_get_contents($page_cache[$id]['uri'])));
+
+      // Extract the <title> text.
+      $title = '';
+      if (preg_match('/(?:<title[^>]*>)(.*)<\/title>/isU', $html, $matches)) {
+        $title = $matches[1];
+      }
+
+      // Extract the <body> text.
+      $body = '';
+      if (preg_match('/(?:<body[^>]*>)(.*)<\/body>/isU', $html, $matches)) {
+        $body = $matches[1];
+      }
+
+      $index_object->source_title = $title;
+      $index_object->source_content = $body;
       $items[$id] = $index_object;
     }
 
@@ -62,9 +77,16 @@ class LinuxPageDataSourceController extends SearchApiAbstractDataSourceControlle
   }
 
   /**
+   * Get a URL at which the item can be viewed on the web.
+   */
+  public function getItemUrl($item) {
+    return NULL;
+  }
+
+  /**
    * Returns the ID of all source pages.
    */
-  protected function getAllItemIds() {
+  public function getAllItemIds() {
     $page_cache = linux_page_compiler_load_cache();
     return array_keys($page_cache);
   }

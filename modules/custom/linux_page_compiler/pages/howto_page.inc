@@ -13,17 +13,19 @@
  */
 function linux_page_compiler_howto() {
   $path = explode('/', $_GET['q']);
-  $filename = $path[count($path) - 1];
-  $loaded_page = linux_page_compiler_load_page($filename);
+  unset($path[0]);
+  $path = implode('/', $path);
+  $loaded_page = linux_page_compiler_load_page_by_path($path);
   if (!$loaded_page) {
-    unset($path[0]);
-    $file_uri = variable_get('linux_page_source', '') .'/HOWTO-a/'. implode('/', $path);
+    $file_uri = variable_get('linux_page_source', '') .'/HOWTO-a/'. $path;
     if (linux_page_compiler_is_new($file_uri) && ($new_page = linux_page_compiler_add_new_page($file_uri))) {
       search_api_track_item_insert('source_page', array($new_page));
-      $loaded_page = linux_page_compiler_load_page($filename);
+      $loaded_page = linux_page_compiler_load_page_by_path($path);
     }
     else {
-      search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      if (isset($loaded_page['page_key'])) {
+        search_api_track_item_delete('source_page', array($loaded_page['page_key']));
+      }
       drupal_not_found();
     }
   }
