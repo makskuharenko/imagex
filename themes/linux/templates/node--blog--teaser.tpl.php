@@ -9,7 +9,6 @@ hide($content['links']);
 
 <!-- node.tpl.php -->
 <article <?php print $attributes; ?> role="article">
-  <?php print $mothership_poorthemers_helper; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
