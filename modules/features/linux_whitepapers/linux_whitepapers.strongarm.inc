@@ -76,6 +76,12 @@ function linux_whitepapers_strongarm() {
         'workbench_access' => array(
           'weight' => '0',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
+        'badges' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),
