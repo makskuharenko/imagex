@@ -40,6 +40,7 @@ function linux_whitepapers_field_default_field_instances() {
     'required' => FALSE,
     'settings' => array(
       'display_summary' => TRUE,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -80,6 +81,7 @@ function linux_whitepapers_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'whitepapers',
       'file_extensions' => 'txt pdf',
       'max_filesize' => '',
@@ -120,8 +122,8 @@ function linux_whitepapers_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-whitepaper-field_tag'
-  $field_instances['node-whitepaper-field_tag'] = array(
+  // Exported field_instance: 'node-whitepaper-field_tags'
+  $field_instances['node-whitepaper-field_tags'] = array(
     'bundle' => 'whitepaper',
     'default_value' => NULL,
     'deleted' => 0,
@@ -142,10 +144,11 @@ function linux_whitepapers_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tag',
-    'label' => 'Category',
+    'field_name' => 'field_tags',
+    'label' => 'Tags',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -164,8 +167,10 @@ function linux_whitepapers_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Category');
   t('File');
+  t('Tags');
+
+  features_alter_code('field_instance', $field_instances);
 
   return $field_instances;
 }
