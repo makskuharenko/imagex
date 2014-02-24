@@ -49,6 +49,7 @@ features[features_overrides][] = panelizer_defaults.node:blog:default.display|co
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-3|style|settings
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-3|subtype
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|build_mode
+features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|format
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|identifier
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|link
 features[features_overrides][] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|override_title
@@ -74,7 +75,6 @@ features_exclude[features_overrides][panelizer_defaults.node:blog:default.displa
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-3|configuration|link] = panelizer_defaults.node:blog:default.display|content|new-3|configuration|link
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-3|css|css_id] = panelizer_defaults.node:blog:default.display|content|new-3|css|css_id
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-3|css|css_class] = panelizer_defaults.node:blog:default.display|content|new-3|css|css_class
-features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-4|configuration|format] = panelizer_defaults.node:blog:default.display|content|new-4|configuration|format
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-4|css|css_id] = panelizer_defaults.node:blog:default.display|content|new-4|css|css_id
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-14] = panelizer_defaults.node:blog:default.display|content|new-14
 features_exclude[features_overrides][panelizer_defaults.node:blog:default.display|content|new-15] = panelizer_defaults.node:blog:default.display|content|new-15

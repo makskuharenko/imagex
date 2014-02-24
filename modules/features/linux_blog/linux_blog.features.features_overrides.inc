@@ -128,6 +128,7 @@ function linux_blog_features_override_default_overrides() {
   $overrides["panelizer_defaults.node:blog:default.display|content|new-3|style|settings"] = NULL;
   $overrides["panelizer_defaults.node:blog:default.display|content|new-3|subtype"] = 'node_author';
   $overrides["panelizer_defaults.node:blog:default.display|content|new-4|configuration|build_mode"]["DELETED"] = TRUE;
+  $overrides["panelizer_defaults.node:blog:default.display|content|new-4|configuration|format"] = 'linux_events_short_date';
   $overrides["panelizer_defaults.node:blog:default.display|content|new-4|configuration|identifier"]["DELETED"] = TRUE;
   $overrides["panelizer_defaults.node:blog:default.display|content|new-4|configuration|link"]["DELETED"] = TRUE;
   $overrides["panelizer_defaults.node:blog:default.display|content|new-4|configuration|override_title"] = 1;

@@ -109,6 +109,7 @@ function linux_blog_panelizer_defaults_override_alter(&$data) {
     $data['node:blog:default']->display->content['new-3']->position = 1; /* WAS: 0 */
     $data['node:blog:default']->display->content['new-3']->style['settings'] = NULL; /* WAS: '' */
     $data['node:blog:default']->display->content['new-3']->subtype = 'node_author'; /* WAS: 'node:field_topics' */
+    $data['node:blog:default']->display->content['new-4']->configuration['format'] = 'linux_events_short_date'; /* WAS: '' */
     $data['node:blog:default']->display->content['new-4']->configuration['override_title'] = 1; /* WAS: FALSE */
     $data['node:blog:default']->display->content['new-4']->css['css_class'] = 'node-date'; /* WAS: 'link-wrapper' */
     $data['node:blog:default']->display->content['new-4']->panel = 'three_25_50_25_second'; /* WAS: 'center' */
